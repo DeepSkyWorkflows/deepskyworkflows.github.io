@@ -13,7 +13,7 @@ NGC 6823 is an open cluster. It contains a small reflection nebula (NGC6820).
 
 It is a very faint target so I’ll likely want to take more exposures to build a final image. I almost ignored the target until I did some research and realized it contains some interesting dark structures that would be a fun challenge to take on. Although I’m not happy with the current picture, I thought I’d post it anyway and share my approach.
 
-![NGC6823 Pass 1](assets/images/2021-07-21/ngc6823.jpeg)
+![NGC6823 Pass 1](/assets/images/2021-07-21/ngc6823.jpeg)
 *NGC 6823 (NGC 6820)*
 
 ## Details
@@ -35,13 +35,11 @@ It is a very faint target so I’ll likely want to take more exposures to build 
 |__Darks:__| | 36 10s (6 minutes total exposure)|
 |__Software:__| | AstroPixel Processor, PixInsight, Topaz DeNoise, Google Photos, Astrometry.net|
 
-![Annotated image](assets/images/2021-07-21/ngc6823-annotated.jpeg)
-
 ## Workflow
 
 I stacked both sessions with AstroPixel Processor. I chose a drizzle integration at 3x resolution because I can work at the high resolution, then scale down to reduce noise. I picked the top 90% of images and let APP do its thing. When I pulled it into PixInsight, this is what I started with (artificially stretched):
 
-![Raw linear image](assets/images/2021-07-21/ngc6823-linear.jpeg)
+![Raw linear image](/assets/images/2021-07-21/ngc6823-linear.jpeg)
 
 The starfield was beautifully captured, but the nebula incredibly faint. I took it through the following workflow:
 
@@ -71,7 +69,7 @@ I saved the final result as a TIFF and imported it into Topaz DeNoise AI for noi
 - The resulting “no stars” image still had a dense starfield, so I used a Morphological Transformation erosion to reduce the stars. This required a range mask to avoid impacting the nebula.
 - The image was still a mess, but had better detail and contrast than before
 
-  ![No stars](assets/images/2021-07-21/ngc6823-no-stars.jpeg)
+  ![No stars](/assets/images/2021-07-21/ngc6823-no-stars.jpeg)
 - Instead of combining the stars back to the main image, I opted to take the image *before* manipulation and average it with the manipulated one. This reduced the noise artifacts significantly.
 - I then used contrast to make a dark background. This sacrificed the brightness of the nebula but minimized the ugly background noise.
 
