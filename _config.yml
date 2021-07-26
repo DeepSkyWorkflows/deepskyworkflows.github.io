@@ -1,6 +1,6 @@
 # Site
-name: "DeepSkyWorkflows"
-title: "Deep Sky Workflows"
+name: "Deep Sky Workflows";
+title: "Deep Sky Workflows: Astrophotography and Astrophotos"
 description: "Astrophotography topics and astrophotos of deep sky objects with a focus on Stellina hardware and AstroPixel Processor, PixInsight, and Topaz software."
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/logo.png'
