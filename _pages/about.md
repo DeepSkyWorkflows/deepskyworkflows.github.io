@@ -12,37 +12,31 @@ comments: true
 
 <p>It’s great to have a place to share my deep sky explorations and astrophotography journey with you. In the beginning of 2021, I purchased an observation station named <a href="https://vaonis.com/stellina" target="_blank">Stellina</a>. It is a fully automated system for capturing deep sky images. What intrigued me about the unit was the claim that it could handle light polluted areas and the ease of setup. I took a chance, purchased the scope and have not been disappointed.</p>
 
-<p class="mb-5"><img class="shadow-lg" src="{{site.baseurl}}/assets/images/about/stellina.jpeg" alt="Stellina pointed at the stars" /><br/><i class="text-center">Stellina</i></p>
+<p class="mb-5"><img class="shadow-lg" src="{{site.baseurl}}/assets/images/about/stellina.jpeg" alt="Stellina pointed at the stars" /><br/><i class="center">Stellina pointed at the stars</i></p>
 
-Stellina pointed at the stars
-Stellina
-My first observation was the popular M42 Orion Nebula. It is a bright nebula, so it photographs quite easily. Despite shooting from a deck next to a street lamp over the glow of downtown Monroe, WA, Stellina still pulled off an amazing image.
+<p>My first observation was the popular M42 Orion Nebula. It is a bright nebula, so it photographs quite easily. Despite shooting from a deck next to a street lamp over the glow of downtown Monroe, WA, Stellina still pulled off an amazing image.</p>
 
-M42 Orion Nebula
-I quickly learned that the images are produced by stacking. Multiple 10-second exposures are combined to create the result. The average of the images helps reduce noise and increase signal. Some images like this picture of the bright star Arcturus only need a few subframes (referred to as “subs”).
+<p class="mb-5"><img class="shadow-lg" src="{{site.baseurl}}/assets/images/about/orion.jpeg" alt="M42 Orion Nebula" /><br/><i class="center">M42 Orion Nebula</i></p>
 
-Arcturus
-Other images, like the dark Iris Nebula, require far more subframes to draw out the detail. I learned I can pull the subframes from the telescope using a thumb drive and process them on my computer. That allows me to combine data from multiple observations (even different nights of the year) to produce a final result. This image was combined from 1,490 subframes for a total exposure time of over four hours!
-The Iris Nebula
-NGC7023 Iris Nebula
-There are many tips and techniques involved with processing images and I’ll share them in this blog.
-Here are some helpful links:
-My astrophotography gallery
-My astrophotography videos
-My astrophotography scripts and tools
-That’s it for the introduction. I’ll keep it short and sweet for now, and I look forward to sharing more in the coming weeks!
-Regards,
-Jeremy Likness
-<p>This website is built with Jekyll and Mediumish template for Jekyll. It's for demonstration purposes, no real content can be found. Mediumish template for Jekyll is compatible with Github pages, in fact even this demo is created with Github Pages and hosted with Github.</p>
+<p>I quickly learned that the images are produced by stacking. Multiple 10-second exposures are combined to create the result. The average of the images helps reduce noise and increase signal. Some images like this picture of the bright star Arcturus only need a few subframes (referred to as “subs”).</p>
 
-<p class="mb-5"><img class="shadow-lg" src="{{site.baseurl}}/assets/images/mediumish-jekyll-template.png" alt="jekyll template mediumish" /></p>
-<h4>Documentation</h4>
+<p class="mb-5"><img class="shadow-lg" src="{{site.baseurl}}/assets/images/about/arcturus.jpeg" alt="Arcturus" /><br/><i class="center">Arcturus</i></p>
 
-<p>Please, read the docs <a href="https://bootstrapstarter.com/bootstrap-templates/template-mediumish-bootstrap-jekyll/">here</a>.</p>
+<p>Other images, like the dark Iris Nebula, require far more subframes to draw out the detail. I learned I can pull the subframes from the telescope using a thumb drive and process them on my computer. That allows me to combine data from multiple observations (even different nights of the year) to produce a final result. This image was combined from 1,490 subframes for a total exposure time of over four hours!</p>
 
-<h4>Questions or bug reports?</h4>
+<p class="mb-5"><img class="shadow-lg" src="{{site.baseurl}}/assets/images/about/iris.jpeg" alt="NGC7023 Iris Nebula" /><br/><i class="center">NGC7023 Iris Nebula</i></p>
 
-<p>Head over to our <a href="https://github.com/wowthemesnet/mediumish-theme-jekyll">Github repository</a>!</p>
+<p>There are many tips and techniques involved with processing images and I’ll share them in this blog.</p>
+
+<p>Here are some helpful links:</p>
+<ul>
+<li>My <a href="https://photos.app.goo.gl/FceFDGmLJ1Cy1WvZ6" target="_blank">astrophotography gallery</a></li>
+<li>My <a href="https://www.youtube.com/channel/UCGTfyv52aBiubARo3t30MAQ" target="_blank">astrophotography videos</a></li>
+<li>My <a href="https://github.com/DeepSkyWorkflows" target="_blank">astrophotography scripts and tools</a></li>
+</ul>
+<p>That’s it for the introduction. I’ll keep it short and sweet for now, and I look forward to sharing more!</p>
+<p>Regards,</p>
+<p>Jeremy Likness</p>
 
 </div>
 
