@@ -3,7 +3,7 @@ title: "Polaris and the Engagement Ring"
 type: Asterism
 tags: ["The star Polaris (αUMi)", "Polaris"]
 description: Polaris, the North Star, makes the crowning jewel on a ring of several neighboring stars in this mosaic.
-image: /assets/images/gallery/polaris/polaris.jpg
+image: /assets/images/gallery/polaris/thumb.jpg
 telescope: Stellina
 length: "400mm"
 aperture: "80mm"

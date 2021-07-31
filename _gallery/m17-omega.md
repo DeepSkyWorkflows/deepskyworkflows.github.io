@@ -2,7 +2,7 @@
 title: M17 Omega Nebula
 type: Nebula
 tags: ["NGC6618","M17","IC4706","IC4707","Checkmark Nebula","Lobster Nebula","Swan Nebula","omega Nebula"]
-image: /assets/images/gallery/m17/m17.jpg
+image: /assets/images/gallery/m17/thumb.jpg
 description: A nebula with many names, the swan, lobste or horseshoe nebula is a bright object that is easy to capture.
 telescope: Stellina
 length: "400mm"

@@ -3,7 +3,7 @@ title: M45 Pleiades
 type: Cluster
 tags: [M45, "Merope Nebula", "NGC1435", "IC349"]
 description: The Pleiades is one of the closest star clusters to Earth and filled with bright blue stars.
-image: /assets/images/gallery/m45/m45.jpg
+image: /assets/images/gallery/m45/thumb.jpg
 telescope: Stellina
 length: "400mm"
 aperture: "80mm"
