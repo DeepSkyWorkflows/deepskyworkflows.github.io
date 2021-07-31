@@ -16,10 +16,12 @@ authors:
   deepskyworkflows:
     name: Jeremy Likness
     display_name: Jeremy Likness
+    twitter: JeremyLikness
     gravatar: 9ce480e4853b49026c274d31f6ea83d2
     email: deepskyworkflows@gmail.com
     web: https://www.strengthwithparkinsons.com/
     description: "Amateur astronomer Jeremy Likness has always been interested in the mysteries of deep space, but only recently began to explore them through astrophotography."
+    picture: 'assets/images/jeremyliknessavatar.jpg'
 
 # Plugins
 plugins:
@@ -36,6 +38,11 @@ jekyll-archives:
   layout: archive
   permalinks:
     category: '/category/:name/'
+
+# Twitter
+twitter:
+  username: jeremylikness
+  card: summary_large_image
     
 # Pagination 
 paginate: 6
@@ -64,7 +71,7 @@ exclude: [changelog.md, LICENSE.txt, README.md, Gemfile, Gemfile.lock]
 collections:
   gallery:
     output: true
-    permalink: /gallery/:title/
+    permalink: /gallery/:title/ 
 
 defaults:
   - scope:
@@ -72,3 +79,4 @@ defaults:
       type: "gallery"
     values:
       layout: "gallery"
+      author: "deepskyworkflows"

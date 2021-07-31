@@ -71,12 +71,20 @@ ga('send', 'pageview');
                 <a class="nav-link" href="{{ site.baseurl }}/index.html"><i class="fa fa-file"></i> Blog</a>
                 </li>
 
+                {% if page.url contains "/about" %}
+                <li class="nav-item active">
+                {% else %}
                 <li class="nav-item">
+                {% endif %}
                 <a class="nav-link" href="{{ site.baseurl }}/about"><i class="fa fa-address-card"></i> About</a>
                 </li>
 
+                {% if page.url contains "/gallery" %}
+                <li class="nav-item active">
+                {% else %}
                 <li class="nav-item">
-                <a target="_blank" class="nav-link" href="{{ site.baseurl }}/gallery"><i class="fa fa-images"></i> Gallery</a>
+                {% endif %}
+                <a class="nav-link" href="{{ site.baseurl }}/gallery"><i class="fa fa-images"></i> Gallery</a>
                 </li>
         
                 <li class="nav-item">

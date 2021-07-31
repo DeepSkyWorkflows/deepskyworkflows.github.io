@@ -202,7 +202,7 @@ layout: default
                 <div class="card-footer">
                     <b>Objects in frame:</b>
                     {% for tag in page.tags %}
-                    <div id="data-tag-{{tag}}" class="badge badge-primary">{{tag}}</div>
+                    <a id="data-tag-{{tag}}" class="btn badge badge-primary" href="/gallery/#tag-{{tag}}">{{tag}}</a>
                     {% endfor %}
                 </div>
             </div>

@@ -1,6 +1,7 @@
 ---
 title: "IC5070 Pelican Nebula"
 type: Nebula
+image: /assets/images/gallery/ic5070/ic5070.jpg
 tags: ["The star 56Cyg","The star 57Cyg","IC5070","Pelican Nebula"]
 description: In the dark reaches of space there are columns of molecular dust that span light years and are illuminated by nearby stars. This nebula is part of a large and complex region.
 telescope: Stellina

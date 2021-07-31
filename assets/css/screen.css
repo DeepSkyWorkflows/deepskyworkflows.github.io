@@ -910,10 +910,14 @@ iframe {
 .gallery-card {
     width: 300px;
     height: 100%;
-    margin: 6px;
+    margin: 3px;
 }
 
 .gallery-img {
     max-height: 200px;
     object-fit: cover;
+}
+
+.gallery-search {
+    border-radius: 20px;
 }

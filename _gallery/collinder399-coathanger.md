@@ -1,6 +1,7 @@
 ---
 title: "Collinder399 The Coat Hanger"
 type: Asterism
+image: /assets/images/gallery/collinder399/collinder399.jpg
 tags: ["The star 4Vul","The star 5Vul", "Brocchi's Cluster", "The Coat Hanger"]
 description: Brocchi's cluster is a beautiful asterism made of colorful stars that randomly form a coat hanger pattern. This image is a mosaic to capture the full starfield.
 telescope: Stellina
