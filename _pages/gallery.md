@@ -6,7 +6,7 @@ permalink: /gallery/
 
 {% assign types = site.gallery | group_by: 'type' | sort: 'name' %}
 <div class="row">
-    <div class="col-2 pr-2">
+    <div class="col-md-2 order-sm-5 pr-2">
         <ul>
         {% for nestedGroup in types %}
             <li><a href="#{{nestedGroup.name}}">{{nestedGroup.name}}</a></li>
@@ -18,8 +18,8 @@ permalink: /gallery/
         <p><strong><i class="fa fa-tags"></i> Tags:</strong></p>
         <div id="tagContainer">
         </div>    
-    </div>
-    <div class="col-10">
+        </div>
+    <div class="col-md-9 order-sm-6">
         {% for group in types %}
             <div class="row">&nbsp;</div>
             <div class="row">
