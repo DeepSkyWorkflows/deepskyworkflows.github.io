@@ -94,6 +94,15 @@ post_class: post-template
                 </small>
             </p>
 
+            {% if page.discussion %}
+                <div class="alert alert-info">
+                    <i class="fa fa-user"></i><i class="fa fa-users"></i>&nbsp;&nbsp;<a href="https://github.com/DeepSkyWorkflows/DeepSkyWorkflows.github.io/issues/{{page.discussion}}" target="_blank"
+                        class="stretch-link">
+                        Click to share feedback and/or discuss this article online.
+                    </a>
+                </div>
+            {% endif %}
+
             <!-- Post Categories -->
             <div class="after-post-cats">
                 <ul class="tags mb-4">
