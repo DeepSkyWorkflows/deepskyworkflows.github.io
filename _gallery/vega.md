@@ -5,8 +5,8 @@ tags: [Vega]
 description: A bright star about 25 light years away.
 image: /assets/images/gallery/vega/thumb.jpg
 telescope: Stellina
-length: 400
-aperture: 8
+length: "400mm"
+aperture: "80mm"
 folder: vega
 exposure: 10
 sessions: 1
