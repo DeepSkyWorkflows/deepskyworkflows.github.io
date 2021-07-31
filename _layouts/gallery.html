@@ -1,0 +1,229 @@
+---
+layout: default
+---
+
+{% assign loadingImg = site.baseurl | append: "/assets/images/loading.gif" %}
+{% assign folderPath = site.baseurl | append: "/assets/images/gallery/" | append: page.folder | append: "/" %}
+{% assign mainImage = folderPath | append: page.folder | append: ".jpg" %}
+{% assign annotated = folderPath | append: page.folder | append: "-annotated.jpg" %}
+{% assign fullsize = folderPath | append: page.folder | append: "-annotated-fs.jpg" %}
+{% assign grid = folderPath | append: page.folder | append: "-grid.jpg" %}
+{% assign copyright = "Image &copy; 2021 Jeremy Likness. All rights reserved." %}
+{% if page.previous.url %}
+{% assign prev = site.baseurl | append: page.previous.url %}
+{% endif %}
+{% if page.next.url %}
+{% assign next = site.baseurl | append: page.next.url %}
+{% endif %}
+
+<section>
+    <div class="row">
+        <div class="section-title">
+            <h2><span><a href="{{site.baseurl}}/gallery" title="Back to gallery">Gallery</a>&nbsp;&raquo;&nbsp;{{
+                    page.title
+                    }}</span></h2>
+        </div>
+    </div>
+    <div class="row">
+
+        <div class="article-post col-md-9">
+
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+
+                <li class="nav-item">
+                    <a class="nav-link" id="main-tab" data-toggle="tab" href="#main" role="tab" aria-controls="main"
+                        aria-selected="true">Main</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" id="annotated-fs-tab" data-toggle="tab" href="#annotated-fs" role="tab"
+                        aria-controls="annotated-fs" aria-selected="false">Annotated (fullsize)</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" id="grid-tab" data-toggle="tab" href="#grid" role="tab" aria-controls="grid"
+                        aria-selected="false">Grid</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" id="annotated-tab" data-toggle="tab" href="#annotated" role="tab"
+                        aria-controls="annotated" aria-selected="false">Annotated (small)</a>
+                </li>
+
+            </ul>
+
+            <div class="card" id="loading">
+                <div class="card-header">Loading images...</div>
+                <div class="card-body"><img src="{{loadingImg}}" alt="Loading..." /></div>
+                <div class="card-footer alert alert-info" id="loadingStatus">Loading...</div>
+            </div>
+
+            <div id="wrapper" class="d-none">
+                <div class="card" id="main">
+                    <div class="card-header">Fullsize Image (tap or click)</div>
+                    <div class="card-body">
+                        <a href="{{mainImage}}" target="_blank" title="Click to view the fullsize image.">
+                            <img class="img-fluid" data-src="{{mainImage}}" src="{{loadingImage}}"
+                                title="{{page.description}}" />
+                        </a>
+                    </div>
+                    <div class="card-footer small text-right">{{copyright}}</div>
+                </div>
+
+                <div class="card" id="annotated-fs">
+                    <div class="card-header">Annotated Image (fullsize version)</div>
+                    <div class="card-body">
+                        <a href="{{fullsize}}" target="_blank" title="Click to view the fullsize annotated image.">
+                            <img class="img-fluid" data-src="{{fullsize}}" src="{{loadingImage}}"
+                                title="{{page.title}} annotated." />
+                        </a>
+                    </div>
+                    <div class="card-footer small text-right">{{copyright}}</div>
+                </div>
+
+                <div class="card" id="grid">
+                    <div class="card-header">Grid View</div>
+                    <div class="card-body">
+                        <img class="img-fluid" data-src="{{grid}}" src="{{loadingImage}}"
+                            title="{{page.title}} grid." />
+                    </div>
+                    <div class="card-footer small text-right">{{copyright}}</div>
+                </div>
+
+                <div class="card" id="annotated">
+                    <div class="card-header">Annotated Image (small version)</div>
+                    <div class="card-body">
+                        <img class="img-fluid" data-src="{{annotated}}" src="{{loadingImage}}"
+                            title="{{page.title}} annotated." />
+                    </div>
+                    <div class="card-footer small text-right">{{copyright}}</div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-3 pr-0">
+            <div class="card">
+                <div class="card-header">{{page.description}}</div>
+                <div class="card-body">
+                    {% assign traits =
+                    "telescope|length|aperture|sessions|firstCapture|lights|exposure|ra|dec|size|radius|scale" |
+                    split: "|" %}
+                    <table class="table table-striped table-sm">
+                        {% assign blog = "" | split: "," %}
+                        {% for item in site.posts %}
+                            {% for tag in item.tags %}
+                                {% assign ptag = tag | capitalize | strip %}
+                                {% for gallerytag in page.tags %}
+                                    {% assign gtag = gallerytag | capitalize | strip %} 
+                                        {% if gtag == ptag %}
+                                            {% assign blog = blog | push: item %}                    
+                                        {% endif %}
+                                {% endfor %}
+                            {% endfor %}    
+                        {% endfor %}
+                        {% if blog %}
+                        <tr>
+                            <td colspan="3" class="text-center">
+                                <p><strong>Related Posts</strong></p>        
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" class="text-center">
+                            {% assign sorted = blog | uniq | sort: "title" %}
+                            {% for item in sorted %}
+                                {% assign mainUrl = site.baseurl | append: item.url %}                       
+                                    <div>
+                                        <a href="{{mainUrl}}" title="{{item.description}}">{{item.title}}</a>                                    
+                                    </div>                                                 
+                            {% endfor %}
+                                </td>
+                            </tr>
+                        {% endif %}
+                            {% for trait in traits %}
+                            {% if trait == "firstCapture" or trait == "lastCapture" %}
+                                {% if trait == "firstCapture" %}
+                                    {% if page.firstCapture %}
+                                        <tr>
+                                            <td class="text-right">
+                                                <strong>Captured:</strong>
+                                            </td>
+                                            <td>&nbsp;</td>
+                                            <td>
+                                                <span>{{page.firstCapture}}</span>
+                                            {% if page.lastCapture %}
+                                               <span> to {{page.lastCapture}}</span>
+                                            {% else %}
+                                            {% endif }
+                                            </td>
+                                        </tr>                                    
+                                    {% endif %}
+                                {% endif %}
+                            {% endif %}
+                            {% else %}
+                                <tr>
+                                    <td class="text-right">
+                                        <strong>{{trait | capitalize }}:</strong>
+                                    </td>
+                                    <td>&nbsp;</td>
+                                    <td>
+                                        {{page[trait]}}
+                                    </td>
+                                </tr>
+                                {% if trait == "exposure" %}
+                                    {% assign totalTime = page.exposure | times: page.lights | to_integer %}
+                                    {% assign unit = "s" %}
+                                    {% if totalTime > 60 %}
+                                        {% assign unit = "m" %}
+                                        {% assign totalTime = totalTime | divided_by: 60 %}
+                                        {% if totalTime > 60 %}
+                                            {% assign unit = "h" %}
+                                            {% assign totalTime = totalTime | divided_by: 60 %}
+                                        {% endif %}                                
+                                    {% endif %}
+                                    {% if totalTime > 0 %}
+                                    <tr>
+                                        <td class="text-right">
+                                            <strong>Total exposure:</strong>
+                                        </td>
+                                        <td>&nbsp;</td>
+                                        <td>
+                                            {{totalTime}} {{unit}}
+                                        </td>
+                                    </tr>                        
+                                    {% endif %}
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </table>
+                </div>                
+                <div class="card-footer">
+                    <b>Objects in frame:</b>
+                    {% for tag in page.tags %}
+                    <div id="data-tag-{{tag}}" class="badge badge-primary">{{tag}}</div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            {% if page.previous.url %}
+            <a class="prev" href="{{ prev }}">
+                &laquo; {{page.previous.title}}
+            </a>
+            {% endif %}
+        </div>
+        <div class="col-6 text-right">
+            {% if page.next.url %}
+            <a href="{{ next }}">
+                {{page.next.title}} &raquo;
+            </a>
+            {% endif %}
+        </div>
+    </div>
+
+</section>
+
+<script src="{{ site.baseurl }}/assets/js/gallery.js"></script>

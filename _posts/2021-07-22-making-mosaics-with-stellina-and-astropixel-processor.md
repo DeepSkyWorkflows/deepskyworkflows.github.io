@@ -2,8 +2,8 @@
 layout: post
 title:  "Making mosaics with Stellina and AstroPixel Processor: Polaris"
 author: deepskyworkflows
-categories: [ astrophotography, stellina, astropixel processor, 2021-July ]
-tags: [ mosaic, polaris ]
+categories: [ year-2021, month-2021-07-july ]
+tags: [ mosaic, polaris, stellina, astropixel processor ]
 toc: true
 image: assets/images/2021-07-22/polaris-annotated.jpeg
 description: "Learn how to use Stellina to reframe observations and produce panels for larger images, then use AstroPixel Processor to combine them into a mosaic."
@@ -153,50 +153,6 @@ I then loaded it into PixInsight for processing.
 |[![Polaris Engagement Ring Asterism](/assets/images/2021-07-22/theengagementring.jpg)](/assets/images/2021-07-22/theengagementring.jpg)
 |:----:|
 |_The Engagement Ring_|
-
-<br/>
-
-### Details
-
-||||
-|---:|:--:|:---|
-|__Right ascension (center):__| | 02h 48m 37.571s|
-|__Declination (center):__| |  +88° 54' 03.106"|
-|__Size:__| |  54.1 x 52.5 arcmin|
-|__Radius:__| |0.620 deg|
-|__Pixel scale:__| | 0.826 arcsec/pixel|
-|__Orientation:__| | Up is 110 degrees E of N|
-|__Equipment:__| | Stellina|
-|__Focal length:__| | 400mm|
-|__Aperture:__| | 8mm|
-|__Focal ratio:__| | f/5|
-|__Sessions:__| | 1|
-|__Lights:__| | 136 total 5s filtered to 115(10 minutes total exposure)|
-|__Darks:__| | 84 5s (7 minutes total exposure)|
-|__Software:__| | AstroPixel Processor, PixInsight, Topaz DeNoise, Google Photos, Astrometry.net|
-
-<br/>
-
-|![Annotated image](/assets/images/2021-07-22/theengagementringannotated.jpeg)|
-|:----:|
-|_Annotated image_|
-
-<br/>
-
-### Workflow
-
-1. Dynamic Crop
-1. Auto-Linear Fit (a custom script I wrote)
-1. Dynamic Background Extraction
-1. Background Neutralization
-1. Color Calibration
-1. TGV Denoise
-1. Multiscale Linear Transform (luminance, then chrominance)
-1. EZ Soft Stretch
-1. Several Curves Transformations
-1. Topaz DeNoise AI
-1. Resample (scaled down)
-1. Google Photos
 
 No special notes — this was a straightforward workflow.
 

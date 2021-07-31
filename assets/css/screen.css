@@ -7,6 +7,13 @@ License: https://www.wowthemes.net/freebies-license/
     html { font-size:18px; } /* Increase the font size on higher resolutions */
     .container {max-width:80%;}
 }
+
+body {
+    background-color: #eee;
+    background-image: url(../images/header.jpg);
+    background-size:auto;
+}
+
 .mainheading {
     padding: 1rem 0rem;
 }
@@ -198,7 +205,7 @@ section.recent-posts {
 
 .post-top-meta span {
     font-size: 0.9rem;
-    color: rgba(0, 0, 0, .44);
+    color: rgba(0, 0, 0, .85);
     display: inline-block;
 }
 
@@ -898,4 +905,15 @@ iframe {
 .lazyimg[data-srcset] {
     opacity: 0;
     transition: opacity .25s;
+}
+
+.gallery-card {
+    width: 300px;
+    height: 100%;
+    margin: 6px;
+}
+
+.gallery-img {
+    max-height: 200px;
+    object-fit: cover;
 }

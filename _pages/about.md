@@ -30,7 +30,7 @@ comments: true
 
 <p>Here are some helpful links:</p>
 <ul>
-<li>My <a href="https://photos.app.goo.gl/FceFDGmLJ1Cy1WvZ6" target="_blank">astrophotography gallery</a></li>
+<li>My <a href="{{site.baseurl}}/gallery">astrophotography gallery</a></li>
 <li>My <a href="https://www.youtube.com/channel/UCGTfyv52aBiubARo3t30MAQ" target="_blank">astrophotography videos</a></li>
 <li>My <a href="https://github.com/DeepSkyWorkflows" target="_blank">astrophotography scripts and tools</a></li>
 </ul>

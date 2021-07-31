@@ -22,6 +22,36 @@
         </li>
 
     </ul>  
+    
+    {% assign gallery = "" | split: "," %}
+    {% for item in site.gallery %}
+        {% for tag in item.tags %}
+            {% assign gtag = tag | capitalize | strip %}
+            {% for posttag in page.tags %}
+                {% assign ptag = posttag | capitalize | strip %} 
+                {% if gtag == ptag %}
+                    {% assign gallery = gallery | push: item %}                    
+                {% endif %}
+            {% endfor %}
+        {% endfor %}    
+    {% endfor %}
+    {% if gallery %}
+        <hr/>
+        <p><strong>Gallery</strong></p>
+        {% assign sorted = gallery | uniq | sort: "title" %}
+        {% for item in sorted %}
+            {% assign mainUrl = site.baseurl | append: item.url %}            
+            {% assign thumbPath = site.baseurl | append: "/assets/images/gallery/" | append: item.folder | append: "/thumb.jpg" %}
+            <div class="card gallery-card mw-100">
+                <a href="{{mainUrl}}" title="{{item.description}}">
+                    <img class="card-img-top gallery-img" src="{{thumbPath}}" alt="{{item.description}}">
+                </a>
+                <div class="card-header bg-light text-center">
+                    <a href="{{mainUrl}}" title="{{item.description}}">{{item.title}}</a>
+                </div>                
+            </div>        
+        {% endfor %}
+    {% endif %}
     <hr/>
     <p>
         <strong>Browse</strong>
