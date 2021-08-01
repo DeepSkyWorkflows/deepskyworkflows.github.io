@@ -5,7 +5,7 @@ permalink: /gallery/
 ---
 
 {% assign types = site.gallery | group_by: 'type' | sort: 'name' %}
-<div class="row">
+<div class="row mw-25">
     <div class="col-md-2 order-sm-5 pr-2">
         <ul>
         {% for nestedGroup in types %}
@@ -13,13 +13,13 @@ permalink: /gallery/
         {% endfor %}
         </ul>
         <p><strong><i class="fa fa-filter"></i> Filter:</strong></p>
-        <input type="text" class="gallery-search form-control text-small mw-100" placeholder="Start typing..." id="gallerySearch"/>
+        <input type="text" class="gallery-search form-control text-small mw-100" tabindex="0" placeholder="Start typing..." id="gallerySearch"/>
         <br/>
         <p><strong><i class="fa fa-tags"></i> Tags:</strong></p>
         <div id="tagContainer">
         </div>    
         </div>
-    <div class="col-md-9 order-sm-6">
+    <div class="col-md-9 order-sm-6 mr-2">
         {% for group in types %}
             <div class="row">&nbsp;</div>
             <div class="row">
@@ -30,14 +30,16 @@ permalink: /gallery/
                 </div>
             </div>                
             {% assign subitems = group.items | sort : 'title' %}
+            {% assign itemCount = 0 %}
             <div class="row">
             {% for item in subitems %}
             {% assign mainUrl = site.baseurl | append: item.url %}
             {% assign annotated = mainUrl | append: "#annotated" %}
             {% assign grid = mainUrl | append: "#grid" %}
+            {% assign itemCount = itemCount | plus: 1 %}
             {% assign thumbPath = site.baseurl | append: "/assets/images/gallery/" | append: item.folder | append: "/thumb.jpg" %}
                 <div class="card gallery-card" data-url="{{item.url}}">
-                    <a href="{{mainUrl}}" title="{{item.description}}">
+                    <a href="{{mainUrl}}" title="{{item.description}}" tabindex="{{itemCount}}">
                         <img class="card-img-top gallery-img" src="{{thumbPath}}" alt="{{item.description}}">
                     </a>
                     <div class="card-header bg-light text-center">

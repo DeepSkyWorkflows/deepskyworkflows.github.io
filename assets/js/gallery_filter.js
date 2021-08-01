@@ -149,6 +149,7 @@ sitemap: false
                 .addClass("badge-primary")
                 .addClass("badge-small")
                 .addClass("m-2")
+                .attr("tabindex", 500 + idx)
                 .text(tags[idx]);
             $(tagButton).on("click", function () {
                 tagContent.selectTag(tagButton, tags[idx]);
