@@ -28,6 +28,8 @@ layout: default
 
         <div class="article-post col-md-9">
 
+            {% if page.noannotations == true %}
+            {% else %}
             <ul class="nav nav-tabs" id="myTab" role="tablist">
 
                 <li class="nav-item">
@@ -51,6 +53,7 @@ layout: default
                 </li>
 
             </ul>
+            {% endif %}
 
             <div class="card" id="loading">
                 <div class="card-header">Loading images...</div>
@@ -67,9 +70,11 @@ layout: default
                                 title="{{page.description}}" />
                         </a>
                     </div>
-                    <div class="card-footer small text-right">{{copyright}}</div>
+                    <div class="card-footer small text-right">{{copyright}}</div>             
                 </div>
 
+                {% if page.noannotations == true %}
+                {% else %}
                 <div class="card" id="annotated-fs">
                     <div class="card-header">Annotated Image (fullsize version)</div>
                     <div class="card-body">
@@ -98,6 +103,7 @@ layout: default
                     </div>
                     <div class="card-footer small text-right">{{copyright}}</div>
                 </div>
+                {% endif %}
 
             </div>
 
@@ -110,6 +116,11 @@ layout: default
                     {% assign traits =
                     "telescope|length|aperture|sessions|firstCapture|lights|exposure|ra|dec|size|radius|scale" |
                     split: "|" %}
+                    {% if page.noannotations == true %}
+                    {% assign traits =
+                        "telescope|length|aperture|sessions|firstCapture|lights|exposure" |
+                        split: "|" %}                        
+                    {% endif %}
                     <table class="table table-striped table-sm">
                         {% assign blog = "" | split: "," %}
                         {% for item in site.posts %}

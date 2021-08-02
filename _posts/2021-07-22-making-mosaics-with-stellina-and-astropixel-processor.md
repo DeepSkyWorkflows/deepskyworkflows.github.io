@@ -8,7 +8,7 @@ toc: true
 image: assets/images/2021-07-22/polaris-annotated.jpeg
 description: "Learn how to use Stellina to reframe observations and produce panels for larger images, then use AstroPixel Processor to combine them into a mosaic."
 featured: true
-discussion: 1
+comments: true
 ---
 
 This post walks through one technique for making mosaics, or pictures that are combined from multiple exposures. This appproach integrates the mosaic during stacking using AstroPixel Processor.

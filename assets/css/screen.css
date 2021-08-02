@@ -934,7 +934,20 @@ iframe {
     border-radius: 20px;
 }
 
-.gallery-carousel {
+.slideshow-card {
     height: 80vh;
-    object-fit: contain;
+    background-color: black;    
+}
+
+.slideshow-carousel, .slideshow-wrapper {
+    background-color: black;
+}
+
+.slideshow-img {
+    object-fit: contain; 
+    height: 75vh;   
+}
+
+.slideshow-title {
+    color: lightgray;
 }
