@@ -21,6 +21,12 @@ post_class: post-template
         <div class="col-md-9 flex-first flex-md-unordered">
             <div class="mainheading">
 
+                {% assign wordcount = page.content | number_of_words %}
+                {% assign readingTime = wordcount | divided_by: 250 %}
+                {% assign readingTimeText = readingTime | append: " minutes" %}
+                {% if readingTime < 2 %}
+                    {% assign readingTimeText = "about 1 minute" %}
+                {% endif %}
                 <!-- Author Box -->
                 {% if page.author %}
                 <div class="row post-top-meta">
@@ -34,6 +40,11 @@ post_class: post-template
                     <div class="col-xs-12 col-md-9 col-lg-10 text-center text-md-left">
                         <a target="_blank" class="link-dark" href="{{ author.web }}">{{ author.display_name }}</a>
                         <span class="author-description">{{ author.description }}</span>
+                    </div>
+                </div>
+                <div class="row post-top-meta">
+                    <div class="col-12 text-right small text-md-right mb-4 mb-md-0">
+                        📅{{page.date|date: "%B %d, %Y"}} 💬{{wordcount}} words ⌛{{readingTimeText}} to read
                     </div>
                 </div>
                 {% endif %}

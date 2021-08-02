@@ -1,0 +1,27 @@
+{% assign width = "" %}
+{% if include.half == true %}
+    {% assign width = "w-50" %}
+{% endif %}
+{% assign url = include.url %}
+{% if url contains "/images/" %}
+{% else %}
+    {% assign urlparts = page.date | split: " "  %}
+    {% assign url = site.baseUrl | append: "/assets/images/" | append: urlparts[0] | append: "/" | append: include.url %}    
+{% endif %}
+<div class="card p-2 m-6 {{width}}">
+    {% assign target = "#" %}
+    {% if include.target == true %}
+    {% assign target = include.url %}
+    {% endif %}
+    <img class="card-img-top mw-25" src="{{url}}" alt="{{include.description}}" title="{{include.description}}">    
+    <div class="card-header bg-light text-center">
+        <small>
+        {% if include.target == true %}
+        <a href="{{url}}" class="stretch-link" title="{{include.description}}">{{include.description}}</a>
+        {% else %} 
+        {{include.description}}
+        {% endif %}
+    </small>
+    </div>                
+</div>
+<br/>

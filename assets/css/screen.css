@@ -934,4 +934,7 @@ iframe {
     border-radius: 20px;
 }
 
-
+.gallery-carousel {
+    height: 80vh;
+    object-fit: contain;
+}
