@@ -5,10 +5,11 @@ description: "Astrophotography topics and astrophotos of deep sky objects with a
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/logo.png'
 baseurl: 
+url: https://deepskyworkflows.github.io
 # google_analytics: ''
 # disqus: ''
 # mailchimp-list: ''
-include: ["_pages"]
+include: ["_pages", "_gallery"]
 permalink: /:title/
 
 # Authors
@@ -66,7 +67,7 @@ adsense-data-ad-slot: "1363087678"
 # Lazy Images ("enabled" or "disabled")
 lazyimages: "enabled"
 
-exclude: [changelog.md, LICENSE.txt, README.md, Gemfile, Gemfile.lock]
+exclude: [changelog.md, mediumish-theme-license.txt, LICENSE, docker-compose.yml, README.md, Gemfile, Gemfile.lock]
 
 collections:
   gallery:

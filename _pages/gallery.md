@@ -1,25 +1,13 @@
 ---
 layout: page
 title: Gallery
+image: "assets/images/gallery/m31-spain/thumb.jpg"
 permalink: /gallery/
 ---
 
 {% assign types = site.gallery | group_by: 'type' | sort: 'name' %}
 <div class="row mw-25">
-    <div class="col-md-2 order-sm-5 pr-2">
-        <ul>
-        {% for nestedGroup in types %}
-            <li><a href="#{{nestedGroup.name}}">{{nestedGroup.name}}</a></li>
-        {% endfor %}
-        </ul>
-        <p><strong><i class="fa fa-filter"></i> Filter:</strong></p>
-        <input type="text" class="gallery-search form-control text-small mw-100" tabindex="0" placeholder="Start typing..." id="gallerySearch"/>
-        <br/>
-        <p><strong><i class="fa fa-tags"></i> Tags:</strong></p>
-        <div id="tagContainer">
-        </div>    
-        </div>
-    <div class="col-md-9 order-sm-6 mr-2">
+    <div class="col-md-9 col-sm-6 mr-2">
         {% for group in types %}
             <div class="row">&nbsp;</div>
             <div class="row">
@@ -50,6 +38,21 @@ permalink: /gallery/
             </div>
         {% endfor %}    
     </div>
+    <div class="col-md-2 col-sm-5 pr-2">
+        <a href="{{ site.baseurl}}/gallery/slideshow/" title="Slideshow"><i class="fa fa-film"></i> Slideshow</a>
+        <hr/>
+        <ul>
+        {% for nestedGroup in types %}
+            <li><a href="#{{nestedGroup.name}}">{{nestedGroup.name}}</a></li>
+        {% endfor %}
+        </ul>
+        <p><strong><i class="fa fa-filter"></i> Filter:</strong></p>
+        <input type="text" class="gallery-search form-control text-small mw-100" tabindex="0" placeholder="Start typing..." id="gallerySearch"/>
+        <br/>
+        <p><strong><i class="fa fa-tags"></i> Tags:</strong></p>
+        <div id="tagContainer">
+        </div>    
+        </div>
 </div>
 
 <script src="{{ site.baseurl }}/assets/js/gallery_filter.js"></script>

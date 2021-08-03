@@ -11,14 +11,13 @@ permalink: /gallery/slideshow/
             <div class="card-header text-center">
                 <strong id="astroheader" class="card-title slideshow-title">Initializing slideshow...</strong>
                 </div> 
-                {% assign loading = site.baseurl | append: "/assets/images/loading.gif" %}
-               <img b-class="d-block" class="card-img-top slideshow-img" src="{{loading}}" alt="Loading the slideshow" title="Loading the"/>                           
+                <canvas id="dwitter" width="1920" height="1080"></canvas>                           
             </div>
         </div>       
     </div>
 </div>
 
-<script type="slideshow/template">
+<script id="astrodeck" type="slideshow/template">
 {% assign first = true %}
     {% assign active = "active" %}
     {% for image in site.gallery %}
@@ -40,4 +39,4 @@ permalink: /gallery/slideshow/
         {% endif %}
     {% endfor %} 
 </script>
-<!--<iframe width=500 height=570 frameBorder="0" src="https://www.dwitter.net/e/4731" allowFullScreen="true"></iframe>-->
+<script type="text/javascript" src="{{ site.baseurl }}/assets/js/slideshow.js"></script>

@@ -946,6 +946,8 @@ iframe {
 .slideshow-img {
     object-fit: contain; 
     height: 75vh;   
+    -webkit-transition: 0.6s ease;
+    transition: 0.6s ease;
 }
 
 .slideshow-title {
