@@ -47,6 +47,7 @@ $(document).ready(function () {
     });
 
     tracker.total = tracker.remaining = tracker.deck.length;
+    tracker.paused = false;
 
     $("#astroheader").text(`Loading ${tracker.deck.length} slides...`);
 
@@ -63,9 +64,36 @@ $(document).ready(function () {
             $("#astroturf").append(card);
             if (tracker.remaining < 1) {
                 clearInterval(tracker.interval);
+                $(".carousel").carousel({
+                    interval: 5000
+                });
+                $("#carouselcontrols").removeClass("d-none");
+                $("#btnPause").on("click", function () {
+                    console.log("click");
+                    if (tracker.paused) {
+                        $(".carousel").carousel("cycle");
+                        $("#btnPause").text("⏸");
+                        tracker.paused = false;
+                    }
+                    else {
+                        $(".carousel").carousel("pause");
+                        $("#btnPause").text("▶");
+                        tracker.paused = true;
+                    }
+                });
+                $(".carousel-control-prev").on("click", function () {
+                    $(".carousel").carousel("prev");
+                    return true;
+                });
+                $(".carousel-control-next").on("click", function () {
+                    $(".carousel").carousel("next");
+                    return true;
+                });
+                $(".carousel-control-prev, .carousel-control-next").removeClass("d-none");
                 $("#astroturf").children().first().remove();  
                 $("#astroturf").children().first().addClass("active");
             }
         });                
+        $(img).attr("src", $(img).attr("data-src"));
     }
 });
