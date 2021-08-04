@@ -953,3 +953,11 @@ iframe {
 .slideshow-title {
     color: lightgray;
 }
+
+#btnPause {
+    color: lightgray;
+}
+
+.carousel-caption {
+    background-color: rgba(64, 64, 64, 0.5);    
+}

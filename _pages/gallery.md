@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Gallery
-image: "assets/images/gallery/m31-spain/thumb.jpg"
+image: "assets/images/gallery.jpg"
 permalink: /gallery/
 ---
 
@@ -21,7 +21,8 @@ permalink: /gallery/
             {% assign subitems = group.items | sort : 'title' %}
             {% assign itemCount = 0 %}
             <div class="row">
-            {% for item in subitems %}
+            {% assign itemIndex = 1 %}
+            {% for item in subitems %}        
             {% assign mainUrl = site.baseurl | append: item.url %}
             {% assign annotated = mainUrl | append: "#annotated" %}
             {% assign grid = mainUrl | append: "#grid" %}
@@ -29,7 +30,8 @@ permalink: /gallery/
             {% assign thumbPath = site.baseurl | append: "/assets/images/gallery/" | append: item.folder | append: "/thumb.jpg" %}
                 <div class="card gallery-card" data-url="{{item.url}}">
                     <a href="{{mainUrl}}" title="{{item.description}}" tabindex="{{itemCount}}">
-                        <img class="card-img-top gallery-img" src="{{thumbPath}}" alt="{{item.description}}">
+                        <img class="card-img-top gallery-img" id="image-{{itemIndex}}" src="{{thumbPath}}" alt="{{item.description}}">
+                        {% assign itemIndex = itemIndex | plus: 1 %}
                     </a>
                     <div class="card-header bg-light text-center">
                         <a href="{{mainUrl}}" title="{{item.description}}">{{item.title}}</a>

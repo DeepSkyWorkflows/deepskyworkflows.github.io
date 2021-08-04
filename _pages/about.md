@@ -3,6 +3,7 @@ layout: page
 title: About
 permalink: /about
 comments: true
+image: "assets/images/about/orion.jpeg"
 ---
 
 <div class="row justify-content-between">

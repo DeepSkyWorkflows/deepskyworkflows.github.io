@@ -1,13 +1,15 @@
 ---
 layout: slideshow
-title: Slideshow
+title: Astrophotography Slideshow
 permalink: /gallery/slideshow/
+image: "assets/images/gallery.jpg"
 ---
 
 <div class="text-right d-none" id="carouselcontrols">
-        <button class="btn btn-link" id="btnPause">⏸</button>
-    </div>        
-    
+        <span id="carouselstatus">🟢</span>&nbsp;
+        <button class="btn btn-link" id="btnPause">Pause</button>        
+</div>
+
 <div id="astroshow" class="carousel slide slideshow-carousel" data-ride="carousel">
     <div id="astroturf" class="carousel-inner">
          <div class="carousel-item active"> 
@@ -34,15 +36,15 @@ permalink: /gallery/slideshow/
     {% assign imgPath = site.baseurl | append: "/assets/images/gallery/" | append: image.folder | append: "/" | append: image.folder | append: ".jpg" %}            
     {% assign mainUrl = site.baseurl | append: image.url %}                    
     <div class="carousel-item"> 
-        <div class="card slideshow-card">
+        <div class="card slideshow-card align-items-center">
             <div class="card-header text-center">
                 <strong class="card-title slideshow-title">{{image.title}}</strong>
             </div>
             <a href="{{mainUrl}}" title="{{image.description}}" class="stretch-link">
                 <img b-class="d-block" class="card-img-top slideshow-img" data-src="{{imgPath}}" alt="{{image.description}}" title="{{image.description}}"/>
             </a>
-            <div class="carousel-caption d-none d-md-block">
-                <p>{{image.description}}</p>
+            <div class="carousel-caption m-10 d-xs-none d-md-block p-6">
+                <span>{{image.description}}</span>
             </div>                
         </div>
     </div>    
