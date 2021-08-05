@@ -7,7 +7,7 @@ image: /assets/images/gallery/ngc6380/thumb.jpg
 telescope: Stellina
 length: "400mm"
 aperture: "80mm"
-folder: NGC7380
+folder: ngc7380
 exposure: 10
 lights: 619 
 sessions: 1

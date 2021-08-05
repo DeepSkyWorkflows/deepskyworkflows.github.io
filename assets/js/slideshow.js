@@ -67,12 +67,19 @@ $(document).ready(function () {
         let card = tracker.deck.splice(slideNo, 1)[0];
         let img = $(card).find('img').first();
 
+        let first = true;
+
         // wait for the image to actually load
         $(img).on('load', function () {
 
             tracker.remaining--;
 
             $("#astroheader").text(`${tracker.remaining} remaining of ${tracker.total} slides...`);
+
+            if (first) {
+                $(".carousel .active").removeClass("active");
+                first = false;
+            }
 
             // move the deck from the hidden div to the live carousel
             $(card).remove();
@@ -88,7 +95,7 @@ $(document).ready(function () {
 
                 // start the show                
                 $(".carousel").carousel({
-                    interval: 5000
+                    interval: 8000
                 });
 
                 // wire up the pause/resume button

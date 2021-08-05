@@ -1,0 +1,21 @@
+---
+title: "NGC7789 Caroline's Rose"
+type: Cluster
+tags: ["NGC7789", "Caroline's Rose"]
+description: Caroline's Rose is a cluster of about 1,000 stars that spans 50 light years and shares the apparent size of the moon.
+image: /assets/images/gallery/ngc7789/thumb.jpg
+telescope: Stellina
+length: "400mm"
+aperture: "80mm"
+folder: ngc7789
+exposure: 10
+lights: 91
+sessions: 1
+firstCapture: 2021-08-04
+lastCapture:
+ra: "23h 57m 15.7s"
+dec: "+56° 44' 0.316"
+size: "58.694 x 38.964 arcmin"
+radius: "0.587 deg"
+scale: "0.824 arcsec/pixel"
+---
