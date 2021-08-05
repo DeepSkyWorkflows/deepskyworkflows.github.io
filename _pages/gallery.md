@@ -5,7 +5,7 @@ image: "assets/images/gallery.jpg"
 permalink: /gallery/
 ---
  
-{% assign version = 8 %}
+{% assign version = 9 %}
 {% assign types = site.gallery | group_by: 'type' | sort: 'name' %}
 <div class="row mw-25">
     <div class="col-md-9 col-sm-6 mr-2">
