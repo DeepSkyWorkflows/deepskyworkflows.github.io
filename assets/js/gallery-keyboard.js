@@ -29,14 +29,14 @@ $(document).ready(function () {
                     if (e.shiftKey) {
                         if (tabState.tabIdx > 0) {
                             tabState.tabIdx--;
-                            $(tabState.tabs[tabState.tabIdx]).trigger("click");
+                            $(tabState.tabs[tabState.tabIdx]).trigger("click").focus();
                             preventDefault = true;
                         }
                     }
                     else {
                         if (tabState.tabIdx < (tabState.tabs.length - 1)) {
                             tabState.tabIdx++;
-                            $(tabState.tabs[tabState.tabIdx]).trigger("click");
+                            $(tabState.tabs[tabState.tabIdx]).trigger("click").focus();
                             preventDefault = true;
                         }
                     }
