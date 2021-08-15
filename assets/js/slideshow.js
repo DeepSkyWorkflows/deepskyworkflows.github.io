@@ -1,3 +1,28 @@
+const LEFT = 37;
+const RIGHT = 39;
+const SPACEBAR = 32;
+
+const slideShowKeyboard = function () {
+    $(document).keydown(function (e) {
+        let preventDefault = false;
+        if (e.keyCode === LEFT) {
+            $(".carousel").carousel("prev");                    
+            preventDefault = true;
+        }
+        else if (e.keyCode == RIGHT ) {
+            $(".carousel").carousel("next");                    
+            preventDefault = true;
+        }
+        else if (e.keyCode == SPACEBAR) {
+            $("#btnPause").trigger("click");
+            preventDefault = true;
+        }
+        if (preventDefault) {
+            e.preventDefault();
+        }
+    });
+};
+
 $(document).ready(function () {
 
     // fun little algorithm that shows colorful animated rectangles
@@ -62,12 +87,9 @@ $(document).ready(function () {
     // iterate the deck in a random order
     while (tracker.deck.length) {
 
-
         let slideNo = Math.floor(Math.random() * tracker.deck.length);
         let card = tracker.deck.splice(slideNo, 1)[0];
         let img = $(card).find('img').first();
-
-        let first = true;
 
         // wait for the image to actually load
         $(img).on('load', function () {
@@ -128,6 +150,8 @@ $(document).ready(function () {
 
                 $(".carousel-control-prev, .carousel-control-next").removeClass("d-none");
 
+                slideShowKeyboard();
+
                 // adjust text display
                 const adjustCaption = function () {
 
@@ -177,9 +201,18 @@ $(document).ready(function () {
                 // set our first slide to "active"
                 $("#astroturf").children().first().addClass("active");
 
-                adjustCaption();
+                adjustCaption();                
             }
         });
-        $(img).attr("src", $(img).attr("data-src"));
+
+        const loader = new Image();
+
+        loader.onload = function () {
+            $(img).attr("src", $(loader).attr("src"));
+        };
+
+        setTimeout(function () {
+            loader.src = $(img).attr("data-src");
+        }, 5);
     }
 });
