@@ -82,8 +82,6 @@ $(document).ready(function () {
 
     $("#astroheader").text(`Loading ${tracker.deck.length} slides...`);
 
-    let first = true;
-
     // iterate the deck in a random order
     while (tracker.deck.length) {
 
@@ -98,17 +96,14 @@ $(document).ready(function () {
 
             $("#astroheader").text(`${tracker.remaining} remaining of ${tracker.total} slides...`);
 
-            if (first) {
-                $(".carousel .active").removeClass("active");
-                first = false;
-            }
-
             // move the deck from the hidden div to the live carousel
             $(card).remove();
             $("#astroturf").append(card);
 
             if (tracker.remaining < 1) {
 
+                $(".carousel .active").removeClass("active");
+                
                 // turn off the show
                 clearInterval(tracker.interval);
 

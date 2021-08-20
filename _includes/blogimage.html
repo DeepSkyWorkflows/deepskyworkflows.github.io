@@ -12,16 +12,16 @@
     {% assign target = "#" %}
     {% if include.target == true %}
     {% assign target = include.url %}
+    <a href="{{url}}" class="stretched-link" title="{{include.description}}">
     {% endif %}
     <img class="card-img-top mw-25" src="{{url}}" alt="{{include.description}}" title="{{include.description}}">    
     <div class="card-header bg-light text-center">
         <small>
-        {% if include.target == true %}
-        <a href="{{url}}" class="stretch-link" title="{{include.description}}">{{include.description}}</a>
-        {% else %} 
         {{include.description}}
-        {% endif %}
-    </small>
-    </div>                
+        </small>
+    </div>
+    {% if include.target == true %}
+    </a>
+    {% endif %}            
 </div>
 <br/>

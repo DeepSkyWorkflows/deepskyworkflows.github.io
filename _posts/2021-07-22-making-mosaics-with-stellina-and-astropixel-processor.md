@@ -2,12 +2,12 @@
 layout: post
 title:  "Making mosaics with Stellina and AstroPixel Processor: Polaris"
 author: deepskyworkflows
-categories: [ Stellina, AstroPixel Processor ]
-tags: [ mosaic, polaris, stellina, astropixel processor ]
+categories: [ Stellina, AstroPixel Processor, Mosaic ]
+tags: [ polaris ]
 toc: true
 image: assets/images/2021-07-22/polaris-annotated.jpeg
 description: "Learn how to use Stellina to reframe observations and produce panels for larger images, then use AstroPixel Processor to combine them into a mosaic."
-featured: true
+featured: false
 comments: true
 ---
 
