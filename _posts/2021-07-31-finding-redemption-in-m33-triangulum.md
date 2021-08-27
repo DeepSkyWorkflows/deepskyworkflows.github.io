@@ -7,7 +7,7 @@ tags: [ galaxy, triangulum, m33 ]
 toc: true
 image: assets/images/2021-07-31/dynamicpsf.jpg
 description: "The journey to capture M33 that lasted almost a year."
-featured: true
+featured: false
 hide: true
 comments: true
 ---
