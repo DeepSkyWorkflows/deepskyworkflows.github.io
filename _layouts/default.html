@@ -159,10 +159,13 @@ ga('send', 'pageview');
 <footer class="footer">
     <div class="container">
         <div class="row">
-            <div class="col-md-6 col-sm-6 text-center text-lg-left">
+            <div class="col-md-5 col-sm-5 text-center text-lg-left">
                 Copyright © {{ site.time | date: "%Y" }} {{ site.name }} 
             </div>
-            <div class="col-md-6 col-sm-6 text-center text-lg-right">    
+            <div class="col-md-2 col-sm-2 text-center text-lg-center">
+                {% include social.html %}
+            </div>
+            <div class="col-md-5 col-sm- text-center text-lg-right">    
                 <a target="_blank" tabindex="-1" href="https://www.wowthemes.net/mediumish-free-jekyll-template/">Mediumish Jekyll Theme</a> by WowThemes.net
             </div>
         </div>

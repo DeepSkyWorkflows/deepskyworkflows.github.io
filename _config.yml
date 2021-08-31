@@ -17,7 +17,7 @@ authors:
   deepskyworkflows:
     name: Jeremy Likness
     display_name: Jeremy Likness
-    twitter: JeremyLikness
+    twitter: DeepSkyWorkflow
     gravatar: 9ce480e4853b49026c274d31f6ea83d2
     email: deepskyworkflows@gmail.com
     web: https://www.strengthwithparkinsons.com/
@@ -42,7 +42,7 @@ jekyll-archives:
 
 # Twitter
 twitter:
-  username: jeremylikness
+  username: DeepSkyWorkflow
   card: summary_large_image
     
 # Pagination 

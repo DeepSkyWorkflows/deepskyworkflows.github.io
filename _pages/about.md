@@ -38,6 +38,7 @@ image: "assets/images/about/orion.jpeg"
 <p>That’s it for the introduction. I’ll keep it short and sweet for now, and I look forward to sharing more!</p>
 <p>Regards,</p>
 <p>Jeremy Likness</p>
+<p>{% include social.html %}</p>
 
 </div>
 
