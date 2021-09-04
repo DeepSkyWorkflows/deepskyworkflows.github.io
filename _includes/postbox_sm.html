@@ -1,0 +1,16 @@
+<!-- begin post -->
+{% assign url = site.baseurl | append: include.post.url %}
+{% assign imgUrl = site.baseurl | append: include.post.image %}
+{% if site.baseurl contains "/" %}
+{% else %}
+{% assign imgUrl = "/" | append: imgUrl %}
+{% endif %}
+{% if include.post.image contains "://" %}{% assign imgUrl = "wuuuut" %}{% endif %}
+<div class="card gallery-card">
+    <a href="{{url}}" title="{{include.post.description}}">
+        <img class="card-img-top gallery-img" src="{{imgUrl}}" alt="{{include.post.description}}">
+    </a>
+    <div class="card-header bg-light text-center">
+        <a href="{{url}}" title="{{include.post.description}}">{{include.post.title}}</a>
+    </div>                
+</div>

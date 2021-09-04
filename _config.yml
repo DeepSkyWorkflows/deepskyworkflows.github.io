@@ -72,8 +72,8 @@ exclude: [changelog.md, mediumish-theme-license.txt, LICENSE, docker-compose.yml
 collections:
   gallery:
     output: true
-    permalink: /gallery/:title/ 
-
+    permalink: /gallery/:title/
+  
 defaults:
   - scope:
       path: ""

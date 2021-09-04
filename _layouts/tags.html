@@ -4,16 +4,24 @@ layout: default
 permalink: "/tags.html"
 ---
 
+{% assign taglist = site.tags | sort %}
+<div class="row">    
+    {% for tag in taglist %}
+    <a href="{{ site.baseurl }}/tags#{{ tag[0] }}" class="badge badge-primary badge-small m-2">
+        <span class="text-uppercase">{{ tag[0] }}</span>
+    </a>
+    {% endfor %}
+</div>
 <div class="row listrecent">
-{% for tag in site.tags %}
-<div class="section-title col-md-12 mt-4">
-<h2 id="{{ tag[0] | replace: " ","-" }}">Tag <span class="text-capitalize">{{ tag[0] }}</span></h2>
+{% for tag in taglist %}
+<div class="section-title col-md-12 mt-4"><a name="{{ tag[0] }}"></a>
+<h2 id="{{ tag[0] | replace: " ","-" }}">Tag: <span class="text-uppercase">{{ tag[0] }}</span></h2>
 </div>
 {% assign pages_list = tag[1] %}
 {% for post in pages_list %}
 {% if post.title != null %}
 {% if group == null or group == post.group %}
-{% include postbox.html %}
+{% include postbox_sm.html post=post %}
 {% endif %}
 {% endif %}
 {% endfor %}
