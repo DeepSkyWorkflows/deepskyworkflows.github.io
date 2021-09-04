@@ -1,5 +1,5 @@
 ---
-title: "NGC281 The Pacman Nebula"
+title: "NGC281: The Pacman Nebula"
 type: Nebula
 tags: ["NGC281","IC1590", "Pacman"]
 description: This nebula is named the Pacman nebula and you'll never guess why.

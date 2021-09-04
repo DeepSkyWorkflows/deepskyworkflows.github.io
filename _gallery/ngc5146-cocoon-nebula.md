@@ -1,5 +1,5 @@
 ---
-title: "NGC5146 The Cocoon Nebula"
+title: "NGC5146: The Cocoon Nebula"
 type: Nebula
 tags: ["IC5146","NGC5146", "Cocoon Nebula"]
 description: The cocoon nebula incubates at a distance of about 4,000 light years, awainting its transformation as a reflection and emission nebula.

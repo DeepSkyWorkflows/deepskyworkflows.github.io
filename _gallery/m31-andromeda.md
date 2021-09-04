@@ -1,5 +1,5 @@
 ---
-title: "M31 Andromeda Galaxy"
+title: "M31: Andromeda Galaxy"
 type: Galaxy
 tags: ["NGC224","M31","Andromeda Galaxy"]
 description: The Andromeda Galaxy occupies a large field of view. It is both near to the Milky Way and bright enough to see with the naked eye.

@@ -1,5 +1,5 @@
 ---
-title: M45 Pleiades
+title: "M45: The Pleiades"
 type: Cluster
 tags: [M45, "Merope Nebula", "NGC1435", "IC349"]
 description: The Pleiades is one of the closest star clusters to Earth and filled with bright blue stars.

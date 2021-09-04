@@ -1,5 +1,5 @@
 ---
-title: "M33 The Triangulum Galaxy"
+title: "M33: The Triangulum Galaxy"
 type: Galaxy
 tags: ["NGC598","M33","NGC595","Triangulum Galaxy","Triangulum Pinwheel","NGC 604"]
 description: M33, the Triangulum Galaxy, is sometimes mistakenly referred to as the Pinwheel Galaxy (that title is held by M101). It is one of the few galaxies visible to the naked eye.

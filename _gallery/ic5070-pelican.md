@@ -1,5 +1,5 @@
 ---
-title: "IC5070 Pelican Nebula"
+title: "IC5070: The Pelican Nebula"
 type: Nebula
 image: /assets/images/gallery/ic5070/thumb.jpg
 tags: ["The star 56Cyg","The star 57Cyg","IC5070","Pelican Nebula"]

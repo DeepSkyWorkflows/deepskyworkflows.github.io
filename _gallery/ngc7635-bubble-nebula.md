@@ -1,5 +1,5 @@
 ---
-title: "NGC7635 The Bubble Nebula"
+title: "NGC7635: The Bubble Nebula"
 type: Nebula
 tags: ["NGC7635","Bubble Nebula"]
 description: The bubble is a cloud of molecular gas blown outward by an energetic young star and supercharged so it glows.

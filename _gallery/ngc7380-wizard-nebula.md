@@ -1,5 +1,5 @@
 ---
-title: "NGC7380 The Wizard Nebula"
+title: "NGC7380: The Wizard Nebula"
 type: Nebula
 tags: ["NGC7380"]
 description: The Wizard Nebula is a faint nebula that requires lots of exposures and possibly a filter to see. It surrounds a young cluster of stars.

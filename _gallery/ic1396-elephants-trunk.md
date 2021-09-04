@@ -1,5 +1,5 @@
 ---
-title: "IC1396 The Elephants Trunk"
+title: "IC1396: The Elephant's Trunk"
 type: Nebula
 tags: ["IC1396"]
 description: The long curling trunk is cosmos gas and dark dust believed to be forming stars across a massive region.

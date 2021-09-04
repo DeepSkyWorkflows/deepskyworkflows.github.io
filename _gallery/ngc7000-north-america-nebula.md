@@ -1,5 +1,5 @@
 ---
-title: "NGC7000 North America Nebula Mosaic"
+title: "NGC7000: North America Nebula Mosaic"
 type: Nebula
 tags: ["NGC7000"]
 description: The North America nebula is vast and my telescope can only capture a small frame. I created this mosaic to appreciate the breadth and depth of its beauty.

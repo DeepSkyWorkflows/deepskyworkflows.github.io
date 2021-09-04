@@ -1,5 +1,5 @@
 ---
-title: "NGC7789 Caroline's Rose"
+title: "NGC7789: Caroline's Rose"
 type: Cluster
 tags: ["NGC7789", "Caroline's Rose"]
 description: Caroline's Rose is a cluster of about 1,000 stars that spans 50 light years and shares the apparent size of the moon.

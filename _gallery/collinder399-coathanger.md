@@ -1,5 +1,5 @@
 ---
-title: "Collinder399 The Coat Hanger"
+title: "Collinder399: The Coat Hanger"
 type: Asterism
 image: /assets/images/gallery/collinder399/thumb.jpg
 tags: ["The star 4Vul","The star 5Vul", "Brocchi's Cluster", "The Coat Hanger"]
