@@ -7,7 +7,7 @@ tags: [ ngc6992, veil nebula, m13 ]
 toc: true
 image: assets/images/2021-08-18/ngc6992mosaicpreview.jpg
 description: "Learn how to set up Telescopius to plan mosaics."
-featured: true
+featured: false
 hide: true
 comments: true
 ---
