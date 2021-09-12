@@ -9,13 +9,13 @@ length: "400mm"
 aperture: "80mm"
 folder: m45
 exposure: 5
-sessions: 4
-firstCapture: 2021-03-12
-lastCapture: 2021-07-25
-lights: 196
-ra:	"03h 46m 55.505s"
-dec: "+24° 15' 03.516"
-size: "62.3 x 43.2 arcmin"
-radius:	"0.632 deg"
-scale:	"0.825 arcsec/pixel"
+sessions: 2
+firstCapture: 2021-09-01
+lastCapture: 2021-09-09
+lights: 800
+ra:	"03h 47m 35.4s"
+dec: "+24° 03' 41.284"
+size: "96.895 x 67.386 arcmin"
+radius:	"0.984 deg"
+scale:	"1.126 arcsec/pixel"
 ---
