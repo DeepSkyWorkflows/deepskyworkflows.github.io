@@ -1,0 +1,21 @@
+---
+title: "M8: The Lagoon Nebula"
+type: Nebula
+tags: ["NGC6526","NGC6523","M8","The star 7Sgr","The star 9Sgr","NGC6530","Lagoon Nebula"]
+description: This cloud of interstellar dust surrounds a cluster that radiates energy to make the nebula glow.
+image: /assets/images/gallery/m8/thumb.jpg
+telescope: Stellina
+length: "400mm"
+aperture: "80mm"
+folder: m8
+exposure: 10    
+lights: 60
+sessions: 1
+firstCapture: 2021-09-14
+lastCapture:
+ra: "18h 3m 44.7s"
+dec: "-24° 22' 43.834"
+size: "60.799 x 40.729 arcmin"
+radius: "0.61 deg"
+scale: "0.751 arcsec/pixel"
+---

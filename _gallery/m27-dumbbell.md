@@ -9,13 +9,13 @@ length: "400mm"
 aperture: "80mm"
 folder: m27
 exposure: 10
-lights: 126
-sessions: 1
+lights: 578
+sessions: 2
 firstCapture: 2021-06-18 
 lastCapture:
-ra: "19h 59m 36.1s"
-dec: "+22° 43' 2.572"
-size: "55.513 x 39.982 arcmin"
-radius: "0.57 deg"
-scale: "0.619 arcsec/pixel"
+ra: "19h 59m 31.1s"
+dec: "+22° 43' 48.327"
+size: "32.976 x 24.045 arcmin"
+radius: "0.34 deg"
+scale: "0.412 arcsec/pixel"
 ---
