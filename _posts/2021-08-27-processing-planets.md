@@ -7,7 +7,7 @@ tags: [ jupiter ]
 toc: false
 image: assets/images/gallery/jupiter/thumb.jpg
 description: "Learn how to use ImageContainer, ProcessContainer, and FFTRegistration to stack planetary images produced by Stellina. With a guest appearance from Pierre, my parrot."
-featured: true
+featured: false
 hide: true
 comments: true
 ---
