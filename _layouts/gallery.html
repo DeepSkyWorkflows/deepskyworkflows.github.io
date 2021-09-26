@@ -116,6 +116,13 @@ layout: default
                     {% assign traits =
                     "telescope|length|aperture|sessions|firstCapture|lights|exposure|ra|dec|size|radius|scale" |
                     split: "|" %}
+                    {% assign focallength = page.length | replace: "mm", "" | to_integer %}
+                    {% assign aperture = page.aperture | replace: "mm", "" | to_integer %}
+                    {% assign fstop = 0 %}
+                    {% if aperture > 0 %}
+                       {% assign fstop = focallength | divided_by: aperture %}
+                       {% assign fdecimal = focallength | modulo: aperture | multiply_by: 10 | divide_by: aperture %}
+                    {% endif %}
                     {% if page.noannotations == true %}
                     {% assign traits =
                         "telescope|length|aperture|sessions|firstCapture|lights|exposure" |
@@ -183,6 +190,17 @@ layout: default
                                         {{page[trait]}}
                                     </td>
                                 </tr>
+                                {% if trait == "aperture" %}
+                                <tr>
+                                    <td class="text-right">
+                                        <strong>F-stop:</strong>
+                                    </td>
+                                    <td>&nbsp;</td>
+                                    <td>
+                                        f/{{fstop}}.{{fdecimal}}
+                                    </td>
+                                </tr>                        
+                                {% endif %}
                                 {% if trait == "exposure" %}
                                     {% assign totalTime = page.exposure | times: page.lights | to_integer %}
                                     {% assign unit = "s" %}
