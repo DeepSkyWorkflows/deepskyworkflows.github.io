@@ -7,7 +7,7 @@ tags: [ pixinsight, scripts ]
 toc: false
 image: assets/images/2021-09-06/autolinearfit.jpg
 description: "Link your RGB channels permanently with this automated script that extracts channels, performs a linear fit and recombines them."
-featured: true
+featured: false
 hide: true
 comments: true
 ---
