@@ -9,13 +9,13 @@ length: "400mm"
 aperture: "80mm"
 folder: ngc6960
 exposure: 10
-lights: 326
-sessions: 2
+lights: 864
+sessions: 6
 firstCapture: 2021-06-18 
-lastCapture: 2021-07-30
-ra: "20h 45m 39.9s"
-dec: "+30° 43' 2.636"
-size: "62.012 x 39.041 arcmin"
-radius: "0.611 deg"
-scale: "0.619 arcsec/pixel"
+lastCapture: 2021-09-24
+ra: "20h 45m 44.3s"
+dec: "+30° 41' 48.915"
+size: "62.31 x 38.098 arcmin"
+radius: "0.609 deg"
+scale: "0.803 arcsec/pixel"
 ---
