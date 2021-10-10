@@ -60,7 +60,7 @@ permalink: /messier/
                 {% if target.Image %}
                     {% assign style = "btn-success" %}
                 {% endif %}
-                <a href="/messier/{{ target.Target }}" class="m-1 p-1 btn {{style}}" title="View details of {{ target.NGC }}">
+                <a href="/messier/{{ target.Target | downcase }}" class="m-1 p-1 btn {{style}}" title="View details of {{ target.NGC }}">
                     {{ target.Target }}
                 </a>&nbsp;
             {% endfor %}            
@@ -116,7 +116,7 @@ permalink: /messier/
                     {% for item in items %}
                     <tr class="align-items-center">
                         <th scope="row" class="align-items-center" data-value="{{item.Target}}">
-                            <a href="/messier/{{item.Target}}" title="{{item.Target}}">{{item.Target}}</a>
+                            <a href="/messier/{{item.Target | downcase }}" title="{{item.Target}}">{{item.Target}}</a>
                         </th>
                         <td class="text-center" data-value="{{item.NGC}}" data-captured="{{ item.Image }}">
                             {% if item.Image %}
@@ -127,7 +127,7 @@ permalink: /messier/
                                     <img class="card-img-top" src="{{thumbPath}}" alt="{{gallery.description}}" title="{{gallery.description}}">
                                     <div class="card-img-overlay">
                                         <h5 class="card-title">
-                                            <a class="stretched-link" href="/messier/{{item.Target}}" title="Messier {{item.Target}}">
+                                            <a class="stretched-link" href="/messier/{{item.Target | downcase }}" title="Messier {{item.Target}}">
                                                 {{item.NGC}}
                                             </a>
                                         </h5>          
@@ -138,7 +138,7 @@ permalink: /messier/
                                     <strong style="font-size: 2em;">❌</strong>
                                     <div class="card-body">
                                         <h5 class="card-title">
-                                            <a class="stretched-link" href="/messier{{item.Target}}" title="Messier {{item.Target}}">
+                                            <a class="stretched-link" href="/messier/{{item.Target | downcase }}" title="Messier {{item.Target}}">
                                                 {{item.NGC}}
                                             </a>
                                         </h5>          
