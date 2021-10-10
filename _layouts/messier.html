@@ -1,0 +1,128 @@
+---
+layout: default
+---
+
+<section>
+    <div class="row">
+        <div class="section-title">
+            <h2><span><a href="{{site.baseurl}}/messier" title="Back to catalog">Messier
+                        Catalog</a>&nbsp;&raquo;&nbsp;{{
+                    page.Target
+                    }} &mdash; {{ page.NGC }}</span></h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col12">
+            <h3><a href="/messier/#type-{{ page.Type }}">{{page.Type}}</a> in <a href="/messier/#constellation-{{ page.Constellation }}">{{ page.Constellation }}</a></h3>
+        </div>
+    </div>
+    {% if page.Gallery %}
+    <div class="row">
+        <div class="card-group">
+    {% for item in page.Gallery %}
+    {% assign gallery = site.gallery | find: "folder", item %}
+    {% assign mainUrl = site.baseurl | append: gallery.url %}
+    {% assign thumbPath = site.baseurl | append: "/assets/images/gallery/" | append: gallery.folder | append: "/thumb.jpg" %}
+    <div class="card ml-3 bg-light">
+        <img class="card-img-top" src="{{thumbPath}}" alt="{{gallery.description}}">
+        <div class="card-body">
+          <h5 class="card-title"><a class="stretched-link" href="{{mainUrl}}" title="Go to {{gallery.title}}">{{gallery.title}}</a></h5>
+          <p class="card-text">{{gallery.description}}</p>          
+        </div>
+    </div>
+    {% endfor %}
+        </div>
+    </div>
+    {% endif %}        
+    <div class="row">&nbsp;</div>
+    <div class="row">       
+    {% assign attributes = "RA,Dec,Magnitude,Size,DistanceLy,Season,Difficulty" | split: "," %}
+    {% for attribute in attributes %}
+        {% assign label = attribute %}            
+        {% assign value = page[attribute] %}
+        {% if label == "DistanceLy" %}
+            {% assign label = "Distance" %}
+            {% assign value = value | append: " light years" %}
+        {% endif %}
+        {% if label == "Season" %}
+            {% case value %}
+                {% when "Winter" %}
+                {% assign value = "❄ Winter" %}
+                {% when "Spring" %}
+                {% assign value = "🌼 Spring" %}
+                {% when "Summer" %}
+                {% assign value = "☀ Summer" %}                    
+                {% when "Autumn" %}
+                {% assign value = "🍂 Autumn" %}                    
+                {% else %}
+            {% endcase %}
+        {% endif %}
+        {% if label == "Magnitude" %}
+            {% assign value = value | append: " " %}
+            {% assign magnitude = value | to_integer %}
+            {% case magnitude  %}
+                {% when 1 %}
+                {% assign value = value | append: "⚪⚫⚫⚫⚫⚫⚫⚫⚫⚫" %}
+                {% when 2 %}
+                {% assign value = value | append: "⚪⚪⚫⚫⚫⚫⚫⚫⚫⚫" %}
+                {% when 3 %}
+                {% assign value = value | append: "⚪⚪⚪⚫⚫⚫⚫⚫⚫⚫" %}
+                {% when 4 %}
+                {% assign value = value | append: "⚪⚪⚪⚪⚫⚫⚫⚫⚫⚫" %}
+                {% when 5 %}
+                {% assign value = value | append: "⚪⚪⚪⚪⚪⚫⚫⚫⚫⚫" %}
+                {% when 6 %}
+                {% assign value = value | append: "⚪⚪⚪⚪⚪⚪⚫⚫⚫⚫" %}
+                {% when 7 %}
+                {% assign value = value | append: "⚪⚪⚪⚪⚪⚪⚪⚫⚫⚫" %}
+                {% when 8 %}
+                {% assign value = value | append: "⚪⚪⚪⚪⚪⚪⚪⚪⚫⚫" %}
+                {% when 9 %}
+                {% assign value = value | append: "⚪⚪⚪⚪⚪⚪⚪⚪⚪⚫" %}
+                {% when 10 %}
+                {% assign value = value | append: "⚪⚪⚪⚪⚪⚪⚪⚪⚪⚪" %}
+                {% else %}
+            {% endcase %}
+        {% endif %}
+        {% if label == "Difficulty" %}
+            {% case value %}
+                {% when "Very Easy" %}
+                {% assign value = "✅ Very Easy" %}
+                {% when "Easy" %}
+                {% assign value = "🟢 Easy" %}
+                {% when "Moderate" %}
+                {% assign value = "🟡 Moderate" %}
+                {% when "Hard" %}
+                {% assign value = "🔴 Hard" %}
+                {% when "Very Hard" %}
+                {% assign value = "❌ Very Hard" %}
+            {% endcase %}
+        {% endif %}
+        <div class="card ml-3 bg-light">
+            <div class="card-body">
+              <h5 class="card-title">{{label}}</a></h5>
+              <p class="card-text">{{value}}</p>          
+            </div>
+        </div>         
+    {% endfor %}
+    </div>
+
+    <div class="row">&nbsp;</div>
+    <div class="row">
+        <div class="col-6">
+            {% if page.previous.url %}
+            <a class="prev" href="{{ page.previous.url }}">
+                &laquo; {{page.previous.title}}
+            </a>
+            {% endif %}
+        </div>
+        <div class="col-6 text-right">
+            {% if page.next.url %}
+            <a href="{{ page.next.url }}">
+                {{page.next.title}} &raquo;
+            </a>
+            {% endif %}
+        </div>
+    </div>
+
+</section>

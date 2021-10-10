@@ -87,6 +87,14 @@ ga('send', 'pageview');
                 <a class="nav-link" href="{{ site.baseurl }}/gallery"><i class="fa fa-images"></i> Gallery</a>
                 </li>
         
+                {% if page.url contains "/messier" %}
+                <li class="nav-item active">
+                {% else %}
+                <li class="nav-item">
+                {% endif %}
+                <a class="nav-link" href="{{ site.baseurl }}/messier"><i class="fa fa-star"></i> Messier Catalog</a>
+                </li>
+        
                 <li class="nav-item">
                 <a target="_blank" class="nav-link" href="https://www.youtube.com/channel/UCGTfyv52aBiubARo3t30MAQ"><i class="fab fa-youtube"></i> Videos</a>
                 </li>

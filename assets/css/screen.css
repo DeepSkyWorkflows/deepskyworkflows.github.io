@@ -913,6 +913,31 @@ iframe {
     margin: 3px;
 }
 
+img.messier {
+    max-width: 256px;
+}
+
+div.messier {
+    width: 80vw;
+}
+
+div.messier-img {
+    width: 20vw;
+}
+
+.messier-sort {
+    cursor: pointer;
+}
+
+#expando {
+    cursor: pointer;
+}
+
+.messier-card {
+    width: 260px;
+    min-height: 120px;
+}
+
 .gallery-card:hover {
     -webkit-transform: scale(1.05);
     transform: scale(1.05);

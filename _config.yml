@@ -9,7 +9,7 @@ url: https://deepskyworkflows.com
 # google_analytics: ''
 # disqus: ''
 # mailchimp-list: ''
-include: ["_pages", "_gallery"]
+include: ["_pages", "_gallery", "_messier"]
 permalink: /:title/
 
 # Authors
@@ -73,6 +73,9 @@ collections:
   gallery:
     output: true
     permalink: /gallery/:title/
+  messier:
+    output: true
+    permalink: /messier/:name/
   
 defaults:
   - scope:
@@ -80,4 +83,10 @@ defaults:
       type: "gallery"
     values:
       layout: "gallery"
+      author: "deepskyworkflows"
+  - scope:
+      path: ""
+      type: "messier"
+    values:
+      layout: "messier"
       author: "deepskyworkflows"
