@@ -2,6 +2,18 @@
 layout: default
 ---
 
+{% assign matches = "" | split: "" %}
+{% if page.Gallery %}
+{% for gallery in site.gallery %}
+  {% for item in page.Gallery %}
+    {% assign left = gallery.folder | append: "" | strip %}
+    {% assign right = item | append: ""  | strip %}
+    {% if left == right %}
+        {% assign matches = matches | push: gallery %}
+     {% endif %}
+  {% endfor %}
+{% endfor %}
+{% endif %}
 <section>
     <div class="row">
         <div class="section-title">
@@ -19,8 +31,7 @@ layout: default
     {% if page.Gallery %}
     <div class="row">
         <div class="card-group">
-    {% for item in page.Gallery %}
-    {% assign gallery = site.gallery | find: "folder", item %}
+    {% for gallery in matches %}
     {% assign mainUrl = site.baseurl | append: gallery.url %}
     {% assign thumbPath = site.baseurl | append: "/assets/images/gallery/" | append: gallery.folder | append: "/thumb.jpg" %}
     <div class="card ml-3 bg-light">

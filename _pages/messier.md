@@ -120,11 +120,18 @@ permalink: /messier/
                         </th>
                         <td class="text-center" data-value="{{item.NGC}}" data-captured="{{ item.Image }}">
                             {% if item.Image %}
-                                {% assign gallery = site.gallery | find: "folder", item.Image %}
-                                {% assign mainUrl = site.baseurl | append: gallery.url %}
-                                {% assign thumbPath = site.baseurl | append: "/assets/images/gallery/" | append: gallery.folder | append: "/thumb.jpg" %}
+                                {% assign gal = null %}
+                                {% assign right = item.Image | append: "" | strip %}
+                                {% for gallery in site.gallery %}
+                                    {% assign left = gallery.folder | append: "" | strip %}
+                                    {% if left == right %}
+                                        {% assign gal =  gallery %}
+                                    {% endif %}
+                                {% endfor %}
+                                {% assign mainUrl = site.baseurl | append: gal.url %}
+                                {% assign thumbPath = site.baseurl | append: "/assets/images/gallery/" | append: gal.folder | append: "/thumb.jpg" %}
                                 <div class="card bg-light messier-card">
-                                    <img class="card-img-top" src="{{thumbPath}}" alt="{{gallery.description}}" title="{{gallery.description}}">
+                                    <img class="card-img-top" src="{{thumbPath}}" alt="{{gal.description}}" title="{{gal.description}}">
                                     <div class="card-img-overlay">
                                         <h5 class="card-title">
                                             <a class="stretched-link" href="/messier/{{item.Target | downcase }}" title="Messier {{item.Target}}">
