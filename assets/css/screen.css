@@ -938,6 +938,10 @@ div.messier-img {
     min-height: 120px;
 }
 
+.messier-detail-card {
+    max-width: 300px;
+}
+
 .gallery-card:hover {
     -webkit-transform: scale(1.05);
     transform: scale(1.05);

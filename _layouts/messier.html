@@ -34,7 +34,7 @@ layout: default
     {% for gallery in matches %}
     {% assign mainUrl = site.baseurl | append: gallery.url %}
     {% assign thumbPath = site.baseurl | append: "/assets/images/gallery/" | append: gallery.folder | append: "/thumb.jpg" %}
-    <div class="card ml-3 bg-light">
+    <div class="card messier-detail-card ml-3 bg-light">
         <img class="card-img-top" src="{{thumbPath}}" alt="{{gallery.description}}">
         <div class="card-body">
           <h5 class="card-title"><a class="stretched-link" href="{{mainUrl}}" title="Go to {{gallery.title}}">{{gallery.title}}</a></h5>
