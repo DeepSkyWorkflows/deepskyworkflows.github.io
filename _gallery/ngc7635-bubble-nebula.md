@@ -9,13 +9,13 @@ length: "400mm"
 aperture: "80mm"
 folder: ngc7635
 exposure: 10
-lights: 301
-sessions: 1 
+lights: 852
+sessions: 3 
 firstCapture: 2021-08-04 
-lastCapture:
-ra: "23h 20m 41.3s"
-dec: "+61° 11' 57.881"
-size: "30.16 x 20.564 arcmin"
-radius: "0.304 deg"
-scale: "0.411 arcsec/pixel"
+lastCapture: 2021-10-29
+ra: "23h 21m 1.4s"
+dec: "+61° 13' 42.532"
+size: "57.709 x 32.977 arcmin"
+radius: "0.554 deg"
+scale: "0.618 arcsec/pixel"
 ---
