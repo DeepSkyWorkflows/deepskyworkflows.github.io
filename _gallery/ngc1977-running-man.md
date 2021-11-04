@@ -1,0 +1,21 @@
+---
+title: "NGC1977: The Running Man Nebula"
+type: Nebula
+tags: ["The star 42Ori","NGC1973","NGC1975","NGC1977","The star 45Ori","the Running Man Nebula"]
+description: "In the popular sweep of nebulae and stars known as Orion's sword is NGC1977, the Running Man. This is a subtle reflection nebula that scatters blue light across vast lanes of space dust. It resembles the smoky outline of a running man casting a shadow on disco fog as a strobe light flashes."
+image: /assets/images/gallery/ngc1977/thumb.jpg
+telescope: Stellina
+length: "400mm"
+aperture: "80mm"
+folder: ngc1977
+exposure: 10
+lights: 178
+sessions: 1
+firstCapture: 2021-11-01 
+lastCapture:
+ra: "5h 35m 10.7s"
+dec: "-4° 48' 5.126"
+size: "59.629 x 41.126 arcmin"
+radius: "0.604 deg"
+scale: "0.635 arcsec/pixel"
+---
