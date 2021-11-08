@@ -9,13 +9,13 @@ length: "400mm"
 aperture: "80mm"
 folder: sh2-101
 exposure: 10
-lights: 627 
-sessions: 2
+lights: 847 
+sessions: 3
 firstCapture: 2021-07-11
-lastCapture: 2021-09-01
-ra: "19h 59m 52.9s"
-dec: "+35° 14' 40.306"
-size: "60.989 x 36.351 arcmin"
-radius: "0.592 deg"
-scale: "0.825 arcsec/pixel"
+lastCapture: 2021-11-01
+ra: "19h 59m 54.1s"
+dec: "+35° 16' 48.031"
+size: "60.569 x 44.013 arcmin"
+radius: "0.624 deg"
+scale: "0.634 arcsec/pixel"
 ---
