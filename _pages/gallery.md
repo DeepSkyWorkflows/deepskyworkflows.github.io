@@ -49,12 +49,12 @@ permalink: /gallery/
             <li><a href="#{{nestedGroup.name}}">{{nestedGroup.name}}</a></li>
         {% endfor %}
         </ul>
-        <p><strong><i class="fa fa-filter"></i> Filter:</strong></p>
+        <p><strong><i class="fa fa-filter"></i> Filter:</strong>&nbsp;<span class="clickable" id="clearBtn"><i class="fa fa-times-circle"></i></span></p>
         <input type="text" class="gallery-search form-control text-small mw-100" tabindex="0" placeholder="Start typing..." id="gallerySearch"/>
         <br/>
         <p><strong><i class="fa fa-tags"></i> Tags:</strong></p>
         <div id="tagContainer">
-        </div>    
+        </div>
         </div>
 </div>
 

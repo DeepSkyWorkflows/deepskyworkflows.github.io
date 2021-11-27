@@ -5,7 +5,6 @@ sitemap: false
 (function () {
 
     const debounceMs = 300;
-    const autoSelectMs = 1000;
 
     const tags = [];
     const tagContent = {
@@ -15,21 +14,24 @@ sitemap: false
             if (tagContent["_selectedTag"] &&
                 $(tagContent["_selectedTag"]).text() === tag) {
                     tagContent.deselectTag();
+                    $("#gallerySearch").removeAttr("disabled");
                     return;
                 }
             tagContent["_selectedTag"] = tagButton;
             tagContent["_tag"] = tag;
             location.hash = '#tag-' + tag;
-            $("#gallerySearch").attr("disabled", true);
+            
             $(tagButton).removeClass("badge-primary")
                 .addClass("badge-success");
-            $("button.badge").each(function () {
+            
+                $("button.badge").each(function () {
                 if ($(this).text() !== tag) {
                     $(this).removeClass("badge-primary")
                         .addClass("badge-secondary")
                         .attr("disabled", true);
                 }
             });
+            
             $("div.card").each(function () {
                 let match = $(this).attr("data-url");
                 if (tagContent[tagContent["_tag"]].indexOf(match) >= 0) {
@@ -39,6 +41,7 @@ sitemap: false
                     $(this).addClass("d-none");
                 }
             });
+            $("#gallerySearch").attr("disabled", true);
         },
         deselectTag: function() {
             let tagButton = tagContent["_selectedTag"];
@@ -87,8 +90,22 @@ sitemap: false
     const searchContext = {
         query: null,
         timer: null,
-        selectTimer: null,
         savedHash: [],
+        doClear: function () {
+            if (location.hash.startsWith("#tag-")) {
+                return;
+            }            
+            $("button.badge").each(function () {
+                $(this).removeClass("badge-secondary")
+                    .addClass("badge-primary")
+                    .removeAttr("disabled");
+            });    
+            $("#gallerySearch").val('');
+            $("#gallerySearch").select();            
+            $("div.card").each(function () {
+                $(this).removeClass("d-none");
+            });
+        },
         doSearch: function (skipButtons) {
             searchContext.timer = null;
             if (searchContext.query && searchContext.query.length) {
@@ -101,6 +118,7 @@ sitemap: false
                             .attr("disabled", true);
                     });
                 }
+                
                 $("div.card").each(function() {
                     let target =  $(this).text().toLowerCase().trim();
                     if (target.indexOf(term) >= 0) {
@@ -110,13 +128,6 @@ sitemap: false
                         $(this).addClass('d-none');
                     }
                 });
-                if (searchContext.selectTimer) {
-                    clearTimeout(searchContext.selectTimer);
-                }              
-                searchContext.selectTimer = setTimeout(function () {
-                    searchContext.selectTimer = null;
-                    $("#gallerySearch").select();
-                }, autoSelectMs);
             }
             else {
                 location.hash = "#";
@@ -140,6 +151,10 @@ sitemap: false
                 clearTimeout(searchContext.timer);
             }
             searchContext.timer = setTimeout(searchContext.doSearch, debounceMs);            
+        });
+
+        $("#clearBtn").on("click", function () {
+            searchContext.doClear();
         });
 
         // setup tags
@@ -166,6 +181,7 @@ sitemap: false
         }
         else if (location.hash.startsWith('#q-')) { 
             let query = decodeURI(location.hash.substring(3));
+            $("#gallerySearch").val(query);
             setTimeout(function () {
                 searchContext.query = query.toLowerCase().trim();
                 $("gallerySearch")

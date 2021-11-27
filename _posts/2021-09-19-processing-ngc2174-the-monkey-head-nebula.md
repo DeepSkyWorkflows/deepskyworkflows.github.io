@@ -7,7 +7,7 @@ tags: [ pixinsight, processing, ngc2174, stacking, noise reduction ]
 toc: false
 image: assets/images/2021-09-19/NGC2174-Monkey-Head-Nebula.png
 description: "A full end-to-end processing workflow from acquiring images to final polish using AstroPixel Processor, PixInsight, and Topaz Labs."
-featured: true
+featured: false
 hide: true
 comments: true
 ---
