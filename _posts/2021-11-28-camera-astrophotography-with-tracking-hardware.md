@@ -56,6 +56,10 @@ It's called the [Sky Watcher Star Adventurer Mini](https://amzn.to/3xvqBdI). Mos
 
 Let's go from the bottom of the stack up.
 
+I also produced a [complete guide to the Star Adventurer Mini (SAM)](https://youtu.be/XC4Nqh0VbKg) video:
+
+{% include youtube.html code="XC4Nqh0VbKg" title="A complete guide to the Star Adventurere Mini (SAM)" %}
+
 ### Equatorial wedge
 
 The equatorial wedge is the base of the structure that must be aligned. It has knobs to fine tune the declination and right ascension of your whole setup. This is a key piece of the polar alignment as it forms the stable base that allows the rest of the setup to move freely so you can sight your targets and start tracking. The front of this should point to true north (or south) and the surface should be at an angle so that a perpendicular line will go through the north pole. 

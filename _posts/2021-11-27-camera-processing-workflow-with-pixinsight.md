@@ -7,7 +7,7 @@ tags: [ pixinsight, processing, M42, NGC1977, NGC2024, deconvolution ]
 toc: false
 image: assets/images/2021-11-27/camera.jpg
 description: "A full end-to-end processing workflow for my camera-only (no telescope) photos focused on PixInsight. Contains some advanced tips for rounding stars, stretching contrast, and making masks."
-featured: true
+featured: false
 hide: true
 comments: true
 ---

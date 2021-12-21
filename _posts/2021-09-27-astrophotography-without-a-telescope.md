@@ -7,7 +7,7 @@ tags: [ camera, m42, exposure, stacking ]
 toc: true
 image: assets/images/gallery/orion/orion-annotated-fs.jpg
 description: "How to take deep sky pictures of galaxies and nebulae using nothing but a camera and a tripod."
-featured: true
+featured: false
 hide: true
 comments: true
 ---
