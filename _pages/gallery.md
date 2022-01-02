@@ -8,13 +8,28 @@ permalink: /gallery/
 {% assign version = 9 %}
 {% assign types = site.gallery | group_by: 'type' | sort: 'name' %}
 <div class="row mw-25">
-    <div class="col-md-9 col-sm-6 mr-2">
+    <div class="col-12">
+<p><a href="{{ site.baseurl}}/gallery/slideshow/" title="Slideshow"><i class="fa fa-film"></i> Slideshow</a>
+&nbsp;|&nbsp;
+<strong>Jump to Category:</strong>
+{% for nestedGroup in types %}
+    <a href="#{{nestedGroup.name}}">{{nestedGroup.name}}</a>&nbsp;|
+{% endfor %}
+</p>
+<p><a name="top"></a>
+<strong><i class="fa fa-filter"></i> Filter:</strong>&nbsp;<span class="clickable" id="clearBtn"><i class="fa fa-times-circle"></i></span>&nbsp;
+<input type="text" class="gallery-search form-control text-small mw-100" tabindex="0" placeholder="Start typing..." id="gallerySearch"/>
+</p>
+</div>
+</div>
+<div class="row mw-25">
+    <div class="col-12">
         {% for group in types %}
             <div class="row">&nbsp;</div>
             <div class="row">
                 <div class="col-12">
                     <h4>
-                        <a name="{{group.name}}"></a> {{group.name}}
+                        <a name="{{group.name}}"></a> {{group.name}} <a href="#top">🔝</a>
                     </h4>
                 </div>
             </div>                
@@ -33,7 +48,7 @@ permalink: /gallery/
                         <img class="card-img-top gallery-img" id="image-{{itemIndex}}" src="{{thumbPath}}" alt="{{item.description}}">
                         {% assign itemIndex = itemIndex | plus: 1 %}
                     </a>
-                    <div class="card-header bg-light text-center">
+                    <div class="card-header bg-dark text-center">
                         <a href="{{mainUrl}}" title="{{item.description}}">{{item.title}}</a>
                     </div>                
                 </div>
@@ -41,21 +56,6 @@ permalink: /gallery/
             </div>
         {% endfor %}    
     </div>
-    <div class="col-md-2 col-sm-5 pr-2">
-        <a href="{{ site.baseurl}}/gallery/slideshow/" title="Slideshow"><i class="fa fa-film"></i> Slideshow</a>
-        <hr/>
-        <ul>
-        {% for nestedGroup in types %}
-            <li><a href="#{{nestedGroup.name}}">{{nestedGroup.name}}</a></li>
-        {% endfor %}
-        </ul>
-        <p><strong><i class="fa fa-filter"></i> Filter:</strong>&nbsp;<span class="clickable" id="clearBtn"><i class="fa fa-times-circle"></i></span></p>
-        <input type="text" class="gallery-search form-control text-small mw-100" tabindex="0" placeholder="Start typing..." id="gallerySearch"/>
-        <br/>
-        <p><strong><i class="fa fa-tags"></i> Tags:</strong></p>
-        <div id="tagContainer">
-        </div>
-        </div>
 </div>
 
 <script src="{{ site.baseurl }}/assets/js/gallery_filter.js"></script>

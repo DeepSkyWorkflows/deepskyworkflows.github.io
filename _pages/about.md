@@ -6,10 +6,28 @@ comments: true
 image: "assets/images/about/orion.jpeg"
 ---
 
+<p>Hello, and welcome to Deep Sky Workflows! I picked this name because most of my images are deep sky objects (DSO) and I wanted a place to post what I learn as I gain experience with astrophotography and image-processing or  workflows.</p>
+
 <div class="row justify-content-between">
+
 <div class="col-md-8 pr-5">
 
-<p>Hello!</p>
+<p>On this site, you can:</p>
+<ul>
+    <li>Read the <a href="{{site.baseurl}}/index.html" title="Deep Sky Workflows Blog">blog</a></li>
+    <li>View  my <a href="{{site.baseurl}}/gallery" title="Space pictures">astrophotography gallery</a></li>
+    <li>Watch a web-based <a href="{{site.baseurl}}/gallery/slideshow" title="Images of galaxies, stars, and nebulae">astrophotography slide show</a></li>
+    <li>Check out my progress photographing the entire <a href="{{site.baseurl}}/messier" title="Messier catalog">Messier catalog</a></li>
+</ul>
+
+<p>You can also visit related websites:</p>
+
+<ul>
+    <li><i class="fab fa-youtube"></i>&nbsp;My <a href="https://www.youtube.com/channel/UCGTfyv52aBiubARo3t30MAQ" target="_blank">astrophotography videos</a></li>
+    <li><i class="fab fa-github"></i>&nbsp;My <a href="https://github.com/DeepSkyWorkflows" target="_blank">astrophotography scripts and tools</a></li>
+</ul>
+
+<p>Connect with me on: <i class="fab fa-facebook"></i><a href="https://facebook.com/DeepSkyWorkflows" title="Deep Sky Workflows on Facebook">Facebook</a>, <i class="fab fa-instagram"></i><a href="https://instagram.com/DeepSkyWorkflows" title="Deep Sky Workflows on Instagram">Instagram</a>, and/or <i class="fab fa-twitter"></i><a href="https://twitter.com/DeepSkyWorkflow" title="@DeepSkyWorkflow on Twitter">Twitter</a>.</p>
 
 <p>It’s great to have a place to share my deep sky explorations and astrophotography journey with you. In the beginning of 2021, I purchased an observation station named <a href="https://vaonis.com/stellina" target="_blank">Stellina</a>. It is a fully automated system for capturing deep sky images. What intrigued me about the unit was the claim that it could handle light polluted areas and the ease of setup. I took a chance, purchased the scope and have not been disappointed.</p>
 
@@ -29,25 +47,26 @@ image: "assets/images/about/orion.jpeg"
 
 <p>There are many tips and techniques involved with processing images and I’ll share them in this blog.</p>
 
-<p>Here are some helpful links:</p>
-<ul>
-<li>My <a href="{{site.baseurl}}/gallery">astrophotography gallery</a></li>
-<li>My <a href="https://www.youtube.com/channel/UCGTfyv52aBiubARo3t30MAQ" target="_blank">astrophotography videos</a></li>
-<li>My <a href="https://github.com/DeepSkyWorkflows" target="_blank">astrophotography scripts and tools</a></li>
-</ul>
 <p>That’s it for the introduction. I’ll keep it short and sweet for now, and I look forward to sharing more!</p>
 <p>Regards,</p>
 <p>Jeremy Likness</p>
 <p>{% include social.html %}</p>
-
 </div>
-
 <div class="col-md-4">
 
 <div class="sticky-top sticky-top-80">
 <h5><i class="fa fa-coffee"></i> Buy me a coffee?</h5>
-
-<p>Thank you for your support! Your donation helps me to maintain and improve Deep Sky Workflows.</p>
+<a target="_blank" href="https://www.paypal.com/paypalme/jeremylikness" class="btn btn-danger">💲 Donate</a>
+<p>As an amateur astrophotographer, I take on all of the costs associated with this hobby. These include camera gear and accessories, telescopes, recording equipment, production software, and more. Items on my wish list include things like:</p>
+<ul>
+    <li><a href="https://www.techsmith.com/video-editor.html" title="Camtasia">Professional video editing software</a> (~$300 USD)</li>
+    <li><a href="https://telescopes.net/celestron-off-axis-guider.html" title="Off-axis guider">Off-axis guider for my telescope</a> (~$300 USD)</li>
+    <li><a href="https://telescopes.net/starizona-hyperstar-4-c925-lens-for-9-25-celestron-sc-and-edgehd-telescopes.html" title="HyperStar">A HyperStar Lens</a> (~$1200 USD)</li>
+    <li><a href="https://telescopes.net/zwo-8-position-filter-wheel-for-1-25-filters.html" title="Filter wheel">An electronic filter wheel</a> (~$300 USD)</li>
+    <li><a href="https://telescopes.net/baader-6-5nm-narrowband-filterset-1-25-cmos-optimized-h-alpha-o-iii-s-ii.html" title="Narrowband filters">Narrowband filters</a> (~$460)</li>
+    <li>...and on and on...</li>
+</ul>
+<p>My commitment is to not only continue to produce images and improve their quality, but to also share tips, tricks, and techniques in blogs and videos. If you receive value from this website and would like to help out, consider donating an amount you are comfortable with. Your donation of any amount helps me to maintain and improve Deep Sky Workflows.</p>
 
 <a target="_blank" href="https://www.paypal.com/paypalme/jeremylikness" class="btn btn-danger">💲 Donate</a>
 

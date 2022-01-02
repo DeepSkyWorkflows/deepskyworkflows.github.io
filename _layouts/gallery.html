@@ -8,7 +8,7 @@ layout: default
 {% assign annotated = folderPath | append: page.folder | append: "-annotated.jpg" %}
 {% assign fullsize = folderPath | append: page.folder | append: "-annotated-fs.jpg" %}
 {% assign grid = folderPath | append: page.folder | append: "-grid.jpg" %}
-{% assign copyright = "Image &copy; 2021 Jeremy Likness. All rights reserved." %}
+{% assign copyright = "Image &copy; 2022 Jeremy Likness. All rights reserved." %}
 {% if page.previous.url %}
 {% assign prev = site.baseurl | append: page.previous.url %}
 {% endif %}
@@ -31,27 +31,22 @@ layout: default
             {% if page.noannotations == true %}
             {% else %}
             <ul class="nav nav-tabs" id="myTab" role="tablist">
-
                 <li class="nav-item">
                     <a class="nav-link" id="main-tab" data-toggle="tab" href="#main" role="tab" aria-controls="main"
                         aria-selected="true">Main</a>
                 </li>
-
                 <li class="nav-item">
                     <a class="nav-link" id="annotated-fs-tab" data-toggle="tab" href="#annotated-fs" role="tab"
                         aria-controls="annotated-fs" aria-selected="false">Annotated (fullsize)</a>
                 </li>
-
                 <li class="nav-item">
                     <a class="nav-link" id="grid-tab" data-toggle="tab" href="#grid" role="tab" aria-controls="grid"
                         aria-selected="false">Grid</a>
                 </li>
-
                 <li class="nav-item">
                     <a class="nav-link" id="annotated-tab" data-toggle="tab" href="#annotated" role="tab"
                         aria-controls="annotated" aria-selected="false">Annotated (small)</a>
                 </li>
-
             </ul>
             {% endif %}
 
@@ -63,45 +58,45 @@ layout: default
 
             <div id="wrapper" class="d-none">
                 <div class="card" id="main">
-                    <div class="card-header">Fullsize Image (tap or click)</div>
+                    <div class="card-header bg-dark">Fullsize Image (tap or click)</div>
                     <div class="card-body">
                         <a href="{{mainImage}}" target="_blank" title="Click to view the fullsize image.">
                             <img class="img-fluid" data-src="{{mainImage}}" src="{{loadingImage}}"
                                 title="{{page.description}}" />
                         </a>
                     </div>
-                    <div class="card-footer small text-right">{{copyright}}</div>             
+                    <div class="card-footer small text-right bg-dark">{{copyright}}</div>             
                 </div>
 
                 {% if page.noannotations == true %}
                 {% else %}
                 <div class="card" id="annotated-fs">
-                    <div class="card-header">Annotated Image (fullsize version)</div>
+                    <div class="card-header bg-dark">Annotated Image (fullsize version)</div>
                     <div class="card-body">
                         <a href="{{fullsize}}" target="_blank" title="Click to view the fullsize annotated image.">
                             <img class="img-fluid" data-src="{{fullsize}}" src="{{loadingImage}}"
                                 title="{{page.title}} annotated." />
                         </a>
                     </div>
-                    <div class="card-footer small text-right">{{copyright}}</div>
+                    <div class="card-footer small text-right bg-dark">{{copyright}}</div>
                 </div>
 
                 <div class="card" id="grid">
-                    <div class="card-header">Grid View</div>
+                    <div class="card-header bg-dark">Grid View</div>
                     <div class="card-body">
                         <img class="img-fluid" data-src="{{grid}}" src="{{loadingImage}}"
                             title="{{page.title}} grid." />
                     </div>
-                    <div class="card-footer small text-right">{{copyright}}</div>
+                    <div class="card-footer small text-right bg-dark">{{copyright}}</div>
                 </div>
 
                 <div class="card" id="annotated">
-                    <div class="card-header">Annotated Image (small version)</div>
+                    <div class="card-header bg-dark">Annotated Image (small version)</div>
                     <div class="card-body">
                         <img class="img-fluid" data-src="{{annotated}}" src="{{loadingImage}}"
                             title="{{page.title}} annotated." />
                     </div>
-                    <div class="card-footer small text-right">{{copyright}}</div>
+                    <div class="card-footer small text-right bg-dark">{{copyright}}</div>
                 </div>
                 {% endif %}
 
@@ -111,8 +106,8 @@ layout: default
 
         <div class="col-md-3 pr-0">
             <div class="card">
-                <div class="card-header">{{page.description}}</div>
-                <div class="card-body">
+                <div class="card-header bg-dark">{{page.description}}</div>
+                <div class="card-body bg-dark">
                     {% assign traits =
                     "telescope|length|aperture|sessions|firstCapture|lights|exposure|ra|dec|size|radius|scale" |
                     split: "|" %}
@@ -228,7 +223,7 @@ layout: default
                         {% endfor %}
                     </table>
                 </div>                
-                <div class="card-footer">
+                <div class="card-footer bg-dark">
                     <b>Objects in frame:</b>
                     {% for tag in page.tags %}
                     <a id="data-tag-{{tag}}" class="btn badge badge-primary" href="/gallery/#tag-{{tag}}">{{tag}}</a>
@@ -238,14 +233,22 @@ layout: default
         </div>
     </div>
     <div class="row">
-        <div class="col-6">
+        <div class="col">&nbsp;</div>        
+    </div>
+    <div class="row">
+        <div class="col-4">
             {% if page.previous.url %}
             <a class="prev" href="{{ prev }}">
                 &laquo; {{page.previous.title}}
             </a>
             {% endif %}
         </div>
-        <div class="col-6 text-right">
+        <div class="col-4 text-center">
+            <a href="{{ /gallery }}">
+                Back to Gallery
+            </a>            
+        </div>
+        <div class="col-4 text-right">
             {% if page.next.url %}
             <a href="{{ next }}">
                 {{page.next.title}} &raquo;
