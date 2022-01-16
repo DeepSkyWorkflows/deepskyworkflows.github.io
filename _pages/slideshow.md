@@ -7,7 +7,7 @@ image: "assets/images/gallery.jpg"
 
 <div class="text-right d-none" id="carouselcontrols">
         <span id="carouselstatus">🟢</span>&nbsp;
-        <button class="btn btn-link" id="btnPause">Pause</button>        
+        <button class="btn btn-link" id="btnPause">Pause (Playing)</button>        
 </div>
 
 <div id="astroshow" class="carousel slide slideshow-carousel" data-ride="carousel">

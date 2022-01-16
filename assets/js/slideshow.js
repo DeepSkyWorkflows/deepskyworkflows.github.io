@@ -120,14 +120,14 @@ $(document).ready(function () {
 
                     if (tracker.paused) {
                         $(".carousel").carousel("cycle");
-                        $("#btnPause").text("Pause");
+                        $("#btnPause").text("Pause (Playing)");
                         $("#carouselstatus").text("🟢");
                         tracker.paused = false;
                     }
                     else {
                         $(".carousel").carousel("pause");
-                        $("#btnPause").text("Resume");
-                        $("#carouselstatus").text("🟥");
+                        $("#btnPause").text("Resume (Paused)");
+                        $("#carouselstatus").text("🔴");
                         tracker.paused = true;
                     }
                 });
