@@ -57,15 +57,7 @@ image: "assets/images/about/orion.jpeg"
 <div class="sticky-top sticky-top-80">
 <h5><i class="fa fa-coffee"></i> Buy me a coffee?</h5>
 <a target="_blank" href="https://www.paypal.com/paypalme/jeremylikness" class="btn btn-danger">💲 Donate</a>
-<p>As an amateur astrophotographer, I take on all of the costs associated with this hobby. These include camera gear and accessories, telescopes, recording equipment, production software, and more. Items on my wish list include things like:</p>
-<ul>
-    <li><a href="https://www.techsmith.com/video-editor.html" title="Camtasia">Professional video editing software</a> (~$300 USD)</li>
-    <li><a href="https://telescopes.net/celestron-off-axis-guider.html" title="Off-axis guider">Off-axis guider for my telescope</a> (~$300 USD)</li>
-    <li><a href="https://telescopes.net/starizona-hyperstar-4-c925-lens-for-9-25-celestron-sc-and-edgehd-telescopes.html" title="HyperStar">A HyperStar Lens</a> (~$1200 USD)</li>
-    <li><a href="https://telescopes.net/zwo-8-position-filter-wheel-for-1-25-filters.html" title="Filter wheel">An electronic filter wheel</a> (~$300 USD)</li>
-    <li><a href="https://telescopes.net/baader-6-5nm-narrowband-filterset-1-25-cmos-optimized-h-alpha-o-iii-s-ii.html" title="Narrowband filters">Narrowband filters</a> (~$460)</li>
-    <li>...and on and on...</li>
-</ul>
+<p>As an amateur astrophotographer, I take on all of the costs associated with this hobby. These include camera gear and accessories, telescopes, recording equipment, production software, and more.</p>
 <p>My commitment is to not only continue to produce images and improve their quality, but to also share tips, tricks, and techniques in blogs and videos. If you receive value from this website and would like to help out, consider donating an amount you are comfortable with. Your donation of any amount helps me to maintain and improve Deep Sky Workflows.</p>
 
 <a target="_blank" href="https://www.paypal.com/paypalme/jeremylikness" class="btn btn-danger">💲 Donate</a>
