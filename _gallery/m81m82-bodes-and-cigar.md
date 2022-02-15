@@ -3,7 +3,7 @@ title: "M81 and M82"
 type: Galaxy
 tags: ["NGC3031","M81","NGC3034","M82","Bode's Galaxy","Cigar Galaxy"]
 description: These two galaxies are bright enough to be seen with binoculars and close enough to capture together in a single frame.
-image: /assets/images/gallery/m81m82/thumb.jpg
+image: assets/images/gallery/m81m82/thumb.jpg
 telescope: Stellina
 length: "400mm"
 aperture: "80mm"

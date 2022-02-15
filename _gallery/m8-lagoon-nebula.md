@@ -3,7 +3,7 @@ title: "M8: The Lagoon Nebula"
 type: Nebula
 tags: ["NGC6526","NGC6523","M8","The star 7Sgr","The star 9Sgr","NGC6530","Lagoon Nebula"]
 description: This cloud of interstellar dust surrounds a cluster that radiates energy to make the nebula glow.
-image: /assets/images/gallery/m8/thumb.jpg
+image: assets/images/gallery/m8/thumb.jpg
 telescope: Stellina
 length: "400mm"
 aperture: "80mm"

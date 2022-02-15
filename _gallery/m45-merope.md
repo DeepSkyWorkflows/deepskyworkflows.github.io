@@ -3,7 +3,7 @@ title: "M45: The Merope Nebula"
 type: Nebula
 tags: ["The star Celaeno (16Tau)","The star Electra (17Tau)","The star 18Tau","The star Taygeta (19Tau)","The star Sterope I (21Tau)","The star Merope (23Tau)","The star ηTau","The star Atlas (27Tau)","The star Pleione (28Tau)","NGC1432","NGC1435","IC349","Barnard's Merope Nebula","Maia Nebula","Merope Nebula"]
 description: 40 2-minute exposures in Bortle 5.
-image: /assets/images/gallery/m45-merope/thumb.jpg
+image: assets/images/gallery/m45-merope/thumb.jpg
 telescope: Sony ILCE-6300
 length: "193mm"
 aperture: "31mm"

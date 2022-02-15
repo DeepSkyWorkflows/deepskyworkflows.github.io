@@ -3,7 +3,7 @@ title: "NGC281: The Pacman Nebula"
 type: Nebula
 tags: ["NGC281","IC1590", "Pacman"]
 description: This nebula is named the Pacman nebula and you'll never guess why.
-image: /assets/images/gallery/ngc281/thumb.jpg
+image: assets/images/gallery/ngc281/thumb.jpg
 telescope: Stellina
 length: "400mm"
 aperture: "80mm"

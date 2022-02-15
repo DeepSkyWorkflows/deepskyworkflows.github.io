@@ -3,7 +3,7 @@ title: "NGC1977: The Running Man Nebula"
 type: Nebula
 tags: ["The star 42Ori","NGC1973","NGC1975","NGC1977","The star 45Ori","the Running Man Nebula"]
 description: "In the popular sweep of nebulae and stars known as Orion's sword is NGC1977, the Running Man. This is a subtle reflection nebula that scatters blue light across vast lanes of space dust. It resembles the smoky outline of a running man casting a shadow on disco fog as a strobe light flashes."
-image: /assets/images/gallery/ngc1977/thumb.jpg
+image: assets/images/gallery/ngc1977/thumb.jpg
 telescope: Stellina
 length: "400mm"
 aperture: "80mm"

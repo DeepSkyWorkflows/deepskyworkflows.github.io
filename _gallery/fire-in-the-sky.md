@@ -3,7 +3,7 @@ title: "Fire in the Sky"
 type: Miscellaneous
 tags: ["meteor"]
 description: "A meteor and a satellite streak by over the Paint Mines in Colorado."
-image: /assets/images/gallery/fire-in-the-sky/thumb.jpg
+image: assets/images/gallery/fire-in-the-sky/thumb.jpg
 telescope: Sony ILCE-6300
 length: "16mm"
 aperture: "4.57mm"

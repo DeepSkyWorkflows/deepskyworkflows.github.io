@@ -3,7 +3,7 @@ title: "Starry Skies"
 type: Miscellaneous
 tags: []
 description: "A view of stars over the neighborhood."
-image: /assets/images/gallery/starry-skies/thumb.jpg
+image: assets/images/gallery/starry-skies/thumb.jpg
 telescope: Sony ILCE-6300
 length: "16mm"
 aperture: "4.57mm"

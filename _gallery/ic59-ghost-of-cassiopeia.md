@@ -3,7 +3,7 @@ title: "IC59: The Ghost of Cassiopeia"
 type: Nebula
 tags: ["IC59","IC63","The star Navi (γCas)", "Ghost of Cassipeia"]
 description: "γ Cas or gamma Cas is the middle point of the 'W' that makes up the constellation Cassiopeia. It is a rapidly spinning variable star that is incredibly bright. It dominates the scene and overpowers the delicate, faint reflection nebula nearby designed IC59 and named, 'The Ghost of Cassiopeia.' It took me over 500 exposures to draw out the detail of this elusive nebula."
-image: /assets/images/gallery/ic59/thumb.jpg
+image: assets/images/gallery/ic59/thumb.jpg
 telescope: Stellina
 length: "400mm"
 aperture: "80mm"

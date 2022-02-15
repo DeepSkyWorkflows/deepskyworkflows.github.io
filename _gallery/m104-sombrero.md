@@ -3,7 +3,7 @@ title: "M104: The Sombrero Galaxy"
 type: Galaxy
 tags: ["NGC4594","M104","Sombrero Galaxy"]
 description: The Sombrero Galaxy features a bright core illuminated by over 2,000 globular clusters and presents a dark dust lane in the edgewise view of the spiral.
-image: /assets/images/gallery/m104/thumb.jpg
+image: assets/images/gallery/m104/thumb.jpg
 telescope: Stellina
 length: "400mm"
 aperture: "80mm"

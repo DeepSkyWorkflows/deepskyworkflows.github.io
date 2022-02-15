@@ -3,7 +3,7 @@ title: "M42: The Great Orion Nebula Multi-Session"
 type: Nebula
 tags: ["NGC1976","M42","The star θ1Ori","The star θ2Ori","NGC1982","M43","Great Orion Nebula","Orion Nebula","Mairan's Nebula"]
 description: This image was rendered from nearly 600 10-second exposures collected over a year.
-image: /assets/images/gallery/m42-multi/thumb.jpg
+image: assets/images/gallery/m42-multi/thumb.jpg
 telescope: Stellina
 length: "400mm"
 aperture: "80mm"

@@ -3,7 +3,7 @@ title: "NGC6888: The Crescent Nebula"
 type: Nebula
 tags: ["NGC6888","Crescent Nebula"]
 description: The Crescent Nebula is formed by the interaction of stellar winds around a red giant.
-image: /assets/images/gallery/ngc6888/thumb.jpg
+image: assets/images/gallery/ngc6888/thumb.jpg
 telescope: Stellina
 length: "400mm"
 aperture: "80mm"

@@ -3,7 +3,7 @@ title: "IC434 NGC2024: The Horse and the Flame"
 type: Nebula
 tags: ["The star Alnitak (ζOri)","IC434","NGC2024","NGC2023","Flame Nebula","Orion B", "Horsehead Nebula"]
 description: "IC434 illuminates the nearby Horsehead Nebula that rears its head in silhouette. Dominating left is the triple star system Alnitak with its main superhot blue giant centerpiece that adorns the undulating waves of NGC2024, the Flame Nebula."
-image: /assets/images/gallery/ic434-ngc2024/thumb.jpg
+image: assets/images/gallery/ic434-ngc2024/thumb.jpg
 telescope: Stellina
 length: "400mm"
 aperture: "80mm"

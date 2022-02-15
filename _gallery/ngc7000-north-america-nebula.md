@@ -3,7 +3,7 @@ title: "NGC7000: North America Nebula Mosaic"
 type: Nebula
 tags: ["NGC7000"]
 description: The North America nebula is vast and my telescope can only capture a small frame. I created this mosaic to appreciate the breadth and depth of its beauty.
-image: /assets/images/gallery/ngc7000/thumb.jpg
+image: assets/images/gallery/ngc7000/thumb.jpg
 telescope: Stellina
 length: "400mm"
 aperture: "80mm"

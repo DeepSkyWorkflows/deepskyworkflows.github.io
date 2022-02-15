@@ -3,7 +3,7 @@ title: "NGC7129: The Cosmic Rose"
 type: Nebula
 tags: ["NGC7129","NGC7142","IC5134", "The Cosmic Rose"]
 description: The Cosmic Rose is a hot cauldron of starbirth with vast molecular clouds that reflect the bluish light of young stars.
-image: /assets/images/gallery/ngc7129/thumb.jpg
+image: assets/images/gallery/ngc7129/thumb.jpg
 telescope: Stellina
 length: "400mm"
 aperture: "80mm"

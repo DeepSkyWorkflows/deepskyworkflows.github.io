@@ -3,7 +3,7 @@ title: "M24: The Small Sagittarius Cloud"
 type: Asterism
 tags: ["IC4715","NGC6603","Small Sgr Star Cloud","M24", "Small Sagittarius Cloud"]
 description: M24 is a Messier object that isn't a deep space target, but instead describes a region of the sky so dense with stars it forms a cloud named the Small Sagittarius Cloud.
-image: /assets/images/gallery/m24/thumb.jpg
+image: assets/images/gallery/m24/thumb.jpg
 telescope: Stellina
 length: "400mm"
 aperture: "80mm"

@@ -3,7 +3,7 @@ title: "Jupiter and moons"
 type: Planet
 tags: [jupiter]
 description: "This is a capture of Jupiter and three moons (from left right): Io, Europa, and Ganymede."
-image: /assets/images/gallery/jupiter-2021-09/thumb.jpg
+image: assets/images/gallery/jupiter-2021-09/thumb.jpg
 telescope: Stellina
 length: "400mm"
 aperture: "80mm"

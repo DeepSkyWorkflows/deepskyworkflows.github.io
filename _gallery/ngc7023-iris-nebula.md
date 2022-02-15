@@ -3,7 +3,7 @@ title: "NGC7023: The Iris Nebula"
 type: Nebula
 tags: ["NGC7023","Iris Nebula"]
 description: This inky nebula is a reflection nebula that is illuminated by a central star and glows blue.
-image: /assets/images/gallery/ngc7023/thumb.jpg
+image: assets/images/gallery/ngc7023/thumb.jpg
 telescope: Stellina
 length: "400mm"
 aperture: "80mm"

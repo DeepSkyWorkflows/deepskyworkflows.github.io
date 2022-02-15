@@ -3,7 +3,7 @@ title: "IC1396: The Elephant's Trunk"
 type: Nebula
 tags: ["IC1396"]
 description: The long curling trunk is cosmos gas and dark dust believed to be forming stars across a massive region.
-image: /assets/images/gallery/ic1396/thumb.jpg
+image: assets/images/gallery/ic1396/thumb.jpg
 telescope: Stellina
 length: "400mm"
 aperture: "80mm"

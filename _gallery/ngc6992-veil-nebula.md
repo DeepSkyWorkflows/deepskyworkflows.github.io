@@ -3,7 +3,7 @@ title: "NGC6992: The Eastern Veil Nebula"
 type: Nebula
 tags: ["NGC6992","IC1340","NGC6995", "Veil Nebula"]
 description: This beautiful nebula is part of a supernova remnant that spans a large field of view.
-image: /assets/images/gallery/ngc6992/thumb.jpg
+image: assets/images/gallery/ngc6992/thumb.jpg
 telescope: Stellina
 length: "400mm"
 aperture: "80mm"

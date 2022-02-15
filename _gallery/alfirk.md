@@ -3,7 +3,7 @@ title: "Alfirk"
 type: Star
 tags: ["The star Alfirk (βCep)"]
 description: "Alfirk, roughly translated 'the flock,' is the name of a triple star system that is classified as β Cephei (Beta Cephei). It is a part of the outline of the Cepheus constellation. The main star is a blue subgiant and gives it the distinctive blue color."
-image: /assets/images/gallery/alfirk/thumb.jpg
+image: assets/images/gallery/alfirk/thumb.jpg
 telescope: Stellina
 length: "400mm"
 aperture: "80mm"

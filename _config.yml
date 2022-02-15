@@ -20,7 +20,7 @@ authors:
     twitter: DeepSkyWorkflow
     gravatar: 9ce480e4853b49026c274d31f6ea83d2
     email: deepskyworkflows@gmail.com
-    web: https://www.strengthwithparkinsons.com/
+    web: https://deepskyworkflows.com/
     description: "Amateur astronomer Jeremy Likness has always been interested in the mysteries of deep space, but only recently began to explore them through astrophotography."
     picture: 'assets/images/jeremyliknessavatar.jpg'
 
@@ -45,9 +45,21 @@ twitter:
   username: DeepSkyWorkflow
   card: summary_large_image
     
+facebook:
+  publisher: https://www.facebook.com/DeepSkyWorkflows/
+
 # Pagination 
 paginate: 6
 paginate_path: /page:num/
+
+# social
+social:
+  name: Jeremy Likness
+  links:
+    - https://twitter.com/DeepSkyWorkflow
+    - https://instagram.com/DeepSkyWorkflows
+    - https://facebook.com/DeepSkyWorkflows/
+    - https://github.com/DeepSkyWorkflows
     
 # Other
 markdown: kramdown

@@ -3,7 +3,7 @@ title: "NGC2264: The Christmas Tree Cluster and Friends"
 type: Nebula
 tags: ["The star 15Mon","NGC2264","Christmas Tree Cluster", "Cone Nebula", "Snowflake Nebula",  "Fox Fur Nebula"]
 description: "This dense patch of stars and nebulae hosts a variety of targets. Starting at the bottom is the Cone Nebula. The top of the cone touches the inserted peak of the Christmas Tree Cluster. Past the faintly visible Snowflake Nebula is the bluish Fox Fur Nebula."
-image: /assets/images/gallery/ngc2264/thumb.jpg
+image: assets/images/gallery/ngc2264/thumb.jpg
 telescope: Stellina
 length: "400mm"
 aperture: "80mm"

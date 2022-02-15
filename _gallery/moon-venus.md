@@ -3,7 +3,7 @@ title: "Venus approaches the moon"
 type: Lunar
 tags: ["Moon", "Venus"]
 description: A dawn view of Venus with a crescent moon.
-image: /assets/images/gallery/moon-venus/thumb.jpg
+image: assets/images/gallery/moon-venus/thumb.jpg
 telescope: Sony ILCE-6300
 length: 50mm
 aperture: 31mm

@@ -3,7 +3,7 @@ title: "M27: Dumbbell Nebula"
 type: Nebula
 tags: ["NGC6853","M27","Dumbbell Nebula"]
 description: This bright nebula visible in binoculars is a planetary nebula surrounding a white dwarf star.
-image: /assets/images/gallery/m27/thumb.jpg
+image: assets/images/gallery/m27/thumb.jpg
 telescope: Stellina
 length: "400mm"
 aperture: "80mm"

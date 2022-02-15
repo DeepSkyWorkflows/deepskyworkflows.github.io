@@ -3,7 +3,7 @@ title: "M82: The Cigar Galaxy"
 type: Galaxy
 tags: ["NGC3034","M82","Cigar Galaxy"]
 description: M82 is a starburst galaxy that contains one of the brightest pulsars known.
-image: /assets/images/gallery/m82/thumb.jpg
+image: assets/images/gallery/m82/thumb.jpg
 telescope: Stellina
 length: "400mm"
 aperture: "80mm"

@@ -3,7 +3,7 @@ title: "M81: Bode's Galaxy"
 type: Galaxy
 tags: ["NGC3031","M81","Bode's Galaxy"]
 description: One of the brightest galaxies in the night sky, Bode's Galaxy is believed to contain a black hole in the center that is 70 million times the mass of the sun.
-image: /assets/images/gallery/m81/thumb.jpg
+image: assets/images/gallery/m81/thumb.jpg
 telescope: Stellina
 length: "400mm"
 aperture: "80mm"

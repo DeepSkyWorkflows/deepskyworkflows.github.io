@@ -3,7 +3,7 @@ title: "Sirius"
 type: Star
 tags: ["The star Sirius (αCMa)", "Sirius"]
 description: The brightest star in the sky is Sirus, the Dog Star that brings on the Dog Days. It is actually a binar with a white dwarf that orbits every 50 years.
-image: /assets/images/gallery/sirius/thumb.jpg
+image: assets/images/gallery/sirius/thumb.jpg
 telescope: Stellina
 length: "400mm"
 aperture: "80mm"

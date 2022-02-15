@@ -3,7 +3,7 @@ title: "M16: The Eagle Nebula"
 type: Nebula
 tags: ["NGC6611","M16","IC4703","Eagle Nebula","Star Queen"]
 description: M16 is called the Eagle Nebula due to its overall shape, but it's the smoky columns that span lightyears in height that make it famous. The columns are called the Pillars of Creation.
-image: /assets/images/gallery/m16/thumb.jpg
+image: assets/images/gallery/m16/thumb.jpg
 telescope: Stellina
 length: "400mm"
 aperture: "80mm"

@@ -3,7 +3,7 @@ title: "Epsilon: the Double Double"
 type: Star
 tags: ["The star ε1Lyr","The star ε2Lyr","Epsilon","Epsilon Lyr"]
 description: "Epsilon Lyr, in the constellation Lyrae, looks like two bright blue stars, but each star is actually a binary system."
-image: /assets/images/gallery/epsilon/thumb.jpg
+image: assets/images/gallery/epsilon/thumb.jpg
 telescope: Stellina
 length: "400mm"
 aperture: "80mm"

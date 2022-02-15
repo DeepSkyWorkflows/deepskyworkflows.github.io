@@ -3,7 +3,7 @@ title: "M97: The Owl Nebula"
 type: Nebula
 tags: ["NGC3587","M97","Owl Nebula"]
 description: Who who is the Owl Nebula? A bright starburst nebula believed to be about 8,000 years old.
-image: /assets/images/gallery/m97/thumb.jpg
+image: assets/images/gallery/m97/thumb.jpg
 telescope: Stellina
 length: "400mm"
 aperture: "80mm"

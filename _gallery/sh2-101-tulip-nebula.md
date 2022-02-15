@@ -3,7 +3,7 @@ title: "SH2-101: The Tulip Nebula"
 type: Nebula
 tags: ["SH2-101", "Tulip Nebula"]
 description: "SH2-101 is an emission nebula that wasn't catalogued until 1959. It is very faint and requires plenty of exposure or good narrowband filters to capture. You can see why it's sometimes referred to as the Tulip Nebula."
-image: /assets/images/gallery/sh2-101/thumb.jpg
+image: assets/images/gallery/sh2-101/thumb.jpg
 telescope: Stellina
 length: "400mm"
 aperture: "80mm"

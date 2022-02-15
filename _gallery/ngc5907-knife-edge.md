@@ -3,7 +3,7 @@ title: "NGC5907: The Knife Edge Galaxy"
 type: Galaxy
 tags: ["NGC5907", "Knife Edge Galaxy", "Splinter Galaxy"]
 description: This is a spiral galaxy viewed edge-on from 50 million light years away.
-image: /assets/images/gallery/ngc5907/thumb.jpg
+image: assets/images/gallery/ngc5907/thumb.jpg
 telescope: Stellina
 length: "400mm"
 aperture: "80mm"

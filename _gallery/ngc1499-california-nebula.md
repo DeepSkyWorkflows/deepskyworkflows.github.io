@@ -3,7 +3,7 @@ title: "NGC1499: The Calfornia Nebula"
 type: Nebula
 tags: ["NGC1499","California Nebula"]
 description: This picture is just a small part of the California-shaped NGC1499, a faint nebula that requires lots of exposure and/or narrowband filters to truly appreciate.
-image: /assets/images/gallery/ngc1499/thumb.jpg
+image: assets/images/gallery/ngc1499/thumb.jpg
 telescope: Stellina
 length: "400mm"
 aperture: "80mm"

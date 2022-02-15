@@ -3,7 +3,7 @@ title: "NGC7380: The Wizard Nebula"
 type: Nebula
 tags: ["NGC7380"]
 description: The Wizard Nebula is a faint nebula that requires lots of exposures and possibly a filter to see. It surrounds a young cluster of stars.
-image: /assets/images/gallery/ngc6380/thumb.jpg
+image: assets/images/gallery/ngc6380/thumb.jpg
 telescope: Stellina
 length: "400mm"
 aperture: "80mm"

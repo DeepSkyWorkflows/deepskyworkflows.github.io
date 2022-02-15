@@ -3,7 +3,7 @@ title: "Arcturus"
 type: Star
 tags: ["The star Arcturus (αBoo)", "Arcturus"]
 description: The brightest star in the northern celestial hemisphere, Arcturus is 25 times the size of the sun and 170 times as bright.
-image: /assets/images/gallery/arcturus/thumb.jpg
+image: assets/images/gallery/arcturus/thumb.jpg
 telescope: Stellina
 length: "400mm"
 aperture: "80mm"

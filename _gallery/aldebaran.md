@@ -3,7 +3,7 @@ title: "Aldebaran"
 type: Star
 tags: ["The star Aldebaran (αTau)"]
 description: Alpha Tau, or Aldebaran, is 44 times the size of our sun and 400 times as luminous.
-image: /assets/images/gallery/aldebaran/thumb.jpg
+image: assets/images/gallery/aldebaran/thumb.jpg
 telescope: Stellina
 length: "400mm"
 aperture: "80mm"

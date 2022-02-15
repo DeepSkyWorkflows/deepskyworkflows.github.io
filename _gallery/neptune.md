@@ -3,7 +3,7 @@ title: "Neptune"
 type: Planet
 tags: [neptune]
 description: "The light for this image of Neptune raced over 2.7 billion miles to reach Earth."
-image: /assets/images/gallery/uranus/thumb.jpg
+image: assets/images/gallery/uranus/thumb.jpg
 telescope: Stellina
 length: "400mm"
 aperture: "80mm"

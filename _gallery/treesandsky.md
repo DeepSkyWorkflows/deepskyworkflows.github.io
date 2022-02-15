@@ -3,7 +3,7 @@ title: "Trees and Sky"
 type: Miscellaneous
 tags: []
 description: "A sky full of stars over wintering trees."
-image: /assets/images/gallery/treesandsky/thumb.jpg
+image: assets/images/gallery/treesandsky/thumb.jpg
 telescope: Sony ILCE-6300
 length: "16mm"
 aperture: "4.57mm"

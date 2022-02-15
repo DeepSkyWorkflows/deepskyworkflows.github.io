@@ -3,7 +3,7 @@ title: Vega
 type: Star
 tags: [Vega]
 description: A bright star about 25 light years away.
-image: /assets/images/gallery/vega/thumb.jpg
+image: assets/images/gallery/vega/thumb.jpg
 telescope: Stellina
 length: "400mm"
 aperture: "80mm"

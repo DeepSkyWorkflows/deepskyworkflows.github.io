@@ -3,7 +3,7 @@ title: "M20 and M21: Trifid Nebula and Webb's Cross"
 type: Nebula
 tags: ["NGC6514","M20","NGC6531","M21","Trifid Nebula"]
 description: This is a specially framed capture to grab two Messier objects, one of which is a cluster, reflection nebula, emission nebula, and dark nebula all at the same time.
-image: /assets/images/gallery/m20andm21/thumb.jpg
+image: assets/images/gallery/m20andm21/thumb.jpg
 telescope: Stellina
 length: "400mm"
 aperture: "80mm"

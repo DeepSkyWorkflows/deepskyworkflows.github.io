@@ -3,7 +3,7 @@ title: "M57: The Ring Nebula"
 type: Nebula
 tags: ["IC1296","NGC6720","M57","Ring Nebula"]
 description: A star shed this ring of ionized gas as it collapsed into a white dwarf.
-image: /assets/images/gallery/m57/thumb.jpg
+image: assets/images/gallery/m57/thumb.jpg
 telescope: Stellina
 length: "400mm"
 aperture: "80mm"

@@ -3,7 +3,7 @@ title: "M63: The Sunflower Galaxy"
 type: Galaxy
 tags: ["NGC5055","M63","Sunflower Galaxy"]
 description: If you look closely at this spiral galaxy, you may be able to count its approximately 400 billion stars.
-image: /assets/images/gallery/m63/thumb.jpg
+image: assets/images/gallery/m63/thumb.jpg
 telescope: Stellina
 length: "400mm"
 aperture: "80mm"

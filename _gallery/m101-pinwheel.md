@@ -3,7 +3,7 @@ title: "M101: The Pinwheel Galaxy"
 type: Galaxy
 tags: ["NGC5457","M101","NGC5477","NGC5461","NGC5471"]
 description: A beautiful spiral galaxy that is quite photogenic.
-image: /assets/images/gallery/m101/thumb.jpg
+image: assets/images/gallery/m101/thumb.jpg
 telescope: Stellina
 length: "400mm"
 aperture: "80mm"

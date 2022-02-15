@@ -3,7 +3,7 @@ title: "NGC7008: The Fetus Nebula"
 type: Nebula
 tags: ["NGC7008", "Fetus nebula"]
 description: The so-called fetus nebula looks like an embryo stretched one light year in diameter waiting to be born 2,800 light years away.
-image: /assets/images/gallery/ngc7008/thumb.jpg
+image: assets/images/gallery/ngc7008/thumb.jpg
 telescope: Stellina
 length: "400mm"
 aperture: "80mm"

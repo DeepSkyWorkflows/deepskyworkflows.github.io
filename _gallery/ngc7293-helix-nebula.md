@@ -3,7 +3,7 @@ title: "NGC7293: The Helix Nebula"
 type: Nebula
 tags: ["NGC 7293","Helix Nebula"]
 description: "NGC7293 is the Helix Nebula, a planetary nebula about 600 - 700 light years from Earth. It's distinctive shape has given it the nicknames 'Eye of God' and 'Eye of Sauron.' From my location it never rises more than 30 degrees above the horizon so it was a tricky one to observe."
-image: /assets/images/gallery/ngc7293/thumb.jpg
+image: assets/images/gallery/ngc7293/thumb.jpg
 telescope: Stellina
 length: "400mm"
 aperture: "80mm"
