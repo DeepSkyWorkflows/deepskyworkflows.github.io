@@ -943,8 +943,13 @@ div.messier-img {
     min-height: 120px;
 }
 
+.messier-fact-card {
+    color: black;
+}
+
 .messier-detail-card {
     max-width: 300px;
+    color: black;
 }
 
 .gallery-card:hover {
