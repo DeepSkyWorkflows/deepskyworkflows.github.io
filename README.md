@@ -2,7 +2,7 @@
 
 This is the source code for the Deep Sky Workflows blog at https://deepskyworkflows.com.
 
-All images in this blog are Copyright (c) 2021 Jeremy Likness. All rights reserved.
+All images in this blog are Copyright (c) 2021-2022 Jeremy Likness. All rights reserved.
 
 The code and content are subjecto to the [MIT License](./LICENSE).
 
