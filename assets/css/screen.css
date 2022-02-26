@@ -989,6 +989,17 @@ div.messier-img {
     transition: 0.6s ease;
 }
 
+.tag-card {
+    float: left;
+    margin: 2px;
+    width: 150px;
+    height: 150px;
+    font-size: 0.8em;
+    background: black;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .slideshow-title {
     color: lightgray;
 }

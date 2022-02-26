@@ -7,7 +7,7 @@ tags: [ camera, exposure, m42, m45, cassiopeia, tracking, polaris ]
 toc: true
 image: assets/images/2021-11-28/camera-astrophotography.jpg
 description: "I recently purchased a SkyWatcher Star Adventurer Mini (SAM) to take longer exposures with my camera. I'll talk about what that all means and show you examples of what can be produced."
-featured: true
+featured: false
 hide: true
 comments: true
 ---

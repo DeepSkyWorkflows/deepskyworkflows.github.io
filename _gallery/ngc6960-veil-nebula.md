@@ -3,7 +3,7 @@ title: "NGC6960: The Veil Nebula"
 type: Nebula
 tags: ["NGC6960","The star 52Cyg","Veil Nebula"]
 description: A brilliant star caps the veil in this delicate and beautiful nebula.
-image: assets/images/gallery/ngc6990/thumb.jpg
+image: assets/images/gallery/ngc6960/thumb.jpg
 telescope: Stellina
 length: "400mm"
 aperture: "80mm"

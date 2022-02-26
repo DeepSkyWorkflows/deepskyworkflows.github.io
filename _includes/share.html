@@ -39,7 +39,7 @@
         <hr/>
         <p><strong>Gallery</strong></p>
         {% assign sorted = gallery | uniq | sort: "title" %}
-        {% for item in sorted %}
+        {% for item in sorted limit: 10 %}
             {% assign mainUrl = site.baseurl | append: item.url %}            
             {% assign thumbPath = site.baseurl | append: "/assets/images/gallery/" | append: item.folder | append: "/thumb.jpg" %}
             <div class="card gallery-card mw-100">

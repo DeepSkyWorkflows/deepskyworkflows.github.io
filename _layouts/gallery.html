@@ -226,7 +226,8 @@ layout: default
                 <div class="card-footer bg-dark">
                     <b>Objects in frame:</b>
                     {% for tag in page.tags %}
-                    <a id="data-tag-{{tag}}" class="btn badge badge-primary" href="{{site.baseurl}}/gallery/#tag-{{tag}}">{{tag}}</a>
+                    {% assign gtag = tag | capitalize | strip | replace: ' ', '-' %}
+                    <a id="data-tag-{{tag}}" class="btn badge badge-primary" href="{{site.baseurl}}/tags#{{gtag}}">{{tag}}</a>
                     {% endfor %}
                 </div>
             </div>

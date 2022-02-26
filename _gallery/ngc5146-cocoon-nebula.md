@@ -3,7 +3,7 @@ title: "NGC5146: The Cocoon Nebula"
 type: Nebula
 tags: ["IC5146","NGC5146", "Cocoon Nebula"]
 description: The cocoon nebula incubates at a distance of about 4,000 light years, awainting its transformation as a reflection and emission nebula.
-image: assets/images/gallery/mgc5146/thumb.jpg
+image: assets/images/gallery/ngc5146/thumb.jpg
 telescope: Stellina
 length: "400mm"
 aperture: "80mm"

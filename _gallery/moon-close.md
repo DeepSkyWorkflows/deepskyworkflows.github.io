@@ -1,7 +1,7 @@
 ---
 title: "Closeup of the Moon"
 type: Lunar
-image: \assets\images\gallery\moon-close\thumb.jpg
+image: assets\images\gallery\moon-close\thumb.jpg
 tags: ["The moon", "moon"]
 description: A gibbous moon close-up.
 telescope: Stellina

@@ -3,7 +3,7 @@ title: "Andromeda's Splendour"
 type: Galaxy
 tags: ["Andromeda Galaxy","M110","M31","M32","NGC205","NGC221","NGC224","The star νAnd"]
 description: The Andromeda Galaxy for 24 minutes in one-shot color.
-image: /assets/images/gallery/andromeda/thumb.jpg
+image: assets/images/gallery/andromeda/thumb.jpg
 telescope: Svbony Sv503
 length: "336mm"
 aperture: "70mm"

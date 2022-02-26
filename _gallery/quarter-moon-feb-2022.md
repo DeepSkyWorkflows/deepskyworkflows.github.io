@@ -1,7 +1,7 @@
 ---
 title: "Beautiful crescent in February 2022."
 type: Lunar
-image: \assets\images\gallery\quarter-moon-feb-2022\thumb.jpg
+image: assets\images\gallery\quarter-moon-feb-2022\thumb.jpg
 tags: ["The moon", "moon"]
 description: A crescent moon in February 2022.
 telescope: Stellina
