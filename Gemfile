@@ -19,3 +19,5 @@ group :jekyll_plugins do
     gem 'rouge'
     gem 'webrick'
 end
+
+gem "jekyll-image-size", "~> 1.2"
