@@ -31,7 +31,6 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-archives
-  - jekyll-image-size
     
 # Archives
 jekyll-archives:
