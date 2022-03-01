@@ -32,6 +32,14 @@ plugins:
   - jekyll-seo-tag
   - jekyll-archives
     
+# Feed
+feed:
+  posts_limit: 999
+  collections:
+    gallery:
+      path: "/gallery.xml"
+      posts_limit: 999
+
 # Archives
 jekyll-archives:
   enabled:
