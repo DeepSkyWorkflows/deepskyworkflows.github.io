@@ -29,7 +29,7 @@ image: "assets/images/about/orion.jpeg"
 
 <p>Connect with me on: <i class="fab fa-facebook"></i><a href="https://facebook.com/DeepSkyWorkflows" title="Deep Sky Workflows on Facebook">Facebook</a>, <i class="fab fa-instagram"></i><a href="https://instagram.com/DeepSkyWorkflows" title="Deep Sky Workflows on Instagram">Instagram</a>, and/or <i class="fab fa-twitter"></i><a href="https://twitter.com/DeepSkyWorkflow" title="@DeepSkyWorkflow on Twitter">Twitter</a>.</p>
 
-<p>It’s great to have a place to share my deep sky explorations and astrophotography journey with you. In the beginning of 2021, I purchased an observation station named <a href="https://vaonis.com/stellina" target="_blank">Stellina</a>. It is a fully automated system for capturing deep sky images. What intrigued me about the unit was the claim that it could handle light polluted areas and the ease of setup. I took a chance, purchased the scope and have not been disappointed.</p>
+<p>It’s great to have a place to share my deep sky explorations and astrophotography journey with you. In the beginning of 2021, I purchased an observation station named <a href="https://amzn.to/3CBbsds" target="_blank">Stellina</a>. It is a fully automated system for capturing deep sky images. What intrigued me about the unit was the claim that it could handle light polluted areas and the ease of setup. I took a chance, purchased the scope and have not been disappointed.</p>
 
 <p class="mb-5"><img class="shadow-lg" src="{{site.baseurl}}/assets/images/about/stellina.jpeg" alt="Stellina pointed at the stars" /><br/><i class="center">Stellina pointed at the stars</i></p>
 
@@ -41,9 +41,13 @@ image: "assets/images/about/orion.jpeg"
 
 <p class="mb-5"><img class="shadow-lg" src="{{site.baseurl}}/assets/images/about/arcturus.jpeg" alt="Arcturus" /><br/><i class="center">Arcturus</i></p>
 
-<p>Other images, like the dark Iris Nebula, require far more subframes to draw out the detail. I learned I can pull the subframes from the telescope using a thumb drive and process them on my computer. That allows me to combine data from multiple observations (even different nights of the year) to produce a final result. This image was combined from 1,490 subframes for a total exposure time of over four hours!</p>
+<p>Other images, like the elusive Triangulum Galaxy, require far more subframes to draw out the detail. I learned I can pull the subframes from the telescope using a thumb drive and process them on my computer. That allows me to combine data from multiple observations (even different nights of the year) to produce a final result. This image was combined from 1,200 subframes for a total exposure time of over three hours!</p>
 
-<p class="mb-5"><img class="shadow-lg" src="{{site.baseurl}}/assets/images/about/iris.jpeg" alt="NGC7023 Iris Nebula" /><br/><i class="center">NGC7023 Iris Nebula</i></p>
+<p class="mb-5"><img class="shadow-lg" src="{{site.baseurl}}/assets/images/gallery/m33/m33.jpg" alt="M33 Triangulum Galaxy" /><br/><i class="center">M33 Triangulum Galaxy</i></p>
+
+Eventually, I purchased additional hardware and pieced together my own system. This is an image taken by a <a href="https://amzn.to/3tfOhT3" target="_blank">Celestron EdgeHD 9.25" Schmidt-Cassegrain telescope</a> using a dedicated one shot color astrophotography camera called the <a href="https://amzn.to/36dYaqW" target="_blank">ZWO ASI294MC Pro</a>.
+
+<p class="mb-5"><img class="shadow-lg" src="{{site.baseurl}}/assets/images/gallery/running-man/running-man.jpg" alt="Running Man Nebula" /><br/><i class="center">Running Man Nebula</i></p>
 
 <p>There are many tips and techniques involved with processing images and I’ll share them in this blog.</p>
 
@@ -62,6 +66,4 @@ image: "assets/images/about/orion.jpeg"
 
 <a target="_blank" href="https://www.paypal.com/paypalme/jeremylikness" class="btn btn-danger">💲 Donate</a>
 
-</div>
-</div>
-</div>
+<p>As an Amazon affiliate I may receive commission for purchases made from links on this site. If you decide to make an astrophotography purchase, you can support this site by visiting Amazon through my <a href="https://amzn.to/37fkK30" target="blank">affiliate link</a> to buy your item.
