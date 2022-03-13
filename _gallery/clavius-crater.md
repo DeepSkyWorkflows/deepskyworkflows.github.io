@@ -4,7 +4,7 @@ type: Lunar
 tags: ["The moon", "Clavius"]
 description: A close up of the multiple craters including Clavius.
 image: assets/images/gallery/clavius-crater/thumb.jpg
-telescope: Svbony sv503
+telescope: Svbony sv503 70ED
 length: "840mm"
 aperture: "70mm"
 folder: clavius-crater

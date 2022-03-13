@@ -4,7 +4,7 @@ type: Lunar
 tags: ["The moon"]
 description: An image of the moon captured during the day, several hours before sunset.
 image: assets/images/gallery/day-moon/thumb.jpg
-telescope: Svbony sv503
+telescope: Svbony sv503 70ED
 length: "420mm"
 aperture: "70mm"
 folder: day-moon

@@ -4,7 +4,7 @@ type: Lunar
 tags: ["The moon", "Mare Imbrium"]
 description: A close up of the Mare Imbrium region at the edge of the shadow.
 image: assets/images/gallery/mare-imbrium-edge/thumb.jpg
-telescope: Svbony sv503
+telescope: Svbony sv503 70ED
 length: "840mm"
 aperture: "70mm"
 folder: mare-imbrium-edge

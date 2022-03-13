@@ -4,9 +4,9 @@ type: Miscellaneous
 tags: []
 description: A view of the sky taken with my fisheye camera. 
 image: assets/images/gallery/starry-sky-fisheye/thumb.jpg
-telescope: ZWO-ASI290MM
-length: 150mm
-aperture: 75mm
+telescope: ZWO-ASI120MM-S
+length: 15mm
+aperture: 1.5mm
 folder: starry-sky-fisheye
 exposure: 30s
 lights: 1

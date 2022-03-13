@@ -5,8 +5,9 @@ image: "assets/images/gallery.jpg"
 permalink: /gallery/
 ---
  
-{% assign version = 9 %}
+{% assign version = 10 %}
 {% assign types = site.gallery | group_by: 'type' | sort: 'name' %}
+{% assign telescopeArray = '' | split: ',' %}
 <div class="row mw-25">
     <div class="col-12">
 <p><a href="{{ site.baseurl}}/gallery/slideshow/" title="Slideshow"><i class="fa fa-film"></i> Slideshow</a>
@@ -14,7 +15,15 @@ permalink: /gallery/
 <strong>Jump to Category:</strong>
 {% for nestedGroup in types %}
     <a href="#{{nestedGroup.name}}">{{nestedGroup.name}}</a>&nbsp;|
+    {% for item in nestedGroup.items %}
+    {% assign telescopeArray = telescopeArray | push: item.telescope %}
+    {% endfor %}
 {% endfor %}
+{% assign uniqueScopes = telescopeArray | uniq | sort %}
+</p>
+<p><strong>Filter by telescope:</strong>{% for scope in uniqueScopes %}
+ <button class="btn btn-sm btn-link telescopeFilter">{{scope}}</button>&nbsp;|
+{%endfor%}
 </p>
 <p><a name="top"></a>
 <strong><i class="fa fa-filter"></i> Filter:</strong>&nbsp;<span class="clickable" id="clearBtn"><i class="fa fa-times-circle"></i></span>&nbsp;
@@ -43,7 +52,7 @@ permalink: /gallery/
             {% assign grid = mainUrl | append: "#grid" %}
             {% assign itemCount = itemCount | plus: 1 %}
             {% assign thumbPath = site.baseurl | append: "/assets/images/gallery/" | append: item.folder | append: "/thumb.jpg" %}
-                <div class="card gallery-card" data-url="{{item.url}}">
+                <div class="card gallery-card" data-url="{{item.url}}" data-telescope="{{item.telescope}}">
                     <a href="{{mainUrl}}" title="{{item.description}}" tabindex="{{itemCount}}">
                         <img class="card-img-top gallery-img" id="image-{{itemIndex}}" src="{{thumbPath}}" alt="{{item.description}}">
                         {% assign itemIndex = itemIndex | plus: 1 %}

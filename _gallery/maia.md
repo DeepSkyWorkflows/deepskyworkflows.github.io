@@ -4,7 +4,7 @@ type: Nebula
 tags: ["The star Celaeno (16Tau)","The star Electra (17Tau)","The star 18Tau","The star Taygeta (19Tau)","The star Sterope I (21Tau)","The star Merope (23Tau)","The star ηTau","The star Atlas (27Tau)","The star Pleione (28Tau)","NGC1432","NGC1435","IC349","Barnard's Merope Nebula","Maia Nebula","Merope Nebula"]
 description: A brilliant blue cluster wreathed in intricate strands of nebula.
 image: assets/images/gallery/maia/thumb.jpg
-telescope: SV503
+telescope: Svbony sv503 70ED
 length: "336mm"
 aperture: "70mm"
 folder: maia

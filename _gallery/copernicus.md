@@ -4,7 +4,7 @@ type: Lunar
 tags: ["The moon"]
 description: A close up of the large crater named Copernicus on the moon.
 image: assets/images/gallery/copernicus/thumb.jpg
-telescope: Svbony sv503
+telescope: Svbony sv503 70ED
 length: "840mm"
 aperture: "70mm"
 folder: copernicus
