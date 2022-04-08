@@ -4,7 +4,7 @@ type: Lunar
 image: assets\images\gallery\moon-ghost\thumb.jpg
 tags: ["The moon", "moon"]
 description: A full moon obscured by clouds.
-telescope: SvBony sv503 70ED
+telescope: Svbony sv503 70ED
 length: "420mm"
 aperture: "70mm"
 folder: moon-ghost
