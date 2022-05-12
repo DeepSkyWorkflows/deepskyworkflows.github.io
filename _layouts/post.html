@@ -1,6 +1,6 @@
 ---
 layout: default
-disqus: false
+disqus: true
 archive: false
 post_class: post-template
 ---
@@ -87,6 +87,10 @@ post_class: post-template
                 <!-- End Toc -->
                 {{content}}
             </div>
+
+            {% if page.comments == true %}
+                {% include disqus.html url=page.url id=page.id %}
+            {% endif %}
 
             <!-- Rating -->
             {% if page.rating %}
@@ -183,13 +187,3 @@ https://search.google.com/structured-data/testing-tool/u/0/
 </script>
 {% endif %}
 
-{% if page.comments == true %}
-<script src="https://utteranc.es/client.js"
-        repo="deepskyworkflows/deepskyworkflows.github.io"
-        issue-term="url"
-        label="blog-discussion"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
-</script>
-{% endif %}

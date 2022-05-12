@@ -1,13 +1,13 @@
 # Site
 name: "Deep Sky Workflows"
 title: "Deep Sky Workflows: Astrophotography, Space, and Astronomy"
-description: "Amataeur astrophotography images and tutorials from regular cameras to powerful telescopes."
+description: "Amateur astrophotography images and tutorials from regular cameras to powerful telescopes."
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/logo.png'
 baseurl: 
 url: https://deepskyworkflows.com
 # google_analytics: ''
-# disqus: ''
+disqus: 'deep-sky-workflows'
 # mailchimp-list: ''
 include: ["_pages", "_gallery", "_messier"]
 permalink: /:title/

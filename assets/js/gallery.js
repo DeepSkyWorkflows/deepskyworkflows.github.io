@@ -1,4 +1,4 @@
-$(document).ready(function () {    
+$(document).ready(function () {
 
     const active = {
         link: null,
@@ -18,11 +18,11 @@ $(document).ready(function () {
         active.total++;
         $("#loadingStatus").innerText = progress();
         let loader = new Image();
-        loader.onload = function() {
+        loader.onload = function () {
             target.src = loader.src;
             active.queue--;
             $("#loadingStatus").innerText = progress();
-           if (active.queue === 0) {
+            if (active.queue === 0) {
                 setTimeout(function () {
                     if (active.queue === 0) {
                         $('#loading').addClass('d-none');
@@ -38,14 +38,14 @@ $(document).ready(function () {
     let targets = [];
     let activeRef = null;
 
-    $("a[data-toggle=tab]").each(function (){
+    $("a[data-toggle=tab]").each(function () {
         let targetId = '#' + $(this).attr('aria-controls');
         let target = $(targetId);
-        
+
         let ref = { link: $(this), target: target };
 
         if (targetId == hash) {
-            activeRef = ref; 
+            activeRef = ref;
         }
         else {
             targets.push(ref);
@@ -67,10 +67,13 @@ $(document).ready(function () {
     });
 
     activeRef = activeRef ?? targets.shift();
-    active.link = activeRef.link;
-    active.link.addClass('active')
-    active.target = activeRef.target;
-    while (activeRef = targets.shift()) {
-        activeRef.target.hide();
+    if (activeRef) {
+        active.link = activeRef.link;
+        active.link.addClass('active')
+        active.target = activeRef.target;
+        while (activeRef = targets.shift()) {
+            activeRef.target.hide();
+        }
     }
+
 });
