@@ -1,5 +1,5 @@
 ---
-title: "A detailed, full color shot."
+title: "A detailed, full color lunar shot."
 type: Lunar
 image: assets\images\gallery\color-moon\thumb.jpg
 tags: ["The moon", "moon"]
