@@ -165,7 +165,7 @@ layout: default
                         {% endif %}
                         {% assign timeArray = timeArray | push: totalTime %}    
                         {% assign timeArray = timeArray | push: "s" %}    
-                        {% if totalTime > 0 %}
+                        {% if timeArray.size > 0 %}
                         <div class="col-6 text-right"><strong>Total exposure:</strong></div>
                         <div class="col-6">{{ timeArray | join: '' }}</div>                        
                         {% endif %}
