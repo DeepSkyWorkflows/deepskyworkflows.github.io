@@ -3,6 +3,7 @@ Index: "002"
 Target: "Moon"
 title: "The moon in three phases"
 description: "This print combines the depth and sharp contrast of crescent and quarter phases of the moon with the flat but detailed surface revealed when the moon is illuminated by full sun. The printing technique layers ink on brushed silver so that the moon's highlights reflect and glow." 
+Location: Monroe, WA
 Thumbnail: moonphases.jpg
 Fullsize: moonpanorama.jpg
 active: true

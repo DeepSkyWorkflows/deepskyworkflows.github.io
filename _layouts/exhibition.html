@@ -69,6 +69,9 @@ layout: default
                     {% endfor %} and some space dust.
                 </p>
             </div>
+            <div class="row m-4">
+                <p>Target was acquired from <strong>{{ page.Location }}</strong>.</p>
+            </div>
         </div>
     
         <div class="col-lg-8 col-sm-12">
@@ -128,32 +131,44 @@ layout: default
                     {% endif %}
                 </div>
                 <div class="col-lg-6 col-sm-12 m-2">
-                    {% if page.Exposures %}
+                    {% if page.Telescope or page.Camera %}
                     <p>Capture information:</p>
                     <div class="row exhibition-capture">
+                        {% if page.Telescope %}
                         <div class="col-6 text-right"><strong>Telescope or lens:</strong></div>
                         <div class="col-6">{{ page.Telescope }}</div>
+                        {% endif %}
                         <div class="col-6 text-right"><strong>Camera or sensor:</strong></div>
                         <div class="col-6">{{ page.Camera }}</div>
                         <div class="col-6 text-right"><strong>Capture date:</strong></div>
                         <div class="col-6">{{ page.Date }}</div>
+                        {% if page.Exposures %}
                         <div class="col-6 text-right"><strong>Exposures:</strong></div>
                         <div class="col-6">{{ page.Exposures }}</div>
                         <div class="col-6 text-right"><strong>Time per exposure:</strong></div>
                         <div class="col-6">{{ page.ExposureTime }}s</div>
                         {% assign totalTime = page.ExposureTime | times: page.Exposures | to_integer %}
-                        {% assign unit = "s" %}
+                        {% assign timeArray = '' | split: ',' %}
                         {% if totalTime > 60 %}
-                            {% assign unit = "m" %}
-                            {% assign totalTime = totalTime | divided_by: 60 %}
-                            {% if totalTime > 60 %}
-                                {% assign unit = "h" %}
-                                {% assign totalTime = totalTime | divided_by: 60 %}
-                            {% endif %}                                
+                           {% assign minutes = totalTime | divided_by: 60 %}
+                           {% assign minuteSeconds = minutes | times: 60 %}
+                           {% if minutes > 60 %}
+                              {% assign hours = minutes | divided_by: 60 %}
+                              {% assign timeArray = timeArray | push: hours %}    
+                              {% assign timeArray = timeArray | push: "h " %}                               
+                              {% assign hourminutes = hours | times: 60 %}                              
+                              {% assign minutes = minutes | minus: hourminutes %}
+                           {% endif %}
+                           {% assign timeArray = timeArray | push: minutes %}    
+                           {% assign timeArray = timeArray | push: "m " %}    
+                           {% assign totalTime = totalTime | minus: minuteSeconds %}
                         {% endif %}
+                        {% assign timeArray = timeArray | push: totalTime %}    
+                        {% assign timeArray = timeArray | push: "s" %}    
                         {% if totalTime > 0 %}
                         <div class="col-6 text-right"><strong>Total exposure:</strong></div>
-                        <div class="col-6">{{ totalTime }}{{ unit }}</div>                        
+                        <div class="col-6">{{ timeArray | join: '' }}</div>                        
+                        {% endif %}
                         {% endif %}
                         <div class="col-6 text-right"><strong>Focal length:</strong></div>
                         <div class="col-6">{{ page.FocalLength }}mm</div>
