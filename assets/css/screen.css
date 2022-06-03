@@ -1015,3 +1015,43 @@ div.messier-img {
 .clickable {
     cursor: pointer;
 }
+
+.exhibition {
+    background:rgba(255, 255, 255, .22);
+    padding: 1em;
+}
+
+.piece-info {
+    font-size: 1.5em;
+    color: rgb(142, 238, 238);
+}
+
+.exhibition-target {
+    background: lightgreen;
+    color: black;
+    padding: 2px;
+    border-bottom: solid green 2px;
+}
+
+.exhibition-capture {
+    background: lightgoldenrodyellow;
+    color: black;
+    padding: 2px;
+    border-bottom: solid green 2px;
+}
+
+.description {
+    margin-left: 2em;
+    font-size: 1.2em;
+    padding: 2em;
+}
+
+.print {
+    font-weight: bold;
+}
+
+.price {
+    font-size: 2em;
+    font-weight: bold;
+    color: lightgreen;
+}

@@ -1,0 +1,202 @@
+---
+layout: default
+---
+
+{% assign folderPath = site.baseurl | append: "/assets/images/exhibition/" %}
+{% assign mainImage = folderPath | append: page.Thumbnail %}
+{% assign fullsizeImage = folderPath | append: page.Fullsize %}
+{% assign annotated = folderPath | append: page.Annotated %}
+{% assign copyright = "Image &copy; 2022 Jeremy Likness. All rights reserved." %}
+{% assign edition = page.Edition %}
+{% if edition == 1 %}
+{% assign edition = '🥇 1st Edition!' %}
+{% else %}
+{% assign terminator = edition | modulo: 10 %}
+{% assign suffix = 'th' %}
+{% if terminator == 1 %}
+{% assign suffix = 'st' %}
+{% endif %}
+{% if terminator == 2 %}
+{% assign suffix = 'nd' %}
+{% endif %}
+{% if terminator == 3 %}
+{% assign suffix = 'rd' %}
+{% endif %}
+{% assign edition = edition | append: suffix | append: ' print' %}
+{% endif %}
+{% if page.previous.url %}
+{% assign prev = site.baseurl | append: page.previous.url %}
+{% endif %}
+{% if page.next.url %}
+{% assign next = site.baseurl | append: page.next.url %}
+{% endif %}
+{% assign item_name = page.title | append:  ", " | append: page.Print | append: ", " | append: page.Width | append: "in. x "| append: page.Height | append: "in."  %}
+{% if page.active == true %}
+<section>
+    <div class="row">
+        <div class="section-title">
+            <h2><span><a href="{{site.baseurl}}/exhibition" title="Back to exhibition list">Exhibition</a>&nbsp;&raquo;&nbsp;{{
+                    page.title
+                    }}</span></h2>
+        </div>
+    </div>
+    <div class="row exhibition">
+
+        <div class="col-lg-4 col-sm-12">
+            <div class="row m-4">
+                <p>Print (<a href="{{ fullsizeImage }}" target="_blank" title="Full size">full size</a>):</p>
+            </div>
+            <div class="row m-4">            
+                <p>
+                    <a href="{{ fullsizeImage }}" target="_blank" title="Full size">
+                        <img src="{{ mainImage }}" alt="{{ copyright }}"/>              
+                    </a>
+                </p>  
+            </div>
+            {% if page.IsAnnotated == true %}        
+            <div class="row m-4">
+                <p>&nbsp;</p>
+                <p>Annotated (website only):</p>
+            </div>
+            <div class="row m-4">
+                <img src="{{ annotated }}" alt="Annotated"/>                
+            </div>
+            {% endif %}
+            <div class="row m-4">
+                <p>Objects visible in this photograph: 
+                    {% for tag in page.Tags %}
+                    {{tag}},
+                    {% endfor %} and some space dust.
+                </p>
+            </div>
+        </div>
+    
+        <div class="col-lg-8 col-sm-12">
+            <div class="row w-100">
+                <div class="col-sm-3 col-xs-12 piece-info">
+                    <div>{{edition}}</div>
+                    <div class="print">{{page.Print}}</div> 
+                    <div>{{page.Width}}" x {{page.Height}}"</div>
+                </div>
+                <div class="col-sm-6 col-xs-12 text-center">
+                    Every piece is personally signed and numbered and comes with a Bill of Sale 
+                    and a signed Certificate of Authenticity. Currently, only the pieces on display
+                    are for sale. Pickup will be arranged at the close of the exhibition. <strong>We do not ship.</strong>
+                </div>
+                <div class="col-sm-3 col-xs-12 text-right">
+                    <span class="price">${{ page.Price | value_format_name: decimal_2 }}</span>
+                    {% include addtocart.html PayPal=page.PayPal %}               
+                    {% include viewcart.html %}                 
+                </div>       
+            </div>
+            <div class="row">
+                <div class="col-12 text-justify">
+                    <p>This piece is on display at:</p>
+                    <ul>
+                    {% for location in page.Venues %}        
+                    {% assign currentVenue = site.venues[location] %}
+                    <li>
+                        <strong>{{ currentVenue.name }}</strong> &mdash; from {{ currentVenue.start}} to {{ currentVenue.end}}:
+                        <a href="https://www.google.com/maps/search/{{ currentVenue.address }}" target="_blank">{{ currentVenue.address }}</a>
+                    </li>
+                    {% endfor %}
+                    <p class="description">{{ page.description }}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-5 col-sm-12">
+                    {% if page.RA %}
+                    <p>Target information:</p>
+                    <div class="row exhibition-target m-2">
+                        <div class="col-6 text-right"><strong>Right ascension:</strong></div>
+                        <div class="col-6">{{ page.RA }}</div>
+                        <div class="col-6 text-right"><strong>Declination:</strong></div>
+                        <div class="col-6">{{ page.DEC }}</div>
+                        <div class="col-6 text-right"><strong>Size:</strong></div>
+                        <div class="col-6">{{ page.Size }}</div>
+                        <div class="col-6 text-right"><strong>Radius:</strong></div>
+                        <div class="col-6">{{ page.Radius }}</div>
+                        <div class="col-6 text-right"><strong>Pixels:</strong></div>
+                        <div class="col-6">{{ page.Pixels }}</div>
+                        {% if page.WWT %}
+                        <div class="col-12 text-center">
+                            <span class="fa fa-eye"></span>&nbsp;
+                            <a href="{{page.WWT}}" target="_blank">View on World Wide Telescope</a>
+                        </div>
+                        {% endif %}
+                    </div> 
+                    {% endif %}
+                </div>
+                <div class="col-lg-6 col-sm-12 m-2">
+                    {% if page.Exposures %}
+                    <p>Capture information:</p>
+                    <div class="row exhibition-capture">
+                        <div class="col-6 text-right"><strong>Telescope or lens:</strong></div>
+                        <div class="col-6">{{ page.Telescope }}</div>
+                        <div class="col-6 text-right"><strong>Camera or sensor:</strong></div>
+                        <div class="col-6">{{ page.Camera }}</div>
+                        <div class="col-6 text-right"><strong>Capture date:</strong></div>
+                        <div class="col-6">{{ page.Date }}</div>
+                        <div class="col-6 text-right"><strong>Exposures:</strong></div>
+                        <div class="col-6">{{ page.Exposures }}</div>
+                        <div class="col-6 text-right"><strong>Time per exposure:</strong></div>
+                        <div class="col-6">{{ page.ExposureTime }}s</div>
+                        {% assign totalTime = page.ExposureTime | times: page.Exposures | to_integer %}
+                        {% assign unit = "s" %}
+                        {% if totalTime > 60 %}
+                            {% assign unit = "m" %}
+                            {% assign totalTime = totalTime | divided_by: 60 %}
+                            {% if totalTime > 60 %}
+                                {% assign unit = "h" %}
+                                {% assign totalTime = totalTime | divided_by: 60 %}
+                            {% endif %}                                
+                        {% endif %}
+                        {% if totalTime > 0 %}
+                        <div class="col-6 text-right"><strong>Total exposure:</strong></div>
+                        <div class="col-6">{{ totalTime }}{{ unit }}</div>                        
+                        {% endif %}
+                        <div class="col-6 text-right"><strong>Focal length:</strong></div>
+                        <div class="col-6">{{ page.FocalLength }}mm</div>
+                        <div class="col-6 text-right"><strong>Aperture:</strong></div>
+                        <div class="col-6">{{ page.Aperture }}mm</div>
+                        {% assign fstop = page.FocalLength | divided_by: page.Aperture %}
+                        {% assign fdecimal = page.FocalLength | modulo: page.Aperture | multiply_by: 10 | divide_by: page.Aperture %}
+                        <div class="col-6 text-right"><strong>F-stop:</strong></div>
+                        <div class="col-6">{{ fstop }}.{{ fdecimal }}</div>
+                    </div> 
+                    {% endif %}
+                </div>
+            </div>            
+        </div>
+    </div>
+    {% if page.comments == true %}
+    {% include disqus.html url=page.url id=page.id %}
+    {% endif %}
+    <div class="row">
+        <div class="col-4">
+            {% if page.previous.url %}
+            <a class="prev" href="{{ prev }}">
+                &laquo; {{page.previous.title}} 
+            </a>
+            {% endif %}
+        </div>
+        <div class="col-4 text-center">
+            <a href="{{site.baseurl}}/exhibition">
+                Back to Exhibition
+            </a>            
+        </div>
+        <div class="col-4 text-right">
+            {% if page.next.url %}
+            <a href="{{ next }}">
+                {{page.next.title}} &raquo;
+            </a>
+            {% endif %}
+        </div>
+    </div>
+
+</section>
+{% else %}
+<div class="alert alert-danger">
+    Oops! That's not a valid page. <a href="/exhibition/">Back to the exhibition</a>.
+</div>
+{% endif %}

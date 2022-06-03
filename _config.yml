@@ -9,8 +9,15 @@ url: https://deepskyworkflows.com
 # google_analytics: ''
 disqus: 'deep-sky-workflows'
 # mailchimp-list: ''
-include: ["_pages", "_gallery", "_messier"]
+include: ["_pages", "_gallery", "_exhibiton", "_messier"]
 permalink: /:title/
+
+venues:
+  duvall:
+    name: "Physiocare Duvall"
+    start: "May 2022"
+    end: "August 2022"
+    address: "15315 1st Ave NE, Duvall, WA 98019"
 
 # Authors
 authors:
@@ -93,6 +100,9 @@ collections:
   gallery:
     output: true
     permalink: /gallery/:title/
+  exhibition:
+    output: true
+    permalink: /exhibition/:name
   messier:
     output: true
     permalink: /messier/:name/
@@ -104,6 +114,13 @@ defaults:
     values:
       layout: "gallery"
       author: "deepskyworkflows"
+  - scope:
+      path: ""
+      type: "exhibition"
+    values:
+      layout: "exhibition"
+      author: "deepskyworkflows"
+      comments: true
   - scope:
       path: ""
       type: "messier"
