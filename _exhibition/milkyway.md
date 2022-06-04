@@ -1,6 +1,6 @@
 ---
 Index: "013"
-title: "The Milky Way at Paint Mines"
+title: "The Milky Way at Paint Mine"
 Thumbnail: milkyway.jpg
 Location: Paint Mine, CO
 active: true
@@ -13,7 +13,7 @@ Height: 10
 Width: 10
 Edition: 1
 Price: 120
-PayPal: 
+PayPal: 4MC2P346MBBV2
 WWT: 
 Venues: ["duvall"]
 Tags: ["Milky Way"]
