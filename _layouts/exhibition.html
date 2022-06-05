@@ -108,9 +108,14 @@ layout: default
             </div>
             <div class="row">
                 <div class="col-lg-5 col-sm-12">
-                    {% if page.RA %}
+                    {% if page.RA or page.Constellation %}
                     <p>Target information:</p>
                     <div class="row exhibition-target m-2">
+                        {% if page.Constellation %}
+                        <div class="col-6 text-right"><strong>Constellation:</strong></div>
+                        <div class="col-6">{{ page.Constellation }}</div>
+                        {% endif %}
+                        {% if page.RA %}
                         <div class="col-6 text-right"><strong>Right ascension:</strong></div>
                         <div class="col-6">{{ page.RA }}</div>
                         <div class="col-6 text-right"><strong>Declination:</strong></div>
@@ -126,6 +131,7 @@ layout: default
                             <span class="fa fa-eye"></span>&nbsp;
                             <a href="{{page.WWT}}" target="_blank">View on World Wide Telescope</a>
                         </div>
+                        {% endif %}
                         {% endif %}
                     </div> 
                     {% endif %}
