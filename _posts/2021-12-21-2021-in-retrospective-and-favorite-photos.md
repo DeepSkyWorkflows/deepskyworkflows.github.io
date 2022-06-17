@@ -7,7 +7,7 @@ tags: [ m1, m13, ngc869, ngc884, orion, cassiopeia, m31, m33, moon, ic434, ngc20
 toc: true
 image: assets/images/2021-12-21/2021retrospective.jpg
 description: "A look back at the first year of my astrophotography with my favorite photos from 2021."
-featured: true
+featured: false
 hide: true
 comments: true
 ---

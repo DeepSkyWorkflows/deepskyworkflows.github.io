@@ -7,7 +7,7 @@ tags: [moon, lunar]
 toc: true
 image: assets/images/2022-02-20/tothemoon.jpg
 description: "I walk you through step-by-step several approaches to imaging the moon. Most of them are free!"
-featured: true
+featured: false
 hide: true
 comments: true
 ---
