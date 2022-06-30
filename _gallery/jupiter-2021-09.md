@@ -8,6 +8,7 @@ telescope: Stellina
 length: "400mm"
 aperture: "80mm"
 folder: jupiter-2021-09
+group: jupiter
 exposure: 10s
 lights: 103
 sessions: 1

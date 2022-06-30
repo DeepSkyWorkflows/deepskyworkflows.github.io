@@ -8,6 +8,7 @@ telescope: Celestron EdgeHD 9.25
 length: "1650mm"
 aperture: "235mm"
 folder: ic434-filter
+group: "ic434"
 exposure: 90            
 lights: 35
 sessions: 1

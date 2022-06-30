@@ -11,6 +11,7 @@ folder: ngc6992
 exposure: 10
 lights: 350
 sessions: 1
+group: "Cygnus loop"
 firstCapture: 2021-08-13 
 lastCapture:
 ra: "20h 55m 44.4s"

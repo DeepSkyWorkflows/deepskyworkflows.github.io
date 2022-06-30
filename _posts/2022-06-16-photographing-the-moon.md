@@ -14,7 +14,7 @@ comments: true
 
 I named this website after the fact that most images in astrophotography are the result of a _workflow_ to process multiple source "frames" into the final result. As a beginner, I would often get frustrated when videos showed part of the process but glossed over the important steps. This video covers the whole process from assembling my gear to producing the final photograph. This is "[Photographing the Moon](https://www.youtube.com/watch?v=HYzKQcjeeyU)".
 
-{% include youtube.html code="HYzKQcjeeyU" title="Photographing the Moon" %}
+{% include youtube.html code="HYzKQcjeeyU" description="Photographing the Moon" %}
 
 ## Gear list
 

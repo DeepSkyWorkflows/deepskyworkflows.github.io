@@ -8,6 +8,7 @@ telescope: Sony ILCE-6300
 length: "55mm"
 aperture: "12mm"
 folder: cygnus-starfield
+group: "Cygnus starfield"
 exposure: 3
 lights: 160
 sessions: 1

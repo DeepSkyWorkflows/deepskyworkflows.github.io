@@ -8,6 +8,7 @@ telescope: Celestron EdgeHD 9.25
 length: "5000mm"
 aperture: "235mm"
 folder: jupiter-celestron
+group: jupiter
 exposure: 0.02s
 lights: 3000
 sessions: 1

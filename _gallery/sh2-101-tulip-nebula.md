@@ -8,6 +8,7 @@ telescope: Stellina
 length: "400mm"
 aperture: "80mm"
 folder: sh2-101
+group: "SH2-101"
 exposure: 10
 lights: 847 
 sessions: 3

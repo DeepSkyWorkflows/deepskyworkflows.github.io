@@ -223,12 +223,34 @@ layout: default
                         {% endfor %}
                     </table>
                 </div>                
-                <div class="card-footer bg-dark">
-                    <b>Objects in frame:</b>
+                
+                    {% assign group = "" | split: "," %}
+                    {% for groupItem in site.gallery %}
+                        {% if groupItem.group and groupItem.group == page.group and groupItem.folder != page.folder %}
+                            {% assign group = group | push: groupItem %}                    
+                        {% endif %}                            
+                    {% endfor %}
+                    {% assign groupCount = group | size %}
+                    {% if groupCount > 0 %}
+                    <div class="card-footer bg-dark">
+                        <p><strong>Related images:</strong></p>
+                        {% for galleryItem in group %}        
+                            {% assign mainUrl = site.baseurl | append: galleryItem.url %}
+                            {% assign thumbPath = site.baseurl | append: "/assets/images/gallery/" | append: galleryItem.folder | append: "/thumb.jpg" %}
+                            <div class="card gallery-card-sm">
+                                <a href="{{mainUrl}}" title="{{galleryItem.description}}">
+                                    <img class="card-img-top gallery-img-sm" src="{{thumbPath}}" alt="{{galleryItem.description}}">                                
+                                </a>                                                
+                            </div>
+                        {% endfor %}
+                    </div> 
+                    {% endif %}
+                    <div class="card-footer bg-dark">
+                    <p><b>Objects in frame:</b></p>
                     {% for tag in page.tags %}
                     {% assign gtag = tag | capitalize | strip | replace: ' ', '-' %}
-                    <a id="data-tag-{{tag}}" class="btn badge badge-primary" href="{{site.baseurl}}/tags#{{gtag}}">{{tag}}</a>
-                    {% endfor %}
+                    <a id="data-tag-{{tag}}" class="btn badge badge-primary">{{tag}}</a>
+                    {% endfor %}                    
                 </div>
             </div>
         </div>

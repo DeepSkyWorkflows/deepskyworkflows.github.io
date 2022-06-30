@@ -8,6 +8,7 @@ telescope: Stellina
 length: "400mm"
 aperture: "80mm"
 folder: saturn
+group: "Saturn"
 exposure: 10s
 lights: 1
 sessions: 1

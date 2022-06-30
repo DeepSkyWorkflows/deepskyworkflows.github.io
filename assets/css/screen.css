@@ -918,6 +918,13 @@ iframe {
     margin: 3px;
 }
 
+.gallery-card-sm {
+    width: 140px;
+    height: 100%;
+    margin: 3px;
+    float: left;
+}
+
 img.messier {
     max-width: 256px;
 }
@@ -966,6 +973,23 @@ div.messier-img {
 
 .gallery-img {
     max-height: 200px;
+    object-fit: cover;
+}
+
+.gallery-card-sm:hover {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    background: #00ab6b;
+}
+
+.gallery-card-sm img {
+    -webkit-transition: 0.6s ease;
+    transition: 0.6s ease;
+    padding: 2px;
+}
+
+.gallery-img-sm {
+    max-height: 150px;
     object-fit: cover;
 }
 
