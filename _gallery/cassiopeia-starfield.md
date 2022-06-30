@@ -8,6 +8,7 @@ telescope: Sony ILCE-6300
 length: "59mm"
 aperture: "13mm"
 folder: cassiopeia-starfield
+group: cassiopeia
 exposure: 60
 lights: 57
 sessions: 1

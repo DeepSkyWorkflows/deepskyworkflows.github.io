@@ -8,6 +8,7 @@ telescope: Stellina
 length: "400mm"
 aperture: "80mm"
 folder: arcturus
+group: arcturus
 exposure: 1
 lights: 6
 sessions: 1 

@@ -8,6 +8,7 @@ telescope: Celestron EdgeHD 9.25
 length: "1650mm"
 aperture: "235mm"
 folder: sombrero
+group: m104
 exposure: 60
 lights: 82
 sessions: 1

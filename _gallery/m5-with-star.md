@@ -8,6 +8,7 @@ telescope: Celestron EdgeHD 9.25
 length: "1645mm"
 aperture: "235mm"
 folder: m5-with-star
+group: m5
 exposure: 120
 lights: 30
 sessions: 1

@@ -8,6 +8,7 @@ telescope: Celestron EdgeHD 9.25
 length: "1645mm"
 aperture: "235mm"
 folder: m104-edge
+group: m104
 exposure: 120
 lights: 80
 sessions: 2

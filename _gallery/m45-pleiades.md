@@ -8,6 +8,7 @@ telescope: Stellina
 length: "400mm"
 aperture: "80mm"
 folder: m45
+group: m45
 exposure: 5
 sessions: 2
 firstCapture: 2021-09-01

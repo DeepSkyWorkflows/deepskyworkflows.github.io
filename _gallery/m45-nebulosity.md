@@ -8,6 +8,7 @@ telescope: Stellina
 length: "400mm"
 aperture: "80mm"
 folder: m45-nebulosity
+group: m45
 exposure: 10
 lights: 586
 sessions: 2

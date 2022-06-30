@@ -8,6 +8,7 @@ telescope: Svbony sv503 70ED
 length: "336mm"
 aperture: "70mm"
 folder: pleiades
+group: m45
 exposure: 180
 lights: 27
 sessions: 1

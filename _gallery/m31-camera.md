@@ -8,6 +8,7 @@ telescope: Sony ILCE-6300
 length: "55mm"
 aperture: "12.22mm"
 folder: m31-camera
+group: m31
 exposure: 60
 lights: 30 
 sessions: 1

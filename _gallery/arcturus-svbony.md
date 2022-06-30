@@ -8,6 +8,7 @@ telescope: Svbony sv503 70ED
 length: "336mm"
 aperture: "70mm"
 folder: arcturus-svbony
+group: arcturus
 exposure: 1
 lights: 30
 sessions: 1

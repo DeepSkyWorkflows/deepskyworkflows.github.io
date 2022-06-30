@@ -8,6 +8,7 @@ telescope: Takahashi TOA-150
 length: "1095mm"
 aperture: "150mm"
 folder: m31-spain
+group: m31
 exposure: 120
 lights: 24
 sessions: 1

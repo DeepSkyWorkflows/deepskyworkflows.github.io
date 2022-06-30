@@ -8,6 +8,7 @@ telescope: Svbony sv503 70ED
 length: "336mm"
 aperture: "70mm"
 folder: andromeda
+group: m31
 exposure: 180
 lights: 8
 sessions: 1 

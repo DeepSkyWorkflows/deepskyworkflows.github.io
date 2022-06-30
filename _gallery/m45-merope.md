@@ -9,6 +9,7 @@ length: "193mm"
 aperture: "31mm"
 folder: m45-merope
 exposure: 120
+group: m45
 lights: 30
 sessions: 1
 firstCapture: 2022-01-09 
