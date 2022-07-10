@@ -8,6 +8,7 @@ telescope: Svbony sv503 70ED
 length: "840mm"
 aperture: "70mm"
 folder: copernicus
+group: "craters"
 exposure: 1
 lights: 1
 sessions: 1

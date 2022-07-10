@@ -8,6 +8,7 @@ telescope: Celestron EdgeHD 9.25
 length: "1650mm"
 aperture: "230mm"
 folder: green-moon
+group: "crescent"
 exposure: 1
 lights: 50
 sessions: 1

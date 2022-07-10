@@ -8,6 +8,7 @@ telescope: Celestron EdgeHD 9.25
 length: "1650mm"
 aperture: "235mm"
 folder: crater
+group: "craters"
 exposure: 1
 lights: 50
 sessions: 1

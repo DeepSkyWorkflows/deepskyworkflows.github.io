@@ -7,6 +7,7 @@ image: assets/images/gallery/edge-of-the-moon/thumb.jpg
 telescope: Celestron EdgeHD 9.25
 length: "1650mm"
 aperture: "235mm"
+group: "crescent"
 folder: edge-of-the-moon
 exposure: 10
 lights: 5

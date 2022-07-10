@@ -2,6 +2,7 @@
 title: "Mars"
 type: Planet
 tags: [mars]
+group: "mars"
 description: "Yes, that is the red planet."
 image: assets/images/gallery/mars/thumb.jpg
 telescope: Stellina

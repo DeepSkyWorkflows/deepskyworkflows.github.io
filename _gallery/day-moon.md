@@ -7,6 +7,7 @@ image: assets/images/gallery/day-moon/thumb.jpg
 telescope: Svbony sv503 70ED
 length: "420mm"
 aperture: "70mm"
+group: "crescent"
 folder: day-moon
 exposure: 10
 lights: 100

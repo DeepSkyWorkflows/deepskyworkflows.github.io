@@ -6,6 +6,7 @@ tags: ["The moon", "moon"]
 description: A crescent moon in February 2022.
 telescope: Stellina
 length: "400mm"
+group: "crescent"
 aperture: "80mm"
 folder: quarter-moon-feb-2022
 exposure: 1

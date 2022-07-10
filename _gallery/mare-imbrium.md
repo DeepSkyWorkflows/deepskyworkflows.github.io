@@ -8,6 +8,7 @@ telescope: Svbony sv503 70ED
 length: "840mm"
 aperture: "70mm"
 folder: mare-imbrium
+group: "craters"
 exposure: 10
 lights: 4
 sessions: 1

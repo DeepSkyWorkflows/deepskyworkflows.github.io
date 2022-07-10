@@ -7,6 +7,7 @@ description: Dust from fires turned the moon red.
 telescope: Samsung Galaxy S21 Ultra 
 length: "150mm"
 aperture: "31mm"
+group: "crescent"
 folder: blood-moon-2021-08
 exposure: 0.03  
 lights: 5

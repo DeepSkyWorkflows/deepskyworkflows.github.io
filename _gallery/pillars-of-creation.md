@@ -8,6 +8,7 @@ telescope: Celestron EdgeHD 9.25
 length: "1635mm"
 aperture: "235mm"
 folder: pillars-of-creation
+group: "m16"
 exposure: 60
 lights: 30
 sessions: 1

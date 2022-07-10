@@ -7,6 +7,7 @@ image: assets/images/gallery/m101/thumb.jpg
 telescope: Stellina
 length: "400mm"
 aperture: "80mm"
+group: "m101"
 folder: m101
 exposure: 10
 lights: 719
