@@ -8,6 +8,7 @@ telescope: Sony ILCE-6300
 length: "16mm"
 aperture: "4.57mm"
 folder: milkyway-venus
+group: milkyway
 exposure: 4 
 lights: 27
 sessions: 1

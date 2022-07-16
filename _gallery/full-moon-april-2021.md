@@ -7,6 +7,7 @@ description: A full moon in April.
 telescope: Stellina
 length: "400mm"
 aperture: "80mm"
+group: "fullmoon"
 folder: moon-full-2021-04
 exposure: 1
 lights: 28

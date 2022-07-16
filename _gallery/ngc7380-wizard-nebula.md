@@ -8,6 +8,7 @@ telescope: Stellina
 length: "400mm"
 aperture: "80mm"
 folder: ngc7380
+group: "ngc7380"
 exposure: 10
 lights: 619 
 sessions: 1

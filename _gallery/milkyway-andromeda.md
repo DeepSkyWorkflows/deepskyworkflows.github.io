@@ -8,6 +8,7 @@ telescope: Sony ILCE-6300
 length: "16mm"
 aperture: "8mm"
 folder: milkyway-andromeda
+group: milkyway
 exposure: 120
 lights: 5
 sessions: 1 

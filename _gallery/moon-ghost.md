@@ -8,6 +8,7 @@ telescope: Svbony sv503 70ED
 length: "420mm"
 aperture: "70mm"
 folder: moon-ghost
+group: "fullmoon"
 exposure: 0.002
 lights: 200
 sessions: 1

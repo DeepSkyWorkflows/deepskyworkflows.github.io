@@ -7,6 +7,7 @@ image: assets/images/gallery/colormoonfeb22/thumb.jpg
 telescope: Svbony sv503 70ED
 length: 336mm
 aperture: 70mm
+group: "fullmoon"
 folder: colormoonfeb22
 exposure: 0.002s
 lights: 1000

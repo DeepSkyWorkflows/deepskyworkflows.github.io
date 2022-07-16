@@ -8,6 +8,7 @@ telescope: Sony ILCE-6300
 length: "16mm"
 aperture: "4.57mm"
 folder: milkyway-sky
+group: milkyway
 exposure: 4
 lights: 20
 sessions: 1

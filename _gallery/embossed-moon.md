@@ -8,6 +8,7 @@ telescope: Svbony sv503 70ED
 length: "336mm"
 aperture: "70mm"
 folder: embossed-moon
+group: "fullmoon"
 exposure: 0.2
 lights: 30
 sessions: 1
