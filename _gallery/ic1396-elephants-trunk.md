@@ -8,6 +8,7 @@ telescope: Stellina
 length: "400mm"
 aperture: "80mm"
 folder: ic1396
+group: "ic1396"
 exposure: 10
 lights: 519
 sessions: 1
