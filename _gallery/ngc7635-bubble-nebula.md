@@ -5,6 +5,7 @@ tags: ["NGC7635","Bubble Nebula"]
 description: The bubble is a cloud of molecular gas blown outward by an energetic young star and supercharged so it glows.
 image: assets/images/gallery/ngc7635/thumb.jpg
 telescope: Stellina
+group: "ngc7635"
 length: "400mm"
 aperture: "80mm"
 folder: ngc7635
