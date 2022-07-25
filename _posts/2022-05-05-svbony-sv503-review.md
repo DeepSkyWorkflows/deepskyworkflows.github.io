@@ -7,7 +7,7 @@ tags: []
 toc: true
 image: assets/images/2022-05-05/blogbanner.png
 description: "A complete review of the Svbony SV503 70ED refractor telescope, from how I picked it, how it's price, how it's put together to the final goods: pictures I've taken  with it."
-featured: true
+featured: false
 hide: true
 comments: true
 ---
