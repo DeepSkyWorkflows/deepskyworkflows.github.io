@@ -7,6 +7,7 @@ image: assets/images/gallery/m51/thumb.jpg
 telescope: Stellina
 length: "400mm"
 aperture: "80mm"
+group: "m51"
 folder: m51
 exposure: 10
 lights: 619

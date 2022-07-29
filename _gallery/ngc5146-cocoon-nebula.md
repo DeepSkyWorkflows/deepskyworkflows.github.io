@@ -12,6 +12,7 @@ exposure: 10
 lights: 349
 sessions: 1 
 firstCapture:  2021-07-30
+group: "cocoon"
 lastCapture:
 ra: "21h 53m 25.9s"
 dec: "+47° 17' 59.601"
