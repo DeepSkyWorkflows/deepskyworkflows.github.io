@@ -6,7 +6,7 @@
      </p>
    </description>
    <platform os="all" arch="noarch" version="1.6.9:2.0.0">
-      <package fileName="v1.0.0.tar.gz" sha1="f4b1f180a6ac37a14803913105735ce98bf79344" type="script" releaseDate="20220716">
+      <package fileName="v1.0.0.zip" sha1="e6e4b802a9623d7c4f03449ad2ecb2b30d089c35" type="script" releaseDate="20220730">
          <title>
             Deep Sky Workflow Scripts
          </title>
@@ -23,4 +23,4 @@
       </package>
    </platform>
 </xri>
-<Signature developerId="Deep Sky Workflows" timestamp="2022-07-30T21:01:38.733Z" encoding="Base64">gUHkjTLE37+6vpypswl5754Ctj9lq8nVwmMLJu4Vwrs1AE/QTXDE2i4Yj6AeFJbZin626uP/k04Vi5UQBwyLAQ==</Signature>
+<Signature developerId="Deep Sky Workflows" timestamp="2022-07-31T06:49:20.458Z" encoding="Base64">GFF5PTaa7liQ5pLQyWEngQNU19VeVj53JcTXEfkJ03oOmY03PybvCZz2jqPWLbQQSn8rUHi9XiDxYiVRureRDw==</Signature>
