@@ -8,8 +8,10 @@ telescope: Celestron EdgeHD 9.25
 length: "1645mm"
 aperture: "235mm"
 folder: m81-ha
+group: m81
 exposure: 90
 lights: 120
+signature: true
 sessions: 1
 firstCapture: 2022-04-19 
 lastCapture:

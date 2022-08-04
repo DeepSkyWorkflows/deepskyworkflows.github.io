@@ -7,6 +7,7 @@ image: assets/images/gallery/saturn-sharp/thumb.jpg
 telescope: Celestron EdgeHD 9.25
 length: "5875mm"
 aperture: "235mm"
+signature: true
 folder: saturn-sharp
 group: "Saturn"
 exposure: 0.002s

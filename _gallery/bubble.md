@@ -5,6 +5,7 @@ tags: ["Bubble Nebula","NGC7635"]
 description: A detailed look at this amazing bubble of windswept particles being irradiated by a giant star 45 times as massive as our own sun.
 image: /assets/images/gallery/bubble/thumb.jpg
 group: "ngc7635"
+signature: true
 telescope: Celestron EdgeHD 9.25
 length: "1645mm"
 aperture: "235mm"

@@ -7,6 +7,7 @@ image: /assets/images/gallery/elephant-trunk/thumb.jpg
 telescope: Celestron EdgeHD 9.25
 length: "1645mm"
 aperture: "235mm"
+signature: true
 folder: elephant-trunk
 group: "ic1396"
 exposure: 120

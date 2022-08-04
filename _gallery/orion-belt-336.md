@@ -6,6 +6,7 @@ description: Beautiful and brilliant colors abound in the swirls of intergalacti
 image: assets/images/gallery/orion-belt-336/thumb.jpg
 telescope: Svbony sv503 70ED
 length: "336mm"
+signature: true
 aperture: "70mm"
 folder: orion-belt-336
 exposure: 180

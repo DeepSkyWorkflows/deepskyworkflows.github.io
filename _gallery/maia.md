@@ -7,6 +7,7 @@ image: assets/images/gallery/maia/thumb.jpg
 telescope: Svbony sv503 70ED
 length: "336mm"
 aperture: "70mm"
+signature: true
 folder: maia
 exposure: 180
 lights: 27

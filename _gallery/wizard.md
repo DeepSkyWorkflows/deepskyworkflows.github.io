@@ -5,6 +5,7 @@ tags: ["NGC7380"]
 description: Clear skies provided the opportunity to finally image a target that's been blocked by trees most of this year. I was able to image all night, but despite the warmer weather I lost some time due to dew forming on my lens (I was lazy and didn't set up the dew heater). This is the Wizard Nebula and you can probably tell why. Imaged mainly in Hydrogen alpha with a few broadband captures for stars.
 image: /assets/images/gallery/wizard/thumb.jpg
 telescope: Stellina
+signature: true
 length: "1645mm"
 aperture: "235mm"
 folder: wizard

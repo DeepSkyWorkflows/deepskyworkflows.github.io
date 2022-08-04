@@ -18,10 +18,15 @@ layout: default
 
 <section>
     <div class="row">
-        <div class="section-title">
-            <h2><span><a href="{{site.baseurl}}/gallery" title="Back to gallery">Gallery</a>&nbsp;&raquo;&nbsp;{{
-                    page.title
-                    }}</span></h2>
+        <div class="section-title">            
+            <h2>
+                <span>               
+                <a href="{{site.baseurl}}/gallery" title="Back to gallery">Gallery</a>&nbsp;&raquo;&nbsp;
+                {% if page.signature == true %}
+                ⭐
+                {% endif %} 
+                {{page.title}}
+            </span></h2>
         </div>
     </div>
     <div class="row">
@@ -107,6 +112,9 @@ layout: default
         <div class="col-md-3 pr-0">
             <div class="card">
                 <div class="card-header bg-dark">{{page.description}}</div>
+                {% if page.signature == true %}
+                <div class="card-header bg-dark">This photograph is part of our signature series.</div>
+                {% endif %}
                 <div class="card-body bg-dark">
                     {% assign traits =
                     "telescope|length|aperture|sessions|firstCapture|lights|exposure|ra|dec|size|radius|scale" |

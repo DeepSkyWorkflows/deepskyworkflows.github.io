@@ -10,6 +10,7 @@ aperture: "70mm"
 folder: ngc7000-full
 exposure: 300
 lights: 25
+signature: true
 sessions: 1
 group: ngc7000
 firstCapture: 2022-08-02 

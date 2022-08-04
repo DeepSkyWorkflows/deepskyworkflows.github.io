@@ -7,6 +7,7 @@ image: /assets/images/gallery/m42-detailed/thumb.jpg
 telescope: Stellina
 length: "400mm"
 aperture: "80mm"
+signature: true
 folder: m42-detailed
 exposure: 10
 lights: 842

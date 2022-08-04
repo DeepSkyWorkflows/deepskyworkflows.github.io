@@ -8,6 +8,7 @@ telescope: Celestron EdgeHD 9.25
 length: "1465mm"
 aperture: "235mm"
 folder: omega
+signature: true
 group: "m17"
 exposure: 120
 lights: 28

@@ -8,6 +8,7 @@ telescope: Celestron EdgeHD 9.25
 length: "1650mm"
 aperture: "235mm"
 folder: running-man
+signature: true
 exposure: 75
 lights: 35
 sessions: 1

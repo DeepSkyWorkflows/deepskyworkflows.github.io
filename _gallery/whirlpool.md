@@ -12,6 +12,7 @@ group: "m51"
 exposure: 150
 lights: 52
 sessions: 1
+signature: true
 firstCapture: 2022-07-28 
 lastCapture:
 ra: "13h 29m 56.5s"

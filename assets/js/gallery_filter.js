@@ -96,6 +96,12 @@ sitemap: false
                     
                     $(this).removeClass('d-none');
                     
+                    if (signatureContext.selected === true &&
+                        $(this).attr('data-signature') !== 'true') {
+                            $(this).addClass('d-none');
+                            return;
+                        }
+
                     if (searchContext.query && searchContext.query.length) {                    
             
                         let target = $(this).text().toLowerCase().trim();
@@ -104,7 +110,7 @@ sitemap: false
                             $(this).addClass('d-none');
                             return;
                         }                        
-                    }
+                    }                    
 
                     const scope = telescopeContext.selected;
 
@@ -112,12 +118,67 @@ sitemap: false
             
                         if ($(this).attr("data-telescope") !== scope) {
                             $(this).addClass("d-none");
+                            return;
                         }
             
                     }
                 });
+
+                $(".groupheader").each(function () {
+                    
+                    const group = $(this).attr("data-group");
+                    
+                    $(`div[data-group='${group}']`).removeClass("d-none");
+
+                    let visible = false;
+                    
+                    $(`.groupdetail[data-group='${group}']`).each(function () {
+                       $(this).find("div.card").not(".d-none").each(function () {
+                            visible = true;
+                       });
+                    });
+                    
+                    if (!visible) {
+                        $(`div[data-group='${group}']`).addClass("d-none");
+                    }                         
+                });
             }
         };
+
+        const signatureContext = {
+            
+            selected: false,
+                        
+            init: function () {
+                
+                const sig = queryManager.get("signature");
+                            
+                if (sig === "true") {
+                    $("#signature").prop("checked", true)
+                    signatureContext.filterSig(true);
+                }
+            },
+
+            filterSig: function (sig) {
+                
+                signatureContext.selected = sig;
+                
+                queryManager.set("signature", sig);
+                queryManager.update();
+                              
+                filterManager.refreshFilters();
+            },
+
+            resetSig: function () {
+                
+                signatureContext.selected = false;
+                
+                queryManager.reset("signature");
+                queryManager.update();                                
+                filterManager.refreshFilters();
+            }
+        };
+
 
         const telescopeContext = {
             
@@ -241,6 +302,10 @@ sitemap: false
                 searchContext.timer = setTimeout(searchContext.doSearch, debounceMs);
             });
 
+            $("#signature").on("click", function() {
+                signatureContext.filterSig($(this).prop("checked"));
+            });
+
             $("#clearBtn").on("click", function () {
                 searchContext.doClear();
             });
@@ -254,6 +319,7 @@ sitemap: false
             }
 
             telescopeContext.init();
+            signatureContext.init();
             $("#gallerySearch").focus();
         });
     })();

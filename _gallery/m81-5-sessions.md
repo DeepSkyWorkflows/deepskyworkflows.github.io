@@ -7,6 +7,7 @@ image: /assets/images/gallery/m81-5-sessions/thumb.jpg
 telescope: Stellina
 length: "400mm"
 aperture: "80mm"
+group: m81
 folder: m81-5-sessions
 exposure: 10
 lights: 1032

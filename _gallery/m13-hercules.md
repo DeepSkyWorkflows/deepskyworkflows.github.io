@@ -5,6 +5,7 @@ tags: ["NGC6205","M13","IC4617","Hercules Globular Cluster"]
 description: This cluster, just barely visible to the naked eye, contains several hundred thousand stars in its diameter of 145 light years.
 image: assets/images/gallery/m13/thumb.jpg
 telescope: Stellina
+signature: true
 length: "400mm"
 aperture: "80mm"
 folder: m13

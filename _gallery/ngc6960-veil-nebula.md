@@ -10,6 +10,7 @@ aperture: "80mm"
 folder: ngc6960
 exposure: 10
 lights: 864
+signature: true
 sessions: 6
 group: "Cygnus loop"
 firstCapture: 2021-06-18 

@@ -10,6 +10,7 @@ aperture: "70mm"
 folder: fullcygnus
 group: "Cygnus loop"
 exposure: 300
+signature: true
 lights: 23
 sessions: 1
 firstCapture: 2022-07-30 

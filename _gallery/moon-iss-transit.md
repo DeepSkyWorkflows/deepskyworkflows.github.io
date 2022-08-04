@@ -5,6 +5,7 @@ image: assets\images\gallery\moon-iss-transit\thumb.jpg
 tags: ["The moon", "moon", "international space station", "iss"]
 description: A timelapse of the International Space Station (ISS) passing between Earth and the Moon.
 telescope: Celestron EdgeHD 9.25
+signature: true
 length: "1645mm"
 aperture: "235mm"
 folder: moon-iss-transit

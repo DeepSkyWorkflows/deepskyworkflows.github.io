@@ -10,6 +10,7 @@ permalink: /gallery/
 {% assign telescopeArray = '' | split: ',' %}
 <div class="row mw-25">
     <div class="col-12">
+    <p><input type="checkbox" id="signature"/>⭐ Show Signature series photographs only</p>
 <p><a href="{{ site.baseurl}}/gallery/slideshow/" title="Slideshow"><i class="fa fa-film"></i> Slideshow</a>
 &nbsp;|&nbsp;
 <strong>Jump to Category:</strong>
@@ -35,7 +36,7 @@ permalink: /gallery/
     <div class="col-12">
         {% for group in types %}
             <div class="row">&nbsp;</div>
-            <div class="row">
+            <div class="row groupheader" data-group="{{group.name}}">
                 <div class="col-12">
                     <h4>
                         <a name="{{group.name}}"></a> {{group.name}} <a href="#top">🔝</a>
@@ -44,7 +45,7 @@ permalink: /gallery/
             </div>                
             {% assign subitems = group.items | sort : 'title' %}
             {% assign itemCount = 0 %}
-            <div class="row">
+            <div class="row groupdetail" data-group="{{group.name}}">
             {% assign itemIndex = 1 %}
             {% for item in subitems %}        
             {% assign mainUrl = site.baseurl | append: item.url %}
@@ -52,12 +53,15 @@ permalink: /gallery/
             {% assign grid = mainUrl | append: "#grid" %}
             {% assign itemCount = itemCount | plus: 1 %}
             {% assign thumbPath = site.baseurl | append: "/assets/images/gallery/" | append: item.folder | append: "/thumb.jpg" %}
-                <div class="card gallery-card" data-url="{{item.url}}" data-telescope="{{item.telescope}}">
+                <div class="card gallery-card" data-url="{{item.url}}" data-telescope="{{item.telescope}}" data-signature="{{item.signature}}">
                     <a href="{{mainUrl}}" title="{{item.description}}" tabindex="{{itemCount}}">
                         <img class="card-img-top gallery-img" id="image-{{itemIndex}}" src="{{thumbPath}}" alt="{{item.description}}">
                         {% assign itemIndex = itemIndex | plus: 1 %}
                     </a>
                     <div class="card-header bg-dark text-center">
+                    {% if item.signature ==  true %}
+                    <span title="Signature Series">⭐</span>
+                    {% endif %}
                         <a href="{{mainUrl}}" title="{{item.description}}">{{item.title}}</a>
                     </div>                
                 </div>

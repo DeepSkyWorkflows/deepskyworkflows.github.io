@@ -7,6 +7,7 @@ description: A full color view of Tycho.
 telescope: Celestron EdgeHD 9.25
 length: "3200mm"
 aperture: "235mm"
+signature: true
 folder: tycho
 exposure: 0.03
 lights: 200

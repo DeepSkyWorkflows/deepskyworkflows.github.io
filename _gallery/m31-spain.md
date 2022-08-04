@@ -11,6 +11,7 @@ folder: m31-spain
 group: m31
 exposure: 120
 lights: 24
+signature: true
 sessions: 1
 firstCapture: 7-5-2021 
 lastCapture:

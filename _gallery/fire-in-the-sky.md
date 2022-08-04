@@ -7,6 +7,7 @@ image: assets/images/gallery/fire-in-the-sky/thumb.jpg
 telescope: Sony ILCE-6300
 length: "16mm"
 aperture: "4.57mm"
+signature: true
 folder: fire-in-the-sky
 exposure: 8
 lights: 11

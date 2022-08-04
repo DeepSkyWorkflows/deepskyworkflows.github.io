@@ -8,6 +8,7 @@ image: /assets/images/gallery/m27-l-extreme/thumb.jpg
 telescope: Celestron EdgeHD 9.25
 length: "1635mm"
 aperture: "235mm"
+group: m27
 folder: m27-l-extreme
 exposure: 60
 lights: 58
