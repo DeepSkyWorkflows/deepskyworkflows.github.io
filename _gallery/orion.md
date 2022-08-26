@@ -6,6 +6,7 @@ description: "The Orion constellation is easily recognizable by the bright red B
 image: assets/images/gallery/orion/thumb.jpg
 telescope: Sony ILCE-6300
 length: "55mm"
+group: m42
 aperture: "12mm"
 folder: orion
 exposure: 3

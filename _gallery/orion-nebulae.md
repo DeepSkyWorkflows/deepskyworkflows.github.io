@@ -7,6 +7,7 @@ image: assets/images/gallery/orion-nebulae/thumb.jpg
 telescope: Sony ILCE-6300
 length: "193mm"
 aperture: "31mm"
+group: m42
 folder: orion-nebulae
 exposure: 60
 lights: 40

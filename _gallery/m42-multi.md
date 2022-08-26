@@ -8,6 +8,7 @@ telescope: Stellina
 length: "400mm"
 aperture: "80mm"
 folder: m42-multi
+group: m42
 exposure: 10 
 lights: 604
 sessions: 5

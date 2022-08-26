@@ -9,6 +9,7 @@ length: "3200mm"
 aperture: "235mm"
 signature: true
 folder: tycho
+group: craters
 exposure: 0.03
 lights: 200
 sessions: 1

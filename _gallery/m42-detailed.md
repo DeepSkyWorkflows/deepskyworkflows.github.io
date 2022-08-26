@@ -9,6 +9,7 @@ length: "400mm"
 aperture: "80mm"
 signature: true
 folder: m42-detailed
+group: m42
 exposure: 10
 lights: 842
 sessions: 5

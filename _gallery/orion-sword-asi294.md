@@ -8,6 +8,7 @@ telescope: Svbony sv503 70ED
 length: "336mm"
 aperture: "70mm"
 folder: orion-sword-asi294
+group: m42
 exposure: 120
 lights: 30
 sessions: 1

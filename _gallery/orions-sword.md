@@ -8,6 +8,7 @@ telescope: Sony ILCE-6300
 length: "210mm"
 aperture: "33.3mm"
 folder: orions-sword
+group: m42
 exposure: 1
 lights: 241
 sessions: 1
