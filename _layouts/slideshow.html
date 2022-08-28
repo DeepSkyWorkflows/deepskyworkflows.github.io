@@ -1,79 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <link rel="icon" href="{{ site.baseurl }}/assets/images/logo.png">
-
-    <title>{{ page.title }} | {{site.name}}</title>
+    <link type="application/atom+xml" rel="alternate" href="{{ site.baseurl }}/gallery.xml" title="Photographs of deep sky objects: nebulae, galaxies, stars and star clusteres, plus planets and Milky Way pictures." />
     {% seo %}
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
-    <link href="{{ site.baseurl }}/assets/css/screen.css" rel="stylesheet">
-
-    <link href="{{ site.baseurl }}/assets/css/main.css" rel="stylesheet">
-
-    <script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script>
-
-</head>
-
-{% capture layout %}{% if page.layout %}layout-{{ page.layout }}{% endif %}{% endcapture %}
-
-<body class="{{layout}}">
-
-    <!-- defer loading of font and font awesome -->
-    <noscript id="deferred-styles">
-        <link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i"
-            rel="stylesheet">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
-            integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-    </noscript>
-
-    <div class="container-fluid mw-100 mh-100 slideshow-wrapper">
-        {{ content }}
-    </div>
-
-   <!-- Begin Footer
-================================================== -->
-<footer class="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 col-sm-4 text-center text-lg-left">
-                Copyright © {{ site.time | date: "%Y" }} {{ site.name }}. All Rights Reserved. 
-            </div>
-            <div class="col-md-4 col-sm-4 text-center">
-                <a href="/gallery" title="Back to Gallery">↩ Back to Gallery</a>
-                <br/>Keyboard shortcuts: left arrow (previous), right arrow (next), spacebar (pause/resume)
-            </div>
-            <div class="col-md-4 col-sm-4 text-center text-lg-right">    
-                <a target="_blank" tabindex="-1" href="https://www.wowthemes.net/mediumish-free-jekyll-template/">Mediumish Jekyll Theme</a> by WowThemes.net
-            </div>
-        </div>
-    </div>
-</footer>
-<!-- End Footer
-            <!-- Scripts
-================================================== -->
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
-        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
-        crossorigin="anonymous"></script>
-
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
-        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
-        crossorigin="anonymous"></script>
-
-    <script src="{{ site.baseurl }}/assets/js/mediumish.js"></script>
-
-    {% if site.lazyimages == "enabled" %}
-    <script src="{{ site.baseurl }}/assets/js/lazyload.js"></script>
+    {% if page.image %}
+        <link ref="twitter:image:src" content="{{ site.baseurl }}/{{ page.image }}"/>
     {% endif %}
-
-    <script src="{{ site.baseurl }}/assets/js/ie10-viewport-bug-workaround.js"></script>
-
+    {% if page.description %}
+        <link ref="twitter:description" content="{{ page.description }}"/>
+    {% endif %}
+    {% feed_meta %}
+    <link href="{{ site.baseurl }}/assets/css/slideshow.css" rel="stylesheet">
+    <title>{{ page.title }} | {{site.name}}</title>
+    <script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script>
+</head>
+<body>
+    <div id="notifyDiv" class="d-none"></div>    
+    <div id="titleDiv" class="d-none">Slideshow</div>
+    <div id="descriptionDiv" class="d-none">Description</div>
+    <div id="controlPanelDiv" class="d-none">
+        <p><button id="spaceBtn">SPACE</button>&nbsp;<label for="spaceBtn">Toggle STOP/PLAY</label></p>
+        <p><button id="enterBtn">ENTER</button>&nbsp;<label for="enterBtn">Skip to next slide</label></p>
+        <p><label for="leftBtn">Slower</label>&nbsp;<button id="leftBtn">LEFT ARROW</button>&nbsp;
+            <button id="rightBtn">RIGHT ARROW</button>&nbsp;<label for="rightBtn">Faster</label></p>
+        <p><button id="titleBtn">T</button>&nbsp;<label for="titleBtn">Hide title</label>
+            <button id="descriptionBtn">D</button>&nbsp;<label for="descriptionBtn">Hide description</label></p>
+        <p><button id="backBtn">BACKSPACE</button>&nbsp;<label for="backBtn">Back to filters</label></p>
+        <p><button id="homeBtn">HOME</button>&nbsp;<label for="homeBtn">Home</label></p>
+        <p><button id="controlBtn">?/</button>&nbsp;<label for="controlBtn">Toggle this display</label></p>
+        <p class="controlStatus" id="time">Delay: <span id="delay">5000ms</span>.</p>
+        <p class="playing d-none">PLAYING</p>
+        <p class="stopped d-none">STOPPED</p>
+    </div>
+    <div id="controlSwitchDiv" class="d-none"><span title="settings" alt="settings">⚙</span></div>
+    <div id="slides">
+        {% assign itemIdx = 1 %}
+        {% assign telescopeArray = '' | split: ',' %}
+        {% assign typeArray = '' | split: ',' %}
+        {% for item in site.gallery %}
+            {% assign thumbPath = site.baseurl | append: "/assets/images/gallery/" | append: item.folder | append: "/thumb.jpg" %}
+            {% assign imagePath = site.baseurl | append: "/assets/images/gallery/" | append: item.folder | append: "/" | append: item.folder | append: ".jpg" %}
+            {% assign telescopeArray = telescopeArray | push: item.telescope %}
+            {% assign typeArray = typeArray | push: item.type %}
+            {% assign typeSlug = item.type | slugify %}
+            {% assign teleSlug = item.telescope | slugify %}
+            <img id="image-{{itemIdx}}" 
+                data-url="{{imagePath}}" 
+                data-thumb="{{thumbPath}}"
+                data-folder="{{item.folder}}"
+                data-type="{{typeSlug}}"
+                data-telescope="{{teleSlug}}" 
+                data-signature="{{item.signature}}"
+                data-title="{{item.title}}"
+                data-description="{{item.description}}"/>
+            {% assign itemIdx = itemIdx | plus: 1 %}
+        {% endfor %}
+        {% assign uniqueScopes = telescopeArray | uniq | sort %}
+        {% assign uniqueTypes = typeArray | uniq | sort %}
+    </div>
+    <div id="filter">
+        <div class="head">Slideshow Setup</div>
+        <div class="form-field">
+            <input id="signature" type="checkbox"/>
+            <span class="label">Signature series only?</span>            
+        </div>
+        <div class="divider">&nbsp;</div>
+        <div class="label">Choose categories: <a href="#" id="categoryAll">Select all</a>&nbsp;<a href="#" id="categoryNone">Select none</a></div>
+        <div id="categories" class="group">
+            {% for category in uniqueTypes %}
+            <div class="form-field">
+                {% assign catid = category | slugify %}
+                <input id="{{catid}}" type="checkbox" checked="checked"/>
+                <span class="categorySpan">&nbsp;{{category}}</span>&nbsp;
+            </div>
+            {% endfor %}
+        </div>
+        <div class="divider">&nbsp;</div>
+        <div class="label">Choose scopes: <a href="#" id="scopeAll">Select all</a>&nbsp;<a href="#" id="scopeNone">Select none</a></div>
+        <div id="telescopes" class="group">
+            {% for scope in uniqueScopes %}
+            <div class="form-field">
+                {% assign teleid = scope | slugify %}
+                <input id="{{teleid}}" type="checkbox" checked="checked"/>
+                <span class="telescopeSpan">&nbsp;{{scope}}</span>&nbsp;
+            </div>
+            {% endfor %}
+        </div>
+        <div class="divider">&nbsp;</div>
+        <button id="go">Start Slideshow</button>
+        <div class="divider">&nbsp;</div>
+    </div>
+    <div id="preview"></div>
+    <div id="slideshow"></div>
+    <script type="text/javascript" src="{{ site.baseurl }}/assets/js/slideshow.js"></script>
 </body>
-
 </html>

@@ -6,6 +6,7 @@ description: Located along the 'spine' of the Milky Way near several other popul
 image: /assets/images/gallery/m16-eagle/thumb.jpg
 telescope: Stellina
 length: "400mm"
+signature: true
 aperture: "80mm"
 folder: m16-eagle
 group: m16

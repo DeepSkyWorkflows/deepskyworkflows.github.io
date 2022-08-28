@@ -1,213 +1,452 @@
-const LEFT = 37;
-const RIGHT = 39;
-const SPACEBAR = 32;
+$(document).ready(function () {
 
-const slideShowKeyboard = function () {
+    const notifier = {
+        id: 1,
+        opacity: 100,
+        notifyDiv: document.getElementById("notifyDiv"),
+        notify: msg => {
+            notifier.id++;
+            notifier.opacity = 100;
+            notifier.notifyDiv.innerText = msg;
+            notifier.notifyDiv.classList.remove("d-none");
+            (function(chksum) {
+                setTimeout(() => notifier.fade(chksum), 1500);
+            })(notifier.id);            
+        },
+        fade: function (chksum) {
+            if (chksum !== notifier.id) {
+                return;
+            }
+            notifier.opacity -= 10;
+            if (notifier.opacity <= 0) {
+                notifier.notifyDiv.classList.add("d-none");
+                notifier.notifyDiv.style.opacity = 1.0;
+                return;
+            }
+            notifier.notifyDiv.style.opacity = notifier.opacity/100.0;
+            (function(chksum) {
+                setTimeout(() => notifier.fade(chksum), 50);
+            })(chksum);            
+        }
+    };
+
+    const controller = {
+        started: false,
+        delay: 5000,
+        showTitle: true,
+        showDescription: true,
+        showController: false,
+        playing: true,
+        msgId: 1,
+        setTimeout: (callback, delay) => {
+            controller.msgId++;
+            (function (chksum) {
+                setTimeout(() => {
+                    if (chksum !== controller.msgId) {
+                        return;
+                    }
+                    callback();
+                }, delay);
+            })(controller.msgId);
+        }
+    };
+
+    const newTransition = function (oldImg, newImg) {
+        return {
+            transitioning: true,
+            phase: 1,
+            opacity: 1,
+            offset: -100,
+            oldImg: oldImg,
+            newImg: newImg
+        };
+    };
+
+    controller.transition = newTransition(null, null);
+    controller.transition.transitioning = false;
+
+    controller.slideshow = () => {    
+
+        if (controller.transition.transitioning) {
+            
+            const transition = controller.transition;
+            
+            if (transition.phase === 1) {
+                transition.opacity -= 0.1;
+                if (transition.opacity <= 0) {
+                    transition.oldImg.style.opacity = 1.0;
+                    transition.oldImg.classList.add("d-none");
+                    transition.newImg.style.marginLeft = "-100vw";
+                    transition.newImg.classList.remove("d-none");
+                    transition.phase = 2;
+                } else {
+                    transition.oldImg.style.opacity = transition.opacity;                                        
+                }
+            } else {
+                transition.offset += 10;
+                if (transition.offset >= 0) {
+                    transition.newImg.style.marginLeft = "";
+                    transition.phase = 3;
+                    transition.transitioning = false;
+                }
+                else {
+                    transition.newImg.style.marginLeft = `${transition.offset}vw`;
+                }
+            }
+
+            if (transition.phase !== 3) {
+                controller.setTimeout(controller.slideshow, 20);
+                return;
+            }
+
+            if (controller.showTitle) {
+                $("#titleDiv").text(controller.currentImage.title);
+                $("#titleDiv").removeClass("d-none");
+            }
+
+            if (controller.showDescription) {
+                $("#descriptionDiv").text(controller.currentImage.description);
+                $("#descriptionDiv").removeClass("d-none");
+            }
+
+            if (controller.playing === true) {
+                controller.setTimeout(controller.slideshow, controller.delay);
+            }
+            return;
+        }
+
+        if  (controller.playing !== true) {
+            return;
+        }
+
+        if (controller.images.length == 0) {
+            controller.images = [...controller.queued];
+            controller.queued.length = 0;
+        }
+
+        const oldImg = controller.transition.newImg;
+        
+        const idx = Math.floor(Math.random() * controller.images.length);
+        const nextImage = controller.images[idx];
+        controller.currentImage = nextImage;
+        
+        $("#titleDiv").addClass("d-none");
+        $("#descriptionDiv").addClass("d-none");
+        
+        controller.queued.push(nextImage);
+        const newTarget = document.getElementById(`id${nextImage.id}`);
+        controller.transition = newTransition(oldImg, newTarget);
+        
+        if (oldImg === null) {
+            controller.transition.phase = 2;
+            newTarget.style.marginLeft = "-100vw";
+            newTarget.classList.remove("d-none");
+        }
+        
+        controller.setTimeout(controller.slideshow, 20);
+    };
+
+    controller.preview = () => {
+
+        $("#preview").html("");
+        $("#preview").hide();
+        controller.images = [];
+        controller.types = [];
+        controller.scopes = [];
+        const useSignature = $("#signature").prop("checked");
+        $("#slides").children("img").each((_, img) => {
+            const type = $(img).attr("data-type");
+            if (controller.types.indexOf(type) < 0) {
+                controller.types.push(type);
+            }
+            const telescope = $(img).attr("data-telescope");
+            if (controller.scopes.indexOf(telescope) < 0) {
+                controller.scopes.push(telescope);
+            }
+            const signature = $(img).attr("data-signature");
+            if (useSignature && signature !== "true") {
+                return;
+            }
+            if ($(`#${type}`).prop("checked") !== true) {
+                return;
+            }
+            if ($(`#${telescope}`).prop("checked") !== true) {
+                return;
+            }
+
+            const description = $(img).attr("data-description");
+            const title = $(img).attr("data-title");
+            const thumb = $(img).attr("data-thumb");
+            const url = $(img).attr("data-url");
+
+            controller.images.push({
+                id: controller.images.length,
+                type: type,
+                telescope: telescope,
+                signature: signature,
+                title: title,
+                description: description,
+                thumb: thumb,
+                url: url
+            });            
+        });
+        const count = document.createElement("div");
+        const strong = document.createElement("strong");
+        strong.innerText = `Filtered to ${controller.images.length} items.`;
+        count.appendChild(strong);
+        $("#preview").append($(count));
+        for (let i = 0; i < controller.images.length && i < 10; i++) {
+            const thumb = document.createElement("img");
+            thumb.alt = controller.images[i].description;
+            thumb.title = controller.images[i].description;
+            thumb.src = controller.images[i].thumb;
+            thumb.classList.add("thumbnail");
+            $("#preview").append($(thumb));
+        }
+        $("#preview").show();
+    };
+
+    controller.start = () => {
+
+        $("#filter").hide();
+        $("#preview").html("");
+        $("#slideshow").html("");
+        $("#controlSwitchDiv").removeClass("d-none");
+
+        controller.pending = controller.images.length;
+
+        controller.slideCountdown = (evt) => {
+            const img = evt.target;
+            if (img.naturalHeight > img.naturalWidth) {
+                img.classList.add("tall");
+            } else {
+                img.classList.add("wide");
+            }            
+            $("#preview").html("");            
+            const loadStat = document.createElement("p");
+            controller.pending--;
+
+            if (controller.pending < 1) {
+                controller.queued = [];
+                controller.started = true;
+                notifier.notify("PRESS ? OR / FOR CONTROLS");
+                controller.slideshow();
+                return;
+            }
+            loadStat.innerText = `Loading ${controller.pending} images...`;
+            const progress = document.createElement("div");
+            progress.classList.add("outerprogress");
+            const progressBar = document.createElement("div");
+            progressBar.classList.add("innerprogress");
+            progress.appendChild(progressBar);
+            const width = Math.floor((1 - controller.pending / controller.images.length) * 90);
+            progressBar.style.width = width + "vw";
+            $("#preview").append($(loadStat));
+            $("#preview").append($(progress));
+        }
+
+        for (let i = 0; i < controller.images.length; i++) {
+            const slide = document.createElement("img");
+            slide.id = `id${controller.images[i].id}`;
+            slide.alt = controller.images[i].description;
+            slide.title = controller.images[i].description;
+            slide.src = controller.images[i].url;
+            slide.classList.add("slide");
+            slide.classList.add("d-none");
+            $(slide).on("load", controller.slideCountdown);
+            $("#slideshow").append($(slide));
+        }
+    };
+
+    controller.preview();
+
+    controller.toggleControl = () => {
+        if (controller.playing) {
+            $(".playing").removeClass("d-none");
+            $(".stopped").addClass("d-none");        
+        } else {
+            $(".playing").addClass("d-none");
+            $(".stopped").removeClass("d-none");                    
+        }
+        if (controller.showController) {
+            notifier.notify("HIDE CONTROLS");
+            controller.showController = false;
+            $("#controlPanelDiv").addClass("d-none");                        
+        } else {
+            notifier.notify("SHOW CONTROLS");
+            controller.showController = true;
+            $("#controlPanelDiv").removeClass("d-none");
+        }
+    };
+
+    controller.titleToggle = () => {
+        if (controller.showTitle) {
+            notifier.notify("HIDE TITLE");
+            $("#titleDiv").addClass("d-none");
+            controller.showTitle = false;
+            $("label[for='titleBtn'").text("Show title");
+        }
+        else {
+            notifier.notify("SHOW TITLE");
+            $("#titleDiv").removeClass("d-none");
+            controller.showTitle = true;
+            $("label[for='titleBtn'").text("Hide title");
+        }
+    };
+
+    controller.descriptionToggle = () => {
+        if (controller.showDescription) {
+            notifier.notify("HIDE DESCRIPTION");
+            $("#descriptionDiv").addClass("d-none");
+            controller.showDescription = false;
+            $("label[for='descriptionBtn'").text("Show description");
+        }
+        else {
+            notifier.notify("SHOW DESCRIPTION");
+            $("#descriptionDiv").removeClass("d-none");
+            controller.showDescription = true;
+            $("label[for='descriptionBtn'").text("Hide description");
+        }
+    };     
+
+    $("#controlSwitchDiv").click(_ => controller.toggleControl());
+    $("#controlBtn").click(_ => controller.toggleControl());
+    $("#spaceBtn").click(_ => controller.togglePlay());
+    $("#leftBtn").click(_ => controller.changeTiming(true));
+    $("#rightBtn").click(_ => controller.changeTiming(false));
+    $("#titleBtn").click(_ => controller.titleToggle());
+    $("#enterBtn").click(_ => {
+        notifier.notify("SKIP SLIDE");
+        controller.setTimeout(controller.slideshow, 0);
+    });
+    $("#descriptionBtn").click(_ => controller.descriptionToggle());
+    $("#backBtn").click(_ => window.location.href=`/gallery/slideshow?t=${(new Date()).getTime()}`);
+    $("#homeBtn").click(_ => window.location.href=`/gallery/?t=${(new Date()).getTime()}`);
+
+    $("input").each((_, inp) => $(inp).change(() => controller.preview()));
+    
+    controller.toggleAll = (targets, checked) => {
+        for (let idx = 0; idx < targets.length; idx++) {
+            $(`#${targets[idx]}`).prop("checked", checked);
+        }
+        controller.preview();
+    };
+
+    $("#categoryAll").on("click", () => controller.toggleAll(controller.types, true));
+    $("#categoryNone").on("click", () => controller.toggleAll(controller.types, false));
+    $("#scopeAll").on("click", () => controller.toggleAll(controller.scopes, true));
+    $("#scopeNone").on("click", () => controller.toggleAll(controller.scopes, false));
+
+    $("#go").on("click", controller.start);
+
+    const KEYCODES = {
+        LEFT: 37,
+        RIGHT: 39,
+        SPACEBAR: 32,
+        ENTER: 13,
+        T: 84,
+        D: 68,
+        BACKSPACE: 8,
+        HOME: 36,
+        SLASH: 191
+    };
+
+    controller.changeTiming = slower => {
+        if (slower) {
+            if (controller.delay < 5000) {
+                controller.delay += 100;                
+            }
+            else if (controller.delay < 30000) {
+                controller.delay += 1000;
+            }
+            notifier.notify(`SLOWER: ${controller.delay}ms`);            
+        }
+        else {
+            if (controller.delay > 5000) {
+                controller.delay -= 1000;
+            }
+            else if  (controller.delay > 500) {
+                controller.delay -= 100;
+            }         
+            notifier.notify(`FASTER: ${controller.delay}ms`);
+        }
+        controller.setTimeout(controller.slideshow, controller.delay);
+    };
+
+    controller.togglePlay = () => {
+        $(".playing").addClass("d-none");
+        $(".stopped").addClass("d-none")
+        if (controller.playing === true) {
+            notifier.notify("STOP");
+            controller.playing = false;
+            $(".stopped").removeClass("d-none");
+        } else {
+            notifier.notify("PLAY");
+            controller.playing = true;
+            controller.setTimeout(controller.slideshow, 0);
+            $(".playing").removeClass("d-none");
+        }        
+    };
+
     $(document).keydown(function (e) {
         let preventDefault = false;
-        if (e.keyCode === LEFT) {
-            $(".carousel").carousel("prev");                    
-            preventDefault = true;
-        }
-        else if (e.keyCode == RIGHT ) {
-            $(".carousel").carousel("next");                    
-            preventDefault = true;
-        }
-        else if (e.keyCode == SPACEBAR) {
-            $("#btnPause").trigger("click");
-            preventDefault = true;
+        switch(e.keyCode) {
+            case KEYCODES.SLASH:          
+                if (controller.started) {      
+                    preventDefault = true;
+                    controller.toggleControl();
+                }
+                break;
+            case KEYCODES.SPACEBAR:
+                if (controller.started) {
+                    preventDefault = true;
+                    controller.togglePlay();
+                }
+                break;
+            case KEYCODES.T:
+                if (controller.started) {
+                    controller.titleToggle();
+                }
+                break;
+            case KEYCODES.D:
+                if (controller.started) {
+                    controller.descriptionToggle();
+                }
+                break;
+            case KEYCODES.LEFT:
+                if (controller.started) {
+                    controller.changeTiming(true);
+                }
+                break;
+            case KEYCODES.BACKSPACE:
+                if (controller.started) {
+                    window.location.href=`/gallery/slideshow?t=${(new Date()).getTime()}`;
+                }
+                break;
+            case KEYCODES.HOME:
+                if (controller.started) {
+                    window.location.href=`/gallery?t=${(new Date()).getTime()}`;
+                }
+                break;
+            case KEYCODES.RIGHT:
+                if (controller.started) {
+                    controller.changeTiming(false);
+                }
+                break;
+            
+            case KEYCODES.ENTER: 
+                if (controller.started) {
+                    notifier.notify("SKIP SLIDE");
+                    controller.setTimeout(controller.slideshow, 0);                    
+                } else {
+                    controller.start();
+                }
+                break;            
+            default:
+                break;
         }
         if (preventDefault) {
             e.preventDefault();
         }
-    });
-};
-
-$(document).ready(function () {
-
-    // fun little algorithm that shows colorful animated rectangles
-    // based on my "dwitter" entry
-
-    const c = document.getElementById("dwitter");
-    const x = c.getContext('2d');
-    const S = Math.sin;
-    const C = Math.cos;
-    const T = Math.tan;
-
-    const R = function (r, g, b, a) {
-        return `rgba(${r},${g},${b},${a})`;
-    }
-
-    const timer = {
-        start: new Date()
-    };
-
-    const u = function u(t) {
-        c.width |= 0;
-        for (let i = 120; i--;) {
-            let p = 1;
-            let q = 1;
-            for (let j = 30; j--;) {
-                p += q,
-                    q = t / 3,
-                    x.fillStyle = R(S(j) * 255, C(j) * 255, j * 16, 0.1),
-                    x.fillRect((j * p * 10 + i) % 2e3, i + 200, 5, 600);
-            }
-        }
-    };
-
-    timer.interval = setInterval(function () {
-        timer.end = new Date();
-        let t = (timer.end.getTime() - timer.start.getTime()) / 1000;
-        u(t);
-    }, 16);
-
-    const slides = $("#astrodeck").html();
-
-    const container = $("<div/>");
-
-    $(container).html(slides);
-
-    const tracker = {
-        deck: [],
-        paused: false
-    };
-
-    // grab the slides from the template and move them into a hidden div
-    $(container).find(".carousel-item").each(function () {
-        tracker.deck.push($(this));
-    });
-
-    tracker.total = tracker.remaining = tracker.deck.length;
-
-    $("#astroheader").text(`Loading ${tracker.deck.length} slides...`);
-
-    // iterate the deck in a random order
-    while (tracker.deck.length) {
-
-        let slideNo = Math.floor(Math.random() * tracker.deck.length);
-        let card = tracker.deck.splice(slideNo, 1)[0];
-        let img = $(card).find('img').first();
-
-        // wait for the image to actually load
-        $(img).on('load', function () {
-
-            tracker.remaining--;
-
-            $("#astroheader").text(`${tracker.remaining} remaining of ${tracker.total} slides...`);
-
-            // move the deck from the hidden div to the live carousel
-            $(card).remove();
-            $("#astroturf").append(card);
-
-            if (tracker.remaining < 1) {
-
-                $(".carousel .active").removeClass("active");
-                
-                // turn off the show
-                clearInterval(tracker.interval);
-
-                // reveal the controls
-                $("#carouselcontrols").removeClass("d-none");
-
-                // start the show                
-                $(".carousel").carousel({
-                    interval: 8000
-                });
-
-                // wire up the pause/resume button
-                $("#btnPause").on("click", function () {
-
-                    if (tracker.paused) {
-                        $(".carousel").carousel("cycle");
-                        $("#btnPause").text("Pause (Playing)");
-                        $("#carouselstatus").text("🟢");
-                        tracker.paused = false;
-                    }
-                    else {
-                        $(".carousel").carousel("pause");
-                        $("#btnPause").text("Resume (Paused)");
-                        $("#carouselstatus").text("🔴");
-                        tracker.paused = true;
-                    }
-                });
-
-                // wire up and show slide navigation
-                $(".carousel-control-prev").on("click", function () {
-                    $(".carousel").carousel("prev");
-                    return true;
-                });
-
-                $(".carousel-control-next").on("click", function () {
-                    $(".carousel").carousel("next");
-                    return true;
-                });
-
-                $(".carousel-control-prev, .carousel-control-next").removeClass("d-none");
-
-                slideShowKeyboard();
-
-                // adjust text display
-                const adjustCaption = function () {
-
-                    const img = $(".carousel .active img").first();
-                    const caption = $(".carousel .active .carousel-caption").first();
-
-                    if ($(window).width() <= 768) {
-                        $(".carousel .carousel-caption").addClass("d-none");
-                    } else {
-                        $(".carousel .carousel-caption").removeClass("d-none");
-                    }
-
-                    if ($(window).width() <= 1024) {
-                        return;
-                    }
-
-                    $(caption).removeClass("d-none");
-
-                    // center caption text 
-
-                    const imgHeight = $(img).get(0).naturalHeight;
-                    const imgWidth = $(img).get(0).naturalWidth;
-                    const adjustedHeight = $(img).height();
-
-                    const ratio = adjustedHeight / imgHeight;
-                    const adjustedWidth = Math.floor(imgWidth * ratio);
-                    $(caption).width(adjustedWidth);
-                    let left = $(img).position().left;
-
-                    // first guess
-                    $(caption).css("margin-left", left);
-
-                    // now fix the offset to align to the left edge of the image
-                    const imgTrueLeft = $(img)[0].getBoundingClientRect().left;
-                    const captionTrueLeft = $(caption)[0].getBoundingClientRect().left;
-                    const diff = captionTrueLeft - imgTrueLeft;
-                    left -= diff;
-                    $(caption).css("margin-left", left);
-                };
-
-                // fire each time a new slide appears
-                $(".carousel").on("slid.bs.carousel", adjustCaption);
-
-                // remove the div with the intro animation
-                $("#astroturf").children().first().remove();
-
-                // set our first slide to "active"
-                $("#astroturf").children().first().addClass("active");
-
-                adjustCaption();                
-            }
-        });
-
-        const loader = new Image();
-
-        loader.onload = function () {
-            $(img).attr("src", $(loader).attr("src"));
-        };
-
-        setTimeout(function () {
-            loader.src = $(img).attr("data-src");
-        }, 5);
-    }
+    });    
 });
