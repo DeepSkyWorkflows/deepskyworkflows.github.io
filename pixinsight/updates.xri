@@ -6,7 +6,7 @@
      </p>
    </description>
    <platform os="all" arch="noarch" version="1.6.9:2.0.0">
-      <package fileName="v1.0.0.zip" sha1="e6e4b802a9623d7c4f03449ad2ecb2b30d089c35" type="script" releaseDate="20220730">
+      <package fileName="v2.0.0.zip" sha1="a0d6cef1a5c11ded69737b0a02d3fb9c473be9b7" type="script" releaseDate="20220905">
          <title>
             Deep Sky Workflow Scripts
          </title>
@@ -15,7 +15,7 @@
                Collection of scripts to assist with your workflows
             </p>
             <p>Currently contains:
-               <ul><li>Apply Hubble Palette</li><li>Auto Linear-Fit and Combine</li><li>Create Stretched Luminance Match</li><li>Deep DeNoise</li><li>Fix RGB Pixels</li><li>Generate Deconvolution Support Files</li><li>Non-linear stretch</li></ul>
+               <ul><li>Apply Hubble Palette</li><li>Auto Linear-Fit and Combine</li><li>Create Stretched Luminance Match</li><li>Deep DeNoise</li><li>Fix RGB Pixels</li><li>Generate Deconvolution Support Files</li><li>Non-linear stretch</li><li>Simple stretch</li><li>Star Trails Magic</li></ul>
             </p>
             <p>Documentation online in our <a href="https://github.com/DeepSkyWorkflows/DeepSkyWorkflowScripts">GitHub repo</a>.
             </p>
@@ -23,4 +23,4 @@
       </package>
    </platform>
 </xri>
-<Signature developerId="Deep Sky Workflows" timestamp="2022-07-31T06:49:20.458Z" encoding="Base64">GFF5PTaa7liQ5pLQyWEngQNU19VeVj53JcTXEfkJ03oOmY03PybvCZz2jqPWLbQQSn8rUHi9XiDxYiVRureRDw==</Signature>
+<Signature developerId="Deep Sky Workflows" timestamp="2022-09-09T14:57:37.781Z" encoding="Base64">8pOETNlITDthpsI79Tz3a+m0EJI+Dn3BCVFvDB/k5xIbYob3tlBx6mZamaywCYfwQ6A4HJ10kDb9CxmKZbrNCg==</Signature>
