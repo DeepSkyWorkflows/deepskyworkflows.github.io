@@ -4,7 +4,9 @@ title: Gallery
 image: "assets/images/gallery.jpg"
 permalink: /gallery/
 ---
- 
+<h3>Random picks</h3>
+{% include gallery-random.html %}
+<h3>Filter and search</h3>
 {% assign version = 10 %}
 {% assign types = site.gallery | group_by: 'type' | sort: 'name' %}
 {% assign telescopeArray = '' | split: ',' %}
