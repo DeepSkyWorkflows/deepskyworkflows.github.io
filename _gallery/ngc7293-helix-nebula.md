@@ -8,6 +8,7 @@ telescope: Stellina
 length: "400mm"
 aperture: "80mm"
 folder: ngc7293
+group: ngc7293
 exposure: 10
 lights: 334
 sessions: 1
