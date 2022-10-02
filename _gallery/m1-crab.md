@@ -7,6 +7,7 @@ image: assets/images/gallery/m1-crab/thumb.jpg
 telescope: Celestron EdgeHD 9.25
 length: "1650mm"
 aperture: "235mm"
+group: m1
 folder: m1-crab
 exposure: 60
 lights: 68

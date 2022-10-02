@@ -3,7 +3,7 @@ title: "NGC6888: The Crescent Nebula Rave Edition"
 type: Nebula
 tags: ["Crescent Nebula","NGC6888"]
 description: A close-up of the Crescent Nebula. NGC6888 is the expanding shell of an ancient supernova with supercharged dust particles that glow from the energy of nearby stars.
-image: /assets/images/gallery/ngc6888-edge2/thumb.jpg
+image: /assets/images/gallery/ngc6888-edgehd2/thumb.jpg
 telescope: Celestron EdgeHD 9.25
 length: "2350mm"
 aperture: "235mm"
