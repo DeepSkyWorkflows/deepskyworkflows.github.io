@@ -14,9 +14,9 @@ lights: 43
 sessions: 3
 firstCapture: 2022-02-28 
 lastCapture: 2022-10-01
-ra: "5h 34m 32.5s"
-dec: "+22° 00' 41.391"
-size: "30.627 x 20.089 arcmin"
-radius: "0.305 deg"
-scale: "0.57 arcsec/pixel"
+ra: "5h 34m 32.1s"
+dec: "+22° 01' 49.852"
+size: "30.971 x 22.671 arcmin"
+radius: "0.32 deg"
+scale: "0.316 arcsec/pixel"
 ---
