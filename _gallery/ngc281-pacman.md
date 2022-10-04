@@ -8,6 +8,7 @@ telescope: Stellina
 length: "400mm"
 aperture: "80mm"
 folder: ngc281
+group: pacman
 exposure: 10
 lights: 274 
 sessions: 1

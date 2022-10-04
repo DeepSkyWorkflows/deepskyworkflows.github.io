@@ -6,6 +6,7 @@ description: Fourth time is the charm? Another attempt to image this bright but 
 image: /assets/images/gallery/crescent/thumb.jpg
 telescope: Celestron EdgeHD 9.25
 length: "1645mm"
+signature: true
 aperture: "235mm"
 folder: crescent
 group: ngc6888
