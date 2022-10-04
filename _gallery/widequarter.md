@@ -8,7 +8,7 @@ telescope: Celestron EdgeHD 9.25
 signature: true
 length: "5875mm"
 aperture: "235mm"
-folder: widemoon
+folder: widequarter
 exposure: 0.100
 lights: 2000
 sessions: 1
