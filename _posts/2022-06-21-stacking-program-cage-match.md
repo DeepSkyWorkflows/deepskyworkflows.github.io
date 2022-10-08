@@ -7,7 +7,7 @@ tags: ["stacking", "ngc1977"]
 toc: true
 image: assets/images/2022-06-21/stackbanner.png
 description: "Using the same set of data, I compare the performance of five programs for stacking a deep sky object (DSO). Included: ASIDeepStack, Astrometric Stacking Program (ASTAP), AstroPixel Processor (APP), Deep Sky Stacker (DSS) and PixInsight."
-featured: true
+featured: false
 hide: true
 comments: true
 ---
