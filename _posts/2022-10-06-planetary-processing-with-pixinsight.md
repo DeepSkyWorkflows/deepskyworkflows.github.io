@@ -215,7 +215,7 @@ Wavelets are great for targeting the right scale. For example, most noise appear
 <img id="wavelet6" style="display: none;" data-src="{{ url }}wavelet6.jpg"/>
 <img id="wavelet7" style="display: none;" data-src="{{ url }}wavelet7.jpg"/>
 <img id="wavelet8" style="display: none;" data-src="{{ url }}wavelet8.jpg"/>
-<img id="wavelet9" style="display: none;" data-src="{{ url }}waveletR.jpg"/>
+<img id="wavelet9" style="display: none;" data-src="{{ url }}waveletr.jpg"/>
 <script>
 setTimeout(() => {    
     const controls = {
