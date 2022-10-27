@@ -1,6 +1,6 @@
 ---
 title: "Polar Alignment."
-type: Miscellaneous
+type: Star Trails
 tags: ["polaris"]
 description: "Star trails around the north star."
 image: assets/images/gallery/startrails/thumb.jpg

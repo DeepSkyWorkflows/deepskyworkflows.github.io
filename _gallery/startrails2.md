@@ -1,6 +1,6 @@
 ---
 title: "Around Polaris."
-type: Miscellaneous
+type: Star Trails
 tags: ["polaris"]
 description: "Star trails around the north star."
 image: assets/images/gallery/startrails2/thumb.jpg

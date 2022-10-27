@@ -1,6 +1,6 @@
 ---
 title: "Fire in the Sky"
-type: Miscellaneous
+type: Meteor
 tags: ["meteor"]
 description: "A meteor and a satellite streak by over the Paint Mines in Colorado."
 image: assets/images/gallery/fire-in-the-sky/thumb.jpg
