@@ -1,7 +1,7 @@
 ---
 title: "Sunburst"
 type: Miscellaneous
-tags: [sunburst]
+tags: ["Cayman Collection",sunburst]
 description: A sunburst of red rays just after sunset at Rackam's in Grand Cayman.
 image: /assets/images/gallery/sunburst/thumb.jpg
 telescope: Sony ILCE-6300

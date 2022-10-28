@@ -1,7 +1,7 @@
 ---
 title: "Dive #294"
 type: Miscellaneous
-tags: [Milky Way]
+tags: ["Cayman Collection",Milky Way]
 description: I took this shot to commemorate my friends' dive as they approached their milestone of 300 dives together. The blue lights in the water are their dive lights.
 image: /assets/images/gallery/dive/thumb.jpg
 telescope: Sony ILCE-6300

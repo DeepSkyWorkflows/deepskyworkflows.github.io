@@ -6,6 +6,12 @@ permalink: /gallery/
 ---
 <h3>Random picks</h3>
 {% include gallery-random.html %}
+<h3>Collections</h3>
+<p>
+{% for collection in site.portfolios %}
+<a href="{{ site.baseurl }}/tag/{{collection | replace: ' ','-' }}" title="{{collection}}" alt="{{collection}}">{{collection}}</a>&nbsp;|&nbsp;
+{% endfor %}
+</p>
 <h3>Filter and search</h3>
 {% assign version = 10 %}
 {% assign types = site.gallery | group_by: 'type' | sort: 'name' %}

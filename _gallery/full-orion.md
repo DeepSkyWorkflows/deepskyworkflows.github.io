@@ -1,7 +1,7 @@
 ---
 title: "The Full Orion"
 type: Constellation
-tags: ["19 Ori)","20 Ori","24 Ori)","28 Ori)","34 Ori)","39 Ori)","44 Ori)","46 Ori)","50 Ori)","58 Ori)","Al Mankib","Algebar (β Ori","Betelgeux (α Ori","Flame Nebula","Great Orion Nebula","Heka (λ Ori","IC434","M42","M43","Mairan's Nebula","NGC1976","NGC1982","NGC2024","NGC2112","Orion B","Orion Nebula","Part of the constellation Orion (Ori)","The star Alnilam (ε Ori","The star Alnitak (ζ Ori","The star Bellatrix (γ Ori","The star Betelgeuse","The star Hatysa (ι Ori","The star Meissa","The star Mintaka (δ Ori","The star Rigel","The star Saif al Jabbar (η Ori","The star τ Ori"]
+tags: ["Cayman Collection","19 Ori)","20 Ori","24 Ori)","28 Ori)","34 Ori)","39 Ori)","44 Ori)","46 Ori)","50 Ori)","58 Ori)","Al Mankib","Algebar (β Ori","Betelgeux (α Ori","Flame Nebula","Great Orion Nebula","Heka (λ Ori","IC434","M42","M43","Mairan's Nebula","NGC1976","NGC1982","NGC2024","NGC2112","Orion B","Orion Nebula","Part of the constellation Orion (Ori)","The star Alnilam (ε Ori","The star Alnitak (ζ Ori","The star Bellatrix (γ Ori","The star Betelgeuse","The star Hatysa (ι Ori","The star Meissa","The star Mintaka (δ Ori","The star Rigel","The star Saif al Jabbar (η Ori","The star τ Ori"]
 description: A detailed exposure that illustrates the major stars and nebulae.
 image: /assets/images/gallery/full-orion/thumb.jpg
 telescope: Sony ILCE-6300

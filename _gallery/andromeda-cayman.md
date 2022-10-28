@@ -1,7 +1,7 @@
 ---
 title: "Cayman's M31: Andromeda Galaxy"
 type: Galaxy
-tags: ["35 And","Andromeda Galaxy","M110","M31","M32","NGC205","NGC221","NGC224","The star ν And"]
+tags: ["Cayman Collection","35 And","Andromeda Galaxy","M110","M31","M32","NGC205","NGC221","NGC224","The star ν And"]
 description: Captured from our villa in Grand Cayman using the portable Sky Watcher Star Adventurer GTi mount.
 image: /assets/images/gallery/andromeda-cayman/thumb.jpg
 telescope: Svbony sv503 70ED

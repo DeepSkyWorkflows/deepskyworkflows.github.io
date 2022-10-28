@@ -10,6 +10,7 @@ url: https://deepskyworkflows.com
 disqus: 'deep-sky-workflows'
 # mailchimp-list: ''
 include: ["_pages", "_gallery", "_exhibiton", "_messier"]
+portfolios: ["Cayman Collection"]
 permalink: /:title/
 
 venues:

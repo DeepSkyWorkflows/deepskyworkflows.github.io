@@ -1,7 +1,7 @@
 ---
 title: "Grand Cayman's M33: The Triangulum Galaxy"
 type: Galaxy
-tags: ["M33","NGC595","NGC598","NGC604","Triangulum Galaxy","Triangulum Pinwheel"]
+tags: ["Cayman Collection","M33","NGC595","NGC598","NGC604","Triangulum Galaxy","Triangulum Pinwheel"]
 description: The portable Sky Watcher Star Adventurer GTi did a great job of tracking this target with no guiding.
 image: /assets/images/gallery/sa-m33/thumb.jpg
 telescope: Svbony sv503 70ED

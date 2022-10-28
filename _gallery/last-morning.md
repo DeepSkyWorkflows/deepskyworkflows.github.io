@@ -1,7 +1,7 @@
 ---
 title: "Last Morning"
 type: Miscellaneous
-tags: [Orion, Pleiades, Mars, M45]
+tags: ["Cayman Collection",Orion, Pleiades, Mars, M45]
 description: A view of the predawn sky the morning we left the Cayman Islands.
 image: /assets/images/gallery/last-morning/thumb.jpg
 telescope: Sony ILCE-6300

@@ -1,7 +1,7 @@
 ---
 title: "Orion's Arrow"
 type: Meteor
-tags: [Meteor, Orion]
+tags: ["Cayman Collection",Meteor, Orion]
 description: A meteor I captured during the 2022 Orionids on Grand Cayman.
 image: /assets/images/gallery/orions-arrow/thumb.jpg
 telescope: Sony ILCE-6300

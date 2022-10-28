@@ -1,7 +1,7 @@
 ---
 title: "Moonstruck"
 type: Miscellaneous
-tags: [Moon, Pleiades, M45]
+tags: ["Cayman Collection",Moon, Pleiades, M45]
 description: My first photograph on the Cayman Islands includes the Pleiades and a very bright moon.
 image: /assets/images/gallery/moonstruck/thumb.jpg
 telescope: Sony ILCE-6300

@@ -1,7 +1,7 @@
 ---
 title: "Clarity"
 type: Miscellaneous
-tags: [Orion, M45, Pleiades, Mars, M42, M43, IC434, NGC2024]
+tags: ["Cayman Collection",Orion, M45, Pleiades, Mars, M42, M43, IC434, NGC2024]
 description: A clear wide-angle view of the predawn sky on Grand Cayman.
 image: /assets/images/gallery/clarity/thumb.jpg
 telescope: Sony ILCE-6300

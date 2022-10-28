@@ -1,7 +1,7 @@
 ---
 title: "Island Stripes"
 type: Star Trails
-tags: [star trails]
+tags: ["Cayman Collection",star trails]
 description: The air was perfectly calm and ideal for this long exposure of the Caribbean sky.
 image: /assets/images/gallery/island-stripes/thumb.jpg
 telescope: Sony ILCE-6300
