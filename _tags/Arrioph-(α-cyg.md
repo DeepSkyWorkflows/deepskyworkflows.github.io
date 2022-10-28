@@ -1,0 +1,3 @@
+---
+title:         Arrioph (α cyg
+---

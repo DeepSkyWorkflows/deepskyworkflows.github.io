@@ -1,0 +1,3 @@
+---
+title:         Monkey head nebula
+---

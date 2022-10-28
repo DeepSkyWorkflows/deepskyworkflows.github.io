@@ -1,0 +1,3 @@
+---
+title:         Hercules globular cluster
+---

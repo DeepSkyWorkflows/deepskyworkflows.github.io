@@ -1,0 +1,3 @@
+---
+title:         Bode's galaxy
+---

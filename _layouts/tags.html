@@ -27,51 +27,10 @@ permalink: "/tags.html"
     <div class="row">
         <div class="col">
             {% for tag in sortedTags %}
-                <a href="{{ site.baseurl }}/tags#{{ tag | replace: ' ', '-' }}" class="badge badge-primary badge-small m-2">
+                <a href="{{ site.baseurl }}/tag/{{ tag | replace: ' ', '-' }}" class="badge badge-primary badge-small m-2">
                     <span>{{ tag }}</span>
                 </a>
             {% endfor %}
-        </div>
-    </div> 
-    <div class="row listrecent">
-    {% for tag in sortedTags %}
-        <div class="card tag-card">
-            <a name="{{ tag | replace: ' ', '-' }}"></a>
-            <strong class="text-uppercase">Tag: {{ tag }}</strong>&nbsp;
-        </div>
-            {% assign tagPosts = "" | split: ',' %}
-            {% for post in sortedPosts %}
-                {% for postTag in post.tags %}
-                    {% assign pTag = postTag | capitalize | strip %}
-                    {% if pTag == tag %}
-                        {% assign tagPosts = tagPosts | push: post %}
-                    {% endif %}
-                {% endfor %}
-            {% endfor %}
-            {% assign tagPostsSorted = tagPosts | uniq | sort: "title" %}
-            {% assign tagTitles = "" | split: ',' %}
-            {% for post in tagPostsSorted %}
-                {% if tagTitles contains post.title %}
-                {% else %}
-                <!-- begin post -->
-{% assign url = site.baseurl | append: post.url %}
-{% assign imgUrl = site.baseurl | append: post.image %}
-{% if site.baseurl contains "/" %}
-{% else %}
-{% assign imgUrl = "/" | append: imgUrl %}
-{% endif %}
-{% if post.image contains "://" %}{% assign imgUrl = "wuuuut" %}{% endif %}
-<div class="card tag-card">
-    <a href="{{url}}" title="{{post.description}}">
-        <img src="{{imgUrl}}" alt="{{post.description}}">
-    </a>
-    <div class="card-img-overlay text-center">
-        <a href="{{url}}" title="{{post.description}}">{{post.title}}</a>
-    </div>                
-</div>
-<!-- end post -->
-                {% assign tagTitles = tagTitles | push: post.title %}
-                {% endif %}
-            {% endfor %}                    
-    {% endfor %}
+        </div>       
+    </div>     
 </div>

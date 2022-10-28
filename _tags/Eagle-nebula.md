@@ -1,0 +1,3 @@
+---
+title:         Eagle nebula
+---

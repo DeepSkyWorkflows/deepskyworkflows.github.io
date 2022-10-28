@@ -257,7 +257,8 @@ layout: default
                     <p><b>Objects in frame:</b></p>
                     {% for tag in page.tags %}
                     {% assign gtag = tag | capitalize | strip | replace: ' ', '-' %}
-                    <a id="data-tag-{{tag}}" class="btn badge badge-primary">{{tag}}</a>
+                    {% assign tagUrl = site.baseurl | append: "/tag/" | append: tag %}
+                    <a id="data-tag-{{tag}}" href="{{tagUrl}}" class="btn badge badge-primary">{{tag}}</a>
                     {% endfor %}                    
                 </div>
             </div>

@@ -1,0 +1,3 @@
+---
+title:         Reda (γ aql
+---

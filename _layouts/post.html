@@ -129,7 +129,7 @@ post_class: post-template
                     {% for tag in sortedTags %}
                     {% assign pTag = tag | capitalize | strip | replace: ' ', '-' %}
                     <li>
-                        <a class="smoothscroll" href="{{site.baseurl}}/tags#{{ pTag }}">#{{ tag }}</a>
+                        <a class="smoothscroll" href="{{site.baseurl}}/tag/{{ pTag }}">#{{ tag }}</a>
                     </li>
                     {% endfor %}
                 </ul>

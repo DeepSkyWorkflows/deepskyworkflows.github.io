@@ -1,0 +1,3 @@
+---
+title:         Mairan's nebula
+---

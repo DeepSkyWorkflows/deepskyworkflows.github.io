@@ -1,0 +1,3 @@
+---
+title:         Milky way
+---
