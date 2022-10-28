@@ -1,3 +1,5 @@
 ---
-title:         Betelgeuse
+title: Betelgeuse
+tagname: "Betelgeuse"
+permalink: /tag/betelgeuse
 ---

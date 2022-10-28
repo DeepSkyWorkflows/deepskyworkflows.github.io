@@ -1,3 +1,5 @@
 ---
-title:         Pixinsight
+title: pixinsight
+tagname: "pixinsight"
+permalink: /tag/pixinsight
 ---

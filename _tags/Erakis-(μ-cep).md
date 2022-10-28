@@ -1,3 +1,0 @@
----
-title:         Erakis (μ cep)
----

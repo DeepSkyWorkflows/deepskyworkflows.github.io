@@ -1,3 +1,5 @@
 ---
-title:         Mars
+title: mars
+tagname: "mars"
+permalink: /tag/mars
 ---

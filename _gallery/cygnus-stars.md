@@ -1,7 +1,7 @@
 ---
 title: "The Colorful Field of Cygnus Stars"
 type: Miscellaneous
-tags: ["18 Cyg)","21 Cyg","31 Cyg","32 Cyg","37 Cyg)","50 Cyg)","Arided","Aridif","Arrioph (α Cyg","Crescent Nebula","Fawaris II (δ Cyg","NGC 6888","NGC 6960","Part of the constellation Cygnus (Cyg)","The star 23 Vul","The star 39 Cyg","The star 41 Cyg","The star 52 Cyg","The star Deneb","The star Fawaris","The star Sadr (γ Cyg","The star η Cyg","The star ο1 Cyg","The star ο2 Cyg","Veil Nebula"]
+tags: ["18 Cyg","21 Cyg","31 Cyg","32 Cyg","37 Cyg","50 Cyg","Arided","Aridif","Arrioph (α Cyg)","Crescent Nebula","Fawaris II (δ Cyg)","NGC6888","NGC6960","Part of the constellation Cygnus (Cyg)","The star 23 Vul","The star 39 Cyg","The star 41 Cyg","The star 52 Cyg","The star Deneb","The star Fawaris","The star Sadr (γ Cyg)","The star η Cyg","The star ο1 Cyg","The star ο2 Cyg","Veil Nebula"]
 description: This beautiful region is full of stars and some of the most bright and beautiful nebulae including The Cygnus Loop (Veil Nebula), the North America Nebula, the Crescent Nebula and the Tulip Nebula.
 image: /assets/images/gallery/cygnus-stars/thumb.jpg
 telescope: Sony ILCE-6300

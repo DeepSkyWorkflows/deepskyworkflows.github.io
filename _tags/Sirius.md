@@ -1,3 +1,5 @@
 ---
-title:         Sirius
+title: Sirius
+tagname: "Sirius"
+permalink: /tag/sirius
 ---

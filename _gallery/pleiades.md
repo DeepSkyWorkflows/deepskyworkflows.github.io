@@ -1,7 +1,7 @@
 ---
 title: "The Pleiades"
 type: Cluster
-tags: ["M45", "19 Tau)","25 Tau)","Barnard's Merope Nebula","IC349","Maia Nebula","Merope Nebula","NGC1432","NGC1435","Sterope I (21 Tau)","The star 18 Tau","The star Alcyone (η Tau","The star Asterope","The star Atlas (27 Tau)","The star Celaeno (16 Tau)","The star Electra (17 Tau)","The star Merope (23 Tau)","The star Pleione (28 Tau)","The star Sterope II (22 Tau)","The star Taygeta (q Tau"]
+tags: ["M45","19 Tau","25 Tau","Barnard's Merope Nebula","IC349","Maia Nebula","Merope Nebula","NGC1432","NGC1435","Sterope I (21 Tau)","The star 18 Tau","The star Alcyone (η Tau)","The star Asterope","The star Atlas (27 Tau)","The star Celaeno (16 Tau)","The star Electra (17 Tau)","The star Merope (23 Tau)","The star Pleione (28 Tau)","The star Sterope II (22 Tau)","The star Taygeta (q Tau)"]
 description: A long exposure reveals the wispy tendrils of nebulosity that surround the major stars in M45 like a cocoon.
 image: /assets/images/gallery/pleiades/thumb.jpg
 telescope: Svbony sv503 70ED

@@ -1,3 +1,0 @@
----
-title:         Cheleb (βoph)
----

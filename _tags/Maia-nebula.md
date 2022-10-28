@@ -1,3 +1,5 @@
 ---
-title:         Maia nebula
+title: Maia Nebula
+tagname: "Maia Nebula"
+permalink: /tag/maia-nebula
 ---

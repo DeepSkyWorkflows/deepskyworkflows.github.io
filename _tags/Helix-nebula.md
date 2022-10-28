@@ -1,3 +1,5 @@
 ---
-title:         Helix nebula
+title: Helix Nebula
+tagname: "Helix Nebula"
+permalink: /tag/helix-nebula
 ---

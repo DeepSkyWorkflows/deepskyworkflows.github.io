@@ -1,3 +1,5 @@
 ---
-title:         The star ηser
+title: The star ηSer
+tagname: "The star ηSer"
+permalink: /tag/the-star-ηser
 ---

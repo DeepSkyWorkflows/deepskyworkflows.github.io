@@ -1,3 +1,5 @@
 ---
-title:         Iris nebula
+title: Iris Nebula
+tagname: "Iris Nebula"
+permalink: /tag/iris-nebula
 ---

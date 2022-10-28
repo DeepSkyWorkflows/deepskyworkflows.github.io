@@ -1,3 +1,0 @@
----
-title:         Parilicium (α tau
----

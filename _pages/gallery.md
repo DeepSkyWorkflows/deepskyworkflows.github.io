@@ -9,7 +9,7 @@ permalink: /gallery/
 <h3>Collections</h3>
 <p>
 {% for collection in site.portfolios %}
-<a href="{{ site.baseurl }}/tag/{{collection | replace: ' ','-' }}" title="{{collection}}" alt="{{collection}}">{{collection}}</a>&nbsp;|&nbsp;
+<a href="{{ site.baseurl }}/tag/{{collection | strip | replace: ' ', '-' | remove: '(' | remove: ')' | downcase }}" title="{{collection}}" alt="{{collection}}">{{collection}}</a>&nbsp;|&nbsp;
 {% endfor %}
 </p>
 <h3>Filter and search</h3>

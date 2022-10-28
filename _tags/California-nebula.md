@@ -1,3 +1,5 @@
 ---
-title:         California nebula
+title: California Nebula
+tagname: "California Nebula"
+permalink: /tag/california-nebula
 ---

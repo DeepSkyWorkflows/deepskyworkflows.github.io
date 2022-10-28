@@ -1,3 +1,5 @@
 ---
-title:         Orion nebula
+title: Orion Nebula
+tagname: "Orion Nebula"
+permalink: /tag/orion-nebula
 ---

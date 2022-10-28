@@ -1,3 +1,5 @@
 ---
-title:         Lagoon nebula
+title: Lagoon Nebula
+tagname: "Lagoon Nebula"
+permalink: /tag/lagoon-nebula
 ---

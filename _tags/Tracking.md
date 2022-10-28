@@ -1,3 +1,5 @@
 ---
-title:         Tracking
+title: tracking
+tagname: "tracking"
+permalink: /tag/tracking
 ---

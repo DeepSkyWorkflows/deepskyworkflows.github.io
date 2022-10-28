@@ -1,3 +1,5 @@
 ---
-title:         Clavius
+title: Clavius
+tagname: "Clavius"
+permalink: /tag/clavius
 ---

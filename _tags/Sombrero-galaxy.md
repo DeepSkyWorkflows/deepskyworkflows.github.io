@@ -1,3 +1,5 @@
 ---
-title:         Sombrero galaxy
+title: Sombrero Galaxy
+tagname: "Sombrero Galaxy"
+permalink: /tag/sombrero-galaxy
 ---

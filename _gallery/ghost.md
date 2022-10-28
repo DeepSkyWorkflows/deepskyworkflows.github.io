@@ -1,7 +1,7 @@
 ---
 title: "The Ghost of Cassiopeia"
 type: Nebula
-tags: ["27 Cas)","IC59","IC63","The star Navi (γ Cas"]
+tags: ["27 Cas","IC59","IC63","The star Navi (γ Cas)"]
 description: This is my first attempt at the elusive and transluscent Ghost of Cassiopeia. It's in an easy location next to Navi, a major star in the constellation, but is a dark and detailed nebulae requiring long exposures and clear skies.
 image: /assets/images/gallery/ghost/thumb.jpg
 telescope: Celestron EdgeHD 9.25

@@ -1,3 +1,5 @@
 ---
-title:         40 ori
+title: 40 Ori
+tagname: "40 Ori"
+permalink: /tag/40-ori
 ---

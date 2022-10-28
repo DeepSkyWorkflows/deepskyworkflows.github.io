@@ -1,3 +1,5 @@
 ---
-title:         The star π and
+title: The star π And
+tagname: "The star π And"
+permalink: /tag/the-star-π-and
 ---

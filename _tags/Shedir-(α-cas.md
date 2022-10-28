@@ -1,3 +1,0 @@
----
-title:         Shedir (α cas
----

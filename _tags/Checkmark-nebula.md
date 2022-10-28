@@ -1,3 +1,5 @@
 ---
-title:         Checkmark nebula
+title: Checkmark Nebula
+tagname: "Checkmark Nebula"
+permalink: /tag/checkmark-nebula
 ---

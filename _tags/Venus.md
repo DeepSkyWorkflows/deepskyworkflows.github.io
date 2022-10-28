@@ -1,3 +1,5 @@
 ---
-title:         Venus
+title: Venus
+tagname: "Venus"
+permalink: /tag/venus
 ---

@@ -1,3 +1,0 @@
----
-title:         Almeisan (γ gem
----

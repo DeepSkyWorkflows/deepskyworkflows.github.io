@@ -1,3 +1,5 @@
 ---
-title:         The star ρcas
+title: The star ρCas
+tagname: "The star ρCas"
+permalink: /tag/the-star-ρcas
 ---

@@ -1,3 +1,5 @@
 ---
-title:         Bellatrix
+title: Bellatrix
+tagname: "Bellatrix"
+permalink: /tag/bellatrix
 ---

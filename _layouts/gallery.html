@@ -256,7 +256,7 @@ layout: default
                     <div class="card-footer bg-dark">
                     <p><b>Objects in frame:</b></p>
                     {% for tag in page.tags %}
-                    {% assign gtag = tag | strip | replace: ' ', '-' %}
+                    {% assign gtag = tag | strip | replace: ' ', '-' | remove: '(' | remove: ')' | downcase %}
                     {% assign tagUrl = site.baseurl | append: "/tag/" | append: gtag  %}
                     <a id="data-tag-{{tag}}" href="{{tagUrl}}" class="btn badge badge-primary">{{tag}}</a>
                     {% endfor %}                    

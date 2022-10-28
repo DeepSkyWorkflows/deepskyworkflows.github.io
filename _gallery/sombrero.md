@@ -1,7 +1,7 @@
 ---
 title: "M104: Sombrero Galaxy"
 type: Galaxy
-tags: ["M104","NGC 4594","Sombrero Galaxy"]
+tags: ["M104","NGC4594","Sombrero Galaxy"]
 description: "Messier 104 is referred to as 'The Sombrero Galaxy.' Can you guess why? This galaxy presents itself edge-on with a bright core and dark dust obscuring the central disk. 45 60-second exposures."
 image: /assets/images/gallery/sombrero/thumb.jpg
 telescope: Celestron EdgeHD 9.25

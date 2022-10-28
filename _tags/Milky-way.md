@@ -1,3 +1,5 @@
 ---
-title:         Milky way
+title: milky way
+tagname: "milky way"
+permalink: /tag/milky-way
 ---

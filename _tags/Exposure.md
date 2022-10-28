@@ -1,3 +1,5 @@
 ---
-title:         Exposure
+title: exposure
+tagname: "exposure"
+permalink: /tag/exposure
 ---

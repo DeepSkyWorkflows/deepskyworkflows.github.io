@@ -127,7 +127,7 @@ post_class: post-template
                 <ul class="tags">
                     {% assign sortedTags = page.tags | sort %}
                     {% for tag in sortedTags %}
-                    {% assign pTag = tag | capitalize | strip | replace: ' ', '-' %}
+                    {% assign pTag = tag | strip | replace: ' ', '-' | remove: '(' | remove: ')' | downcase %}
                     <li>
                         <a class="smoothscroll" href="{{site.baseurl}}/tag/{{ pTag }}">#{{ tag }}</a>
                     </li>

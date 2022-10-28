@@ -1,3 +1,5 @@
 ---
-title:         Virgo galaxy
+title: Virgo Galaxy
+tagname: "Virgo Galaxy"
+permalink: /tag/virgo-galaxy
 ---

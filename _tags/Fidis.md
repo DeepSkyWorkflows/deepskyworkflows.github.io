@@ -1,3 +1,5 @@
 ---
-title:         Fidis
+title: Fidis
+tagname: "Fidis"
+permalink: /tag/fidis
 ---

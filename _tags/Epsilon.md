@@ -1,3 +1,5 @@
 ---
-title:         Epsilon
+title: Epsilon
+tagname: "Epsilon"
+permalink: /tag/epsilon
 ---

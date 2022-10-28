@@ -1,3 +1,5 @@
 ---
-title:         Arided
+title: Arided
+tagname: "Arided"
+permalink: /tag/arided
 ---

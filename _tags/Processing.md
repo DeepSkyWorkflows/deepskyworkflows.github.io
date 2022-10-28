@@ -1,3 +1,5 @@
 ---
-title:         Processing
+title: processing
+tagname: "processing"
+permalink: /tag/processing
 ---

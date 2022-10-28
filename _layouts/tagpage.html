@@ -10,8 +10,7 @@ layout: default
 
 <div class="container container-fluid w-100">
     <div class="row">
-           {% assign tags = page.name | split: '.' %}
-            {% assign tag = tags[0] | downcase | replace : '-', ' ' %}
+            {% assign tag = page.tagname | downcase %}
             {% assign subitems = site.gallery | sort: "title" %}
             {% assign itemCount = 0 %}
             {% assign itemIndex = 1 %}

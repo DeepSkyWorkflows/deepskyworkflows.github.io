@@ -1,3 +1,5 @@
 ---
-title:         Dumbbell nebula
+title: Dumbbell Nebula
+tagname: "Dumbbell Nebula"
+permalink: /tag/dumbbell-nebula
 ---

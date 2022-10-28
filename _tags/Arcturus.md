@@ -1,3 +1,5 @@
 ---
-title:         Arcturus
+title: Arcturus
+tagname: "Arcturus"
+permalink: /tag/arcturus
 ---

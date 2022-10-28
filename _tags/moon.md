@@ -1,3 +1,5 @@
 ---
-title:  "The Moon"
+title: moon
+tagname: "moon"
+permalink: /tag/moon
 ---

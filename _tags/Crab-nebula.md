@@ -1,3 +1,5 @@
 ---
-title:         Crab nebula
+title: Crab Nebula
+tagname: "Crab Nebula"
+permalink: /tag/crab-nebula
 ---

@@ -1,7 +1,7 @@
 ---
 title: "The Cassiopeia Starfield"
 type: Constellation
-tags: ["The star λCas","The star ζCas","The star Schedar (αCas)","The star ηCas","The star Caph (βCas)","The star Ruchbah (δCas)","NGC 281","The star κCas","The star θCas","Part of the constellation Cassiopeia (Cas)","The star υ2Cas","The star Navi (γCas)"]
+tags: ["The star λCas","The star ζCas","The star Schedar (αCas)","The star ηCas","The star Caph (βCas)","The star Ruchbah (δCas)","NGC281","The star κCas","The star θCas","Part of the constellation Cassiopeia (Cas)","The star υ2Cas","The star Navi (γCas)"]
 description: "Cassiopeia is a very busy piece of sky. The constellation is easy to find with its distinctive 'W' shape. I just missed one of the main stars but captured the colorful variety of background stars and even some nebulosity in several areas."
 image: assets/images/gallery/cassiopeia-starfield/thumb.jpg
 telescope: Sony ILCE-6300

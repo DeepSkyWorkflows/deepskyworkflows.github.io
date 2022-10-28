@@ -1,3 +1,5 @@
 ---
-title:         Omega nebula
+title: omega Nebula
+tagname: "omega Nebula"
+permalink: /tag/omega-nebula
 ---

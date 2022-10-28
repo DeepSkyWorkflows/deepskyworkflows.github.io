@@ -1,3 +1,0 @@
----
-title:         Praepes (η gem
----

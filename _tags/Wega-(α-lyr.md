@@ -1,3 +1,0 @@
----
-title:         Wega (α lyr
----

@@ -1,7 +1,7 @@
 ---
 title: "Arcturus with Svbony Scope"
 type: Star
-tags: ["16 Boo)","The star Arcturus (α Boo"]
+tags: ["16 Boo","The star Arcturus (α Boo)"]
 description: An alignment capture of the 4th brightest star in the night sky, a red giant.
 image: /assets/images/gallery/arcturus-svbony/thumb.jpg
 telescope: Svbony sv503 70ED

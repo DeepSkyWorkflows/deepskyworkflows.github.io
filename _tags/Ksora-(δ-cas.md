@@ -1,3 +1,0 @@
----
-title:         Ksora (δ cas
----

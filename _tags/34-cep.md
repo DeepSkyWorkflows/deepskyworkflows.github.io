@@ -1,3 +1,5 @@
 ---
-title:         34 cep
+title: 34 Cep
+tagname: "34 Cep"
+permalink: /tag/34-cep
 ---

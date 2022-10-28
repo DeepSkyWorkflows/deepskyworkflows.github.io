@@ -1,3 +1,0 @@
----
-title:         Heka (λ ori
----

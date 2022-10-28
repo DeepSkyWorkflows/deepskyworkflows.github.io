@@ -1,3 +1,5 @@
 ---
-title:         The star τsgr
+title: The star τSgr
+tagname: "The star τSgr"
+permalink: /tag/the-star-τsgr
 ---

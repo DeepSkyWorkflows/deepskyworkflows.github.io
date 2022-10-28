@@ -1,3 +1,0 @@
----
-title:         Betelgeux (α ori
----

@@ -1,3 +1,5 @@
 ---
-title:         Beehive
+title: Beehive
+tagname: "Beehive"
+permalink: /tag/beehive
 ---

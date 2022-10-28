@@ -1,3 +1,5 @@
 ---
-title:         Sunburst
+title: sunburst
+tagname: "sunburst"
+permalink: /tag/sunburst
 ---
