@@ -320,6 +320,15 @@ sitemap: false
 
             telescopeContext.init();
             signatureContext.init();
+
+            $("img").each(function () {
+                const url = $(this).data("url");
+                if (url) {
+                    $(this).attr("src", url);
+                }
+            });
+        
+
             $("#gallerySearch").focus();
         });
     })();

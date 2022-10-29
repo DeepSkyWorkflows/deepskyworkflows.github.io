@@ -60,10 +60,11 @@ permalink: /gallery/
             {% assign annotated = mainUrl | append: "#annotated" %}
             {% assign grid = mainUrl | append: "#grid" %}
             {% assign itemCount = itemCount | plus: 1 %}
-            {% assign thumbPath = site.baseurl | append: "/assets/images/gallery/" | append: item.folder | append: "/thumb.jpg" %}
+            {% assign thumbPath = site.baseurl | append: "/assets/images/gallery/" | append: item.folder | append: "/thumb.jpg" %}           
+            {% assign loadingPath = site.baseurl | append: "/assets/images/loading.gif" %}
                 <div class="card gallery-card" data-url="{{item.url}}" data-telescope="{{item.telescope}}" data-signature="{{item.signature}}">
                     <a href="{{mainUrl}}" title="{{item.description}}" tabindex="{{itemCount}}">
-                        <img class="card-img-top gallery-img" id="image-{{itemIndex}}" src="{{thumbPath}}" alt="{{item.description}}">
+                        <img class="card-img-top gallery-img" id="image-{{itemIndex}}" data-url="{{thumbPath}}" src="{{loadingPath}}" alt="{{item.description}}">
                         {% assign itemIndex = itemIndex | plus: 1 %}
                     </a>
                     <div class="card-header bg-dark text-center">

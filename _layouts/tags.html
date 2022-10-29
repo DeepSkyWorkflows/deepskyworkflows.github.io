@@ -27,9 +27,11 @@ permalink: "/tags"
     <div class="row">
         <div class="col">
             {% for tag in sortedTags %}
+                {% unless tag == empty %}
                 <a href="{{ site.baseurl }}/tag/{{ tag  | strip | replace: ' ', '-' | remove: '(' | remove: ')' | downcase }}" class="badge badge-primary badge-small m-2">
                     <span>{{ tag }}</span>
                 </a>
+                {% endunless %}
             {% endfor %}
         </div>       
     </div>     
