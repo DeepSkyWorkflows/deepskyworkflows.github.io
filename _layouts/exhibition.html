@@ -88,8 +88,12 @@ layout: default
                 </div>
                 <div class="col-sm-3 col-xs-12 text-right">
                     <span class="price">${{ page.Price | value_format_name: decimal_2 }}</span>
+                    {% if page.Sold == true %}
+                    <button class="btn btn-warning" disabled>SOLD</button>
+                    {% else %}
                     {% include addtocart.html PayPal=page.PayPal %}               
                     {% include viewcart.html %}                 
+                    {% endif %}
                 </div>       
             </div>
             <div class="row">

@@ -6,6 +6,7 @@ description: "This print combines the depth and sharp contrast of crescent and q
 Location: Monroe, WA
 Thumbnail: moonphases.jpg
 Fullsize: moonpanorama.jpg
+Sold: true
 active: true
 Type: "Lunar"
 Print: Metal Silver Satin

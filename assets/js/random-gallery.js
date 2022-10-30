@@ -9,7 +9,6 @@ const processQueue = () => {
     const section = document.getElementById("random-gallery");
     const numPics = Math.floor(section.offsetWidth / 262);
     section.innerText = '';
-    console.log(numPics);
     if (numPics < 0) {
         numPics = 1;
     }
