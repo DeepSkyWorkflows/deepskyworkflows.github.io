@@ -8,6 +8,7 @@ telescope: Stellina
 length: "400mm"
 aperture: "80mm"
 folder: ngc2174
+group: ngc2174
 exposure: 10    
 lights: 385
 sessions: 2

@@ -8,6 +8,7 @@ telescope: Svbony sv503 70ED
 length: "336mm"
 aperture: "70mm"
 folder: sadr
+group: sadr
 exposure: 180   
 lights: 100
 sessions: 1

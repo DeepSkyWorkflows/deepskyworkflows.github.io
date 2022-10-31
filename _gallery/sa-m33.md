@@ -8,14 +8,15 @@ telescope: Svbony sv503 70ED
 length: "336mm"
 aperture: "70mm"
 folder: sa-m33
+group: m33
 exposure: 90
 lights: 53
 sessions: 1
 firstCapture: 2022-10-19 
 lastCapture:
-ra: "1h 33m 34.0s"
-dec: "+30° 38' 32.323"
-size: "122.345 x 80.969 arcmin"
-radius: "1.223 deg"
-scale: "1.388 arcsec/pixel"
+ra: "1h 33m 48.7s"
+dec: "+30° 41' 23.821"
+size: "166.193 x 118.322 arcmin"
+radius: "1.7 deg"
+scale: "2.428 arcsec/pixel"
 ---

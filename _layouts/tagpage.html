@@ -15,7 +15,7 @@ layout: default
             {% assign itemCount = 0 %}
             {% assign itemIndex = 1 %}
             {% for item in subitems %}        
-            {% assign itemTags = item.tags | join: "~~~" | downcase %}
+            {% assign itemTags = item.tags | join: "~~~" | downcase | split: "~~~" %}
             {% if itemTags contains tag %}
                 {% assign itemCount = itemCount | plus: 1 %}
                 {% assign mainUrl = site.baseurl | append: item.url %}
