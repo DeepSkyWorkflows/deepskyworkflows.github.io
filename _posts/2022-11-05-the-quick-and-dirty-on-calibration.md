@@ -56,49 +56,85 @@ There are four common types of calibration frames: _bias_, _dark_, _flat_, and _
 
 ## See for yourself 
 
-It's all good to _talk_ about calibration, but what does it _look_ like? In this table, the first image is uncalibrated. Next is calibrated with flats (the dust is gone), then one with darks (the amp glow is gone), and the final image is fully calibrated.
+It's all good to _talk_ about calibration, but what does it _look_ like? In this interactive photo, you can toggle flats and darks to see what the difference looks like.
 
 <section markdown="0">
 {% assign url = site.baseUrl | append: "/assets/images/2022-11-05/" %}
-<div class="container">
+<div class="container container-fluid">
     <div class="row">
-        <div class="col-1">
+        <div class="col-12">
+            <button class="btn btn-primary m-2" id="darkToggle"/>
             &nbsp;
+            <button class="btn btn-primary m-2" id="flatToggle"/>
+            &nbsp;
+            <button id="state" class="btn btn-success" disabled=true>Initializing...</button>
         </div>
-        <div class="col-5 text-center">
-            <span class="text-center" style="color: white;">NONE</span>
-        </div>
-        <div class="col-1">&nbsp;</div>
-        <div class="col-5 text-center">
-            <span class="text-center" style="color: white;">FLAT</span>
-        </div>        
     </div>
     <div class="row">
-        <div class="col-1 align-self-center">
-            <span class="text-center" style="color: white;">NONE</span>
-        </div>        
-        <div class="col-5">
-            <img src="{{ url }}nocalibration.jpg" alt="An uncalibrated photograph."/>
-        </div>
-        <div class="col-1">&nbsp;</div>
-        <div class="col-5">
-            <img src="{{ url }}flatsonly.jpg" alt="Calibrated with flats."/>
-        </div>        
-    </div>
-    <div class="row">
-        <div class="col-1 align-self-center">
-            <p class="text-center" style="color: white;">BIAS</p>
-            <p  class="text-center" style="color: gray;">DARK</p>
-        </div>        
-        <div class="col-5">
-            <img src="{{ url }}darksonly.jpg" alt="Calibrated with darks and bias."/>
-        </div>
-        <div class="col-1">&nbsp;</div>
-        <div class="col-5">
-            <img src="{{ url }}full.jpg" alt="Fully calibrated."/>
+        <div class="col-12">
+            <img id="noneImg" src="{{ url }}nocalibration.jpg" alt="An uncalibrated photograph."/>
+            <img id="flatsImg" data-imgurl="{{ url }}flatsonly.jpg" alt="Calibrated with flats."/>
+            <img id="darksImg" data-imgurl="{{ url }}darksonly.jpg" alt="Calibrated with darks and bias."/>
+            <img id="allImg" data-imgurl="{{ url }}full.jpg" alt="Fully calibrated."/>
         </div>
     </div>
 </div>
+<style>
+    img.d-none {
+        display: none;
+    }
+    p#state {
+        color: white;
+    }
+</style>
+<script>
+setTimeout(() => {
+    const app = {
+        none: $("#noneImg"),
+        flat: $("#flatsImg"),
+        dark: $("#darksImg"),
+        all: $("#allImg"),
+        btnDark: $("#darkToggle"),
+        btnFlat: $("#flatToggle"),
+        state: $("#state"),
+        images: () => [app.none, app.flat, app.dark, app.all],
+        imgs: [],
+        states: ["Uncalibrated", "Flats applied", "Darks applied", "Fully calibrated"],
+        classes: ["danger", "warning", "warning", "success"],
+        curImg: {},
+        darkToggle: false,
+        lightToggle: false,
+        switch: 0x0,
+        set: (flat, dark) => {
+            app.switch = (flat === true ? 0x01 : 0x0)
+                + (dark === true ? 0x02 : 0x0);
+            console.log(app.switch);
+            app.darkToggle = dark;
+            app.lightToggle = flat;
+            $(app.btnDark).text(app.darkToggle === true ? "Deactivate darks" : "Activate darks");
+            $(app.btnFlat).text(app.lightToggle === true ? "Deactivate flats" : "Activate flats");
+            $(app.curImg).addClass("d-none");
+            app.curImg = app.imgs[app.switch];
+            $(app.curImg).removeClass("d-none");
+            $(app.state).attr("class", `btn btn-${app.classes[app.switch]}`);
+            $(app.state).text(app.states[app.switch]);
+        }
+    };
+    app.imgs = app.images();
+    app.curImg = app.imgs[0];
+    for (let i = 1; i < app.imgs.length; i++) {
+        (function (idx) {
+            $(app.imgs[idx]).on("load", () => {
+                $(app.imgs[idx]).addClass("d-none");
+            });
+        })(i);
+        $(app.imgs[i]).attr("src", $(app.imgs[i]).data("imgurl"));
+    }
+    $(app.btnDark).on("click", () => app.set(app.lightToggle, !app.darkToggle));
+    $(app.btnFlat).on("click", () => app.set(!app.lightToggle, app.darkToggle));
+    app.set(false, false);
+});
+</script>
 
 </section>
 
