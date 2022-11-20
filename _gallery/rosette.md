@@ -8,6 +8,7 @@ telescope: Svbony sv503 70ED
 length: "336mm"
 aperture: "70mm"
 folder: rosette
+group: rosette
 exposure: 180
 lights: 40
 sessions: 1
