@@ -6,6 +6,7 @@ description: A wide angle shot to capture the nebulosity that links the Lagoon N
 image: /assets/images/gallery/redlagoon/thumb.jpg
 telescope: Svbony sv503 70ED
 length: "336mm"
+printurl: /photo/2681717286
 aperture: "70mm"
 folder: redlagoon
 group: m8
