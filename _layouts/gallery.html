@@ -9,6 +9,7 @@ layout: default
 {% assign fullsize = folderPath | append: page.folder | append: "-annotated-fs.jpg" %}
 {% assign grid = folderPath | append: page.folder | append: "-grid.jpg" %}
 {% assign copyright = "Image &copy; 2022 Jeremy Likness. All rights reserved." %}
+{% assign printurl = site.galleryhome | append: page.printurl %}
 {% if page.previous.url %}
 {% assign prev = site.baseurl | append: page.previous.url %}
 {% endif %}
@@ -27,6 +28,11 @@ layout: default
                 {% endif %} 
                 {{page.title}}
             </span></h2>
+            {% if printurl == site.galleryhome %}
+            <p><a href="{{ printurl }}" target="_blank">Visit our gallery of prints.</a></p>
+            {% else %}
+            <p><a href="{{ printurl }}" target="_blank">Purchase prints of this image.</a></p>
+            {% endif %}
         </div>
     </div>
     <div class="row">

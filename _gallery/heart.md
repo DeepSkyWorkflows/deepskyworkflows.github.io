@@ -5,6 +5,7 @@ tags: ["IC1795","IC1805","NGC1027"]
 description: A detailed look at the Heart Nebula.
 image: /assets/images/gallery/heart/thumb.jpg
 telescope: Svbony sv503 70ED
+printurl: /photo/2681259400
 length: "336mm"
 aperture: "70mm"
 signature: true

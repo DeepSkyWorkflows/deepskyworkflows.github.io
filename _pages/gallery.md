@@ -6,6 +6,8 @@ permalink: /gallery/
 ---
 <h3>Random picks</h3>
 {% include gallery-random.html %}
+<h3>Purchase prints</h3>
+<p>Visit our <a href="{{ site.galleryhome }}" target="_blank">online gallery shop</a> to browse and purchase metal, canvas, and paper prints. <a href="{{ site.galleryhome }}" target="_blank" class="btn btn-primary">🛒 Shop now</a></p>
 <h3>Collections</h3>
 <p>
 {% for collection in site.portfolios %}

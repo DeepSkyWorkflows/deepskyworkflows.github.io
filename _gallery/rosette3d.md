@@ -8,6 +8,7 @@ telescope: Svbony sv503 70ED
 length: "336mm"
 aperture: "70mm"
 folder: rosette3d
+printurl: /photo/2681259297
 exposure: 300
 group: rosette
 signature: true
