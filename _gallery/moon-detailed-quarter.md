@@ -5,7 +5,7 @@ image: assets\images\gallery\moon-detailed-quarter\thumb.jpg
 tags: ["The moon", "moon"]
 description: A close-up quarer slice of the edge of the moon.
 telescope: Celestron EdgeHD 9.25
-printurl: /photo/2681259501
+printurl: /gallery/20023740/photo/2681259501
 length: "2350mm"
 aperture: "235mm"
 folder: moon-detailed-quarter

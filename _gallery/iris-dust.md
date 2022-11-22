@@ -6,7 +6,7 @@ description: The Iris Nebula is a beautiful reflection nebula lit from behind by
 image: /assets/images/gallery/iris-dust/thumb.jpg
 telescope: Celestron EdgeHD 9.25
 length: "1645mm"
-printurl: /photo/2681717504
+printurl: /gallery/20023740/photo/2681717504
 signature: true
 aperture: "235mm"
 folder: iris-dust

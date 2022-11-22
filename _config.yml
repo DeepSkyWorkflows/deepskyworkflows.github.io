@@ -12,7 +12,7 @@ disqus: 'deep-sky-workflows'
 include: ["_pages", "_gallery", "_exhibiton", "_messier"]
 portfolios: ["Cayman Collection"]
 permalink: /:title/
-galleryhome: https://deepskyworkflows.shootproof.com/gallery/20023740
+galleryhome: https://deepskyworkflows.shootproof.com
 
 venues:
   duvall:

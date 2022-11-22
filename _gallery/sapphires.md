@@ -8,7 +8,7 @@ telescope: Svbony sv503 70ED
 length: "336mm"
 aperture: "70mm"
 folder: sapphires
-printurl: /photo/2681259301
+printurl: /gallery/20023740/photo/2681259301
 signature: true
 group: m45
 exposure: 300
