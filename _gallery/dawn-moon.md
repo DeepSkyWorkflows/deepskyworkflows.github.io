@@ -4,6 +4,7 @@ type: Lunar
 image: assets\images\gallery\dawn-moon\thumb.jpg
 tags: ["The moon", "moon"]
 description: A highly detailed dawn view of the moon.
+printurl: /gallery/lunar/photo/2682977991
 telescope: Svbony sv503 70ED
 length: "420mm"
 aperture: "70mm"
