@@ -1,0 +1,23 @@
+---
+title: "The Eye of Sauron"
+type: Nebula
+tags: ["Helix Nebula","NGC7293"]
+description: The Helix Nebula is a planetary nebula with a distinct shape that earns its nicknames, 'Eye of God' and 'Eye of Sauron'.
+image: /assets/images/gallery/eye/thumb.jpg
+telescope: Celestron EdgeHD 9.25
+length: "1645mm"
+aperture: "235mm"
+printurl: /gallery/20023740/photo/2682147162
+folder: eye
+group: ngc7293
+exposure: 300
+lights: 59
+sessions: 4
+firstCapture: 2022-09-26 
+lastCapture: 2022-11-18
+ra: "22h 29m 44.1s"
+dec: "-20° 49' 12.454"
+size: "28.787 x 22.833 arcmin"
+radius: "0.306 deg"
+scale: "0.383 arcsec/pixel"
+---
