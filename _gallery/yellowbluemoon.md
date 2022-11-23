@@ -4,6 +4,7 @@ type: Lunar
 tags: ["The moon", "moon"]
 description: A non-filtered look at the evening moon.
 image: /assets/images/gallery/yellowbluemoon/thumb.jpg
+printurl: /gallery/lunar/photo/2682978140
 telescope: Svbony sv503 70ED
 length: "800mm"
 aperture: "70mm"
