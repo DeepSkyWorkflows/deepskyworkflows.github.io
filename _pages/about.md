@@ -6,7 +6,7 @@ comments: true
 image: "assets/images/about/orion.jpeg"
 ---
 
-<p>Hello, and welcome to Deep Sky Workflows! I picked this name because most of my images are deep sky objects (DSO) and I wanted a place to post what I learn as I gain experience with astrophotography and image-processing or  workflows.</p>
+<p>Hello, and welcome to Deep Sky Workflows! I picked this name because most of my images are deep sky objects (DSO) and I wanted a place to post what I learn as I gain experience with astrophotography and image-processing or workflows.</p>
 
 <div class="row justify-content-between">
 
@@ -23,12 +23,14 @@ image: "assets/images/about/orion.jpeg"
 <p>You can also visit related websites:</p>
 
 <ul>
-    <li><i class="fab fa-youtube"></i>&nbsp;My <a href="https://www.youtube.com/channel/UCGTfyv52aBiubARo3t30MAQ" target="_blank">astrophotography videos</a></li>
+    <li><i class="fab fa-youtube"></i>&nbsp;My <a href="https://www.youtube.com/c/DeepSkyWorkflows" target="_blank">astrophotography videos</a></li>
     <li><i class="fab fa-github"></i>&nbsp;My <a href="https://github.com/DeepSkyWorkflows" target="_blank">astrophotography scripts and tools</a></li>
 </ul>
 
 <p>Connect with me on: <i class="fab fa-facebook"></i><a href="https://facebook.com/DeepSkyWorkflows" title="Deep Sky Workflows on Facebook">Facebook</a>, <i class="fab fa-instagram"></i><a href="https://instagram.com/DeepSkyWorkflows" title="Deep Sky Workflows on Instagram">Instagram</a>, and/or <i class="fab fa-twitter"></i><a href="https://twitter.com/DeepSkyWorkflow" title="@DeepSkyWorkflow on Twitter">Twitter</a>.</p>
 
+<p>You can also <a href="{{ site.galleryhome }}/contact" alt="Send me a message directly." title="Send me a message directly.">send me a message directly</a> using the linked form.    
+    
 <p>It’s great to have a place to share my deep sky explorations and astrophotography journey with you. In the beginning of 2021, I purchased an observation station named <a href="https://amzn.to/3CBbsds" target="_blank">Stellina</a>. It is a fully automated system for capturing deep sky images. What intrigued me about the unit was the claim that it could handle light polluted areas and the ease of setup. I took a chance, purchased the scope and have not been disappointed.</p>
 
 <p class="mb-5"><img class="shadow-lg" src="{{site.baseurl}}/assets/images/about/stellina.jpeg" alt="Stellina pointed at the stars" /><br/><i class="center">Stellina pointed at the stars</i></p>
@@ -59,11 +61,8 @@ Eventually, I purchased additional hardware and pieced together my own system. T
 <div class="col-md-4">
 
 <div class="sticky-top sticky-top-80">
-<h5><i class="fa fa-coffee"></i> Buy me a coffee?</h5>
-<a target="_blank" href="https://www.paypal.com/paypalme/jeremylikness" class="btn btn-danger">💲 Donate</a>
-<p>As an amateur astrophotographer, I take on all of the costs associated with this hobby. These include camera gear and accessories, telescopes, recording equipment, production software, and more.</p>
-<p>My commitment is to not only continue to produce images and improve their quality, but to also share tips, tricks, and techniques in blogs and videos. If you receive value from this website and would like to help out, consider donating an amount you are comfortable with. Your donation of any amount helps me to maintain and improve Deep Sky Workflows.</p>
-
-<a target="_blank" href="https://www.paypal.com/paypalme/jeremylikness" class="btn btn-danger">💲 Donate</a>
-
+    <h5>A win for both of us</h5>
+    <a href="{{ site.galleryhome }}" class="btn btn-success">🛒 Shop for canvas, metal, and paper astrophotography prints</a>
+    <p>Astrophotography is an expensive hobby, but very rewarding. I am blown away by what is possible with modern technology, knowledge, and patience. If you are a fan of space art, I propose a win for both of us. Click the link for my <a href="{{ site.galleryhome }}" target="_blank">online astrophotography shop</a> and find a picture (or pictures) you like. Have it printed on the medium of your choice (my favorite is metal) and you will receive beautiful piece of natural art to display while I receive a small profit that I will reinvest into astrophotography. If you see an image in the <a href="/gallery">gallery</a> that's not available in the shop, let me know and I'll have it added. Thanks for your time and attention and I hope you consider claiming a piece of art for yourself.</p>
+    
 <p>As an Amazon affiliate I may receive commission for purchases made from links on this site. If you decide to make an astrophotography purchase, you can support this site by visiting Amazon through my <a href="https://amzn.to/37fkK30" target="blank">affiliate link</a> to buy your item.
