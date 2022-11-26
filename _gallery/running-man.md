@@ -5,6 +5,7 @@ tags: ["NGC1973","NGC1975","NGC1977","the Running Man Nebula","The star 42Ori","
 description: The Running Man is clearly visible in this dusty nebula with beautiful blue and purple highlights. An often overlooked gem in the Orion constellation.
 image: /assets/images/gallery/running-man/thumb.jpg
 telescope: Celestron EdgeHD 9.25
+printurl: /gallery/winter/photo/2688009278
 length: "1650mm"
 aperture: "235mm"
 folder: running-man

@@ -2,6 +2,7 @@
 title: "M42: The Orion Nebula in rich detail"
 type: Nebula
 tags: ["Great Orion Nebula","M42","M43","Mairan's Nebula","NGC1976","NGC1982","Orion Nebula","The star θ1Ori","The star θ2Ori"]
+printurl: /gallery/winter/photo/2688009074
 description: A stack of over 800 exposures to grab as much detail as possible.
 image: /assets/images/gallery/m42-detailed/thumb.jpg
 telescope: Stellina
