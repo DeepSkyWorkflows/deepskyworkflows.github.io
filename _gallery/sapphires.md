@@ -8,6 +8,7 @@ telescope: Svbony sv503 70ED
 length: "336mm"
 aperture: "70mm"
 folder: sapphires
+wwt: http://www.worldwidetelescope.org/wwtweb/ShowImage.aspx?reverseparity=False&scale=1.580821&name=sapphires.jpg&imageurl=https://deepskyworkflows.com/assets/images/gallery/sapphires/sapphires.jpg&credits=Jeremy+Likness+at+DeepSkyWorkflows.com+(All+Rights+Reserved)&creditsUrl=&ra=56.851766&dec=24.061330&x=2640.1&y=1920.6&rotation=50.96&thumb=https://deepskyworkflows.com/assets/images/gallery/sapphires/thumb.jpg
 printurl: /gallery/20023740/photo/2681259301
 signature: true
 group: m45
