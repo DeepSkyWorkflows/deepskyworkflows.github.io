@@ -6,6 +6,7 @@ layout: default
 {% assign folderPath = site.baseurl | append: "/assets/images/gallery/" | append: page.folder | append: "/" %}
 {% assign mainImage = folderPath | append: page.folder | append: ".jpg" %}
 {% assign annotated = folderPath | append: page.folder | append: "-annotated.jpg" %}
+{% assign nostars = folderPath | append: page.folder | append: "-nostars.jpg" %}
 {% assign fullsize = folderPath | append: page.folder | append: "-annotated-fs.jpg" %}
 {% assign grid = folderPath | append: page.folder | append: "-grid.jpg" %}
 {% assign copyright = "Image &copy; 2022 Jeremy Likness. All rights reserved." %}
@@ -71,9 +72,16 @@ layout: default
                 <div class="card" id="main">
                     <div class="card-header bg-dark">Fullsize Image (tap or click)</div>
                     <div class="card-body">
-                        <a href="{{mainImage}}" target="_blank" title="Click to view the fullsize image.">
-                            <img class="img-fluid" data-src="{{mainImage}}" src="{{loadingImage}}"
+                        {% if page.nostars == true %}
+                        <button id="starToggle" class="btn btn-primary" style="margin: 1em;">Remove stars</button>
+                        {% endif %}
+                        <a id="mainImageToggle" href="{{mainImage}}" target="_blank" title="Click to view the fullsize image.">
+                            <img id="mainImg" class="img-fluid" data-src="{{mainImage}}" src="{{loadingImage}}"
                                 title="{{page.description}}" />
+                            {% if page.nostars == true %}
+                            <img id="mainImgNoStars" class="img-fluid" data-src="{{nostars}}" src="{{loadingImage}}"
+                                title="{{page.description}}" />                            
+                            {% endif %}
                         </a>
                     </div>
                     <div class="card-footer small text-right bg-dark">{{copyright}}</div>             

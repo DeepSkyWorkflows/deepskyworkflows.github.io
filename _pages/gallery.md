@@ -20,7 +20,11 @@ permalink: /gallery/
 {% assign telescopeArray = '' | split: ',' %}
 <div class="row mw-25">
     <div class="col-12">
-    <p><input type="checkbox" id="signature"/>⭐ Show Signature series photographs only</p>
+    <p><input type="checkbox" id="signature" alt="Show Signature series photographs only" title="Show Signature series photographs only"/>⭐ Signature series
+    &nbsp;|&nbsp;
+    🖼 Prints available
+    &nbsp;|&nbsp;
+    ✨ Starless version</p>
 <p><a href="{{ site.baseurl}}/gallery/slideshow/" title="Slideshow"><i class="fa fa-film"></i> Slideshow</a>
 &nbsp;|&nbsp;
 <strong>Jump to Category:</strong>
@@ -63,8 +67,12 @@ permalink: /gallery/
             {% assign grid = mainUrl | append: "#grid" %}
             {% assign itemCount = itemCount | plus: 1 %}
             {% assign thumbPath = site.baseurl | append: "/assets/images/gallery/" | append: item.folder | append: "/thumb.jpg" %}           
+            {% assign print = false %}
+            {% if item.printurl %}
+            {% assign print = true %}
+            {% endif %}            
             {% assign loadingPath = site.baseurl | append: "/assets/images/loading.gif" %}
-                <div class="card gallery-card" data-url="{{item.url}}" data-telescope="{{item.telescope}}" data-signature="{{item.signature}}">
+                <div class="card gallery-card" data-url="{{item.url}}" data-telescope="{{item.telescope}}" data-signature="{{item.signature}}" data-prints="{{print}}" data-nostars="{{item.nostars}}">
                     <a href="{{mainUrl}}" title="{{item.description}}" tabindex="{{itemCount}}">
                         <img class="card-img-top gallery-img" id="image-{{itemIndex}}" data-url="{{thumbPath}}" src="{{loadingPath}}" alt="{{item.description}}">
                         {% assign itemIndex = itemIndex | plus: 1 %}
@@ -72,6 +80,12 @@ permalink: /gallery/
                     <div class="card-header bg-dark text-center">
                     {% if item.signature ==  true %}
                     <span title="Signature Series">⭐</span>
+                    {% endif %}
+                    {% if item.printurl %}
+                    <span title="Prints available">🖼</span>
+                    {% endif %}
+                    {% if item.nostars ==  true %}
+                    <span title="Starless version">✨</span>
                     {% endif %}
                         <a href="{{mainUrl}}" title="{{item.description}}">{{item.title}}</a>
                     </div>                

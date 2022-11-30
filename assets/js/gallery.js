@@ -3,6 +3,7 @@ $(document).ready(function () {
     const active = {
         link: null,
         target: null,
+        nostars: false,
         queue: 0,
         total: 0
     }
@@ -10,6 +11,8 @@ $(document).ready(function () {
     let progress = function () {
         return "Loading: " + active.queue + " remaining of " + active.total + " images.";
     }
+
+    $('#starToggle').attr("disabled", true);
 
     $("img[data-src]").each(function () {
         let target = $(this);
@@ -26,7 +29,23 @@ $(document).ready(function () {
                 setTimeout(function () {
                     if (active.queue === 0) {
                         $('#loading').addClass('d-none');
+                        $('#mainImgNoStars').addClass('d-none');
                         $('#wrapper').removeClass('d-none');
+                        $('#starToggle').removeAttr('disabled');
+                        $('#starToggle').click(() => {
+                            if (active.nostars === true) {
+                                active.nostars = false;
+                                $('#mainImgNoStars').addClass('d-none');
+                                $('#mainImg').removeClass('d-none');
+                                $('#starToggle').text('Remove stars');
+                            } 
+                            else {
+                                active.nostars = true;
+                                $('#mainImgNoStars').removeClass('d-none');
+                                $('#mainImg').addClass('d-none');
+                                $('#starToggle').text('Restore stars');
+                            }
+                        });
                     }
                 });
             }
