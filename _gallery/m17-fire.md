@@ -10,7 +10,6 @@ length: "1465mm"
 signature: true
 aperture: "235mm"
 folder: m17-fire
-signature: true
 group: "m17"
 exposure: 120
 lights: 28

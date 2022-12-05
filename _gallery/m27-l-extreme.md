@@ -2,8 +2,7 @@
 title: "M27: Dumbbell Nebula with Optolong L-Extreme"
 type: Nebula
 tags: ["Dumbbell Nebula","M27","NGC6853"]
-description: "This bright close-up of the Dumbbell Nebula combines traditional RGB with highlights in H-alpha (Ha) provided by a narrowband Optolong L-Extreme filter. 30 minutes with a UV/IR cut filter and
-28 minutes with the L-Extreme."
+description: "This bright close-up of the Dumbbell Nebula combines traditional RGB with highlights in H-alpha (Ha) provided by a narrowband Optolong L-Extreme filter. 30 minutes with a UV/IR cut filter and 28 minutes with the L-Extreme."
 image: /assets/images/gallery/m27-l-extreme/thumb.jpg
 telescope: Celestron EdgeHD 9.25
 length: "1635mm"
