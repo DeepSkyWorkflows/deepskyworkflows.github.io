@@ -23,6 +23,9 @@ permalink: "/tags"
 {% assign sortedPosts = post | uniq | sort: "title" %}
 {% assign sortedGallery = gallery | uniq | sort: "title" %}
 <div class="container-fluid">
+    <div class="article-post m-3">
+        {{ content }}
+    </div>
     <a name="top"></a>
     <div class="row">
         <div class="col">

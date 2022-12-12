@@ -1,0 +1,55 @@
+---
+layout: default
+---
+<script>
+    const video = {
+        id: "{{ page.youtubeid }}"
+    };
+</script>
+<script src="{{ site.baseurl }}/assets/js/video.js"></script>
+<section>
+
+    <div class="section-title">
+        <h2><a href="/videos">Videos</a>&nbsp;&raquo;&nbsp;<span>{{ page.title }}</span></h2>
+        <p><small><i class="fa fa-calendar"></i>&nbsp;{{ page.date | date_to_string }}
+            {% if page.last_modified_at %}
+            (Updated: {{ page.last_modified_at | date: "%b %-d, %Y" }})
+            {% endif %}</small></p>                   
+    </div>
+    
+    <div style="float: left; margin: 0.33em;">
+        {% include share.html %}
+    </div>
+        
+    <div class="article-post m-3">
+        <p>{{page.description}}</p>
+        <p class="m-5">
+        <div id="player"></div>
+        </p>
+        <p><a href="https://youtu.be/{{page.youtubeid}}" target="_blank" alt="{{page.description}}"
+            title="{{page.description}}">
+            <i class="fab fa-youtube"></i>&nbsp;
+            {{page.title}}
+        </a></p>                
+        {{content}}        
+    </div>    
+
+    <!-- Post Tags -->
+    <div class="after-post-tags">
+        Tags:
+        <ul class="tags">
+            {% assign sortedTags = page.tags | sort %}
+            {% for tag in sortedTags %}
+            {% assign pTag = tag | strip | replace: ' ', '-' | remove: '(' | remove: ')' | downcase %}
+            <li>
+                <a class="smoothscroll" href="{{site.baseurl}}/tag/{{ pTag }}">#{{ tag }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+   
+    {% if page.comments == true %}
+    {% include disqus.html url=page.url id=page.id %}
+    {% endif %}
+    
+</section>

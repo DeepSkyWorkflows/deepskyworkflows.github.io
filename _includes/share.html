@@ -1,4 +1,14 @@
 <div class="share sticky-top sticky-top-offset">
+    {% if page.youtubeid %}
+    <ul>
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://youtube.com/c/deepskyworkflows" title="Astrophotography videos"
+            alt="Astrophotography videos">
+                <i class="fab fa-youtube"></i> Youtube Channel
+            </a>
+        </li>
+    </ul>
+    {% endif %}
     <p>
         <strong>Share</strong>
     </p>
@@ -24,6 +34,10 @@
     </ul>  
     
     {% assign gallery = "" | split: "," %}
+    {% assign maxitems = 10 %}
+    {% if page.youtubeid %}
+    {% assign maxitems = 2 %}
+    {% endif %}
     {% for item in site.gallery %}
         {% for tag in item.tags %}
             {% assign gtag = tag | capitalize | strip %}
@@ -39,7 +53,7 @@
         <hr/>
         <p><strong>Gallery</strong></p>
         {% assign sorted = gallery | uniq | sort: "title" %}
-        {% for item in sorted limit: 10 %}
+        {% for item in sorted limit: maxitems %}
             {% assign mainUrl = site.baseurl | append: item.url %}            
             {% assign thumbPath = site.baseurl | append: "/assets/images/gallery/" | append: item.folder | append: "/thumb.jpg" %}
             <div class="card gallery-card mw-100">

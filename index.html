@@ -8,38 +8,79 @@ author: "deepskyworkflows"
 
 {% if page.url == "/" %}
 
-<!-- Featured
-================================================== -->
-<section class="featured-posts">
-    <div class="section-title">
-        <h2><span>Featured</span></h2>
-    </div>
-    <div class="row">
+    <section>
+        <div class="section-title">
+            <h3>Welcome to Deep Sky Workflows!</h3>
+        </section>        
+    </section>
 
-    {% for post in site.posts %}
-
-        {% if post.featured == true %}
-
-            {% include featuredbox.html %}
-
+    <section class="featured-posts">
+        <div class="section-title">
+            <h2><span>Recent posts</span></h2>
+        </div>
+        <div class="row">
+        {% assign count = 0 %}
+        {% assign posts_to_feature = site.posts | sort: 'date' | reverse %}
+        {% for post in posts_to_feature %}      
+        {% assign count = count | plus: 1 %}
+        {% if count < 3 %}
+                {% include featuredbox.html %}
+        {% else %}
+            {% if count == 3 %}
+            <ul>
+            {% endif %}
+            {% if count <= 5 %}
+            <li>
+                <a href="{{ site.baseurl }}/{{ post.url}}" alt="{{ post.description }}"
+                title="{{ post.description }}">
+                    <strong>{{ post.date | date_to_string }}</strong>&mdash;{{ post.title }}
+                </a>
+            </li>
+            {% endif %}
         {% endif %}
+        {% endfor %}
+        </ul>
+        </div>
+    </section>
 
-    {% endfor %}
+    <section class="featured-posts">
+        <div class="section-title">
+            <h2><span>Recent videos</span></h2>
+        </div>
+        <div class="row">
+        {% assign count = 0 %}
+        {% assign videos_to_feature = site.videos | sort: 'date' | reverse | limit: 7 %}
+        {% for post in videos_to_feature %}      
+        {% assign count = count | plus: 1 %}
+        {% if count == 1 or count == 2  or count == 3 or count == 4 %}
+                {% include videobox.html %}
+        {% else %}
+            {% if count == 5 %}
+            <ul>
+            {% endif %}
+            <li>
+                <a href="{{ site.baseurl }}/{{ post.url}}" alt="{{ post.description }}"
+                title="{{ post.description }}">
+                    <strong>{{ post.date | date_to_string }}</strong>&mdash;{{ post.title }}
+                </a>
+            </li>
+        {% endif %}
+        {% endfor %}
+        </ul>
+        </div>
+    </section>
 
-    </div>
-</section>
-
-<section>
-    <div class="section-title">
-        <h2><span>Gallery</span></h2>
-    </div>
-    {% include gallery-random.html %}    
-</section>
+    <section>
+        <div class="section-title">
+            <h2><span>Gallery</span></h2>
+        </div>
+        {% include gallery-random.html %}    
+    </section>
 
 {% endif %}
 
 <section>
-    Browse <a href="{{ site.baseurl }}/categories">categories</a> and <a href="{{ site.baseurl }}/tags">tags</a>.
+    <p>Browse the comprehensive <a href="/tags">topic index</a> to find content you are interested in.</p>
 </section>
 
 <!-- Posts Index

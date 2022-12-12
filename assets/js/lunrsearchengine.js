@@ -14,9 +14,15 @@ var documents = [{% for page in site.pages %}{% if page.url contains '.xml' or p
         "id": {{ counter }},
         "url": "{{ site.url }}{{site.baseurl}}{{ page.url }}",
         "title": "{{ page.title }}",
-        "body": "{{ page.content | markdownify | replace: '.', '. ' | replace: '</h2>', ': ' | replace: '</h3>', ': ' | replace: '</h4>', ': ' | replace: '</p>', ' ' | strip_html | strip_newlines | replace: '  ', ' ' | replace: '"', ' ' }}"{% assign counter = counter | plus: 1 %}
+        "body": "{{ page.description | markdownify | replace: '.', '. ' | replace: '</h2>', ': ' | replace: '</h3>', ': ' | replace: '</h4>', ': ' | replace: '</p>', ' ' | strip_html | strip_newlines | replace: '  ', ' ' | replace: '"', ' ' }}"{% assign counter = counter | plus: 1 %}
         }, {% endif %}{% endfor %}
-    {% for page in site.without-plugin %}{
+        {% for page in site.videos %}{% if page.url contains '.xml' or page.url contains 'assets' or page.url contains 'category' or page.url contains 'tag' or page.url contains '/_'  %}{% else %}{
+            "id": {{ counter }},
+            "url": "{{ site.url }}{{site.baseurl}}{{ page.url }}",
+            "title": "{{ page.title }}",
+            "body": "{{ page.description | markdownify | replace: '.', '. ' | replace: '</h2>', ': ' | replace: '</h3>', ': ' | replace: '</h4>', ': ' | replace: '</p>', ' ' | strip_html | strip_newlines | replace: '  ', ' ' | replace: '"', ' ' }}"{% assign counter = counter | plus: 1 %}
+            }, {% endif %}{% endfor %}
+        {% for page in site.without-plugin %}{
     "id": {{ counter }},
     "url": "{{ site.url }}{{site.baseurl}}{{ page.url }}",
     "title": "{{ page.title }}",
@@ -27,6 +33,8 @@ var documents = [{% for page in site.pages %}{% if page.url contains '.xml' or p
     "title": "{{ page.title }}",
     "body": "{{ page.date | date: "%Y/%m/%d" }} - {{ page.content | markdownify | replace: '.', '. ' | replace: '</h2>', ': ' | replace: '</h3>', ': ' | replace: '</h4>', ': ' | replace: '</p>', ' ' | strip_html | strip_newlines | replace: '  ', ' ' | replace: '"', ' ' }}"{% assign counter = counter | plus: 1 %}
     }{% if forloop.last %}{% else %}, {% endif %}{% endfor %}];
+
+documents.sort((a, b) => a.title.localeCompare(b));
 
 var idx = lunr(function () {
     this.ref('id')

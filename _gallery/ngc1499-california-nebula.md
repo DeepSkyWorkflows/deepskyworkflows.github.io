@@ -9,6 +9,7 @@ length: "400mm"
 aperture: "80mm"
 folder: ngc1499-california-nebula
 exposure: 10
+group: california
 lights: 548
 sessions: 2
 firstCapture: 2021-06-15 

@@ -384,6 +384,10 @@ blockquote {
     margin-left: 0;
 }
 
+.share a:hover {
+    color: lightgreen;
+}
+
 .share ul li i.fa {
     border: 1px solid #ddd;
     width: 30px;
@@ -1078,4 +1082,36 @@ div.messier-img {
     font-size: 2em;
     font-weight: bold;
     color: lightgreen;
+}
+
+.breaker::before {
+    content: '\A'; 
+    white-space: pre;
+}
+
+.breaker {
+    display: block;
+    clear: both;    
+}
+
+.full-width {
+    width: 100vw;
+}
+
+table {
+    margin: 1em;
+    max-width: 95%;
+}
+
+th {
+    font-weight: bold;
+    padding: 0.5em;
+    border-right: solid 2px white;
+    border-left: solid 2px white;
+    border-top: solid 1px gray;
+}
+
+td {
+    border: solid 2px white;
+    padding: 0.5em;
 }

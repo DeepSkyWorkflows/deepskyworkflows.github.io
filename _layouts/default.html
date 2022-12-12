@@ -69,6 +69,22 @@
                 <a class="nav-link" href="{{ site.baseurl }}/index.html"><i class="fa fa-file"></i> Blog</a>
                 </li>
 
+                {% if page.url contains "/gallery" %}
+                <li class="nav-item active">
+                {% else %}
+                <li class="nav-item">
+                {% endif %}
+                <a class="nav-link" href="{{ site.baseurl }}/gallery"><i class="fa fa-images"></i> Gallery</a>
+                </li>
+        
+                {% if page.url contains "/video" %}
+                <li class="nav-item active">
+                {% else %}
+                <li class="nav-item">
+                {% endif %}
+                <a class="nav-link" href="{{ site.baseurl }}/videos"><i class="fab fa-youtube"></i> Videos</a>
+                </li>
+
                 {% if page.url contains "/about" %}
                 <li class="nav-item active">
                 {% else %}
@@ -77,24 +93,8 @@
                 <a class="nav-link" href="{{ site.baseurl }}/about"><i class="fa fa-address-card"></i> About</a>
                 </li>
 
-                {% if page.url contains "/gallery" %}
-                <li class="nav-item active">
-                {% else %}
-                <li class="nav-item">
-                {% endif %}
-                <a class="nav-link" href="{{ site.baseurl }}/gallery"><i class="fa fa-images"></i> Gallery</a>
-                </li>
-
                 <li class="nav-item">
                     <a class="nav-link" target="_blank" href="{{ site.galleryhome }}">🛒 Print Shop</a>
-                </li>
-
-                {% if page.url contains "/exhibition" %}
-                <li class="nav-item active">
-                {% else %}
-                <li class="nav-item">
-                {% endif %}
-                <a class="nav-link" href="{{ site.baseurl }}/exhibition"><i class="fa fa-chalkboard-teacher"></i> Exhibition</a>
                 </li>
         
                 {% if page.url contains "/messier" %}
@@ -103,10 +103,6 @@
                 <li class="nav-item">
                 {% endif %}
                 <a class="nav-link" href="{{ site.baseurl }}/messier"><i class="fa fa-star"></i> Messier Catalog</a>
-                </li>
-        
-                <li class="nav-item">
-                <a target="_blank" class="nav-link" href="https://www.youtube.com/c/deepskyworkflows"><i class="fab fa-youtube"></i> Videos</a>
                 </li>
 
                 <li class="nav-item">

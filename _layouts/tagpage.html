@@ -8,8 +8,13 @@ layout: default
     {{ content }}
 </section>
 
+<a name="top"></a>
+Jump to: <a href="#ImageAnchor">Images</a>&nbsp;|&nbsp;<a href="#PostsAnchor">Blog posts</a>
+&nbsp;|&nbsp;<a href="#VideosAnchor">Videos</a>
+
 <div class="container container-fluid w-100">
     <div class="row">
+        <a name="ImageAnchor"></a>
             {% assign tag = page.tagname | downcase %}
             {% assign subitems = site.gallery | sort: "title" %}
             {% assign itemCount = 0 %}
@@ -17,6 +22,9 @@ layout: default
             {% for item in subitems %}        
             {% assign itemTags = item.tags | join: "~~~" | downcase | split: "~~~" %}
             {% if itemTags contains tag %}
+                {% if itemCount == 0 %}
+                <h2 class="breaker full-width">Images</h2><hr/>
+                {% endif %}
                 {% assign itemCount = itemCount | plus: 1 %}
                 {% assign mainUrl = site.baseurl | append: item.url %}
                 {% assign thumbPath = site.baseurl | append: "/assets/images/gallery/" | append: item.folder | append: "/thumb.jpg" %}
@@ -36,16 +44,21 @@ layout: default
             {% endfor %}
         </div>
         <div class="row">
+            <a class="m-3 breaker" href="#top">🔝 Back to Top</a>
+            <a name="PostsAnchor"></a>
             {% assign posts = site.posts | sort: "title" %}
             {% assign itemCount = 0 %}
             {% assign itemIndex = 9000 %}
             {% for post in posts %}  
             {% assign postTags = post.tags | join: "~~~" | downcase %}
             {% if postTags contains tag %}
+            {% if itemCount == 0 %}
+            <h2 class="breaker full-width">Blog Posts</h2>
+            {% endif %}
             {% assign itemCount = itemCount | plus: 1 %}
             {% assign mainUrl = site.baseurl | append: post.url %}            
             {% assign thumbPath = site.baseurl | append: "/" | append: post.image %}
-            <div style="min-width: 300px;" class="card col gallery-card float-left m-2" data-url="{{post.url}}">
+            <div style="min-width: 300px; max-width: 400px;" class="card col gallery-card float-left m-2" data-url="{{post.url}}">
                 <a href="{{mainUrl}}" title="{{post.description}}" tabindex="{{itemCount}}">
                     <img class="card-img-top gallery-img" id="image-{{itemIndex}}" src="{{thumbPath}}" alt="{{post.description}}">
                     {% assign itemIndex = itemIndex | plus: 1 %}
@@ -56,5 +69,33 @@ layout: default
             </div>
             {% endif %}
             {% endfor %}
+        </div>
+        <div class="row">
+            <a class="m-3" href="#top">🔝 Back to Top</a>
+            <a name="VideosAnchor"></a>
+            {% assign videos = site.videos | sort: "title" %}
+            {% assign itemCount = 0 %}
+            {% assign itemIndex = 9000 %}
+            {% for video in videos %}  
+            {% assign postTags = video.tags | join: "~~~" | downcase %}
+            {% if postTags contains tag %}
+            {% if itemCount == 0 %}
+            <h2 class="breaker full-width">Videos</h2>
+            {% endif %}
+            {% assign itemCount = itemCount | plus: 1 %}
+            {% assign mainUrl = site.baseurl | append: video.url %}            
+            {% assign thumbPath = site.baseurl | append: "/" | append: video.image %}
+            <div style="min-width: 300px; max-width: 400px;" class="card col gallery-card float-left m-2" data-url="{{video.url}}">
+                <a href="{{mainUrl}}" title="{{post.description}}" tabindex="{{itemCount}}">
+                    <img class="card-img-top gallery-img" id="image-{{itemIndex}}" src="{{thumbPath}}" alt="{{video.description}}">
+                    {% assign itemIndex = itemIndex | plus: 1 %}
+                </a>
+                <div class="card-header bg-dark text-center">
+                    <a href="{{mainUrl}}" title="{{video.description}}">{{video.title}}</a>
+                </div>                
+            </div>
+            {% endif %}
+            {% endfor %}
+            <a class="m-3 breaker full-width" href="#top">🔝 Back to Top</a>            
         </div>
 </div>

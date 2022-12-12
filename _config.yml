@@ -1,7 +1,7 @@
 # Site
 name: "Deep Sky Workflows"
 title: "Deep Sky Workflows: Astrophotography, Space, and Astronomy"
-description: "Amateur astrophotography images and tutorials from regular cameras to powerful telescopes."
+description: "Astrophotography for everyone: images, videos, and articles about space, nebulae, galaxies, planets, telescopes, and how to take and process deep space images from your own backyard."
 logo: 'assets/images/logo.png' 
 favicon: 'assets/images/logo.png'
 baseurl: 
@@ -101,7 +101,10 @@ exclude: [changelog.md, mediumish-theme-license.txt, LICENSE, docker-compose.yml
 collections:
   gallery:
     output: true
-    permalink: /gallery/:title/    
+    permalink: /gallery/:title/
+  videos:
+    output: true
+    permalink: /video/:title/    
   exhibition:
     output: true
     permalink: /exhibition/:name
@@ -126,6 +129,14 @@ defaults:
       layout: "exhibition"
       author: "deepskyworkflows"
       comments: true
+  - scope:
+      path: ""
+      type: "videos"
+    values:
+      layout: "videos"
+      author: "deepskyworkflows"
+      comments: true
+      toc: false
   - scope:
       path: ""
       type: "messier"
