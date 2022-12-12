@@ -6,6 +6,7 @@ description: A lucky imaging session combined nearly 1,000 pictures at a 2ms exp
 image: /assets/images/gallery/detailedcolormoon/thumb.jpg
 telescope: Svbony sv503 70ED
 length: "840mm"
+signature: true
 aperture: "70mm"
 folder: detailedcolormoon
 exposure: 0.02

@@ -7,6 +7,7 @@ image: /assets/images/gallery/closer/thumb.jpg
 telescope: Celestron EdgeHD 9.25
 printurl: /gallery/20023740/photo/2682147163
 length: "5875mm"
+signature: true
 aperture: "235mm"
 folder: closer
 exposure: 0.02

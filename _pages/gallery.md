@@ -14,7 +14,8 @@ permalink: /gallery/
 <a href="{{ site.baseurl }}/tag/{{collection | strip | replace: ' ', '-' | remove: '(' | remove: ')' | downcase }}" title="{{collection}}" alt="{{collection}}">{{collection}}</a>&nbsp;|&nbsp;
 {% endfor %}
 </p>
-<h3>Filter and search</h3>
+<h3 id="top">Filter and search</h3>
+<a name="top"></a>
 {% assign version = 10 %}
 {% assign types = site.gallery | group_by: 'type' | sort: 'name' %}
 {% assign telescopeArray = '' | split: ',' %}
@@ -22,14 +23,14 @@ permalink: /gallery/
     <div class="col-12">
     <p><input type="checkbox" id="signature" alt="Show Signature series photographs only" title="Show Signature series photographs only"/>⭐ Signature series
     &nbsp;|&nbsp;
-    🖼 Prints available
+    <input type="checkbox" id="prints" alt="Show photographs with available prints only" title="Show  photographs with available prints only"/>🖼 Prints available
     &nbsp;|&nbsp;
     ✨ Starless version</p>
 <p><a href="{{ site.baseurl}}/gallery/slideshow/" title="Slideshow"><i class="fa fa-film"></i> Slideshow</a>
 &nbsp;|&nbsp;
 <strong>Jump to Category:</strong>
 {% for nestedGroup in types %}
-    <a href="#{{nestedGroup.name}}">{{nestedGroup.name}}</a>&nbsp;|
+    <a href="#{{nestedGroup.name | remove: ' '}}">{{nestedGroup.name}}</a>&nbsp;|
     {% for item in nestedGroup.items %}
     {% assign telescopeArray = telescopeArray | push: item.telescope %}
     {% endfor %}
@@ -40,7 +41,7 @@ permalink: /gallery/
  <button class="btn btn-sm btn-link telescopeFilter">{{scope}}</button>&nbsp;|
 {%endfor%}
 </p>
-<p><a name="top"></a>
+<p>
 <strong><i class="fa fa-filter"></i> Filter:</strong>&nbsp;<span class="clickable" id="clearBtn"><i class="fa fa-times-circle"></i></span>&nbsp;
 <input type="text" class="gallery-search form-control text-small mw-100" tabindex="0" placeholder="Start typing..." id="gallerySearch"/>
 </p>
@@ -49,17 +50,18 @@ permalink: /gallery/
 <div class="row mw-25">
     <div class="col-12">
         {% for group in types %}
+        {% assign groupCode = group.name | remove: " " %}
             <div class="row">&nbsp;</div>
-            <div class="row groupheader" data-group="{{group.name}}">
+            <div class="row groupheader" data-group="{{groupCode}}">
                 <div class="col-12">
-                    <h4>
-                        <a name="{{group.name}}"></a> {{group.name}} <a href="#top">🔝</a>
+                    <h4 id="{{groupCode}}">
+                        <a name="{{groupCode}}"></a> {{group.name}} <a href="#top">🔝</a>
                     </h4>
                 </div>
             </div>                
             {% assign subitems = group.items | sort : 'title' %}
             {% assign itemCount = 0 %}
-            <div class="row groupdetail" data-group="{{group.name}}">
+            <div class="row groupdetail" data-group="{{groupCode}}">
             {% assign itemIndex = 1 %}
             {% for item in subitems %}        
             {% assign mainUrl = site.baseurl | append: item.url %}
@@ -97,4 +99,3 @@ permalink: /gallery/
 </div>
 
 <script src="{{ site.baseurl }}/assets/js/gallery_filter.js"></script>
-    

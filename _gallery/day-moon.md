@@ -7,6 +7,7 @@ image: assets/images/gallery/day-moon/thumb.jpg
 telescope: Svbony sv503 70ED
 printurl: /gallery/lunar/photo/2682978034
 length: "420mm"
+signature: true
 aperture: "70mm"
 group: "crescent"
 folder: day-moon

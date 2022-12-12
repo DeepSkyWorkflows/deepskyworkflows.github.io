@@ -9,6 +9,7 @@ length: "336mm"
 printurl: /gallery/20023740/photo/2681717286
 aperture: "70mm"
 folder: redlagoon
+signature: true
 exposure: 30
 lights: 258
 sessions: 1

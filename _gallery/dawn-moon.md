@@ -6,6 +6,7 @@ tags: ["The moon", "moon"]
 description: A highly detailed dawn view of the moon.
 printurl: /gallery/lunar/photo/2682977991
 telescope: Svbony sv503 70ED
+signature: true
 length: "420mm"
 aperture: "70mm"
 folder: dawn-moon

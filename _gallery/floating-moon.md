@@ -7,6 +7,7 @@ description: "This image of the moon was stacked from multiple images taken whil
 printurl: /gallery/lunar/photo/2682978032
 telescope: Svbony sv503 70ED
 length: "336mm"
+signature: true
 aperture: "70mm"
 folder: floating-moon
 group: "fullmoon"

@@ -6,6 +6,7 @@ description: A clear wide-angle view of the predawn sky on Grand Cayman.
 image: /assets/images/gallery/clarity/thumb.jpg
 telescope: Sony ILCE-6300
 length: "12mm"
+signature: true
 aperture: "6mm"
 folder: clarity
 exposure: 20

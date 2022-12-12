@@ -6,6 +6,7 @@ description: The air was perfectly calm and ideal for this long exposure of the 
 image: /assets/images/gallery/island-stripes/thumb.jpg
 telescope: Sony ILCE-6300
 length: "12mm"
+signature: true
 aperture: "6mm"
 folder: island-stripes
 exposure: 20

@@ -7,6 +7,7 @@ image: /assets/images/gallery/eye/thumb.jpg
 telescope: Celestron EdgeHD 9.25
 length: "1645mm"
 aperture: "235mm"
+signature: true
 printurl: /gallery/20023740/photo/2682147162
 folder: eye
 group: ngc7293
