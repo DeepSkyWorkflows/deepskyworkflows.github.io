@@ -31,7 +31,8 @@ author: "deepskyworkflows"
             {% endif %}
             {% if count <= 5 %}
             <li>
-                <a href="{{ site.baseurl }}/{{ post.url}}" alt="{{ post.description }}"
+                {% assign href = site.baseurl | append: post.url %}
+                <a href="{{ href }}" alt="{{ post.description }}"
                 title="{{ post.description }}">
                     <strong>{{ post.date | date_to_string }}</strong>&mdash;{{ post.title }}
                 </a>
@@ -58,23 +59,27 @@ author: "deepskyworkflows"
             {% if count == 5 %}
             <ul>
             {% endif %}
+            {% if count <= 7 %}
             <li>
-                <a href="{{ site.baseurl }}/{{ post.url}}" alt="{{ post.description }}"
+                <a href="{{ site.baseurl }}{{ post.url}}" alt="{{ post.description }}"
                 title="{{ post.description }}">
                     <strong>{{ post.date | date_to_string }}</strong>&mdash;{{ post.title }}
                 </a>
             </li>
+            {% endif %}
         {% endif %}
         {% endfor %}
         </ul>
         </div>
+        &raquo;<a href="/videos">See all videos</a>        
     </section>
 
     <section>
         <div class="section-title">
             <h2><span>Gallery</span></h2>
         </div>
-        {% include gallery-random.html %}    
+        {% include gallery-random.html %}  
+        &raquo;<a href="/gallery">Visit the gallery</a>  
     </section>
 
 {% endif %}
@@ -89,7 +94,9 @@ author: "deepskyworkflows"
 
     <div class="section-title">
 
-        <h2><span>All Stories</span></h2>
+        <h2 id="AllStories">
+            <a name="AllStories"></a>
+            <span>All Stories</span></h2>
 
     </div>
 
