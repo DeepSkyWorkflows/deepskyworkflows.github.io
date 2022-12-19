@@ -9,17 +9,18 @@ image: "assets/images/about/orion.jpeg"
 <p>Hello, and welcome to Deep Sky Workflows! I picked this name because most of my images are deep sky objects (DSO) and I wanted a place to post what I learn as I gain experience with astrophotography and image-processing or workflows.</p>
 <p>On this site, you can:</p>
 <ul>
-    <li>Read the <a href="{{site.baseurl}}/index.html" title="Deep Sky Workflows Blog">blog</a></li>
-    <li>View  my <a href="{{site.baseurl}}/gallery" title="Space pictures">astrophotography gallery</a></li>
+    <li>Read <a href="{{site.baseurl}}/index.html" title="Deep Sky Workflows Blog">about astrophotography</a></li>
+    <li>Watch <a href="{{site.baseurl}}/videos" title="Astrophotography videos">astrophotography-related videos</a></li>
+    <li>View <a href="{{site.baseurl}}/gallery" title="Space pictures">a gallery of galaxies, nebulae, planets and stars</a></li>
     <li>Watch a web-based <a href="{{site.baseurl}}/gallery/slideshow" title="Images of galaxies, stars, and nebulae">astrophotography slide show</a></li>
     <li>Check out my progress photographing the entire <a href="{{site.baseurl}}/messier" title="Messier catalog">Messier catalog</a></li>
 </ul>
 <p>You can also visit related websites:</p>
 <ul>
-    <li><i class="fab fa-youtube"></i>&nbsp;My <a href="https://www.youtube.com/c/DeepSkyWorkflows" target="_blank">astrophotography videos</a></li>
-    <li><i class="fab fa-github"></i>&nbsp;My <a href="https://github.com/DeepSkyWorkflows" target="_blank">astrophotography scripts and tools</a></li>
+    <li><i class="fa fa-print"></i>&nbsp;A <a href="https://deepskyworkflows.shootproof.com/" title="Space prints">print gallery of space photos</a></li>
+    <li><i class="fab fa-github"></i>&nbsp;A suite of <a href="https://github.com/DeepSkyWorkflows" target="_blank">astrophotography scripts and tools</a></li>
 </ul>
-<p>Connect with me on: <i class="fab fa-facebook"></i><a href="https://facebook.com/DeepSkyWorkflows" title="Deep Sky Workflows on Facebook">Facebook</a>, <i class="fab fa-instagram"></i><a href="https://instagram.com/DeepSkyWorkflows" title="Deep Sky Workflows on Instagram">Instagram</a>, and/or <i class="fab fa-twitter"></i><a href="https://twitter.com/DeepSkyWorkflow" title="@DeepSkyWorkflow on Twitter">Twitter</a>.</p>
+<p>Connect with me on: <i class="fa fa-image"></i><a href="https://www.astrobin.com/users/DeepSkyWorkflows/" title="Deep Sky Workflows on AstroBin">AstroBin</a>, <i class="fab fa-facebook"></i><a href="https://facebook.com/DeepSkyWorkflows" title="Deep Sky Workflows on Facebook">Facebook</a>, <i class="fab fa-instagram"></i><a href="https://instagram.com/DeepSkyWorkflows" title="Deep Sky Workflows on Instagram">Instagram</a>, and/or <i class="fab fa-twitter"></i><a href="https://twitter.com/DeepSkyWorkflow" title="@DeepSkyWorkflow on Twitter">Twitter</a>.</p>
 <p>You can also <a href="{{ site.galleryhome }}/contact" alt="Send me a message directly." title="Send me a message directly.">send me a message directly</a> using the linked form.    
 <p>It’s great to have a place to share my deep sky explorations and astrophotography journey with you. In the beginning of 2021, I purchased an observation station named <a href="https://amzn.to/3CBbsds" target="_blank">Stellina</a>. It is a fully automated system for capturing deep sky images. What intrigued me about the unit was the claim that it could handle light polluted areas and the ease of setup. I took a chance, purchased the scope and have not been disappointed.</p>
 <p class="mb-5"><img class="shadow-lg float-left m-5" src="{{site.baseurl}}/assets/images/about/stellina.jpeg" alt="Stellina pointed at the stars" /><br/><i class="center">Stellina pointed at the stars</i></p>
