@@ -74,7 +74,7 @@ permalink: /gallery/
             {% assign print = true %}
             {% endif %}            
             {% assign loadingPath = site.baseurl | append: "/assets/images/loading.gif" %}
-                <div class="card gallery-card" data-url="{{item.url}}" data-telescope="{{item.telescope}}" data-signature="{{item.signature}}" data-prints="{{print}}" data-nostars="{{item.nostars}}">
+                <div class="card gallery-card" data-url="{{item.url}}" data-telescope="{{item.telescope}}" data-signature="{{item.signature}}" data-prints="{{print}}" data-nostars="{{item.nostars}}" data-tags="{{item.tags | join: ','}}">
                     <a href="{{mainUrl}}" title="{{item.description}}" tabindex="{{itemCount}}">
                         <img class="card-img-top gallery-img" id="image-{{itemIndex}}" data-url="{{thumbPath}}" src="{{loadingPath}}" alt="{{item.description}}">
                         {% assign itemIndex = itemIndex | plus: 1 %}

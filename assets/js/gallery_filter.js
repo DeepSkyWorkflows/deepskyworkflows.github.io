@@ -121,8 +121,10 @@ sitemap: false
                 if (searchContext.query && searchContext.query.length) {
 
                     let target = $(this).text().toLowerCase().trim();
+                    let tags = $(this).attr('data-tags').toLowerCase().trim().split(',');
 
-                    if (target.indexOf(searchContext.query) < 0) {
+                    if (tags.indexOf(searchContext.query) < 0 &&
+                        target.indexOf(searchContext.query) < 0) {
                         $(this).addClass('d-none');
                         return;
                     }
