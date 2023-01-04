@@ -8,6 +8,7 @@ telescope: Celestron EdgeHD 9.25
 length: "5875mm"
 aperture: "235mm"
 folder: marz
+group: mars
 exposure: 0.042
 lights: 12000
 sessions: 1

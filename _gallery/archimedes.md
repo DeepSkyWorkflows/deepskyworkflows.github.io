@@ -9,6 +9,7 @@ length: "2350mm"
 printurl: /gallery/20038859/photo/2735061153
 aperture: "235mm"
 folder: archimedes
+group: archimedes
 exposure: 0.002
 lights: 3000
 sessions: 1
