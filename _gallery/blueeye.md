@@ -6,6 +6,7 @@ description: This is a re-processing of older data using new techniques to revea
 image: /assets/images/gallery/blueeye/thumb.jpg
 telescope: Celestron EdgeHD 9.25
 signature: true
+printurl: /gallery/20567050/photo/2749440883
 wwt: http://www.worldwidetelescope.org/wwtweb/ShowImage.aspx?reverseparity=False&scale=0.574592&name=blueeye.jpg&imageurl=https://deepskyworkflows.com/assets/images/gallery/blueeye/blueeye.jpg&credits=Jeremy+Likness+at+DeepSkyWorkflows.com&creditsUrl=https://deepskyworkflows.com/&ra=337.411901&dec=-20.880320&x=2043.8&y=1174.5&rotation=-165.46&thumb=https://deepskyworkflows.com/assets/images/gallery/blueeye/thumb.jpg
 length: "1645mm"
 aperture: "235mm"
