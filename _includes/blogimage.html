@@ -2,6 +2,9 @@
 {% if include.half == true %}
     {% assign width = "w-50" %}
 {% endif %}
+{% if include.quarter == true %}
+    {% assign width = "w-25" %}
+{% endif %}
 {% assign url = include.url %}
 {% if url contains "/images/" %}
 {% else %}

@@ -10,6 +10,7 @@ aperture: "235mm"
 printurl: /gallery/20023740/photo/2682147129
 wwt: http://www.worldwidetelescope.org/wwtweb/ShowImage.aspx?reverseparity=False&scale=0.382214&name=thor.jpg&imageurl=https://deepskyworkflows.com/assets/images/gallery/thor/thor.jpg&credits=Jeremy+Likness+at+DeepSkyWorkflows.com+(All+Rights+Reserved)&creditsUrl=&ra=109.671962&dec=-13.192674&x=2060.4&y=1427.4&rotation=90.71&thumb=https://deepskyworkflows.com/assets/images/gallery/thor/thumb.jpg
 folder: thor
+group: thor
 exposure: 300       
 lights: 70
 sessions: 3

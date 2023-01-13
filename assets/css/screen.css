@@ -26,6 +26,7 @@ h1, h2, h3, h4 {
 a {
     color: #00ab6b;
     transition: all 0.2s;
+    text-decoration: underline;
 }
 
 a:hover {
@@ -90,6 +91,14 @@ section.recent-posts {
     margin-bottom: -1px;
 }
 
+.article-post {
+    background-color: rgba(0,0,0,.8);
+}
+
+.article-post h1, h2, h3, h4 {
+    border-bottom: solid gray 1px;
+}
+
 .article-post ol,
 .article-post ul {
     margin-bottom: 1.5rem;
@@ -99,6 +108,10 @@ section.recent-posts {
 .article-post ul ul {
     list-style: disc;
     margin-bottom: 0rem;
+}
+
+.article-post b, strong {
+    color: cyan;
 }
 
 @media (min-width:576px) {

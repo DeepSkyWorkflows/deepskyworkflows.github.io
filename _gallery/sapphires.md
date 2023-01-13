@@ -1,7 +1,7 @@
 ---
 title: "The Winter Sky Sapphires"
 type: Cluster
-tags: ["19 Tau","25 Tau","Barnard's Merope Nebula","IC349","Maia Nebula","Merope Nebula","NGC1432","NGC1435","Sterope I (21 Tau)","The star 18 Tau","The star Alcyone (η Tau)","The star Asterope","The star Atlas (27 Tau)","The star Celaeno (16 Tau)","The star Electra (17 Tau)","The star Merope (23 Tau)","The star Pleione (28 Tau)","The star Sterope II (22 Tau)","The star Taygeta (q Tau)"]
+tags: ["M45", "19 Tau","25 Tau","Barnard's Merope Nebula","IC349","Maia Nebula","Merope Nebula","NGC1432","NGC1435","Sterope I (21 Tau)","The star 18 Tau","The star Alcyone (η Tau)","The star Asterope","The star Atlas (27 Tau)","The star Celaeno (16 Tau)","The star Electra (17 Tau)","The star Merope (23 Tau)","The star Pleione (28 Tau)","The star Sterope II (22 Tau)","The star Taygeta (q Tau)"]
 description: My favorite signal of winter is the magical faint glow that glimmers in your peripheral vision but fades to a blur when you gaze head on. Magnification reveals several bright blue stars burrowing through long filaments of ionized gas and dust. The brightest of these are the famed Seven Sisters or Pleiades.
 image: /assets/images/gallery/sapphires/thumb.jpg
 telescope: Svbony sv503 70ED
