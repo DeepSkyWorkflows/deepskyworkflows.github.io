@@ -17,7 +17,7 @@ permalink: /gallery/
 <h3 id="top">Filter and search</h3>
 <a name="top"></a>
 {% assign version = 10 %}
-{% assign types = site.gallery | group_by: 'type' | sort: 'name' %}
+{% assign types = site.gallery | group_by: 'type' | sort: 'firstCapture' | reverse %}
 {% assign telescopeArray = '' | split: ',' %}
 <div class="row mw-25">
     <div class="col-12">
@@ -59,7 +59,7 @@ permalink: /gallery/
                     </h4>
                 </div>
             </div>                
-            {% assign subitems = group.items | sort : 'title' %}
+            {% assign subitems = group.items | sort : 'firstCapture' | reverse %}
             {% assign itemCount = 0 %}
             <div class="row groupdetail" data-group="{{groupCode}}">
             {% assign itemIndex = 1 %}
@@ -75,6 +75,12 @@ permalink: /gallery/
             {% endif %}            
             {% assign loadingPath = site.baseurl | append: "/assets/images/loading.gif" %}
                 <div class="card gallery-card" data-url="{{item.url}}" data-telescope="{{item.telescope}}" data-signature="{{item.signature}}" data-prints="{{print}}" data-nostars="{{item.nostars}}" data-tags="{{item.tags | join: ','}}">
+                <small class="black">
+                    {{item.firstCapture}}
+                    {% if item.lastCapture %}
+                        <span> - {{item.lastCapture}}</span>
+                    {% endif %}
+                </small>
                     <a href="{{mainUrl}}" title="{{item.description}}" tabindex="{{itemCount}}">
                         <img class="card-img-top gallery-img" id="image-{{itemIndex}}" data-url="{{thumbPath}}" src="{{loadingPath}}" alt="{{item.description}}">
                         {% assign itemIndex = itemIndex | plus: 1 %}

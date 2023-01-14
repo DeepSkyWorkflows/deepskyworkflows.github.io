@@ -1128,3 +1128,9 @@ td {
     border: solid 2px white;
     padding: 0.5em;
 }
+
+.card small {
+    color: black;
+    padding: 1px;
+    font-weight: bold;
+}

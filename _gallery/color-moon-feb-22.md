@@ -1,7 +1,7 @@
 ---
 title: "Full Color Full Moon"
 type: Lunar
-tags: ["Moon"]
+tags: ["Moon",fullmoon]
 description: A full moon captured in color in February 2022.
 image: assets/images/gallery/colormoonfeb22/thumb.jpg
 telescope: Svbony sv503 70ED

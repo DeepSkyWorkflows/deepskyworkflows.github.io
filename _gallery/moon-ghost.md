@@ -2,7 +2,7 @@
 title: "A spectral moon in clouds."
 type: Lunar
 image: assets\images\gallery\moon-ghost\thumb.jpg
-tags: ["The moon", "moon"]
+tags: ["The moon", "moon", fullmoon]
 description: A full moon obscured by clouds.
 telescope: Svbony sv503 70ED
 length: "420mm"

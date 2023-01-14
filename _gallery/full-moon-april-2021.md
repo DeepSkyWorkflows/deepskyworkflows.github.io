@@ -2,7 +2,7 @@
 title: "Full moon April 2021"
 type: Lunar
 image: assets\images\gallery\moon-full-2021-04\thumb.jpg
-tags: ["The moon", "moon"]
+tags: ["The moon", "moon", fullmoon]
 description: A full moon in April.
 telescope: Stellina
 length: "400mm"
