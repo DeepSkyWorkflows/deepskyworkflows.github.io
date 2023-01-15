@@ -36,13 +36,13 @@ There are four common types of calibration frames: _bias_, _dark_, _flat_, and _
 
 **Bias** frames are taken with no light on the sensor using the fastest possible exposure time. The temperature and ISO or gain setting should match that of your main images. If you used multiple ISOs, you should take multiple bias frames. Every sensor has built-in defects that can be captured with bias frames. A perfect sensor would create a completely black image in the absence of light. But sensors aren't perfect, so here's what their bias looks like:
 
-{% include blogimage.html description="Bias" url="bias.png" half=true target=true %}
+{% include blogimage.html description="Bias" url="bias.jpg" half=true target=true %}
 
 ### Dark
 
 **Dark** frames are taken with no light on the sensor using the same exposure time, temperature, and ISO or gain that you used for your main images. The same way a long exposure collects more light to capture the faint details of nebulae, it also picks up noise from current in your sensor. In addition, some pixels are defective and can appear darker ("cold pixels") or brighter ("hot pixels") than neighboring pixels. Darks isolate these pixels so they can be brightened or darkened during processing to match the rest of the image. Finally, some cameras leak light and produce what is called "amp glow." In the following dark, can you spot the three areas of amp glow and see just how many "hot" red, green, and blue pixels there are in the magnified inset? 
 
-{% include blogimage.html description="Dark" url="dark.png" half=true target=true %}
+{% include blogimage.html description="Dark" url="dark.jpg" half=true target=true %}
 
 ### Flat
 
