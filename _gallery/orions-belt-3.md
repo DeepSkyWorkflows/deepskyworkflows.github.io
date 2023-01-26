@@ -8,6 +8,7 @@ telescope: Svbony sv503 70ED
 length: "420mm"
 aperture: "70mm"
 folder: orions-belt-3
+group: ori-belt
 exposure: 180
 lights: 34
 sessions: 2

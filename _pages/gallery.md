@@ -29,7 +29,8 @@ permalink: /gallery/
 <p><a href="{{ site.baseurl}}/gallery/slideshow/" title="Slideshow"><i class="fa fa-film"></i> Slideshow</a>
 &nbsp;|&nbsp;
 <strong>Jump to Category:</strong>
-{% for nestedGroup in types %}
+{% assign cats = types | sort: 'name' %}
+{% for nestedGroup in cats %}
     <a href="#{{nestedGroup.name | remove: ' '}}">{{nestedGroup.name}}</a>&nbsp;|
     {% for item in nestedGroup.items %}
     {% assign telescopeArray = telescopeArray | push: item.telescope %}
@@ -49,7 +50,7 @@ permalink: /gallery/
 </div>
 <div class="row mw-25">
     <div class="col-12">
-        {% for group in types %}
+        {% for group in cats %}
         {% assign groupCode = group.name | remove: " " %}
             <div class="row">&nbsp;</div>
             <div class="row groupheader" data-group="{{groupCode}}">

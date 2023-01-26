@@ -8,7 +8,7 @@ telescope: Stellina
 length: "400mm"
 aperture: "80mm"
 folder: ic434-ngc2024
-group: "ic434"
+group: "ori-belt"
 exposure: 10
 lights: 796
 sessions: 2

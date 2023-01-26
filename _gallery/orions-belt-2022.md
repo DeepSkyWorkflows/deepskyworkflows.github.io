@@ -8,6 +8,7 @@ telescope: Sony ILCE-6300
 length: "210mm"
 aperture: "33.33mm"
 folder: orions-belt-2022
+group: ori-belt
 exposure: 4
 lights: 350
 sessions: 2

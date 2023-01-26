@@ -10,7 +10,7 @@ aperture: "70mm"
 folder: horseflame
 printurl: /gallery/20023740/photo/2681259334
 exposure: 300 
-group: ic434
+group: ori-belt
 signature: true
 lights: 67
 sessions: 4
