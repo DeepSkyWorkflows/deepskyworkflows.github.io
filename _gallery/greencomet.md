@@ -1,7 +1,7 @@
 ---
 title: "The Big Green Comet Wide Field View"
 type: Comet
-tags: ["comet","C2022 E3 (ZTF)"]
+tags: ["Comets","C2022 E3 (ZTF)"]
 description: It's been gone for 50,000 years, but it's back. And it's green. Really green. C/2022 E3 (ZTF).
 image: /assets/images/gallery/greencomet/thumb.jpg
 telescope: Svbony sv503 70ED

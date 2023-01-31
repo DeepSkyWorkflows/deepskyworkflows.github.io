@@ -3,7 +3,7 @@ Index: "013"
 title: "The Milky Way at Paint Mine"
 Thumbnail: milkyway.jpg
 Location: Paint Mine, CO
-active: true
+active: false
 Fullsize: milkyway-fullsize.jpg
 description: "This photograph was taken during a trip to Colorado. My daughter and son-in-law knew about my astrophotography hobby and surprised me by offering to take me to Paint Mine, a remote location with darker skies. Although there was a pervasive glow of light pollution low on the horizon from a nearby town, the sky was much darker than what I see in Monroe, WA. I took several long exposures and combined them for my first ever Milky Way astrograph." 
 Type: "Milky Way"

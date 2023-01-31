@@ -1,7 +1,7 @@
 ---
 title: "Full Moon January 2023"
 type: Lunar
-tags: [moon, fullmoon]
+tags: [moon, Full Moons]
 description: The Wolf moon, a full micromoon in January 2023.
 image: /assets/images/gallery/fullmoonjanuary2023/thumb.jpg
 telescope: Svbony sv503 70ED

@@ -9,17 +9,12 @@ url: https://deepskyworkflows.com
 # google_analytics: ''
 disqus: 'deep-sky-workflows'
 # mailchimp-list: ''
-include: ["_pages", "_gallery", "_exhibiton", "_messier"]
-portfolios: ["Cayman Collection", "fullmoon"]
+include: ["_pages", "_gallery", "_exhibition", "_messier"]
+portfolios: ["Cayman Collection", "Comets", "Full moons"]
 permalink: /:title/
 galleryhome: https://deepskyworkflows.shootproof.com
 
 venues:
-  duvall:
-    name: "Physiocare Duvall"
-    start: "May 2022"
-    end: "August 2022"
-    address: "15315 1st Ave NE, Duvall, WA 98019"
 
 # Authors
 authors:

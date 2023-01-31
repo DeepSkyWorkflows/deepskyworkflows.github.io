@@ -7,7 +7,7 @@ Location: Monroe, WA
 Thumbnail: moonphases.jpg
 Fullsize: moonpanorama.jpg
 Sold: true
-active: true
+active: false
 Type: "Lunar"
 Print: Metal Silver Satin
 Height: 8

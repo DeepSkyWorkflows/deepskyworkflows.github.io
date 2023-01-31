@@ -1,7 +1,7 @@
 ---
 title: "C/2017 K2 PanSTARR Single Core"
 type: Comet
-tags: ["comet","c2017 k2","panstarr"]
+tags: ["Comets","c2017 k2","panstarr"]
 description: C/2017 K2 (PanSTARR) is a comet discovered around five years ago. It is notable for the amount of activity it exhibited despite being so far from the sun. This image is a single core from 3 2-minute exposures with the background stars fixed.
 image: /assets/images/gallery/k2single/thumb.jpg
 telescope: Celestron EdgeHD 9.25

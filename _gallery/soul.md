@@ -8,6 +8,7 @@ telescope: Svbony sv503 70ED
 length: "336mm"
 aperture: "70mm"
 folder: soul
+group: soul
 exposure: 45
 lights: 350
 sessions: 1

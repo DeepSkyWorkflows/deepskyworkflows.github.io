@@ -16,7 +16,7 @@ Jump to: <a href="#ImageAnchor">Images</a>&nbsp;|&nbsp;<a href="#PostsAnchor">Bl
     <div class="row">
         <a name="ImageAnchor"></a>
             {% assign tag = page.tagname | downcase %}
-            {% assign subitems = site.gallery | sort: "title" %}
+            {% assign subitems = site.gallery | sort: "firstCapture" | reverse %}
             {% assign itemCount = 0 %}
             {% assign itemIndex = 1 %}
             {% for item in subitems %}        
