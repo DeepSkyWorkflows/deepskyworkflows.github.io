@@ -7,7 +7,7 @@ tags: ["calibration", "darks"]
 toc: true
 image: assets/images/2022-11-05/quick-and-dirty-calibration.jpg
 description: "A very fast and high-level overview of what calibration frames are in astrophotography, why you care, and how you can get started. Includes a hands-on example with real photographs to show differences."
-featured: true
+featured: false
 comments: true
 ---
 There are a lot of sites with videos, articles, and blogs that explain calibration frames in detail and provide instructions about "what goes where." If you want to know the exact science behind calibration frames and fascinating in-depth discussions about electrons and well-depth, you should definitely not waste time reading this post. Those things are important, but many of you just want to take pictures and get results. I hope this gives you enough to understand what you need to get started without getting lost in the details.
