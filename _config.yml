@@ -9,7 +9,7 @@ url: https://deepskyworkflows.com
 # google_analytics: ''
 disqus: 'deep-sky-workflows'
 # mailchimp-list: ''
-include: ["_pages", "_gallery", "_exhibition", "_messier"]
+include: ["_pages", "_gallery", "_messier"]
 portfolios: ["Cayman Collection", "Comets", "Full moons"]
 permalink: /:title/
 galleryhome: https://deepskyworkflows.shootproof.com
@@ -31,7 +31,6 @@ authors:
 # Plugins
 plugins:
   - jekyll-paginate
-  - jekyll-sitemap
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-archives

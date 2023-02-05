@@ -1,7 +1,7 @@
 ---
 title: "Close up moon quarter"
 type: Lunar
-image: assets\images\gallery\moon-edge\thumb.jpg
+image: \assets\images\gallery\moon-edge\thumb.jpg
 tags: ["The moon", "moon"]
 description: A close-up of the edge of the moon.
 telescope: Celestron EdgeHD 9.25

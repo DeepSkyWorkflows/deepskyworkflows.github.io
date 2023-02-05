@@ -1,7 +1,7 @@
 ---
 title: "Gibbous Moon November 2021"
 type: Lunar
-image: assets\images\gallery\moon-nov-24-2021\thumb.jpg
+image: \assets\images\gallery\moon-nov-24-2021\thumb.jpg
 tags: ["The moon", "moon"]
 description: A gibbous moon in November.
 telescope: Sony ILCE-6300

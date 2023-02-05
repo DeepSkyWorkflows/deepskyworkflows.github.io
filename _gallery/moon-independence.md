@@ -1,7 +1,7 @@
 ---
 title: "Independence Moon"
 type: Lunar
-image: assets\images\gallery\moon-independence\thumb.jpg
+image: \assets\images\gallery\moon-independence\thumb.jpg
 tags: ["The moon", "moon"]
 description: This was our moon on July 4, 2022.
 telescope: Svbony sv503 70ED

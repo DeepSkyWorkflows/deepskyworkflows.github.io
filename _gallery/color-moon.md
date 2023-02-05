@@ -1,7 +1,7 @@
 ---
 title: "A detailed, full color lunar shot."
 type: Lunar
-image: assets\images\gallery\color-moon\thumb.jpg
+image: \assets\images\gallery\color-moon\thumb.jpg
 tags: ["The moon", "moon"]
 description: A full color almost full moon.
 telescope: Celestron EdgeHD 9.25

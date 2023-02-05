@@ -1,7 +1,7 @@
 ---
 title: "Half moon September 2021"
 type: Lunar
-image: assets\images\gallery\moon-half-2021-09\thumb.jpg
+image: \assets\images\gallery\moon-half-2021-09\thumb.jpg
 tags: ["The moon", "moon"]
 description: A half moon in September.
 telescope: Stellina

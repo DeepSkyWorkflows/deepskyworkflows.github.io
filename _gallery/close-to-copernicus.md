@@ -1,7 +1,7 @@
 ---
 title: "The Moon's Copernicus crater."
 type: Lunar
-image: assets\images\gallery\close-to-copernicus\thumb.jpg
+image: \assets\images\gallery\close-to-copernicus\thumb.jpg
 tags: ["The moon", "moon"]
 description: A full color view of Copernicus.
 telescope: Celestron EdgeHD 9.25

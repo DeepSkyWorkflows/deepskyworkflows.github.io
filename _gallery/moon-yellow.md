@@ -1,7 +1,7 @@
 ---
 title: "Yellow Moon January 2022"
 type: Lunar
-image: assets\images\gallery\moon-yellow\thumb.jpg
+image: \assets\images\gallery\moon-yellow\thumb.jpg
 tags: ["The moon", "moon"]
 description: A half moon in January 2022.
 telescope: Sony ILCE-6300

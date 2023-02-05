@@ -1,7 +1,7 @@
 ---
 title: "Quarter slice of the Moon"
 type: Lunar
-image: assets\images\gallery\moon-quarter\thumb.jpg
+image: \assets\images\gallery\moon-quarter\thumb.jpg
 tags: ["The moon", "moon"]
 description: A closeup of the lunar edge.
 telescope: Celestron EdgeHD 9.25

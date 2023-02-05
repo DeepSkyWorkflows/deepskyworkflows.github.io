@@ -1,0 +1,102 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>{{ site.url }}/index.html</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+  </url>
+   <url>
+    <loc>{{ site.url }}/messier</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>{{ site.url }}/pixinsight</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>{{ site.url }}/about</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+  </url>
+  {% for post in site.posts %}
+    <url>
+      <loc>{{ site.url }}{{ post.url }}</loc>
+      {% if post.lastmod == null %}
+        <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+      {% else %}
+        <lastmod>{{ post.lastmod | date_to_xmlschema }}</lastmod>
+      {% endif %}
+      <changefreq>monthly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  {% endfor %}  
+  <url>
+      <loc>{{ site.url }}/videos</loc>
+      <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+  </url>
+  {% for vid in site.videos %}
+    <url>
+      <loc>{{ site.url }}{{ vid.url }}</loc>
+      {% if vid.lastmod == null %}
+        <lastmod>{{ vid.date | date_to_xmlschema }}</lastmod>
+      {% else %}
+        <lastmod>{{ vid.lastmod | date_to_xmlschema }}</lastmod>
+      {% endif %}
+      <changefreq>monthly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  {% endfor %}  
+  <url>
+      <loc>{{ site.url }}/gallery</loc>
+      <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+  </url>
+   <url>
+      <loc>{{ site.url }}/gallery/slideshow</loc>
+      <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+  </url>
+  {% for image in site.gallery %}
+    <url>
+      <loc>{{ site.url }}{{ image.url }}</loc>
+      {% if image.lastCapture != null %}
+        <lastmod>{{ image.lastCapture }}T00:00:00-07:00</lastmod>
+      {% else %}
+        <lastmod>{{ image.firstCapture }}T00:00:00-07:00</lastmod>
+      {% endif %}
+      <changefreq>monthly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  {% endfor %}  
+  <url>
+      <loc>{{ site.url }}/tags</loc>
+      <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+  </url>
+  {% for tag in site.tags %}
+    <url>
+      <loc>{{ site.url }}{{ tag.url }}</loc>
+      {% if tag.lastmod == null %}
+        <lastmod>{{ tag.date | date_to_xmlschema }}</lastmod>
+      {% else %}
+        <lastmod>{{ tag.lastmod | date_to_xmlschema }}</lastmod>
+      {% endif %}
+      <changefreq>monthly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  {% endfor %}  
+</urlset>

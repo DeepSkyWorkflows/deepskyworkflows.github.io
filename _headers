@@ -1,0 +1,8 @@
+https://deepskyworkflows-github-io.pages.dev/*
+  X-Robots-Tag: noindex
+/*
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Option: nosniff
+/_gallery/*
+  X-Robots-Tag: noindex
+

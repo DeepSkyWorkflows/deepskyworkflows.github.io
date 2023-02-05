@@ -1,7 +1,7 @@
 ---
 title: "The Moon's Tycho crater."
 type: Lunar
-image: assets\images\gallery\tycho\thumb.jpg
+image: \assets\images\gallery\tycho\thumb.jpg
 tags: ["The moon", "moon"]
 description: A full color view of Tycho.
 printurl: /gallery/lunar/photo/2682978120

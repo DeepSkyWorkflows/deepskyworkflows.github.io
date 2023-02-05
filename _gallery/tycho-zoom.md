@@ -1,7 +1,7 @@
 ---
 title: "Close up of the Tycho crater"
 type: Lunar
-image: assets\images\gallery\tycho-zoom\thumb.jpg
+image: \assets\images\gallery\tycho-zoom\thumb.jpg
 tags: ["The moon", "moon"]
 description: A close-up of the Tycho crater that is prominent in the lower corner of the moon.
 telescope: Celestron EdgeHD 9.25

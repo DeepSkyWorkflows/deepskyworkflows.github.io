@@ -1,7 +1,7 @@
 ---
 title: "A detailed image of the half Moon"
 type: Lunar
-image: assets\images\gallery\detailed-half\thumb.jpg
+image: \assets\images\gallery\detailed-half\thumb.jpg
 tags: ["The moon", "moon"]
 description: This is a high resolution, detailed image of the half moon.
 signature: true

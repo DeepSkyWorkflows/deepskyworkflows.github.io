@@ -1,7 +1,7 @@
 ---
 title: "Milky Way in Color"
 type: Milky Way
-image: assets\images\gallery\mwindex1\thumb.jpg
+image: \assets\images\gallery\mwindex1\thumb.jpg
 tags: ["Milky Way"]
 description: The rich colors of nebulae and stars shine against the backdrop of the Milky Way from Index, WA.
 telescope: Sony ILCE-6300

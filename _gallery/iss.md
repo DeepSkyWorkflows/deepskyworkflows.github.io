@@ -1,7 +1,7 @@
 ---
 title: "An International Space Station (ISS) flyover"
 type: Miscellaneous
-image: assets\images\gallery\iss\thumb.jpg
+image: \assets\images\gallery\iss\thumb.jpg
 tags: ["The moon", "moon"]
 description: The path traced by ISS in the sky.
 telescope: ZWO-ASI120MM-S

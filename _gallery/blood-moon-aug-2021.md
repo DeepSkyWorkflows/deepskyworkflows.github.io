@@ -1,7 +1,7 @@
 ---
 title: "Blood Moon August 2021"
 type: Lunar
-image: assets\images\gallery\blood-moon-2021-08\thumb.jpg
+image: \assets\images\gallery\blood-moon-2021-08\thumb.jpg
 tags: ["The moon", "moon"]
 description: Dust from fires turned the moon red.
 telescope: Samsung Galaxy S21 Ultra 

@@ -1,7 +1,7 @@
 ---
 title: "Gibbous Moon July 2021"
 type: Lunar
-image: assets\images\gallery\moon-gibbous-2021-07\thumb.jpg
+image: \assets\images\gallery\moon-gibbous-2021-07\thumb.jpg
 tags: ["The moon", "moon"]
 description: A gibbous moon in July.
 telescope: Stellina
