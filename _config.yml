@@ -10,6 +10,7 @@ url: https://deepskyworkflows.com
 disqus: 'deep-sky-workflows'
 # mailchimp-list: ''
 include: ["_pages", "_gallery", "_messier"]
+exclude: [".gitignore", "changelog.md", "docker-compose.yml", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
 portfolios: ["Cayman Collection", "Comets", "Full moons"]
 permalink: /:title/
 galleryhome: https://deepskyworkflows.shootproof.com

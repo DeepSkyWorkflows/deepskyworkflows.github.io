@@ -1,0 +1,4 @@
+Sitemap: https://deepskyworkflows.com/sitemap.xml
+
+User-agent: *
+Disallow: /_gallery
