@@ -2,15 +2,14 @@
 name: "Deep Sky Workflows"
 title: "Deep Sky Workflows: Astrophotography, Space, and Astronomy"
 description: "Astrophotography for everyone: images, videos, and articles about space, nebulae, galaxies, planets, telescopes, and how to take and process deep space images from your own backyard."
-logo: 'assets/images/logo.png' 
-favicon: 'assets/images/logo.png'
+logo: "assets/images/logo.png"
+favicon: "assets/images/logo.png"
 baseurl: 
 url: https://deepskyworkflows.com
 # google_analytics: ''
 disqus: 'deep-sky-workflows'
 # mailchimp-list: ''
 include: ["_pages", "_gallery", "_messier"]
-exclude: [".gitignore", "changelog.md", "docker-compose.yml", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
 portfolios: ["Cayman Collection", "Comets", "Full moons"]
 permalink: /:title/
 galleryhome: https://deepskyworkflows.shootproof.com
@@ -23,11 +22,11 @@ authors:
     name: Jeremy Likness
     display_name: Jeremy Likness
     twitter: DeepSkyWorkflow
-    gravatar: 9ce480e4853b49026c274d31f6ea83d2
+    avatar: "assets/images/jeremyliknessavatar.jpg"
     email: deepskyworkflows@gmail.com
     web: https://deepskyworkflows.com/
     description: "Amateur astronomer Jeremy Likness has always been interested in the mysteries of deep space, but only recently began to explore them through astrophotography."
-    picture: 'assets/images/jeremyliknessavatar.jpg'
+    picture: /assets/images/jeremyliknessavatar.jpg
 
 # Plugins
 plugins:

@@ -4,19 +4,19 @@ sitemap: false
 ---
 
 {% assign counter = 0 %}
-var documents = [{% for page in site.pages %}{% if page.url contains '.xml' or page.url contains 'assets' or page.url contains 'category' or page.url contains 'tag' or page.url contains '/_' %}{% else %}{
+var documents = [{% for page in site.pages %}{% if page.url contains '.xml' or page.url contains '.js' or page.url contains '.json' or page.url contains 'assets' or page.url contains 'category' or page.url contains 'tag' or page.url contains '/_' %}{% else %}{
     "id": {{ counter }},
     "url": "{{ site.url }}{{site.baseurl}}{{ page.url }}",
     "title": "{{ page.title }}",
     "body": "{{ page.content | markdownify | replace: '.', '. ' | replace: '</h2>', ': ' | replace: '</h3>', ': ' | replace: '</h4>', ': ' | replace: '</p>', ' ' | strip_html | strip_newlines | replace: '  ', ' ' | replace: '"', ' ' }}"{% assign counter = counter | plus: 1 %}
     }, {% endif %}{% endfor %}
-    {% for page in site.gallery %}{% if page.url contains '.xml' or page.url contains 'assets' or page.url contains 'category' or page.url contains 'tag' or page.url contains '/_'  %}{% else %}{
+    {% for page in site.gallery %}{% if page.url contains '.xml' or page.url contains '.js' or page.url contains '.json' or page.url contains 'assets' or page.url contains 'category' or page.url contains 'tag' or page.url contains '/_'  %}{% else %}{
         "id": {{ counter }},
         "url": "{{ site.url }}{{site.baseurl}}{{ page.url }}",
         "title": "{{ page.title }}",
         "body": "{{ page.description | markdownify | replace: '.', '. ' | replace: '</h2>', ': ' | replace: '</h3>', ': ' | replace: '</h4>', ': ' | replace: '</p>', ' ' | strip_html | strip_newlines | replace: '  ', ' ' | replace: '"', ' ' }}"{% assign counter = counter | plus: 1 %}
         }, {% endif %}{% endfor %}
-        {% for page in site.videos %}{% if page.url contains '.xml' or page.url contains 'assets' or page.url contains 'category' or page.url contains 'tag' or page.url contains '/_'  %}{% else %}{
+        {% for page in site.videos %}{% if page.url contains '.xml' or page.url contains '.js' or page.url contains '.json' or page.url contains 'assets' or page.url contains 'category' or page.url contains 'tag' or page.url contains '/_'  %}{% else %}{
             "id": {{ counter }},
             "url": "{{ site.url }}{{site.baseurl}}{{ page.url }}",
             "title": "{{ page.title }}",
