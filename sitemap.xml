@@ -2,7 +2,9 @@
 layout: null
 ---
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>{{ site.url }}/index.html</loc>
     <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
@@ -48,6 +50,12 @@ layout: null
   {% for vid in site.videos %}
     <url>
       <loc>{{ site.url }}{{ vid.url }}</loc>
+      <video:video>
+        <video:title>{{ vid.title }}</video:title>
+        <video:description>{{ vid.description }}</video:description>
+        <video:thumbnail_loc>{{ site.url }}/{{ vid.image }}</video:thumbnail_loc>
+        <video:player_loc>https://youtu.be/{{vid.youtubeid}}</video:player_loc>
+      </video:video>
       {% if vid.lastmod == null %}
         <lastmod>{{ vid.date | date_to_xmlschema }}</lastmod>
       {% else %}
@@ -72,6 +80,29 @@ layout: null
   {% for image in site.gallery %}
     <url>
       <loc>{{ site.url }}{{ image.url }}</loc>
+      <image:image>
+        <image:loc>{{ site.url }}/assets/images/gallery/{{ image.folder }}/{{ image.folder }}.jpg</image:loc>        
+      </image:image>
+      <image:image>
+        <image:loc>{{ site.url }}/assets/images/gallery/{{ image.folder }}/thumb.jpg</image:loc>        
+      </image:image>
+      {% if image.nostars == true %}
+      <image:image>
+        <image:loc>{{ site.url }}/assets/images/gallery/{{ image.folder }}/{{ image.folder }}-nostars.jpg</image:loc>        
+      </image:image>      
+      {% endif %}
+      {% if image.noannotations != true %}
+      <image:image>
+        <image:loc>{{ site.url }}/assets/images/gallery/{{ image.folder }}/{{ image.folder }}-annotated.jpg</image:loc>        
+      </image:image>      
+      <image:image>
+        <image:loc>{{ site.url }}/assets/images/gallery/{{ image.folder }}/{{ image.folder }}-annotated-fs.jpg</image:loc>        
+      </image:image>      
+      <image:image>
+        <image:loc>{{ site.url }}/assets/images/gallery/{{ image.folder }}/{{ image.folder }}-grid.jpg</image:loc>        
+      </image:image>      
+      
+      {% endif %}
       {% if image.lastCapture != null %}
         <lastmod>{{ image.lastCapture }}T00:00:00-07:00</lastmod>
       {% else %}
