@@ -10,6 +10,7 @@ aperture: "70mm"
 folder: leo-triplet
 exposure: 120
 lights: 30
+group: leo
 sessions: 1
 firstCapture:  2022-02-12 
 lastCapture:

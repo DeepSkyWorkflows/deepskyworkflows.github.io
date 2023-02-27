@@ -13,7 +13,7 @@ exposure: 120
 lights: 24
 signature: true
 sessions: 1
-firstCapture: 7-5-2021 
+firstCapture: 2021-07-05 
 lastCapture:
 ra: "0h 42m 32.4s"
 dec: "+41° 17' 46.608"
