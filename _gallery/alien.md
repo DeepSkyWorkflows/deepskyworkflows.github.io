@@ -17,7 +17,7 @@ lights: 24
 nostars: true
 sessions: 1
 firstCapture: 2022-11-16 
-lastCapture:
+lastCapture: 2022-11-16
 ra: "20h 51m 52.9s"
 dec: "+31° 20' 23.706"
 size: "156.179 x 106.095 arcmin"

@@ -12,7 +12,7 @@ exposure: 10
 lights: 250
 sessions: 1
 firstCapture: 2022-08-06 
-lastCapture:
+lastCapture: 2022-08-06
 group: m8
 ra: "18h 3m 48.5s"
 dec: "-24° 20' 44.867"

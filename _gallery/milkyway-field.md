@@ -14,6 +14,6 @@ exposure: 10
 lights: 5
 sessions: 1
 firstCapture: 2021-10-16
-lastCapture:
+lastCapture: 2021-10-16
 noannotations: true
 ---

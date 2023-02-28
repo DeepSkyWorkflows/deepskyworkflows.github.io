@@ -13,7 +13,7 @@ group: m31
 lights: 89
 sessions: 1
 firstCapture: 2022-10-18 
-lastCapture:
+lastCapture: 2022-10-18
 ra: "0h 43m 30.5s"
 dec: "+41° 19' 35.144"
 size: "228.073 x 157.657 arcmin"

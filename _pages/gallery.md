@@ -17,7 +17,7 @@ permalink: /gallery/
 <h3 id="top">Filter and search</h3>
 <a name="top"></a>
 {% assign version = 10 %}
-{% assign types = site.gallery | group_by: 'type' | sort: 'firstCapture' | reverse %}
+{% assign types = site.gallery | group_by: 'type' | sort: 'lastCapture' | reverse %}
 {% assign telescopeArray = '' | split: ',' %}
 <div class="row mw-25">
     <div class="col-12">
@@ -60,7 +60,7 @@ permalink: /gallery/
                     </h4>
                 </div>
             </div>                
-            {% assign subitems = group.items | sort : 'firstCapture' | reverse %}
+            {% assign subitems = group.items | sort : 'lastCapture' | reverse %}
             {% assign itemCount = 0 %}
             <div class="row groupdetail" data-group="{{groupCode}}">
             {% assign itemIndex = 1 %}
@@ -78,8 +78,11 @@ permalink: /gallery/
                 <div class="card gallery-card" data-url="{{item.url}}" data-telescope="{{item.telescope}}" data-signature="{{item.signature}}" data-prints="{{print}}" data-nostars="{{item.nostars}}" data-tags="{{item.tags | join: ','}}">
                 <small class="black">
                     {{item.firstCapture}}
-                    {% if item.lastCapture %}
+                    {% if item.lastCapture == item.firstCapture %}
+                    {% else %}
+                        {% if item.lastCapture %}
                         <span> - {{item.lastCapture}}</span>
+                        {% endif %}
                     {% endif %}
                 </small>
                     <a href="{{mainUrl}}" title="{{item.description}}" tabindex="{{itemCount}}">

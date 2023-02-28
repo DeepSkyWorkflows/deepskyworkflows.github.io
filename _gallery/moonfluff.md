@@ -13,5 +13,5 @@ exposure:
 lights: 
 sessions: 1
 firstCapture: 2022-09-03
-lastCapture:
+lastCapture: 2022-09-03
 ---

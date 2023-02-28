@@ -13,7 +13,7 @@ lights: 19
 sessions: 1
 group: ngc7293
 firstCapture: 2022-09-26 
-lastCapture:
+lastCapture: 2022-09-26
 ra: "22h 29m 43.3s"
 dec: "-20° 49' 36.106"
 size: "25.869 x 24.001 arcmin"

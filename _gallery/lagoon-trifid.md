@@ -13,7 +13,7 @@ lights: 258
 sessions: 1
 group: m8
 firstCapture: 2022-08-16
-lastCapture:
+lastCapture: 2022-08-16
 ra: "18h 3m 46.7s"
 dec: "-24° 01' 49.355"
 size: "174.799 x 120.89 arcmin"

@@ -12,7 +12,7 @@ exposure:
 lights: 
 sessions: 
 firstCapture: 
-lastCapture:
+lastCapture: 
 ra: "5h 7m 48.1s"
 dec: "+25° 28' 3.711"
 size: "3695.455 x 2926.149 arcmin"

@@ -16,7 +16,7 @@ lights: 120
 signature: true
 sessions: 1
 firstCapture: 2022-04-19 
-lastCapture:
+lastCapture: 2022-04-19
 ra: "9h 55m 12.9s"
 dec: "+69° 01' 38.843"
 size: "36.902 x 24.95 arcmin"

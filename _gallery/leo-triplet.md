@@ -13,7 +13,7 @@ lights: 30
 group: leo
 sessions: 1
 firstCapture:  2022-02-12 
-lastCapture:
+lastCapture: 2022-02-12
 ra: "11h 18m 38.2s"
 dec: "+13° 02' 38.075"
 size: "143.56 x 95.058 arcmin"

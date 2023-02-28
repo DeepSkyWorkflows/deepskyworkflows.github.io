@@ -13,7 +13,7 @@ group: m45
 lights: 30
 sessions: 1
 firstCapture: 2022-01-09 
-lastCapture:
+lastCapture: 2022-01-09
 ra: "3h 47m 37.2s"
 dec: "+24° 06' 18.722"
 size: "168.563 x 123.5 arcmin"

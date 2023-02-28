@@ -12,6 +12,6 @@ exposure: 0.100
 lights: 2000
 sessions: 1
 firstCapture: 2022-09-29 
-lastCapture:
+lastCapture: 2022-09-29
 noannotations: true
 ---

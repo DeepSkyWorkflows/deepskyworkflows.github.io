@@ -12,7 +12,7 @@ exposure: 10
 lights: 178
 sessions: 1
 firstCapture: 2021-11-01 
-lastCapture:
+lastCapture: 2021-11-01
 ra: "5h 35m 10.7s"
 dec: "-4° 48' 5.126"
 size: "59.629 x 41.126 arcmin"

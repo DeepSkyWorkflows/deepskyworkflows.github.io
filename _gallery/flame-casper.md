@@ -13,7 +13,7 @@ exposure: 300
 lights: 32
 sessions: 1
 firstCapture: 2023-02-14 
-lastCapture:
+lastCapture: 2023-02-14
 ra: "5h 44m 12.2s"
 dec: "-0° 43' 49.364"
 size: "161.27 x 110.468 arcmin"

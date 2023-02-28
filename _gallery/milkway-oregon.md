@@ -13,6 +13,6 @@ exposure: 30s
 lights: 1
 sessions: 1
 firstCapture: 2021-12-23
-lastCapture: 
+lastCapture: 2021-12-23
 noannotations: true
 ---

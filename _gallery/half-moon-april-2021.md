@@ -12,6 +12,6 @@ exposure: 1
 lights: 23
 sessions: 1
 firstCapture: 2021-04-21
-lastCapture:
+lastCapture: 2021-04-21
 noannotations: true
 ---

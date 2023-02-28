@@ -13,7 +13,7 @@ lights: 349
 sessions: 1 
 firstCapture:  2021-07-30
 group: "cocoon"
-lastCapture:
+lastCapture: 2021-07-30
 ra: "21h 53m 25.9s"
 dec: "+47° 17' 59.601"
 size: "62.088 x 39.977 arcmin"

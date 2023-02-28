@@ -13,7 +13,7 @@ lights: 350
 sessions: 1
 group: "Cygnus loop"
 firstCapture: 2021-08-13 
-lastCapture:
+lastCapture: 2021-08-13
 ra: "20h 55m 44.4s"
 dec: "+31° 22' 42.247"
 size: "74.958 x 60.904 arcmin"

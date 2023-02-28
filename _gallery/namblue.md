@@ -16,7 +16,7 @@ signature: true
 sessions: 1
 group: ngc7000
 firstCapture: 2022-08-02 
-lastCapture:
+lastCapture: 2022-08-02
 ra: "21h 0m 51.9s"
 dec: "+43° 37' 5.156"
 size: "192.484 x 129.374 arcmin"
