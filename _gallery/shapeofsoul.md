@@ -15,7 +15,7 @@ group: soul
 lights: 300
 sessions: 2
 firstCapture: 2022-08-07 
-lastCapture: 2023-09-29
+lastCapture: 2022-09-29
 ra: "2h 54m 33.1s"
 dec: "+60° 29' 58.029"
 size: "146.448 x 113.335 arcmin"
