@@ -10,6 +10,7 @@ aperture: "80mm"
 folder: ngc2237
 exposure: 10
 lights: 335
+archive: true
 sessions: 1
 firstCapture: 2021-03-11 
 lastCapture: 2021-03-11

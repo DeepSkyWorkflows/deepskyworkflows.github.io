@@ -12,7 +12,7 @@ const processQueue = () => {
     if (numPics < 0) {
         numPics = 1;
     }
-    for (let idx = 0; idx < numPics; idx++) {
+    const insertImage = () => {
         const random = Math.floor(Math.random() * window.gallery.queue.length);
         const picture = window.gallery.queue.splice(random, 1)[0];
         const innerHtml = `<a href="${picture.link}" title="${picture.title}">
@@ -26,7 +26,43 @@ const processQueue = () => {
         div.style = "margin-right: 2px; width: 260px;";
         div.innerHTML = innerHtml;
         section.appendChild(div);
+        return div;
+    };
+    const divs = {
+        lastDiv: [],
+        offset: 280
+    };
+    for (let idx = 0; idx < numPics; idx++) {
+        divs.lastDiv.push(insertImage());
     }
+
+    const transition = () => {
+        if (divs.offset <= 0) {
+            const gone = divs.lastDiv.shift();
+            section.removeChild(gone);
+            divs.lastDiv[divs.lastDiv.length-1]
+                .style.width="280px";
+            divs.offset = 280;
+            heartbeat();
+            return;
+        }
+        divs.offset-=15;
+        divs.lastDiv[0].style.width=`${divs.offset}px`;
+        divs.lastDiv[divs.lastDiv.length-1]
+            .style.width=`${280-divs.offset}px`;
+        setTimeout(transition, 80);
+    };
+
+    const heartbeat = () => {
+        setTimeout(() => {
+            const newImg = insertImage();
+            newImg.style.width = "0px";
+            divs.lastDiv.push(newImg);
+            transition();
+        }, 10000);
+    };
+
+    heartbeat();
 }
 
 const processData = () => {
@@ -34,11 +70,16 @@ const processData = () => {
     const items = data.querySelectorAll("entry");
     items.forEach(el => {
         const picture = {
+            archive: el.getElementsByTagName("archive").length 
+                && el.getElementsByTagName("archive")[0]
+                ? el.getElementsByTagName("archive")[0].innerText : "false",
             title: el.getElementsByTagName("title")[0].innerHTML,
             link: decodeURI(el.getElementsByTagName("link")[0].getAttribute("href")),
             url: decodeURI(el.getElementsByTagName("media:content")[0].getAttribute("url"))
         };
-        window.gallery.queue.push(picture);
+        if (picture.archive !== "true") {
+            window.gallery.queue.push(picture);
+        }
     });
     processQueue();
 };

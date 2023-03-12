@@ -10,6 +10,7 @@ aperture: "80mm"
 folder: ngc1499-california-nebula
 exposure: 10
 group: california
+archive: true
 lights: 548
 sessions: 2
 firstCapture: 2021-06-15 

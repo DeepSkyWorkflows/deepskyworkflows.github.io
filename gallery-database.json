@@ -19,6 +19,7 @@ layout: null
         "exposure": "{{image.exposure}}",
         "lights": "{{image.lights}}",
         "sessions": "{{image.sessions}}",
+        "archive": {% if image.archive != null %}"{{image.archive}}"{% else %}"false"{% endif %},
         "nostars":  {% if image.nostars != null %}"{{image.nostars}}"{% else %}"false"{% endif %},
         "signature":  {% if image.signature != null %}"{{image.signature}}"{% else %}"false"{% endif %},
         {% if image.wwt != null %}"wwt": {{ image.wwt | jsonify }},{% endif %}        

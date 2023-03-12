@@ -8,6 +8,7 @@ telescope: Stellina
 length: "400mm"
 aperture: "80mm"
 folder: ngc2264
+archive: true
 exposure: 10
 lights: 522
 sessions: 3

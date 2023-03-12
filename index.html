@@ -11,7 +11,17 @@ author: "deepskyworkflows"
     <section>
         <div class="section-title">
             <h3>Welcome to Deep Sky Workflows!</h3>
-        </section>        
+            <p>My name is <a href="/about">Jeremy Likness</a> and DeepSkyWorkflows is the website I created to express and share my passion for astrophotography. From the hundreds of photographs I've taken using amateur equipment from my backyard
+            to instructional materials and videos, my goal is to provide everything you need to appreciate astrophotography and, if you're interested, try it out on your own.</p>
+        </div>        
+    </section>
+
+    <section>
+        <div class="section-title">
+            <h2><span>Gallery</span></h2>
+        </div>
+        {% include gallery-random.html %}  
+        &raquo;<a href="/gallery">Visit the gallery</a>  
     </section>
 
     <section class="featured-posts">
@@ -72,14 +82,6 @@ author: "deepskyworkflows"
         </ul>
         </div>
         &raquo;<a href="/videos">See all videos</a>        
-    </section>
-
-    <section>
-        <div class="section-title">
-            <h2><span>Gallery</span></h2>
-        </div>
-        {% include gallery-random.html %}  
-        &raquo;<a href="/gallery">Visit the gallery</a>  
     </section>
 
 {% endif %}

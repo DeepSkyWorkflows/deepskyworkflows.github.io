@@ -11,6 +11,7 @@ folder: ngc5146
 exposure: 10
 lights: 349
 sessions: 1 
+archive: true
 firstCapture:  2021-07-30
 group: "cocoon"
 lastCapture: 2021-07-30

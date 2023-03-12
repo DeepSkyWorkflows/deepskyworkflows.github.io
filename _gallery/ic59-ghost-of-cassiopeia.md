@@ -7,6 +7,7 @@ image: assets/images/gallery/ic59/thumb.jpg
 telescope: Stellina
 length: "400mm"
 aperture: "80mm"
+archive: true
 folder: ic59
 group: ic63
 exposure: 10

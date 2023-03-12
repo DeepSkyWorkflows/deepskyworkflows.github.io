@@ -12,6 +12,7 @@ folder: ngc7635
 exposure: 10
 lights: 852
 sessions: 3 
+archive: true
 firstCapture: 2021-08-04 
 lastCapture: 2021-10-29
 ra: "23h 21m 1.4s"

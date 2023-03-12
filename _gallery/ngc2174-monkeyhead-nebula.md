@@ -11,6 +11,7 @@ folder: ngc2174
 group: ngc2174
 exposure: 10    
 lights: 385
+archive: true
 sessions: 2
 firstCapture: 2021-08-29 
 lastCapture: 2021-09-16

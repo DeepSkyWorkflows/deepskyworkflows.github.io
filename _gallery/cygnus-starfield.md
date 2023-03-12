@@ -5,6 +5,7 @@ tags: ["The star Deneb (αCyg)","The star 57Cyg","The star νCyg","IC5068","IC50
 description: This part of the sky is bursting with clusters and nebulae as the Milky Way dominates the background behind part of the Cygnus constellation.
 image: assets/images/gallery/cygnus-starfield/thumb.jpg
 telescope: Sony ILCE-6300
+archive: true
 length: "55mm"
 aperture: "12mm"
 folder: cygnus-starfield

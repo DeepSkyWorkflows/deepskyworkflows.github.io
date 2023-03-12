@@ -12,6 +12,7 @@ group: "ngc7023"
 exposure: 10
 lights: 1490
 sessions: 2
+archive: true
 firstCapture: 2021-05-22
 lastCapture: 2021-06-26
 ra: "21h 1m 32.2s"

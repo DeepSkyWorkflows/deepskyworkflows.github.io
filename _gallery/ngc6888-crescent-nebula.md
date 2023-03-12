@@ -12,6 +12,7 @@ group: "ngc6888"
 exposure: 10
 lights: 704
 sessions: 5
+archive: true
 firstCapture: 2021-06-17
 lastCapture: 2021-07-09
 ra: "20h 12m 10.0s"

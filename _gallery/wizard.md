@@ -8,6 +8,7 @@ telescope: Stellina
 signature: true
 length: "1645mm"
 aperture: "235mm"
+archive: true
 folder: wizard
 group: "ngc7380"
 exposure: 120

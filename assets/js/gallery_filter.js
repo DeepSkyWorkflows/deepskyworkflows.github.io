@@ -4,6 +4,19 @@ sitemap: false
 ---
 (function () {
 
+    const help = { on: false };
+    $("#helpIcon").click(() => {
+        help.on = !help.on;
+        if (help.on) {
+            $("#helpIcon").text("[-]");
+            $("#help").removeClass("d-none");
+        }
+        else {
+            $("#helpIcon").text("[+]");
+            $("#help").addClass("d-none");
+        }
+    });
+
     const debounceMs = 300;
 
     const queryManager = {

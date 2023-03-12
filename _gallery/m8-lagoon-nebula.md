@@ -9,7 +9,8 @@ length: "400mm"
 aperture: "80mm"
 folder: m8
 group: m8
-exposure: 10    
+exposure: 10   
+archive: true 
 lights: 60
 sessions: 1
 firstCapture: 2021-09-14

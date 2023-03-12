@@ -10,6 +10,7 @@ aperture: "80mm"
 folder: m16
 group: "m16"
 exposure: 10
+archive: true
 lights: 686
 sessions: 4
 firstCapture: 2021-06-19

@@ -9,6 +9,7 @@ length: "336mm"
 aperture: "70mm"
 folder: rosette
 group: rosette
+archive: true
 exposure: 180
 lights: 40
 sessions: 1

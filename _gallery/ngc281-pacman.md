@@ -7,6 +7,7 @@ image: assets/images/gallery/ngc281/thumb.jpg
 telescope: Stellina
 length: "400mm"
 aperture: "80mm"
+archive: true
 folder: ngc281
 group: pacman
 exposure: 10

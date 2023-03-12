@@ -933,6 +933,7 @@ iframe {
     width: 280px;
     height: 100%;
     margin: 3px;
+    border: solid gray 1px;
 }
 
 .gallery-card-sm {

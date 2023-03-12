@@ -11,6 +11,7 @@ folder: ngc6888-edgehd
 group: "ngc6888"
 exposure: 120
 lights: 76
+archive: true
 sessions: 1
 firstCapture: 2022-06-23 
 lastCapture: 2022-06-23

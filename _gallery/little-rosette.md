@@ -8,6 +8,7 @@ telescope: Celestron EdgeHD 9.25
 length: "1645mm"
 aperture: "235mm"
 folder: little-rosette
+archive: true
 exposure: 140 
 lights: 44
 sessions: 1

@@ -12,6 +12,7 @@ group: ngc7000
 exposure: 10
 lights: 1068
 sessions: 5
+archive: true
 firstCapture: 2021-06-24 
 lastCapture: 2021-07-27
 ra: "20h 57m 47.6s"

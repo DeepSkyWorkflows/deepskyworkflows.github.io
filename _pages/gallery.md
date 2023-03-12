@@ -4,18 +4,27 @@ title: Gallery
 image: "assets/images/gallery.jpg"
 permalink: /gallery/
 ---
+<p>Welcome to the DeepSkyWorkflows galleries. Here, you will find images of stars, planets, galaxies, clusters, nebulae, meteors and other celestial wonders. Most of these images were captured from the deck of my home in Monroe, WA. Visit our <a href="{{ site.galleryhome }}" target="_blank">online gallery shop</a> to browse and purchase metal, canvas, and paper prints. <a href="{{ site.galleryhome }}" target="_blank">🛒 Find the perfect print for you</a>. (<strong>TIP</strong>: <i>any</i> image is available for print, so if it's not in  the online shop just <a href="https://deepskyworkflows.shootproof.com/contact" target="_blank">contact me</a> with the image title or URL for a quote).</p>
+<p>If you're new to the gallery, we can browse it for you via our  <a href="{{ site.baseurl}}/gallery/slideshow/" title="Slideshow"><i class="fa fa-film"></i> Slideshow</a>.
+</p>
+<p><span style="cursor: pointer;" alt="Click or tap to expand" title="Click or tap to expand"><strong id="helpIcon">[+]</strong></span>&nbsp;Gallery help</p>
+
+<div id="help" class="d-none">
+    <p>Gallery items are organized by category, so you can tap on <a href="#Lunar">"Lunar"</a> to quickly jump to the lunar images. For my highest quality images, check the <a href="/gallery/?signature=true">"⭐ Signature series"</a> filter. If you're looking for photographs that are ready to print, choose <a href="/gallery/?prints=true">"🖼 Prints available"</a> or <a href="https://deepskyworkflows.shootproof.com" target="_blank">visit our print gallery</a>. The filter will search title, description, and tags. For example, you can find <a href="/gallery/sapphires/">"The Winter Sky Sapphires"</a> by searching  for <a href="/gallery/?q=m45">M45</a> even though it doesn't appear in the title or description.</p>
+    <p>Most images will show four tabs. The <a href="/gallery/rosecomplete/"><strong>main tab</strong></a> shows the image and, if available, an option to view it with the stars removed. The <a href="/gallery/rosecomplete/#annotated-fs"><strong>annotated (fullsize) tab</strong></a> is enhanced with labels for deep sky objects. The <a href="/gallery/rosecomplete/#grid"><strong>grid tab</strong></a> shows the right ascension and declination grid lines. <a href="/gallery/rosecomplete/#annotated"><strong>annotated tab</strong></a> is a smaller image so the labels appear larger. If the image is available as a direct print, a button will appear that links directly to the print options.</p>
+    <p>On the right side is the description of the target. When available, you can click the link to the <a href="http://www.worldwidetelescope.org/wwtweb/ShowImage.aspx?reverseparity=False&scale=1.578823&name=rosecomplete.jpg&imageurl=https://deepskyworkflows.com/assets/images/gallery/rosecomplete/rosecomplete.jpg&credits=Jeremy+Likness+at+DeepSkyWorkflows.com&creditsUrl=&ra=98.240334&dec=5.073447&x=2223.4&y=2553.1&rotation=-151.50&thumb=https://deepskyworkflows.com/assets/images/gallery/rosecomplete/thumb.jpg" target="_blank">World Wide Telescope</a> to see the image overlaid in a web-based planetarium. This will give you an idea of where in the sky it was taken.</p>
+    <p>In addition to facts about the image, you will also find links to related images (it's fun for me to see how different the same target may look based on the equipment, field of view, and my skills when I processed it). "Objects in frame" includes detected deep sky objects. Clicking on these will take you into our <a href="/tags"><strong>tags network</strong></a> that interlinks all of the images, videos, and blog posts on the site. If you have any questions or need further help, please <a href="https://deepskyworkflows.shootproof.com/contact" target="_blank">contact me</a>.</p>
+</div>
+
 <h3>Random picks</h3>
 {% include gallery-random.html %}
-<h3>Purchase prints</h3>
-<p>Visit our <a href="{{ site.galleryhome }}" target="_blank">online gallery shop</a> to browse and purchase metal, canvas, and paper prints. <a href="{{ site.galleryhome }}" target="_blank" class="btn btn-primary">🛒 Shop now</a></p>
-<h3>Collections</h3>
+<h3 id="top">Filter and search</h3>
+<a name="top"></a>
 <p>
 {% for collection in site.portfolios %}
 <a href="{{ site.baseurl }}/tag/{{collection | strip | replace: ' ', '-' | remove: '(' | remove: ')' | downcase }}" title="{{collection}}" alt="{{collection}}">{{collection}}</a>&nbsp;|&nbsp;
 {% endfor %}
 </p>
-<h3 id="top">Filter and search</h3>
-<a name="top"></a>
 {% assign version = 10 %}
 {% assign types = site.gallery | group_by: 'type' | sort: 'lastCapture' | reverse %}
 {% assign telescopeArray = '' | split: ',' %}
@@ -26,9 +35,7 @@ permalink: /gallery/
     <input type="checkbox" id="prints" alt="Show photographs with available prints only" title="Show  photographs with available prints only"/>🖼 Prints available
     &nbsp;|&nbsp;
     ✨ Starless version</p>
-<p><a href="{{ site.baseurl}}/gallery/slideshow/" title="Slideshow"><i class="fa fa-film"></i> Slideshow</a>
-&nbsp;|&nbsp;
-<strong>Jump to Category:</strong>
+<p><strong>Jump to Category:</strong>
 {% assign cats = types | sort: 'name' %}
 {% for nestedGroup in cats %}
     <a href="#{{nestedGroup.name | remove: ' '}}">{{nestedGroup.name}}</a>&nbsp;|
@@ -65,6 +72,8 @@ permalink: /gallery/
             <div class="row groupdetail" data-group="{{groupCode}}">
             {% assign itemIndex = 1 %}
             {% for item in subitems %}        
+            {% if item.archive == true %}
+            {% else %}
             {% assign mainUrl = site.baseurl | append: item.url %}
             {% assign annotated = mainUrl | append: "#annotated" %}
             {% assign grid = mainUrl | append: "#grid" %}
@@ -102,6 +111,7 @@ permalink: /gallery/
                         <a href="{{mainUrl}}" title="{{item.description}}">{{item.title}}</a>
                     </div>                
                 </div>
+            {% endif %}            
             {% endfor %}
             </div>
         {% endfor %}    

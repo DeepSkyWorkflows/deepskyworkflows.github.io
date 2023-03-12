@@ -8,6 +8,7 @@ telescope: Stellina
 length: "400mm"
 aperture: "80mm"
 folder: ic5070
+archive: true
 group: "ic5070"
 exposure: 10
 lights: 399

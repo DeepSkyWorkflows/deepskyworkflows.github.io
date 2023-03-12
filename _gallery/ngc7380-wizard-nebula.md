@@ -12,6 +12,7 @@ group: "ngc7380"
 exposure: 10
 lights: 619 
 sessions: 1
+archive: true
 firstCapture: 2021-06-28 
 lastCapture: 2021-06-28
 ra: "22h 47m 3.4s"

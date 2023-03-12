@@ -12,6 +12,7 @@ group: ngc7293
 exposure: 10
 lights: 334
 sessions: 1
+archive: true
 firstCapture: 2021-10-08 
 lastCapture: 2021-10-08
 ra: "22h 29m 43.1s"
