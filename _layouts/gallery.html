@@ -18,22 +18,66 @@ layout: default
 {% assign next = site.baseurl | append: page.next.url %}
 {% endif %}
 
+{% assign types = site.gallery | group_by: 'type' | sort: 'lastCapture' | reverse %}
+{% assign cats = types | sort: 'name' %}
+{% assign prevUrl = "" %}
+{% assign prevTitle = "" %}
+{% assign nextUrl = "" %}
+{% assign nextTitle = "" %}
+{% assign curItem = "" %}
+
+{% for group in cats %}
+    {% if group.name == page.type %}
+        {% assign subitems = group.items | sort : 'lastCapture' | reverse %}
+        {% for item in subitems %}
+            {% if item.url == page.url %}
+                {% assign curItem = item.title %}
+            {% endif %}
+            {% if curItem == "" %}
+                {% assign prevTitle = item.title %}
+                {% assign prevUrl = site.baseurl | append: item.url %}
+            {% endif %}
+            {% if curItem == "" %}
+            {% else %}
+                {% if nextTitle == "" %}
+                    {% if curItem == item.title %}
+                    {% else %}
+                        {% assign nextTitle = item.title %}
+                        {% assign nextUrl = site.baseurl | append: item.url %}
+                    {% endif %}
+                {% endif %}
+            {% endif %}
+        {% endfor %}    
+    {% endif %}
+{% endfor %}
 <section>
     <div class="row">
         <div class="section-title">            
             <h2>
-                <span>               
-                <a href="{{site.baseurl}}/gallery" title="Back to gallery">Gallery</a>&nbsp;&raquo;&nbsp;
                 {% if page.signature == true %}
                 ⭐
-                {% endif %} 
+                {% endif %}
                 {{page.title}}
             </span></h2>
-            {% if printurl == site.galleryhome %}
-            <p><a href="{{ printurl }}" class="btn btn-primary" target="_blank">🛒 Visit our gallery of prints.</a></p>
-            {% else %}
-            <p><a href="{{ printurl }}" class="btn btn-success" target="_blank">🛒 Purchase prints of this image.</a></p>
-            {% endif %}
+            <p><span>               
+                {% if prevTitle == "" %}
+                {% else %}
+                <a href="{{ prevUrl }}" title="{{ prevTitle }}">{{ prevTitle }}</a>
+                &nbsp;&laquo;&nbsp;
+                {% endif %}
+                <a href="{{site.baseurl}}/gallery" title="Back to gallery">Back to Gallery</a>        
+                {% if nextTitle == "" %}
+                {% else %}
+                &nbsp;&raquo;&nbsp;
+                <a href="{{ nextUrl }}" title="{{ nextTitle }}">{{ nextTitle }}</a>                
+                {% endif %}            
+                &nbsp;
+                {% if printurl == site.galleryhome %}
+                <a href="{{ printurl }}" class="btn btn-primary" target="_blank">🛒 Visit our gallery of prints.</a>
+                {% else %}
+                <a href="{{ printurl }}" class="btn btn-success" target="_blank">🛒 Purchase prints of this image.</a>
+                {% endif %}
+            </p>
         </div>
     </div>
     <div class="row">
