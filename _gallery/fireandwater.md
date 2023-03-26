@@ -8,7 +8,8 @@ telescope: Celestron EdgeHD 9.25
 length: "1645mm"
 aperture: "235mm"
 folder: fireandwater
-signature: true
+wwt: http://www.worldwidetelescope.org/wwtweb/ShowImage.aspx?reverseparity=False&scale=0.285257&name=fireandwater.jpg&imageurl=https://deepskyworkflows.com/assets/images/gallery/fireandwater/fireandwater.jpg&credits=Jeremy+Likness+at+DeepSkyWorkflows.com&creditsUrl=https://deepskyworkflows.com/&ra=85.308174&dec=-2.317463&x=1737.7&y=2540.3&rotation=105.04&thumb=https://deepskyworkflows.com/assets/images/gallery/fireandwater/thumb.jpg
+signature: false
 group: ic434
 exposure: 300
 lights: 60
