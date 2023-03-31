@@ -1,6 +1,6 @@
 ---
 title: "An International Space Station (ISS) flyover"
-type: Miscellaneous
+type: ISS
 image: \assets\images\gallery\iss\thumb.jpg
 tags: ["The moon", "moon"]
 description: The path traced by ISS in the sky.

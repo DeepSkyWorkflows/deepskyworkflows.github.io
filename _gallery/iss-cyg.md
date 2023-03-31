@@ -1,6 +1,6 @@
 ---
 title: "ISS and 62 Cyg"
-type: Miscellaneous
+type: ISS
 tags: ["iss", "62 Cyg","The star ξ Cyg"]
 description: The International Space Station makes a transit past the bright star ξ Cyg.
 image: /assets/images/gallery/iss-cyg/thumb.jpg

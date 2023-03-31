@@ -6,6 +6,7 @@ description: "Although we tend to refer to IC434 as the Horsehead Nebula, it's a
 image: assets/images/gallery/ic434/thumb.jpg
 telescope: Stellina
 length: "400mm"
+archive: true
 aperture: "80mm"
 folder: ic434
 group: "ic434"

@@ -6,6 +6,7 @@ description: "The Easternmost jewel on Orion's belt is brilliant Alnitak, a brig
 image: assets/images/gallery/ic434-mosaic/thumb.jpg
 telescope: Stellina
 length: "400mm"
+archive: true
 aperture: "80mm"
 folder: ic434-mosaic
 group: "ori-belt"

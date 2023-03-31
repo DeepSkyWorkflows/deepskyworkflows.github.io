@@ -1,7 +1,7 @@
 ---
 title: "Capella"
 type: Star
-tags: ["The star Capella (αAur)", "Capella"]
+tags: ["The star Capella", "The star Capella (α Aur)", "Capella"]
 description: The star Capella is less than 50 light years from the sun. Although it appears to be a single star, it is actually a quad system comprised of a pair of binary stars.
 image: assets/images/gallery/capella/thumb.jpg
 telescope: Stellina
