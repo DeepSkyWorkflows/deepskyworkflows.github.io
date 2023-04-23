@@ -11,8 +11,8 @@ folder: mars-and-pleiades-wide
 exposure: 
 lights: 
 sessions: 
-firstCapture: 
-lastCapture: 
+firstCapture: 2022-08-30
+lastCapture: 2022-08-30
 ra: "5h 7m 48.1s"
 dec: "+25° 28' 3.711"
 size: "3695.455 x 2926.149 arcmin"
