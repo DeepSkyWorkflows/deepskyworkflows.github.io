@@ -6,6 +6,7 @@ description: This cluster, just barely visible to the naked eye, contains severa
 image: assets/images/gallery/m13/thumb.jpg
 telescope: Stellina
 signature: true
+group: m13
 length: "400mm"
 aperture: "80mm"
 folder: m13
