@@ -1,6 +1,6 @@
 ---
 title: "Sunburst"
-type: Miscellaneous
+type: Solar
 tags: ["Cayman Collection",sunburst]
 description: A sunburst of red rays just after sunset at Rackam's in Grand Cayman.
 image: /assets/images/gallery/sunburst/thumb.jpg
