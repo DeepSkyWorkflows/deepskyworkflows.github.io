@@ -8,6 +8,7 @@ telescope: Celestron EdgeHD 9.25
 length: "2350mm"
 aperture: "235mm"
 folder: m63-celestron
+group: m63
 exposure: 120
 lights: 67
 sessions: 1

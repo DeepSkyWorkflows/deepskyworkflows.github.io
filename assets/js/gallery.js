@@ -85,6 +85,45 @@ $(document).ready(function () {
         });
     });
 
+    const raDec = {
+        
+    };
+    
+    $("span[id=data-ra]").each(function () {
+        raDec.ra = $(this).text();
+        raDec.raspan = $(this);
+    });
+    
+    $("span[id=data-dec").each(function () {
+        raDec.dec = $(this).text();
+        raDec.decspan = $(this);
+    });
+    
+    $("span[id=data-radius").each(function () {
+        
+        if (!(raDec.ra && raDec.ra.length && raDec.dec && raDec.dec.length))  {
+            return;
+        }
+        
+        const fov = $(this).text().substring(0, $(this).text().indexOf(' '));
+        const parts = raDec.ra.split(' ');
+        const hours = parseInt(parts[0].replace(/^\D+/g, ''));
+        const minutes = parseInt(parts[1].replace(/^D+/g, ''))/60.0;
+        const seconds = parseInt(parts[2].replace(/^D+/g, ''))/3600.0;
+        const rIdx = hours + minutes + seconds;
+        const decSign = raDec.dec[0] === '-' ? -1 : 1;
+        const decParts = raDec.dec.split(' ');
+        const degrees = parseInt(decParts[0].substring(1).replace(/^D+/g, ''));
+        const decMinutes = parseInt(decParts[1].replace(/^D+/g, ''))/60;
+        const decSeconds = parseInt(decParts[2].replace(/^D+/g, ''))/3600;
+        const dec = (decSign) * (degrees + decMinutes + decSeconds);
+        const link = `https://worldwidetelescope.org/webclient/#ra=${rIdx}&dec=${dec}&fov=${fov}`;
+        const raLink = `<a href="${link}" target="_blank" title="View coordinates in WorldWideTelescope">${raDec.ra}</a>`;
+        const decLink = `<a href="${link}" target="_blank" title="View coordinates in WorldWideTelescope">${raDec.dec}</a>`;
+        $(raDec.raspan).text('').append(raLink);
+        $(raDec.decspan).text('').append(decLink);
+    });                
+    
     activeRef = activeRef ?? targets.shift();
     if (activeRef) {
         active.link = activeRef.link;
