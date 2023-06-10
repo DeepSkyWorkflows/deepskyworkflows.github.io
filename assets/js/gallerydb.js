@@ -1,4 +1,4 @@
-window.gallerydb = (async function () {
+window.gallerydbpromise = (async function () {
 
     const addOnce = (item, coll) => {
         if (!coll.includes(item)) {
@@ -55,7 +55,6 @@ window.gallerydb = (async function () {
 
                 const item = internaldb.db.gallery[idx];
                 const key = item.folder;
-                const toInt = str =>  String.replace(/[0..9]+/g)
                 if (item.rightAscension) {
                     const fov = item.radius.substring(0, item.radius.indexOf(' '));
                     const parts = item.rightAscension.split(' ');
@@ -181,11 +180,13 @@ window.gallerydb = (async function () {
 
         sort: (col, item1, item2, asc) => {
             let result = sorts[col](item1, item2);
-            return asc ? result * -1 : result;
+            return asc === true ? result : result *-1;
         },
 
         "title": (item1, item2) =>
             item1.title < item2.title ? 1 : -1,
+
+        "date": (item1, item2) => sorts["firstCapture"](item1, item2),
 
         "lastCapture": (item1, item2) => {
             const date1 = item1.converted.lastCapture * 100000000 + item1.converted.firstCapture;
@@ -208,13 +209,15 @@ window.gallerydb = (async function () {
 
     const db = {
 
+        lastOp: null,
+
         getTypes: () => [...internaldb.types].sort(),
 
         getTelescopes: () => [...internaldb.telescopes].sort(),
 
-        getExposures: () => [...internaldb.exposures].sort(),
+        getExposures: () => [...internaldb.exposures].sort((a, b) => (parseInt(a) - parseInt(b))),
 
-        getFocalLengths: () => [...internaldb.focalLengths].sort(),
+        getFocalLengths: () => [...internaldb.focalLengths].sort((a, b) => (parseInt(a) - parseInt(b))),
 
         setSort: (sortCol, asc) =>
             internaldb.sort = { sortCol: sortCol, ascending: asc },
@@ -238,11 +241,54 @@ window.gallerydb = (async function () {
 
         getItem: key => internaldb.idx[key],
 
+        bindToItem: (img, key) => {
+            const item = db.getItem(key);
+            img.setAttribute("src", "/assets/img/loading.gif");
+            img.setAttribute("title", item.description);
+            img.setAttribute("alt", item.description);
+            item.img.addEventListener("load", () => {
+                img.setAttribute("src", item.img.src);
+            });
+            if (item.img.complete) {
+                img.setAttribute("src", item.img.src);
+            }
+            img.dataset.folder = key;
+            return img;
+        },
+
+        groupBy: (col) => {
+            const result = db.getItems();
+            const groups = [];
+            const groupIdx = {};
+            const groupedResult = [];
+
+            for (let idx = 0; idx < result.length; idx++) {
+                const item = result[idx];
+                const group = item[col];
+                if (groupIdx[group] === undefined) {
+                    groupIdx[group] = [];
+                    groups.push({
+                        group: group,
+                        items: groupIdx[group]
+                    });
+                }
+                groups[group].push(item)
+            }
+
+            return groups;
+        },
+
         getItems: () => {
 
             let predicate = item => true;
 
+            let op = `Sorted ${internaldb.sort.ascending === true ? 'ascending' : 'descending'} by ${internaldb.sort.sortCol}. `;
+
             const compound = internaldb.predicates.length > 1;
+
+            if (internaldb.predicates.length > 0) {
+                op = `${op}Filtering by `;
+            }
 
             const sort = (item1, item2) =>
                 sorts.sort(internaldb.sort.sortCol, item1, item2, internaldb.sort.ascending);
@@ -263,6 +309,7 @@ window.gallerydb = (async function () {
                 switch (predicateDefinition.col) {
                 
                     case ("type"):
+
                         return dereference([...internaldb.typeIdx[predicateDefinition.val1].values])
                             .sort(sort);
 
@@ -275,29 +322,26 @@ window.gallerydb = (async function () {
                             return dereference([...internaldb.focalLengthIdx[predicateDefinition.val1].values])
                                 .sort(sort);
                         }
+                        break;
 
                     case ("exposure"):
                         if (predicateDefinition.op === "eq") {
                             return dereference([...internaldb.exposureIdx[predicateDefinition.val1].values])
                                 .sort(sort);
                         }
+                        break;
 
                     case ("date"):
                         if (predicateDefinition.op === "eq") {
                             return dereference([...internaldb.dateIdx[predicateDefinition.val1].values])
                                 .sort(sort);
                         }
+                        break;
 
                     case ("signature"):
                         return dereference(predicateDefinition.val1
                             ? [...internaldb.signatures]
-                            : [...internaldb.notsignatures]).sort(sort);
-
-                    case ("focalLength"):
-                        if (predicateDefinition.op === "eq") {
-                            return dereference([...internaldb.focalLengthIdx[predicateDefinition.val1].values])
-                                .sort(sort);
-                        }
+                            : [...internaldb.notsignatures]).sort(sort);                   
                 }
             }
 
@@ -432,6 +476,8 @@ window.gallerydb = (async function () {
                         break;
                 }
 
+                db.lastOp = op;
+
                 return [...internaldb.db.gallery.filter(predicate)].sort(sort);
             }
         }
@@ -442,3 +488,5 @@ window.gallerydb = (async function () {
 
     return db;
 })();
+
+(async () => window.gallerydb = await window.gallerydbpromise)();

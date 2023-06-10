@@ -1,0 +1,71 @@
+label {
+    width: 100%;
+    margin: 2px;
+    padding: 2px;
+    font-weight: bold;
+    text-align: center;
+    display: blocks;
+}
+
+label input {
+    width: 100%;
+    padding: 1px;
+}
+
+label select {
+    width: 100%;
+}
+
+#gallery-head {
+    width: 100%;
+    padding: 2px;
+}
+
+#gallery {
+    height: 100%;
+    margin: 1em;
+    padding: 1em;
+    overflow: scroll;   
+}
+
+#gallery-filters, #gallery-filters-tab {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 200px;
+    float: left;
+    height: 100%;
+    margin: 1em;
+    overflow: none;
+}
+
+.gallery-large {
+    align-items: center;
+}
+
+.gallery-card {
+    float: left;
+    margin-left: 1em;
+    height: 350px;
+}
+
+.gallery-img {
+    width: 128px;
+    margin-left: 1em;
+}
+
+.gallery-card small {
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+
+.card-image-top {
+    max-height: 256px;
+    max-width: 256px;
+    margin-left:11px;
+}
+
+.card-header {
+    vertical-align: bottom;
+}

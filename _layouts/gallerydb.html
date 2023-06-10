@@ -1,0 +1,41 @@
+---
+layout: default
+---
+
+<div id="gallery-host" markdown="0">
+    <div id="gallery-head">
+        Sort column:
+        <select id="sort" name="sort">
+        </select>
+        &nbsp;
+        <button id="btnSortDir">Ascending</button>
+        &nbsp;
+        <span id="status">
+        </span>
+    </div>    
+    <div id="gallery-filters-tab">
+        <button id="toggle">&raquo;</button>
+    </div>
+    <div id="gallery-filters">
+        <label for="filter">
+            Filter:
+            <input name="filter"/>
+        </label>
+        <label for="type">
+            Type:
+            <select name="type">
+            </select>
+        </label>
+        <label for="telescope">
+            Telescope:
+            <select name="telescope">
+            </select>
+        </label>        
+    </div>
+    <div id="gallery">  
+    </div>
+</div>
+<link href="{{ site.baseurl }}/assets/css/gallery.css" rel="stylesheet">
+<script src="{{ site.baseurl }}/assets/js/queryStringRouter.js"></script>
+<script src="{{ site.baseurl }}/assets/js/gallery_filter.js"></script>
+<script src="{{ site.baseurl}}/assets/js/gallerydb.js"></script>
