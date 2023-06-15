@@ -58,7 +58,7 @@ window.gallerydbpromise = (async function () {
                 if (item.rightAscension) {
                     const fov = item.radius.substring(0, item.radius.indexOf(' '));
                     const parts = item.rightAscension.split(' ');
-                    const hours =parseInt(parts[0].replace(/^\D+/g, ''));
+                    const hours = parseInt(parts[0].replace(/^\D+/g, ''));
                     const minutes = parseInt(parts[1].replace(/^D+/g, ''))/60.0;
                     const seconds = parseInt(parts[2].replace(/^D+/g, ''))/3600.0;
                     const rIdx = hours + minutes + seconds;
@@ -207,9 +207,28 @@ window.gallerydbpromise = (async function () {
         }
     };
 
+    const predicateLogic = {
+        "title": {
+            dataset : () => internaldb.gallery,
+            filter: (item, val) => item.title.toLowerCase().indexOf(val.toLowerCase()) > -1
+        },
+        
+        "description": {
+            dataset : () => internaldb.gallery,
+            filter: (item, val) => item.description.toLowerCase().indexOf(val.toLowerCase()) > -1
+        },
+
+        "type": {
+            dataset : (type) => internaldb.typeIdx[type],
+            filter: (item, val) => item.type === val
+        } 
+    };
+
     const db = {
 
         lastOp: null,
+
+        getSorts: () => [...["title", "date", "lastCapture", "firstCapture"]].sort(),
 
         getTypes: () => [...internaldb.types].sort(),
 
@@ -278,7 +297,7 @@ window.gallerydbpromise = (async function () {
             return groups;
         },
 
-        getItems: () => {
+        getItems: (limit = 10) => {
 
             let predicate = item => true;
 
@@ -302,49 +321,7 @@ window.gallerydbpromise = (async function () {
             }
 
             // type, telescope, focallength, exposure, date eq, signature, archived
-            if (!compound) {
-
-                let predicateDefinition = internaldb.predicates[0];
-                
-                switch (predicateDefinition.col) {
-                
-                    case ("type"):
-
-                        return dereference([...internaldb.typeIdx[predicateDefinition.val1].values])
-                            .sort(sort);
-
-                    case ("telescope"):
-                        return dereference([...internaldb.telescopeIdx[predicateDefinition.val1].values])
-                            .sort(sort);
-
-                    case ("focalLength"):
-                        if (predicateDefinition.op === "eq") {
-                            return dereference([...internaldb.focalLengthIdx[predicateDefinition.val1].values])
-                                .sort(sort);
-                        }
-                        break;
-
-                    case ("exposure"):
-                        if (predicateDefinition.op === "eq") {
-                            return dereference([...internaldb.exposureIdx[predicateDefinition.val1].values])
-                                .sort(sort);
-                        }
-                        break;
-
-                    case ("date"):
-                        if (predicateDefinition.op === "eq") {
-                            return dereference([...internaldb.dateIdx[predicateDefinition.val1].values])
-                                .sort(sort);
-                        }
-                        break;
-
-                    case ("signature"):
-                        return dereference(predicateDefinition.val1
-                            ? [...internaldb.signatures]
-                            : [...internaldb.notsignatures]).sort(sort);                   
-                }
-            }
-
+            
             const fnCombine = (predicate1, predicate2) =>
                 item => predicate1(item) && predicate2(item);
 
