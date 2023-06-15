@@ -1,4 +1,4 @@
-window.gallerydbpromise = (async function () {
+window.gallerydbpromise = window.gallerydbpromise || (async function () {
 
     const addOnce = (item, coll) => {
         if (!coll.includes(item)) {
@@ -203,7 +203,7 @@ window.gallerydbpromise = (async function () {
             if (date1 === date2) {
                 return sorts.title(item1, item2);
             }
-            return date2 - date1;
+            return date1 - date2;
         }
     };
 
@@ -299,7 +299,7 @@ window.gallerydbpromise = (async function () {
 
         getItems: (limit = 10) => {
 
-            let predicate = item => true;
+            let predicate = null;
 
             let op = `Sorted ${internaldb.sort.ascending === true ? 'ascending' : 'descending'} by ${internaldb.sort.sortCol}. `;
 
@@ -336,67 +336,53 @@ window.gallerydbpromise = (async function () {
 
                     case ("title"):
                         newPredicate = item => item.title.indexOf(predicateDefinition.val1) >= 0;
-                        combined = fnCombine(newPredicate, predicate);
-                        predicate = combined;                         
                         break;
 
                     case ("description"):
-                        newPredicate = item => item.description.indexOf(predicateDefinition.val1) >= 0
-                        combined = fnCombine(newPredicate, predicate);
-                        predicate = combined;
+                        newPredicate = item => item.description.indexOf(predicateDefinition.val1) >= 0;
                         break;
 
                     case ("text"):
-                        predicate = item => item.text.indexOf(predicateDefinition.val1) >= 0
-                            && predicate(item);
+                        newPredicate = item => item.text.indexOf(predicateDefinition.val1) >= 0;
                         break;
 
                     case ("tags"):
-                        predicate = item => item.tags.includes(predicateDefinition.val1)
-                            && predicate(item);
+                        newPredicate = item => item.tags.includes(predicateDefinition.val1);                            
                         break;
 
                     case ("type"):
-                        predicate = item => item.type === predicateDefinition.val1
-                            && predicate(item);
+                        newPredicate = item => item.type === predicateDefinition.val1;
                         break;
 
                     case ("signature"):
-                        predicate = item => item.signature === predicateDefinition.val1
-                            && predicate(item);
+                        newPredicate = item => item.signature === predicateDefinition.val1;
                         break;
 
                     case ("archive"):
-                        predicate = item => item.archive === predicateDefinition.val1
-                            && predicate(item);
+                        newPredicate = item => item.archive === predicateDefinition.val1;
                         break;
 
                     case ("telescope"):
-                        predicate = item => item.telescope === predicateDefinition.val1
-                            && predicate(item);
+                        newPredicate = item => item.telescope === predicateDefinition.val1;
                         break;
 
                     case ("exposure"):
                         switch (predicateDefinition.op) {
                             case "lt":
-                                predicate = item => item.converted.exposure < predicateDefinition.val1
-                                    && predicate(item);
+                                newPredicate = item => item.converted.exposure < predicateDefinition.val1;
                                 break;
 
                             case "gt":
-                                predicate = item => item.converted.exposure > predicateDefinition.val1
-                                    && predicate(item);
+                                newPredicate = item => item.converted.exposure > predicateDefinition.val1;
                                 break;
 
                             case "eq":
-                                predicate = item => item.converted.exposure === predicateDefinition.val1
-                                    && predicate(item);
+                                newPredicate = item => item.converted.exposure === predicateDefinition.val1;
                                 break;
 
                             case "between":
-                                predicate = item => item.converted.exposure >= predicateDefinition.val1
-                                    && item.converted.exposure <= predicateDefinition.val2
-                                    && predicate(item);
+                                newPredicate = item => item.converted.exposure >= predicateDefinition.val1
+                                    && item.converted.exposure <= predicateDefinition.val2;
                                 break;
                         }
                         break;
@@ -404,24 +390,20 @@ window.gallerydbpromise = (async function () {
                     case ("focallength"):
                         switch (predicateDefinition.op) {
                             case "lt":
-                                predicate = item => item.converted.focalLength < predicateDefinition.val1
-                                    && predicate(item);
+                                newPredicate = item => item.converted.focalLength < predicateDefinition.val1;
                                 break;
 
                             case "gt":
-                                predicate = item => item.converted.focalLength > predicateDefinition.val1
-                                    && predicate(item);
+                                newPredicate = item => item.converted.focalLength > predicateDefinition.val1;
                                 break;
 
                             case "eq":
-                                predicate = item => item.converted.focalLength === predicateDefinition.val1
-                                    && predicate(item);
+                                newPredicate = item => item.converted.focalLength === predicateDefinition.val1;
                                 break;
 
                             case "between":
-                                predicate = item => item.converted.focalLength >= predicateDefinition.val1
-                                    && item.converted.focalLength <= predicateDefinition.val2
-                                    && predicate(item);
+                                newPredicate = item => item.converted.focalLength >= predicateDefinition.val1
+                                    && item.converted.focalLength <= predicateDefinition.val2;
                                 break;
                         }
                         break;
@@ -429,39 +411,42 @@ window.gallerydbpromise = (async function () {
                     case ("captureDate"):
                         switch (predicateDefinition.op) {
                             case "lt":
-                                predicate = item => item.converted.lastCapture < predicateDefinition.val1
-                                    && predicate(item);
+                                newPredicate = item => item.converted.lastCapture < predicateDefinition.val1;
                                 break;
 
                             case "gt":
-                                predicate = item => item.converted.firstCapture > predicateDefinition.val1
-                                    && predicate(item);
+                                newPredicate = item => item.converted.firstCapture > predicateDefinition.val1;
                                 break;
 
                             case "eq":
-                                predicate = item => (item.converted.firstCapture === predicateDefinition.val1
-                                    || item.converted.lastCapture === predicateDefinition.val1)
-                                    && predicate(item);
+                                newPredicate = item => (item.converted.firstCapture === predicateDefinition.val1
+                                    || item.converted.lastCapture === predicateDefinition.val1);
                                 break;
 
                             case "between":
-                                predicate = item => item.converted.firstCapture >= predicateDefinition.val1
-                                    && item.converted.lastCapture <= predicateDefinition.val2
-                                    && predicate(item);
+                                newPredicate = item => item.converted.firstCapture >= predicateDefinition.val1
+                                    && item.converted.lastCapture <= predicateDefinition.val2;                                    
                                 break;
                         }
-                        break;
+                        break;                                           
+                }                
+                if (predicate === null) {
+                    predicate = newPredicate;
+                } else {
+                    const oldPredicate = predicate;
+                    predicate = fnCombine(oldPredicate, newPredicate);
                 }
-
-                db.lastOp = op;
-
-                return [...internaldb.db.gallery.filter(predicate)].sort(sort);
             }
-        }
+
+            predicate = predicate || (() => true);
+            db.lastOp = op;
+
+            return [...internaldb.db.gallery.filter(predicate)].sort(sort);
+            }
     };
 
     db.setSort("lastCapture", false);
-    db.setPredicate("signature", true);
+    db.setPredicate("signature", "eq", true);
 
     return db;
 })();

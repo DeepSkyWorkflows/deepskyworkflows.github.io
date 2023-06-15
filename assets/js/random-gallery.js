@@ -3,18 +3,20 @@ layout: null
 sitemap: false
 ---
 
-const RSS_URL = "{{baseurl}}/gallery.xml";
-
 const processQueue = () => {
+    
     const section = document.getElementById("random-gallery");
     const numPics = Math.floor(section.offsetWidth / 262);
+    
     section.innerText = '';
+    
     if (numPics < 0) {
         numPics = 1;
     }
-    const insertImage = () => {
+    
+    const insertImage = (pic) => {
         const random = Math.floor(Math.random() * window.gallery.queue.length);
-        const picture = window.gallery.queue.splice(random, 1)[0];
+        const picture = pic || window.gallery.queue.splice(random, 1)[0];
         const innerHtml = `<a href="${picture.link}" title="${picture.title}">
         <img class="card-img-top gallery-img messier" src="${picture.url}" alt="${picture.title}">
         </a>
@@ -28,12 +30,16 @@ const processQueue = () => {
         section.appendChild(div);
         return div;
     };
+    
     const divs = {
         lastDiv: [],
         offset: 280
     };
-    for (let idx = 0; idx < numPics; idx++) {
-        divs.lastDiv.push(insertImage());
+    
+    const queue = [...window.gallery.queue];        
+    
+    for (let idx = 0; idx < numPics; idx++) {        
+        divs.lastDiv.push(insertImage(queue[idx]));
     }
 
     const transition = () => {
@@ -66,23 +72,20 @@ const processQueue = () => {
 }
 
 const processData = () => {
-    const data = window.gallery.data;
-    const items = data.querySelectorAll("entry");
-    items.forEach(el => {
+    window.gallerydb.setPredicate("signature", "eq", true);
+    window.gallerydb.setSort("lastCapture", false);    
+    const db = window.gallerydb.getItems(9999);
+    db.forEach(item => {
         const picture = {
-            archive: el.getElementsByTagName("archive").length 
-                && el.getElementsByTagName("archive")[0]
-                ? el.getElementsByTagName("archive")[0].innerText : "false",
-            title: el.getElementsByTagName("title")[0].innerHTML,
-            link: decodeURI(el.getElementsByTagName("link")[0].getAttribute("href")),
-            url: decodeURI(el.getElementsByTagName("media:content")[0].getAttribute("url"))
+            updated: item.lastCapture,        
+            title: item.title,
+            link: `gallery/${item.folder}`,
+            url: `${item.thumbnailUrl}`
         };
-        if (picture.archive !== "true") {
-            window.gallery.queue.push(picture);
-        }
+        window.gallery.queue.push(picture);        
     });
     processQueue();
-};
+}
 
 const load = () => {
 
@@ -96,13 +99,7 @@ const load = () => {
         return;
     }
 
-    fetch(RSS_URL)
-        .then(response => response.text())
-        .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
-        .then(data => {
-            window.gallery.data = data;
-            processData();
-        });
+    window.gallerydbpromise.then(processData);
 };
 
 setTimeout(load);        
