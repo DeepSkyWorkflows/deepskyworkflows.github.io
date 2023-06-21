@@ -5,7 +5,7 @@ sitemap: false
 
 const processQueue = () => {
     
-    const section = document.getElementById("random-gallery");
+    const section = document.getElementById("random-gallery");    
     const numPics = Math.floor(section.offsetWidth / 262);
     
     section.innerText = '';
@@ -79,8 +79,8 @@ const processData = () => {
         const picture = {
             updated: item.lastCapture,        
             title: item.title,
-            link: `gallery/${item.folder}`,
-            url: `${item.thumbnailUrl}`
+            link: window.gallerydb.makeAbsoluteUrl(`/gallery/${item.folder}`),
+            url: window.gallerydb.makeAbsoluteUrl(item.thumbnailUrl),
         };
         window.gallery.queue.push(picture);        
     });

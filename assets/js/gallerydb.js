@@ -55,19 +55,22 @@ window.gallerydbpromise = window.gallerydbpromise || (async function () {
 
                 const item = internaldb.db.gallery[idx];
                 const key = item.folder;
+                if (!(key && key.length > 0)) {
+                    continue;
+                }
                 if (item.rightAscension) {
                     const fov = item.radius.substring(0, item.radius.indexOf(' '));
                     const parts = item.rightAscension.split(' ');
                     const hours = parseInt(parts[0].replace(/^\D+/g, ''));
-                    const minutes = parseInt(parts[1].replace(/^D+/g, ''))/60.0;
-                    const seconds = parseInt(parts[2].replace(/^D+/g, ''))/3600.0;
+                    const minutes = parseInt(parts[1].replace(/^D+/g, '')) / 60.0;
+                    const seconds = parseInt(parts[2].replace(/^D+/g, '')) / 3600.0;
                     const rIdx = hours + minutes + seconds;
-                    item.ra = { idx: rIdx, h: hours, m: minutes, s: seconds};                    
+                    item.ra = { idx: rIdx, h: hours, m: minutes, s: seconds };
                     const decSign = item.declination[0] === '-' ? -1 : 1;
                     const decParts = item.declination.split(' ');
                     const degrees = parseInt(decParts[0].substring(1).replace(/^D+/g, ''));
-                    const decMinutes = parseInt(decParts[1].replace(/^D+/g, ''))/60;
-                    const decSeconds = parseInt(decParts[2].replace(/^D+/g, ''))/3600;
+                    const decMinutes = parseInt(decParts[1].replace(/^D+/g, '')) / 60;
+                    const decSeconds = parseInt(decParts[2].replace(/^D+/g, '')) / 3600;
                     const dec = (decSign) * (degrees + decMinutes + decSeconds);
                     item.dec = {
                         dec: dec,
@@ -180,7 +183,7 @@ window.gallerydbpromise = window.gallerydbpromise || (async function () {
 
         sort: (col, item1, item2, asc) => {
             let result = sorts[col](item1, item2);
-            return asc === true ? result : result *-1;
+            return asc === false ? result : result * -1;
         },
 
         "title": (item1, item2) =>
@@ -189,6 +192,9 @@ window.gallerydbpromise = window.gallerydbpromise || (async function () {
         "date": (item1, item2) => sorts["firstCapture"](item1, item2),
 
         "lastCapture": (item1, item2) => {
+            if (!(item1.converted)) {
+                return 1;
+            }
             const date1 = item1.converted.lastCapture * 100000000 + item1.converted.firstCapture;
             const date2 = item2.converted.lastCapture * 100000000 + item2.converted.firstCapture;
             if (date1 === date2) {
@@ -205,23 +211,6 @@ window.gallerydbpromise = window.gallerydbpromise || (async function () {
             }
             return date1 - date2;
         }
-    };
-
-    const predicateLogic = {
-        "title": {
-            dataset : () => internaldb.gallery,
-            filter: (item, val) => item.title.toLowerCase().indexOf(val.toLowerCase()) > -1
-        },
-        
-        "description": {
-            dataset : () => internaldb.gallery,
-            filter: (item, val) => item.description.toLowerCase().indexOf(val.toLowerCase()) > -1
-        },
-
-        "type": {
-            dataset : (type) => internaldb.typeIdx[type],
-            filter: (item, val) => item.type === val
-        } 
     };
 
     const db = {
@@ -242,12 +231,15 @@ window.gallerydbpromise = window.gallerydbpromise || (async function () {
             internaldb.sort = { sortCol: sortCol, ascending: asc },
 
         setPredicate: (col, op, val1, val2) =>
-            internaldb.predicates = [{
-                col: col,
-                op: op,
-                val1: val1,
-                val2: val2
-            }],
+            internaldb.predicates =
+            (col === undefined || col === null || col === "")
+                ? []
+                : [{
+                    col: col,
+                    op: op,
+                    val1: val1,
+                    val2: val2
+                }],
 
         addPredicate: (col, op, val1, val2) => {
             internaldb.predicates.push({
@@ -273,6 +265,11 @@ window.gallerydbpromise = window.gallerydbpromise || (async function () {
             }
             img.dataset.folder = key;
             return img;
+        },
+
+        makeAbsoluteUrl: (url) => {
+            const path = url.substring(0, 1) === "/" ? url.substring(1) : url;
+            return `${window.location.protocol}//${window.location.host}/${path}`;
         },
 
         groupBy: (col) => {
@@ -303,25 +300,17 @@ window.gallerydbpromise = window.gallerydbpromise || (async function () {
 
             let op = `Sorted ${internaldb.sort.ascending === true ? 'ascending' : 'descending'} by ${internaldb.sort.sortCol}. `;
 
-            const compound = internaldb.predicates.length > 1;
-
             if (internaldb.predicates.length > 0) {
                 op = `${op}Filtering by `;
             }
 
+            const filters = [];
+
             const sort = (item1, item2) =>
                 sorts.sort(internaldb.sort.sortCol, item1, item2, internaldb.sort.ascending);
 
-            const dereference = (coll) => {
-                const result = [];
-                for (let idx = 0; idx < coll.length; idx++) {
-                    result.push(internaldb.idx[coll[idx]]);
-                }
-                return result;
-            }
-
             // type, telescope, focallength, exposure, date eq, signature, archived
-            
+
             const fnCombine = (predicate1, predicate2) =>
                 item => predicate1(item) && predicate2(item);
 
@@ -330,119 +319,170 @@ window.gallerydbpromise = window.gallerydbpromise || (async function () {
                 let predicateDefinition = internaldb.predicates[idx];
 
                 let newPredicate = null;
-                let combined = null;
 
                 switch (predicateDefinition.col) {
 
                     case ("title"):
                         newPredicate = item => item.title.indexOf(predicateDefinition.val1) >= 0;
+                        filters.push(`title contains ${predicateDefinition.val1}'`);
                         break;
 
                     case ("description"):
                         newPredicate = item => item.description.indexOf(predicateDefinition.val1) >= 0;
+                        filters.push(`description contains ${predicateDefinition.val1}'`);
                         break;
 
                     case ("text"):
                         newPredicate = item => item.text.indexOf(predicateDefinition.val1) >= 0;
+                        filters.push(`text contains ${predicateDefinition.val1}`);
                         break;
 
                     case ("tags"):
-                        newPredicate = item => item.tags.includes(predicateDefinition.val1);                            
+                        newPredicate = item => item.tags.includes(predicateDefinition.val1);
+                        filters.push(`tags contains ${predicateDefinition.val1}`);
                         break;
 
                     case ("type"):
                         newPredicate = item => item.type === predicateDefinition.val1;
+                        filters.push(`type is ${predicateDefinition.val1}`);
                         break;
 
                     case ("signature"):
                         newPredicate = item => item.signature === predicateDefinition.val1;
+                        filters.push(`signature is ${predicateDefinition.val1}`);
+                        break;
+
+                    case ("prints"):
+                        newPredicate = item => !!(item.printUrl && item.printUrl.length)
+                            === predicateDefinition.val1;
+                        filters.push(`prints is ${predicateDefinition.val1}`);
                         break;
 
                     case ("archive"):
                         newPredicate = item => item.archive === predicateDefinition.val1;
+                        filters.push(`archive is ${predicateDefinition.val1}`);
                         break;
 
                     case ("telescope"):
                         newPredicate = item => item.telescope === predicateDefinition.val1;
+                        filters.push(`telescope is ${predicateDefinition.val1}`);
                         break;
 
                     case ("exposure"):
+                        predicateDefinition.val1 = Number(predicateDefinition.val1);
                         switch (predicateDefinition.op) {
                             case "lt":
                                 newPredicate = item => item.converted.exposure < predicateDefinition.val1;
+                                filters.push(`exposure is less than ${predicateDefinition.val1}`);
                                 break;
 
                             case "gt":
                                 newPredicate = item => item.converted.exposure > predicateDefinition.val1;
+                                filters.push(`exposure is greater than ${predicateDefinition.val1}`);
                                 break;
 
                             case "eq":
                                 newPredicate = item => item.converted.exposure === predicateDefinition.val1;
+                                filters.push(`exposure is equal to ${predicateDefinition.val1}`);
                                 break;
 
                             case "between":
                                 newPredicate = item => item.converted.exposure >= predicateDefinition.val1
                                     && item.converted.exposure <= predicateDefinition.val2;
+                                filters.push(`exposure is between ${predicateDefinition.val1}' and ${predicateDefinition.val2}`);
                                 break;
                         }
+
+                        if (newPredicate !== null) {
+                            let newerPredicate = newPredicate;
+                            newPredicate = fnCombine(item => !!(item.converted), newerPredicate);
+                        }
+
                         break;
 
                     case ("focallength"):
+                        predicateDefinition.val1 = Number(predicateDefinition.val1);
                         switch (predicateDefinition.op) {
                             case "lt":
                                 newPredicate = item => item.converted.focalLength < predicateDefinition.val1;
+                                filters.push(`focal length is less than ${predicateDefinition.val1}`);
                                 break;
 
                             case "gt":
                                 newPredicate = item => item.converted.focalLength > predicateDefinition.val1;
+                                filters.push(`focal length is greater than ${predicateDefinition.val1}`);
                                 break;
 
                             case "eq":
                                 newPredicate = item => item.converted.focalLength === predicateDefinition.val1;
+                                filters.push(`focal length is equal to ${predicateDefinition.val1}`);
                                 break;
 
                             case "between":
                                 newPredicate = item => item.converted.focalLength >= predicateDefinition.val1
                                     && item.converted.focalLength <= predicateDefinition.val2;
+                                filters.push(`focal length is between ${predicateDefinition.val1}' and ${predicateDefinition.val2}`);
                                 break;
                         }
+
+                        if (newPredicate !== null) {
+                            let newerPredicate = newPredicate;
+                            newPredicate = fnCombine(item => !!(item.converted), newerPredicate);
+                        }
+
                         break;
 
                     case ("captureDate"):
                         switch (predicateDefinition.op) {
                             case "lt":
                                 newPredicate = item => item.converted.lastCapture < predicateDefinition.val1;
+                                filters.push(`capture date is less than ${predicateDefinition.val1}`);
                                 break;
 
                             case "gt":
                                 newPredicate = item => item.converted.firstCapture > predicateDefinition.val1;
+                                filters.push(`capture date is greater than ${predicateDefinition.val1}`);
                                 break;
 
                             case "eq":
                                 newPredicate = item => (item.converted.firstCapture === predicateDefinition.val1
                                     || item.converted.lastCapture === predicateDefinition.val1);
+                                filters.push(`capture date is equal to ${predicateDefinition.val1}`);
                                 break;
 
                             case "between":
                                 newPredicate = item => item.converted.firstCapture >= predicateDefinition.val1
-                                    && item.converted.lastCapture <= predicateDefinition.val2;                                    
+                                    && item.converted.lastCapture <= predicateDefinition.val2;
+                                filters.push(`capture date is between ${predicateDefinition.val1}' and ${predicateDefinition.val2}`);
                                 break;
                         }
-                        break;                                           
-                }                
-                if (predicate === null) {
-                    predicate = newPredicate;
-                } else {
-                    const oldPredicate = predicate;
-                    predicate = fnCombine(oldPredicate, newPredicate);
+
+                        if (newPredicate !== null) {
+                            let newerPredicate = newPredicate;
+                            newPredicate = fnCombine(item => !!(item.converted), newerPredicate);
+                        }
+
+                        break;
+                }
+
+                if (newPredicate !== null) {
+                    if (predicate === null) {
+                        predicate = newPredicate;
+                    } else {
+                        const oldPredicate = predicate;
+                        predicate = fnCombine(oldPredicate, newPredicate);
+                    }
                 }
             }
 
             predicate = predicate || (() => true);
-            db.lastOp = op;
-
-            return [...internaldb.db.gallery.filter(predicate)].sort(sort);
-            }
+            db.lastOp = filters.length ? `${op} ${filters.join(", ")}` : op;
+            const result = [...internaldb.db.gallery.filter(predicate)].sort(sort);
+            db.lastOp += ` (${result.length > 0 ? result.length : 'no' } results)`;
+            return limit > 0 && result.length > limit 
+                ? result.slice(0, limit)
+                : result;
+        }
     };
 
     db.setSort("lastCapture", false);

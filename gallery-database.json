@@ -19,6 +19,7 @@ layout: null
         "exposure": "{{image.exposure}}",
         "lights": "{{image.lights}}",
         "sessions": "{{image.sessions}}",
+        "printUrl": {% if image.printurl != null %}{{site.galleryHome}}{{image.printurl | jsonify}}{% else %}""{% endif %},
         "archive": {% if image.archive != null %}"{{image.archive}}"{% else %}"false"{% endif %},
         "nostars":  {% if image.nostars != null %}"{{image.nostars}}"{% else %}"false"{% endif %},
         "signature":  {% if image.signature != null %}"{{image.signature}}"{% else %}"false"{% endif %},
