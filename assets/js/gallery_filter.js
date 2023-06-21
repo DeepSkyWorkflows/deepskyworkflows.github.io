@@ -1,409 +1,458 @@
 ---
-layout: null
+    layout: null
 sitemap: false
 ---
-(function () {
 
-    const help = { on: false };
-    $("#helpIcon").click(() => {
-        help.on = !help.on;
-        if (help.on) {
-            $("#helpIcon").text("[-]");
-            $("#help").removeClass("d-none");
-        }
-        else {
-            $("#helpIcon").text("[+]");
-            $("#help").addClass("d-none");
-        }
-    });
+    (async function () {
 
-    const debounceMs = 300;
+        await window.gallerydbpromise;
 
-    const queryManager = {
+        (function (db, queryManager) {
 
-        values: {},
-        keys: [],
-        baseUrl: '',
-        hash: '',
+            const help = { on: false };
 
-        parseIncoming: function () {
-
-            queryManager.baseUrl = window.location.href.split('#')[0].split('?')[0];
-            queryManager.hash = window.location.hash;
-
-            if (queryManager.keys.length || !(window.location.search)) {
-                return;
-            }
-
-            if (window.location.search) {
-                const incoming = decodeURI(window.location.search.substring(1)).split("&");
-                queryManager.values = {};
-                queryManager.keys = [];
-                for (let i = 0; i < incoming.length; i++) {
-                    const keyValue = incoming[i].split("=");
-                    queryManager.keys.push(keyValue[0]);
-                    queryManager.values[keyValue[0]] = keyValue[1];
-                    queryManager.set(keyValue[0], keyValue[1]);
+            $("#helpIcon").click(() => {
+                help.on = !help.on;
+                if (help.on) {
+                    $("#helpIcon").text("[-]");
+                    $("#help").removeClass("d-none");
                 }
-            }
-        },
-
-        setHash: function (hash) {
-            queryManager.hash = hash;
-        },
-
-        get: function (key) {
-            queryManager.parseIncoming();
-            return queryManager.values[key];
-        },
-
-        set: function (key, value) {
-
-            const pos = queryManager.keys.indexOf(key);
-
-            if (pos < 0) {
-                queryManager.keys.push(key);
-            }
-
-            queryManager.values[key] = value;
-        },
-
-        reset: function (key) {
-
-            const pos = queryManager.keys.indexOf(key);
-
-            if (pos >= 0) {
-                queryManager.keys.splice(pos, 1);
-                delete queryManager.values[key];
-            }
-        },
-
-        update: function () {
-
-            let str = '';
-            let title = 'Gallery Search';
-            
-            if (queryManager.keys.length) {
-                title += ' (';
-                for (let i = 0; i < queryManager.keys.length; i++) {
-                    if (i > 0) {
-                        str += "&";
-                        title += ", ";
-                    }
-                    title += `${queryManager.keys[i]}=${queryManager.values[queryManager.keys[i]]}`;
-                    str += queryManager.keys[i];
-                    str += "=";
-                    str += queryManager.values[queryManager.keys[i]];
+                else {
+                    $("#helpIcon").text("[+]");
+                    $("#help").addClass("d-none");
                 }
-            }
+            });
 
-            const query = `?${encodeURI(str)}`;
-            const url = queryManager.baseUrl;
-            const hash = queryManager.hash;
-        
-            const newState = {
-                Title: `${title})`,
-                Url: `${url}${query}${hash}`
+            const welcome = {
+                collapsed: $("#welcomeCollapsed"),
+                expanded: $("#welcomeExpanded"),
+                expandTrigger: $("#welcomeCollapsedExpand"),
+                collapseTrigger: $("#welcomeExpandedCollapse"),                
+                doCollapse: () => {                    
+                    welcome.collapsed.removeClass("d-none");
+                    welcome.expanded.addClass("d-none");
+                },
+                doExpand: () => {
+                    welcome.collapsed.addClass("d-none");
+                    welcome.expanded.removeClass("d-none");
+                }
             };
 
-            window.location.hash = queryManager.hash;
-            window.history.pushState(newState, newState.Title, newState.Url);           
-        }
-    };
+            welcome.collapseTrigger.click(()=>welcome.doCollapse());
+            welcome.expandTrigger.click(()=>welcome.doExpand());
 
-    const filterManager = {
+            const debounceMs = 300;
 
-        refreshFilters: function () {
+            const defaultFilters = () =>
+            ({
+                "signature": true,
+                "prints": false,
+                "telescope": null,
+                "filterText": "",
+            });
 
-            $("div.card").each(function () {
+            const domContext = {
+                "signature": $("#signature"),
+                "fullQuery": $("#fullQuery"),
+                "filterOptions": $("#filterOptions"),
+                "currentFilter": $("#currentFilter"),
+                "prints": $("#prints"),
+                "filterText": $("#gallerySearch"),
+                "clearFilter": $("#clearBtn")
+            };
 
-                $(this).removeClass('d-none');
+            const defaultBtn = btn => {
+                btn.removeClass("btn-primary");
+                btn.addClass("btn-secondary");
+                return;
+            };
 
-                if (signatureContext.selected === true &&
-                    $(this).attr('data-signature') !== 'true') {
-                    $(this).addClass('d-none');
-                    return;
+            const selectedBtn = btn => {
+                btn.removeClass("btn-secondary");
+                btn.addClass("btn-primary");
+                return;
+            };
+
+            const filterManager = {
+
+                lastFilter: null,
+                lastButton: null,
+
+                init: function () {
+
+                    const parent = domContext.filterOptions;
+                    var anyHasOption = false;
+
+                    parent.html("");
+
+                    filterContext.matrix = {};
+
+                    const filters = [{
+                        name: 'Reset',
+                    }, {
+                        name: "Type",
+                        options: db.getTypes
+                    }, {
+                        name: 'Telescope',
+                        options: db.getTelescopes
+                    }, {
+                        name: 'Exposure',
+                        options: db.getExposures
+                    }, {
+                        name: 'FocalLength',
+                        options: db.getFocalLengths
+                    },
+                    ];
+
+                    domContext.currentFilter.html("");
+                    let first = true;
+                    filters.forEach((filter) => {
+
+                        var hasOption = false;
+
+                        if (filter.name === 'Reset') {
+
+                            filterContext.matrix[filter.name] = {
+                                lastOption: null,
+                                selectedOption: null
+                            };
+
+                            const filterButton = document.createElement("button");
+                            filterButton.classList.add("btn", "btn-warning");
+                            filterButton.classList.add("btn", "text-red");
+                            filterButton.classList.add("btn", "m-1");
+                            defaultBtn($(filterButton));
+                            filterButton.innerText = filter.name;
+                            filterButton.addEventListener(
+                                "click", () => location.href = db.makeAbsoluteUrl("/gallery"));
+                            parent.append(filterButton);
+                            return;
+                        }
+
+                        filterContext.matrix[filter.name] = {
+                            lastOption: null,
+                            selectedOption: null
+                        };
+
+                        const matrix = filterContext.matrix[filter.name];
+                        const filterOptions = document.createElement("p");
+                        const label = document.createElement("span");
+                        label.textContent = `${filter.name}: `;
+                        filterOptions.append(label);
+
+                        const options = filter.options();
+
+                        options.forEach((option) => {
+
+                            if (option === NaN) {
+                                return;
+                            }
+
+                            const optionButton = document.createElement("button");
+                            defaultBtn($(optionButton));
+                            optionButton.innerText = option;
+                            if (filterContext.matrix
+                                && filterContext.matrix[filter.name]
+                                && filterContext.matrix[filter.name].selectedOption === option) {
+                                selectedBtn($(optionButton));
+                                if (!anyHasOption) {
+                                    anyHasOption = true;
+                                    hasOption = true;
+                                }
+                            }
+
+                            (function (option, btn, filter) {
+
+                                $(btn).click(() => {
+
+                                    if (matrix.selectedOption === option) {
+                                        matrix.selectedOption = null;
+                                        defaultBtn($(matrix.lastOption));
+                                        selectedBtn($(btn));
+                                        matrix.lastOption = $(btn);
+                                        queryManager.reset(filter.name);
+                                    }
+                                    else {
+                                        matrix.selectedOption = option;
+                                        queryManager.set(filter.name, option);
+                                        if (matrix.lastOption) {
+                                            defaultBtn($(matrix.lastOption));
+                                        }
+                                        matrix.lastOption = $(btn);
+                                        selectedBtn($(btn));
+                                    }
+                                    queryManager.update("Gallery Search");
+                                    filterContext.update();
+                                });
+                            })(option, optionButton, filter);
+                            filterOptions.append(optionButton);
+                        });
+                        if (first) {
+                            first = false;
+                            filterManager.lastFilter = filterOptions;
+                        }
+                        else {
+                            filterOptions.classList.add("d-none");
+                        }
+                        domContext.currentFilter.append(filterOptions);
+                        const filterButton = document.createElement("button");
+                        if (hasOption) {
+                            selectedBtn($(filterButton));
+                            hasOption = false;
+                        }  else {
+                            defaultBtn($(filterButton));
+                        }
+                        filterButton.innerText = filter.name;
+                        (function (target, btn) {
+                            filterButton.addEventListener("click", () => {
+                                if (filterManager.lastFilter) {
+                                    $(filterManager.lastFilter).addClass("d-none");
+                                    defaultBtn($(filterManager.lastButton));
+                                }
+                                filterManager.lastFilter = target;
+                                filterManager.lastButton = btn;
+                                selectedBtn($(btn));                                
+                                $(target).removeClass("d-none");
+                            });
+                        })(filterOptions, filterButton);
+                        parent.append(filterButton);
+                    });
+                },
+
+                refreshFilters: function () {
+
+                    $("div.card").each(function () {
+                        $(this).removeClass('d-none');
+                        const key = $(this).attr("data-folder");
+                        if (!(filterManager.items[key])) {
+                            $(this).addClass('d-none');
+                        }
+                    });
+
+                    $(".group-header").each(function () {
+
+                        const group = $(this).attr("data-group");
+
+                        const groupLink = `#link${group}`;
+
+                        $(`.group-header[data-group='${group}']`).removeClass("d-none");
+
+                        let visible = false;
+                        let children = 0;
+
+                        $(`.group-detail[data-group='${group}']`).not(".d-none").each(function () {
+                                visible = true;
+                                children++;
+                        });
+
+                        if (!visible) {
+                            $(`.group-header[data-group='${group}']`).addClass("d-none");
+                            $(`${groupLink}>a`).addClass("d-none");
+                            $(`${groupLink}>span`).removeClass("d-none");
+                        }
+                        else {
+                            $(`${groupLink}>a`).removeClass("d-none");
+                            $(`${groupLink}>span`).addClass("d-none");
+                            $(`.group-header[data-group='${group}'] p`)
+                                .text(`${children} ${children === 1 ? "item" : "items"} in this group.`);
+                        }
+                    });
                 }
+            };
 
-                if (signatureContext.prints === true &&
-                    $(this).attr('data-prints') !== 'true') {
-                    $(this).addClass('d-none');
-                    return;
-                }
+            const filterContext = {
 
-                if (searchContext.query && searchContext.query.length) {
+                query: null,
+                timer: null,
 
-                    let target = $(this).text().toLowerCase().trim();
-                    let tags = $(this).attr('data-tags').toLowerCase().trim().split(',');
+                items: {
+                    list: [],
+                },
 
-                    if (tags.indexOf(searchContext.query) < 0 &&
-                        target.indexOf(searchContext.query) < 0) {
-                        $(this).addClass('d-none');
-                        return;
+                matrix: {},
+
+                filters: defaultFilters(),
+
+                filterSig: function (value) {
+                    filterContext.filters.signature = !!value;
+                    queryManager.set("signature", filterContext.filters.signature);
+                    queryManager.update("Gallery Search");
+                    filterContext.update();
+                },
+
+                filterPrints: function (value) {
+                    filterContext.filters.prints = !!value;
+                    queryManager.set("prints", filterContext.filters.prints);
+                    queryManager.update("Gallery Search");
+                    filterContext.update();
+                },
+
+                init: function () {
+
+                    filterManager.init();
+
+                    const sig = queryManager.get("signature");
+
+                    if (sig && sig === "false") {
+                        filterContext.filters.signature = false;
                     }
-                }
-
-                const scope = telescopeContext.selected;
-
-                if (scope && scope.length) {
-
-                    if ($(this).attr("data-telescope") !== scope) {
-                        $(this).addClass("d-none");
-                        return;
+                    else {
+                        domContext.signature.prop("checked", true)
                     }
 
+                    const prints = queryManager.get("prints");
+
+                    filterContext.filters.prints = prints && prints === "true";
+                    if (filterContext.filters.prints) {
+                        domContext.prints.prop("checked", filterContext.filters.prints);
+                    }
+
+                    const q = queryManager.get("q");
+
+                    if (q && q.length) {
+                        filterContext.query = q;
+                        domContext.filterText.val(q);
+                    }
+
+                    const filters = filterContext.matrix;
+                    for (let filter in filters) {
+                        const value = queryManager.get(filter);
+                        if (value && value.length) {
+                            filters[filter].selectedOption = value;
+                        }
+                    }
+
+                    filterContext.update();
+                },
+
+                update: function (title) {
+
+                    title = title || "Gallery Search";
+
+                    db.setPredicate();
+
+                    if (filterContext.filters.signature) {
+                        db.addPredicate("signature", "eq", true);
+                    }
+
+                    if (filterContext.filters.prints) {
+                        db.addPredicate("prints", "eq", true);
+                    }
+
+                    if (filterContext.query && filterContext.query.length) {
+                        db.addPredicate("text", "contains", filterContext.query);
+                    }
+
+                    for (filter in filterContext.matrix) {
+                        const matrix = filterContext.matrix[filter];
+                        if (matrix.selectedOption && matrix.selectedOption !== "") {
+                            db.addPredicate(filter.toLowerCase(), "eq", matrix.selectedOption);
+                        }
+                    }
+
+                    filterManager.items = {
+                        list: db.getItems(9999),
+                    };
+
+                    title = `${title} - ${db.lastOp}`;
+
+                    for (let idx = 0; idx < filterManager.items.list.length; idx++) {
+                        const item = filterManager.items.list[idx];
+                        filterManager.items[item.folder] = item;
+                    }
+
+                    document.title = title;
+                    domContext.fullQuery.text(title);
+                    filterManager.refreshFilters();
+                },
+
+                doClear: function () {
+
+                    queryManager.reset("q");
+                    queryManager.update();
+
+                    $(domContext.filterText).val('');
+                    filterContext.query = null;
+                    filterContext.timer = null;
+
+                    filterContext.update();
+                    $(domContext.filterText).focus();
+                },
+
+                doSearch: function () {
+
+                    filterContext.timer = null;
+
+                    if (filterContext.query && filterContext.query.length) {
+                        filterContext.clear = false;
+                        const term = filterContext.query;
+                        queryManager.set("q", term);
+                        $(domContext.filterText).val(term);
+                    }
+                    else {
+                        queryManager.reset("q");
+                    }
+
+                    queryManager.update();
+                    filterContext.update();
                 }
-            });
+            };
 
-            $(".groupheader").each(function () {
+            $(document).ready(function () {
 
-                const group = $(this).attr("data-group");
-
-                $(`div[data-group='${group}']`).removeClass("d-none");
-
-                let visible = false;
-
-                $(`.groupdetail[data-group='${group}']`).each(function () {
-                    $(this).find("div.card").not(".d-none").each(function () {
-                        visible = true;
+                // setup filter
+                $(domContext.filterText).on(
+                    "input",
+                    function () {
+                        filterContext.query = $(this).val().toLowerCase().trim();
+                        if (filterContext.timer) {
+                            clearTimeout(filterContext.timer);
+                        }
+                        filterContext.timer = setTimeout(filterContext.doSearch, debounceMs);
                     });
+
+                domContext.signature.on(
+                    "click",
+                    () => filterContext.filterSig(domContext.signature.prop("checked")));
+
+                domContext.prints.on(
+                    "click",
+                    () => filterContext.filterPrints(domContext.prints.prop("checked")));
+
+                domContext.clearFilter.on("click", () => filterContext.doClear());
+
+                if (queryManager.get("q")) {
+                    let query = queryManager.get("q");
+                    setTimeout(function () {
+                        filterContext.query = query.toLowerCase().trim();
+                        filterContext.doSearch();
+                    });
+                }
+
+                $("img").each(function () {
+                    const url = $(this).data("url");
+                    if (url) {
+                        $(this).attr("src", url);
+                    }
                 });
 
-                if (!visible) {
-                    $(`div[data-group='${group}']`).addClass("d-none");
-                }
-            });
-        }
-    };
-
-    const signatureContext = {
-
-        selected: false,
-        prints: false,
-
-        init: function () {
-
-            const sig = queryManager.get("signature");
-            const print = queryManager.get("prints");
-
-            if (sig === "true") {
-                $("#signature").prop("checked", true)
-                signatureContext.filterSig(true, print === "true");
-            }
-
-            if (print === "true") {
-                $("#prints").prop("checked", true)
-                signatureContext.filterPrint(true);
-            }
-        },
-
-        filterSig: function (sig) {
-
-            signatureContext.selected = sig;
-
-            queryManager.set("signature", sig);
-            
-            if (print !== true) {
-                queryManager.update();
-                filterManager.refreshFilters();
-            }
-        },
-
-        filterPrint: function (print) {
-
-            signatureContext.prints = print;
-
-            queryManager.set("prints", print);
-            queryManager.update();
-
-            filterManager.refreshFilters();
-        },
-
-        resetSig: function () {
-
-            signatureContext.selected = false;
-
-            queryManager.reset("signature");
-            queryManager.update();
-            filterManager.refreshFilters();
-        },
-
-        resetPrint: function () {
-
-            signatureContext.prints = false;
-
-            queryManager.reset("prints");
-            queryManager.update();
-            filterManager.refreshFilters();
-        }
-    };
-
-    const telescopeContext = {
-
-        selected: null,
-
-        init: function () {
-
-            const scope = queryManager.get("telescope");
-
-            $(".telescopeFilter").each(function () {
-                const scopeFilter = $(this).text();
-                $(this).on("click", function () {
-                    telescopeContext.filterScope(scopeFilter);
-                });
-                $(this).removeAttr("disabled");
-            });
-
-            if (scope) {
-                telescopeContext.filterScope(scope);
-            }
-        },
-
-        filterScope: function (scope) {
-
-            telescopeContext.selected = scope;
-
-            queryManager.set("telescope", scope);
-            queryManager.update();
-
-            $(".telescopeFilter").each(function () {
-
-                const tgtScope = $(this).text();
-
-                if (tgtScope !== scope) {
-                    $(this).attr("disabled", "disabled");
-                } else {
-                    $(this).html(`<strong>${scope}</strong>`);
-                    $(this).on("click", function () {
-                        telescopeContext.resetScope(scope);
-                    });
-                }
-            });
-
-            filterManager.refreshFilters();
-        },
-
-        resetScope: function (scope) {
-
-            scope = scope || telescopeContext.selected;
-            telescopeContext.selected = null;
-
-            queryManager.reset("telescope");
-            queryManager.update();
-
-            $(".telescopeFilter").each(function () {
-
-                $(this).removeAttr("disabled");
-
-                if ($(this).html().indexOf(scope) >= 0) {
-                    $(this).text(scope);
-                }
-
-                const scopeFilter = $(this).text();
-
-                $(this).on("click", function () {
-                    telescopeContext.filterScope(scopeFilter);
+                $("a").each(function () {
+                    const url = $(this).attr("href");
+                    if (url && url[0] === '#') {
+                        (function (a, hash) {
+                            $(a).on("click", () => {
+                                queryManager.setHash(hash);
+                                queryManager.update();
+                            });
+                        })($(this), url);
+                    }
                 });
 
+                if (window.location.hash.length < 2) {
+                    $("#gallerySearch").focus();
+                }
+
+                filterContext.init();
             });
-
-            filterManager.refreshFilters();
-        }
-    };
-
-    const searchContext = {
-        query: null,
-        timer: null,
-
-        doClear: function () {
-
-            queryManager.reset("q");
-            queryManager.update();
-
-            $("#gallerySearch").val('');
-            searchContext.query = null;
-            searchContext.timer = null;
-
-            filterManager.refreshFilters();
-            $("#gallerySearch").focus();
-
-        },
-
-        doSearch: function () {
-
-            searchContext.timer = null;
-
-            if (searchContext.query && searchContext.query.length) {
-                searchContext.clear = false;
-                const term = searchContext.query;
-                queryManager.set("q", term);
-                queryManager.update();
-                $("#gallerySearch").val(term);
-            }
-            else {
-                queryManager.reset("q");
-                queryManager.update();
-            }
-
-            filterManager.refreshFilters();
-        }
-    };
-
-    $(document).ready(function () {
-
-        // setup filter
-        $("#gallerySearch").on("input", function () {
-            searchContext.query = $(this).val().toLowerCase().trim();
-            if (searchContext.timer) {
-                clearTimeout(searchContext.timer);
-            }
-            searchContext.timer = setTimeout(searchContext.doSearch, debounceMs);
-        });
-
-        $("#signature").on("click", function () {
-            signatureContext.filterSig($(this).prop("checked"), '');
-        });
-
-        $("#prints").on("click", function () {
-            signatureContext.filterPrint($(this).prop("checked"));
-        });
-
-        $("#clearBtn").on("click", function () {
-            searchContext.doClear();
-        });
-
-        if (queryManager.get("q")) {
-            let query = queryManager.get("q");
-            setTimeout(function () {
-                searchContext.query = query.toLowerCase().trim();
-                searchContext.doSearch();
-            });
-        }
-
-        telescopeContext.init();
-        signatureContext.init();
-
-        $("img").each(function () {
-            const url = $(this).data("url");
-            if (url) {
-                $(this).attr("src", url);
-            }
-        });
-
-        $("a").each(function () {
-            const url = $(this).attr("href");
-            if (url && url[0] === '#') {
-                (function (a, hash) {
-                    $(a).on("click", () => {
-                        queryManager.setHash(hash);
-                        queryManager.update();
-                    });
-                })($(this), url);
-            }
-        });
-
-        if (window.location.hash.length < 2) {
-            $("#gallerySearch").focus();
-        }
-    });
-})();
+        })(window.gallerydb, window.deepSkyRouter);
+    })();

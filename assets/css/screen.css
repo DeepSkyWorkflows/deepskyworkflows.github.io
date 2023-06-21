@@ -930,10 +930,10 @@ iframe {
 }
 
 .gallery-card {
-    width: 280px;
+    width: 210px;
     height: 100%;
-    margin: 3px;
-    border: solid gray 1px;
+    margin: 2px;   
+    background-color: #111;
 }
 
 .gallery-card-sm {
@@ -941,6 +941,15 @@ iframe {
     height: 100%;
     margin: 3px;
     float: left;
+}
+
+.gallery-results {
+    overflow-x: auto;
+    height: 100%;
+}
+
+.text-red {
+    color: darkred;
 }
 
 img.messier {
@@ -978,9 +987,10 @@ div.messier-img {
 }
 
 .gallery-card:hover {
-    -webkit-transform: scale(1.05);
-    transform: scale(1.05);
-    background: #00ab6b;
+    cursor: pointer;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    background: #2111;
 }
 
 .gallery-card img {
@@ -989,8 +999,12 @@ div.messier-img {
     padding: 2px;
 }
 
+.gallery-card .filters {
+    padding: 3px;
+}
+
 .gallery-img {
-    max-height: 200px;
+    max-height: 150px;
     object-fit: cover;
 }
 
@@ -1130,7 +1144,33 @@ td {
     padding: 0.5em;
 }
 
-.card small {
-    padding: 1px;
-    font-weight: bold;
+.small-date {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 2px;
+    margin-left: 2px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.gallery-card-header a {
+    background: none;
+    width: 100%;
+    color: rgba(0, 255, 0, 0.2);
+    text-align: right;
+    position: absolute;
+    padding-right: 0px;
+    padding-bottom: 2px;
+    bottom: 0;
+    right: 0;   
+}
+
+.card-img-overlay:hover .gallery-card-header a {
+    color: rgba(0, 255, 0, 0.8);
+    padding-right: 4px;
+    padding-bottom: 6px;
+}
+
+.group-header h4 {
+    float: left;
 }

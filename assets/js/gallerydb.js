@@ -84,9 +84,7 @@ window.gallerydbpromise = window.gallerydbpromise || (async function () {
 
                 if (!(item.tags)) {
                     item.tags = [];
-                }
-
-                item.text = `^${item.title}^${item.description}^${item.tags.join("^")}^`;
+                }                
 
                 item.archive = item.archive === "true";
                 item.signature = item.signature === "true";
@@ -98,6 +96,7 @@ window.gallerydbpromise = window.gallerydbpromise || (async function () {
                 }
 
                 item.converted = {
+                    text: `^${item.title}^${item.description}^${item.tags.join("^")}^`.toLowerCase(),
                     focalLength: parseInt(item.focalLength.replace(/^[a-zA-z]+$/, '')),
                     firstCapture: parseInt(item.firstCapture.substring(0, 4)) * 10000 +
                         parseInt(item.firstCapture.substring(5, 7) * 100 +
@@ -333,7 +332,7 @@ window.gallerydbpromise = window.gallerydbpromise || (async function () {
                         break;
 
                     case ("text"):
-                        newPredicate = item => item.text.indexOf(predicateDefinition.val1) >= 0;
+                        newPredicate = item => item.converted.text.indexOf(predicateDefinition.val1.toLowerCase()) >= 0;
                         filters.push(`text contains ${predicateDefinition.val1}`);
                         break;
 
