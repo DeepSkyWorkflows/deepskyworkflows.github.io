@@ -1,7 +1,7 @@
 ---
 title: "Orion the Settler"
 type: Constellation
-tags: ["Part of the constellation Eridanus (Eri)","Part of the constellation Orion (Ori)","The star Bellatrix (γ Ori)","24 Ori","The star Rigel","Algebar (β Ori)","19 Ori","The star Betelgeuse","Al Mankib","Betelgeux (α Ori)","58 Ori","The star Alnilam (ε Ori)"]
+tags: ["Part of the constellation Eridanus (Eri)","Part of the constellation Orion (Ori)","The star Bellatrix (γ Ori)","24 Ori","The star Rigel","Algebar (β Ori)","19 Ori","The star Betelgeuse","Al Mankib","Betelgeux (α Ori)","58 Ori","The star Alnilam (ε Ori)", "Florissant Fossil Beds"]
 description: Orion looms over a lone house on the Hornbeck Homestead in Florissant, Colorado as it slips below the horizon.
 image: /assets/images/gallery/orion-settler/thumb.jpg
 telescope: Sony ILCE-6300

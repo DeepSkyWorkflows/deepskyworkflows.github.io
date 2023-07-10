@@ -1,7 +1,7 @@
 ---
 title: "M13 from Florissant"
 type: Cluster
-tags: ["NGC6205","M13","NGC6207","Hercules Globular Cluster"]
+tags: ["NGC6205","M13","NGC6207","Hercules Globular Cluster","Florissant Fossil Beds"]
 description: A quick capture of this magnificent cluster from a dark site.
 image: /assets/images/gallery/m13-florissant/thumb.jpg
 telescope: Svbony sv503 70ED

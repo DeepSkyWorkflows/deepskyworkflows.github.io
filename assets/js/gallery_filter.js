@@ -124,7 +124,7 @@ sitemap: false
                             defaultBtn($(filterButton));
                             filterButton.innerText = filter.name;
                             filterButton.addEventListener(
-                                "click", () => location.href = db.makeAbsoluteUrl("/gallery"));
+                                "click", () => location.href = db.makeAbsoluteUrl("/gallery?signature=false"));
                             parent.append(filterButton);
                             return;
                         }

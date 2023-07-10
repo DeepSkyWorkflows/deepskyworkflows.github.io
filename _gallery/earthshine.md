@@ -8,6 +8,7 @@ telescope: Sony ILCE-6300
 length: "50mm"
 aperture: "33mm"
 folder: earthshine
+group: earthshine
 exposure: 2
 lights: 1
 sessions: 1 

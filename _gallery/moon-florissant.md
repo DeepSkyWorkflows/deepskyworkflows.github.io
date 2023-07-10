@@ -1,7 +1,7 @@
 ---
 title: "The Moon at Florissant"
 type: Lunar
-tags: [moon]
+tags: [moon,"Florissant Fossil Beds"]
 description: A brilliant waxing gibbous moon seen from the Florissant Fossil Beds National Park.
 image: /assets/images/gallery/moon-florissant/thumb.jpg
 telescope: Svbony sv503 70ED

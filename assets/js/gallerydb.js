@@ -51,6 +51,7 @@ window.gallerydbpromise = window.gallerydbpromise || (async function () {
         dateIdx: {},
 
         init: () => {
+            const initialized = [];
             for (let idx = 0; idx < internaldb.db.gallery.length; idx++) {
 
                 const item = internaldb.db.gallery[idx];
@@ -165,7 +166,10 @@ window.gallerydbpromise = window.gallerydbpromise || (async function () {
                 img.setAttribute("alt", item.description);
 
                 item.img = img;
+                console.log(item.converted.text);
+                initialized.push(item);
             }
+            internaldb.db.gallery = initialized;
         },
 
         sort: { sortCol: "lastCapture", ascending: false },

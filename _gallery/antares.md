@@ -7,6 +7,7 @@ image: assets/images/gallery/antares/thumb.jpg
 telescope: Stellina
 length: "400mm"
 aperture: "80mm"
+group: antares
 folder: antares
 exposure: 1
 lights: 6

@@ -1,5 +1,5 @@
 ---
-title: "A Starfield in the Cygnus Contellation"
+title: "A Starfield in the Cygnus Constellation"
 type: Asterism
 tags: ["The star Deneb (αCyg)","The star 57Cyg","The star νCyg","IC5068","IC5070","NGC7000","The star Sadr (γCyg)","NGC6888","NGC7092","M39","The star ξCyg","The star ρCyg","The star 63Cyg","Part of the constellation Cygnus (Cyg)","The star Gienah (εCyg)","The star 47Cyg","The star λCyg","Crescent Nebula","North America Nebula","Pelican Nebula"]
 description: This part of the sky is bursting with clusters and nebulae as the Milky Way dominates the background behind part of the Cygnus constellation.

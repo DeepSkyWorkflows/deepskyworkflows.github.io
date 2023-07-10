@@ -1,7 +1,7 @@
 ---
 title: "Milky Way Rising"
 type: Milky Way
-tags: ["milky way"]
+tags: ["milky way","Florissant Fossil Beds"]
 description: The Milky Way rises over the horizon across from the Hornbeck Homestead in Florissant, Colorado.
 image: /assets/images/gallery/milkyway-rising/thumb.jpg
 telescope: Sony ILCE-6300

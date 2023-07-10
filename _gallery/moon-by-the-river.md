@@ -1,7 +1,7 @@
 ---
 title: "The moon by the river"
 type: Miscellaneous
-tags: []
+tags: ["Index Washington"]
 description: A view of the Skykomish River under extremely bright moonlight.
 image: /assets/images/gallery/moon-by-the-river/thumb.jpg
 telescope: Sony ILCE-6300

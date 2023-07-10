@@ -1,7 +1,7 @@
 ---
 title: "Rho Ophiuchi"
 type: Nebula
-tags: ["NGC6121","M4","NGC6144","IC4605","The star Antares","Cor Scorpii","Vespertilio","Kalb al Akrab (α Sco)","21 Sco","The star i Sco","22 Sco","The star Alniyat","Alniyat I","Al Niyat (σ Sco)","20 Sco"]
+tags: ["NGC6121","M4","NGC6144","IC4605","The star Antares","Cor Scorpii","Vespertilio","Kalb al Akrab (α Sco)","21 Sco","The star i Sco","22 Sco","The star Alniyat","Alniyat I","Al Niyat (σ Sco)","20 Sco","Florissant Fossil Beds"]
 description: I took advantage of low horizons in a dark site to capture this close-up of the elusive Rho Ophiuchi system with bright yellow Antares, purple-bluish Alniya and the M4 and NGC6144 clusters.
 image: /assets/images/gallery/rho/thumb.jpg
 telescope: Svbony sv503 70ED
@@ -9,7 +9,7 @@ length: "336mm"
 aperture: "70mm"
 wwt: http://www.worldwidetelescope.org/wwtweb/ShowImage.aspx?reverseparity=False&scale=5.289882&name=rho.jpg&imageurl=https://deepskyworkflows.com/assets/images/gallery/rho/rho.jpg&credits=Jeremy+Likness+at+DeepSkyWorkflows.com&creditsUrl=https://deepskyworkflows.com/&ra=246.827965&dec=-26.193496&x=1020.9&y=501.9&rotation=165.06&thumb=https://deepskyworkflows.com/assets/images/gallery/rho/thumb.jpg
 signature: true
-group:
+group: antares
 folder: rho
 exposure: 45
 lights: 110
