@@ -929,25 +929,6 @@ iframe {
     transition: opacity .25s;
 }
 
-.gallery-card {
-    width: 210px;
-    height: 100%;
-    margin: 2px;   
-    background-color: #111;
-}
-
-.gallery-card-sm {
-    width: 140px;
-    height: 100%;
-    margin: 3px;
-    float: left;
-}
-
-.gallery-results {
-    overflow-x: auto;
-    height: 100%;
-}
-
 .text-red {
     color: darkred;
 }
@@ -984,49 +965,6 @@ div.messier-img {
 .messier-detail-card {
     max-width: 300px;
     color: black;
-}
-
-.gallery-card:hover {
-    cursor: pointer;
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-    background: #2111;
-}
-
-.gallery-card img {
-    -webkit-transition: 0.6s ease;
-    transition: 0.6s ease;
-    padding: 2px;
-}
-
-.gallery-card .filters {
-    padding: 3px;
-}
-
-.gallery-img {
-    max-height: 150px;
-    object-fit: cover;
-}
-
-.gallery-card-sm:hover {
-    -webkit-transform: scale(1.05);
-    transform: scale(1.05);
-    background: #00ab6b;
-}
-
-.gallery-card-sm img {
-    -webkit-transition: 0.6s ease;
-    transition: 0.6s ease;
-    padding: 2px;
-}
-
-.gallery-img-sm {
-    max-height: 150px;
-    object-fit: cover;
-}
-
-.gallery-search {
-    border-radius: 20px;
 }
 
 .slideshow-card {
@@ -1126,6 +1064,10 @@ div.messier-img {
     width: 100vw;
 }
 
+.nav-item {
+    min-width: 9vw;
+}
+
 table {
     margin: 1em;
     max-width: 95%;
@@ -1144,33 +1086,133 @@ td {
     padding: 0.5em;
 }
 
-.small-date {
+.gallery-card {
+    flex: 1 1 auto;
+    height: 256px;
+    max-width: 312px;
+    cursor: pointer;
+    position: relative;
+}
+
+.gallery-card.group-header {
+    display: block;
+    width: 100%;
+}
+
+.gallery-results,.flexible {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+}
+
+.gallery-results::after,.flexible::after {
+    content: "";
+    flex-grow: 999;
+}
+
+.gallery-card img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    border-radius: 5px;
+}
+
+.img-overlay {
     position: absolute;
+    bottom: 0;
+    right: 0;
+    padding-bottom: 2px;
+    padding-right: 2px;
+}
+
+.img-overlay strong,a,small {
+    width: 100%;
+}
+
+.small-date {
+    font-size: 0.8em;
+    color: lightgray;
+}
+
+.card-img-overlay {
+    position: absolute;
+    min-width: 200px;
+    max-width: 300px;
+    height: 110%;
+    background: rgba(57, 57, 57, 0.702);
     top: 0;
     left: 0;
-    margin-top: 2px;
-    margin-left: 2px;
-    background: rgba(0, 0, 0, 0.5);
+    margin-top: -1em;
+    margin-left: -1em;
+    transform: scale(0);
+    transition: all 0.2s 0.1s ease-in-out;
+    color: #fff;
+    border-radius: 5px;
+    /* center overlay content */
+    display: inline-block;
+    text-align: center;
+    align-items: center;
+    justify-content: center; 
 }
 
-.gallery-card-header a {
-    background: none;
-    width: 100%;
-    color: rgba(0, 255, 0, 0.2);
-    text-align: right;
-    position: absolute;
-    padding-right: 0px;
-    padding-bottom: 2px;
-    bottom: 0;
-    right: 0;   
+.gallery-results .gallery-card:hover .card-img-overlay {
+    transform: scale(1);
+    z-index: 999;
 }
 
-.card-img-overlay:hover .gallery-card-header a {
-    color: rgba(0, 255, 0, 0.8);
-    padding-right: 4px;
-    padding-bottom: 6px;
+.flexible .gallery-card:hover .card-img-overlay {
+    transform: scale(1);
+    z-index: 999;
+}
+.gallery-card-sm:hover {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    background: #00ab6b;
+}
+
+.gallery-card-sm img {
+    -webkit-transition: 0.6s ease;
+    transition: 0.6s ease;
+    padding: 2px;
+}
+
+.gallery-img-sm {
+    max-height: 150px;
+    object-fit: cover;
+}
+
+.gallery-search {
+    border-radius: 20px;
+}
+
+.group-header::before {
+    flex-basis: 100%;
+    height: 1;
+}
+
+.group-header {
+    flex-basis: 100%;
+    height: 1.5em;    
+    background: #222;
+    padding: 1px;
 }
 
 .group-header h4 {
-    float: left;
+    font-size: 1.1em;
+    font-weight: bold;   
+}
+
+.group-header h4 span {
+    font-size: 1em;
+    font-weight: normal;
+    margin-left: 1em;
+}
+
+.video-title {
+    position: absolute;
+    background:rgba(0, 0, 0, .88);    
+    top: 2em;
+    left: 2em;
+    margin: 2em;
 }

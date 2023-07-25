@@ -221,7 +221,7 @@ sitemap: false
 
                 refreshFilters: function () {
 
-                    $("div.card").each(function () {
+                    $("div.gallery-card").each(function () {
                         $(this).removeClass('d-none');
                         const key = $(this).attr("data-folder");
                         if (!(filterManager.items[key])) {
@@ -253,7 +253,7 @@ sitemap: false
                         else {
                             $(`${groupLink}>a`).removeClass("d-none");
                             $(`${groupLink}>span`).addClass("d-none");
-                            $(`.group-header[data-group='${group}'] p`)
+                            $(`.group-header[data-group='${group}'] h4 span`)
                                 .text(`${children} ${children === 1 ? "item" : "items"} in this group.`);
                         }
                     });

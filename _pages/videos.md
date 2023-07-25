@@ -14,36 +14,30 @@ permalink: /videos/
 </p>
 <p><a href="https://youtube.com/c/deepskyworkflows" title="Astrophotography videos" alt="Astrophotography videos" class="btn btn-success" target="_blank"><i class="fab fa-youtube"></i>&nbsp;Visit our YouTube channel to subscribe</a>&nbsp;
 <p><a name="top"></a></p>
-<div class="row mw-25">
-    <div class="col-12">
+<div class="flexible">    
         {% for group in types %}
-            <div class="row">&nbsp;</div>
-            <div class="row groupheader" data-group="{{group.name}}">
-                <div class="col-12">
-                    <h4>
-                        <a name="{{group.name}}"></a> {{group.name}} <a href="#top">🔝</a>
-                    </h4>
-                </div>
+            <div class="group-header" data-group="{{group.name}}">
+                <h4>
+                    <a name="{{group.name}}"></a> {{group.name}} <a href="#top">🔝</a>
+                </h4>            
             </div>                
             {% assign subitems = group.items | sort : 'date' | reverse %}
-            {% assign itemCount = 0 %}
-            <div class="row groupdetail" data-group="{{group.name}}">
+            {% assign itemCount = 0 %}            
             {% assign itemIndex = 1 %}
             {% for item in subitems %}        
             {% assign mainUrl = site.baseurl | append: item.url %}
             {% assign thumbPath = site.baseurl | append: "/" | append: item.image %}           
-                <div class="card gallery-card" data-url="{{item.url}}">
-                    <a href="{{mainUrl}}" title="{{item.description}}" tabindex="{{itemCount}}">
-                        <img class="card-img-top gallery-img" id="image-{{itemIndex}}" src="{{thumbPath}}" title="{{item.description}}" alt="{{item.description}}">
+                <div class="gallery-card group-detail" data-url="{{item.url}}">
+                        <img class="gallery-img" id="image-{{itemIndex}}" src="{{thumbPath}}" title="{{item.description}}" alt="{{item.description}}">
+                        <small><strong class="video-title">{{item.title}}</strong></small>                        
                         {% assign itemIndex = itemIndex | plus: 1 %}
-                    </a>
-                    <div class="card-header bg-dark text-center">
-                        <small>{{ item.date | date_to_string }}</small><br/>
-                        <a href="{{mainUrl}}" title="{{item.description}}">{{item.title}}</a>
+                    <div class="card-img-overlay card-header bg-dark text-center">
+                        <a href="{{mainUrl}}" title="{{item.description}}" tabindex="{{itemCount}}">
+                           Learn more
+                        </a>&nbsp;|&nbsp;<a href="https://youtu.be/{{item.youtubeid}}" target="_blank"  title="Play on YouTube">Watch on YouTube</a><br/>
+                        <small>{{ item.date | date_to_string }}</small><br/>                        
                     </div>                
                 </div>
-            {% endfor %}
-            </div>
-        {% endfor %}    
-    </div>
+            {% endfor %}     
+        {% endfor %}        
 </div>
