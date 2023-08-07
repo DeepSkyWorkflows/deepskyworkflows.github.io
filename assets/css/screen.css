@@ -1154,6 +1154,7 @@ td {
     text-align: center;
     align-items: center;
     justify-content: center; 
+    text-overflow: ellipsis;
 }
 
 .gallery-results .gallery-card:hover .card-img-overlay {

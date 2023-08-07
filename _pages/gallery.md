@@ -86,6 +86,9 @@ permalink: /gallery/
             <div title="{{item.description}}" class="gallery-card group-detail" data-url="{{item.url}}" data-telescope="{{item.telescope}}" data-signature="{{item.signature}}" data-prints="{{print}}" data-nostars="{{item.nostars}}" data-folder="{{item.folder}}" data-tags="{{item.tags | join: ','}}" data-group="{{groupCode}}">
                     <img class="gallery-img" id="image-{{itemIndex}}" data-url="{{thumbPath}}" src="{{loadingPath}}" alt="{{item.description}}">
                     <div class="img-overlay">
+                     <strong class="gallery-card-header">
+                        {{item.title}}                        
+                    </strong><br/>
                          <small class="small-date">
                         {{item.firstCapture}}
                         {% if item.lastCapture == item.firstCapture %}
@@ -107,79 +110,22 @@ permalink: /gallery/
                         {% endif %}                                               
                     </div>
                     {% assign itemIndex = itemIndex | plus: 1 %}
-                <div class="card-img-overlay">    
+                <div class="card-img-overlay"> 
                     <strong class="gallery-card-header">
-                        <a href="{{mainUrl}}" title="{{item.description}}">{{item.title}}</a>                        
-                    </strong>
-                    <br/>
+                        <a href="{{mainUrl}}" title="{{item.description}}">Full resolution</a>                        
+                    </strong>&nbsp;|&nbsp;
                     {% if item.printurl %}
-                            <a title="Prints available" href="{{site.galleryhome}}{{item.printurl}}" target="_blank">Order prints</a>
-                            <br/>
-                    {% endif %}                                                                          
-                </div>
-            </div>     
-            {% endif %}       
-        {% endfor %}           
-    {% endfor %}        
-</div>
-<div class="gallery-results-grid">    
-    {% for group in cats %}
-        {% assign groupCode = group.name | remove: " " %}
-        <div class="group-header" data-group="{{groupCode}}">
-            <h4 id="{{groupCode}}"> 
-                <a name="{{groupCode}}"></a> {{group.name}} <a href="#top">🔝</a><span> </span>
-            </h4>      
-            <p id="groupChildren"></p>          
-        </div>                
-        {% assign subitems = group.items | sort : 'lastCapture' | reverse %}
-        {% assign itemCount = 0 %}
-        {% assign itemIndex = 1 %}
-        {% for item in subitems %}        
-            {% if item.archive == true or item.folder == '' %}
-                {% else %}
-                {% assign mainUrl = site.baseurl | append: item.url %}
-                {% assign annotated = mainUrl | append: "#annotated" %}
-                {% assign grid = mainUrl | append: "#grid" %}
-                {% assign itemCount = itemCount | plus: 1 %}
-                {% assign thumbPath = site.baseurl | append: "/assets/images/gallery/" | append: item.folder | append: "/thumb.jpg" %}           
-            {% assign print = false %}
-            {% if item.printurl %}
-                {% assign print = true %}
-            {% endif %}            
-            {% assign loadingPath = site.baseurl | append: "/assets/images/loading.gif" %}
-            <div title="{{item.description}}" class="gallery-card group-detail" data-url="{{item.url}}" data-telescope="{{item.telescope}}" data-signature="{{item.signature}}" data-prints="{{print}}" data-nostars="{{item.nostars}}" data-folder="{{item.folder}}" data-tags="{{item.tags | join: ','}}" data-group="{{groupCode}}">
-                    <img class="gallery-img" id="image-{{itemIndex}}" data-url="{{thumbPath}}" src="{{loadingPath}}" alt="{{item.description}}">
-                    <div class="img-overlay">
-                         <small class="small-date">
-                        {{item.firstCapture}}
-                        {% if item.lastCapture == item.firstCapture %}
-                            {% else %}
-                            {% if item.lastCapture %}
-                                <br/>{{item.lastCapture}}
-                            {% endif %}
-                        {% endif %}
-                    </small>    
-                    <br/>
-                        {% if item.signature ==  true %}
-                            <span title="Signature Series">⭐</span>
-                        {% endif %}
-                        {% if item.printurl %}
-                            <span title="Prints available">🖼</span>
-                        {% endif %}
-                        {% if item.nostars ==  true %}
-                            <span title="Starless version">✨</span>
-                        {% endif %}                                               
-                    </div>
-                    {% assign itemIndex = itemIndex | plus: 1 %}
-                <div class="card-img-overlay">    
-                    <strong class="gallery-card-header">
-                        <a href="{{mainUrl}}" title="{{item.description}}">{{item.title}}</a>                        
-                    </strong>
-                    <br/>
-                    {% if item.printurl %}
-                            <a title="Prints available" href="{{site.galleryhome}}{{item.printurl}}" target="_blank">Order prints</a>
-                            <br/>
-                    {% endif %}                                                                          
+                    <a title="Prints available" href="{{site.galleryhome}}{{item.printurl}}" target="_blank">Order prints</a>&nbsp;|&nbsp;                          
+                    {% endif %}    
+                    {% if item.wwt %}
+                    <a href="{{ item.wwt }}" target="_blank">World Wide Telescope</a>.&nbsp;|&nbsp;
+                    {% endif %}                
+                    <small>Objects in frame:</small>
+                    {% for tag in item.tags limit:5 %}
+                    {% assign gtag = tag | strip | replace: ' ', '-' | remove: '(' | remove: ')' | downcase %}
+                    {% assign tagUrl = site.baseurl | append: "/tag/" | append: gtag  %}
+                    <a id="data-tag-{{tag}}" href="{{tagUrl}}" class="small">{{tag}}</a>
+                    {% endfor %}                                                                     
                 </div>
             </div>     
             {% endif %}       
