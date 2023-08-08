@@ -41,6 +41,7 @@
         {% assign telescopeArray = '' | split: ',' %}
         {% assign typeArray = '' | split: ',' %}
         {% for item in site.gallery %}
+            {% if item.type != null %}
             {% assign thumbPath = site.baseurl | append: "/assets/images/gallery/" | append: item.folder | append: "/thumb.jpg" %}
             {% assign imagePath = site.baseurl | append: "/assets/images/gallery/" | append: item.folder | append: "/" | append: item.folder | append: ".jpg" %}
             {% assign telescopeArray = telescopeArray | push: item.telescope %}
@@ -57,6 +58,7 @@
                 data-title="{{item.title}}"
                 data-description="{{item.description}}"/>
             {% assign itemIdx = itemIdx | plus: 1 %}
+            {% endif %}
         {% endfor %}
         {% assign uniqueScopes = telescopeArray | uniq | sort %}
         {% assign uniqueTypes = typeArray | uniq | sort %}
