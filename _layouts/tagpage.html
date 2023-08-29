@@ -28,7 +28,7 @@ Jump to: <a href="#ImageAnchor">Images</a>&nbsp;|&nbsp;<a href="#PostsAnchor">Bl
                 {% assign itemCount = itemCount | plus: 1 %}
                 {% assign mainUrl = site.baseurl | append: item.url %}
                 {% assign thumbPath = site.baseurl | append: "/assets/images/gallery/" | append: item.folder | append: "/thumb.jpg" %}
-                    <div style="min-width: 300px; max-width: 400px;" class="card col gallery-card float-left m-2" data-url="{{item.url}}" data-telescope="{{item.telescope}}" data-signature="{{item.signature}}">
+                    <div style="width: max-content; margin: 1em; max-width: 400px; height: max-content" class="card col gallery-card float-left m-2" data-url="{{item.url}}" data-telescope="{{item.telescope}}" data-signature="{{item.signature}}">
                         <a href="{{mainUrl}}" title="{{item.description}}" tabindex="{{itemCount}}">
                             <img class="card-img-top gallery-img" id="image-{{itemIndex}}" src="{{thumbPath}}" alt="{{item.description}}">
                             {% assign itemIndex = itemIndex | plus: 1 %}
@@ -58,7 +58,7 @@ Jump to: <a href="#ImageAnchor">Images</a>&nbsp;|&nbsp;<a href="#PostsAnchor">Bl
             {% assign itemCount = itemCount | plus: 1 %}
             {% assign mainUrl = site.baseurl | append: post.url %}            
             {% assign thumbPath = site.baseurl | append: "/" | append: post.image %}
-            <div style="min-width: 300px; max-width: 400px;" class="card col gallery-card float-left m-2" data-url="{{post.url}}">
+            <div style="min-width: 300px; height: max-content; max-width: 400px;" class="card col gallery-card float-left m-2" data-url="{{post.url}}">
                 <a href="{{mainUrl}}" title="{{post.description}}" tabindex="{{itemCount}}">
                     <img class="card-img-top gallery-img" id="image-{{itemIndex}}" src="{{thumbPath}}" alt="{{post.description}}">
                     {% assign itemIndex = itemIndex | plus: 1 %}
@@ -85,7 +85,7 @@ Jump to: <a href="#ImageAnchor">Images</a>&nbsp;|&nbsp;<a href="#PostsAnchor">Bl
             {% assign itemCount = itemCount | plus: 1 %}
             {% assign mainUrl = site.baseurl | append: video.url %}            
             {% assign thumbPath = site.baseurl | append: "/" | append: video.image %}
-            <div style="min-width: 300px; max-width: 400px;" class="card col gallery-card float-left m-2" data-url="{{video.url}}">
+            <div style="min-width: 300px; height: max-content; max-width: 400px;" class="card col gallery-card float-left m-2" data-url="{{video.url}}">
                 <a href="{{mainUrl}}" title="{{post.description}}" tabindex="{{itemCount}}">
                     <img class="card-img-top gallery-img" id="image-{{itemIndex}}" src="{{thumbPath}}" alt="{{video.description}}">
                     {% assign itemIndex = itemIndex | plus: 1 %}

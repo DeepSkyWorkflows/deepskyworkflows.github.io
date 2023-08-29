@@ -1110,6 +1110,14 @@ td {
     flex-grow: 999;
 }
 
+.gallery-card-sm img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    border-radius: 5px;
+}
+
 .gallery-card img {
     object-fit: cover;
     width: 100%;
@@ -1166,6 +1174,30 @@ td {
     transform: scale(1);
     z-index: 999;
 }
+
+.tag a {  
+    width: max-content; 
+    margin-left: 0.5em;
+    margin-top: 0.5em; 
+    display: block;
+    float: left;
+}
+
+.side-strip {
+    text-align: center;
+}
+
+.side-strip .gallery-card-sm {
+    width: 256px;
+    margin: 0.5em;
+}
+
+.gallery-card-sm {
+    flex: 1 1 auto; 
+    width: max-content;
+    max-width: 300px;        
+}
+
 .gallery-card-sm:hover {
     -webkit-transform: scale(1.05);
     transform: scale(1.05);

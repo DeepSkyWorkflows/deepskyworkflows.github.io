@@ -52,11 +52,12 @@
     {% if gallery %}
         <hr/>
         <p><strong>Gallery</strong></p>
+        <div class="side-strip">
         {% assign sorted = gallery | uniq | sort: "title" %}
         {% for item in sorted limit: maxitems %}
             {% assign mainUrl = site.baseurl | append: item.url %}            
             {% assign thumbPath = site.baseurl | append: "/assets/images/gallery/" | append: item.folder | append: "/thumb.jpg" %}
-            <div class="card gallery-card mw-100">
+            <div class="card gallery-card-sm">
                 <a href="{{mainUrl}}" title="{{item.description}}">
                     <img class="card-img-top gallery-img" src="{{thumbPath}}" alt="{{item.description}}">
                 </a>
@@ -65,6 +66,7 @@
                 </div>                
             </div>        
         {% endfor %}
+        </div>
     {% endif %}
     <hr/>
     <p>

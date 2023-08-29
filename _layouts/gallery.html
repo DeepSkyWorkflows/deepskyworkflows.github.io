@@ -301,8 +301,8 @@ layout: default
                     {% endfor %}
                     {% assign groupCount = group | size %}
                     {% if groupCount > 0 %}
-                    <div class="card-footer bg-dark">
-                        <p><strong>Related images:</strong></p>
+                    <div class="card-footer flexible bg-dark">
+                        <strong class="w-100">Related images</strong>
                         {% for galleryItem in group %}        
                             {% assign mainUrl = site.baseurl | append: galleryItem.url %}
                             {% assign thumbPath = site.baseurl | append: "/assets/images/gallery/" | append: galleryItem.folder | append: "/thumb.jpg" %}
@@ -314,7 +314,7 @@ layout: default
                         {% endfor %}
                     </div> 
                     {% endif %}
-                    <div class="card-footer bg-dark">
+                    <div class="card-footer bg-dark tag">
                     <p><b>Objects in frame:</b></p>
                     {% for tag in page.tags %}
                     {% assign gtag = tag | strip | replace: ' ', '-' | remove: '(' | remove: ')' | downcase %}
