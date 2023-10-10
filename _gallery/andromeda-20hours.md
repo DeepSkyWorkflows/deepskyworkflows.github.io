@@ -1,7 +1,7 @@
 ---
 title: "M31 Andromeda Galaxy with 20 Hours Integration"
 type: Galaxy
-tags: ["NGC205","M110","NGC221","M32","NGC224","M 31","Andromeda Galaxy","The star ν And","35 And"]
+tags: ["NGC205","M110","NGC221","M32","NGC224","M31","Andromeda Galaxy","The star ν And","35 And"]
 description: "5 nights of dedicated imaging for 15 hours of RGB (combination of 45-second, 1-minute and 3-minute exposures) and 5 hours of narrowband (Optolong l-eXtreme). Honestly, I processed this about four or five times before getting to a result I was satisfied with... future revisions may come!"
 image: /assets/images/gallery/andromeda-20hours/thumb.jpg
 telescope: Svbony sv503 70ED
