@@ -110,22 +110,20 @@ permalink: /gallery/
                         {% endif %}                                               
                     </div>
                     {% assign itemIndex = itemIndex | plus: 1 %}
-                <div class="card-img-overlay"> 
-                    <strong class="gallery-card-header">
-                        <a href="{{mainUrl}}" title="{{item.description}}">Full resolution</a>                        
-                    </strong>&nbsp;|&nbsp;
+                <div class="card-img-overlay" data-url="{{mainUrl}}"> 
+                    <ul>
                     {% if item.printurl %}
-                    <a title="Prints available" href="{{site.galleryhome}}{{item.printurl}}" target="_blank">Order prints</a>&nbsp;|&nbsp;                          
+                        <li>Print available</li>
                     {% endif %}    
                     {% if item.wwt %}
-                    <a href="{{ item.wwt }}" target="_blank">World Wide Telescope</a>.&nbsp;|&nbsp;
-                    {% endif %}                
-                    <small>Objects in frame:</small>
+                        <li>Image integrated with World Wide Telescope</li>
+                    {% endif %}
+                    <li>Objects in frame:
                     {% for tag in item.tags limit:5 %}
-                    {% assign gtag = tag | strip | replace: ' ', '-' | remove: '(' | remove: ')' | downcase %}
-                    {% assign tagUrl = site.baseurl | append: "/tag/" | append: gtag  %}
-                    <a id="data-tag-{{tag}}" href="{{tagUrl}}" class="small">{{tag}}</a>
-                    {% endfor %}                                                                     
+                    {{tag}} |
+                    {% endfor %}
+                    </li>
+                    </ul>
                 </div>
             </div>     
             {% endif %}       

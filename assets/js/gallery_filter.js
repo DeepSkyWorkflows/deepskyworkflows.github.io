@@ -1,5 +1,5 @@
 ---
-    layout: null
+layout: null
 sitemap: false
 ---
 
@@ -223,12 +223,21 @@ sitemap: false
 
                     $("div.gallery-card").each(function () {
                         $(this).removeClass('d-none');
+                        if ($(this).data('linked') !== 'true') {
+                            const link = $(this).data('url');
+                            (function (d,l) {
+                                $(d).click(() => location.href = l);
+                                $(d).find('.card-img-overlay').each(function () {
+                                    $(this).click(() => location.href = l);
+                                });
+                            })($(this),link);
+                        }
                         const key = $(this).attr("data-folder");
                         if (!(filterManager.items[key])) {
                             $(this).addClass('d-none');
-                        }
+                        }                        
                     });
-
+                    
                     $(".group-header").each(function () {
 
                         const group = $(this).attr("data-group");
