@@ -229,6 +229,8 @@ window.gallerydbpromise = window.gallerydbpromise || (async function () {
 
         getFocalLengths: () => [...internaldb.focalLengths].sort((a, b) => (parseInt(a) - parseInt(b))),
 
+        getRandom: () => internaldb.db.gallery[Math.floor(Math.random() * internaldb.db.gallery.length)],
+
         setSort: (sortCol, asc) =>
             internaldb.sort = { sortCol: sortCol, ascending: asc },
 

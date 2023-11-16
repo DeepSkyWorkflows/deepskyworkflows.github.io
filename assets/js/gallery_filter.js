@@ -12,7 +12,9 @@ sitemap: false
             const filter = {
                 refreshing: false,
                 state: {
+                    text: null,
                     category: null,
+                    telescope: null,
                     sort: 'lastCapture',
                     sortAscending: false,
                     signature: false,
@@ -20,10 +22,14 @@ sitemap: false
                     archive: false,
                     filterExpanded: false
                 },
+                lastText: null,
+                resetBtn: document.getElementById('reset'),
                 sort: document.getElementById('sortBy'),
+                telescope: document.getElementById('telescope'),
                 category: document.getElementById('categoryButtons'),
                 categoryBtn: null,
                 categoryButtons: {},
+                text: document.getElementById('text'),
                 signature: document.getElementById('signature'),
                 print: document.getElementById('print'),
                 archive: document.getElementById('archive'),
@@ -32,6 +38,47 @@ sitemap: false
                 filterExpanded: document.getElementById('filterExpanded'),
                 sortToggle: document.getElementById('sortDir'),
                 filterRefresh: document.getElementById('filterRefresh'),
+
+                textChanged: function () {
+                    if (filter.refreshing) {
+                        return;
+                    }
+                    if (filter.lastText) {
+                        clearTimeout(filter.lastText);                        
+                    }
+                    filter.lastText = setTimeout(() => filter.textChangedHook(), 300);
+                },
+
+                textChangedHook: function () {
+                    filter.lastText = null;
+                    if (filter.refreshing) {
+                        return;
+                    }
+                    
+                    let compare = filter.text.value.toLowerCase();
+                    if (compare.length < 3) {
+                        compare = null;
+                    }
+                    
+                    if (compare !== filter.state.text) {
+                        filter.state.text = compare;
+                        queryManager.set("text", filter.state.text ?? '');
+                        queryManager.update("Gallery Search");
+                        app.refresh();                        
+                    }
+                },
+
+                telescopeChanged: function () {
+                    if (filter.refreshing) {
+                        return;
+                    }
+                    filter.state.telescope = filter.telescope.value === 'all' 
+                        ? null 
+                        : filter.telescope.value;                    
+                    queryManager.set("telescope", filter.state.telescope ?? 'all');
+                    queryManager.update("Gallery Search");
+                    app.refresh();
+                },
 
                 categoryChanged: function (val) {
                     if (filter.refreshing) {
@@ -139,10 +186,36 @@ sitemap: false
                     filter.state.filterExpanded = false;
                 },
 
+                reset: function () {
+                    filter.state.text = null;
+                    filter.state.category = null;
+                    filter.state.telescope = null;
+                    filter.state.sort = 'lastCapture';
+                    filter.state.sortAscending = false;
+                    filter.state.signature = false;
+                    filter.state.print = false;
+                    filter.state.archive = false;
+                    filter.refresh();
+                    window.location.reload();
+                },
+
+                refresh: function () {
+                    queryManager.set("text", filter.state.text ?? '');
+                    queryManager.set("sortBy", filter.state.sort);
+                    queryManager.set("telescope", filter.state.telescope ?? 'all');
+                    queryManager.set("sortAscending", filter.state.sortAscending);
+                    queryManager.set("category", filter.state.category ?? 'all');
+                    queryManager.set("signature", filter.state.signature);
+                    queryManager.set("print", filter.state.print);
+                    queryManager.set("archive", filter.state.archive);
+                    queryManager.update("Gallery Search");
+                },
+
                 init: function () {
 
                     const sorts = db.getSorts();
                     const categories = db.getTypes();
+                    const telescopes = db.getTelescopes();
 
                     const signature = queryManager.get("signature");
                     if (signature && signature.length) {
@@ -154,6 +227,11 @@ sitemap: false
                         filter.state.print = print === 'true';
                     }
 
+                    const text = queryManager.get("text");
+                    if (text && text.length) {
+                        filter.state.text = text;
+                    }
+
                     const archive = queryManager.get("archive");
                     if (archive && archive.length) {
                         filter.state.archive = archive === 'true';
@@ -162,6 +240,12 @@ sitemap: false
                     const sortByQuery = queryManager.get("sortBy");
                     if (sortByQuery && sortByQuery.length && sorts.includes(sortByQuery)) {
                         filter.state.sort = sortByQuery;
+                    }
+
+                    const telescopeQuery = queryManager.get("telescope");
+                    if (telescopeQuery && telescopeQuery.length && (telescopes.includes(telescopeQuery)
+                        || telescopeQuery === 'all')) {
+                        filter.state.telescope = telescopeQuery === 'all' ? null : telescopeQuery;
                     }
 
                     const categoryQuery = queryManager.get("category");
@@ -187,10 +271,31 @@ sitemap: false
                         filter.sort.appendChild(option);
                     }
 
+                    const scopeAll = document.createElement("option");
+                    scopeAll.setAttribute("value", "all");
+                    scopeAll.innerText = "All";
+                    if (filter.state.telescope === null) {
+                        scopeAll.setAttribute("selected", "selected");
+                    }
+                    filter.telescope.appendChild(scopeAll);
+                    for (let idx = 0; idx < telescopes.length; idx++) {
+                        const telescope = telescopes[idx];
+                        if (telescope && telescope.length) {
+                            const option = document.createElement("option");
+                            option.setAttribute("value", telescope);
+                            if (telescope === filter.state.telescope) {
+                                option.setAttribute("selected", "selected");
+                            }
+                            option.innerText = telescope;
+                            filter.telescope.appendChild(option);
+                        }
+                    }
+
                     const all = document.createElement("button");
                     all.classList.add("btn");
                     all.classList.add("btn-sm");
                     all.classList.add("mr-1");
+                    all.classList.add("mb-1");
                     all.classList.add(filter.state.category === "all" ? "btn-success" : "btn-primary");
                     if (filter.state.category === "all") {
                         filter.categoryBtn = all;
@@ -219,6 +324,10 @@ sitemap: false
                         }
                     }
 
+                    filter.resetBtn.addEventListener("click", () => filter.reset());
+                    filter.telescope.addEventListener("change", () => filter.telescopeChanged());
+                    filter.text.value = filter.state.text;
+                    filter.text.addEventListener("keyup", () => filter.textChanged());
                     filter.signature.checked = filter.state.signature;
                     filter.signature.addEventListener("change", () => filter.signatureChanged());
                     filter.print.checked = filter.state.print;
@@ -232,18 +341,12 @@ sitemap: false
                     filter.collapser.addEventListener("click", () => filter.collapse());
                     filter.filterExpanded.classList.add('d-none');
                     filter.filterRefresh.classList.add('d-none');
-
-                    queryManager.set("sortBy", filter.state.sort);
-                    queryManager.set("sortAscending", filter.state.sortAscending);
-                    queryManager.set("category", filter.state.category ?? 'all');
-                    queryManager.set("signature", filter.state.signature);
-                    queryManager.set("print", filter.state.print);
-                    queryManager.set("archive", filter.state.archive);
-                    queryManager.update("Gallery Search");
+                    filter.refresh();                    
                 }
             };
 
             const app = {
+                lucky: document.getElementById('lucky'),
                 mainDiv: document.getElementById('galleryMain'),
                 results: document.getElementsByClassName('card-deck')[0],
                 template: document.getElementById('image-template').innerHTML,
@@ -277,6 +380,14 @@ sitemap: false
                             db.addPredicate("type", "eq", filter.state.category);
                         }
 
+                        if (filter.state.telescope) {
+                            db.addPredicate("telescope", "eq", filter.state.telescope);
+                        }
+
+                        if  (filter.state.text && filter.state.text.length > 2) {
+                            db.addPredicate("text", "contains", filter.state.text);
+                        }
+
                         db.addPredicate("archive", "eq", filter.state.archive);
 
                         const images = db.getItems(9999);
@@ -300,7 +411,7 @@ sitemap: false
                                     .replace('%content%', 'stuff');
                                 app.results.innerHTML += html;
                             } else {
-                                app.results.innerHTML += `<span id="_${image.folder}">image.title</span>`;
+                                app.results.innerHTML += `<span id="_${image.folder}">{{image.title}}</span>`;
                             }
                             setTimeout(() => app.loadImage(image));
                         }
@@ -470,8 +581,13 @@ sitemap: false
                 }
             };
 
+            app.lucky.addEventListener("click", () => {
+                const image = db.getRandom();
+                window.location.href = `${window.location.origin}/gallery/${image.folder}`;
+            });
+            
             filter.init();
-            app.refresh();
+            setTimeout(app.refresh);
 
         })(window.gallerydb, window.deepSkyRouter);
     })();
