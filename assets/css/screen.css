@@ -8,6 +8,19 @@ License: https://www.wowthemes.net/freebies-license/
     .container {max-width:90%;}
 }
 
+.card-deck > .card {
+    min-width: 300px;
+    max-width: 400px;
+}
+
+.card-deck > .card > img {
+    object-fit: contain;
+}
+
+.gallery-link:hover {
+    color: green;
+}
+
 body {
     background-color: #000;
     background-image: url(../images/header.jpg);
@@ -50,7 +63,6 @@ pre {
     color: #333;
     margin-bottom: -rem;
 }
-
 .mediumnavigation {
     background: rgba(255, 255, 255, .97);
     box-shadow: 0 2px 2px -2px rgba(224, 224, 224, .15);
@@ -1084,6 +1096,14 @@ th {
 td {
     border: solid 2px white;
     padding: 0.5em;
+}
+
+.gallery-card-v2:hover {
+    border: solid 1px white;    
+}
+
+.underlinehover:hover {
+    text-decoration: underline;
 }
 
 .gallery-card {

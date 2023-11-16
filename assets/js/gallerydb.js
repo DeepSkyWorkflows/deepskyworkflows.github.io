@@ -148,8 +148,8 @@ window.gallerydbpromise = window.gallerydbpromise || (async function () {
 
                 var img = new Image();
 
-                img.dataset.fullImg = `https://deepskyworkflows.com/${item.imageUrl}`;
-                img.dataset.url = `https://deepskyworkflows.com/gallery/${item.folder}/`;
+                img.dataset.fullImg = `${window.location.origin}/${item.imageUrl}`;
+                img.dataset.url = `${window.location.origin}/gallery/${item.folder}/`;
 
                 if (img.nostars) {
                     img.dataset.nostarsImg = img.dataset.fullImg.replace(".jpg", "-nostars.jpg");
@@ -161,12 +161,11 @@ window.gallerydbpromise = window.gallerydbpromise || (async function () {
                     img.dataset.gridImg = img.dataset.fullImg.replace(".jpg", "-grid.jpg");
                 }
 
-                img.setAttribute("src", `https://deepskyworkflows.com/${item.thumbnailUrl}`);
+                img.setAttribute("src", `${window.location.origin}/${item.thumbnailUrl}`);
                 img.setAttribute("title", item.description);
                 img.setAttribute("alt", item.description);
 
                 item.img = img;
-                console.log(item.converted.text);
                 initialized.push(item);
             }
             internaldb.db.gallery = initialized;
@@ -257,7 +256,7 @@ window.gallerydbpromise = window.gallerydbpromise || (async function () {
 
         bindToItem: (img, key) => {
             const item = db.getItem(key);
-            img.setAttribute("src", "/assets/img/loading.gif");
+            img.setAttribute("src", "/assets/images/loading.gif");
             img.setAttribute("title", item.description);
             img.setAttribute("alt", item.description);
             item.img.addEventListener("load", () => {
