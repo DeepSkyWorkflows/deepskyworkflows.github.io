@@ -1,27 +1,28 @@
 ---
-layout: null
+    layout: null
 sitemap: false
 ---
-
     (async function () {
 
         await window.gallerydbpromise;
 
         (function (db, queryManager) {
 
+            const filterState = {
+                text: null,
+                category: null,
+                telescope: null,
+                sortBy: 'lastCapture',
+                sortAscending: false,
+                signature: false,
+                print: false,
+                archive: false,
+                filterExpanded: false
+            };
+
             const filter = {
                 refreshing: false,
-                state: {
-                    text: null,
-                    category: null,
-                    telescope: null,
-                    sort: 'lastCapture',
-                    sortAscending: false,
-                    signature: false,
-                    print: false,
-                    archive: false,
-                    filterExpanded: false
-                },
+                state: { ...filterState },
                 lastText: null,
                 resetBtn: document.getElementById('reset'),
                 sort: document.getElementById('sortBy'),
@@ -39,12 +40,23 @@ sitemap: false
                 sortToggle: document.getElementById('sortDir'),
                 filterRefresh: document.getElementById('filterRefresh'),
 
+                querySet: function (key, value, deferUpdate = false) {
+                    if (filter.state[key] === filterState[key]) {
+                        queryManager.reset(key);
+                    } else {
+                        queryManager.set(key, value);
+                    }
+                    if (deferUpdate !== true) {
+                        queryManager.update("Gallery Search");
+                    }
+                },
+
                 textChanged: function () {
                     if (filter.refreshing) {
                         return;
                     }
                     if (filter.lastText) {
-                        clearTimeout(filter.lastText);                        
+                        clearTimeout(filter.lastText);
                     }
                     filter.lastText = setTimeout(() => filter.textChangedHook(), 300);
                 },
@@ -54,29 +66,34 @@ sitemap: false
                     if (filter.refreshing) {
                         return;
                     }
-                    
+
                     let compare = filter.text.value.toLowerCase();
                     if (compare.length < 3) {
                         compare = null;
                     }
-                    
+
                     if (compare !== filter.state.text) {
                         filter.state.text = compare;
-                        queryManager.set("text", filter.state.text ?? '');
-                        queryManager.update("Gallery Search");
-                        app.refresh();                        
+                        filter.querySet("text", filter.state.text ?? '');
+                        app.refresh();
                     }
                 },
 
-                telescopeChanged: function () {
+                telescopeChanged: function (forceVal = null) {
                     if (filter.refreshing) {
                         return;
                     }
-                    filter.state.telescope = filter.telescope.value === 'all' 
-                        ? null 
-                        : filter.telescope.value;                    
-                    queryManager.set("telescope", filter.state.telescope ?? 'all');
-                    queryManager.update("Gallery Search");
+                    const val = forceVal ?? filter.telescope.value;
+                    filter.state.telescope = val === 'all' ? null : val;
+                    for (let idx = 0; idx < filter.telescope.options.length; idx++) {
+                        const option = filter.telescope.options[idx];
+                        if (option.value === val) {
+                            option.setAttribute("selected", "selected");
+                        } else {
+                            option.removeAttribute("selected");
+                        }
+                    }
+                    filter.querySet("telescope", filter.state.telescope ?? 'all');
                     app.refresh();
                 },
 
@@ -112,8 +129,7 @@ sitemap: false
                         }
                     }
 
-                    queryManager.set("category", filter.state.category ?? 'all');
-                    queryManager.update("Gallery Search");
+                    filter.querySet("category", filter.state.category ?? 'all');
                     app.refresh();
                 },
 
@@ -121,9 +137,16 @@ sitemap: false
                     if (filter.refreshing) {
                         return;
                     }
-                    filter.state.sort = filter.sort.value;
-                    queryManager.set("sortBy", filter.state.sort);
-                    queryManager.update("Gallery Search");
+                    filter.state.sortBy = filter.sort.value;
+                    for (let idx = 0; idx < filter.sort.options.length; idx++) {
+                        const option = filter.sort.options[idx];
+                        if (option.value === filter.state.sortBy) {
+                            option.setAttribute("selected", "selected");
+                        } else {
+                            option.removeAttribute("selected");
+                        }
+                    }
+                    filter.querySet("sortBy", filter.state.sortBy);
                     app.refresh();
                 },
 
@@ -133,8 +156,7 @@ sitemap: false
                     }
                     filter.state.sortAscending = !filter.state.sortAscending;
                     filter.sortToggle.innerText = filter.state.sortAscending ? 'Asc' : 'Desc';
-                    queryManager.set("sortAscending", filter.state.sortAscending);
-                    queryManager.update("Gallery Search");
+                    filter.querySet("sortAscending", filter.state.sortAscending);
                     app.refresh();
                 },
 
@@ -143,8 +165,7 @@ sitemap: false
                         return;
                     }
                     filter.state.signature = filter.signature.checked;
-                    queryManager.set("signature", filter.state.signature);
-                    queryManager.update("Gallery Search");
+                    filter.querySet("signature", filter.state.signature);
                     app.refresh();
                 },
 
@@ -153,8 +174,7 @@ sitemap: false
                         return;
                     }
                     filter.state.print = filter.print.checked;
-                    queryManager.set("print", filter.state.print);
-                    queryManager.update("Gallery Search");
+                    filter.querySet("print", filter.state.print);
                     app.refresh();
                 },
 
@@ -163,8 +183,7 @@ sitemap: false
                         return;
                     }
                     filter.state.archive = filter.archive.checked;
-                    queryManager.set("archive", filter.state.archive);
-                    queryManager.update("Gallery Search");
+                    filter.querySet("archive", filter.state.archive);
                     app.refresh();
                 },
 
@@ -187,28 +206,20 @@ sitemap: false
                 },
 
                 reset: function () {
-                    filter.state.text = null;
-                    filter.state.category = null;
-                    filter.state.telescope = null;
-                    filter.state.sort = 'lastCapture';
-                    filter.state.sortAscending = false;
-                    filter.state.signature = false;
-                    filter.state.print = false;
-                    filter.state.archive = false;
+                    filter.state = { ...filterState };
                     filter.refresh();
                     window.location.reload();
                 },
 
                 refresh: function () {
-                    queryManager.set("text", filter.state.text ?? '');
-                    queryManager.set("sortBy", filter.state.sort);
-                    queryManager.set("telescope", filter.state.telescope ?? 'all');
-                    queryManager.set("sortAscending", filter.state.sortAscending);
-                    queryManager.set("category", filter.state.category ?? 'all');
-                    queryManager.set("signature", filter.state.signature);
-                    queryManager.set("print", filter.state.print);
-                    queryManager.set("archive", filter.state.archive);
-                    queryManager.update("Gallery Search");
+                    filter.querySet("text", filter.state.text ?? '', true);
+                    filter.querySet("sortBy", filter.state.sortBy, true);
+                    filter.querySet("telescope", filter.state.telescope ?? 'all', true);
+                    filter.querySet("sortAscending", filter.state.sortAscending, true);
+                    filter.querySet("category", filter.state.category ?? 'all', true);
+                    filter.querySet("signature", filter.state.signature, true);
+                    filter.querySet("print", filter.state.print, true);
+                    filter.querySet("archive", filter.state.archive);
                 },
 
                 init: function () {
@@ -239,7 +250,7 @@ sitemap: false
 
                     const sortByQuery = queryManager.get("sortBy");
                     if (sortByQuery && sortByQuery.length && sorts.includes(sortByQuery)) {
-                        filter.state.sort = sortByQuery;
+                        filter.state.sortBy = sortByQuery;
                     }
 
                     const telescopeQuery = queryManager.get("telescope");
@@ -264,7 +275,7 @@ sitemap: false
                         const sort = sorts[idx];
                         const option = document.createElement("option");
                         option.setAttribute("value", sort);
-                        if (sort === filter.state.sort) {
+                        if (sort === filter.state.sortBy) {
                             option.setAttribute("selected", "selected");
                         }
                         option.innerText = sort;
@@ -341,7 +352,7 @@ sitemap: false
                     filter.collapser.addEventListener("click", () => filter.collapse());
                     filter.filterExpanded.classList.add('d-none');
                     filter.filterRefresh.classList.add('d-none');
-                    filter.refresh();                    
+                    filter.refresh();
                 }
             };
 
@@ -365,7 +376,7 @@ sitemap: false
 
                     setTimeout(() => {
 
-                        db.setSort(filter.state.sort, filter.state.sortAscending);
+                        db.setSort(filter.state.sortBy, filter.state.sortAscending);
                         db.setPredicate();
 
                         if (filter.state.signature) {
@@ -384,7 +395,7 @@ sitemap: false
                             db.addPredicate("telescope", "eq", filter.state.telescope);
                         }
 
-                        if  (filter.state.text && filter.state.text.length > 2) {
+                        if (filter.state.text && filter.state.text.length > 2) {
                             db.addPredicate("text", "contains", filter.state.text);
                         }
 
@@ -452,8 +463,7 @@ sitemap: false
 
                     const fullUrl = `${window.location.origin}/gallery/${image.folder}`;
                     const title = document.getElementById(`ttl_${image.folder}`);
-
-                    title.addEventListener("click", () => window.location.href = fullUrl);
+                    title.href = fullUrl;
 
                     const img = document.getElementById(`img_${image.folder}`);
                     db.bindToItem(img, image.folder);
@@ -463,10 +473,15 @@ sitemap: false
                     type.innerHTML = '';
 
                     if (image.type && image.type.length) {
-                        type.appendChild(
-                            makeSpan(
-                                `Category: ${image.type}`,
-                                () => filter.categoryChanged(image.type)));
+                        const categoryLabel = makeSpan(
+                            `Category: ${image.type}`,
+                            () => {
+                                if (filter.state.category !== image.type) {
+                                    filter.categoryChanged(image.type);
+                                }
+                            });
+                        categoryLabel.title = "Click to filter by this category";
+                        type.appendChild(categoryLabel);
                     }
 
                     let breakAfterCategory = false;
@@ -500,9 +515,15 @@ sitemap: false
 
                     if (image.telescope && image.telescope.length) {
                         type.appendChild(makeBreak());
-                        type.appendChild(
-                            makeSpan(`&nbsp;<i class="fas fa-binoculars" title="Telescope"></i> ${image.telescope}`));
-                    }                                               
+                        const telescopeLabel = makeSpan(`&nbsp;<i class="fas fa-binoculars" title="Telescope"></i> ${image.telescope}`,
+                            () => {
+                                if (filter.state.telescope !== image.telescope) {
+                                    filter.telescopeChanged(image.telescope);
+                                }
+                            });
+                        telescopeLabel.title = "Click to filter by this telescope";
+                        type.appendChild(telescopeLabel);
+                    }
 
                     const content = document.getElementById(`con_${image.folder}`);
 
@@ -585,7 +606,7 @@ sitemap: false
                 const image = db.getRandom();
                 window.location.href = `${window.location.origin}/gallery/${image.folder}`;
             });
-            
+
             filter.init();
             setTimeout(app.refresh);
 

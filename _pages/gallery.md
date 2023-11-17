@@ -41,11 +41,12 @@ permalink: /gallery/
 <div id="%div_id%" class="card gallery-card-v2 text-white bg-dark mb-1 p-1">
     <img id="%img_id%" class="card-img clickable" src="/assets/images/loading.gif" alt="%desc%"/>
     <div class="card-body">
-        <p class="mb1"><strong id="%title_id%" class="card-title clickable underlinehover">%title%</strong></p>
-        <p class="card-text text-right mb-1"><small>%date%</small></p>
-        <p id="%type_id%" class="card-text mb-1">...</p>
-        <p id="%content_id%" class="card-text">...</p>        
-    </div>
+        <p class="mb-2px card-text-override">
+            <a id="%title_id%" class="card-title clickable underlinehover"><strong>%title%</strong></a></p>
+        <p class="card-text  card-text-override text-right mb-2px"><small>%date%</small></p>
+        <p id="%type_id%" class="card-text card-text-override mb-2px">...</p>
+        <p id="%content_id%" class="card-text card-text-override">...</p>        
+    </div>    
 </div>        
 </script>
 

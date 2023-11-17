@@ -13,6 +13,18 @@ License: https://www.wowthemes.net/freebies-license/
     max-width: 400px;
 }
 
+.card-body {
+    padding: 0.5rem;
+}
+
+.card-text-override {
+    margin-bottom: 2px !important;;
+}
+
+.mb-2px {
+    margin-bottom: 2px;
+}
+
 .card-deck > .card > img {
     object-fit: contain;
 }
