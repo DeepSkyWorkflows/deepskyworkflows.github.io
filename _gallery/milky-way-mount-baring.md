@@ -4,7 +4,7 @@ type: Milky Way
 tags: [milky way, "Heybrook lookout"]
 description: The Milky Way arching across the sky above Mt. Baring.
 image: /assets/images/gallery/milky-way-mount-baring/thumb.jpg
-telescope: Sony Alpha 6300
+telescope: Sony ILCE-6300
 length: "12mm"
 aperture: "80mm"
 wwt: 

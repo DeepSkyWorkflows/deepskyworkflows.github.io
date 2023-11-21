@@ -1,5 +1,9 @@
 window.gallerydbpromise = window.gallerydbpromise || (async function () {
 
+    const convertCapture = (capture) => parseInt(capture.substring(0, 4)) * 10000 +
+        parseInt(capture.substring(5, 7) * 100 +
+            parseInt(capture.substring(8, 10)));
+
     const addOnce = (item, coll) => {
         if (!coll.includes(item)) {
             coll.push(item);
@@ -20,6 +24,10 @@ window.gallerydbpromise = window.gallerydbpromise || (async function () {
     const internaldb = {
 
         db: await fetch("/gallery-database.json").then(r => r.json()),
+
+        weighted: null,
+
+        cumWeight: 0.0,
 
         ready: false,
 
@@ -52,6 +60,34 @@ window.gallerydbpromise = window.gallerydbpromise || (async function () {
 
         init: () => {
             const initialized = [];
+            const stats = {
+                firstDate: 99999999,
+                lastDate: 0,
+                maxTags: 0,
+                minWeight: 9999999999.99,
+                maxWeight: 0.0
+            };
+
+            for (let idx = 0; idx < internaldb.db.gallery.length; idx++) {
+                const item = internaldb.db.gallery[idx];
+                
+                if (!(item.imageUrl)) {
+                    continue;
+                }
+
+                const first = convertCapture(item.firstCapture);
+                const last = convertCapture(item.lastCapture);
+                if (first < stats.firstDate) {
+                    stats.firstDate = first;
+                }
+                if (last > stats.lastDate) {
+                    stats.lastDate = last;
+                }
+                if (item.tags && item.tags.length > stats.maxTags) {
+                    stats.maxTags = item.tags.length;
+                }
+            }
+
             for (let idx = 0; idx < internaldb.db.gallery.length; idx++) {
 
                 const item = internaldb.db.gallery[idx];
@@ -59,6 +95,17 @@ window.gallerydbpromise = window.gallerydbpromise || (async function () {
                 if (!(key && key.length > 0)) {
                     continue;
                 }
+
+                item.weight = {
+                    recency: (convertCapture(item.lastCapture) - stats.firstDate) / (1.0*(stats.lastDate - stats.firstDate)),
+                    quality: item.signature === "true" ? 3.0 : 0.0,
+                    staleness: item.archive === "true" ? -1.0 : 1.0,
+                    availability: item.printUrl && item.printUrl.length ? 2.0 : 0.0,
+                    details: item.rightAscension ? 1.0 : 0.0,
+                    tags: item.tags ? item.tags.length / (1.0 * stats.maxTags) : 0.0,
+                    total: 0
+                };
+
                 if (item.rightAscension) {
                     const fov = item.radius.substring(0, item.radius.indexOf(' '));
                     const parts = item.rightAscension.split(' ');
@@ -85,12 +132,16 @@ window.gallerydbpromise = window.gallerydbpromise || (async function () {
 
                 if (!(item.tags)) {
                     item.tags = [];
-                }                
+                }
 
                 item.archive = item.archive === "true";
                 item.signature = item.signature === "true";
                 item.nostars = item.nostars === "true";
                 item.annotations = item.noannotations !== "true";
+
+                if (item.annotations === false) {
+                    item.weight.details *= .5;
+                }                
 
                 if (!(item.imageUrl)) {
                     continue;
@@ -107,6 +158,47 @@ window.gallerydbpromise = window.gallerydbpromise || (async function () {
                             parseInt(item.lastCapture.substring(8, 10))),
                     exposure: parseInt(item.exposure)
                 };
+
+                item.weight.total = item.weight.recency + item.weight.quality + item.weight.staleness + item.weight.availability + item.weight.details;
+                internaldb.cumWeight += item.weight.total;
+                if (item.weight.total < stats.minWeight) {
+                    stats.minWeight = item.weight.total;
+                }
+                if (item.weight.total > stats.maxWeight) {
+                    stats.maxWeight = item.weight.total;
+                }
+
+                // insert weighted order
+                const insertWeight = (node, newNode) => {
+                    if (newNode.data.weight < node.data.weight) {
+                        if (node.left === null) {
+                            node.left = newNode;
+                        } else {
+                            insertWeight(node.left, newNode);
+                        }
+                    } else {
+                        if (node.right === null) {
+                            node.right = newNode;
+                        } else {
+                            insertWeight(node.right, newNode);
+                        }
+                    }
+                };
+
+                const newNode = {
+                    data: {
+                        key: item.folder,
+                        weight: item.weight.total
+                    },
+                    left: null,
+                    right: null
+                };
+
+                if (internaldb.weighted === null) {
+                    internaldb.weighted = newNode;
+                } else {
+                    insertWeight(internaldb.weighted, newNode);
+                }
 
                 internaldb.idx[key] = item;
 
@@ -168,10 +260,28 @@ window.gallerydbpromise = window.gallerydbpromise || (async function () {
                 item.img = img;
                 initialized.push(item);
             }
+
+            // order by weight
+            const weighted = [];
+
+            const traverse = (node) => {
+                if (node !== null) {
+                    traverse(node.left);
+                    node.data.normalized = (node.data.weight - stats.minWeight) / (stats.maxWeight - stats.minWeight);
+                    internaldb.idx[node.data.key].weight.normalized = node.data.normalized;
+                    weighted.push(node.data);
+                    traverse(node.right);
+                }
+            };
+
+            traverse(internaldb.weighted);
+            weighted.reverse();
+            internaldb.weighted = weighted;
+
             internaldb.db.gallery = initialized;
         },
 
-        sort: { sortCol: "lastCapture", ascending: false },
+        sort: { sortCol: "weighted", ascending: false },
         predicates: [{
             col: "signature",
             op: "eq",
@@ -212,14 +322,23 @@ window.gallerydbpromise = window.gallerydbpromise || (async function () {
                 return sorts.title(item1, item2);
             }
             return date1 - date2;
-        }
+        },
+
+        "weighted": (item1, item2) => {
+            if (item1.weight.total === item2.weight.total) {
+                return sorts.title(item1, item2);
+            }
+            return item2.weight.total - item1.weight.total;
+        }   
     };
 
     const db = {
 
         lastOp: null,
 
-        getSorts: () => [...["title", "date", "lastCapture", "firstCapture"]].sort(),
+        showMore: false,
+
+        getSorts: () => [...["title", "date", "lastCapture", "firstCapture", "weighted"]].sort(),
 
         getTypes: () => [...internaldb.types].sort(),
 
@@ -229,7 +348,20 @@ window.gallerydbpromise = window.gallerydbpromise || (async function () {
 
         getFocalLengths: () => [...internaldb.focalLengths].sort((a, b) => (parseInt(a) - parseInt(b))),
 
-        getRandom: () => internaldb.db.gallery[Math.floor(Math.random() * internaldb.db.gallery.length)],
+        getRandom: () => {
+            const weight = Math.random() * internaldb.cumWeight;
+            let cum = 0;
+            let found = false;
+            for (let idx = 0; idx < internaldb.weighted.length && !found; idx++) {
+                const item = internaldb.weighted[idx];
+                cum += item.weight;
+                if (cum >= weight) {
+                    found = true;
+                    return internaldb.idx[item.key];
+                }
+            }
+            return internaldb.idx[internaldb.weighted[internaldb.weighted.length - 1].key];
+        },
 
         setSort: (sortCol, asc) =>
             internaldb.sort = { sortCol: sortCol, ascending: asc },
@@ -280,8 +412,7 @@ window.gallerydbpromise = window.gallerydbpromise || (async function () {
             const result = db.getItems();
             const groups = [];
             const groupIdx = {};
-            const groupedResult = [];
-
+            
             for (let idx = 0; idx < result.length; idx++) {
                 const item = result[idx];
                 const group = item[col];
@@ -482,14 +613,19 @@ window.gallerydbpromise = window.gallerydbpromise || (async function () {
             predicate = predicate || (() => true);
             db.lastOp = filters.length ? `${op} ${filters.join(", ")}` : op;
             const result = [...internaldb.db.gallery.filter(predicate)].sort(sort);
-            db.lastOp += ` (${result.length > 0 ? result.length : 'no' } results)`;
-            return limit > 0 && result.length > limit 
-                ? result.slice(0, limit)
-                : result;
+            db.lastOp += ` (${result.length > 0 ? result.length : 'no'} results)`;
+            if (limit > 0 && result.length > limit) {
+                db.showMore = true;
+                return result.slice(0, limit);
+            }
+            else {
+                db.showMore = false;
+                return result;
+            }
         }
     };
 
-    db.setSort("lastCapture", false);
+    db.setSort("weighted", false);
     db.setPredicate("signature", "eq", true);
 
     return db;

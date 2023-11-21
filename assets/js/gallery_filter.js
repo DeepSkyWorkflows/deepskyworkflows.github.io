@@ -1,18 +1,18 @@
 ---
-    layout: null
+layout: null
 sitemap: false
 ---
     (async function () {
 
         await window.gallerydbpromise;
 
-        (function (db, queryManager) {
+        (function (dom, db, queryManager) {
 
             const filterState = {
                 text: null,
                 category: null,
                 telescope: null,
-                sortBy: 'lastCapture',
+                sortBy: 'weighted',
                 sortAscending: false,
                 signature: false,
                 print: false,
@@ -24,21 +24,21 @@ sitemap: false
                 refreshing: false,
                 state: { ...filterState },
                 lastText: null,
-                resetBtn: document.getElementById('reset'),
-                sort: document.getElementById('sortBy'),
-                telescope: document.getElementById('telescope'),
-                category: document.getElementById('categoryButtons'),
+                resetBtn: dom.id('reset'),
+                sort: dom.id('sortBy'),
+                telescope: dom.id('telescope'),
+                category: dom.id('categoryButtons'),
                 categoryBtn: null,
                 categoryButtons: {},
-                text: document.getElementById('text'),
-                signature: document.getElementById('signature'),
-                print: document.getElementById('print'),
-                archive: document.getElementById('archive'),
-                expander: document.getElementById('filterExpand'),
-                collapser: document.getElementById('filterCollapse'),
-                filterExpanded: document.getElementById('filterExpanded'),
-                sortToggle: document.getElementById('sortDir'),
-                filterRefresh: document.getElementById('filterRefresh'),
+                text: dom.id('text'),
+                signature: dom.id('signature'),
+                print: dom.id('print'),
+                archive: dom.id('archive'),
+                expander: dom.id('filterExpand'),
+                collapser: dom.id('filterCollapse'),
+                filterExpanded: dom.id('filterExpanded'),
+                sortToggle: dom.id('sortDir'),
+                filterRefresh: dom.id('filterRefresh'),
 
                 querySet: function (key, value, deferUpdate = false) {
                     if (filter.state[key] === filterState[key]) {
@@ -55,19 +55,17 @@ sitemap: false
                     if (filter.refreshing) {
                         return;
                     }
-                    if (filter.lastText) {
-                        clearTimeout(filter.lastText);
-                    }
-                    filter.lastText = setTimeout(() => filter.textChangedHook(), 300);
+                    dom.resetRun("textChangedHook");
+                    dom.runAfterMs(() => filter.textChangedHook(), 300, "textChangedHook");
                 },
 
                 textChangedHook: function () {
-                    filter.lastText = null;
                     if (filter.refreshing) {
                         return;
                     }
 
                     let compare = filter.text.value.toLowerCase();
+                    
                     if (compare.length < 3) {
                         compare = null;
                     }
@@ -85,14 +83,7 @@ sitemap: false
                     }
                     const val = forceVal ?? filter.telescope.value;
                     filter.state.telescope = val === 'all' ? null : val;
-                    for (let idx = 0; idx < filter.telescope.options.length; idx++) {
-                        const option = filter.telescope.options[idx];
-                        if (option.value === val) {
-                            option.setAttribute("selected", "selected");
-                        } else {
-                            option.removeAttribute("selected");
-                        }
-                    }
+                    dom.setSelectedValue(filter.telescope, val);
                     filter.querySet("telescope", filter.state.telescope ?? 'all');
                     app.refresh();
                 },
@@ -103,28 +94,24 @@ sitemap: false
                     }
                     if (val === "all") {
                         if (filter.categoryBtn) {
-                            filter.categoryBtn.classList.remove('btn-success');
-                            filter.categoryBtn.classList.add('btn-primary');
+                            dom.modifyClasses(filter.categoryBtn, "-btn-success +btn-primary");
                             filter.categoryBtn = null;
                         }
 
                         filter.state.category = null
                     }
                     else if (filter.categoryBtn && filter.categoryBtn.innerText === val) {
-                        filter.categoryBtn.classList.remove('btn-success');
-                        filter.categoryBtn.classList.add('btn-primary');
+                        dom.modifyClasses(filter.categoryBtn, "-btn-success +btn-primary");
                         filter.categoryBtn = null;
                         filter.state.category = null;
                     } else {
                         if (filter.categoryBtn) {
-                            filter.categoryBtn.classList.remove('btn-success');
-                            filter.categoryBtn.classList.add('btn-primary');
+                            dom.modifyClasses(filter.categoryBtn, "-btn-success +btn-primary");                            
                         }
                         const button = filter.categoryButtons[val];
                         if (button) {
                             filter.state.category = val;
-                            button.classList.remove('btn-primary');
-                            button.classList.add('btn-success');
+                            dom.modifyClasses(button, "-btn-primary +btn-success");
                             filter.categoryBtn = button;
                         }
                     }
@@ -138,14 +125,7 @@ sitemap: false
                         return;
                     }
                     filter.state.sortBy = filter.sort.value;
-                    for (let idx = 0; idx < filter.sort.options.length; idx++) {
-                        const option = filter.sort.options[idx];
-                        if (option.value === filter.state.sortBy) {
-                            option.setAttribute("selected", "selected");
-                        } else {
-                            option.removeAttribute("selected");
-                        }
-                    }
+                    dom.setSelectedValue(filter.sort, filter.state.sortBy);
                     filter.querySet("sortBy", filter.state.sortBy);
                     app.refresh();
                 },
@@ -186,13 +166,13 @@ sitemap: false
                     filter.querySet("archive", filter.state.archive);
                     app.refresh();
                 },
-
+                
                 expand: function () {
                     if (filter.refreshing) {
                         return;
                     }
-                    filter.filterExpanded.classList.remove('d-none');
-                    filter.expander.classList.add('d-none');
+                    dom.show(filter.filterExpanded);
+                    dom.hide(filter.expander);
                     filter.state.filterExpanded = true;
                 },
 
@@ -200,8 +180,8 @@ sitemap: false
                     if (filter.refreshing) {
                         return;
                     }
-                    filter.filterExpanded.classList.add('d-none');
-                    filter.expander.classList.remove('d-none');
+                    dom.hide(filter.filterExpanded);
+                    dom.show(filter.expander);
                     filter.state.filterExpanded = false;
                 },
 
@@ -271,65 +251,40 @@ sitemap: false
                         filter.sortToggle.innerText = filter.state.sortAscending ? 'Asc' : 'Desc';
                     }
 
-                    for (let idx = 0; idx < sorts.length; idx++) {
-                        const sort = sorts[idx];
-                        const option = document.createElement("option");
-                        option.setAttribute("value", sort);
-                        if (sort === filter.state.sortBy) {
-                            option.setAttribute("selected", "selected");
-                        }
-                        option.innerText = sort;
-                        filter.sort.appendChild(option);
+                    const options = dom.arrayToOptions(sorts, { selectedValue: filter.state.sortBy });
+                    for (let idx = 0; idx < options.length; idx++) {
+                        filter.sort.appendChild(options[idx]);
                     }
 
-                    const scopeAll = document.createElement("option");
-                    scopeAll.setAttribute("value", "all");
-                    scopeAll.innerText = "All";
-                    if (filter.state.telescope === null) {
-                        scopeAll.setAttribute("selected", "selected");
+                    const choices = ['all', ...telescopes];
+                    const telescopeOptions = dom.arrayToOptions(
+                        choices, { 
+                            selectedValue: filter.state.telescope ?? 'all' });
+                    for (let idx = 0; idx < telescopeOptions.length; idx++) {
+                        filter.telescope.appendChild(telescopeOptions[idx]);
                     }
-                    filter.telescope.appendChild(scopeAll);
-                    for (let idx = 0; idx < telescopes.length; idx++) {
-                        const telescope = telescopes[idx];
-                        if (telescope && telescope.length) {
-                            const option = document.createElement("option");
-                            option.setAttribute("value", telescope);
-                            if (telescope === filter.state.telescope) {
-                                option.setAttribute("selected", "selected");
-                            }
-                            option.innerText = telescope;
-                            filter.telescope.appendChild(option);
-                        }
-                    }
-
-                    const all = document.createElement("button");
-                    all.classList.add("btn");
-                    all.classList.add("btn-sm");
-                    all.classList.add("mr-1");
-                    all.classList.add("mb-1");
-                    all.classList.add(filter.state.category === "all" ? "btn-success" : "btn-primary");
+                    
+                    const all = dom.elem("button", {
+                        class: "btn btn-sm mr-1 mb-1 " + 
+                        (filter.state.category === "all" ? "btn-success" : "btn-primary"),
+                        innerText: "All",
+                        "onclick": () => filter.categoryChanged("all")
+                    });
                     if (filter.state.category === "all") {
                         filter.categoryBtn = all;
                     }
-                    all.addEventListener("click", () => filter.categoryChanged("all"));
-                    all.innerText = "All";
                     filter.category.appendChild(all);
                     filter.categoryButtons["all"] = all;
+
                     for (let idx = 0; idx < categories.length; idx++) {
                         const category = categories[idx];
-                        if (category && category.length) {
-                            const option = document.createElement("button");
-                            option.innerText = category;
-                            option.classList.add("btn");
-                            option.classList.add("btn-sm");
-                            option.classList.add("mr-1");
-                            if (category === filter.state.category) {
-                                filter.categoryBtn = option;
-                                option.classList.add("btn-success");
-                            } else {
-                                option.classList.add("btn-primary");
-                            }
-                            option.addEventListener("click", () => filter.categoryChanged(category));
+                        if (category && category.length) {                            
+                            const option = dom.elem("button", {
+                                class: "btn btn-sm mr-1 mb-1 " +
+                                    (filter.state.category === category ? "btn-success" : "btn-primary"),
+                                innerText: category,
+                                "onclick": () => filter.categoryChanged(category)
+                            });
                             filter.category.appendChild(option);
                             filter.categoryButtons[category] = option;
                         }
@@ -350,31 +305,31 @@ sitemap: false
                     filter.sortToggle.addEventListener("click", () => filter.sortToggled());
                     filter.expander.addEventListener("click", () => filter.expand());
                     filter.collapser.addEventListener("click", () => filter.collapse());
-                    filter.filterExpanded.classList.add('d-none');
-                    filter.filterRefresh.classList.add('d-none');
+                    dom.hide(filter.filterExpanded);
+                    dom.hide(filter.filterRefresh);
                     filter.refresh();
                 }
             };
 
             const app = {
-                lucky: document.getElementById('lucky'),
-                mainDiv: document.getElementById('galleryMain'),
+                lucky: dom.id('lucky'),
+                mainDiv: dom.id('galleryMain'),
                 results: document.getElementsByClassName('card-deck')[0],
-                template: document.getElementById('image-template').innerHTML,
-                printUrl: document.getElementById('basePrintUrl').innerText,
-                status: document.getElementById('status'),
+                template: dom.id('image-template').innerHTML,
+                printUrl: dom.id('basePrintUrl').innerText,
+                status: dom.id('status'),
                 imageCache: {},
 
                 refresh: function () {
 
                     const filterExpandedState = filter.state.filterExpanded;
                     filter.collapse();
-                    filter.filterRefresh.classList.remove('d-none');
+                    dom.show(filter.filterRefresh);
                     app.results.innerHTML = '';
 
                     filter.refreshing = true;
 
-                    setTimeout(() => {
+                    dom.runNext(() => {
 
                         db.setSort(filter.state.sortBy, filter.state.sortAscending);
                         db.setPredicate();
@@ -409,7 +364,8 @@ sitemap: false
                             const image = images[idx];
                             const date = image.converted.firstCapture === image.converted.lastCapture ?
                                 image.firstCapture : `${image.firstCapture} - ${image.lastCapture}`;
-                            if (!app.imageCache[image.folder]) {
+                            const weight = Math.floor(image.weight.total * 100);
+                                if (!app.imageCache[image.folder]) {
                                 const html = app.template
                                     .replace('%div_id%', `div_${image.folder}`)
                                     .replace('%img_id%', `img_${image.folder}`)
@@ -418,18 +374,26 @@ sitemap: false
                                     .replace('%content_id%', `con_${image.folder}`)
                                     .replace('%title%', image.title)
                                     .replace('%desc%', image.description)
-                                    .replace('%date%', date)
+                                    .replace('%date%', `<span class="badge badge-info" title="Weight">${weight}</span> ${date}`)
                                     .replace('%content%', 'stuff');
                                 app.results.innerHTML += html;
                             } else {
                                 app.results.innerHTML += `<span id="_${image.folder}">{{image.title}}</span>`;
                             }
-                            setTimeout(() => app.loadImage(image));
+                            dom.runNext(() => app.loadImage(image));
                         }
+                        
+                        dom.runNext(() => {
+                            const a = dom.elem("a", {
+                                name: "bottom"
+                            });
+                            app.results.appendChild(a);
+                        });
 
                         app.status.innerText = db.lastOp;
 
-                        filter.filterRefresh.classList.add('d-none');
+                        dom.hide(filter.filterRefresh);
+
                         if (filterExpandedState) {
                             filter.expand();
                         } else {
@@ -440,36 +404,31 @@ sitemap: false
 
                 loadImage: function (image) {
 
-                    const placeholder = document.getElementById(`_${image.folder}`);
+                    const placeholder = dom.id(`_${image.folder}`);
 
                     if (placeholder) {
                         placeholder.replaceWith(app.imageCache[image.folder]);
                         return;
                     }
 
-                    const makeSpan = (text, action) => {
-                        const span = document.createElement("span");
-                        span.innerHTML = text;
-                        if (action) {
-                            span.classList.add("clickable");
-                            span.classList.add("gallery-link");
-                            span.addEventListener("click", action);
-                            span.attributes["title"] = "Click to filter by this category";
-                        }
-                        return span;
-                    };
+                    const makeSpan = (text, action) => dom.elem("span", {
+                            innerHTML: text,
+                            class: "clickable gallery-link",
+                            onclick: action ? action : null,
+                            title: action ? "Click to filter by this category" : null
+                        });                                            
 
-                    const makeBreak = () => document.createElement("br");
+                    const makeBreak = () => dom.elem("br");
 
                     const fullUrl = `${window.location.origin}/gallery/${image.folder}`;
-                    const title = document.getElementById(`ttl_${image.folder}`);
+                    const title = dom.id(`ttl_${image.folder}`);
                     title.href = fullUrl;
 
-                    const img = document.getElementById(`img_${image.folder}`);
+                    const img = dom.id(`img_${image.folder}`);
                     db.bindToItem(img, image.folder);
                     img.addEventListener("click", () => window.location.href = fullUrl);
 
-                    const type = document.getElementById(`type_${image.folder}`);
+                    const type = dom.id(`type_${image.folder}`);
                     type.innerHTML = '';
 
                     if (image.type && image.type.length) {
@@ -515,7 +474,7 @@ sitemap: false
 
                     if (image.telescope && image.telescope.length) {
                         type.appendChild(makeBreak());
-                        const telescopeLabel = makeSpan(`&nbsp;<i class="fas fa-binoculars" title="Telescope"></i> ${image.telescope}`,
+                        const telescopeLabel = makeSpan(`&nbsp;<i class="fas fa-telescope" title="Telescope"></i> ${image.telescope}`,
                             () => {
                                 if (filter.state.telescope !== image.telescope) {
                                     filter.telescopeChanged(image.telescope);
@@ -525,48 +484,50 @@ sitemap: false
                         type.appendChild(telescopeLabel);
                     }
 
-                    const content = document.getElementById(`con_${image.folder}`);
+                    const content = dom.id(`con_${image.folder}`);
 
-                    const spacer = () => {
-                        const span = document.createElement("span");
-                        span.innerHTML = '&nbsp;|&nbsp;';
-                        return span;
-                    };
+                    const spacer = () => dom.elem("span", {
+                        innerHTML: '&nbsp;|&nbsp;'
+                        });
 
                     content.innerHTML = '';
 
                     if (image.signature === true) {
-                        const span = document.createElement("span");
-                        span.setAttribute("class", "badge badge-pill badge-success");
-                        span.innerHTML = 'Signature';
+                        const span = dom.elem("span", {
+                            class: "badge badge-pill badge-success",
+                            innerHTML: 'Signature'
+                        });
                         content.appendChild(span);
                         content.appendChild(spacer());
                     }
 
                     if (image.archive === true) {
-                        const span = document.createElement("span");
-                        span.setAttribute("class", "badge badge-pill badge-warning");
-                        span.innerHTML = 'Archived';
+                        const span = dom.elem("span", {
+                            class: "badge badge-pill badge-warning",
+                            innerHTML: 'Archived'
+                        });
                         content.appendChild(span);
                         content.appendChild(spacer());
                     }
 
                     if (image.printUrl) {
-                        const a = document.createElement("a");
-                        a.setAttribute("href", `${this.printUrl}${image.printUrl}`);
-                        a.setAttribute("target", "_blank");
-                        a.setAttribute("title", "Print");
-                        a.innerHTML = '<i class="fas fa-print"></i> Order Print';
+                        const a = dom.elem("a", {
+                            href: `${this.printUrl}${image.printUrl}`,
+                            target: "_blank",
+                            title: "Print",
+                            innerHTML: '<i class="fas fa-print"></i> Order Print'
+                        });
                         content.appendChild(a);
                         content.appendChild(spacer());
                     }
 
                     if (image.wwt) {
-                        const a = document.createElement("a");
-                        a.setAttribute("href", image.wwt);
-                        a.setAttribute("target", "_blank");
-                        a.setAttribute("title", "View in WorldWide Telescope");
-                        a.innerHTML = `<i class="fas fa-globe"></i> View in WorldWide Telescope`;
+                        const a = dom.elem("a", {
+                            href: image.wwt,
+                            target: "_blank",
+                            title: "View in WorldWide Telescope",
+                            innerHTML: '<i class="fas fa-globe"></i> View in WorldWide Telescope'
+                        });
                         content.appendChild(a);
                         content.appendChild(spacer());
                     }
@@ -575,15 +536,16 @@ sitemap: false
                     for (let idx = 0; idx < sortedTags.length && idx < 3; idx++) {
                         const tag = image.tags[idx];
                         const tagLink = tag.replace(/ /g, '-').replace(/\)/g, '').replace(/\(/g, '').toLowerCase();
-                        const a = document.createElement("a");
-                        a.setAttribute("href", `${window.location.origin}/tag/${tagLink}`);
-                        a.setAttribute("title", `View items related to tag '${tag}'`);
-                        a.innerHTML = `<i class="fas fa-tag"></i> ${tag}`;
+                        const a = dom.elem("a", {
+                            href: `${window.location.origin}/tag/${tagLink}`,
+                            title: `View items related to tag '${tag}'`,
+                            innerHTML: `<i class="fas fa-tag"></i> ${tag}`
+                        });
                         content.appendChild(a);
                         content.appendChild(spacer());
                     }
 
-                    const imgRef = document.getElementById(`img_${image.folder}`);
+                    const imgRef = dom.id(`img_${image.folder}`);
                     if (imgRef.naturalWidth > imgRef.naturalHeight) {
                         imgRef.style.maxWidth = '300px';
                         imgRef.style.maxHeight = 'auto';
@@ -592,13 +554,15 @@ sitemap: false
                         imgRef.style.maxHeight = '300px';
                     }
 
-                    const a = document.createElement("a");
-                    a.setAttribute("href", "#top");
-                    a.setAttribute("title", "Back to top");
-                    a.innerHTML = '<i class="fas fa-arrow-up"></i> Back to top';
+                    const a = dom.elem("a", {
+                        class: "back-to-top",
+                        "href": "#top",
+                        "title": "Back to top",
+                        "innerHTML": '<i class="fas fa-arrow-up"></i> Back to top'
+                    });
                     content.appendChild(a);
-                    setTimeout(() =>
-                        app.imageCache[image.folder] = document.getElementById(`div_${image.folder}`));
+                    dom.runNext(() =>
+                        app.imageCache[image.folder] = dom.id(`div_${image.folder}`));
                 }
             };
 
@@ -608,7 +572,7 @@ sitemap: false
             });
 
             filter.init();
-            setTimeout(app.refresh);
+            dom.runNext(app.refresh);
 
-        })(window.gallerydb, window.deepSkyRouter);
+        })(window.ds_dom_helper, window.gallerydb, window.deepSkyRouter);
     })();
