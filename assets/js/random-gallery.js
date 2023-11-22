@@ -17,8 +17,8 @@ const processQueue = () => {
     const insertImage = (pic) => {
         const random = Math.floor(Math.random() * window.gallery.queue.length);
         const picture = pic || window.gallery.queue.splice(random, 1)[0];
-        const innerHtml = `<a href="${picture.link}" title="${picture.title}">
-        <img class="card-img-top gallery-img messier" src="${picture.url}" alt="${picture.title}">
+        const innerHtml = `<a href="${picture.link}" class="text-center" title="${picture.title}">
+        <img class="card-img-top gallery-img messier text-center" src="${picture.url}" alt="${picture.title}">
         </a>
         <div class="card-header bg-dark text-center">
             <a href="${picture.link}" target="_blank" title="${picture.title}">${picture.title}</a>
@@ -28,6 +28,16 @@ const processQueue = () => {
         div.style = "margin-right: 2px; width: 260px;";
         div.innerHTML = innerHtml;
         section.appendChild(div);
+        const setSize = img => {
+            img.style = img.naturalWidth > img.naturalHeight
+            ? "max-width: 260px; height: auto;"
+            : "width: auto; max-height: 260px; margin-left: 5px;";            
+        };
+        setTimeout(() => {
+            const img = div.getElementsByTagName('img')[0];            
+            img.addEventListener('load', () => setSize(img));
+            setSize(img);
+        }, 100);
         return div;
     };
     
@@ -73,7 +83,7 @@ const processQueue = () => {
 
 const processData = () => {
     window.gallerydb.setPredicate("signature", "eq", true);
-    window.gallerydb.setSort("lastCapture", false);    
+    window.gallerydb.setSort("weighted", false);    
     const db = window.gallerydb.getItems(9999);
     db.forEach(item => {
         const picture = {

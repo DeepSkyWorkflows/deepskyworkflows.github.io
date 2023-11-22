@@ -8,6 +8,13 @@ License: https://www.wowthemes.net/freebies-license/
     .container {max-width:90%;}
 }
 
+.navbar-toggler {
+    display: inline;
+    float: left;
+    margin-left: 32px;
+    margin-top: -38px;
+}
+
 .card-deck > .card {
     min-width: 300px;
     max-width: 400px;
@@ -75,6 +82,7 @@ pre {
     color: #333;
     margin-bottom: -rem;
 }
+
 .mediumnavigation {
     background: rgba(255, 255, 255, .97);
     box-shadow: 0 2px 2px -2px rgba(224, 224, 224, .15);
@@ -148,6 +156,7 @@ section.recent-posts {
 
 @media (min-width:992px) {
     .navbar-expand-lg .navbar-nav .nav-link {
+        display: inline;
         padding-right: 0.8rem;
         padding-left: 0.8rem;
     }
@@ -329,6 +338,7 @@ span.post-read-more a:hover {
 
 .mediumnavigation .navbar-brand {
     font-weight: 500;
+    min-width: 32px;
 }
 
 .mediumnavigation .dropdown-menu {
@@ -349,7 +359,9 @@ span.post-read-more a:hover {
 }
 
 .mediumnavigation .navbar-brand img {
-    max-height: 30px;
+    height: 30px;
+    width: 30px;
+    overflow: hidden;
     margin-right: 5px;
 }
 
@@ -1089,7 +1101,7 @@ div.messier-img {
 }
 
 .nav-item {
-    min-width: 9vw;
+    max-height: 1.5em;
 }
 
 table {
@@ -1112,6 +1124,7 @@ td {
 
 .gallery-card-v2:hover {
     border: solid 1px white;    
+    max-width: 400px;    
 }
 
 .underlinehover:hover {

@@ -633,7 +633,7 @@ sitemap: false
                             if (limitIdx < filter.state.limits.length - 1) {
                                 const limit = filter.state.limits[limitIdx + 1];
                                 const a = dom.elem("a", {
-                                    class: "back-to-top w-auto",
+                                    class: "back-to-top w-auto p-5 font-weight-bold",
                                     href: "#",
                                     title: "Show more",
                                     onclick: () => {

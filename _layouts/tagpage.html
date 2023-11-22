@@ -13,7 +13,7 @@ Jump to: <a href="#ImageAnchor">Images</a>&nbsp;|&nbsp;<a href="#PostsAnchor">Bl
 &nbsp;|&nbsp;<a href="#VideosAnchor">Videos</a>
 
 <div class="container container-fluid w-100">
-    <div class="row">
+    <div class="card-deck">
         <a name="ImageAnchor"></a>
             {% assign tag = page.tagname | downcase %}
             {% assign subitems = site.gallery | sort: "firstCapture" | reverse %}
@@ -23,41 +23,45 @@ Jump to: <a href="#ImageAnchor">Images</a>&nbsp;|&nbsp;<a href="#PostsAnchor">Bl
             {% assign itemTags = item.tags | join: "~~~" | downcase | split: "~~~" %}
             {% if itemTags contains tag %}
                 {% if itemCount == 0 %}
-                <h2 class="breaker full-width">Images</h2><hr/>
+                    <h2 class="breaker full-width">Images</h2><hr/>
                 {% endif %}
                 {% assign itemCount = itemCount | plus: 1 %}
                 {% assign mainUrl = site.baseurl | append: item.url %}
                 {% assign thumbPath = site.baseurl | append: "/assets/images/gallery/" | append: item.folder | append: "/thumb.jpg" %}
-                    <div style="width: max-content; margin: 1em; max-width: 400px; height: max-content" class="card col gallery-card float-left m-2" data-url="{{item.url}}" data-telescope="{{item.telescope}}" data-signature="{{item.signature}}">
-                        <a href="{{mainUrl}}" title="{{item.description}}" tabindex="{{itemCount}}">
-                            <img class="card-img-top gallery-img" id="image-{{itemIndex}}" src="{{thumbPath}}" alt="{{item.description}}">
-                            {% assign itemIndex = itemIndex | plus: 1 %}
-                        </a>
-                        <div class="card-header bg-dark text-center">
-                            {% if item.signature ==  true %}
-                            <span title="Signature Series">⭐</span>
-                            {% endif %}
-                            <a href="{{mainUrl}}" title="{{item.description}}">{{item.title}}</a>
-                        </div>                
-                    </div>
-                {% endif %}
-            {% endfor %}
-        </div>
-        <div class="row">
-            <a class="m-3 breaker" href="#top">🔝 Back to Top</a>
-            <a name="PostsAnchor"></a>
-            {% assign posts = site.posts | sort: "title" %}
-            {% assign itemCount = 0 %}
-            {% assign itemIndex = 9000 %}
-            {% for post in posts %}  
-            {% assign postTags = post.tags | join: "~~~" | downcase %}
-            {% if postTags contains tag %}
+                <div class="card gallery-card-v2 text-white bg-dark mb-1 p-1">
+                    <a href="{{mainUrl}}" title="{{item.description}}" tabindex="{{itemCount}}">                        
+                        <img id="image-{{itemIndex}}" class="card-img clickable" src="{{thumbPath}}" alt="{{item.description}}"/>
+                        {% assign itemIndex = itemIndex | plus: 1 %}                        
+                    </a>
+                    <div class="card-body">
+                        <p class="mb-2px card-text-override">
+                            <a class="card-title clickable underlinehover" href="{{mainUrl}}"><strong>{{item.title}}</strong></a>
+                        </p>
+                        <p class="card-text card-text-override">{{item.description}}</p>        
+                        <p class="card-text card-text-override text-right mb-2px"><small>{{item.lastCapture}}</small></p>        
+                    </div>    
+                </div>                        
+            {% endif %}                
+        {% endfor %}
+        {% if itemCount == 0 %}
+            <div clas="alert alert-info">No images exist for this tag.</div>
+        {% endif %}
+    </div>
+    <div class="row">
+        <a class="m-3 breaker" href="#top">🔝 Back to Top</a>
+        <a name="PostsAnchor"></a>
+        {% assign itemCount = 0 %}
+        {% assign itemIndex = 1 %}
+        {% for post in site.posts %}
+        {% assign postTags = post.tags | join: "~~~" | downcase %}
+        {% if postTags contains tag %}
             {% if itemCount == 0 %}
-            <h2 class="breaker full-width">Blog Posts</h2>
+                <h2 class="breaker full-width">Blog Posts</h2>
             {% endif %}
             {% assign itemCount = itemCount | plus: 1 %}
             {% assign mainUrl = site.baseurl | append: post.url %}            
             {% assign thumbPath = site.baseurl | append: "/" | append: post.image %}
+
             <div style="min-width: 300px; height: max-content; max-width: 400px;" class="card col gallery-card float-left m-2" data-url="{{post.url}}">
                 <a href="{{mainUrl}}" title="{{post.description}}" tabindex="{{itemCount}}">
                     <img class="card-img-top gallery-img" id="image-{{itemIndex}}" src="{{thumbPath}}" alt="{{post.description}}">
@@ -67,35 +71,44 @@ Jump to: <a href="#ImageAnchor">Images</a>&nbsp;|&nbsp;<a href="#PostsAnchor">Bl
                     <a href="{{mainUrl}}" title="{{post.description}}">{{post.title}}</a>
                 </div>                
             </div>
-            {% endif %}
-            {% endfor %}
-        </div>
-        <div class="row">
-            <a class="m-3" href="#top">🔝 Back to Top</a>
-            <a name="VideosAnchor"></a>
-            {% assign videos = site.videos | sort: "title" %}
-            {% assign itemCount = 0 %}
-            {% assign itemIndex = 9000 %}
-            {% for video in videos %}  
+        {% endif %}
+        {% endfor %}
+        {% if itemCount == 0 %}
+            <div clas="alert alert-info">No posts exist for this tag.</div>
+        {% endif %}
+    </div>
+    <div class="card-deck">
+        <a class="m-3" href="#top">🔝 Back to Top</a>
+        <a name="VideosAnchor"></a>
+        {% assign videos = site.videos | sort: "title" %}
+        {% assign itemCount = 0 %}
+        {% assign itemIndex = 9000 %}
+        {% for video in videos %}  
             {% assign postTags = video.tags | join: "~~~" | downcase %}
-            {% if postTags contains tag %}
-            {% if itemCount == 0 %}
-            <h2 class="breaker full-width">Videos</h2>
-            {% endif %}
-            {% assign itemCount = itemCount | plus: 1 %}
-            {% assign mainUrl = site.baseurl | append: video.url %}            
-            {% assign thumbPath = site.baseurl | append: "/" | append: video.image %}
-            <div style="min-width: 300px; height: max-content; max-width: 400px;" class="card col gallery-card float-left m-2" data-url="{{video.url}}">
-                <a href="{{mainUrl}}" title="{{post.description}}" tabindex="{{itemCount}}">
-                    <img class="card-img-top gallery-img" id="image-{{itemIndex}}" src="{{thumbPath}}" alt="{{video.description}}">
-                    {% assign itemIndex = itemIndex | plus: 1 %}
-                </a>
-                <div class="card-header bg-dark text-center">
-                    <a href="{{mainUrl}}" title="{{video.description}}">{{video.title}}</a>
-                </div>                
-            </div>
-            {% endif %}
-            {% endfor %}
-            <a class="m-3 breaker full-width" href="#top">🔝 Back to Top</a>            
-        </div>
+                {% if postTags contains tag %}
+                    {% if itemCount == 0 %}
+                        <h2 class="breaker full-width">Videos</h2>
+                    {% endif %}
+                    {% assign itemCount = itemCount | plus: 1 %}
+                    {% assign mainUrl = site.baseurl | append: video.url %}            
+                    {% assign thumbPath = site.baseurl | append: "/" | append: video.image %}
+                    <div class="card gallery-card-v2 text-white bg-dark mb-1 p-1">
+                        <a href="{{mainUrl}}" title="{{video.description}}" tabindex="{{itemCount}}">
+                            <img class="card-img-top gallery-img" id="image-{{itemIndex}}" src="{{thumbPath}}" alt="{{video.description}}"/>
+                        </a>
+                        <div class="card-body">
+                            <p class="mb-2px card-text-override">
+                                <a href="{{mainUrl}}" title="video.description" class="card-title clickable underlinehover"><strong>{{video.title}}</strong></a>
+                            </p>
+                            <p class="card-text card-text-override">{{video.description}}</p>        
+                            <p class="card-text card-text-override text-right mb-2px"><small>{{video.date}}</small></p>        
+                        </div>    
+                    </div>                    
+                {% endif %}
+        {% endfor %}
+        {% if itemCount == 0 %}
+            <div clas="alert alert-info">No videos exist for this tag.</div>
+        {% endif %}
+        <a class="m-3 breaker full-width" href="#top">🔝 Back to Top</a>            
+    </div>
 </div>
