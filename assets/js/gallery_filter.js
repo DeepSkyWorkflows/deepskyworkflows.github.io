@@ -9,6 +9,8 @@ sitemap: false
         (function (dom, db, queryManager) {
 
             const filterState = {
+                limit: 20,
+                limits: [10, 20, 50, 100, 200, 500, 99999],
                 text: null,
                 category: null,
                 telescope: null,
@@ -65,7 +67,7 @@ sitemap: false
                     }
 
                     let compare = filter.text.value.toLowerCase();
-                    
+
                     if (compare.length < 3) {
                         compare = null;
                     }
@@ -106,7 +108,7 @@ sitemap: false
                         filter.state.category = null;
                     } else {
                         if (filter.categoryBtn) {
-                            dom.modifyClasses(filter.categoryBtn, "-btn-success +btn-primary");                            
+                            dom.modifyClasses(filter.categoryBtn, "-btn-success +btn-primary");
                         }
                         const button = filter.categoryButtons[val];
                         if (button) {
@@ -166,7 +168,7 @@ sitemap: false
                     filter.querySet("archive", filter.state.archive);
                     app.refresh();
                 },
-                
+
                 expand: function () {
                     if (filter.refreshing) {
                         return;
@@ -183,6 +185,16 @@ sitemap: false
                     dom.hide(filter.filterExpanded);
                     dom.show(filter.expander);
                     filter.state.filterExpanded = false;
+                },
+
+                changeLimit: function (limit) {
+                    if (filter.state.limits.includes(limit)
+                        && !filter.refreshing
+                        && filter.state.limit !== limit) {
+                        filter.state.limit = limit;
+                        filter.querySet("limit", limit);
+                        app.refresh(true);
+                    }
                 },
 
                 reset: function () {
@@ -245,6 +257,13 @@ sitemap: false
                         filter.state.category = categoryQuery === 'all' ? null : categoryQuery;
                     }
 
+                    const filterLimitQuery = queryManager.get("limit");
+                    if (filterLimitQuery
+                        && filterLimitQuery.length
+                        && filter.state.limits.includes(parseInt(filterLimitQuery))) {
+                        filter.state.limit = parseInt(filterLimitQuery);
+                    }
+
                     const sortAscendingQuery = queryManager.get("sortAscending");
                     if (sortAscendingQuery && sortAscendingQuery.length) {
                         filter.state.sortAscending = sortAscendingQuery === 'true';
@@ -258,15 +277,16 @@ sitemap: false
 
                     const choices = ['all', ...telescopes];
                     const telescopeOptions = dom.arrayToOptions(
-                        choices, { 
-                            selectedValue: filter.state.telescope ?? 'all' });
+                        choices, {
+                        selectedValue: filter.state.telescope ?? 'all'
+                    });
                     for (let idx = 0; idx < telescopeOptions.length; idx++) {
                         filter.telescope.appendChild(telescopeOptions[idx]);
                     }
-                    
+
                     const all = dom.elem("button", {
-                        class: "btn btn-sm mr-1 mb-1 " + 
-                        (filter.state.category === "all" ? "btn-success" : "btn-primary"),
+                        class: "btn btn-sm mr-1 mb-1 " +
+                            (filter.state.category === "all" ? "btn-success" : "btn-primary"),
                         innerText: "All",
                         "onclick": () => filter.categoryChanged("all")
                     });
@@ -278,7 +298,7 @@ sitemap: false
 
                     for (let idx = 0; idx < categories.length; idx++) {
                         const category = categories[idx];
-                        if (category && category.length) {                            
+                        if (category && category.length) {
                             const option = dom.elem("button", {
                                 class: "btn btn-sm mr-1 mb-1 " +
                                     (filter.state.category === category ? "btn-success" : "btn-primary"),
@@ -312,6 +332,10 @@ sitemap: false
             };
 
             const app = {
+
+                lastImage: null,
+                showMore: false,
+                imageCount: 0,
                 lucky: dom.id('lucky'),
                 mainDiv: dom.id('galleryMain'),
                 results: document.getElementsByClassName('card-deck')[0],
@@ -320,7 +344,13 @@ sitemap: false
                 status: dom.id('status'),
                 imageCache: {},
 
-                refresh: function () {
+                refresh: function (limitChanged = false) {
+
+                    if (limitChanged !== true) {
+                        app.lastImage = null;
+                    }
+
+                    app.imageCount = 0;
 
                     const filterExpandedState = filter.state.filterExpanded;
                     filter.collapse();
@@ -356,8 +386,9 @@ sitemap: false
 
                         db.addPredicate("archive", "eq", filter.state.archive);
 
-                        const images = db.getItems(9999);
-
+                        const images = db.getItems(filter.state.limit);
+                        app.showMore = db.showMore;
+                        app.imageCount = images.length;
                         filter.refreshing = false;
 
                         for (let idx = 0; idx < images.length; idx++) {
@@ -365,7 +396,7 @@ sitemap: false
                             const date = image.converted.firstCapture === image.converted.lastCapture ?
                                 image.firstCapture : `${image.firstCapture} - ${image.lastCapture}`;
                             const weight = Math.floor(image.weight.total * 100);
-                                if (!app.imageCache[image.folder]) {
+                            if (!app.imageCache[image.folder]) {
                                 const html = app.template
                                     .replace('%div_id%', `div_${image.folder}`)
                                     .replace('%img_id%', `img_${image.folder}`)
@@ -374,7 +405,7 @@ sitemap: false
                                     .replace('%content_id%', `con_${image.folder}`)
                                     .replace('%title%', image.title)
                                     .replace('%desc%', image.description)
-                                    .replace('%date%', `<span class="badge badge-info" title="Weight">${weight}</span> ${date}`)
+                                    .replace('%date%', `<a name="${image.folder}"/><a href="#${image.folder}" title="Link to image result"><i class="fas fa-link"></i></a>&nbsp;<span class="badge badge-info" title="Weight">${weight}</span> ${date}`)
                                     .replace('%content%', 'stuff');
                                 app.results.innerHTML += html;
                             } else {
@@ -382,7 +413,7 @@ sitemap: false
                             }
                             dom.runNext(() => app.loadImage(image));
                         }
-                        
+
                         dom.runNext(() => {
                             const a = dom.elem("a", {
                                 name: "bottom"
@@ -390,7 +421,37 @@ sitemap: false
                             app.results.appendChild(a);
                         });
 
-                        app.status.innerText = db.lastOp;
+                        app.status.innerText = '';
+
+                        dom.runNext(() => {
+                            const span = dom.elem("span", {
+                                innerHTML: `${db.lastOp} Limit results to: `
+                            });
+                            for (let idx = 0; idx < filter.state.limits.length; idx++) {
+                                const limit = filter.state.limits[idx];
+                                if (filter.state.limit === limit) {
+                                    const s = dom.elem("span", {
+                                        class: "badge badge-pill badge-success",
+                                        innerHTML: limit
+                                    });
+                                    span.appendChild(s);
+                                } else {
+                                    const a = dom.elem("a", {
+                                        class: "clickable w-auto badge badge-pill badge-primary",
+                                        innerHTML: limit,
+                                        onclick: () => filter.changeLimit(limit)
+                                    });
+                                    span.appendChild(a);
+                                }
+                                if (idx < filter.state.limits.length - 1) {
+                                    span.appendChild(dom.elem("span", {
+                                        innerHTML: ' | '
+                                    }));
+                                }
+                            }
+
+                            app.status.appendChild(span);
+                        });
 
                         dom.hide(filter.filterRefresh);
 
@@ -408,159 +469,194 @@ sitemap: false
 
                     if (placeholder) {
                         placeholder.replaceWith(app.imageCache[image.folder]);
-                        return;
                     }
-
-                    const makeSpan = (text, action) => dom.elem("span", {
+                    else {
+                        const makeSpan = (text, action) => dom.elem("span", {
                             innerHTML: text,
                             class: "clickable gallery-link",
                             onclick: action ? action : null,
                             title: action ? "Click to filter by this category" : null
-                        });                                            
+                        });
 
-                    const makeBreak = () => dom.elem("br");
+                        const makeBreak = () => dom.elem("br");
 
-                    const fullUrl = `${window.location.origin}/gallery/${image.folder}`;
-                    const title = dom.id(`ttl_${image.folder}`);
-                    title.href = fullUrl;
+                        const fullUrl = `${window.location.origin}/gallery/${image.folder}`;
+                        const title = dom.id(`ttl_${image.folder}`);
+                        title.href = fullUrl;
 
-                    const img = dom.id(`img_${image.folder}`);
-                    db.bindToItem(img, image.folder);
-                    img.addEventListener("click", () => window.location.href = fullUrl);
+                        const img = dom.id(`img_${image.folder}`);
+                        db.bindToItem(img, image.folder);
+                        img.addEventListener("click", () => window.location.href = fullUrl);
 
-                    const type = dom.id(`type_${image.folder}`);
-                    type.innerHTML = '';
+                        const type = dom.id(`type_${image.folder}`);
+                        type.innerHTML = '';
 
-                    if (image.type && image.type.length) {
-                        const categoryLabel = makeSpan(
-                            `Category: ${image.type}`,
-                            () => {
-                                if (filter.state.category !== image.type) {
-                                    filter.categoryChanged(image.type);
-                                }
-                            });
-                        categoryLabel.title = "Click to filter by this category";
-                        type.appendChild(categoryLabel);
-                    }
-
-                    let breakAfterCategory = false;
-
-                    if (image.converted && image.converted.focalLength) {
-                        breakAfterCategory = true;
-                        type.appendChild(makeBreak());
-                        type.appendChild(makeSpan(`&nbsp;<i class="fas fa-ruler" title="Focal Length"></i> ${image.converted.focalLength}mm`));
-                    }
-
-                    if (image.exposure && image.exposure.length) {
-                        const lights = image.lights && image.lights.length ? parseInt(image.lights) : 1;
-                        const exposure = lights * parseFloat(image.exposure);
-                        if (exposure < 60) {
-                            if (!breakAfterCategory) {
-                                type.appendChild(makeBreak());
-                            }
-                            type.appendChild(makeSpan(`&nbsp;<i class="fas fa-stopwatch" title="Exposure"></i> ${exposure}s`));
-                        } else if (exposure < 3600) {
-                            if (!breakAfterCategory) {
-                                type.appendChild(makeBreak());
-                            }
-                            type.appendChild(makeSpan(`&nbsp;<i class="fas fa-stopwatch" title="Exposure"></i> ${Math.round(exposure / 60)}m`));
-                        } else {
-                            if (!breakAfterCategory) {
-                                type.appendChild(makeBreak());
-                            }
-                            type.appendChild(makeSpan(`&nbsp;<i class="fas fa-stopwatch" title="Exposure"></i> ${Math.round(exposure / 3600)}h`));
+                        if (image.type && image.type.length) {
+                            const categoryLabel = makeSpan(
+                                `Category: ${image.type}`,
+                                () => {
+                                    if (filter.state.category !== image.type) {
+                                        filter.categoryChanged(image.type);
+                                    }
+                                });
+                            categoryLabel.title = "Click to filter by this category";
+                            type.appendChild(categoryLabel);
                         }
-                    }
 
-                    if (image.telescope && image.telescope.length) {
-                        type.appendChild(makeBreak());
-                        const telescopeLabel = makeSpan(`&nbsp;<i class="fas fa-telescope" title="Telescope"></i> ${image.telescope}`,
-                            () => {
-                                if (filter.state.telescope !== image.telescope) {
-                                    filter.telescopeChanged(image.telescope);
+                        let breakAfterCategory = false;
+
+                        if (image.converted && image.converted.focalLength) {
+                            breakAfterCategory = true;
+                            type.appendChild(makeBreak());
+                            type.appendChild(makeSpan(`&nbsp;<i class="fas fa-ruler" title="Focal Length"></i> ${image.converted.focalLength}mm`));
+                        }
+
+                        if (image.exposure && image.exposure.length) {
+                            const lights = image.lights && image.lights.length ? parseInt(image.lights) : 1;
+                            const exposure = lights * parseFloat(image.exposure);
+                            if (exposure < 60) {
+                                if (!breakAfterCategory) {
+                                    type.appendChild(makeBreak());
                                 }
+                                type.appendChild(makeSpan(`&nbsp;<i class="fas fa-stopwatch" title="Exposure"></i> ${exposure}s`));
+                            } else if (exposure < 3600) {
+                                if (!breakAfterCategory) {
+                                    type.appendChild(makeBreak());
+                                }
+                                type.appendChild(makeSpan(`&nbsp;<i class="fas fa-stopwatch" title="Exposure"></i> ${Math.round(exposure / 60)}m`));
+                            } else {
+                                if (!breakAfterCategory) {
+                                    type.appendChild(makeBreak());
+                                }
+                                type.appendChild(makeSpan(`&nbsp;<i class="fas fa-stopwatch" title="Exposure"></i> ${Math.round(exposure / 3600)}h`));
+                            }
+                        }
+
+                        if (image.telescope && image.telescope.length) {
+                            type.appendChild(makeBreak());
+                            const telescopeLabel = makeSpan(`&nbsp;<i class="fas fa-telescope" title="Telescope"></i> ${image.telescope}`,
+                                () => {
+                                    if (filter.state.telescope !== image.telescope) {
+                                        filter.telescopeChanged(image.telescope);
+                                    }
+                                });
+                            telescopeLabel.title = "Click to filter by this telescope";
+                            type.appendChild(telescopeLabel);
+                        }
+
+                        const content = dom.id(`con_${image.folder}`);
+
+                        const spacer = () => dom.elem("span", {
+                            innerHTML: '&nbsp;|&nbsp;'
+                        });
+
+                        content.innerHTML = '';
+
+                        if (image.signature === true) {
+                            const span = dom.elem("span", {
+                                class: "badge badge-pill badge-success",
+                                innerHTML: 'Signature'
                             });
-                        telescopeLabel.title = "Click to filter by this telescope";
-                        type.appendChild(telescopeLabel);
-                    }
+                            content.appendChild(span);
+                            content.appendChild(spacer());
+                        }
 
-                    const content = dom.id(`con_${image.folder}`);
+                        if (image.archive === true) {
+                            const span = dom.elem("span", {
+                                class: "badge badge-pill badge-warning",
+                                innerHTML: 'Archived'
+                            });
+                            content.appendChild(span);
+                            content.appendChild(spacer());
+                        }
 
-                    const spacer = () => dom.elem("span", {
-                        innerHTML: '&nbsp;|&nbsp;'
-                        });
+                        if (image.printUrl) {
+                            const a = dom.elem("a", {
+                                href: `${this.printUrl}${image.printUrl}`,
+                                target: "_blank",
+                                title: "Print",
+                                innerHTML: '<i class="fas fa-print"></i> Order Print'
+                            });
+                            content.appendChild(a);
+                            content.appendChild(spacer());
+                        }
 
-                    content.innerHTML = '';
+                        if (image.wwt) {
+                            const a = dom.elem("a", {
+                                href: image.wwt,
+                                target: "_blank",
+                                title: "View in WorldWide Telescope",
+                                innerHTML: '<i class="fas fa-globe"></i> View in WorldWide Telescope'
+                            });
+                            content.appendChild(a);
+                            content.appendChild(spacer());
+                        }
 
-                    if (image.signature === true) {
-                        const span = dom.elem("span", {
-                            class: "badge badge-pill badge-success",
-                            innerHTML: 'Signature'
-                        });
-                        content.appendChild(span);
-                        content.appendChild(spacer());
-                    }
+                        const sortedTags = image.tags.sort((a, b) => b.length - a.length);
+                        for (let idx = 0; idx < sortedTags.length && idx < 3; idx++) {
+                            const tag = image.tags[idx];
+                            const tagLink = tag.replace(/ /g, '-').replace(/\)/g, '').replace(/\(/g, '').toLowerCase();
+                            const a = dom.elem("a", {
+                                href: `${window.location.origin}/tag/${tagLink}`,
+                                title: `View items related to tag '${tag}'`,
+                                innerHTML: `<i class="fas fa-tag"></i> ${tag}`
+                            });
+                            content.appendChild(a);
+                            content.appendChild(spacer());
+                        }
 
-                    if (image.archive === true) {
-                        const span = dom.elem("span", {
-                            class: "badge badge-pill badge-warning",
-                            innerHTML: 'Archived'
-                        });
-                        content.appendChild(span);
-                        content.appendChild(spacer());
-                    }
+                        const imgRef = dom.id(`img_${image.folder}`);
+                        if (imgRef.naturalWidth > imgRef.naturalHeight) {
+                            imgRef.style.maxWidth = '300px';
+                            imgRef.style.maxHeight = 'auto';
+                        } else {
+                            imgRef.style.maxWidth = 'auto';
+                            imgRef.style.maxHeight = '300px';
+                        }
 
-                    if (image.printUrl) {
                         const a = dom.elem("a", {
-                            href: `${this.printUrl}${image.printUrl}`,
-                            target: "_blank",
-                            title: "Print",
-                            innerHTML: '<i class="fas fa-print"></i> Order Print'
+                            class: "back-to-top",
+                            "href": "#top",
+                            "title": "Back to top",
+                            "innerHTML": '<i class="fas fa-arrow-up"></i> Back to top'
                         });
+
                         content.appendChild(a);
-                        content.appendChild(spacer());
                     }
 
-                    if (image.wwt) {
-                        const a = dom.elem("a", {
-                            href: image.wwt,
-                            target: "_blank",
-                            title: "View in WorldWide Telescope",
-                            innerHTML: '<i class="fas fa-globe"></i> View in WorldWide Telescope'
-                        });
-                        content.appendChild(a);
-                        content.appendChild(spacer());
+                    app.imageCount--;
+
+                    if (app.imageCount === 0) {
+
+                        if (app.showMore) {
+                            const limitIdx = filter.state.limits.indexOf(filter.state.limit);
+                            if (limitIdx < filter.state.limits.length - 1) {
+                                const limit = filter.state.limits[limitIdx + 1];
+                                const a = dom.elem("a", {
+                                    class: "back-to-top w-auto",
+                                    href: "#",
+                                    title: "Show more",
+                                    onclick: () => {
+                                        dom.runNext(() => filter.changeLimit(limit));
+                                        return false;
+                                    },
+                                    innerHTML: `<i class="fas fa-arrow-down"></i> Show more (${limit})`
+                                });
+                                app.results.appendChild(a);
+                            }
+                        }
+
+                        const img = app.lastImage;
+                        const imagesOnPage = document.querySelectorAll("img.card-img");
+                        app.lastImage = imagesOnPage.length > 0
+                            ? imagesOnPage[imagesOnPage.length - 1]
+                            : null;
+                        
+                        if (img) {
+                            dom.runNext(() => img.scrollIntoView(true));
+                        }                    
                     }
 
-                    const sortedTags = image.tags.sort((a, b) => b.length - a.length);
-                    for (let idx = 0; idx < sortedTags.length && idx < 3; idx++) {
-                        const tag = image.tags[idx];
-                        const tagLink = tag.replace(/ /g, '-').replace(/\)/g, '').replace(/\(/g, '').toLowerCase();
-                        const a = dom.elem("a", {
-                            href: `${window.location.origin}/tag/${tagLink}`,
-                            title: `View items related to tag '${tag}'`,
-                            innerHTML: `<i class="fas fa-tag"></i> ${tag}`
-                        });
-                        content.appendChild(a);
-                        content.appendChild(spacer());
-                    }
-
-                    const imgRef = dom.id(`img_${image.folder}`);
-                    if (imgRef.naturalWidth > imgRef.naturalHeight) {
-                        imgRef.style.maxWidth = '300px';
-                        imgRef.style.maxHeight = 'auto';
-                    } else {
-                        imgRef.style.maxWidth = 'auto';
-                        imgRef.style.maxHeight = '300px';
-                    }
-
-                    const a = dom.elem("a", {
-                        class: "back-to-top",
-                        "href": "#top",
-                        "title": "Back to top",
-                        "innerHTML": '<i class="fas fa-arrow-up"></i> Back to top'
-                    });
-                    content.appendChild(a);
                     dom.runNext(() =>
                         app.imageCache[image.folder] = dom.id(`div_${image.folder}`));
                 }

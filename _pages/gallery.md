@@ -48,9 +48,9 @@ permalink: /gallery/
     <div class="card-body">
         <p class="mb-2px card-text-override">
             <a id="%title_id%" class="card-title clickable underlinehover"><strong>%title%</strong></a></p>
-        <p class="card-text  card-text-override text-right mb-2px"><small>%date%</small></p>
         <p id="%type_id%" class="card-text card-text-override mb-2px">...</p>
         <p id="%content_id%" class="card-text card-text-override">...</p>        
+        <p class="card-text card-text-override text-right mb-2px"><small>%date%</small></p>        
     </div>    
 </div>        
 </script>
