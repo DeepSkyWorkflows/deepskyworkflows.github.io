@@ -26,6 +26,7 @@ sitemap: false
                 refreshing: false,
                 state: { ...filterState },
                 lastText: null,
+                filterShare: dom.id('filterShare'),
                 resetBtn: dom.id('reset'),
                 sort: dom.id('sortBy'),
                 telescope: dom.id('telescope'),
@@ -325,6 +326,24 @@ sitemap: false
                     filter.sortToggle.addEventListener("click", () => filter.sortToggled());
                     filter.expander.addEventListener("click", () => filter.expand());
                     filter.collapser.addEventListener("click", () => filter.collapse());
+
+                    // share
+                    if (navigator && navigator.share) {
+                        const button = dom.elem("button", {
+                            class: "btn btn-link",
+                            title: "Share/save the current search",
+                            innerHTML: `<i class="fas fa-share"></i> Share/save the current search`,
+                            "onclick": function () {
+                                navigator.share({
+                                    title: document.title,
+                                    text: "These are some astronomy photographs I'm interested in.",
+                                    url: window.location.href
+                                });
+                            }
+                        });
+                        filter.filterShare.appendChild(button);
+                    }
+
                     dom.hide(filter.filterExpanded);
                     dom.hide(filter.filterRefresh);
                     filter.refresh();
@@ -490,6 +509,19 @@ sitemap: false
 
                         const type = dom.id(`type_${image.folder}`);
                         type.innerHTML = '';
+
+                        if (navigator && navigator.share) { 
+                            const anchor = document.querySelectorAll(`a[href="#${image.folder}"]`)[0];
+                            anchor.innerHTML = '<i class="fas fa-share"></i>';
+                            anchor.title = "Share/save this image";
+                            anchor.onclick = function () {
+                                navigator.share({
+                                    title: image.title,
+                                    text: image.description,
+                                    url: fullUrl
+                                });
+                            };
+                        }
 
                         if (image.type && image.type.length) {
                             const categoryLabel = makeSpan(

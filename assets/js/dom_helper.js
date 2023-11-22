@@ -113,7 +113,7 @@ window.ds_dom_helper = (function () {
                             this.modifyClasses(elem, config[prop]);
                         } else if (prop.startsWith("on")) {
                             elem.addEventListener(prop.substring(2), config[prop]);
-                        } else if (prop.startsWith("inner")) {
+                        } else if (prop.startsWith("inner") || prop === "style") {
                             elem[prop] = config[prop];
                         } else {
                             elem.setAttribute(prop, config[prop]);
