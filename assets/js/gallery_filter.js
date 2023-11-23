@@ -9,6 +9,7 @@ sitemap: false
         (function (dom, db, queryManager) {
 
             const filterState = {
+                simplify: false,
                 limit: 20,
                 limits: [10, 20, 50, 100, 200, 500, 99999],
                 text: null,
@@ -26,6 +27,7 @@ sitemap: false
                 refreshing: false,
                 state: { ...filterState },
                 lastText: null,
+                simplify: dom.id('simplify'),
                 filterShare: dom.id('filterShare'),
                 resetBtn: dom.id('reset'),
                 sort: dom.id('sortBy'),
@@ -170,6 +172,23 @@ sitemap: false
                     app.refresh();
                 },
 
+                simplifyChanged: function () {
+                    if (filter.refreshing) {
+                        return;
+                    }
+                    filter.state.simplify = filter.simplify.checked;
+                    filter.querySet("simplify", filter.state.simplify);
+                    const targets = document.querySelectorAll("div.card-body");
+                    for (let idx = 0; idx < targets.length; idx++) {
+                        const target = targets[idx];
+                        if (filter.state.simplify) {
+                            dom.hide(target);
+                        } else {
+                            dom.show(target);
+                        }
+                    }   
+                },
+
                 expand: function () {
                     if (filter.refreshing) {
                         return;
@@ -205,6 +224,8 @@ sitemap: false
                 },
 
                 refresh: function () {
+                    filter.querySet("limit", filter.state.limit, true);
+                    filter.querySet("simplify", filter.state.simplify, true);
                     filter.querySet("text", filter.state.text ?? '', true);
                     filter.querySet("sortBy", filter.state.sortBy, true);
                     filter.querySet("telescope", filter.state.telescope ?? 'all', true);
@@ -239,6 +260,11 @@ sitemap: false
                     const archive = queryManager.get("archive");
                     if (archive && archive.length) {
                         filter.state.archive = archive === 'true';
+                    }
+
+                    const simplify = queryManager.get("simplify");
+                    if (simplify && simplify.length) {
+                        filter.state.simplify = simplify === 'true';
                     }
 
                     const sortByQuery = queryManager.get("sortBy");
@@ -321,6 +347,8 @@ sitemap: false
                     filter.print.addEventListener("change", () => filter.printChanged());
                     filter.archive.checked = filter.state.archive;
                     filter.archive.addEventListener("change", () => filter.archiveChanged());
+                    filter.simplify.checked = filter.state.simplify;
+                    filter.simplify.addEventListener("change", () => filter.simplifyChanged());
                     filter.sort.addEventListener("change", () => filter.sortChanged());
                     filter.category.addEventListener("change", () => filter.categoryChanged());
                     filter.sortToggle.addEventListener("click", () => filter.sortToggled());
@@ -686,7 +714,7 @@ sitemap: false
                         
                         if (img) {
                             dom.runNext(() => img.scrollIntoView(true));
-                        }                    
+                        }                          
                     }
 
                     dom.runNext(() =>

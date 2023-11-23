@@ -21,6 +21,7 @@ permalink: /gallery/
             <div>
                 <span id="filterCollapse" class="clickable">[-]</span>
                 <span><button id="reset" class="btn btn-link btn-warning">Reset</button></span>
+                <span><input id="simplify" type="checkbox" title="Check to simplify the results and just show images."/> Simplify</span>
                 <span><input type="checkbox" id="signature" title="Check to filter signature series"/> Signature</span>
                 <span><input type="checkbox" id="print" title="Check to filter print-ready items"/> Print-ready</span>
                 <span><input type="checkbox" id="archive" title="Click to view archived images"/> Archived</span>&nbsp;|&nbsp;
@@ -37,7 +38,7 @@ permalink: /gallery/
     </div>
     <div class="card-deck">        
         <div class="alert alert-info">Initializing...</div>        
-    </div>
+    </div>    
 </div>
 
 <script id="basePrintUrl" type="text/template">{{site.galleryhome}}</script>
