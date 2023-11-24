@@ -1,137 +1,218 @@
 $(document).ready(function () {
+    const dom = window.ds_dom_helper;
+    const query = window.deepSkyRouter;
+    const galleryItem = {
+        
+        state: {
+            version: "main",
+            delay: 10
+        },
+        
+        image: dom.id("mainImage"),
+        title: document.title,
+        loadQueue: [],
+        shareImage: dom.id("shareImage"),
+        loaded: dom.id("loaded"),
+        related: dom.id("related"),
+        mainImage: null,    
+        mainImageLink: dom.id("mainBtn"),
+        fullsize: dom.id("fullsize"),
+        fullsizeLink: dom.id("fullsizeBtn"),
+        annotated: dom.id("annotated"),
+        annotatedLink: dom.id("annotatedBtn"),
+        grid: dom.id("grid"),
+        gridLink: dom.id("gridBtn"),
+        nostars: dom.id("nostars"),
+        nostarsLink: dom.id("nostarsBtn"),
+        mainHeading: document.querySelectorAll(".mainheading")[0],        
+        
+        loadAsync: function () {
+            
+            galleryItem.image.src = $(galleryItem.image).data("src2");
+            galleryItem.loadQueue.push(galleryItem.image);            
 
-    const active = {
-        link: null,
-        target: null,
-        nostars: false,
-        queue: 0,
-        total: 0
-    }
-
-    let progress = function () {
-        return "Loading: " + active.queue + " remaining of " + active.total + " images.";
-    }
-
-    $('#starToggle').attr("disabled", true);
-
-    $("img[data-src]").each(function () {
-        let target = $(this);
-        let targetName = $(this).attr('data-src');
-        active.queue++;
-        active.total++;
-        $("#loadingStatus").innerText = progress();
-        let loader = new Image();
-        loader.onload = function () {
-            target.src = loader.src;
-            active.queue--;
-            $("#loadingStatus").innerText = progress();
-            if (active.queue === 0) {
-                setTimeout(function () {
-                    if (active.queue === 0) {
-                        $('#loading').addClass('d-none');
-                        $('#mainImgNoStars').addClass('d-none');
-                        $('#wrapper').removeClass('d-none');
-                        $('#starToggle').removeAttr('disabled');
-                        $('#starToggle').click(() => {
-                            if (active.nostars === true) {
-                                active.nostars = false;
-                                $('#mainImgNoStars').addClass('d-none');
-                                $('#mainImg').removeClass('d-none');
-                                $('#starToggle').text('Remove stars');
-                            } 
-                            else {
-                                active.nostars = true;
-                                $('#mainImgNoStars').removeClass('d-none');
-                                $('#mainImg').addClass('d-none');
-                                $('#starToggle').text('Restore stars');
-                            }
+            if (galleryItem.fullsize) {
+                galleryItem.fullsize.src = $(galleryItem.fullsize).data("src2");
+                galleryItem.loadQueue.push(galleryItem.fullsize);   
+            }
+            
+            if (galleryItem.annotated) {
+                galleryItem.annotated.src = $(galleryItem.annotated).data("src2");
+                galleryItem.loadQueue.push(galleryItem.annotated);
+            }
+            
+            if (galleryItem.grid) {
+                galleryItem.grid.src = $(galleryItem.grid).data("src2");
+                galleryItem.loadQueue.push(galleryItem.grid);
+            }
+            
+            if (galleryItem.nostars) {
+                galleryItem.nostars.src = $(galleryItem.nostars).data("src2");                    
+                galleryItem.loadQueue.push(galleryItem.nostars);
+            }
+            
+            if (navigator && navigator.share) {
+                galleryItem.shareImage.innerHTML = "";
+                const shareBtn = dom.elem("button", {
+                    class: "btn btn-primary btn-sm",
+                    innerHTML: "<i class='fas fa-share'></i> Share this image",
+                    onclick: function () {
+                        navigator.share({
+                            title: document.title,
+                            text: `DeepSkyWorkflows.com is a site focused on astrophotography by Jeremy Likness. Here is an interesting image from his gallery, called '${document.title}'`,
+                            url: window.location.href
                         });
                     }
                 });
+                galleryItem.shareImage.appendChild(shareBtn);
             }
-        };
-        loader.src = targetName;
-    });
 
-    let hash = location.hash;
-    let targets = [];
-    let activeRef = null;
+            dom.runAfterMs(galleryItem.loadCompleteAsync, galleryItem.state.delay);            
+        },
 
-    $("a[data-toggle=tab]").each(function () {
-        let targetId = '#' + $(this).attr('aria-controls');
-        let target = $(targetId);
-
-        let ref = { link: $(this), target: target };
-
-        if (targetId == hash) {
-            activeRef = ref;
-        }
-        else {
-            targets.push(ref);
-        }
-
-        $(this).click(function () {
-            if (active.link) {
-                active.link.removeClass('active');
-                active.target.removeClass('active');
-                active.target.hide();
+        loadCompleteAsync: function () {
+            
+            galleryItem.state.delay *= 2;
+          
+            const replacementQueue = [];
+          
+            while (galleryItem.loadQueue.length > 0) {
+                const img = galleryItem.loadQueue.shift();
+                if (!img.complete || img.src.indexOf("loading.gif") >= 0) {
+                    replacementQueue.push(img);                    
+                } 
+                else if (img === galleryItem.image) {
+                    galleryItem.mainImage = img.src;                 
+                }
             }
-            active.link = $(this);
-            active.target = target;
-            active.link.addClass('active');
-            active.target.show();
-            active.target.addClass('active');
-            location.hash = targetId;
-        });
-    });
+          
+            if (replacementQueue.length > 0) {
+                galleryItem.loadQueue = replacementQueue;
+                dom.runAfterMs(galleryItem.loadCompleteAsync, galleryItem.state.delay);
+            } else {
+                dom.runNext(galleryItem.init);
+            }
+        },
+    
+        init: function () {
+            
+            dom.hide(galleryItem.mainHeading);
+                        
+            if (galleryItem.fullsize) { 
+                galleryItem.fullsizeLink.onclick = function () {
+                    galleryItem.toggleVersion("fullsize");
+                };               
+                dom.hide(galleryItem.fullsize);
+                
+                galleryItem.annotatedLink.onclick = function () {
+                    galleryItem.toggleVersion("annotated");
+                };
+                dom.hide(galleryItem.annotated);
 
-    const raDec = {
-        
+                galleryItem.gridLink.onclick = function () {
+                    galleryItem.toggleVersion("grid");
+                };
+                dom.hide(galleryItem.grid);
+            }
+
+            if (galleryItem.nostars) {
+                galleryItem.nostarsLink.onclick = function () {
+                    galleryItem.toggleVersion("nostars");
+                };
+                dom.hide(galleryItem.nostars);
+            }
+
+            if (galleryItem.mainImageLink) {
+                galleryItem.mainImageLink.onclick = function () {
+                    galleryItem.toggleVersion("main");
+                };
+            }
+
+            galleryItem.image.scrollIntoView();
+            dom.runNext(galleryItem.checkIncoming);            
+        },
+
+        checkIncoming: function () {
+            const version = query.get("version");
+            if (version && version !== "main" && version.length > 0) {
+                galleryItem.toggleVersion(version);
+            }            
+        },
+
+        toggleVersion: function (version) {
+            
+            query.reset("version");
+            galleryItem.state.version = "main";
+            
+            if (galleryItem.mainImageLink) {
+                dom.modifyClasses(galleryItem.mainImageLink, "-btn-success +btn-primary");
+                $(galleryItem.mainImageLink).removeAttr("disabled");
+            }
+
+            if (galleryItem.fullsize) {
+                dom.modifyClasses(galleryItem.fullsizeLink, "-btn-success +btn-primary");
+                $(galleryItem.fullsizeLink).removeAttr("disabled");
+                dom.modifyClasses(galleryItem.annotatedLink, "-btn-success +btn-primary");
+                $(galleryItem.annotatedLink).removeAttr("disabled");
+                dom.modifyClasses(galleryItem.gridLink, "-btn-success +btn-primary");
+                $(galleryItem.gridLink).removeAttr("disabled");
+            }
+            
+            if  (galleryItem.nostars) {
+                dom.modifyClasses(galleryItem.nostarsLink, "-btn-success +btn-primary");
+                $(galleryItem.nostarsLink).removeAttr("disabled");
+            }
+
+            switch (version) {
+                case "fullsize":
+                    if (galleryItem.fullsize) {
+                        galleryItem.image.src = galleryItem.fullsize.src;
+                        galleryItem.state.version = "fullsize";
+                        query.set("version", "fullsize");                    
+                        dom.modifyClasses(galleryItem.fullsizeLink, "+btn-success -btn-primary");
+                        $(galleryItem.fullsizeLink).attr("disabled", "disabled");
+                    }
+                    break;
+                case "annotated":
+                    if (galleryItem.annotated) {
+                        galleryItem.image.src = galleryItem.annotated.src;
+                        galleryItem.state.version = "annotated";
+                        query.set("version", "annotated");
+                        dom.modifyClasses(galleryItem.annotatedLink, "+btn-success -btn-primary");
+                        $(galleryItem.annotatedLink).attr("disabled", "disabled");
+                    }                    
+                    break;
+                case "grid":
+                    if (galleryItem.grid) {
+                        galleryItem.image.src = galleryItem.grid.src;
+                        galleryItem.state.version = "grid";
+                        query.set("version", "grid");
+                        dom.modifyClasses(galleryItem.gridLink, "+btn-success -btn-primary");
+                        $(galleryItem.gridLink).attr("disabled", "disabled");
+                    }                    
+                    break;
+                case "nostars":
+                    if (galleryItem.nostars) {
+                        galleryItem.image.src = galleryItem.nostars.src;
+                        galleryItem.state.version = "nostars";
+                        query.set("version", "nostars");
+                        dom.modifyClasses(galleryItem.nostarsLink, "+btn-success -btn-primary");
+                        $(galleryItem.nostarsLink).attr("disabled", "disabled");
+                    }                    
+                    break;
+                default:
+                    galleryItem.image.src = galleryItem.mainImage;
+                    galleryItem.state.version = "main";
+                    query.reset("version");
+                    dom.modifyClasses(galleryItem.mainImageLink, "+btn-success -btn-primary");
+                    $(galleryItem.mainImageLink).attr("disabled", "disabled");
+                    break;
+            }
+
+            galleryItem.image.parentElement.href = galleryItem.image.src;            
+            query.update(document.title);
+        }        
     };
-    
-    $("span[id=data-ra]").each(function () {
-        raDec.ra = $(this).text();
-        raDec.raspan = $(this);
-    });
-    
-    $("span[id=data-dec").each(function () {
-        raDec.dec = $(this).text();
-        raDec.decspan = $(this);
-    });
-    
-    $("span[id=data-radius").each(function () {
-        
-        if (!(raDec.ra && raDec.ra.length && raDec.dec && raDec.dec.length))  {
-            return;
-        }
-        
-        const fov = $(this).text().substring(0, $(this).text().indexOf(' '));
-        const parts = raDec.ra.split(' ');
-        const hours = parseInt(parts[0].replace(/^\D+/g, ''));
-        const minutes = parseInt(parts[1].replace(/^D+/g, ''))/60.0;
-        const seconds = parseInt(parts[2].replace(/^D+/g, ''))/3600.0;
-        const rIdx = hours + minutes + seconds;
-        const decSign = raDec.dec[0] === '-' ? -1 : 1;
-        const decParts = raDec.dec.split(' ');
-        const degrees = parseInt(decParts[0].substring(1).replace(/^D+/g, ''));
-        const decMinutes = parseInt(decParts[1].replace(/^D+/g, ''))/60;
-        const decSeconds = parseInt(decParts[2].replace(/^D+/g, ''))/3600;
-        const dec = (decSign) * (degrees + decMinutes + decSeconds);
-        const link = `https://worldwidetelescope.org/webclient/#ra=${rIdx}&dec=${dec}&fov=${fov}`;
-        const raLink = `<a href="${link}" target="_blank" title="View coordinates in WorldWideTelescope">${raDec.ra}</a>`;
-        const decLink = `<a href="${link}" target="_blank" title="View coordinates in WorldWideTelescope">${raDec.dec}</a>`;
-        $(raDec.raspan).text('').append(raLink);
-        $(raDec.decspan).text('').append(decLink);
-    });                
-    
-    activeRef = activeRef ?? targets.shift();
-    if (activeRef) {
-        active.link = activeRef.link;
-        active.link.addClass('active')
-        active.target = activeRef.target;
-        while (activeRef = targets.shift()) {
-            activeRef.target.hide();
-        }
-    }
 
+    dom.runNext(galleryItem.loadAsync);
 });

@@ -8,6 +8,69 @@ License: https://www.wowthemes.net/freebies-license/
     .container {max-width:90%;}
 }
 
+@media only screen and (max-width: 768px) {
+    #mainImage {
+        height: 50vh;    
+    }
+
+    .gallery-column {
+        flex: 100%;
+        max-width: 100%;
+        padding: 5px;
+    }
+    
+    
+    .gallery-item-section {
+        display: flex;
+        flex-direction: column;    
+    }
+}
+
+#mainImage {
+    height: 75vh;
+    border: solid 3px gray;
+    width: auto;
+    object-fit: contain;
+    padding: 1px;
+}
+
+.gallery-row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+.gallery-column {
+    flex: 50%;
+    max-width: 50%;
+    padding: 5px;
+}
+
+.related-item {
+    border: solid 3px darkred;
+}
+
+.related-item:hover {
+    border: solid 3px red;
+}
+
+p.left {
+    display: inline;
+    float: left;
+    margin-right: 1em;
+}
+
+.gallery-column-single {
+    flex: 100%;
+    max-width: 100%;
+    padding: 5px;
+}
+
+.gallery-column img {
+    margin-top: 8px;
+    vertical-align: middle;
+}
+
 .navbar-toggler {
     display: inline;
     float: left;
