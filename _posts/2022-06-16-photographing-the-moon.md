@@ -2,8 +2,8 @@
 layout: post
 title:  "Video: Photographing the Moon"
 author: deepskyworkflows
-categories: ["videos"]
-tags: ["moon", "lunar"]
+categories: [ Videos, Image Processing, Lunar ]
+tags: ["moon" ]
 toc: true
 image: assets/images/2022-06-16/photographmoon.jpg
 description: "I wanted to share the full end-to-end experience of creating a moon photograph. I used my SVBony SV503 70ED refractor with a 2x Barlow lens and my Sony Mirrorless 6300 to take a daytime moon photograph. See how I assembled the equipment, acquired the footage, and processed the result."

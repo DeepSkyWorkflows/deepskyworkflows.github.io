@@ -2,8 +2,8 @@
 layout: post
 title:  "Processing NGC2174: The Monkey Head Nebula"
 author: deepskyworkflows
-categories: [ PixInsight, AstroPixel Processor, Topaz Labs ]
-tags: [ pixinsight, processing, ngc2174, stacking, noise reduction ]
+categories: [ Videos, PixInsight, Stellina, AstroPixel Processor, Topaz Labs, Image Processing, Stacking, Noise Reduction ]
+tags: [ ngc2174 ]
 toc: false
 image: assets/images/2021-09-19/NGC2174-Monkey-Head-Nebula.png
 description: "A full end-to-end processing workflow from acquiring images to final polish using AstroPixel Processor, PixInsight, and Topaz Labs."
@@ -42,6 +42,3 @@ I recently ran a poll asking what my next video should be, and the response was 
 I'm very happy with the [final result](https://www.youtube.com/watch?v=JjvGfwwdAvg&t=442s).
 
 Let me know your thoughts!
-
-
-

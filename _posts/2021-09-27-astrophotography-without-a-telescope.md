@@ -2,8 +2,8 @@
 layout: post
 title:  "Astrophotography without a telescope"
 author: deepskyworkflows
-categories: [ PixInsight, AstroPixel Processor, Topaz Labs, Camera ]
-tags: [ camera, m42, exposure, stacking ]
+categories: [ PixInsight, Sony Alpha, AstroPixel Processor, Topaz Labs, Camera-only astrophotography, Stacking ]
+tags: [ m42 ]
 toc: true
 image: assets/images/gallery/orion/orion-annotated-fs.jpg
 description: "How to take deep sky pictures of galaxies and nebulae using nothing but a camera and a tripod."
@@ -12,7 +12,9 @@ hide: true
 comments: true
 ---
 
-Lately, I've been learning how to take deep space pictures without a telescope. It turns out that ordinary DSLR or mirrorless cameras can, given a steady tripod, favorable f/stop and long exposure, capture detailed images of clusters, nebulae, galaxies, and stars. I'm very new to this and these are the first images I've successfully captured. Here's how I did it:
+Lately, I've been learning how to take deep space pictures without a telescope. It turns out that ordinary DSLR or mirrorless cameras can, given a steady tripod, favorable f/stop and long exposure, capture detailed images of clusters, nebulae, galaxies, and stars. I'm very new to this and these are the first images I've successfully captured. 
+
+Here's how I did it:
 
 ## Setting up
 

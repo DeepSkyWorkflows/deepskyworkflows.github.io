@@ -2,7 +2,7 @@
 layout: post
 title:  "My first viewing party"
 author: deepskyworkflows
-categories: [  ]
+categories: [ Star Parties ]
 tags: [ moon, jupiter, saturn, ngc7000 ]
 toc: true
 image: assets/images/2022-10-09/starparty.jpg

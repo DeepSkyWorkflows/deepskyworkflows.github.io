@@ -2,7 +2,7 @@
 layout: post
 title:  "Making mosaics with Stellina and AstroPixel Processor: Polaris"
 author: deepskyworkflows
-categories: [ Stellina, AstroPixel Processor, Mosaic ]
+categories: [ Stellina, AstroPixel Processor, Mosaics ]
 tags: [ polaris ]
 toc: true
 image: assets/images/2021-07-22/polaris-annotated.jpeg
@@ -11,7 +11,7 @@ featured: false
 comments: true
 ---
 
-This post walks through one technique for making mosaics, or pictures that are combined from multiple exposures. This appproach integrates the mosaic during stacking using AstroPixel Processor.
+This post walks through one technique for making mosaics, or pictures that are combined from multiple exposures. This approach integrates the mosaic during stacking using AstroPixel Processor.
 
 My first mosaic was [Collinder 399](https://photos.app.goo.gl/HWJKtQTPo9s8p7MK6). The [first time](https://photos.app.goo.gl/CdZDPvWw46SvQHae8) I observed it, I realized it was too large for the field of view. I decided to use a feature of Stellina called _reframing_ and take a run at AstroPixel Processor’s solution for mosaics. I was happy with the result, so this time I set out to do the same thing with the North Star, Polaris, “Engagement Ring” asterism.
 

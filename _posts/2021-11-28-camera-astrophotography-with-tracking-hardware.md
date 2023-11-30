@@ -2,8 +2,8 @@
 layout: post
 title:  "Camera Astrophotography with Tracking: Star Adventurer Mini (SAM)"
 author: deepskyworkflows
-categories: [ Star Adventurer Mini ]
-tags: [ camera, exposure, m42, m45, cassiopeia, tracking, polaris ]
+categories: [ Star Adventurer Mini, Camera-only astrophotography, Tracking ]
+tags: [ m42, m45, cassiopeia, polaris ]
 toc: true
 image: assets/images/2021-11-28/camera-astrophotography.jpg
 description: "I recently purchased a SkyWatcher Star Adventurer Mini (SAM) to take longer exposures with my camera. I'll talk about what that all means and show you examples of what can be produced."

@@ -21,3 +21,5 @@ There has always been something magical about the full moon. It can appear large
 - December is the __Cold moon__
 
 You may notice that craters and landmarks look different in the full moon compared to other phases. This is because with full illumination, most of the contrast comes from differing materials on the surface as shadows are minimized. In other phases, the suns angle casts shadows that provide detail.
+
+The term **supermoon** refers to a full moon that occurs when the moon is at perigee in its orbit (closest to the Earth). The closer distance makes it appears slightly larger.

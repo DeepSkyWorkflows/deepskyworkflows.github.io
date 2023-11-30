@@ -2,8 +2,8 @@
 layout: post
 title:  "A Quick (Bias-ed) and Dirty Look at Calibration"
 author: deepskyworkflows
-categories: [video]
-tags: ["calibration", "darks"]
+categories: [ Videos, Calibration, SharpCap ]
+tags: [ sh2-206 ]
 toc: true
 image: assets/images/2022-11-05/quick-and-dirty-calibration.jpg
 description: "A very fast and high-level overview of what calibration frames are in astrophotography, why you care, and how you can get started. Includes a hands-on example with real photographs to show differences."

@@ -2,8 +2,8 @@
 layout: post
 title:  "My Camera Processing Workflow with PixInsight"
 author: deepskyworkflows
-categories: [ PixInsight, AstroPixel Processor, Topaz Labs ]
-tags: [ pixinsight, processing, M42, NGC1977, NGC2024, deconvolution ]
+categories: [ PixInsight, AstroPixel Processor, Topaz Labs, Camera-only astrophotography, Image Processing, Deconvolution ]
+tags: [ M42, NGC1977, NGC2024 ]
 toc: false
 image: assets/images/2021-11-27/camera.jpg
 description: "A full end-to-end processing workflow for my camera-only (no telescope) photos focused on PixInsight. Contains some advanced tips for rounding stars, stretching contrast, and making masks."
@@ -12,9 +12,9 @@ hide: true
 comments: true
 ---
 
-An editing workflow recorded live with tips from changing the shape of stars _without_ Deconvolution to dual frequency processing.
+An editing workflow recorded live with tips from changing the shape of stars _without_ Deconvolution using dual frequency processing.
 
-After what felt like an eternity of polar alignment, I accidentally knocked my mount. In what was supposed to be a period of clear skies, the only thing clear was that clouds were moving in. So, I desperately captured several 45-second exposures and called it a night. Or a morning, rather. You know what I mean. I quickly moved my images from my laptop that I use to drive imaging sessions to my processing workstation. A "blink" (quick scan of images) revealed what I feared: most were ruined by clouds. I ended up stacking a measely handful of frames and the result did not look good. So, what to do? Why, use it as practice! I decided to go live on Thanksgiving Day with an editing session that you can watch here:
+After what felt like an eternity of polar alignment, I accidentally knocked my mount. In what was supposed to be a period of clear skies, the only thing clear was that clouds were moving in. So, I desperately captured several 45-second exposures and called it a night. Or a morning, rather. You know what I mean. I quickly moved my images from my laptop that I use to drive imaging sessions to my processing workstation. A "blink" (quick scan of images) revealed what I feared: most were ruined by clouds. I ended up stacking a measly handful of frames and the result did not look good. So, what to do? Why, use it as practice! I decided to go live on Thanksgiving Day with an editing session that you can watch here:
 
 {% include youtube.html code="VT67o_Bz6nQ" title="Live: Camera Editing Workflow in PixInsight" %}
 

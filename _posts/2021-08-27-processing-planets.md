@@ -2,7 +2,7 @@
 layout: post
 title:  "Processing Planets with PixInsight using Bulk Operations"
 author: deepskyworkflows
-categories: [ PixInsight ]
+categories: [ PixInsight, Planetary ]
 tags: [ jupiter ]
 toc: false
 image: assets/images/gallery/jupiter/thumb.jpg

@@ -2,7 +2,7 @@
 layout: post
 title:  "What gear do I need for astrophotography?"
 author: deepskyworkflows
-categories: [equipment]
+categories: [ Equipment ]
 tags: []
 toc: true
 image: assets/images/2023-01-06/whatgeardoineedforastrophotography.jpg

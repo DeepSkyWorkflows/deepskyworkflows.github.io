@@ -2,7 +2,7 @@
 layout: post
 title:  "To the Moon! Processing lunar images"
 author: deepskyworkflows
-categories: []
+categories: [ Lunar, Planetary, Image Processing, Telescopius, ASI Studio, PIPP, AutoStakkert, Atmospheric, Stellarium, Stellina, SharpCap, PixInsight, RegiStax ]
 tags: [moon, lunar]
 toc: true
 image: assets/images/2022-02-20/tothemoon.jpg
@@ -66,7 +66,7 @@ As you can see, I have a few options!
 
 ### Barlow lenses
 
-It's worthwhile to mention a quick note about Barlow lenses. These are special lenses you can add to your setup that will magnify the image more. You'll often hear people say you lose a lot of light, but modern lenses are highly efficient. The lenses come with an optimal magnification. Mine is 2x. What some people don't realize is that, independent of focus, magnification is a function of how far the sensor (or your eye) is from the lens. For example, the extreme close-up shots I took of the moon were with a 2x Barlow. I intentinally used spacers to distance my camera sensor from the Barlow lens so I could get extra magnificaion. My best guess is that I achieved about 5x.
+It's worthwhile to mention a quick note about Barlow lenses. These are special lenses you can add to your setup that will magnify the image more. You'll often hear people say you lose a lot of light, but modern lenses are highly efficient. The lenses come with an optimal magnification. Mine is 2x. What some people don't realize is that, independent of focus, magnification is a function of how far the sensor (or your eye) is from the lens. For example, the extreme close-up shots I took of the moon were with a 2x Barlow. I intentinally used spacers to distance my camera sensor from the Barlow lens so I could get extra magnification. My best guess is that I achieved about 5x.
 
 ## Telescopius
 

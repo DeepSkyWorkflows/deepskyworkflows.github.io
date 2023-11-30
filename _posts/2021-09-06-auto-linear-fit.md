@@ -3,7 +3,7 @@ layout: post
 title:  "Easily Normalize RGB with Auto-Linear Fit"
 author: deepskyworkflows
 categories: [ PixInsight ]
-tags: [ pixinsight, scripts ]
+tags: [ ]
 toc: false
 image: assets/images/2021-09-06/autolinearfit.jpg
 description: "Link your RGB channels permanently with this automated script that extracts channels, performs a linear fit and recombines them."

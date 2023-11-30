@@ -2,7 +2,7 @@
 layout: post
 title:  "How do I stack comets in PixInsight?"
 author: deepskyworkflows
-categories: [ PixInsight]
+categories: [ PixInsight, Comets ]
 tags: [ Comets ]
 toc: true
 image: assets/images/2023-02-04/how-to-process-comets-in-pixinsight.jpg

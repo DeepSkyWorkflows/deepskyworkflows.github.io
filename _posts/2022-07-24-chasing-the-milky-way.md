@@ -2,7 +2,7 @@
 layout: post
 title:  "Chasing the Milky Way"
 author: deepskyworkflows
-categories: []
+categories: [ Milky Way, Sony Alpha 6300, Videos ]
 tags: ["milky way"]
 toc: false
 image: assets/images/2022-07-24/Chasing.png

@@ -30,6 +30,14 @@ License: https://www.wowthemes.net/freebies-license/
     }        
 }
 
+.aboutlogo {
+    max-width: 33vw;
+    max-height: 33vh;
+    margin: 1em;
+    float: right;
+    object-fit: contain;
+}
+
 #mainImage {
     border: solid 3px gray;
     width: auto;

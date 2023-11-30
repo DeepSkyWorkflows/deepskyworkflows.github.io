@@ -88,6 +88,35 @@ post_class: post-template
                 {{content}}
             </div>
 
+            <!-- Post Categories -->
+            <div class="after-post-cats">
+                <strong>Post categories: </strong>
+                <ul class="tags mb-4">
+                    {% assign sortedCategories = page.categories | sort %}
+                    {% for category in sortedCategories %}
+                    <li>
+                        <a class="smoothscroll" href="{{site.baseurl}}/category/{{ category | replace: " ","-" }}">{{ category }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <!-- End Categories -->
+
+            <!-- Post Tags -->
+            <div class="after-post-tags">
+                <strong>Related tags: </strong>
+                <ul class="tags">                    
+                    {% assign sortedTags = page.tags | sort %}
+                    {% for tag in sortedTags %}
+                    {% assign pTag = tag | strip | replace: ' ', '-' | remove: '(' | remove: ')' | downcase %}
+                    <li>
+                        <a class="smoothscroll" href="{{site.baseurl}}/tag/{{ pTag }}">#{{ tag }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <!-- End Tags -->     
+
             {% if page.comments == true %}
                 {% include disqus.html url=page.url id=page.id %}
             {% endif %}
@@ -108,33 +137,6 @@ post_class: post-template
                 {% endif %}
                 </small>
             </p>
-
-            <!-- Post Categories -->
-            <div class="after-post-cats">
-                <ul class="tags mb-4">
-                    {% assign sortedCategories = page.categories | sort %}
-                    {% for category in sortedCategories %}
-                    <li>
-                        <a class="smoothscroll" href="{{site.baseurl}}/category/{{ category | replace: " ","-" }}">{{ category }}</a>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </div>
-            <!-- End Categories -->
-
-            <!-- Post Tags -->
-            <div class="after-post-tags">
-                <ul class="tags">
-                    {% assign sortedTags = page.tags | sort %}
-                    {% for tag in sortedTags %}
-                    {% assign pTag = tag | strip | replace: ' ', '-' | remove: '(' | remove: ')' | downcase %}
-                    <li>
-                        <a class="smoothscroll" href="{{site.baseurl}}/tag/{{ pTag }}">#{{ tag }}</a>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </div>
-            <!-- End Tags -->
 
             <!-- Prev/Next -->
             <div class="row PageNavigation d-flex justify-content-between font-weight-bold">

@@ -18,15 +18,14 @@ author: "deepskyworkflows"
 
     <section>
         <div class="section-title">
-            <h2><span>Gallery</span></h2>
+            <h2>Samples from the <a href="/gallery">astrophotography gallery</a></h2>            
         </div>
-        {% include gallery-random.html %}  
-        &raquo;<a href="/gallery">Visit the gallery</a>  
+        {% include gallery-random.html %}          
     </section>
 
     <section class="featured-posts">
         <div class="section-title">
-            <h2><span>Recent posts</span></h2>
+            <h2><span>Recent blog posts</span></h2>
         </div>
         <div class="row">
         {% assign count = 0 %}
@@ -52,6 +51,7 @@ author: "deepskyworkflows"
         {% endfor %}
         </ul>
         </div>
+        <strong>Explore posts by <a href="/categories">category</a>.</strong>
     </section>
 
     <section class="featured-posts">
@@ -122,4 +122,3 @@ author: "deepskyworkflows"
     {% include pagination.html %}
 </span>
 </div>
-
