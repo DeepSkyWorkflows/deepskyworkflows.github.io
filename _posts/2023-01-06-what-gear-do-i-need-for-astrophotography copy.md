@@ -7,7 +7,7 @@ tags: []
 toc: true
 image: assets/images/2023-01-06/whatgeardoineedforastrophotography.jpg
 description: "Curious about what is needed to capture space photographs? Some things, like a telescope and mount, may seem obvious, but what is a T2 adapter or a M42x0.75 thread? In this post, I inventory every single physical item I've purchased to support my astrophotography hobby. I also share some common configurations I use, their approximate cost, and tips like what items I thought I needed but didn't."
-featured: true
+featured: false
 comments: true
 ---
 I'm going to jump right into the subject of this post: my astrophotography inventory. First, if you're new to astrophotography, you might wonder _where_ to pick up equipment. I'll start with the places I shop and then move onto my gear.

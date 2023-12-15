@@ -97,6 +97,33 @@ p.left {
     max-width: 400px;
 }
 
+.card-deck.resources .card {
+    margin: 0.5em;
+}
+
+.card-deck.resources .card-header {
+    background: #5e5f5f;    
+}
+
+.card-deck.resources .card-header .card-title {
+    text-align: center;
+    color: #a7a8a8;
+    font-weight: bold;
+}
+
+.card-deck.resources .card .card-body p {
+    margin-bottom: 2px;     
+}
+
+.card-deck.resources .card .card-body i.fa {
+    color: #454645;
+}
+
+.card-deck.resources .card .card-body p small {
+    color: #454645;
+    text-align: justify;
+}
+
 .card-body {
     padding: 0.5rem;
 }

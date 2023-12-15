@@ -57,9 +57,9 @@
         {% for item in sorted limit: maxitems %}
             {% assign mainUrl = site.baseurl | append: item.url %}            
             {% assign thumbPath = site.baseurl | append: "/assets/images/gallery/" | append: item.folder | append: "/thumb.jpg" %}
-            <div class="card gallery-card-sm">
+            <div class="card gallery-card-sm" style="margin-left: -2em;">
                 <a href="{{mainUrl}}" title="{{item.description}}">
-                    <img class="card-img-top gallery-img" src="{{thumbPath}}" alt="{{item.description}}">
+                    <img class="card-img-top gallery-img w-auto" src="{{thumbPath}}" alt="{{item.description}}">
                 </a>
                 <div class="card-header bg-dark text-center">
                     <a href="{{mainUrl}}" title="{{item.description}}">{{item.title}}</a>
