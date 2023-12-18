@@ -21,7 +21,7 @@ This page contains links to obtain software, scripts, websites, and tools that a
         {% assign subitems = section.items | sort : 'name' %} 
         {% for resource in subitems %}
             <p>
-                <a href="{{ resource.url }}>">{{ resource.name }}</a>
+                <a target="_blank" href="{{ resource.site }}">{{ resource.name }}</a>
                 <span>&nbsp;</span>                
                 {% for flag in resource.flags %}
                     {% assign icon = "" %}
