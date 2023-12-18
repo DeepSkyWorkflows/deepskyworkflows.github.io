@@ -23,8 +23,7 @@ window.gallerydbpromise = window.gallerydbpromise || (async function () {
 
     const internaldb = {
 
-        db: await fetch({
-            url: "/gallery-database.json",
+        db: await fetch("/gallery-database.json", {
             cache: "no-cache"
         }).then(r => r.json()),
 
