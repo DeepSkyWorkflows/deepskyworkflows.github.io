@@ -93,6 +93,7 @@ lazyimages: "enabled"
 exclude: [changelog.md, mediumish-theme-license.txt, LICENSE, docker-compose.yml, README.md, Gemfile, Gemfile.lock]
 
 collections:
+  resources:
   gallery:
     output: true
     permalink: /gallery/:title/

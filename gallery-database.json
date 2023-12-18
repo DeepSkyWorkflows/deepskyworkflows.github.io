@@ -4,7 +4,8 @@ layout: null
 {
   "gallery": [
     {% assign idx = 0 %}
-    {% for image in site.gallery %}
+    {% assign sorted = site.gallery | sort: 'lastCapture' %}
+    {% for image in sorted %}
       {
         "title": "{{image.title}}",
         "type": "{{image.type}}",
