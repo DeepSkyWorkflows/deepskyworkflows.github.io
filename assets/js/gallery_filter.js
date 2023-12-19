@@ -372,7 +372,6 @@ sitemap: false
                         filter.filterShare.appendChild(button);
                     }
 
-                    dom.hide(filter.filterExpanded);
                     dom.hide(filter.filterRefresh);
                     filter.refresh();
                 }
