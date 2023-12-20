@@ -4,11 +4,11 @@ type: "Nebula"
 tags: ["The star 12 Mon", "NGC2237", "Rosette A", "NGC2238", "Rosette Nebula", "NGC2239", "NGC2246", "Rosette B", "NGC2252", "Caldwell 49"]
 target: "Caldwell 49"
 description: "I dedicated an evening to capturing the Rosette Nebula with narrowband filters, then processed it with existing RGB data. My goal was to capture the fine structure and detail of the nebula and use color to contrast various regions based on their spectral emissions. I call it the Rosette in Bloom."
-signature: false
+signature: true
 archive: false
 image: "/assets/images/gallery/rosette-blossom/thumb.jpg"
 telescope: "Williams Optics Redcat 71"
-length: 800mm
+length: 350mm
 aperture: 71mm
 folder: rosette-blossom
 exposure: 300
