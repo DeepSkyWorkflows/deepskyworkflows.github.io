@@ -1,19 +1,21 @@
 ---
 title: "Yellow Moon on Blue"
-type: Lunar
+type: "Lunar"
 tags: ["The moon", "moon"]
-description: A non-filtered look at the evening moon.
-image: /assets/images/gallery/yellowbluemoon/thumb.jpg
-printurl: /gallery/lunar/photo/2682978140
-telescope: Svbony sv503 70ED
-length: "800mm"
+target: "moon"
+description: "A non-filtered look at the evening moon."
 signature: true
-aperture: "70mm"
+archive: false
+image: "/assets/images/gallery/yellowbluemoon/thumb.jpg"
+telescope: "Svbony sv503 70ED"
+length: 800mm
+aperture: 70mm
 folder: yellowbluemoon
-noannotations: true
-exposure: 
-lights: 
+exposure: 1
+lights: 1
 sessions: 1
-firstCapture: 2022-09-07 
+firstCapture: 2022-09-07
 lastCapture: 2022-09-07
+printurl: /gallery/lunar/photo/2682978140
+noannotations: true
 ---
