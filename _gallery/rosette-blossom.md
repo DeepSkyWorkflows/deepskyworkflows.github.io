@@ -16,8 +16,9 @@ lights: 120
 sessions: 1
 firstCapture: 2023-12-13
 lastCapture: 2023-12-13
-group: "caldwell49"
+group: "rosette"
 wwt: http://www.worldwidetelescope.org/wwtweb/ShowImage.aspx?reverseparity=False&scale=0.913583&name=rosette-blossom.jpg&imageurl=https://deepskyworkflows.com/assets/images/gallery/rosette-blossom/rosette-blossom.jpg&credits=Jeremy+Likness+at+DeepSkyWorkflows.com&creditsUrl=https://deepskyworkflows.com/about&ra=97.510801&dec=5.692672&x=7947.2&y=5006.4&rotation=-146.06&thumb=https://deepskyworkflows.com/assets/images/gallery/rosette-blossom/thumb.jpg
+printurl: /gallery/20567050/photo/3191076476
 ra: 6h 31m 55.0s
 dec: "+04° 58' 11.614"
 size: "147.00 x 111.60 arcmin"

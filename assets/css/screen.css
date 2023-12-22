@@ -1398,3 +1398,17 @@ td {
     left: 2em;
     margin: 2em;
 }
+
+.mainpage .card {
+    margin: 1rem;
+}
+
+.mainpage .card h3 {
+    size: 1.1rem;
+    color: black;
+}
+
+.mainpage .card .card-body .card-text {
+    text-align: justify;
+    padding: 0.5rem;
+}

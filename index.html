@@ -8,82 +8,171 @@ author: "deepskyworkflows"
 
 {% if page.url == "/" %}
 
-    <section>
-        <div class="section-title">
-            <h3>Welcome to Deep Sky Workflows!</h3>
-            <p>My name is <a href="/about">Jeremy Likness</a> and DeepSkyWorkflows is the website I created to express and share my passion for astrophotography. From the hundreds of photographs I've taken using amateur equipment from my backyard
-            to instructional materials and videos, my goal is to provide everything you need to appreciate astrophotography and, if you're interested, try it out on your own.</p>
+    {% assign posts_to_feature = site.posts | sort: 'date' | reverse %}
+    {% assign recentgallery = site.gallery | sort: 'lastCapture' | reverse %}
+    {% assign recentpost = posts_to_feature.first %}    
+    <div class="container-fluid w-100 card-deck mainpage">
+        <div class="card bg-dark">
+            <div class="card-header bg-success">
+                <h3 class="card-title text-center"><i class="fa fa-file"></i> Welcome</h3>
+            </div>
+            <div class="card-body">
+                <p class="card-text">Welcome to Deep Sky Workflows, where I celebrate the hobby of astrophotography! 
+                    <a href="#AllStories">Read the blog</a> to learn more about how I capture and process my images.
+                    Did you know you can take pictures of deep sky objects like galaxies and nebulae with nothing more
+                    than your camera and a regular lens? Learn about that and more.
+                </p>
+                <ul>
+                    <li><i class="fa fa-camera"></i>&nbsp;<a href="https://deepskyworkflows.shootproof.com/" target="_blank" title="Dedicated galleries">
+                        Online print galleries</a>&nbsp;<small> (includes landscapes, ocean, and other images not related to astrophotography)</small></li>
+                    <li><i class="fab fa-instagram"></i>&nbsp;<a href="https://instagram.com/DeepSkyWorkflows" target="_blank" title="instagram">
+                        Instagram (@DeepSkyWorkflows)</a></li>
+                    <li><i class="fab fa-twitter"></i>&nbsp;<a href="https://twitter.com/DeepSkyWorkflow" target="_blank" title="Twitter">
+                        Twitter (@DeepSkyWorkflows)</a></li>
+                    <li><i class="fa fa-image"></i> &nbsp;<a href="https://www.astrobin.com/users/DeepSkyWorkflows/" target="_blank" title="AstroBin">AstroBin</a></li>
+                    <li><i class="fab fa-facebook"></i>&nbsp;<a href="https://facebook.com/DeepSkyWorkflows" target="_blank" title="Facebook">Facebook</a></li>                    
+                    <li><i class="fab fa-github"></i>&nbsp;<a href="https://github.com/DeepSkyWorkflows" target="_blank" title="GitHub">
+                        GitHub repo</a></li>
+                    <li><i class="fab fa-youtube"></i>&nbsp;<a href="https://www.youtube.com/c/DeepSkyWorkflows" target="_blank" title="YouTube">
+                        YouTube</a></li>
+                    <li><i class="fa fa-handshake"></i>&nbsp;<a href="https://deepskyworkflows.shootproof.com/contact" target="_blank" title="Contact Jeremy Likness">Contact me</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card bg-dark">
+            <img class="card-img" src="{% if recentpost.image contains "://" %}{{ recentpost.image }}{% else %}{{ site.baseurl }}/{{ recentpost.image }}{% endif %}">                            
+            <div class="card-body">
+                <p><strong>{{ recentpost.date | date_to_string }}&mdash;<a href="{{ site.baseurl }}{{ recentpost.url }}" title="{{ recentpost.title }}">{{ recentpost.title }}</a></strong></p>
+                <p class="card-text">{{ recentpost.description }}
+                </p>
+                <ul>
+                {% assign count = 0 %}
+                {% for post in posts_to_feature %}      
+                {% assign count = count | plus: 1 %}
+                {% if count > 1 and count < 4 %}                
+                <li>
+                    {% assign href = site.baseurl | append: post.url %}
+                    <a href="{{ href }}" alt="{{ post.description }}"
+                    title="{{ post.description }}">
+                        <strong>{{ post.date | date_to_string }}</strong>&mdash;{{ post.title }}
+                    </a>
+                </li>
+                {% endif %}
+                {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        <div class="card bg-dark">
+            <div class="card-header bg-warning">
+                <h3 class="card-title text-center">
+                    <i class="fa fa-images"></i> Gallery
+                </h3>
+            </div>
+            <div class="card-body text-justify p-1">
+                <p class="card-text"><a href="{{ site.baseurl }}/gallery">Browse the astrophotography gallery</a> that contains hundreds of
+                    images of deep sky  objects, planets, and the Milky Way. Many images include celestial coordinates,
+                    overlays showing the objects in the field of view and links to explore on an online planetarium.</p>
+                {% assign gcount = 0 %}
+                {% for picture in recentgallery %}      
+                {% assign gcount = gcount | plus: 1 %}
+                {% if gcount < 2 %}             
+                {% assign folderPath = site.baseurl | append: "/assets/images/gallery/" | append: picture.folder | append: "/" %}
+                {% assign mainImage = folderPath | append: "thumb.jpg" %}   
+                <p>
+                    <a href="{{ site.baseurl }}/gallery/{{ picture.folder }}" title="{{ picture.title }}">
+                        <img class="card-img" src="{{ mainImage }}" alt="{{ picture.title }}"/>
+                        <strong>{{ picture.lastCapture }}</strong>&mdash;{{ picture.title }}
+                    </a>
+                </p>
+                {% endif %}
+                {% endfor %}      
+                <p class="card-text text-center">
+                    <a class="badge badge-primary w-auto" href="{{ site.baseurl }}/gallery/?category=Comet">Comets</a>
+                    <a class="badge badge-primary w-auto" href="{{ site.baseurl }}/gallery/?category=Galaxy">Galaxies</a>
+                    <a class="badge badge-primary w-auto" href="{{ site.baseurl }}/gallery/?category=Lunar">The Moon</a>
+                    <a class="badge badge-primary w-auto" href="{{ site.baseurl }}/gallery/?category=Meteor">Meteors</a>                    
+                </p>  
+            </div>  
+        </div>             
+
+        <div class="card bg-dark">
+            <div class="card-header bg-warning">
+                <h3 class="card-title text-center">
+                    <i class="fa fa-images"></i> Recent images
+                </h3>
+            </div>
+            <div class="card-body text-justify p-1">
+                <p><a href="{{ site.baseurl }}/gallery">Visit the gallery</a></p>
+                {% assign gcount = 0 %}
+                {% for picture in recentgallery %}      
+                {% assign gcount = gcount | plus: 1 %}
+                {% if gcount > 1 and gcount < 4 %}             
+                {% assign folderPath = site.baseurl | append: "/assets/images/gallery/" | append: picture.folder | append: "/" %}
+                {% assign mainImage = folderPath | append: "thumb.jpg" %}   
+                <p class="text-center">
+                    <a href="{{ site.baseurl }}/gallery/{{ picture.folder }}" title="{{ picture.title }}">
+                        <img class="card-img" src="{{ mainImage }}" alt="{{ picture.title }}"/>
+                        <strong>{{ picture.lastCapture }}</strong>&mdash;{{ picture.title }}
+                    </a>
+                </p>
+                {% endif %}
+                {% endfor %}        
+                <p class="card-text text-center">
+                    <a class="badge badge-primary w-auto" href="{{ site.baseurl }}/gallery/?category=Milky%20Way">Milky Way</a>
+                    <a class="badge badge-primary w-auto" href="{{ site.baseurl }}/gallery/?category=Nebula">Nebula</a>
+                    <a class="badge badge-primary w-auto" href="{{ site.baseurl }}/gallery/?category=Planet">Planets</a>
+                    <a class="badge badge-primary w-auto" href="{{ site.baseurl }}/gallery/?category=Star%20Trails">Star trails</a>
+                </p>
+            </div>  
+        </div>             
+        
+        <div class="card bg-dark">
+            <div class="card-header bg-info">
+                <h3 class="card-title text-center">
+                    <i class="fab fa-youtube"></i> Videos
+                </h3>
+            </div>
+            <div class="card-body text-justify p-1">
+                <p class="card-text">Watch our <a href="{{ site.baseurl }}/videos">astrophotography videos</a> to learn tips and tricks,
+                    see how I process my images start-to-finish, and learn about the equipment I use. There are also videos that simply
+                    celebrate the beauty of the night sky, from the moon to galaxies and more.</p>
+                {% assign count = 0 %}
+                {% assign videos_to_feature = site.videos | sort: 'date' | reverse | limit: 1 %}
+                {% for post in videos_to_feature %}      
+                {% if count < 2 %}
+                <p class="text-center">
+                    <a href="{{ site.baseurl }}{{ post.url}}" alt="{{ post.description }}">
+                        <img class="card-img" src="{% if post.image contains "://" %}{{ post.image }}{% else %}{{ site.baseurl }}/{{ post.image }}{% endif %}">
+                        <strong>{{ post.date | date_to_string }}</strong>&mdash;{{ post.title }}
+                    </a>
+                </p>
+                {% endif %}
+                {% assign count = count | plus: 1 %}
+                {% endfor %}                
+            </div>
+        </div>
+        <div class="card bg-dark">
+            <div class="card-header bg-light">
+                <h3 class="card-title text-center">
+                    <i class="fa fa-toolbox"></i> Resources and Tools
+                </h3>
+            </div>
+            <div class="card-body text-justify p-1">
+                <p class="card-text">Whether you are just getting started with astrophotography,
+                    or you are a seasoned veteran, you may find something useful in the <a href="{{ site.baseurl }}/resources">resources and tools</a> section.
+                    I have compiled a list of my favorite software, websites, and other resources that I use to plan, capture, and process my images.</p>                
+                <p class="badge badge-secondary w-100 text-center">___</p>
+                <p class="card-text"><strong>Did you know?</strong> I am available to present astrophotography-related topics, provide training,
+                help you troubleshoot your equipment, and more. If you are hosting a silent auction and are interested in one of my prints,
+                if you want to show your children what Saturn looks like in a powerful telescope or if your group is interested 
+                in a <a href="{{ site.baseurl }}/my-first-viewing-party-copy/">star party</a>, reach out! <a href="https://deepskyworkflows.shootproof.com/contact" title="Contact Jeremy Likness" target="_blank">Contact me</a> for more information.
+                </p>
+            </div>
         </div>        
-    </section>
-
-    <section>
-        <div class="section-title">
-            <h2>Samples from the <a href="/gallery">astrophotography gallery</a></h2>            
-        </div>
-        {% include gallery-random.html %}          
-    </section>
-
-    <section class="featured-posts">
-        <div class="section-title">
-            <h2><span>Recent blog posts</span></h2>
-        </div>
-        <div class="row">
-        {% assign count = 0 %}
-        {% assign posts_to_feature = site.posts | sort: 'date' | reverse %}
-        {% for post in posts_to_feature %}      
-        {% assign count = count | plus: 1 %}
-        {% if count < 3 %}
-                {% include featuredbox.html %}
-        {% else %}
-            {% if count == 3 %}
-            <ul>
-            {% endif %}
-            {% if count <= 5 %}
-            <li>
-                {% assign href = site.baseurl | append: post.url %}
-                <a href="{{ href }}" alt="{{ post.description }}"
-                title="{{ post.description }}">
-                    <strong>{{ post.date | date_to_string }}</strong>&mdash;{{ post.title }}
-                </a>
-            </li>
-            {% endif %}
-        {% endif %}
-        {% endfor %}
-        </ul>
-        </div>
-        <strong>Explore posts by <a href="/categories">category</a>.</strong>
-    </section>
-
-    <section class="featured-posts">
-        <div class="section-title">
-            <h2><span>Recent videos</span></h2>
-        </div>
-        <div class="row">
-        {% assign count = 0 %}
-        {% assign videos_to_feature = site.videos | sort: 'date' | reverse | limit: 7 %}
-        {% for post in videos_to_feature %}      
-        {% assign count = count | plus: 1 %}
-        {% if count == 1 or count == 2  or count == 3 or count == 4 %}
-                {% include videobox.html %}
-        {% else %}
-            {% if count == 5 %}
-            <ul>
-            {% endif %}
-            {% if count <= 7 %}
-            <li>
-                <a href="{{ site.baseurl }}{{ post.url}}" alt="{{ post.description }}"
-                title="{{ post.description }}">
-                    <strong>{{ post.date | date_to_string }}</strong>&mdash;{{ post.title }}
-                </a>
-            </li>
-            {% endif %}
-        {% endif %}
-        {% endfor %}
-        </ul>
-        </div>
-        &raquo;<a href="/videos">See all videos</a>        
-    </section>
-
+    </div>
+    
 {% endif %}
 
 <section>

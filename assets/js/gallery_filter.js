@@ -20,7 +20,7 @@ sitemap: false
                 signature: false,
                 print: false,
                 archive: false,
-                filterExpanded: false
+                filterExpanded: true
             };
 
             const filter = {
