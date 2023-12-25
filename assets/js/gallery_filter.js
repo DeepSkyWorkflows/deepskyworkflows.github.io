@@ -441,7 +441,6 @@ sitemap: false
                             const image = images[idx];
                             const date = image.converted.firstCapture === image.converted.lastCapture ?
                                 image.firstCapture : `${image.firstCapture} - ${image.lastCapture}`;
-                            const weight = Math.floor(image.weight.total * 100);
                             if (!app.imageCache[image.folder]) {
                                 const html = app.template
                                     .replace('%div_id%', `div_${image.folder}`)
@@ -451,7 +450,7 @@ sitemap: false
                                     .replace('%content_id%', `con_${image.folder}`)
                                     .replace('%title%', image.title)
                                     .replace('%desc%', image.description)
-                                    .replace('%date%', `<a name="${image.folder}"/><a href="#${image.folder}" title="Link to image result"><i class="fas fa-link"></i></a>&nbsp;<span class="badge badge-info" title="Weight">${weight}</span> ${date}`)
+                                    .replace('%date%', `<a name="${image.folder}"/><a href="#${image.folder}" title="Link to image result"><i class="fas fa-link"></i></a>&nbsp; ${date}`)
                                     .replace('%content%', 'stuff');
                                 app.results.innerHTML += html;
                             } else {
