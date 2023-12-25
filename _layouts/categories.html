@@ -5,31 +5,36 @@ permalink: "/categories.html"
 ---
 
 {% assign categorylist = site.categories | sort %}
-
-<div class="row">
-    {% for category in categorylist %}
-    <a href="#{{ category[0] }}" class="w-auto">{{ category[0] }}</a>&nbsp;|&nbsp;
-    {% endfor %}
-</div>
-
-{% for category in categorylist %}
-    <div class="row list-recent">
-
-        <div class="section-title col-md-12 mt-4">
-            <h2 id="{{ category[0] | replace: " ","-" }}">Category: <span class="text-capitalize">{{ category[0] }}</span></h2>
-        </div>
-        <div class="card-deck">
-            {% assign pages_list = category[1] | sort: 'date' | reversed %}
-            {% for post in pages_list %}
-            {% if post.title != null %}
-            {% if group == null or group == post.group %}
-            {% include postbox_sm.html %}
-            {% endif %}
-            {% endif %}
-            {% endfor %}
-            {% assign pages_list = nil %}
-            {% assign group = nil %}          
-        </div>
+<div clcass="row">
+    <div class="col-12">
+        <a name="top"></a>
+        <h1 class="text-center">Categories</h1>
+        <p class="text-center">{% for category in categorylist %}<a href="#{{ category[0] | replace: " ","-" }}">{{ category[0] }}</a>{% unless forloop.last %} | {% endunless %}{% endfor %}
+        </p>
     </div>
-{% endfor %}
 </div>
+<div class="row">
+    <div class="col-12 card-deck">
+        {% for category in categorylist %}
+        <div class="card bg-dark m-1">
+            <a name="{{ category[0] | replace: " ","-" }}"></a>
+            <div class="card-header text-center">
+                <h5 class="card-title"><a href="/categories/{{ category[0] | replace: " ","-" }}">{{ category[0] }}</a></h5>
+            </div>
+            <div class="card-body bg-light">
+                <p class="card-text alert alert-info">{{ category[1].size }} posts</p>
+                {% assign pages_list = category[1] | sort: 'title' %}
+                {% for post in pages_list %}
+                {% if post.title != null %}
+                <p class="text-center small"><strong>
+                    <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
+                </strong></p>
+                {% endif %}
+                {% endfor %}
+                <p class="card-text text-right"><a href="#top">Back to top</a></p>
+            </div>
+        </div>        
+        {% endfor %}
+    </div>
+</div>
+

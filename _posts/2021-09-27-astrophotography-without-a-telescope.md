@@ -2,7 +2,7 @@
 layout: post
 title:  "Astrophotography without a telescope"
 author: deepskyworkflows
-categories: [ PixInsight, Sony Alpha, AstroPixel Processor, Topaz Labs, Camera-only astrophotography, Stacking ]
+categories: [ PixInsight, Sony Alpha 6300, AstroPixel Processor, Topaz Labs, Camera-only astrophotography, Stacking ]
 tags: [ m42 ]
 toc: true
 image: assets/images/gallery/orion/orion-annotated-fs.jpg

@@ -2,7 +2,7 @@
 layout: post
 title:  "2021 in Retrospective and Favorite Photos"
 author: deepskyworkflows
-categories: [ Retrospective ]
+categories: [ ]
 tags: [ m1, m13, ngc869, ngc884, orion, cassiopeia, m31, m33, moon, ic434, ngc2024, m27, ngc6960, ngc7023, jupiter, betelgeuse ]
 toc: true
 image: assets/images/2021-12-21/2021retrospective.jpg

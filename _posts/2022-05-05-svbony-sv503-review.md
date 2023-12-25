@@ -2,7 +2,7 @@
 layout: post
 title:  "Review: Svbony SV503 70ED refractor is inexpensive but not cheap"
 author: deepskyworkflows
-categories: [ Telescopes, Reviews, SVBony SV503]
+categories: [ Equipment ]
 tags: [ m31, m45, copernicus, ngc2024, ic434 ]
 toc: true
 image: assets/images/2022-05-05/blogbanner.png

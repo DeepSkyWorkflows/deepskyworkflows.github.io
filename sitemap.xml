@@ -24,6 +24,12 @@ layout: null
       <priority>1.0</priority>
   </url>
   <url>
+    <loc>{{ site.url }}/resources</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+  </url>
+  <url>
     <loc>{{ site.url }}/about</loc>
     <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
       <changefreq>weekly</changefreq>
@@ -79,7 +85,7 @@ layout: null
   </url>
   {% for image in site.gallery %}
     <url>
-      <loc>{{ site.url }}{{ image.url }}</loc>
+      <loc>{{ site.url }}{{ image.url }}/</loc>
       <image:image>
         <image:loc>{{ site.url }}/assets/images/gallery/{{ image.folder }}/{{ image.folder }}.jpg</image:loc>        
       </image:image>

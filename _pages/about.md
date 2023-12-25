@@ -31,6 +31,14 @@ image: "assets/images/logo.png"
     <li><strong>Cameras</strong> &mdash; ZWO ASI294MM Pro, ZWO ASI294MC Pro, ZWO ASI120MM-S</li>
     <li><strong>Mounts</strong> &mdash; ZWO AM5, Sky Watcher Star Adventurer GTi, Sky Watcher Star Adventurer Mini, Celestron CGEM-II</li>
 </ul>
+<a name="license"></a>
+<h1>How to use my images</h1>
+<p xmlns:cc="http://creativecommons.org/ns#" >This work is licensed under <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution-NonCommercial-NoDerivatives 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1"></a></p>
+<p>If you wish to use the work for commercial purposes, <a href="{{ site.galleryhome }}/contact" alt="Send me a message directly." title="Send me a message directly.">contact me</a> with the details.</p>
+<p>This license applies to all works on this site, syndication websites and anywhere the image may appear online. For other sites, this license is the default license unless the image was published <emphasis>by me and with my approval</emphasis> on another site, in which case the existence of a license there will replace this license. Examples of approved sites include: <a href="https://www.astrobin.com/users/DeepSkyWorkflows/" target="_blank">Astrobin under my profile</a>, <a href="https://deepskyworkflows.shootproof.com/" target="_blank">my galleries for print orders</a>, and <a href="https://earthsky.org/earthsky-community-photos/?filter_1_3=Jeremy&filter_1_6=Likness&mode=all" target="_blank">EarthSky.org under my profile</a>.
+<p>Examples of acceptable use: unmodified image as screensaver or desktop background (work or home); printed copy for personal use that will not be transferred, sold, or donated; used as part of a presentation for educational (not marketing) purposes.</p>
+<p>Examples of unacceptable use: alteration of any kind, including cropping or resizing; use as part of a corporate presentation; printed on metal for sale at a silent auction.</p>
+<p>Examples are not inclusive of all scenarios and are intended to represent common requests for use.</p>
 <p>Regards,</p>
 <p>Jeremy Likness</p>
 <p>{% include social.html %}</p>

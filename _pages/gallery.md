@@ -40,6 +40,9 @@ permalink: /gallery/
         <div class="alert alert-info">Initializing...</div>        
     </div>    
 </div>
+<div class="footer"><p xmlns:cc="http://creativecommons.org/ns#" >This work is licensed under <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution-NonCommercial-NoDerivatives 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1"></a></p>
+<p>If you wish to use the work for commercial purposes, <a href="{{ site.galleryhome }}/contact" alt="Send me a message directly." title="Send me a message directly.">contact me</a> with the details.</p>
+</div>
 
 <script id="basePrintUrl" type="text/template">{{site.galleryhome}}</script>
 

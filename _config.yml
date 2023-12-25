@@ -37,11 +37,11 @@ plugins:
     
 # Feed
 feed:
-  posts_limit: 999
+  posts_limit: 9999
   collections:
     gallery:
       path: "/gallery.xml"
-      posts_limit: 999
+      posts_limit: 9999
 
 # Archives
 jekyll-archives:
@@ -49,7 +49,7 @@ jekyll-archives:
     - categories
   layout: archive
   permalinks:
-    category: '/category/:name/'
+    category: '/categories/:name/'
 
 # Twitter
 twitter:

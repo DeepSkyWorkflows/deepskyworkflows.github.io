@@ -2,7 +2,7 @@
 layout: post
 title:  "To the Moon! Processing lunar images"
 author: deepskyworkflows
-categories: [ Lunar, Planetary, Image Processing, Telescopius, ASI Studio, PIPP, AutoStakkert, Atmospheric, Stellarium, Stellina, SharpCap, PixInsight, RegiStax ]
+categories: [ Lunar, Planetary, Image Processing, Telescopius, PIPP, AutoStakkert, Stellarium, Stellina, SharpCap, PixInsight, RegiStax ]
 tags: [moon, lunar]
 toc: true
 image: assets/images/2022-02-20/tothemoon.jpg

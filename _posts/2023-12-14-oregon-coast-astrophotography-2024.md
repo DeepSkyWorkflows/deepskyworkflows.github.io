@@ -2,8 +2,8 @@
 layout: post
 title:  "The Oregon Coast Astrophotography 2024 Calendar"
 author: deepskyworkflows
-categories: [ Deep Sky Products ]
-tags: [ m45 ]
+categories: [ ]
+tags: [ m45, Barnard 33, ngc2024, ngc1499, moon, otter rock, newport oregon, m1, ngc6888, ic63, ic64, milky way, m42, m43, ngc1977 ]
 toc: false
 image: assets/images/2023-12-14/2024calendar.jpg
 description: "The 2024 calendar shares print-quality photographs taken either of or from the Oregon Coast between Waldport and Otter Rock. It includes important dates such as elongations, oppositions, moon phases, super-moons, meteors, and even some star parties in the Pacific Northwest."
