@@ -7,7 +7,7 @@ description: "Shakedown of new scope and camera. About 45 minutes on the Androme
 signature: false
 archive: false
 image: "/assets/images/gallery/m31-shakedown/thumb.jpg"
-telescope: "Williams Optics Redcat 71"
+telescope: "William Optics Redcat 71"
 length: 350mm
 aperture: 71mm
 folder: m31-shakedown

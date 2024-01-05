@@ -7,7 +7,7 @@ description: "The double cluster is the beautiful pair of NGC869 (h Persei) and 
 signature: true
 archive: false
 image: "/assets/images/gallery/dub-perseus/thumb.jpg"
-telescope: "Williams Optics Redcat 71"
+telescope: "William Optics Redcat 71"
 length: 350mm
 aperture: 71mm
 group: "Abell 426"

@@ -7,7 +7,7 @@ description: "After a night of chasing a ghost in the sky, the morning star caug
 signature: false
 archive: false
 image: "/assets/images/gallery/big-venus/thumb.jpg"
-telescope: "Williams Optics Redcat 71"
+telescope: "William Optics Redcat 71"
 length: 450mm
 aperture: 71mm
 folder: big-venus

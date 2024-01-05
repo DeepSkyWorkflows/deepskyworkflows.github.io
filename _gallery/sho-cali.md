@@ -7,7 +7,7 @@ description: "Did you know that you can see California from the Oregon coast? He
 signature: false
 archive: false
 image: "/assets/images/gallery/sho-cali/thumb.jpg"
-telescope: "Williams Optics Redcat 71"
+telescope: "William Optics Redcat 71"
 length: 350mm
 aperture: 71mm
 folder: sho-cali

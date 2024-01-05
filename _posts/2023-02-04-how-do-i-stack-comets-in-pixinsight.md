@@ -7,7 +7,7 @@ tags: [ Comets ]
 toc: true
 image: assets/images/2023-02-04/how-to-process-comets-in-pixinsight.jpg
 description: "Do you have the same issue that I did? Despite doing things like splitting out stars to align separately, you always end up with star streaks. I finally figured out the simple, single step to do between star alignment and comet alignment that makes all the difference and produces streak-free comets for me every time (without having to split the lights). This post walks through the full end-to-end of processing comets in PixInsight."
-featured: true
+featured: false
 comments: true
 ---
 This post will dive straight into the solution. Everything covered here is shown in the video, [How to Process a Comet in PixInsight](/video/process-comet-pixinsight/).

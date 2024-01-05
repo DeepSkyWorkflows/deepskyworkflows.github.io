@@ -7,7 +7,7 @@ description: "I have a few targets in mind for the winter season, but for Thanks
 signature: false
 archive: false
 image: "/assets/images/gallery/christmas-in-space/thumb.jpg"
-telescope: "Williams Optics Redcat 71"
+telescope: "William Optics Redcat 71"
 length: 350mm
 aperture: 71mm
 folder: christmas-in-space

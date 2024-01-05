@@ -7,7 +7,7 @@ description: "I couldn't let a silly thing like clouds ruin my chance to photogr
 signature: true
 archive: false
 image: "/assets/images/gallery/cloudy-moon-newport/thumb.jpg"
-telescope: "Williams Optics Redcat 71"
+telescope: "William Optics Redcat 71"
 length: 800mm
 aperture: 71mm
 folder: cloudy-moon-newport

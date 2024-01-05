@@ -4,10 +4,10 @@ type: "Nebula"
 tags: ["The star Alnitak (ζ Ori)", "50 Ori", "The star σ Ori", "48 Ori", "IC431", "IC432", "IC434", "Flame Nebula", "Orion B", "IC435", "NGC2023", "NGC2024"]
 target: "The star Alnitak (ζ Ori)"
 description: "It's a popular and iconic region: the first star on the 'belt' of the Orion constellation, Alnitak. This beautiful, bright star is flanked by the distinctive Flame Nebula and easily recognizable Horsehead Nebula. I collected two nights of data with the goal of creating an image that captures the delicate details of the dust and gases that make up the nebulae in this area."
-signature: true
+signature: false
 archive: false
 image: "/assets/images/gallery/alnitak-belt/thumb.jpg"
-telescope: "Williams Optics Redcat 71"
+telescope: "William Optics Redcat 71"
 length: 350mm
 aperture: 71mm
 folder: alnitak-belt

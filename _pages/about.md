@@ -27,7 +27,7 @@ image: "assets/images/logo.png"
 <p>If you're interested to see what several years of astrophotography look like, sort the gallery by <a href="/gallery?sortBy=lastCapture&sortAscending=true">oldest items first</a>. Most gallery items have a set of related images that you can browse to see how my abilities have changed over time. </p>
 <p>My current gear list:</p>
 <ul>
-    <li><strong>Telescopes</strong> &mdash; Williams Optics RedCat 71 (350mm), Celestron EdgeHD 9.25" (2350mm), SvBony SV503 70ED (400mm)</li>
+    <li><strong>Telescopes</strong> &mdash; William Optics RedCat 71 (350mm), Celestron EdgeHD 9.25" (2350mm), SvBony SV503 70ED (400mm)</li>
     <li><strong>Cameras</strong> &mdash; ZWO ASI294MM Pro, ZWO ASI294MC Pro, ZWO ASI120MM-S</li>
     <li><strong>Mounts</strong> &mdash; ZWO AM5, Sky Watcher Star Adventurer GTi, Sky Watcher Star Adventurer Mini, Celestron CGEM-II</li>
 </ul>

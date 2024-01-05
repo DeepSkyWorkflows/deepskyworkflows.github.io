@@ -7,7 +7,7 @@ description: "A longer look at the Pleiades reveals the faint dust and tendrils 
 signature: true
 archive: false
 image: "/assets/images/gallery/dust/thumb.jpg"
-telescope: "Williams Optics Redcat 71"
+telescope: "William Optics Redcat 71"
 length: 350mm
 aperture: 71mm
 folder: dust

@@ -7,7 +7,7 @@ description: "About 30 minutes of the Pleiades while shaking down new rig."
 signature: false
 archive: false
 image: "/assets/images/gallery/m45-shakedown/thumb.jpg"
-telescope: "Williams Optics Redcat 71"
+telescope: "William Optics Redcat 71"
 length: 350mm
 aperture: 71mm
 folder: m45-shakedown

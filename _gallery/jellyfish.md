@@ -7,7 +7,7 @@ description: "The last target I chose for 2023 is a target I haven't attempted s
 signature: true
 archive: false
 image: "/assets/images/gallery/jellyfish/thumb.jpg"
-telescope: "Williams Optics Redcat 71"
+telescope: "William Optics Redcat 71"
 length: 350mm
 aperture: 71mm
 folder: jellyfish

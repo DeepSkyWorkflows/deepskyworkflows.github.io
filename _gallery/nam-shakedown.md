@@ -7,7 +7,7 @@ description: "Shakedown for first light with new rig. Limited window of sky at m
 signature: false
 archive: false
 image: "/assets/images/gallery/nam-shakedown/thumb.jpg"
-telescope: "Williams Optics Redcat 71"
+telescope: "William Optics Redcat 71"
 length: 350mm
 aperture: 71mm
 folder: nam-shakedown

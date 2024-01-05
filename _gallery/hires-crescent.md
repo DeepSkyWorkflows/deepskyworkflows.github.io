@@ -7,7 +7,7 @@ description: "Shakedown test: Lx60sx2, Rx180sx2, Gx180sx2, Bx180sx2, S2x300sx2, 
 signature: false
 archive: false
 image: "/assets/images/gallery/hires-crescent/thumb.jpg"
-telescope: "Williams Optics Redcat 71"
+telescope: "William Optics Redcat 71"
 length: 350mm
 aperture: 71mm
 folder: hires-crescent

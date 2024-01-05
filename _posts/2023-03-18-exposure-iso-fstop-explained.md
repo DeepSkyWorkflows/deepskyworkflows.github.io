@@ -7,7 +7,7 @@ tags: [ m31 ]
 toc: true
 image: assets/images/2023-03-18/pick-iso-fstop-exposure.jpg
 description: "You can take pictures of stars, clusters, galaxies and nebulae with nothing more than your camera. Learn how to set the right ISO, f-stop and exposure time to be successful."
-featured: true
+featured: false
 comments: true
 ---
 As much as I love looking through a powerful telescope, my astrophotography hobby began with a camera and I've always enjoyed taking wide angle shots as much as observing deep space objects. Taking pictures at night requires nothing more than a camera and a bit of knowledge to choose the right settings. A mount that tracks the stars may be ideal but is not necessary. For example, this shot of the [Andromeda galaxy peeking above storm clouds on the Oregon coast](/gallery/coast-stars-1) was taken with a Sony Alpha 6300 mirrorless camera mounted on a stationary tripod.

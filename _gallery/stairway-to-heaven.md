@@ -7,7 +7,7 @@ description: "Climbing the stairway to heaven... in this 11-hour capture of IC63
 signature: false
 archive: false
 image: "/assets/images/gallery/stairway-to-heaven/thumb.jpg"
-telescope: "Williams Optics Redcat 71"
+telescope: "William Optics Redcat 71"
 length: 350mm
 aperture: 71mm
 folder: stairway-to-heaven

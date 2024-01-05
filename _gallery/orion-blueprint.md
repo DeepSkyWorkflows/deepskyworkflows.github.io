@@ -7,7 +7,7 @@ description: "This is Orion's jeweled belt, the region around leftmost star Alni
 signature: true
 archive: false
 image: "/assets/images/gallery/orion-blueprint/thumb.jpg"
-telescope: "Williams Optics Redcat 71"
+telescope: "William Optics Redcat 71"
 length: 350mm
 aperture: 71mm
 folder: orion-blueprint

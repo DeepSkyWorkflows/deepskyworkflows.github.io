@@ -2,7 +2,7 @@
 layout: post
 title:  "Review: Svbony SV503 70ED refractor is inexpensive but not cheap"
 author: deepskyworkflows
-categories: [ Equipment ]
+categories: [ Equipment, Review ]
 tags: [ m31, m45, copernicus, ngc2024, ic434 ]
 toc: true
 image: assets/images/2022-05-05/blogbanner.png
@@ -12,7 +12,11 @@ hide: true
 comments: true
 ---
 
-I hadn't planned on purchasing the telescope. In September 2021, I decided it was time to "go big" with astrophotography and ordered a "rig" which is a synonym for putting a lot of money into various parts that can be cobbled together to take pretty space pictures. I'll save _that_ one for a different review. Due to the pandemic, shipments were delayed and the main telescope was indefinitely backordered. The mount was, too, but I chose to compromise and swap it with another, similar model. My mount arrived and I began taking awesome shots with my [Sony Alpha 6300](https://deepskyworkflows.com/gallery/?telescope=Sony%20ILCE-6300), but I couldn't help imagine what more I could be doing with a proper scope.
+I hadn't planned on purchasing the telescope. In September 2021, I decided it was time to "go big" with astrophotography and ordered a "rig" which is a synonym for putting a lot of money into various parts that can be cobbled together to take pretty space pictures. I'll save _that_ one for a different review. 
+
+> **New review**: be sure to check out my newer [William Optics Redcat 71 review](/william-optics-redcat-71-review) to see how the two scopes compare!
+
+Due to the pandemic, shipments were delayed and the main telescope was indefinitely backordered. The mount was, too, but I chose to compromise and swap it with another, similar model. My mount arrived and I began taking awesome shots with my [Sony Alpha 6300](https://deepskyworkflows.com/gallery/?telescope=Sony%20ILCE-6300), but I couldn't help imagine what more I could be doing with a proper scope.
 
 {% include blogimage.html url="scopeready.jpg" description="Getting ready to photograph with the Sony Alpha 6300 riding piggyback on the Svbony sv503 70ED with a ZWO ASI294MC Pro." half=false target=true %}
 
@@ -151,5 +155,7 @@ The cons:
 1. Too short focal length for planetary imaging
 
 ## Conclusion
+
+> **New review**: be sure to check out my newer [William Optics Redcat 71 review](/william-optics-redcat-71-review) to see how the two scopes compare!
 
 I couldn't be happier that my larger scope was delayed, because I should have started with this one. It provides a lot of mileage for a very affordable price. It is solidly built, lightweight, and portable. The combination of field reducer and Barlow lens provide a wide range of focal lengths from 336mm - 800mm making it ideal for everything from starfields and asterisms to galaxies and nebulae. It is also my favorite telescope to image the moon with and pairs nicely with both my mirrorless camera and my dedicated astrophotography camera. 

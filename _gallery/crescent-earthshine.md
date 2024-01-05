@@ -7,7 +7,7 @@ description: "Took a single exposure just long enough to reveal the detail illum
 signature: true
 archive: false
 image: "/assets/images/gallery/crescent-earthshine/thumb.jpg"
-telescope: "Williams Optics Redcat 71"
+telescope: "William Optics Redcat 71"
 length: 800mm
 aperture: 71mm
 folder: crescent-earthshine

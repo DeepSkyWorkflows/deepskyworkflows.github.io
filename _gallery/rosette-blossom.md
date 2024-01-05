@@ -7,7 +7,7 @@ description: "I dedicated an evening to capturing the Rosette Nebula with narrow
 signature: true
 archive: false
 image: "/assets/images/gallery/rosette-blossom/thumb.jpg"
-telescope: "Williams Optics Redcat 71"
+telescope: "William Optics Redcat 71"
 length: 350mm
 aperture: 71mm
 folder: rosette-blossom

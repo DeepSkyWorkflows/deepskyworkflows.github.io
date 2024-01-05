@@ -4,11 +4,11 @@ type: "Nebula"
 tags: ["The star Hatysa (ι Ori)", "44 Ori", "The star Mizan Batil I (c Ori)", "42 Ori", "The star Trapezium (θ1 Ori A)", "41 Ori A", "The star Mizan Batil II (θ2 Ori)", "43 Ori", "The star θ1 Ori C", "41 Ori C", "The star θ1 Ori D", "41 Ori D", "The star 45 Ori", "NGC1973", "NGC1975", "NGC1976", "Great Orion Nebula", "Orion Nebula", "M42", "NGC1977", "the Running Man Nebula", "NGC1980", "Lower Sword", "NGC1982", "Mairans Nebula", "M43"]
 target: "M42"
 description: "The exposures were few, but the rewards were many. This is M42: the Great Orion nebula, shot in SHO (sulfur, hydrogen, oxygen). Four 5-minute exposures per filter is exactly one-hour total integration time."
-signature: true
+signature: false
 archive: false
 image: "/assets/images/gallery/orion-in-sho/thumb.jpg"
-telescope: "Williams Optics Redcat 71"
-length: 800mm
+telescope: "William Optics Redcat 71"
+length: 348mm
 aperture: 71mm
 folder: orion-in-sho
 exposure: 300

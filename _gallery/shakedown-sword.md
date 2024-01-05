@@ -7,7 +7,7 @@ description: "The third of four pictures from my shakedown/first light test of t
 signature: false
 archive: false
 image: "/assets/images/gallery/shakedown-sword/thumb.jpg"
-telescope: "Williams Optics Redcat 71"
+telescope: "William Optics Redcat 71"
 length: 350mm
 aperture: 71mm
 folder: shakedown-sword
