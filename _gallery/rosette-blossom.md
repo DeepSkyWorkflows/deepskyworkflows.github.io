@@ -10,6 +10,7 @@ image: "/assets/images/gallery/rosette-blossom/thumb.jpg"
 telescope: "William Optics Redcat 71"
 length: 350mm
 aperture: 71mm
+astrobin: b2mpsm
 folder: rosette-blossom
 exposure: 300
 lights: 120

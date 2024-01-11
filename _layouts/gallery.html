@@ -90,6 +90,9 @@ layout: default
                     <span>🧭 Where is it? View this image via <a href="{{ page.wwt }}" target="_blank">World Wide
                         Telescope</a>.</span>
                 {% endif %}
+                {% if page.astrobin %}
+                    <span>👁 View on <a href="https://www.astrobin.com/{{ page.astrobin }}" target="_blank">Astrobin</a>.</span>
+                {% endif %}
             </p>
         </div>
 

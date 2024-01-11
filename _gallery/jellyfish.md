@@ -3,6 +3,7 @@ title: "The Jellyfish"
 type: "Nebula"
 tags: ["Part of the constellation Gemini (Gem)", "The star Propus", "Tejat Prior", "Praepes (η Gem)", "7 Gem", "The star Tejat", "Tejat Posterior", "Calx (μ Gem)", "13 Gem", "The star 8 Gem", "The star 9 Gem", "The star 12 Gem", "IC443", "Gem A", "IC444"]
 target: "IC444"
+astrobin: "5xuhq8"
 description: "The last target I chose for 2023 is a target I haven't attempted since March of 2021, and that captured nothing more than a hint of a sliver of what the structure should look like. Now that I dedicated several hours to the target, I have to admit it's a bit overwhelming. There is so much structure and detail. I rank this with the Cat's Eye Nebula in terms of difficulty to image and process, and suspect I'll want more data and will reprocess as I learn more. For now, this is my best effort with IC444: The Jellyfish Nebula."
 signature: true
 archive: false
