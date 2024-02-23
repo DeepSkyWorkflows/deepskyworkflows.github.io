@@ -4,7 +4,7 @@ type: Galaxy
 tags: ["NGC598","M33","NGC595","Triangulum Galaxy","Triangulum Pinwheel","NGC604"]
 description: M33, the Triangulum Galaxy, is sometimes mistakenly referred to as the Pinwheel Galaxy (that title is held by M101). It is one of the few galaxies visible to the naked eye.
 image: assets/images/gallery/m33/thumb.jpg
-printurl: /gallery/winter/photo/2688009038
+printurl: 
 telescope: Stellina
 length: "400mm"
 aperture: "80mm"

@@ -4,7 +4,7 @@ type: Lunar
 image: \assets\images\gallery\tycho\thumb.jpg
 tags: ["The moon", "moon"]
 description: A full color view of Tycho.
-printurl: /gallery/lunar/photo/2682978120
+printurl: 
 telescope: Celestron EdgeHD 9.25
 length: "3200mm"
 aperture: "235mm"

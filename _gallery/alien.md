@@ -4,7 +4,7 @@ type: Nebula
 tags: ["IC1340","NGC6979","NGC6992","NGC6995"]
 description: The thin, detailed fillaments that interwine to force a complex interplay of base colors are believed to be the surface of an expanding cloud seen edge-on. This is a massive target representing only a portion of the large Cygnus Loop, the remnants of the explosion of a star 20 times more massive than the sun around 15,000 years ago.
 image: /assets/images/gallery/alien/thumb.jpg
-printurl: /gallery/20023740/photo/2681259352
+printurl: 
 telescope: Svbony sv503 70ED
 length: "568mm"
 aperture: "70mm"

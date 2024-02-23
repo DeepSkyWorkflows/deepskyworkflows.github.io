@@ -6,7 +6,7 @@ description: The elephant's trunk in a different palette.
 image: /assets/images/gallery/purpleelephant/thumb.jpg
 telescope: Celestron EdgeHD 9.25
 signature: true
-printurl: /gallery/20567050/photo/2761197149
+printurl: 
 wwt: http://www.worldwidetelescope.org/wwtweb/ShowImage.aspx?reverseparity=False&scale=1.428195&name=purpleelphant.jpg&imageurl=https://deepskyworkflows.com/assets/images/gallery/purpleelephant/purpleelephant.jpg&credits=Jeremy+Likness+at+DeepSkyWorkflows.com&creditsUrl=https://deepskyworkflows.com&ra=322.955470&dec=57.198888&x=1459.3&y=768.5&rotation=-48.39&thumb=https://deepskyworkflows.com/assets/images/gallery/purpleelephant/thumb.jpg
 length: "1645mm"
 aperture: "235mm"

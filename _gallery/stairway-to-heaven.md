@@ -18,7 +18,7 @@ firstCapture: 2023-10-06
 lastCapture: 2023-10-06
 group: "ic63"
 wwt: http://www.worldwidetelescope.org/wwtweb/ShowImage.aspx?reverseparity=True&scale=0.686541&name=stairway-to-heaven.jpg&imageurl=https://deepskyworkflows.com/assets/images/gallery/stairway-to-heaven/stairway-to-heaven.jpg&credits=Jeremy+Likness+at+DeepSkyWorkflows.com&creditsUrl=https://deepskyworkflows.com/about&ra=15.703037&dec=60.862338&x=1830.7&y=1610.1&rotation=309.86&thumb=https://deepskyworkflows.com/assets/images/gallery/stairway-to-heaven/thumb.jpg
-printurl: /gallery/20567050/photo/3195282449
+printurl: 
 ra: 0h 59m 11.0s
 dec: "+61° 00' 01.485"
 size: "088.80 x 066.60 arcmin"

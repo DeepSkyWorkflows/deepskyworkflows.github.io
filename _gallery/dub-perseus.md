@@ -18,7 +18,7 @@ sessions: 1
 firstCapture: 2023-11-24
 lastCapture: 2023-11-24
 wwt: http://www.worldwidetelescope.org/wwtweb/ShowImage.aspx?reverseparity=False&scale=1.529117&name=dub-perseus.jpg&imageurl=https://deepskyworkflows.com/assets/images/gallery/dub-perseus/dub-perseus.jpg&credits=Jeremy+Likness+at+DeepSkyWorkflows.com&creditsUrl=https://deepskyworkflows.com/about&ra=35.526702&dec=56.899328&x=2750.1&y=2037.9&rotation=-1.38&thumb=https://deepskyworkflows.com/assets/images/gallery/dub-perseus/thumb.jpg
-printurl: /gallery/20567050/photo/3160001525
+printurl: 
 ra: 2h 20m 01.3s
 dec: "+57° 07' 17.214"
 size: "106.80 x 076.20 arcmin"

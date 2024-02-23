@@ -17,6 +17,6 @@ sessions: 1
 firstCapture: 2023-09-28
 lastCapture: 2023-09-28
 group: "fullmoon"
-printurl: /gallery/lunar/photo/3195248698
+printurl: 
 noannotations: true
 ---

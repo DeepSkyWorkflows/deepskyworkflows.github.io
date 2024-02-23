@@ -18,7 +18,7 @@ firstCapture: 2022-11-14
 lastCapture: 2022-11-14
 group: "cadwell49"
 wwt: http://www.worldwidetelescope.org/wwtweb/ShowImage.aspx?reverseparity=False&scale=1.893093&name=rosette3d.jpg&imageurl=https://deepskyworkflows.com/assets/images/gallery/rosette3d/rosette3d.jpg&credits=Jeremy+Likness+at+DeepSkyWorkflows.com+(All+Rights+Reserved)&creditsUrl=&ra=98.240961&dec=5.073146&x=2065.2&y=2230.0&rotation=-151.51&thumb=https://deepskyworkflows.com/assets/images/gallery/rosette3d/thumb.jpg
-printurl: /gallery/20023740/photo/2681259297
+printurl: 
 ra: 6h 32m 06.3s
 dec: "+04° 56' 21.859"
 size: "145.20 x 114.44 arcmin"

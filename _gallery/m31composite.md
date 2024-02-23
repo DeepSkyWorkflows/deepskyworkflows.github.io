@@ -5,7 +5,7 @@ tags: ["Andromeda Galaxy","M110","M31","M32","NGC205","NGC221","NGC224"]
 description: A detailed capture taken by composing multiple exposures and filters.
 image: /assets/images/gallery/m31composite/thumb.jpg
 telescope: Svbony sv503 70ED
-printurl: /gallery/20023740/photo/2681717343
+printurl: 
 length: "336mm"
 aperture: "70mm"
 folder: m31composite

@@ -18,7 +18,7 @@ firstCapture: 2023-11-17
 lastCapture: 2023-11-17
 group: "m42"
 wwt: http://www.worldwidetelescope.org/wwtweb/ShowImage.aspx?reverseparity=False&scale=1.372818&name=orion-in-sho.jpg&imageurl=https://deepskyworkflows.com/assets/images/gallery/orion-in-sho/orion-in-sho.jpg&credits=Jeremy+Likness+at+DeepSkyWorkflows.com&creditsUrl=https://deepskyworkflows.com/about&ra=84.159077&dec=-4.860687&x=1293.4&y=3598.9&rotation=175.94&thumb=https://deepskyworkflows.com/assets/images/gallery/orion-in-sho/thumb.jpg
-printurl: /gallery/20567050/photo/3160004624
+printurl: 
 ra: 5h 35m 34.4s
 dec: "-05° 20' 17.825"
 size: "094.80 x 109.80 arcmin"

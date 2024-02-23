@@ -7,7 +7,7 @@ image: /assets/images/gallery/platowide/thumb.jpg
 telescope: Celestron EdgeHD 9.25
 length: "2350mm"
 aperture: "235mm"
-printurl: /gallery/20038859/photo/2735061152
+printurl: 
 group: plato
 folder: platowide
 exposure: 0.001

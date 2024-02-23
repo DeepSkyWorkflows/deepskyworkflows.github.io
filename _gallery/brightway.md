@@ -16,6 +16,6 @@ lights: 5
 sessions: 1
 firstCapture: 2023-08-11
 lastCapture: 2023-08-11
-printurl: /gallery/21781514/photo/3031290472
+printurl: 
 noannotations: true
 ---

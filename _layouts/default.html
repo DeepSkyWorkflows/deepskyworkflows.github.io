@@ -81,10 +81,6 @@
                 {% endif %}
                 <a class="nav-link" href="{{ site.baseurl }}/about"><i class="fa fa-address-card"></i> About</a>
                 </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" target="_blank" href="{{ site.galleryhome }}">🛒 Print Shop</a>
-                </li>
         
                 {% if page.url contains "/messier" %}
                 <li class="nav-item active">
@@ -118,6 +114,7 @@
 <!-- Site Title
 ================================================== -->
 <div class="mainheading">
+    <a href="https://dswgalleries.com" target="_blank"><img src="{{ site.baseurl }}/assets/images/dswwhite.png" alt="DSW Galleries, LLC" class="img-fluid" style="margin-bottom: 10px; max-height: 100px; margin-top: 10px; float: right;"/></a>
     <h1 class="sitetitle">{{ site.name }}</h1>
     <p class="lead">
         {{ site.description }}
@@ -138,7 +135,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-5 col-sm-5 text-center text-lg-left">
-                Copyright © {{ site.time | date: "%Y" }} {{ site.name }} 
+                Copyright © {{ site.time | date: "%Y" }} <a href="https://www.dswgalleries.com/" target="_blank">DSW Galleries, LLC</a> 
                 ⚠ <a href="https://github.com/DeepSkyWorkflows/deepskyworkflows.github.io/issues/new">Report an issue with the site</a>
             </div>
             <div class="col-md-2 col-sm-2 text-center text-lg-center">

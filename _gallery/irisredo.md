@@ -8,7 +8,7 @@ telescope: Celestron EdgeHD 9.25
 wwt: http://www.worldwidetelescope.org/wwtweb/ShowImage.aspx?reverseparity=False&scale=0.546349&name=irisredo.jpg&imageurl=https://deepskyworkflows.com/assets/images/gallery/irisredo/irisredo.jpg&credits=Jeremy+Likness+at+DeepSkyWorkflows.com&creditsUrl=https://deepskyworkflows.com&ra=315.164771&dec=67.893372&x=199.2&y=1618.5&rotation=-64.33&thumb=https://deepskyworkflows.com/assets/images/gallery/irisredo/thumb.jpg
 length: "1645mm"
 signature: true
-printurl: /gallery/20567050/photo/2749463322
+printurl: 
 aperture: "235mm"
 folder: irisredo
 group: "ngc7023"

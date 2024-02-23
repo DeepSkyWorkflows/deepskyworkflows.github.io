@@ -18,7 +18,7 @@ firstCapture: 2022-11-14
 lastCapture: 2022-11-14
 group: "cadwell49"
 wwt: http://www.worldwidetelescope.org/wwtweb/ShowImage.aspx?reverseparity=False&scale=1.578823&name=rosecomplete.jpg&imageurl=https://deepskyworkflows.com/assets/images/gallery/rosecomplete/rosecomplete.jpg&credits=Jeremy+Likness+at+DeepSkyWorkflows.com&creditsUrl=&ra=98.240334&dec=5.073447&x=2223.4&y=2553.1&rotation=-151.50&thumb=https://deepskyworkflows.com/assets/images/gallery/rosecomplete/thumb.jpg
-printurl: /gallery/20023740/photo/2735060757
+printurl: 
 ra: 6h 31m 59.9s
 dec: "+04° 58' 37.809"
 size: "136.81 x 110.52 arcmin"

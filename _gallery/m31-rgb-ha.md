@@ -8,7 +8,7 @@ telescope: Svbony sv503 70ED
 length: "336mm"
 aperture: "70mm"
 wwt: http://www.worldwidetelescope.org/wwtweb/ShowImage.aspx?reverseparity=True&scale=1.431833&name=m31-rgb-ha.jpg&imageurl=https://deepskyworkflows.com/assets/images/gallery/m31-rgb-ha/m31-rgb-ha.jpg&credits=Jeremy+Likness+at+DeepSkyWorkflows.com&creditsUrl=https://deepskyworkflows.com/&ra=10.672543&dec=40.610179&x=3921.5&y=3614.6&rotation=377.56&thumb=https://deepskyworkflows.com/assets/images/gallery/m31-rgb-ha/thumb.jpg
-printUrl: /gallery/20567050/photo/3031841882
+printurl: 
 signature: true
 group: m31
 folder: m31-rgb-ha

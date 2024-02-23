@@ -5,7 +5,7 @@ tags: ["The moon"]
 description: An image of the moon captured during the day, several hours before sunset.
 image: assets/images/gallery/day-moon/thumb.jpg
 telescope: Svbony sv503 70ED
-printurl: /gallery/lunar/photo/2682978034
+printurl: 
 length: "420mm"
 signature: true
 aperture: "70mm"

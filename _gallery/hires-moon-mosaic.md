@@ -9,7 +9,7 @@ length: "2350mm"
 aperture: "235mm"
 wwt: 
 signature: true
-printurl: /gallery/lunar/photo/3148394334
+printurl: 
 group:
 folder: hires-moon-mosaic
 exposure: 0.01

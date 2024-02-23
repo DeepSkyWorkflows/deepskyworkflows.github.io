@@ -18,7 +18,7 @@ firstCapture: 2023-11-17
 lastCapture: 2023-11-17
 group: "m42"
 wwt: http://www.worldwidetelescope.org/wwtweb/ShowImage.aspx?reverseparity=False&scale=1.372863&name=da-sword.jpg&imageurl=https://deepskyworkflows.com/assets/images/gallery/da-sword/da-sword.jpg&credits=Jeremy+Likness+at+DeepSkyWorkflows.com&creditsUrl=https://deepskyworkflows.com/about&ra=84.131123&dec=-5.746160&x=1095.9&y=1564.6&rotation=-179.54&thumb=https://deepskyworkflows.com/assets/images/gallery/da-sword/thumb.jpg
-printurl: /gallery/20567050/photo/3209800573
+printurl: 
 ra: 5h 35m 09.8s
 dec: "-05° 24' 56.521"
 size: "091.20 x 111.00 arcmin"

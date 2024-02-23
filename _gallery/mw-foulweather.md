@@ -8,7 +8,7 @@ signature: true
 archive: false
 image: "/assets/images/gallery/mw-foulweather/thumb.jpg"
 telescope: "Sony ILCE-6300"
-printurl: /gallery/23270295/photo/3161539426
+printurl: 
 length: 12mm
 aperture: 6mm
 folder: mw-foulweather

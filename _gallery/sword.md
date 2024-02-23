@@ -7,7 +7,7 @@ image: /assets/images/gallery/sword/thumb.jpg
 telescope: Svbony sv503 70ED
 length: "336mm"
 aperture: "70mm"
-printurl: /gallery/20023740/photo/2693811906
+printurl: 
 wwt: http://www.worldwidetelescope.org/wwtweb/ShowImage.aspx?reverseparity=False&scale=1.878525&name=sword.jpg&imageurl=https://deepskyworkflows.com/assets/images/gallery/sword/sword.jpg&credits=Jeremy+Likness+at+DeepSkyWorkflows.com+(All+Rights+Reserved)&creditsUrl=&ra=83.871006&dec=-4.621081&x=1023.0&y=1472.1&rotation=88.11&thumb=https://deepskyworkflows.com/assets/images/gallery/sword/thumb.jpg
 signature: true
 nostars: true

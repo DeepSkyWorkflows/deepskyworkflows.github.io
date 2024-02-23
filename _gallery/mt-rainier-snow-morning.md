@@ -9,7 +9,7 @@ length: "135mm"
 aperture: "72mm"
 wwt: 
 signature: true
-printurl: /gallery/20251431/photo/3148408830
+printurl: 
 group:
 folder: mt-rainier-snow-morning
 exposure: 

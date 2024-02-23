@@ -19,7 +19,7 @@ firstCapture: 2024-01-17
 lastCapture: 2024-01-17
 group: "m45"
 wwt: http://www.worldwidetelescope.org/wwtweb/ShowImage.aspx?reverseparity=False&scale=1.240917&name=m45-stacked.jpg&imageurl=https://deepskyworkflows.com/assets/images/gallery/m45-stacked/m45-stacked.jpg&credits=Jeremy+Likness+at+DeepSkyWorkflows.com&creditsUrl=https://deepskyworkflows.com/about&ra=56.655086&dec=24.071226&x=2420.8&y=2010.1&rotation=-148.24&thumb=https://deepskyworkflows.com/assets/images/gallery/m45-stacked/thumb.jpg
-printurl: /gallery/evolution/photo/3222704607
+printurl: 
 ra: 3h 46m 36.3s
 dec: "+24° 06' 34.264"
 size: "102.60 x 087.00 arcmin"

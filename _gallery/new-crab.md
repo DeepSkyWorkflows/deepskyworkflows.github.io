@@ -20,7 +20,7 @@ firstCapture: 2023-10-29
 lastCapture: 2023-10-29
 group: "m1"
 wwt: http://www.worldwidetelescope.org/wwtweb/ShowImage.aspx?reverseparity=False&scale=0.142749&name=new-crab.jpg&imageurl=https://deepskyworkflows.com/assets/images/gallery/new-crab/new-crab.jpg&credits=Jeremy+Likness+at+DeepSkyWorkflows.com&creditsUrl=https://deepskyworkflows.com/about&ra=83.589594&dec=22.097484&x=5032.5&y=5114.4&rotation=-178.91&thumb=https://deepskyworkflows.com/assets/images/gallery/new-crab/thumb.jpg
-printurl: /gallery/evolution/photo/3196052851
+printurl: 
 ra: 5h 34m 31.7s
 dec: "+22° 00' 46.126"
 size: "019.00 x 014.30 arcmin"

@@ -8,7 +8,7 @@ telescope: Celestron EdgeHD 9.25
 length: "1645mm"
 aperture: "235mm"
 folder: whirlpool
-printurl: /gallery/20023740/photo/2681717367
+printurl: 
 group: "m51"
 exposure: 150
 lights: 52

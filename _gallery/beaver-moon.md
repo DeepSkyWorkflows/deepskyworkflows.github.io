@@ -18,6 +18,6 @@ sessions: 1
 firstCapture: 2023-11-27
 lastCapture: 2023-11-27
 group: "fullmoon"
-printurl: /gallery/20038859/photo/3159999957
+printurl: 
 noannotations: true
 ---

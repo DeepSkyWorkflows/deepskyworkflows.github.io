@@ -7,7 +7,7 @@ image: /assets/images/gallery/ghost2/thumb.jpg
 telescope: Celestron EdgeHD 9.25
 signature: true
 wwt: http://www.worldwidetelescope.org/wwtweb/ShowImage.aspx?reverseparity=True&scale=1.064701&name=ghost2.jpg&imageurl=https://deepskyworkflows.com/assets/images/gallery/ghost2/ghost2.jpg&credits=Astrometry.net+User+(All+Rights+Reserved)&creditsUrl=&ra=15.330611&dec=60.597351&x=1030.7&y=2378.5&rotation=330.14&thumb=https://deepskyworkflows.com/assets/images/gallery/ghost2/thumb.jpg
-printurl: /gallery/20023740/photo/2693812679
+printurl: 
 length: "1645mm"
 aperture: "235mm"
 group: ic63

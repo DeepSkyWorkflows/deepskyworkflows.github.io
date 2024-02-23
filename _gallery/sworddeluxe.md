@@ -7,7 +7,7 @@ image: /assets/images/gallery/sworddeluxe/thumb.jpg
 signature: true
 group: m42
 nostars: true
-printurl: /gallery/20023740/photo/2693811906
+printurl: 
 wwt: http://www.worldwidetelescope.org/wwtweb/ShowImage.aspx?reverseparity=False&scale=1.699258&name=sworddeluxe.jpg&imageurl=https://deepskyworkflows.com/assets/images/gallery/sworddeluxe/thumb.jpg&credits=Jeremy+Likness+at+DeepSkyWorkflows.com&creditsUrl=&ra=83.811170&dec=-4.955250&x=2194.3&y=1918.2&rotation=88.12&thumb=https://deepskyworkflows.com/assets/images/gallery/sworddeluxe/thumb.jpg
 telescope: Svbony sv503 70ED
 length: "336mm"

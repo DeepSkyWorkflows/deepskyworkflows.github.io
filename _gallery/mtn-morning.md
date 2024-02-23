@@ -9,7 +9,7 @@ length: "336mm"
 aperture: "70mm"
 wwt: 
 signature: true
-printUrl: /gallery/20251431/photo/3149528761
+printurl: 
 group:
 folder: mtn-morning
 exposure: 

@@ -6,7 +6,7 @@ description: A Wizard, closely. This is a zoom on the 'upper torso' of the large
 image: /assets/images/gallery/newwizard/thumb.jpg
 telescope: Celestron EdgeHD 9.25
 signature: true
-printurl: /gallery/20567050/photo/2761197131
+printurl: 
 wwt: http://www.worldwidetelescope.org/wwtweb/ShowImage.aspx?reverseparity=True&scale=0.285129&name=newwizard.jpg&imageurl=https://deepskyworkflows.com/assets/images/gallery/newwizard/newwizard.jpg&credits=Jeremy+Likness+at+DeepSkyWorkflows.com&creditsUrl=https://deepskyworkflows.com/&ra=342.346738&dec=58.081907&x=6148.7&y=4982.3&rotation=492.08&thumb=https://deepskyworkflows.com/assets/images/gallery/newwizard/thumb.jpg
 length: "1645mm"
 aperture: "235mm"

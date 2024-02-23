@@ -8,7 +8,7 @@ telescope: Celestron EdgeHD 9.25
 length: "1645mm"
 aperture: "235mm"
 signature: true
-printurl: /gallery/20023740/photo/2682147162
+printurl: 
 folder: eye
 group: ngc7293
 wwt: http://www.worldwidetelescope.org/wwtweb/ShowImage.aspx?reverseparity=False&scale=0.382887&name=eye.jpg&imageurl=https://deepskyworkflows.com/assets/images/gallery/eye/eye.jpg&credits=Jeremy+Likness+at+DeepSkyWorkflows.com+(All+Rights+Reserved)&creditsUrl=&ra=337.306146&dec=-20.792570&x=3336.8&y=1378.8&rotation=-146.24&thumb=https://deepskyworkflows.com/assets/images/gallery/eye/thumb.jpg

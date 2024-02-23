@@ -9,7 +9,7 @@ length: "1645mm"
 aperture: "235mm"
 wwt: http://www.worldwidetelescope.org/wwtweb/ShowImage.aspx?reverseparity=False&scale=0.374699&name=bluethor.jpg&imageurl=https://deepskyworkflows.com/assets/images/gallery/bluethor/bluethor.jpg&credits=Jeremy+Likness+at+DeepSkyWorkflows.com+(All+Rights+Reserved)&creditsUrl=&ra=109.671985&dec=-13.192641&x=2715.2&y=1523.4&rotation=84.99&thumb=https://deepskyworkflows.com/assets/images/gallery/bluethor/thumb.jpg
 folder: bluethor
-printurl: /gallery/20567050/photo/2749440879
+printurl: 
 signature: true
 group: thor
 exposure: 300       

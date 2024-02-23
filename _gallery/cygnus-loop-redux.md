@@ -15,7 +15,7 @@ telescope: Svbony sv503 70ED
 length: "336mm"
 aperture: "70mm"
 wwt: http://www.worldwidetelescope.org/wwtweb/ShowImage.aspx?reverseparity=False&scale=2.155571&name=cygnus-loop-redux.jpg&imageurl=https://deepskyworkflows.com/assets/images/gallery/cygnus-loop-redux/cygnus-loop-redux.jpg&credits=Jeremy+Likness+at+DeepSkyWorkflows.com&creditsUrl=https://deepskyworkflows.com/&ra=312.480000&dec=31.089220&x=2462.1&y=2416.9&rotation=-146.03&thumb=https://deepskyworkflows.com/assets/images/gallery/cygnus-loop-redux/thumb.jpg
-printurl: /gallery/20567050/photo/3074798828
+printurl: 
 signature: true
 group: cygnus
 folder: cygnus-loop-redux

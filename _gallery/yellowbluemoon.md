@@ -16,6 +16,6 @@ lights: 1
 sessions: 1
 firstCapture: 2022-09-07
 lastCapture: 2022-09-07
-printurl: /gallery/lunar/photo/2682978140
+printurl: 
 noannotations: true
 ---

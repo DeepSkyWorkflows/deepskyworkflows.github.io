@@ -4,7 +4,7 @@ type: Lunar
 image: \assets\images\gallery\floating-moon\thumb.jpg
 tags: ["The moon", "moon", Full Moons]
 description: "This image of the moon was stacked from multiple images taken while it was behind clouds. The detail of the moon popped out to make it appear to float above the clouds."
-printurl: /gallery/lunar/photo/2682978032
+printurl: 
 telescope: Svbony sv503 70ED
 length: "336mm"
 signature: true

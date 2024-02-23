@@ -9,7 +9,7 @@ length: "12mm"
 aperture: "6mm"
 wwt: 
 signature: true
-printUrl: /gallery/21781514/photo/3031286553
+printurl: 
 group:
 folder: tallest-milkyway
 exposure: 45 

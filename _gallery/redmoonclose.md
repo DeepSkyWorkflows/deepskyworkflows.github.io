@@ -5,7 +5,7 @@ tags: ["Moon"]
 description: A detailed shot of a crescent moon turned red by smoke from forest fires.
 image: /assets/images/gallery/redmoonclose/thumb.jpg
 telescope: Celestron EdgeHD 9.25
-printurl: /gallery/20023740/photo/2681717328
+printurl: 
 length: "1645mm"
 aperture: "235mm"
 folder: redmoonclose

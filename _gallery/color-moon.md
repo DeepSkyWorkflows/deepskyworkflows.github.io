@@ -5,7 +5,7 @@ image: \assets\images\gallery\color-moon\thumb.jpg
 tags: ["The moon", "moon"]
 description: A full color almost full moon.
 telescope: Celestron EdgeHD 9.25
-printurl: /gallery/lunar/photo/2682977949
+printurl: 
 signature: true
 length: "1635mm"
 aperture: "235mm"

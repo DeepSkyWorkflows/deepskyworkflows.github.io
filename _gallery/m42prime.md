@@ -5,7 +5,7 @@ tags: ["41 Ori A","41 Ori C","41 Ori D","43 Ori","Great Orion Nebula","M42","M43
 description: It's a popular target, but it never gets old. Although I've visited the Great Orion Nebula (M42) and de Mairan's Nebula (M43) many times before, I believe this is my most detailed capture yet. The data is from two sessions with Stellina taken exactly one year apart on March 4th, 2021, and 2022. I sifted by hand through over 700 10-second captures to cull it down to around 560 of the 'cleanest', stacked it in AstroPixel Processor and processed it in PixInsight. 
 image: /assets/images/gallery/m42prime/thumb.jpg
 telescope: Stellina
-printurl: /gallery/20023740/photo/2735060756
+printurl: 
 nostars: true
 wwt: http://www.worldwidetelescope.org/wwtweb/ShowImage.aspx?reverseparity=False&scale=0.618861&name=m42prime.jpg&imageurl=https://deepskyworkflows.com/assets/images/gallery/m42prime/m42prime.jpg&credits=Jeremy+Likness+at+DeepSkyWorkflows.com&creditsUrl=&ra=83.506908&dec=-5.712367&x=4238.2&y=841.5&rotation=179.30&thumb=https://deepskyworkflows.com/assets/images/gallery/m42prime/thumb.jpg
 signature: true

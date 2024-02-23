@@ -17,6 +17,6 @@ sessions: 1
 firstCapture: 2023-10-06
 lastCapture: 2023-10-06
 group: "milkyway"
-printurl: /gallery/21781514/photo/3077060949
+printurl: 
 noannotations: true
 ---

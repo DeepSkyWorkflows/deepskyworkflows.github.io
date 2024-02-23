@@ -18,7 +18,7 @@ firstCapture: 2023-11-27
 lastCapture: 2023-11-27
 group: "ori-belt"
 wwt: http://www.worldwidetelescope.org/wwtweb/ShowImage.aspx?reverseparity=False&scale=1.372944&name=alnitak-belt.jpg&imageurl=https://deepskyworkflows.com/assets/images/gallery/alnitak-belt/alnitak-belt.jpg&credits=Jeremy+Likness+at+DeepSkyWorkflows.com&creditsUrl=https://deepskyworkflows.com/about&ra=85.259681&dec=-2.278773&x=2354.5&y=2090.4&rotation=63.87&thumb=https://deepskyworkflows.com/assets/images/gallery/alnitak-belt/thumb.jpg
-printurl: /gallery/20567050/photo/3160001540
+printurl: 
 ra: 5h 41m 25.1s
 dec: "-02° 23' 37.693"
 size: "125.40 x 091.80 arcmin"

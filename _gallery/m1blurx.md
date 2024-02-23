@@ -5,7 +5,7 @@ tags: ["M1","NGC1952"]
 description: The first nebula I photographed is also the first item in the Messier Catalog. M1, also referred to as the Crab Nebula, is the remnant of a supernova estimated to have occurred less than 10,000 years ago, with the light taking around 6500 yeas to reach us. At the center sits a spinning neutron star. I decided to revisit M1 as my project for the week. This is the result of 6 hours of exposure over three nights. Processed a second time with BlurXTerminator.
 image: /assets/images/gallery/m1blurx/thumb.jpg
 signature: true
-printurl: /gallery/20023740/photo/2735060751
+printurl: 
 telescope: Celestron EdgeHD 9.25
 length: "1645mm"
 aperture: "235mm"

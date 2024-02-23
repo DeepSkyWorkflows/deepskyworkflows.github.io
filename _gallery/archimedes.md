@@ -6,7 +6,7 @@ description: The prominent crater in the lower left is Archimedes. Apollo 15 lan
 image: /assets/images/gallery/archimedes/thumb.jpg
 telescope: Celestron EdgeHD 9.25
 length: "2350mm"
-printurl: /gallery/20038859/photo/2735061153
+printurl: 
 aperture: "235mm"
 folder: archimedes
 group: archimedes

@@ -8,7 +8,7 @@ telescope: Svbony sv503 70ED
 length: "336mm"
 aperture: "70mm"
 folder: horseflame
-printurl: /gallery/20023740/photo/2681259334
+printurl: 
 exposure: 300 
 group: ori-belt
 signature: true

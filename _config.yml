@@ -12,7 +12,7 @@ disqus: 'deep-sky-workflows'
 include: ["_pages", "_gallery", "_messier"]
 portfolios: ["Cayman Collection", "Comets", "Full moons", "Heybrook Lookout", "Monroe Washington", "Florissant Fossil Beds", "Index Washington", "Otter Rock", "Newport Oregon"]
 permalink: /:title/
-galleryhome: https://deepskyworkflows.shootproof.com
+galleryhome: https://dswgalleries.com
 
 venues:
 
@@ -25,7 +25,7 @@ authors:
     avatar: "assets/images/jeremyliknessavatar.jpg"
     email: deepskyworkflows@gmail.com
     web: https://deepskyworkflows.com/
-    description: "Amateur astronomer Jeremy Likness has always been interested in the mysteries of deep space, but only recently began to explore them through astrophotography."
+    description: "Astrophotographer Jeremy Likness has always been interested in the mysteries of deep space, but only recently began to explore them through astrophotography."
     picture: /assets/images/jeremyliknessavatar.jpg
 
 # Plugins

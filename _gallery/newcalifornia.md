@@ -6,7 +6,7 @@ description: WLike a billowing blanket let down across the sky, this textured re
 image: /assets/images/gallery/newcalifornia/thumb.jpg
 telescope: Svbony sv503 70ED
 signature: true
-printurl: /gallery/20567050/photo/2761197119
+printurl: 
 length: "336mm"
 aperture: "70mm"
 folder: newcalifornia
