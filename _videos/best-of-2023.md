@@ -10,5 +10,3 @@ description: "Hold on to your hats! We're going for a ride. 2023 was a breakout 
 ---
 
 This is a celebration of my favorite images from 2023. 
-
-Be sure to also check out my [Oregon Coast Astrophotography 2024 Calendar](/oregon-coast-astrophotography-2024/).

@@ -8,5 +8,3 @@ image: assets/images/videos/astro101.jpg
 youtubeid: qtRJJR4NIgY
 description: "The basics of astrophotography from image acquisition, polar alignment, guiding, and calibration through image processing."
 ---
-
-- Visit our [online print gallery](https://deepskyworkflows.shootproof.com)

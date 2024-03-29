@@ -10,8 +10,7 @@ permalink: /gallery/
 <a class="badge badge-info w-auto" href="{{ site.baseurl }}/tag/{{collection | strip | replace: ' ', '-' | remove: '(' | remove: ')' | downcase }}" title="{{collection}}" alt="{{collection}}">{{collection}}</a>
 {% endfor %}
 </div>
-<p>Use the filters to narrow your search. <strong>Signature</strong> images are my self-selected favorites. <strong>Print-ready</strong> images can be ordered online. If you are interested in an image that is not print-ready, <a href="{{site.galleryhome}}/contact" target="_blank">send us the link</a> and we'll set it up. In addition to astrophotography I have galleries with pictures of Mt. Rainier, the Pacific Ocean, and more. You can browse the print-ready galleries <a href="{{site.galleryhome}}" target="_blank">here</a> or jump straight to a category using the dropdown:</p>
-<div><script type="text/javascript">var _cb = parseInt(Math.random() * 99999999);document.write('<sc' + 'ript type="text/javascript" src="https://deepskyworkflows.shootproof.com/remote/chooser?events=1&email=0&language=en_US&cb=' + _cb + '"></sc' + 'ript>');</script></div>
+<p>Use the filters to narrow your search. <strong>Signature</strong> images are my self-selected favorites. <strong>Print-ready</strong> images can be ordered online. If you are interested in an image that is not print-ready, <a href="{{site.galleryhome}}/contact" target="_blank">send us the link</a> and we'll set it up. In addition to astrophotography I have galleries with pictures of Mt. Rainier, the Pacific Ocean, and more. Browse my <a href="https://dswgalleries.com/galleries" target="_blank">online galleries of astrophotography and Oregon coast landscape photography</a>.
 <div id="galleryMain">
     <a name="top"/>
     <div id="filters">

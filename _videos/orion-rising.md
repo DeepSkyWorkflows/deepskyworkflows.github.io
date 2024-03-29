@@ -10,4 +10,3 @@ description: "The footage of Orion I used to create the full Orion image from Gr
 ---
 
 - [Finished image: The Full Orion](/gallery/full-orion/)
-- [Orion prints of the Orion constellation](https://deepskyworkflows.shootproof.com/gallery/winter/photo/2688008993)
