@@ -42,3 +42,5 @@ Gear mentioned in this video:
 - [Coronado PST 40mm](https://www.highpointscientific.com/coronado-pst-personal-solar-telescope-060-1-0-angstrom-h-alpha-refractor-pst)
 - [ZWO AM5](https://www.highpointscientific.com/zwo-am5-harmonic-drive-equatorial-mount-am5)
 - [Gitzo Series 3](https://amzn.to/4cW0Es5)
+
+Affiliate links generate commission that helps pay for the cost of maintaining Deep Sky Workflows.
