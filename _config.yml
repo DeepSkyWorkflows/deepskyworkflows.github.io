@@ -9,12 +9,18 @@ url: https://deepskyworkflows.com
 # google_analytics: ''
 disqus: 'deep-sky-workflows'
 # mailchimp-list: ''
-include: ["_pages", "_gallery", "_messier"]
+include: ["_pages", "_gallery", "_exhibition", "_messier"]
 portfolios: ["Cayman Collection", "Comets", "Full moons", "Heybrook Lookout", "Monroe Washington", "Florissant Fossil Beds", "Index Washington", "Otter Rock", "Newport Oregon"]
 permalink: /:title/
-galleryhome: https://dswgalleries.com
+galleryhome: https://deepskyworkflows.com/exhibition/
 
 venues:
+  dsw:
+    name: "DSW Galleries, LLC (contact for details)"
+    start: "April 2024"
+    active: "true"
+    end: "indefinitely"
+    address: "Newport, Oregon 97365"
 
 # Authors
 authors:

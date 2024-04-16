@@ -10,7 +10,7 @@ permalink: /gallery/
 <a class="badge badge-info w-auto" href="{{ site.baseurl }}/tag/{{collection | strip | replace: ' ', '-' | remove: '(' | remove: ')' | downcase }}" title="{{collection}}" alt="{{collection}}">{{collection}}</a>
 {% endfor %}
 </div>
-<p>Use the filters to narrow your search. <strong>Signature</strong> images are my self-selected favorites. <strong>Print-ready</strong> images can be ordered online. If you are interested in an image that is not print-ready, <a href="{{site.galleryhome}}/contact" target="_blank">send us the link</a> and we'll set it up. In addition to astrophotography I have galleries with pictures of Mt. Rainier, the Pacific Ocean, and more. Browse my <a href="https://dswgalleries.com/galleries" target="_blank">online galleries of astrophotography and Oregon coast landscape photography</a>.
+<p>Use the filters to narrow your search. <strong>Signature</strong> images are my self-selected favorites. <strong>Printed</strong> images can be ordered online. If you are interested in an image that is not printed, <a href="https://dswgalleries./contact" target="_blank">send us the link</a> and we'll set it up. In addition to astrophotography I have galleries with pictures of Mt. Rainier, the Pacific Ocean, and more. Browse my <a href="https://dswgalleries.com/galleries" target="_blank">online galleries of astrophotography and Oregon coast landscape photography</a>.
 <div id="galleryMain">
     <a name="top"/>
     <div id="filters">
@@ -22,7 +22,7 @@ permalink: /gallery/
                 <span><button id="reset" class="btn btn-link btn-warning">Reset</button></span>
                 <span><input id="simplify" type="checkbox" title="Check to simplify the results and just show images."/> Simplify</span>
                 <span><input type="checkbox" id="signature" title="Check to filter signature series"/> Signature</span>
-                <span><input type="checkbox" id="print" title="Check to filter print-ready items"/> Print-ready</span>
+                <span><input type="checkbox" id="print" title="Check to filter printed items"/> Printed</span>
                 <span><input type="checkbox" id="archive" title="Click to view archived images"/> Archived</span>&nbsp;|&nbsp;
                 <span><label for="text" class="mr-1">Search text:</label><input id="text" type="text" placeholder="Enter text to search for"/></span>                
             </div>

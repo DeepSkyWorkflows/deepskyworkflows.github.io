@@ -6,7 +6,7 @@ layout: default
 {% assign mainImage = folderPath | append: page.Thumbnail %}
 {% assign fullsizeImage = folderPath | append: page.Fullsize %}
 {% assign annotated = folderPath | append: page.Annotated %}
-{% assign copyright = "Image &copy; 2022 Jeremy Likness. All rights reserved." %}
+{% assign copyright = "Image &copy; 2024 DSW Galleries LLC. All rights reserved." %}
 {% assign edition = page.Edition %}
 {% if edition == 1 %}
 {% assign edition = '🥇 1st Edition!' %}
@@ -52,6 +52,7 @@ layout: default
                         <img src="{{ mainImage }}" alt="{{ copyright }}"/>              
                     </a>
                 </p>  
+                <p>{{ copyright }}</p>
             </div>
             {% if page.IsAnnotated == true %}        
             <div class="row m-4">
@@ -75,41 +76,39 @@ layout: default
         </div>
     
         <div class="col-lg-8 col-sm-12">
-            <div class="row w-100">
-                <div class="col-sm-3 col-xs-12 piece-info">
-                    <div>{{edition}}</div>
-                    <div class="print">{{page.Print}}</div> 
-                    <div>{{page.Width}}" x {{page.Height}}"</div>
-                </div>
-                <div class="col-sm-6 col-xs-12 text-center">
-                    Every piece is personally signed and numbered and comes with a Bill of Sale 
-                    and a signed Certificate of Authenticity. Currently, only the pieces on display
-                    are for sale. Pickup will be arranged at the close of the exhibition. <strong>We do not ship.</strong>
-                </div>
-                <div class="col-sm-3 col-xs-12 text-right">
-                    <span class="price">${{ page.Price | value_format_name: decimal_2 }}</span>
-                    {% if page.Sold == true %}
-                    <button class="btn btn-warning" disabled>SOLD</button>
-                    {% else %}
-                    {% include addtocart.html PayPal=page.PayPal %}               
-                    {% include viewcart.html %}                 
-                    {% endif %}
-                </div>       
-            </div>
-            <div class="row">
-                <div class="col-12 text-justify">
-                    <p>This piece is on display at:</p>
-                    <ul>
-                    {% for location in page.Venues %}        
-                    {% assign currentVenue = site.venues[location] %}
-                    <li>
-                        <strong>{{ currentVenue.name }}</strong> &mdash; from {{ currentVenue.start}} to {{ currentVenue.end}}:
-                        <a href="https://www.google.com/maps/search/{{ currentVenue.address }}" target="_blank">{{ currentVenue.address }}</a>
-                    </li>
-                    {% endfor %}
-                    <p class="description">{{ page.description }}</p>
-                </div>
-            </div>
+            <h4>{{edition}} <span class="print">{{page.Print}}</span> <span>{{page.Width}}" x {{page.Height}}"</span></h4>
+            <p>
+                Every piece is personally signed and numbered and comes with a Bill of Sale 
+                and a signed Certificate of Authenticity. Currently, only the pieces on this website
+                are for sale. <a href="https://dswgalleries.com/contact" target="_blank">Contact us</a> for custom requests. 
+                Pickup will be arranged after payment is received, or at the close of the exhibition if the piece is being displayed. <strong>We do not ship.</strong>
+            </p>
+            {% if page.Images and page.Images.size > 0 %}
+            <p>Additional images:                 
+                {% for image in page.Images %}
+                <a href="{{ folderPath | append: image }}" target="_blank" title="Additional image">
+                    {{image}}
+                </a>
+                {% endfor %}
+            </p>
+            {% endif %}
+            <p>This piece is on display at:</p>
+            <ul>
+            {% for location in page.Venues %}        
+            {% assign currentVenue = site.venues[location] %}
+            <li>
+                <strong>{{ currentVenue.name }}</strong> &mdash; from {{ currentVenue.start}} to {{ currentVenue.end}}:
+                <a href="https://www.google.com/maps/search/{{ currentVenue.address }}" target="_blank">{{ currentVenue.address }}</a>
+            </li>
+            {% endfor %}
+            <p class="description">{{ page.description }}</p>
+            {% if page.Sold == true %}
+            <button class="btn btn-warning" disabled>SOLD</button>
+            {% else %}
+            {% include addtocart.html PayPal=page.PayPal %}               
+            {% include viewcart.html %}                 
+            {% endif %}
+        </p>
             <div class="row">
                 <div class="col-lg-5 col-sm-12">
                     {% if page.RA or page.Constellation %}
@@ -146,7 +145,7 @@ layout: default
                     <div class="row exhibition-capture">
                         {% if page.Telescope %}
                         <div class="col-6 text-right"><strong>Telescope or lens:</strong></div>
-                        <div class="col-6">{{ page.Telescope }}</div>
+                        <div class="col-6">{{ page.Telescope }} (<a href="/gallery?telescope={{ page.Telescope }}">see others</a>)</div>
                         {% endif %}
                         <div class="col-6 text-right"><strong>Camera or sensor:</strong></div>
                         <div class="col-6">{{ page.Camera }}</div>

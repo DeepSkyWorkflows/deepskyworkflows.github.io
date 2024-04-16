@@ -22,7 +22,7 @@ permalink: /exhibition/
     <div id="soldout" class="row d-none">
         <div class="col-12">
             <div class="alert alert-warning">
-            We're sorry, but that piece has sold. Please check back later to see if an additional print is available. <a href="/about">Contact me</a> for custom requests.
+            We're sorry, but that piece has sold. Please check back later to see if an additional print is available. <a href="https://dswgalleries.com/contact">Contact me</a> for custom requests.
             </div>
         </div>
     </div>
@@ -31,56 +31,67 @@ permalink: /exhibition/
             <img src="/assets/images/exhibition/about.jpg" alt="Jeremy Likness">
         </div>
         <div class="col-lg-4 col-6 col-sm-12">
-            <h3>Photography by Jeremy Likness</h3>
-            <p>Jeremy Likness is a full-time software developer residing in Monroe. In early 2020, he was diagnosed with <a href="https://strengthwithparkinsons.com/" target="_blank">Young Onset Parkinson's Disease</a>. This was a wake up call to focus on doing the things he is passionate about and may not always be physically capable of performing. In 2021, he purchased his first telescope and took <a href="https://www.instagram.com/p/CKA4atJJduz/?utm_source=ig_web_copy_link" target="_blank">a picture of the Crab Nebula</a>. Since then, his passion for astrophotography and the size of his telescopes both have grown. We hope you enjoy this art that glorifies God's amazing creation.</p>
+            <h3>Photography and Art by Jeremy Likness (DSW Galleries, LLC)</h3>
+            <p>Jeremy Likness started astrophotography as a hobby in 2020. He quickly fell in love with photographing the night skies and began to invest in new equipment and try new techniques. After moving to Newport, Oregon, he grew an appreciation for outdoor and landscape photography in addition to astrophotography. Jeremy embraces several forms of astrophotography, including lunar, solar, deep sky, and Milky Way.</p>
+            <p>In Jeremy's own words:</p>
+            <p><quote>"Each piece is part of a story and has been chosen to capture a moment so that it can be shared and experienced again. It's not just about the target, but the experience of acquiring the target. I've braved thunderstorms and black bears, dodged forest fires, hiked over glaciers and slept in the car when it was 19° Fahrenheit to get a shot. Sometimes I'll take 600 shots just to use 1."</quote></p>
+            <p>Every piece comes with a certificate of authenticity and includes information including where and when the photograph was taken, how many prints exist or if it is an exclusive or first edition print, the settings and equipment used, a description of the target and any backstory around the photo itself.</p>
+            <p>If you are unable to find the piece you are looking for or it is not showing as available on this site, <a href="https://dswgalleries.com/contact" target="_blank">contact us</a> with your request. Share the URL if available, the name of the target, and any preferences you may have for size or materials.</p>
         </div>
         <div class="col-lg-4 col-6 col-sm-12">
             <p>Artwork from Jeremy Likness is on display at the following venues:</p>
-            {% assign venueArray = '' | split: ',' %}
-            {% for art in site.exhibition %}
-                {% for venue in art.Venues %}
-                    {% assign venueArray = venueArray | push: venue %}
-                {% endfor %}
-            {% endfor %}
-            {% assign uniqueVenues = venueArray | uniq | sort %}
             <ul>
-                {% for location in uniqueVenues %}        
-                {% assign currentVenue = site.venues[location] %}
-                <li>
-                    <strong>{{ currentVenue.name }}</strong> &mdash; from {{ currentVenue.start}} to {{ currentVenue.end}}:
-                    <a href="https://www.google.com/maps/search/{{ currentVenue.address }}" target="_blank">{{ currentVenue.address }}</a>
+                {% for currentVenue in site.venues %}
+                {% for venue in currentVenue %}
+                {% if venue.start %}
+                <li><strong>{{ venue.name }}</strong> &mdash; from {{ venue.start}} to {{ venue.end }}
+                    {% if venue.address != "" %}
+                    <span>&nbsp;at&nbsp;</span>
+                    <a href="https://www.google.com/maps/search/{{ currentVenue.address }}" target="_blank">{{ venue.address }}</a>
+                    {% endif %}
                 </li>
+                {% endif %}
+                {% endfor %}
                 {% endfor %}
             </ul>
-            {% include viewcart.html %}                        
         </div>
     </div>
     <div class="row">
-        <div class="col">These prints are available for sale for local pickup only. <strong>I do not ship.</strong> I only sell the pieces that have been printed and are on display. Sales are made on a first come, first served basis and delivery will be made when the exhibition concludes.</div>
+        <div class="col">These prints are available for sale for local pickup only. <strong>I do not ship.</strong> I only sell pieces that have been printed and are on display. Sales are made on a first come, first served basis and delivery will be made when the exhibition concludes.</div>        
     </div>
     <div class="row">
         <div class="col">&nbsp;</div>
     </div>
     {% assign version = 1 %}
     {% assign pieces = site.exhibition | where: 'active', true | sort: 'Index' %}
+    {% assign itemIndex = 1 %}
+    {% for item in pieces %}        
+        {% assign mainUrl = site.baseurl | append: item.url %}
+        {% assign itemCount = itemCount | plus: 1 %}
+        {% assign thumbPath = site.baseurl | append: "/assets/images/exhibition/" | append: item.Thumbnail %}
+        {% assign qrPath = site.baseurl | append: "/assets/images/exhibition/" | append: item.QR %}
     <div class="row mw-25">
-        <div class="col-12">
-                <div class="row">
-                    {% assign itemIndex = 1 %}
-                    {% for item in pieces %}        
-                        {% assign mainUrl = site.baseurl | append: item.url %}
-                        {% assign itemCount = itemCount | plus: 1 %}
-                        {% assign thumbPath = site.baseurl | append: "/assets/images/exhibition/" | append: item.Thumbnail %}
-                        <div class="card gallery-card" data-url="{{item.url}}">
-                            <a href="{{mainUrl}}" title="{{item.description}}" tabindex="{{itemCount}}">
-                                <img class="card-img-top gallery-img" id="image-{{itemIndex}}" src="{{thumbPath}}" alt="{{item.description}}">
-                                {% assign itemIndex = itemIndex | plus: 1 %}
-                            </a>
-                            <div class="card-header bg-dark text-center">
-                                <a href="{{mainUrl}}" title="{{item.description}}">{{item.title}}</a>
-                            </div>                
-                        </div>
-                     {% endfor %}
+        <div class="col-3">
+            <a href="{{mainUrl}}" title="{{item.description}}" tabindex="{{itemCount}}">
+                <img class="card-img-top gallery-img" id="image-{{itemIndex}}" src="{{thumbPath}}" alt="{{item.description}}"/>            
+            </a>
+        </div>
+        <div class="col-2">
+            <img class="card-img-top gallery-img" style="height: 256px; width: 256px;" id="image-qr-{{itemIndex}}" src="{{qrPath}}" alt="{{item.description}}"/>
+        </div>
+        {% assign itemIndex = itemIndex | plus: 1 %}
+        <div class="col-4">
+            <strong><a href="{{mainUrl}}" title="{{item.description}}">{{item.title}}</a></strong><p>{{item.description}}</p>      
+        </div>                                         
+        <div class="col-2">
+            {{ item.Print }} &mdash; {{ item.Width }}" x {{ item.Height }}"
+        </div>
+        <div class="col-1">
+            {{ item.Price }}$ USD
+            {% if item.Sold == "true" %}(sold){% endif %}
+        </div>                        
+    </div>
+    {% endfor %}
                 </div>        
         </div>
     </div>

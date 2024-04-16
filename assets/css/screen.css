@@ -1153,17 +1153,17 @@ div.messier-img {
 }
 
 .exhibition-target {
-    background: lightgreen;
-    color: black;
-    padding: 2px;
-    border-bottom: solid green 2px;
+    background: black;
+    border: solid 2px silver radius 5px;
+    color: lightred;
+    padding: 2px;    
 }
 
 .exhibition-capture {
-    background: lightgoldenrodyellow;
-    color: black;
-    padding: 2px;
-    border-bottom: solid green 2px;
+    background: black;
+    border: solid 2px gold radius 5px;
+    color: lightgrey;
+    padding: 2px;    
 }
 
 .description {

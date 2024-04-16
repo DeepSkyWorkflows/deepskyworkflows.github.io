@@ -18,7 +18,7 @@ firstCapture: 2023-11-27
 lastCapture: 2023-11-27
 group: "ori-belt"
 wwt: http://www.worldwidetelescope.org/wwtweb/ShowImage.aspx?reverseparity=False&scale=1.372636&name=da-belt.jpg&imageurl=https://deepskyworkflows.com/assets/images/gallery/da-belt/da-belt.jpg&credits=Jeremy+Likness+at+DeepSkyWorkflows.com&creditsUrl=https://deepskyworkflows.com/about&ra=85.482691&dec=-2.377420&x=3377.9&y=1699.4&rotation=76.68&thumb=https://deepskyworkflows.com/assets/images/gallery/da-belt/thumb.jpg
-printurl: 
+printurl: belt-sans-astra
 ra: 5h 41m 15.9s
 dec: "-02° 10' 15.821"
 size: "126.00 x 091.80 arcmin"
