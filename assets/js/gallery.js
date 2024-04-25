@@ -1,6 +1,7 @@
 $(document).ready(function () {
     const dom = window.ds_dom_helper;
     const query = window.deepSkyRouter;
+
     const galleryItem = {
         
         state: {
@@ -10,6 +11,7 @@ $(document).ready(function () {
         
         image: dom.id("mainImage"),
         title: document.title,
+        folder: null,
         loadQueue: [],
         shareImage: dom.id("shareImage"),
         loaded: dom.id("loaded"),
@@ -26,9 +28,38 @@ $(document).ready(function () {
         nostarsLink: dom.id("nostarsBtn"),
         mainHeading: document.querySelectorAll(".mainheading")[0],        
         
-        loadAsync: function () {
+        loadAsync: async () => {
+
+            await window.gallerydbpromise;
+
+            const path = $(galleryItem.image).data("src2");
+            galleryItem.image.src = path;
+            const parts = path.split("/");
+            galleryItem.folder = parts[parts.length - 2];
+            const imageContext = window.gallerydb.getPosition(galleryItem.folder);
+
+            const xForm = (anchor, item) => {
+                anchor.href = item.img.dataset.url;
+                anchor.title = item.description;
+                anchor.innerHTML = item.title;        
+            };
+
+            if (imageContext) {
+                if (imageContext.previous) {
+                    const prevLinks = document.getElementsByClassName("prevUrl");
+                    for (let i = 0; i < prevLinks.length; i++) {
+                        xForm(prevLinks[i], imageContext.previous);
+                    }
+                }
+
+                if (imageContext.next) {
+                    const nextLinks = document.getElementsByClassName("nextUrl");
+                    for (let i = 0; i < nextLinks.length; i++) {
+                        xForm(nextLinks[i], imageContext.next);
+                    }
+                }
+            }
             
-            galleryItem.image.src = $(galleryItem.image).data("src2");
             galleryItem.loadQueue.push(galleryItem.image);            
 
             if (galleryItem.fullsize) {

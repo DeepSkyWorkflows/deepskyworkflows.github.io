@@ -1,10 +1,10 @@
 ---
-Index: "001"
+Index: "004"
 title: "Orion's belt, sans astra"
 Location: Newport, OR
 Thumbnail: beltsansastra.-thumbjpg.jpg
 Fullsize: beltsansastra.JPG
-QR: "Da Belt Sans A-qrcode.png"
+QR: "qr-sold.png"
 Images: ["woodencorner.JPG"]
 description: "Orion is one of the most recognizable constellations with the signature red giant Betelgeuse for a shoulder and three bright, distinctive stars making up its belt. The leftmost star in the belt, Alnitak, hosts some of the most bright and beautiful nebulae in the night sky. These include the wispy Horsehead Nebula and fiery Flame Nebula. For this image, I took hours of exposures using narrowband filters for hydrogen alpha, oxygen, and sulfur. I then used an algorithm to remove the stars so I could focus on the intricate details the swirling gases and dust of the nebulae reveal. Finally, I printed the result directly on wood." 
 active: true
@@ -20,7 +20,7 @@ WWT: http://www.worldwidetelescope.org/wwtweb/ShowImage.aspx?reverseparity=False
 Venues: ["dsw"]
 Tags: ["The star Alnitak (ζ Ori)", "50 Ori", "The star σ Ori", "48 Ori", "IC431", "IC432", "IC434", "Flame Nebula", "Orion B", "IC435", "NGC2023", "NGC2024"]           
 IsAnnotated: true
-Sold: false
+Sold: true
 Annotated: da-belt-annotated-fs.jpg
 RA: 05h 41m 15.9s
 DEC: -02° 10' 15.821"

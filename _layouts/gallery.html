@@ -64,14 +64,14 @@ layout: default
                 <span>
                     {% if prevTitle == "" %}
                     {% else %}
-                    <a href="{{ prevUrl }}" title="{{ prevTitle }}">{{ prevTitle }}</a>
+                    <a class="prevUrl" href="{{ prevUrl }}" title="{{ prevTitle }}">{{ prevTitle }}</a>
                     &nbsp;&laquo;&nbsp;
                     {% endif %}
                     <a href="/gallery" title="Gallery">Back to Gallery</a>
                     {% if nextTitle == "" %}
                     {% else %}
                     &nbsp;&raquo;&nbsp;
-                    <a href="{{ nextUrl }}" title="{{ nextTitle }}">{{ nextTitle }}</a>
+                    <a class="nextUrl" href="{{ nextUrl }}" title="{{ nextTitle }}">{{ nextTitle }}</a>
                     {% endif %}
                     &nbsp;
                     {% if printurl == site.galleryhome %}
@@ -328,14 +328,14 @@ layout: default
                 <span>
                     {% if prevTitle == "" %}
                     {% else %}
-                    <a href="{{ prevUrl }}" title="{{ prevTitle }}">{{ prevTitle }}</a>
+                    <a class="prevUrl" href="{{ prevUrl }}" title="{{ prevTitle }}">{{ prevTitle }}</a>
                     &nbsp;&laquo;&nbsp;
                     {% endif %}
                     <a href="/gallery" title="Gallery">Back to Gallery</a>
                     {% if nextTitle == "" %}
                     {% else %}
                     &nbsp;&raquo;&nbsp;
-                    <a href="{{ nextUrl }}" title="{{ nextTitle }}">{{ nextTitle }}</a>
+                    <a class="nextUrl" href="{{ nextUrl }}" title="{{ nextTitle }}">{{ nextTitle }}</a>
                     {% endif %}
                     &nbsp;
                     {% if printurl == site.galleryhome %}
@@ -358,4 +358,5 @@ layout: default
 <script src="{{ site.baseurl }}/assets/js/queryStringRouter.js"></script>
 <script src="{{ site.baseurl }}/assets/js/dom_helper.js"></script>
 <script src="{{ site.baseurl }}/assets/js/gallery.js"></script>
+<script src="{{ site.baseurl }}/assets/js/gallerydb.js"></script>
 <script src="{{ site.baseurl }}/assets/js/gallery-keyboard.js"></script>

@@ -8,14 +8,14 @@ permalink: /exhibition/
     <div id="success" class="row d-none">
         <div class="col-12">
             <div class="alert alert-success">
-            <span class="fa fa-check"></span> Your purchase was successful! We will be in touch shortly to arrange for pickup.
+                <span class="fa fa-check"></span> Your purchase was successful! We will be in touch shortly to arrange for pickup.
             </div>
         </div>
     </div>
     <div id="cancel" class="row d-none">
         <div class="col-12">
             <div class="alert alert-danger">
-            <span class="fa fa-ban"></span> Transaction was cancelled.
+                <span class="fa fa-ban"></span> Transaction was cancelled.
             </div>
         </div>
     </div>
@@ -36,7 +36,7 @@ permalink: /exhibition/
             <p>In Jeremy's own words:</p>
             <p><quote>"Each piece is part of a story and has been chosen to capture a moment so that it can be shared and experienced again. It's not just about the target, but the experience of acquiring the target. I've braved thunderstorms and black bears, dodged forest fires, hiked over glaciers and slept in the car when it was 19° Fahrenheit to get a shot. Sometimes I'll take 600 shots just to use 1."</quote></p>
             <p>Every piece comes with a certificate of authenticity and includes information including where and when the photograph was taken, how many prints exist or if it is an exclusive or first edition print, the settings and equipment used, a description of the target and any backstory around the photo itself.</p>
-            <p>If you are unable to find the piece you are looking for or it is not showing as available on this site, <a href="https://dswgalleries.com/contact" target="_blank">contact us</a> with your request. Share the URL if available, the name of the target, and any preferences you may have for size or materials.</p>
+            <p>If you are unable to find the piece you are looking for or it is not showing as available on this site, <a href="https://dswgalleries.com/contact" target="_blank">contact us</a> with your request. Share the URL if available, the name of the target, and any preferences you may have for size or materials. Photographs on this page are of the actual artwork or piece.</p>
         </div>
         <div class="col-lg-4 col-6 col-sm-12">
             <p>Artwork from Jeremy Likness is on display at the following venues:</p>
@@ -87,12 +87,10 @@ permalink: /exhibition/
             {{ item.Print }} &mdash; {{ item.Width }}" x {{ item.Height }}"
         </div>
         <div class="col-1">
-            {{ item.Price }}$ USD
-            {% if item.Sold == "true" %}(sold){% endif %}
+            <a href="{{mainUrl}}" title="Click to buy">{{ item.Price }}$ USD</a>
+            {% if item.Sold == true %}(sold){% endif %}
         </div>                        
     </div>
     {% endfor %}
-                </div>        
-        </div>
-    </div>
+</div>        
 <script src="{{ site.baseurl }}/assets/js/exhibition.js"></script>

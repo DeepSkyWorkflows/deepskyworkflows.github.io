@@ -390,6 +390,20 @@ window.gallerydbpromise = window.gallerydbpromise || (async function () {
 
         getItem: key => internaldb.idx[key],
 
+        getPosition: key => {
+
+            const list = JSON.parse(localStorage.getItem("query"));
+            const idx = list.indexOf(key);
+            const cur = idx >= 0 ? internaldb.idx[key] : null;
+            const prev = idx > 0 ? internaldb.idx[list[idx - 1]] : null;
+            const next = idx < list.length - 1 ? internaldb.idx[list[idx + 1]] : null;
+            return {
+                current: cur,
+                previous: prev,
+                next: next
+            };                        
+        },
+
         bindToItem: (img, key) => {
             const item = db.getItem(key);
             img.setAttribute("src", "/assets/images/loading.gif");
@@ -434,6 +448,7 @@ window.gallerydbpromise = window.gallerydbpromise || (async function () {
         getItems: (limit = 10) => {
 
             let predicate = null;
+            const keyList = [];
 
             let op = `Sorted ${internaldb.sort.ascending === true ? 'ascending' : 'descending'} by ${internaldb.sort.sortCol}. `;
 
@@ -615,6 +630,8 @@ window.gallerydbpromise = window.gallerydbpromise || (async function () {
             predicate = predicate || (() => true);
             db.lastOp = filters.length ? `${op} ${filters.join(", ")}` : op;
             const result = [...internaldb.db.gallery.filter(predicate)].sort(sort);
+            keyList.push(...result.map(item => item.folder));
+            localStorage.setItem("query", JSON.stringify(keyList));
             db.lastOp += ` (${result.length > 0 ? result.length : 'no'} results)`;
             if (limit > 0 && result.length > limit) {
                 db.showMore = true;
