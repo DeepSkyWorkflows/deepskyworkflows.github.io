@@ -4,7 +4,7 @@ title: Gallery
 image: "assets/images/gallery.jpg"
 permalink: /gallery/
 ---
-<div><button id="lucky" class="btn btn-sm btn-primary m-1" title="View a random picture from the gallery.">I feel lucky</button> Take me to a random item in the gallery.&nbsp;<span id="filterShare"></span></div>
+<div><small>❓ Read the <a href="/gallery/help" title="Deep Sky Workflows gallery user guide">Deep Sky Workflows complete gallery user guide</a> to learn more about how to search and interpret results.</small><button id="lucky" class="btn btn-sm btn-primary m-1" title="View a random picture from the gallery.">I feel lucky</button> Take me to a random item in the gallery.&nbsp;<span id="filterShare"></span></div>
 <div><strong>Special collections:</strong>
 {% for collection in site.portfolios %}
 <a class="badge badge-info w-auto" href="{{ site.baseurl }}/tag/{{collection | strip | replace: ' ', '-' | remove: '(' | remove: ')' | downcase }}" title="{{collection}}" alt="{{collection}}">{{collection}}</a>

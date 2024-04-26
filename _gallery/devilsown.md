@@ -9,7 +9,7 @@ length: "510mm"
 aperture: "235mm"
 wwt: http://www.worldwidetelescope.org/wwtweb/ShowImage.aspx?reverseparity=True&scale=0.705173&name=devilsown.jpg&imageurl=https://deepskyworkflows.com/assets/images/gallery/devilsown/devilsown.jpg&credits=Jeremy+Likness+at+DeepSkyWorkflows.com&creditsUrl=https://deepskyworkflows.com/&ra=33.437270&dec=23.194055&x=1866.1&y=4817.1&rotation=376.79&thumb=https://deepskyworkflows.com/assets/images/gallery/devilsown/thumb.jpg
 signature: true
-group: 12P
+group: 12p
 folder: devilsown
 exposure: 30
 lights: 132

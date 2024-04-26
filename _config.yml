@@ -10,7 +10,7 @@ url: https://deepskyworkflows.com
 disqus: 'deep-sky-workflows'
 # mailchimp-list: ''
 include: ["_pages", "_gallery", "_exhibition", "_messier"]
-portfolios: ["Cayman Collection", "Comets", "Full moons", "Heybrook Lookout", "Monroe Washington", "Florissant Fossil Beds", "Index Washington", "Otter Rock", "Newport Oregon"]
+portfolios: ["Cayman Collection", "Comets", "Full moons", "Heybrook Lookout", "Monroe Washington", "Florissant Fossil Beds", "Index Washington", "Otter Rock", "Newport Oregon", "Total Solar Eclipse 2024"]
 permalink: /:title/
 galleryhome: https://deepskyworkflows.com/exhibition/
 

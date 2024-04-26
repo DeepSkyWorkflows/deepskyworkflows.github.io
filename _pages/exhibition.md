@@ -87,7 +87,7 @@ permalink: /exhibition/
             {{ item.Print }} &mdash; {{ item.Width }}" x {{ item.Height }}"
         </div>
         <div class="col-1">
-            <a href="{{mainUrl}}" title="Click to buy">{{ item.Price }}$ USD</a>
+            <a href="{{mainUrl}}" title="Click to buy">${{ item.Price }} USD</a>
             {% if item.Sold == true %}(sold){% endif %}
         </div>                        
     </div>

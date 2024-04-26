@@ -103,8 +103,8 @@ window.gallerydbpromise = window.gallerydbpromise || (async function () {
                     quality: item.signature === "true" ? 3.0 : 0.0,
                     staleness: item.archive === "true" ? -1.0 : 1.0,
                     availability: item.printUrl && item.printUrl.length ? 2.0 : 0.0,
-                    details: item.rightAscension ? 1.0 : 0.0,
-                    tags: item.tags ? item.tags.length / (1.0 * stats.maxTags) : 0.0,
+                    details: 1.0, // deprecated
+                    tags: 1.0, // item.tags ? item.tags.length / (1.0 * stats.maxTags) : 0.0 - deprecated
                     total: 0
                 };
 
@@ -296,14 +296,15 @@ window.gallerydbpromise = window.gallerydbpromise || (async function () {
     const sorts = {
 
         sort: (col, item1, item2, asc) => {
-            let result = sorts[col](item1, item2);
+            let result = sorts[col](item1, item2, asc);
             return asc === false ? result : result * -1;
         },
 
         "title": (item1, item2) =>
             item1.title < item2.title ? 1 : -1,
 
-        "date": (item1, item2) => sorts["firstCapture"](item1, item2),
+        "date": (item1, item2, asc) => asc ? sorts["firstCapture"](item1, item2) 
+            : sorts["lastCapture"](item1, item2),
 
         "lastCapture": (item1, item2) => {
             if (!(item1.converted)) {
