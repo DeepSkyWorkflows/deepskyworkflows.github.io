@@ -19,8 +19,14 @@ venues:
     name: "DSW Galleries, LLC (contact for details)"
     start: "April 2024"
     active: "true"
-    end: "indefinitely"
     address: "Newport, Oregon 97365"
+
+  bloom:
+    name: "Bloom Newport at the Performing Arts Center (PAC)"
+    start: "May 18 2024 3:00 PM"
+    end: "May 18 2024 7:00 PM"
+    active: "true"
+    address: "777 W. Olive St., Newport, Oregon 97365"
 
 # Authors
 authors:

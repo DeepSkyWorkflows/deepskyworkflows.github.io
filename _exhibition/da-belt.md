@@ -1,13 +1,13 @@
 ---
-Index: "005"
-title: "Orion's belt, sans astra"
+Index: "007"
+title: "Da belt"
 Location: Newport, OR
 Thumbnail: beltsansastra.-thumbjpg.jpg
 Fullsize: beltsansastra.JPG
 QR: "qr-sold.png"
 Images: ["woodencorner.JPG"]
 description: "Orion is one of the most recognizable constellations with the signature red giant Betelgeuse for a shoulder and three bright, distinctive stars making up its belt. The leftmost star in the belt, Alnitak, hosts some of the most bright and beautiful nebulae in the night sky. These include the wispy Horsehead Nebula and fiery Flame Nebula. For this image, I took hours of exposures using narrowband filters for hydrogen alpha, oxygen, and sulfur. I then used an algorithm to remove the stars so I could focus on the intricate details the swirling gases and dust of the nebulae reveal. Finally, I printed the result directly on wood." 
-active: true
+active: false
 Type: "Nebula"
 Constellation: "Orion"
 Print: Wood

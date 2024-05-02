@@ -11,6 +11,7 @@ length: "1635mm"
 aperture: "235mm"
 folder: m51-ha
 group: m51
+printurl: m51
 exposure: 300
 lights: 118
 sessions: 2
