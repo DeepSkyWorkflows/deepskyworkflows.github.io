@@ -6,7 +6,7 @@ Thumbnail: supernova-thumb.jpg
 Fullsize: supernova.jpg
 Annotated: ../gallery/sn-2023ixf/sn-2023ixf-annotated-fs.jpg
 QR: "qr-galaxy-supernova.png"
-Description: "In May 2023, supernova SN 2023ixf was discovered. A massive star ran out of fuel and violently collapsed, causing a brilliant explosion that can be clearly seen 21 million light years away. It is the closet supernova to earth in the past 5 years and 2nd discovered in the area in the past 15 years. I managed to photograph this rare cosmic event before it disappeared. This is Messier 101, Pinwheel Galaxy, with supernova visible top middle." 
+description: "In May 2023, supernova SN 2023ixf was discovered. A massive star ran out of fuel and violently collapsed, causing a brilliant explosion that can be clearly seen 21 million light years away. It is the closet supernova to earth in the past 5 years and 2nd discovered in the area in the past 15 years. I managed to photograph this rare cosmic event before it disappeared. This is Messier 101, Pinwheel Galaxy, with supernova visible top middle." 
 active: true
 Type: "Galaxy"
 Print: Metal, White Satin
