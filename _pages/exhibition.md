@@ -9,7 +9,7 @@ permalink: /exhibition/
 <div class="exhibition container">
     <h2>Astrophotography, Landscape and other Art Prints</h2>
     <p><strong>By Jeremy Likness, DSW Galleries LLC</strong></p>
-    <p>This page contains a list of items in my physical inventory. It is possible to create a print from any image in our <a href="/gallery">gallery</a>, so if your image is not here you can always <a href="https://dswgalleries.com/contact">contact us</a> with your request. The purpose of this gallery is to show you what prints are available at galleries, exhibitions, and shows, especially if you're interested in grabbing a first edition. All prints come with a certificate of authenticity and a bill of sale. I do not currently ship but will drop it off anywhere near Highway 101 between Lincoln City and Waldport.</p>
+    <p>This page contains a list of items in my physical inventory. It is possible to create a print from any image in our <a href="/gallery">gallery</a>, so if your image is not here you can always <a href="https://dswgalleries.com/contact">contact us</a> with your request. The purpose of this gallery is to show you what prints are available at galleries, exhibitions, and shows, especially if you're interested in securing a first edition. All prints come with a certificate of authenticity and a bill of sale. I do not currently ship but will drop it off anywhere near Highway 101 between Lincoln City and Waldport.</p>
     <h3>Current venues:</h3>
     {% for currentVenue in site.venues %}
         {% for venue in currentVenue %}
