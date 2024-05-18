@@ -7,6 +7,7 @@ image: /assets/images/gallery/diamondeclipse/thumb.jpg
 telescope: Svbony sv503 70ED
 length: "1000mm"
 aperture: "70mm"
+printurl: artwork/the-proposal-1st-print
 wwt: 
 signature: false
 group: eclipse2024

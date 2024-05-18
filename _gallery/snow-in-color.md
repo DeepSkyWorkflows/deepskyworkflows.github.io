@@ -10,6 +10,7 @@ archive: false
 image: "/assets/images/gallery/snow-in-color/thumb.jpg"
 telescope: "Celestron EdgeHD 9.25"
 length: 5875mm
+printurl: artwork/the-mineral-snow-moon-1st-print
 aperture: 235mm
 folder: snow-in-color
 exposure: 0.01

@@ -10,7 +10,7 @@ aperture: "235mm"
 astrobin: yxyaoc
 wwt: http://www.worldwidetelescope.org/wwtweb/ShowImage.aspx?reverseparity=True&scale=0.870858&name=2024-03-31-p12v3.jpg&imageurl=https://deepskyworkflows.com/assets/images/gallery/devilsdiamond/devilsdiamond.jpg&credits=Jeremy+Likness+at+DeepSkyWorkflows.com&creditsUrl=https://deepskyworkflows.com/&ra=32.743850&dec=23.548296&x=3009.2&y=1307.7&rotation=377.16&thumb=https://deepskyworkflows.com/assets/images/gallery/devilsdiamond/thumb.jpg
 signature: true
-printurl: the-devil-comet
+printurl: artwork/the-devil-s-diamond-1st-print
 group: 12p
 folder: devilsdiamond
 exposure: 30

@@ -7,7 +7,7 @@ image: /assets/images/gallery/sn-2023ixf/thumb.jpg
 telescope: Celestron EdgeHD 9.25
 length: "1650mm"
 aperture: "235mm"
-printurl: galaxy-with-supernova
+printurl: artwork/pinwheeling-supernova-2nd-print
 wwt: http://www.worldwidetelescope.org/wwtweb/ShowImage.aspx?reverseparity=False&scale=0.244939&name=sn-2023ixf.jpg&imageurl=https://deepskyworkflows.com/assets/images/gallery/sn-2023ixf/sn-2023ixf.jpg&credits=Jeremy+Likness+at+DeepSkyWorkflows.com&creditsUrl=https://deepskyworkflows.com/&ra=210.803653&dec=54.484921&x=5364.7&y=1848.0&rotation=-53.62&thumb=https://deepskyworkflows.com/assets/images/gallery/sn-2023ixf/thumb.jpg
 signature: true
 group: m101

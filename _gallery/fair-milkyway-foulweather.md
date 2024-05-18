@@ -10,7 +10,7 @@ The bright moon made processing interesting. I decided to use one exposure for t
 This is a re-process of older data."
 signature: true
 archive: false
-printurl: "fair-weather-moon-at-foulweather"
+printurl: artwork/faerie-moon-from-foulweather
 image: "/assets/images/gallery/fair-milkyway-foulweather/thumb.jpg"
 telescope: "Sony ILCE-6300"
 length: 12mm

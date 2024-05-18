@@ -12,8 +12,7 @@ disqus: 'deep-sky-workflows'
 include: ["_pages", "_gallery", "_exhibition", "_messier"]
 portfolios: ["Cayman Collection", "Comets", "Full moons", "Heybrook Lookout", "Monroe Washington", "Florissant Fossil Beds", "Index Washington", "Otter Rock", "Newport Oregon", "Total Solar Eclipse 2024"]
 permalink: /:title/
-galleryhome: https://deepskyworkflows.com/exhibition/
-
+galleryhome: https://www.artworkarchive.com/profile/dswgalleries/
 venues:
   dsw:
     name: "DSW Galleries, LLC (contact for details)"

@@ -9,6 +9,7 @@ archive: false
 image: "/assets/images/gallery/sun-april-22/thumb.jpg"
 telescope: "Meade Coronado PST 40mm"
 length: 400mm
+printurl: artwork/the-big-sun-1st-print
 aperture: 80mm
 folder: sun-april-22
 exposure: 0.01

@@ -7,7 +7,7 @@ astrobin: "xofi0d"
 description: "The combination of a fast-imaging session using HyperStar and a slower narrowband session with the Redcat and SHO filters."
 signature: true
 archive: false
-printurl: da-sword
+printurl: 
 image: "/assets/images/gallery/sho-off-sword/thumb.jpg"
 telescope: "Celestron EdgeHD 9.25 (HyperStar)"
 length: 525mm

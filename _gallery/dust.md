@@ -18,7 +18,7 @@ firstCapture: 2023-11-17
 lastCapture: 2023-11-17
 group: "m45"
 wwt: http://www.worldwidetelescope.org/wwtweb/ShowImage.aspx?reverseparity=False&scale=0.915562&name=dust.jpg&imageurl=https://deepskyworkflows.com/assets/images/gallery/dust/dust.jpg&credits=Jeremy+Likness+at+DeepSkyWorkflows.com&creditsUrl=https://deepskyworkflows.com/about&ra=56.953872&dec=23.995869&x=2701.2&y=2856.4&rotation=179.55&thumb=https://deepskyworkflows.com/assets/images/gallery/dust/thumb.jpg
-printurl: 
+printurl: artwork/dusty-sisters-1st-print
 ra: 3h 47m 13.2s
 dec: "+24° 06' 48.347"
 size: "098.40 x 101.40 arcmin"

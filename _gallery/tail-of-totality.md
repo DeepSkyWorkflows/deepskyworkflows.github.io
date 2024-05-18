@@ -8,6 +8,7 @@ telescope: Svbony sv503 70ED
 length: "1000mm"
 aperture: "70mm"
 astrobin: jvln5r
+printurl: artwork/the-tail-of-totality-1st-print
 wwt: 
 signature: true
 group: eclipse2024
