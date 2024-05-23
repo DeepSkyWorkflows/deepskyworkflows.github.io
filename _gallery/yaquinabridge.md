@@ -11,6 +11,7 @@ telescope: "Sony ILCE-6300"
 length: 50mm
 aperture: 25mm
 folder: yaquinabridge
+group: "yaquinabridge"
 exposure: 2
 lights: 1
 sessions: 1

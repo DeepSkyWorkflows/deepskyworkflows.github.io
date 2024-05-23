@@ -6,7 +6,7 @@ categories: [ Sony Alpha 6300, Videos ]
 tags: ["milky way"]
 toc: false
 image: assets/images/2022-07-24/Chasing.png
-description: "My wife and I recently went to a nearby town with darker skies to stargaze and chase  the Milky Way."
+description: "My wife and I recently went to a nearby town with darker skies to stargaze and chase the Milky Way."
 featured: true
 hide: true
 comments: true
