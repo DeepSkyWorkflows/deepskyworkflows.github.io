@@ -14,7 +14,38 @@ permalink: /videos/
 </p>
 <p><a href="https://youtube.com/c/deepskyworkflows" title="Astrophotography videos" alt="Astrophotography videos" class="btn btn-sm w-auto btn-success" target="_blank"><i class="fab fa-youtube"></i>&nbsp;Visit our YouTube channel to subscribe</a>&nbsp;
 <p><a name="top"></a></p>
-<div class="flexible">    
+<div class="flexible"> 
+    <div class="group-header" data-group="latestvideos">
+        <h4>
+            <a name="latestvideos"></a> Latest videos <a href="#top">🔝</a>
+        </h4>
+    </div>
+    {% assign latest = site.videos | sort: 'date' | reverse %}
+    {% assign latestidx = 1 %}
+    <div class="card-deck">
+    {% for vid in latest %}
+            {% assign mainUrl = site.baseurl | append: vid.url %}
+            {% assign thumbPath = site.baseurl | append: "/" | append: vid.image %}                           
+            {% if latestidx < 6 %}
+                <div class="card gallery-card-v2 text-white bg-dark mb-1 p-1">
+                    <a href="{{mainUrl}}" alt="{{vid.description}}">
+                        <img id="image-latest-{{latestidx}}" class="card-img clickable" src="{{thumbPath}}" alt="{{vid.description}}"/>
+                    </a>
+                    <div class="card-body">
+                        <p class="mb-2px card-text-override">
+                            <a class="card-title" href="{{mainUrl}}" alt="{{vid.description}}"><strong>{{vid.title}}</strong></a>
+                        </p>
+                    {% assign latestidx = latestidx | plus: 1 %}
+                        <p class="card-text card-text-override mb-2px">
+                            <i class="fas fa-link"></i><a href="https://youtu.be/{{vid.youtubeid}}" target="_blank">YouTube</a>
+                        </p>
+                        <p class="card-text card-text-override">{{vid.description}}</p>        
+                        <p class="card-text card-text-override text-right mb-2px"><small>{{ vid.date | date_to_string }}</small></p>        
+                    </div>    
+                </div>      
+            {% endif %}
+    {% endfor %}
+    </div>
     {% for group in types %}
         <div class="group-header" data-group="{{group.name}}">
             <h4>
