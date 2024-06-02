@@ -1198,6 +1198,7 @@ div.messier-img {
 
 .nav-item {
     max-height: 1.5em;
+    margin-bottom: 0.5rem;
 }
 
 table {
@@ -1404,3 +1405,29 @@ td {
     text-align: justify;
     padding: 0.5rem;
 }
+
+@media (min-width: 700px) {
+    .navbar-collapse {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .navbar-collapse li {
+        display: flexbox;
+        flex-basis: 50%;
+    }
+}
+
+@media (min-width: 800px) {
+    .navbar-collapse li {
+        flex-basis: 33%;
+    }
+}
+
+@media (min-width: 1000px) {
+    .navbar-collapse li {
+        flex-basis: content;
+    }
+}   
