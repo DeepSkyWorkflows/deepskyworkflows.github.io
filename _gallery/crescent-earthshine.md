@@ -6,6 +6,7 @@ target: "moon"
 description: "Took a single exposure just long enough to reveal the detail illuminated by the sun's reflection off the earth ('earthshine') but short enough to let the crescent shine without oversaturating."
 signature: true
 archive: false
+printurl: /artwork/earth-shine-1st-print
 image: "/assets/images/gallery/crescent-earthshine/thumb.jpg"
 telescope: "William Optics Redcat 71"
 length: 800mm

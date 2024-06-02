@@ -8,6 +8,7 @@ description: "Nominated for top pick at AstroBin. On Saturday, March 16th, I exp
 I used a set of 20mm exposures to frame the scene and stacked 10 50mm photographs of the comet and galaxies to boost the resolution."
 signature: true
 archive: false
+printurl: /artwork/the-galactic-menagerie-of-comets-galaxies-and-things-exclusive-edition
 image: "/assets/images/gallery/galactic-menagerie/thumb.jpg"
 telescope: "Sony A7R IV"
 length: 50mm

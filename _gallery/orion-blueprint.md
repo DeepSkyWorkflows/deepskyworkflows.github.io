@@ -6,6 +6,7 @@ target: "The star Alnitak (ζ Ori)"
 description: "This is Orion's jeweled belt, the region around leftmost star Alnitak that features the Flame and Horsehead nebulas. This is just the luminance information and shows just how rich, complex, and structured the region is."
 signature: true
 archive: false
+printurl: /artwork/da-belt-sans-astra-1st-print
 image: "/assets/images/gallery/orion-blueprint/thumb.jpg"
 telescope: "William Optics Redcat 71"
 length: 350mm

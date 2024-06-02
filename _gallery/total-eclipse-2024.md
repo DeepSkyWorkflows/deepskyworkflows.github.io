@@ -4,6 +4,7 @@ type: "Solar"
 tags: ["sun", "moon", "total solar eclipse 2024"]
 target: "The Sun"
 astrobin: ""
+printurl: /artwork/total-solar-eclipse-2024-1st-print
 description: "A series of images taken during the total solar eclipse of 2024 on April 8th in Hot Sprints, Arkansas. The sun on the day of the eclipse, the 'diamond ring' formed when the moon was just shy of covering the entire solar disc, the blazing corona during totality and the solar flares on one side as t he moon exited the other."
 signature: true
 archive: false

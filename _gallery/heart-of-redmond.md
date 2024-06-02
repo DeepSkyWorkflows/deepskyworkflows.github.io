@@ -6,6 +6,7 @@ target: "IC1805"
 astrobin: ""
 description: "Clear skies in Redmond plus a William Optics Redcat 71 (350mm f/5) with a ZWO ASI294MM Pro monochrome camera on a ZWO AM5 mount = The Heart of Redmond. This version of IC1805 was shot from Redmond near the Microsoft campus. I shot around 8 5-minute exposures per red, green, blue, sulfur, hydrogen, and oxygen filter for a total integration time of around 4 hours."
 signature: true
+printurl: /artwork/the-heart-of-redmond-1st-print
 archive: false
 image: "/assets/images/gallery/heart-of-redmond/thumb.jpg"
 telescope: "William Optics Redcat 71"

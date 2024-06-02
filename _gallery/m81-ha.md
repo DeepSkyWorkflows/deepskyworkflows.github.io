@@ -5,6 +5,7 @@ tags: ["Bode's Galaxy","M81","NGC3031"]
 description: I shot this image with two sets. One was with a UV/IR cut filter, the other with a 7 nanometer narrowband for Ha and OII.
 image: /assets/images/gallery/m81-ha/thumb.jpg
 telescope: Celestron EdgeHD 9.25
+printurl: /artwork/abide-in-bode-s-3rd-print
 length: "1645mm"
 aperture: "235mm"
 folder: m81-ha

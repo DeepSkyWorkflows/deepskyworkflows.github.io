@@ -8,6 +8,7 @@ signature: true
 printurl: 
 wwt: http://www.worldwidetelescope.org/wwtweb/ShowImage.aspx?reverseparity=False&scale=1.425198&name=lagoonrevisted.jpg&imageurl=https://deepskyworkflows.com/assets/images/gallery/lagoonrevisited/lagoonrevisited.jpg&credits=Jeremy+Likness+at+DeepSkyWorkflows.com&creditsUrl=https://deepskyworkflows.com&ra=270.379374&dec=-23.626057&x=4149.4&y=1583.9&rotation=-125.83&thumb=https://deepskyworkflows.com/assets/images/gallery/lagoonrevisited/thumb.jpg
 telescope: Svbony sv503 70ED
+printurl: /artwork/the-red-lagoon-1st-print
 length: "336mm"
 aperture: "70mm"
 folder: lagoonrevisited
