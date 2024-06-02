@@ -3,6 +3,21 @@ window.ds_dom_helper = (function () {
 
         timeoutTracker: {},
 
+        clear: elem => elem.innerHTML = "",
+
+        dynamicCss: (css, callback) => {
+            const style = document.createElement("link");
+            style.rel = "stylesheet";
+            style.type = "text/css";
+            style.href = css;
+            document.head.appendChild(style);
+            if (callback) {
+                const loader = document.createElement('img');
+                loader.onerror = callback;
+                loader.src = css;
+            }
+        },
+
         modifyClasses: function (elem, classes) {
             if (elem) {
                 if (typeof elem === "string") {
@@ -104,8 +119,57 @@ window.ds_dom_helper = (function () {
             return document.getElementById(id);
         },
 
-        elem: function(tag, config) {
-            var elem = document.createElement(tag);
+        class: function(className) {
+            return document.getElementsByClassName(className);
+        },
+
+        progress: function (elem, range = 100, step = 1) {
+            const state = {
+                elem: elem,
+                range: range,
+                step: step,
+                value: 0,                
+            };      
+            
+            elem.minValue = 0;
+            elem.maxValue = range;
+            elem.step = step;
+            
+            return {
+                state: state,
+                set: function (value) {
+                    state.value = value;
+                    state.elem.value = state.value;
+                },
+
+                increment: function () {
+                    state.value += state.step;
+                    if (state.value > state.range) {
+                        state.value = state.range;
+                    }
+                    state.elem.value = state.value;
+                },
+
+                decrement: function () {
+                    state.value -= state.step;
+                    if (state.value < 0) {
+                        state.value = 0;
+                    }
+                    state.elem.value = state.value;
+                },
+
+                reset: function () {
+                    state.value = 0;
+                    state.elem.value = state.value;
+                }            
+            }
+
+        },
+
+        elem: function(tag, config, children = []) {
+
+            const elem = document.createElement(tag);
+            
             if (config) {
                 for (var prop in config) {
                     if (config.hasOwnProperty(prop)) {
@@ -121,7 +185,25 @@ window.ds_dom_helper = (function () {
                     }
                 }
             }
+            
+            if (children && children.length) {              
+                for (let idx = 0; idx < children.length; idx++) {
+                    const child = children[idx];
+                    if (typeof child === "string") {
+                        elem.appendChild(document.createTextNode(child));                        
+                    } else {
+                        elem.appendChild(child);
+                    }
+                }
+            }  
+
             return elem;
+        },
+
+        message: function (target, type, message) {
+            target.innerHTML = message;
+            target.classList.remove("alert-success", "alert-danger", "alert-warning", "alert-info");    
+            target.classList.add(`alert-${type}`);
         }
     };
 })();

@@ -1,0 +1,98 @@
+---
+layout: null
+---
+{
+  "search": [
+    {%- for image in site.gallery -%}
+        {%- assign folder = image.folder   -%}
+        {%- assign url = site.baseurl | append: "/gallery/" | append: folder | append: "/" -%}
+        {%- assign title = image.title   -%}
+        {%- assign thumb = site.baseurl | append: "/assets/images/gallery/" | append: folder | append : "/thumb.jpg" -%}
+        {%- assign content = image.content | strip_html | remove: '"' | strip_newlines   -%}
+        {%- assign tags = image.tags | join: ' '   -%}
+        {%- assign target = image.target   -%}
+        {%- capture imageItem -%}
+        {
+            "title": "{{ image.title | json_escape }}",
+            "tags": {{ image.tags | jsonify }},
+            "description": "{{ image.description | json_escape }}",
+            "content": "{{ content | json_escape }}",
+            "url": "{{ url | json_escape }}",
+            "thumb": "{{ thumb | json_escape }}"
+        }
+        {%- endcapture -%}
+        {{ imageItem | json }}, 
+    {%- endfor -%}
+    {%- for post in site.posts -%}
+        {%- assign url = site.baseurl | append: post.id -%}
+        {%- assign content = post.content | strip_html | remove: '"' | strip_newlines -%}
+        {%- assign image = site.baseurl | append: "/"  | append: post.image -%}
+        {%- capture blogPost -%}
+        {
+            "title": "{{ post.title | json_escape }}",
+            "tags": {{ post.tags | jsonify }},
+            "description": "{{ post.description | json_escape }}",
+            "content": "{{ content | json_escape }}",
+            "url": "{{ url | json_escape }}",
+            "image": "{{ image | json_escape }}"
+        }
+        {%- endcapture -%}
+        {{ blogPost | json }},
+    {%- endfor -%}
+    {%- for video in site.videos -%}
+        {%- assign url = site.baseurl | append: video.id -%}
+        {%- assign content = video.content | strip_html | remove: '"' | strip_newlines -%}
+        {%- assign image = site.baseurl | append: "/"  | append: video.image -%}
+        {%- capture videoItem -%}
+        {
+            "title": "{{ video.title | json_escape }}",
+            "tags": {{ video.tags | jsonify }},
+            "description": "{{ video.description | json_escape }}",
+            "content": "{{ content | json_escape }}",
+            "url": "{{ url | json_escape }}",
+            "thumb": "{{ image | json_escape }}"
+        }
+        {%- endcapture -%}
+        {{ videoItem | json }},
+    {%- endfor -%}
+    {%- for resource in site.resources -%}
+        {%- assign url = site.baseurl | append: resource.id -%}
+        {%- assign content = resource.content | strip_html | remove: '"' | strip_newlines -%}
+        {%- capture resourceItem -%}
+        {
+            "title": "{{ resource.name | json_escape }}",
+            "tags": [],
+            "description": "{{ resource.description | json_escape }}",
+            "content": "{{ content | json_escape }}",
+            "url": "{{ resource.site }}"            
+        }
+        {%- endcapture -%}
+        {{ resourceItem | json }},
+    {%- endfor -%}
+    {%- for page in site.pages -%}{%- if page.permalink == "/about" or page.permalink == "/gallery-help" -%} 
+            {%- assign url = site.baseurl | append: page.url -%}
+            {%- assign content = page.content | strip_html | remove: '"' | strip_newlines -%}
+            {%- capture pageItem -%}
+            {
+                "title": "{{ page.title | json_escape }}",
+                "tags": [],
+                "description": "{{ page.description | json_escape }}",
+                "content": "{{ content | json_escape }}",
+                "url": "{{ url | json_escape }}"
+            }
+            {%- endcapture -%}
+            {{ pageItem | json }},
+    {%- endif -%}
+    {%- endfor -%}
+    {
+        "title": "DSW Galleries",
+        "description": "The DSW Galleries website includes my portfolio, galleries with astrophotography and landscape photos, and upcoming dates and events.",
+        "url": "https://dswgalleries.com/"
+    },
+    {
+        "title": "Collection of physical astrophotography art and prints",
+        "description": "I print certain images on metal, canvas, and other materials. I also offer custom prints and sizes. Contact me for more information.",
+        "url": "{{ site.galleryhome | json_escape }}"
+    }
+  ]
+}
