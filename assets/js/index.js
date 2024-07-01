@@ -1,8 +1,5 @@
-console.log("index.js loaded");
-
 const slider = (domHelper) => {
 
-    console.log("index.js -> slider called.");
     const dom = {
         slider: domHelper.class("dsw-slider")[0],   
         slides: domHelper.class("dsw-slide"),

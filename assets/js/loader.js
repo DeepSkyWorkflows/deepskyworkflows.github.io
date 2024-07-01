@@ -1,11 +1,9 @@
-console.log("Loader.js loaded.");
-
 const loader = {
 
     resources: {
         domHelper: "dom_helper.js",
         gallerydb: "gallerydb.js",
-        router: "querystringrouter.js",
+        router: "query-string-router.js",
         pubsub: "pubsub.js" 
     },
 
@@ -18,7 +16,6 @@ const loader = {
         const metaFile = req.trim().toLowerCase();
 
         if (loader.loaded.indexOf(metaFile) > -1) {
-            console.log("Already loaded", metaFile);
             if (cb) {
                 cb(true);
             }
@@ -26,7 +23,6 @@ const loader = {
         }
 
         if (metaFile.indexOf(".js") > 0) {
-            console.log("Loading script", metaFile);
             const script = document.createElement("script");
 
             if (cb) {
@@ -40,7 +36,6 @@ const loader = {
             loader.loaded.push(metaFile);
 
         } else if (metaFile.indexOf(".css") > 0) {
-            console.log("Loading stylesheet", metaFile);
             const link = document.createElement("link");
 
             if (cb) {
@@ -125,7 +120,6 @@ const loader = {
     }),
 
     registerApi: (name, apiFactory, deps) => new Promise((resolve, reject) => {
-        console.log("Registering API", name, apiFactory, deps);
         if (loader.apis[name]) {
             resolve(true);
         } else {

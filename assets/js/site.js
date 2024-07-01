@@ -1,8 +1,4 @@
-console.log("site.js loaded.");
-
 const rotator = (domHelper, gallerydb, pubsub) => {
-
-    console.log("site.js -> rotator invoked.");
 
     const dom = {
         imageContainer: domHelper.class("bg-image-back")[0],
@@ -56,8 +52,6 @@ const rotator = (domHelper, gallerydb, pubsub) => {
 }
 
 const header = (domHelper) => {
-    
-    console.log("site.js -> header invoked.");
 
     const dom = {
         content: domHelper.class("main-content")[0],

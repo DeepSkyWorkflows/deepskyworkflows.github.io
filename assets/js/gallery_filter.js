@@ -70,8 +70,6 @@ const pageScript = (domHelper, db, router, pubsub) => {
 
         const result = [];
 
-        console.log(item);
-
         if (item.signature === true) {
             result.push(domHelper.elem("a", {
                 href: "?signature=true",

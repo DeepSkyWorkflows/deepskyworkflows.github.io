@@ -1,4 +1,3 @@
-console.log("dom_helper.js");
 const domHelper = (function () {
     return {
 

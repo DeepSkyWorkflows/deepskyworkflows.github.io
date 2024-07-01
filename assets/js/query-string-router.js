@@ -1,8 +1,4 @@
-console.log("queryStringRouter.js loaded.");
-
 const router = (() => {
-    
-    console.log("queryStringRouter.js -> router invoked.");
 
     const queryManager = {
 

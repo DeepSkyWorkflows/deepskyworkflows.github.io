@@ -1,8 +1,4 @@
-console.log("gallerydb.js loaded.");
-
 const init = async () => {
-
-    console.log("gallerydb.js -> init invoked.");
 
     const convertCapture = (capture) => parseInt(capture.substring(0, 4)) * 10000 +
         parseInt(capture.substring(5, 7) * 100 +
