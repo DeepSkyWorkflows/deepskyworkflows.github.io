@@ -37,11 +37,11 @@ These are the exact items I used in the shoot. Everything was purchased by me an
 
 |Part|Description|Est. Cost (USD)|
 |:---|:--|--:|
-|[SVBony SV503 70ED](https://amzn.to/3NZ8Hax)|Doublet refractor telescope with a focal length of 420mm at f/6.|$400.00|
+|[SVBony SV503 70ED](/external?t=https://amzn.to/3xNRePu)|Doublet refractor telescope with a focal length of 420mm at f/6.|$400.00|
 |2" Compression Ring|Adapter for 2" sleeve, came with scope.||
-|[Zhumell 2x Barlow](https://amzn.to/3zYLLV1)|Lens that can double or even triple magnification to 800mm or higher.|$60.00|
-|[M42 to M48 adapter](https://amzn.to/3xqMdIo)|Extender to "step down" from larger M48 threads to smaller M42.|$12.00|
-|[1.25" extensible Camera adapter](https://amzn.to/3O45RBe)|This tube slides to change the distance between the Barlow and the camera lens. This in turn changes the magnification (not the focus).|$24.00|
+|[Zhumell 2x Barlow](/external?t=https://amzn.to/45Qg2mG)|Lens that can double or even triple magnification to 800mm or higher.|$60.00|
+|[M42 to M48 adapter](/external?t=https://amzn.to/3znqxSh)|Extender to "step down" from larger M48 threads to smaller M42.|$12.00|
+|[1.25" extensible Camera adapter](/external?t=https://amzn.to/4eZXG75)|This tube slides to change the distance between the Barlow and the camera lens. This in turn changes the magnification (not the focus).|$24.00|
 |[E-mount adapter](https://amzn.to/3QqPDDT)|Allows connecting the Sony E-mount to an astrophotography component.|$35.00|
 |[Tether tools battery](https://amzn.to/3xwtE5K)|"Infinite battery" to power the camera from a power brick with higher capacity than the camera's battery or even connect to continuous power.|$35.00|
 |[Tether tools power management](https://amzn.to/3tGCIUp)|The cable needed to power the infinite battery.|$120.00|

@@ -2,3 +2,19 @@ Sitemap: https://deepskyworkflows.com/sitemap.xml
 
 User-agent: *
 Disallow: /_gallery
+Disallow: /_gallery/
+Disallow: /_includes
+Disallow: /_incldues/
+Disallow: /_layouts
+Disallow: /_layouts/
+Disallow: /_pages
+Disallow: /_pages/
+Disallow: /_posts
+Disallow: /_posts/
+Disallow: /_resources
+Disallow: /_resources/
+Disallow: /_tags
+Disallow: /_tags/
+Disallow: /_videos
+Disallow: /_videos/
+Disallow: /external

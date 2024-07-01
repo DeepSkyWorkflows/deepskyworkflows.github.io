@@ -48,7 +48,7 @@ Let's answer these questions with some free software.
 
 {% include blogimage.html url="stellarium.jpg" description="Stellarium software" target=true %}
 
-What I _really_ love is the ability to enter information about your equipment. For example, this is my set of entries for my [Svbony doublet refractor](https://amzn.to/3JJxPiX) with a [ZWO ASI294MC Pro](https://amzn.to/3sUfl8P) camera. 
+What I _really_ love is the ability to enter information about your equipment. For example, this is my set of entries for my [Svbony doublet refractor](/external?t=https://amzn.to/3W56Ozx) with a [ZWO ASI294MC Pro](/external?t=https://amzn.to/3xwaz7X) camera. 
 
 {% include blogimage.html url="svbonysetup.jpg" description="Telescope setup" half=true target=true %}
 

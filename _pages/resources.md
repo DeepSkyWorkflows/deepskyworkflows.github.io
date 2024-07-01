@@ -36,7 +36,7 @@ depends:
         {%- assign subitems = section.items | sort : 'name' -%} 
         {%- for resource in subitems -%}
             <p>
-                <a target="_blank" href="{{ resource.site }}">{{ resource.name }}</a>
+                <a target="_blank" href="/external?t={{ resource.site }}">{{ resource.name }}</a>
                 <span>&nbsp;</span>                
                 {%- for flag in resource.flags -%}
                     {%- assign icon = "" -%}

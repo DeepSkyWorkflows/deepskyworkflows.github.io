@@ -50,7 +50,7 @@ To beat the stars, you have to spin with them. I recently purchased a product fo
 
 > __Note__: As an Amazon Associate, I earn from qualifying purchases. I only link to products I've personally purchased and used.
 
-It's called the [Sky Watcher Star Adventurer Mini](https://amzn.to/3xvqBdI). Most astrophotographers refer to it by its acronym, "SAM." I purchased a SAM kit that came with several accessories. The unboxed items and descriptions follow.
+It's called the [Sky Watcher Star Adventurer Mini](/external?t=https://amzn.to/3zoayDw). Most astrophotographers refer to it by its acronym, "SAM." I purchased a SAM kit that came with several accessories. The unboxed items and descriptions follow.
 
 {% include blogimage.html url="parts.jpeg" description="Star Adventurer Mini parts" target=true %}
 

@@ -2,10 +2,10 @@
 layout: post
 title:  "Review: Svbony SV503 70ED refractor is inexpensive but not cheap"
 author: deepskyworkflows
-categories: [ Review ]
+categories: [ Review, First light ]
 tags: [ m31, m45, copernicus, ngc2024, ic434 ]
 toc: true
-image: assets/images/2022-05-05/blogbanner.png
+image: /assets/images/2022-05-05/blogbanner.png
 description: "A complete review of the Svbony SV503 70ED refractor telescope, from how I picked it, how it's price, how it's put together to the final goods: pictures I've taken  with it."
 featured: false
 hide: true
@@ -16,21 +16,21 @@ I hadn't planned on purchasing the telescope. In September 2021, I decided it wa
 
 > **New review**: be sure to check out my newer [William Optics Redcat 71 review](/william-optics-redcat-71-review) to see how the two scopes compare!
 
-Due to the pandemic, shipments were delayed and the main telescope was indefinitely backordered. The mount was, too, but I chose to compromise and swap it with another, similar model. My mount arrived and I began taking awesome shots with my [Sony Alpha 6300](https://deepskyworkflows.com/gallery/?telescope=Sony%20ILCE-6300), but I couldn't help imagine what more I could be doing with a proper scope.
+Due to the pandemic, shipments were delayed and the main telescope was indefinitely backordered. The mount was, too, but I chose to compromise and swap it with another, similar model. My mount arrived and I began taking awesome shots with my [Sony Alpha 6300](/gallery/?telescope=Sony%20ILCE-6300), but I couldn't help imagine what more I could be doing with a proper scope.
 
 {% include blogimage.html url="scopeready.jpg" description="Getting ready to photograph with the Sony Alpha 6300 riding piggyback on the Svbony sv503 70ED with a ZWO ASI294MC Pro." half=false target=true %}
 
-After being nickled and dimed to death piecing together the system, I knew I had to keep costs down for this new "interim" investment. I did quite a bit of research, from scouring reviews (hint: I trust the ones on astrophotography sites more than I do the ones on Amazon) to visiting [AstroBin](https://www.astrobin.com/users/DeepSkyWorkflows/) and performing searches to find pictures taken with the same telescope. Initial results looked very promising. I decided to pursue the [SV503](https://amzn.to/380VkXN) from Svbony.
+After being nickled and dimed to death piecing together the system, I knew I had to keep costs down for this new "interim" investment. I did quite a bit of research, from scouring reviews (hint: I trust the ones on astrophotography sites more than I do the ones on Amazon) to visiting [AstroBin](/external?t=https://www.astrobin.com/users/DeepSkyWorkflows/) and performing searches to find pictures taken with the same telescope. Initial results looked very promising. I decided to pursue the [SV503](/external?t=https://amzn.to/3xGbmmE) from Svbony.
 
 {% include blogimage.html url="astrobinsearch.jpg" description="The results of a search for pictures taken with the sv503." half=true target=true %}
 
 The telescope looked like it facilitated great pictures, the specs were good on paper, and people were giving it positive reviews. The best part, however, was the price. 
 
-The telescope was discounted as part of a [bundle with field flattener](https://amzn.to/3OV4mGs). The combined cost was under $500 (unfortunately, it was no longer discounted when I wrote this post). I added a $79 guide scope, the [SV106 Guide Scope](https://amzn.to/3w632rM), and still managed to keep costs low. So, what did I get?
+The telescope was discounted as part of a [bundle with field flattener](/external?t=https://amzn.to/45MvEaC). The combined cost was under $500 (unfortunately, it was no longer discounted when I wrote this post). I added a $79 guide scope, the [SV106 Guide Scope](/external?t=https://amzn.to/4cqi3bD), and still managed to keep costs low. So, what did I get?
 
 ## The Specs
 
-> 📝 **NOTE** I use Amazon affiliate links and may receive a commission for purchases you make after following the links. The commission helps me pay for the software and equipment necessary for astrophotography and to produce the content for Deep Sky Workflows. I purchased the scope I'm reviewing here from Amazon. The rest of my equipment was purchased either from [B&H Photo](https://www.bhphotovideo.com/) or [Woodland Hills Camera](https://telescopes.net/). I have been 100% happy with my purchases and the customer service of all three vendors. If you're new to astrophotography, consider reaching out to Woodland Hills like I did and they will work with you to figure out the right equipment to get started. I make no commission from B&H or Woodland Hills.
+> 📝 **NOTE** I use Amazon affiliate links and may receive a commission for purchases you make after following the links. The commission helps me pay for the software and equipment necessary for astrophotography and to produce the content for Deep Sky Workflows. I purchased the scope I'm reviewing here from Amazon. The rest of my equipment was purchased either from [B&H Photo](/external?t=https://www.bhphotovideo.com/) or [Woodland Hills Camera](/external?t=https://telescopes.net). I have been 100% happy with my purchases and the customer service of all three vendors. If you're new to astrophotography, consider reaching out to Woodland Hills like I did and they will work with you to figure out the right equipment to get started. I make no commission from B&H or Woodland Hills.
 
 I bought the entry level 70ED which comes with a focal length of 420mm and an aperture of 70mm for an f-stop of F6. I intentionally picked this model to have an option to shoot at focal lengths between my first telescope (Stellina, 400mm/80mm) and the one I was waiting for (Celestron EdgeHD 9.25", 2350mm, 235mm). With a 2x Barlow lens I am able to hit close to 1000mm focal length.
 
@@ -54,7 +54,7 @@ It's surprising that the marketing materials don't make this more clear, but the
 
 ## What's not in the box
 
-There are a few things that I wish _were_ in box. Although my primary use of this scope is astrophotography, I do occassionally make visual observations. An **eyepiece** and **diagonal** would be great to be able to use it by itself (without having power up and attach a camera and laptop). The mounting bracket is fine for tripod setups but too small for larger mounts like the [CGEM-II](https://amzn.to/3w2ex3l) that I own. To make that work, I had to do a lot of searching to find the right **[Vixen/Losmandy-style clamp](https://amzn.to/3y9ToqK)** that fit the mount. Finally, I found that none of the screws  that came with the scope would work so I purchased my own set of **[socket head/hex drive screws](https://amzn.to/3vY034j)**.
+There are a few things that I wish _were_ in box. Although my primary use of this scope is astrophotography, I do occassionally make visual observations. An **eyepiece** and **diagonal** would be great to be able to use it by itself (without having power up and attach a camera and laptop). The mounting bracket is fine for tripod setups but too small for larger mounts like the [CGEM-II](/external?t=https://amzn.to/3zrjzvC) that I own. To make that work, I had to do a lot of searching to find the right **[Vixen/Losmandy-style clamp](/external?t=https://amzn.to/45Q8MHs)** that fit the mount. Finally, I found that none of the screws  that came with the scope would work so I purchased my own set of **[socket head/hex drive screws](/external?t=https://amzn.to/4eFtLRr)**.
 
 Last, but not least, there also was no mounting plate for a guide scope. I did some research and decided to try the **Astromania universal dovetail base**. It fit the outside of the telescope perfectly and was securable with the existing screws that came with the telescope, so my guiding concerns were resolved.
 
@@ -62,15 +62,15 @@ The real reason I'd like to see most of these items included is because it can b
 
 ## Things I wish I knew
 
-The telescope comes with very little documentation. The website, however, has a digital [library of manuals](https://www.svbony.com/resources/download) you can download as PDF files that are very thorough. They coverything from weight to screw sizes and even offer examples of how to mount finder scopes (small scopes with a wide field of view to help you align the telescope) scopes and guide scopes (scopes designed to work with a motorized mount to keep the scope positioned correctly for long exposures). 
+The telescope comes with very little documentation. The website, however, has a digital [library of manuals](/external?t=https://www.svbony.com/resources/download) you can download as PDF files that are very thorough. They coverything from weight to screw sizes and even offer examples of how to mount finder scopes (small scopes with a wide field of view to help you align the telescope) scopes and guide scopes (scopes designed to work with a motorized mount to keep the scope positioned correctly for long exposures). 
 
 ## My cameras
 
 I primarily use my telescopes for astrophotography and I own three cameras:
 
-- A "traditional" mirrorless [Sony Alpha 6300](https://amzn.to/38Q2VZ5)
-- A dedicated "one shot color" dedicated deep sky cooled imaging camera: [ZWO ASI294MC Pro](https://amzn.to/3kFocr6)
-- A monochrome planetary imaging camera that I also use for guiding: [ZWO ASI120MM-S](https://amzn.to/3KGzCWc)
+- A "traditional" mirrorless [Sony Alpha 6300](/external?t=https://amzn.to/4coIiPQ)
+- A dedicated "one shot color" dedicated deep sky cooled imaging camera: [ZWO ASI294MC Pro](/external?t=https://amzn.to/3L4IGqy)
+- A monochrome planetary imaging camera that I also use for guiding: [ZWO ASI120MM-S](/external?t=https://amzn.to/3RPMnnQ)
 
 ## First light
 
@@ -106,7 +106,7 @@ description="Half moon." half=true target=true %}
 {% include blogimage.html url="/assets/images/gallery/dawn-moon/dawn-moon.jpg" 
 description="Bright moon just after dawn." half=true target=true %}
 
-Paired with a Barlow lens (I picked up a [Zhumell 2" 2x](https://amzn.to/37mdlQ1) for $60 USD), it is quite capable at higher magnification. Here's a closeup of the Copernicus crater region.
+Paired with a Barlow lens (I picked up a [Zhumell 2" 2x](/external?t=https://amzn.to/45PqyKX) for $60 USD), it is quite capable at higher magnification. Here's a closeup of the Copernicus crater region.
 
 {% include blogimage.html url="/assets/images/gallery/copernicus/copernicus.jpg" 
 description="Copernicus." half=true target=true %}
