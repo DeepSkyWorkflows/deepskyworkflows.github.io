@@ -2,7 +2,7 @@
 title:  "Imaging M1 (and Mars, Jupiter, and the Moon)"
 type: Imaging Session
 date: 2022-12-17
-categories: [ Celestron, NINA ]
+categories: [ Learning, Imaging session ]
 tags: [ m1, mars, jupiter, moon ]
 image: assets/images/videos/imaging-m1.jpg
 youtubeid: E_StpVNdI1g

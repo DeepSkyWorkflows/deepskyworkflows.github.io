@@ -1,9 +1,0 @@
-{% if page.PayPal %}
-<script src="https://www.paypal.com/sdk/js?client-id=BAAvo6bdaCpNr4CYpTN8wSR5L0i4SiA_UQ_bSjsArXD_i7dtjpUzann41Fng2K5AtzfbjxC-zlPvxObWz4&components=hosted-buttons&enable-funding=venmo&currency=USD"></script>
-<div id="paypal-container-{{ page.PayPal }}"></div>
-<script>
-  paypal.HostedButtons({
-    hostedButtonId: "{{ page.PayPal }}",
-  }).render("#paypal-container-{{ page.PayPal }}")
-</script>         
-{% endif %}                                                          

@@ -2,7 +2,7 @@
 title:  "The Making of M1"
 type: Imaging Session
 date: 2023-12-21
-categories: [  ]
+categories: [ Motion art ]
 tags: [ m1 ]
 image: assets/images/videos/makingofm1.webp
 youtubeid: UCo4sX-InJ4

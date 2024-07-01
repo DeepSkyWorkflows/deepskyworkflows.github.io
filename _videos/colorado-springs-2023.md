@@ -2,7 +2,7 @@
 title:  "Colorado Springs 2023: Astrophotography on the road"
 type: Imaging Session
 date: 2023-05-05
-categories: [  ]
+categories: [ Travelogue ]
 tags: [ moon, rocket, milky way, m13, antares,"Florissant Fossil Beds" ]
 image: assets/images/videos/cosprings2023.jpg
 youtubeid: ZnoGRFi9Skc

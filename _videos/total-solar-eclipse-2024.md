@@ -2,7 +2,7 @@
 title:  "Total Solar Eclipse 2024"
 type: Imaging Session
 date: 2024-04-08
-categories: [ ]
+categories: [ Travelogue, Imaging session ]
 tags: [ moon, sun, total solar eclipse 2024]
 image: assets/images/videos/totaleclipse.jpg
 youtubeid: z_QQwDOb26E

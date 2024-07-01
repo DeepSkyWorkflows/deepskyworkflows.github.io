@@ -1,31 +1,28 @@
-# Site
 name: "Deep Sky Workflows"
 title: "Deep Sky Workflows: Astrophotography, Space, and Astronomy"
-description: "Astrophotography for everyone: images, videos, and articles about space, nebulae, galaxies, planets, telescopes, and how to take and process deep space images from your own backyard."
-logo: "assets/images/logo.png"
-favicon: "assets/images/logo.png"
-baseurl: 
-url: https://deepskyworkflows.com
-# google_analytics: ''
-disqus: 'deep-sky-workflows'
-# mailchimp-list: ''
-include: ["_pages", "_gallery", "_exhibition", "_messier"]
-portfolios: ["Cayman Collection", "Comets", "Full moons", "Heybrook Lookout", "Monroe Washington", "Florissant Fossil Beds", "Index Washington", "Otter Rock", "Newport Oregon", "Total Solar Eclipse 2024"]
+email: jeremy@dswgalleries.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Astrophotography for everyone: images, videos, and articles about space, nebulae, 
+  galaxies, planets, telescopes, and how to take and process deep space images from 
+  your own backyard.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://deepskyworkflows.com" # the base hostname & protocol for your site, e.g. http://example.com
+logo: "/assets/images/logo.png"
+include: ["_pages", "_gallery"]
+twitter_username: DeepSkyWorkflow
+github_username:  DeepSkyWorkflows
+disqus: "deep-sky-workflows"
+
+# Build settings
+theme:
+plugins:
+  - jekyll-paginate
+  - jekyll-feed
+  - jekyll-seo-tag
+
+portfolios: ["Cayman Collection", "Comets", "Full moons", "Heybrook Lookout", "Monroe Washington", "Moon", "Florissant Fossil Beds", "Index Washington", "Otter Rock", "Newport Oregon", "Total Solar Eclipse 2024"]
 permalink: /:title/
 galleryhome: https://www.artworkarchive.com/profile/dswgalleries/
-venues:
-  dsw:
-    name: "DSW Galleries, LLC (contact for details)"
-    start: "April 2024"
-    active: "true"
-    address: "Newport, Oregon 97365"
-
-  bloom:
-    name: "Bloom Newport at the Performing Arts Center (PAC)"
-    start: "May 18 2024 3:00 PM"
-    end: "May 18 2024 7:00 PM"
-    active: "true"
-    address: "777 W. Olive St., Newport, Oregon 97365"
 
 # Authors
 authors:
@@ -44,7 +41,6 @@ plugins:
   - jekyll-paginate
   - jekyll-feed
   - jekyll-seo-tag
-  - jekyll-archives
     
 # Feed
 feed:
@@ -53,14 +49,6 @@ feed:
     gallery:
       path: "/gallery.xml"
       posts_limit: 9999
-
-# Archives
-jekyll-archives:
-  enabled:
-    - categories
-  layout: archive
-  permalinks:
-    category: '/categories/:name/'
 
 # Twitter
 twitter:
@@ -78,13 +66,21 @@ paginate_path: /page:num/
 social:
   name: Jeremy Likness
   links:
+    - https://deepskyworkflows.com/
+    - https://dswgalleries.com
     - https://twitter.com/DeepSkyWorkflow
     - https://instagram.com/DeepSkyWorkflows
     - https://facebook.com/DeepSkyWorkflows/
     - https://github.com/DeepSkyWorkflows
+    - https://youtube.com/@DeepSkyWorkflows 
+    - https://www.threads.net/@deepskyworkflows
+    - https://www.astrobin.com/users/DeepSkyWorkflows/collections/
+
     
 # Other
 markdown: kramdown
+
+adsense: disabled
 
 kramdown:
   input: GFM
@@ -93,15 +89,7 @@ kramdown:
     block:
       line_numbers: true
 
-# Adsense (change to "enabled" to activate, also your client id and ad slot. Create a new ad unit from your Adsense account to get the slot.)
-adsense: "disabled"
-adsense-data-ad-client: "ca-pub-3412143450191416"
-adsense-data-ad-slot: "1363087678"
-
-# Lazy Images ("enabled" or "disabled")
-lazyimages: "enabled"
-
-exclude: [changelog.md, mediumish-theme-license.txt, LICENSE, docker-compose.yml, README.md, Gemfile, Gemfile.lock]
+exclude: [docker-compose.yml, README.md, Gemfile, Gemfile.lock]
 
 collections:
   resources:
@@ -111,12 +99,6 @@ collections:
   videos:
     output: true
     permalink: /video/:title/    
-  exhibition:
-    output: true
-    permalink: /exhibition/:name
-  messier:
-    output: true
-    permalink: /messier/:name/
   tags:
     output: true
     permalink: /tag/:title/
@@ -130,25 +112,12 @@ defaults:
       author: "deepskyworkflows"
   - scope:
       path: ""
-      type: "exhibition"
-    values:
-      layout: "exhibition"
-      author: "deepskyworkflows"
-      comments: true
-  - scope:
-      path: ""
       type: "videos"
     values:
       layout: "videos"
       author: "deepskyworkflows"
       comments: true
-      toc: false
-  - scope:
-      path: ""
-      type: "messier"
-    values:
-      layout: "messier"
-      author: "deepskyworkflows"
+      toc: false 
   - scope:
       path: ""
       type: "tags"

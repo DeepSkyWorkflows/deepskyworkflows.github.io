@@ -1,18 +1,18 @@
 ---
 layout: page
 title: Search
-image: "assets/images/gallery.jpg"
 permalink: /search
+comments: false
+image: "assets/images/logo.png"
+depends: 
+    - forms.css
+    - search.css
+    - search.js
 ---
-
 <p>Use this page to search the entire site, including blog posts, videos, and images. Just tap outside of the input field or press enter to search. You can also bookmark searches and share them.</p>
-
-<input class="search-input" disabled autofocus placeholder="Search terms." />
+<form>
+    <input id="search-input" name="search-input" class="search-input" disabled placeholder="Search terms." />
+</form>
 <progress class="search-progress"></progress>
-<div class="alert search-status"></div>
-<div class="search-results">
-</div>
-
-<script src="{{ site.baseurl }}/assets/js/queryStringRouter.js"></script>
-<script src="{{ site.baseurl }}/assets/js/dom_helper.js"></script>
-<script src="{{ site.baseurl }}/assets/js/search.js"></script>
+<div id="status" class="alert search-status">(loading)</div>
+<div id="results" class="search-results">(no results)</div>

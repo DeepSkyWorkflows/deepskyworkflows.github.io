@@ -2,7 +2,7 @@
 title:  "Stacking Nonlinear Images (the Moon) with PixInsight"
 type: Stacking
 date: 2021-04-17
-categories: [ Stacking, PixInsight ]
+categories: [ Stacking, Processing, Learning ]
 tags: [ moon, stellina ]
 image: assets/images/videos/stackingmoon.webp
 youtubeid: 2EXLcGv4yBE

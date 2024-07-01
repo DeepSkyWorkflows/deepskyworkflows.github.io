@@ -2,7 +2,7 @@
 layout: post
 title:  "Planning Mosaics with Telescopius and Processing with AstroPixel Processor"
 author: deepskyworkflows
-categories: [ Telescopius, PixInsight, AstroPixel Processor, Mosaics ]
+categories: [ Learning ]
 tags: [ ngc6992, veil nebula, m13 ]
 toc: true
 image: assets/images/2021-08-18/ngc6992mosaicpreview.jpg

@@ -2,7 +2,7 @@
 title:  "Calibration explained in less than 4 minutes"
 type: Image Processing
 date: 2022-11-01
-categories: [ Calibration ]
+categories: [ Calibration, Learning ]
 tags: [ calibration ]
 image: assets/images/videos/calibration.jpg
 youtubeid: a7mAYRouGbU

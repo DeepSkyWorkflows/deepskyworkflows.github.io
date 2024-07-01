@@ -2,7 +2,7 @@
 layout: post
 title:  "Processing NGC2174: The Monkey Head Nebula"
 author: deepskyworkflows
-categories: [ Videos, PixInsight, Stellina, AstroPixel Processor, Topaz Labs, Image Processing, Stacking ]
+categories: [ Imaging session, Processing, Stacking, Learning ]
 tags: [ ngc2174 ]
 toc: false
 image: assets/images/2021-09-19/NGC2174-Monkey-Head-Nebula.png

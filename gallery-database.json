@@ -2,16 +2,17 @@
 layout: null
 ---
 {
+  {%- if site.gallery != null -%}
   "gallery": [
-    {% assign idx = 0 %}
-    {% assign sorted = site.gallery | sort: 'lastCapture' %}
-    {% for image in sorted %}
+    {%- assign idx = 0 -%}
+    {%- assign sorted = site.gallery | sort: 'lastCapture' -%}
+    {%- for image in sorted -%}
       {
         "title": "{{image.title}}",
         "type": "{{image.type}}",
         "tags": {{image.tags | jsonify }},
         "description": "{{image.description}}",    
-        "thumbnailUrl": {% assign thumb = site.baseurl | append: image.image %}{{thumb | jsonify}},
+        "thumbnailUrl": {%- assign thumb = site.baseurl | append: image.image -%}{{thumb | jsonify}},
         "imageUrl": "{{site.baseurl}}/assets/images/gallery/{{image.folder}}/{{image.folder}}.jpg",        
         "telescope": "{{image.telescope}}",
         "focalLength": "{{image.length}}",
@@ -20,23 +21,24 @@ layout: null
         "exposure": "{{image.exposure}}",
         "lights": "{{image.lights}}",
         "sessions": "{{image.sessions}}",
-        "printUrl": {% if image.printurl != null %}{{site.galleryHome}}{{image.printurl | jsonify}}{% else %}""{% endif %},
-        "archive": {% if image.archive != null %}"{{image.archive}}"{% else %}"false"{% endif %},
-        "nostars":  {% if image.nostars != null %}"{{image.nostars}}"{% else %}"false"{% endif %},
-        "signature":  {% if image.signature != null %}"{{image.signature}}"{% else %}"false"{% endif %},
-        "noannotations":  {% if image.noannotations != null %}"{{image.noannotations}}"{% else %}"false"{% endif %},
-        {% if image.wwt != null %}"wwt": {{ image.wwt | jsonify }},{% endif %}        
-        {% if image.group != null %}"group": "{{ image.group }}",{% endif %}        
+        "printUrl": {%- if image.printurl != null -%}{{site.galleryHome}}{{image .printurl | jsonify}}{%- else -%}""{%- endif -%},
+        "archive": {%- if image.archive != null -%}"{{image.archive}}"{%- else -%}"false"{%- endif -%},
+        "nostars":  {%- if image.nostars != null -%}"{{image.nostars}}"{%- else -%}"false"{%- endif -%},
+        "signature":  {%- if image.signature != null -%}"{{image.signature}}"{%- else -%}"false"{%- endif -%},
+        "noannotations":  {%- if image.noannotations != null -%}"{{image.noannotations}}"{%- else -%}"false"{%- endif -%},
+        {%- if image.wwt != null %}"wwt": {{ image.wwt | jsonify }},{%- endif -%}        
+        {%- if image.group != null %}"group": "{{ image.group }}",{%- endif -%}        
         "firstCapture": "{{ image.firstCapture }}",
-        "lastCapture": {% if image.lastCapture != null %}"{{image.lastCapture}}"{% else %}"{{image.firstCapture}}"{% endif %},
-        {% if image.ra != null %}"rightAscension": "{{ image.ra }}",{% endif %}        
-        {% if image.dec != null %}"declination": "{{ image.dec }}",{% endif %}        
-        {% if image.size != null %}"size": "{{ image.size }}",{% endif %}        
-        {% if image.radius != null %}"radius": "{{ image.radius }}",{% endif %}        
-        {% if image.scale != null %}"scale": "{{ image.scale }}",{% endif %}        
+        "lastCapture": {%- if image.lastCapture != null -%}"{{image.lastCapture}}"{%- else -%}"{{image.firstCapture}}"{%- endif -%},
+        {%- if image.ra != null -%}"rightAscension": "{{ image.ra }}",{%- endif -%}        
+        {%- if image.dec != null -%}"declination": "{{ image.dec }}",{%- endif -%}        
+        {%- if image.size != null -%}"size": "{{ image.size }}",{%- endif -%}        
+        {%- if image.radius != null -%}"radius": "{{ image.radius }}",{%-  endif -%}        
+        {%- if image.scale != null -%}"scale": "{{ image.scale }}",{%- endif -%}        
         "idx": "{{idx}}"
       },
-    {% assign idx = idx | plus: 1 %}{% endfor %}
+    {%- assign idx = idx | plus: 1 -%}{%- endfor -%}
     {}
   ]
+  {%- endif -%}
 }

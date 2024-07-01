@@ -1,0 +1,44 @@
+.after-post-tags {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start
+}
+
+.after-post-tags strong {
+    flex-basis: 100%;
+}
+
+.after-post-tags a {
+    flex-basis: content;
+    margin: 0.5rem;
+}
+
+div.article-post iframe {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 170px;
+    margin: 0.5rem;
+}
+
+@media screen and (min-width: 768px) {
+    div.article-post iframe {
+        width: 560px;
+        height: 315px;
+    }    
+}
+
+@media screen and (min-width: 1200px) {
+    div.article-post iframe {
+        width: 800px;
+        height: 450px;
+    }        
+}
+
+@media screen and (min-width: 1600px) {
+    div.article-post iframe {
+        width: 1200px;
+        height: 675px;
+    }            
+}

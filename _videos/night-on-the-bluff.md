@@ -2,7 +2,7 @@
 title:  "A Night on the Bluff in Otter Rock, Oregon"
 type: Imaging Session
 date: 2024-05-04
-categories: [  ]
+categories: [ Travelogue ]
 tags: [ "otter rock", moon, "milky way" ]
 image: assets/images/videos/nightonbluff.jpg
 youtubeid: Y8hxPxg6wn4

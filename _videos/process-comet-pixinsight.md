@@ -2,7 +2,7 @@
 title:  "How to Process a Comet in PixInsight"
 type: Image Processing
 date: 2023-02-02
-categories: [ PixInsight ]
+categories: [ Processing, Learning ]
 tags: [ comets ]
 image: assets/images/videos/cometprocess.jpg
 youtubeid: /GGSPEuj-Fs0

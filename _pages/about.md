@@ -1,44 +1,31 @@
 ---
-layout: page
+layout: default
 title: About
 permalink: /about
-comments: true
-image: "assets/images/logo.png"
+comments: false
+image: "/assets/images/about/jeremy-redmond-2024.jpeg"
+description: Jeremy Likness created Deep Sky Workflows with the mission to inform, educate, and astound guests with facts and images about space. Learn more about Jeremy and his astrophotography journey.
+depends:
+    - about.js
 ---
-
-<div><img src="{{site.baseurl}}/assets/images/logo.png" class="aboutlogo" title="Deep Sky Workflows"/></div>
-<p>Hello, and welcome to Deep Sky Workflows! I picked this name because most of my images are deep sky objects (DSO) and I wanted a place to post what I learn as I gain experience with astrophotography and image-processing or workflows. I have since embraced all forms of photography, but astrophotography is my true passion!</p>
-<p>On this site, you can:</p>
-<ul>
-    <li>Read <a href="{{site.baseurl}}/index.html" title="Deep Sky Workflows Blog">about astrophotography</a> or <a href="{{site.baseurl}}/categories">browse by category</a>.</li>
-    <li>Watch <a href="{{site.baseurl}}/videos" title="Astrophotography videos">astrophotography-related videos</a>.</li>
-    <li>View <a href="{{site.baseurl}}/gallery" title="Space pictures">a gallery of galaxies, nebulae, planets and stars</a>.</li>
-    <li>Navigate a <a href="{{site.baseurl}}/tags">network of interconnected topics</a>.</li>
-    <li>Check out my progress photographing the entire <a href="{{site.baseurl}}/messier" title="Messier catalog">Messier catalog</a>.</li>
-</ul>
-<p>You can also visit related websites:</p>
-<ul>
-    <li><i class="fa fa-print"></i>&nbsp;A <a href="https://dswgalleries.com/" title="DSW Galleries">gallery of astrophotography and Oregon coast landscape photography</a></li>
-    <li><i class="fab fa-github"></i>&nbsp;A suite of <a href="https://github.com/DeepSkyWorkflows" target="_blank">astrophotography scripts and tools</a></li>
-</ul>
-<p>Connect with me on: <i class="fa fa-image"></i><a href="https://www.astrobin.com/users/DeepSkyWorkflows/" title="Deep Sky Workflows on AstroBin">AstroBin</a>, <i class="fab fa-facebook"></i><a href="https://facebook.com/DeepSkyWorkflows" title="Deep Sky Workflows on Facebook">Facebook</a>, <i class="fab fa-instagram"></i><a href="https://instagram.com/DeepSkyWorkflows" title="Deep Sky Workflows on Instagram">Instagram</a>, and/or <i class="fab fa-twitter"></i><a href="https://twitter.com/DeepSkyWorkflow" title="@DeepSkyWorkflow on Twitter">Twitter</a>.</p>
-<p>You can also <a href="{{ site.galleryhome }}/contact" alt="Send me a message directly." title="Send me a message directly.">send me a message directly</a> using the linked form.    
-<p>It’s great to have a place to share my deep sky explorations and astrophotography journey with you. In the beginning of 2021, I purchased an observation station named <a href="https://amzn.to/3CBbsds" target="_blank">Stellina</a>. It is a fully automated system for capturing deep sky images. What intrigued me about the unit was the claim that it could handle light polluted areas and the ease of setup. I took a chance, purchased the scope and have not been disappointed.</p>
-<p>If you're interested to see what several years of astrophotography look like, sort the gallery by <a href="/gallery?sortBy=lastCapture&sortAscending=true">oldest items first</a>. Most gallery items have a set of related images that you can browse to see how my abilities have changed over time. </p>
-<p>My current gear list:</p>
-<ul>
-    <li><strong>Telescopes</strong> &mdash; William Optics RedCat 71 (350mm), Celestron EdgeHD 9.25" (2350mm), SvBony SV503 70ED (400mm)</li>
-    <li><strong>Cameras</strong> &mdash; ZWO ASI294MM Pro, ZWO ASI294MC Pro, ZWO ASI120MM-S</li>
-    <li><strong>Mounts</strong> &mdash; ZWO AM5, Sky Watcher Star Adventurer GTi, Sky Watcher Star Adventurer Mini, Celestron CGEM-II</li>
-</ul>
-<a name="license"></a>
-<h1>How to use my images</h1>
-<p xmlns:cc="http://creativecommons.org/ns#" >This work is licensed under <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution-NonCommercial-NoDerivatives 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1"></a></p>
-<p>If you wish to use the work for commercial purposes, <a href="{{ site.galleryhome }}/contact" alt="Send me a message directly." title="Send me a message directly.">contact me</a> with the details.</p>
-<p>This license applies to all works on this site, syndication websites and anywhere the image may appear online. For other sites, this license is the default license unless the image was published <emphasis>by me and with my approval</emphasis> on another site, in which case the existence of a license there will replace this license. Examples of approved sites include: <a href="https://www.astrobin.com/users/DeepSkyWorkflows/" target="_blank">Astrobin under my profile</a>, <a href="https://dswgalleries.com/" target="_blank">my online galleries</a>, and <a href="https://earthsky.org/earthsky-community-photos/?filter_1_3=Jeremy&filter_1_6=Likness&mode=all" target="_blank">EarthSky.org under my profile</a>.
-<p>Examples of acceptable use: unmodified image as screensaver or desktop background (work or home); printed copy for personal use that will not be transferred, sold, or donated; used as part of a presentation for educational (not marketing) purposes.</p>
-<p>Examples of unacceptable use: alteration of any kind, including cropping or resizing; use as part of a corporate presentation; printed on metal for sale at a silent auction.</p>
-<p>Examples are not inclusive of all scenarios and are intended to represent common requests for use.</p>
-<p>Regards,</p>
-<p>Jeremy Likness</p>
+<p>Welcome to <i>Deep Sky Workflows</i> where my mission is to inform, educate, and astound our guests with facts and images about space. On this site, I share <a href="/index.html#AllStories" title="Stories about astrophotography">blog posts and stories about astrophotography</a>, provide a comprehensive list of  <a href="/resources" title="Astrophotography resource list">resources for astrophotography</a> including software and equipment, share  <a href="/videos" title="Videos of the universe">videos of the universe</a> from behind-the-scenes and "how to" content to timelapses and raw footage, and present a <a href="/gallery">gallery of deep space photographs</a> with annotated images that show celestial coordinates, related images, the equipment that I used and more. </p>
+<img class="image" src="/assets/images/about/jeremy-redmond-2024.jpeg" title="Jeremy in Redmond shooting the stars"/>
+<p>You can think of this as the "science" side of my craft. I also produce physical works of art by printing images on metal, canvas, and even wood. To view my <a href="https://dswgalleries.com/galleries">artistic astrophotography galleries</a>, upcoming <a href="https://www.dswgalleries.com/calendar">events</a>, courses that I plan to teach, and my <a href="https://dswgalleries.com/portfolio" title="Photography portfolio by Jeremy Likness">portfolio of work</a>, visit my online gallery site at <a href="https://dswgalleries.com">DSWGalleries.com</a>. That is the "art" side of my craft.</p>
+<p>I was raised in St. Petersburg, Florida, and dreamed of becoming an astronaut until the introduction of a personal computer altered my trajectory. At the age of 7, I traded my space helmet for a keyboard and coded adventure games that sparked my lifelong passion for technology and creativity.</p>
+<p>I dropped out of college after one semester and meandered through odd jobs from trying (and
+failing) to sell electronics from the trunk of my car to (successfully) caretaking the night shift at a pool  hall, until I landed my first job that paid more than minimum wage as a Spanish-speaking car insurance claims representa􀆟ve. My programming prowess earned me a spot on the technology team, where I stayed until a “promotion” from hourly to salary cut my income in half and I decided to ditch St. Petersburg for a new life elsewhere.</p>
+<p>I met my wife, Doreen, the first week after I moved to Atlanta. I played a pivotal part in building several successful technology companies through my roles of practice manager and director. This included an IPO, the development a new and profitable practice, and coding the foundational software while simultaneously building the initial infrastructure for a device management company that was later acquired by a tech giant for over $1 Billion. In 2017 I was surprised with an offer I couldn’t refuse: the opportunity to work at Microsoft. I
+joined as a "cloud developer advocate" and traveled around the world, presenting to developer audiences of thousands, producing videos, authoring articles and blog posts and occasionally delivering <a href="https://youtube.com/playlist?list=PL1VfiVM16kp-YgZc1adB1LoSl0NtzjjFQ&si=pHx9ZJ-ug31MeGel" target="_blank">a rap song through YouTube</a>. A year after my daughter left for college, Doreen and I made one of our dreams a reality when we relocated to the Pacific Northwest.</p>
+<img class="image" src="/assets/images/about/jeremy-shot.jpeg" title="Jeremy getting the eclipse shot"/>
+<p>My work in Newport, including several images of the <a href="/gallery/?text=12P/Pons-Brooks">comet 12P/Pons-Brooks</a>, aka “The Devil
+Comet,” has been featured in the <a href="https://www.oregonlive.com/living/2024/04/astrophotographer-captures-stunning-images-of-devils-comet-over-oregon-coast-photos.html" target="_blank">Oregonian</a> and the <a href="https://www.beachconnection.net/news/photog_snag_incredible_images_comet_above_otter_rock.php" target="_blank">Oregon Coast Beach Connection</a>. I was <a href="https://www.strengthwithparkinsons.com/post/finding-strength-in-my-weakness" target="_blank">diagnosed with Young Onset Parkinson’s Disease</a> in 2020, the same year I took my first deep space photograph after purchasing a device on a whim. I am an outspoken advocate for research and awareness of Parkinson’s Disease, have personally raised tens of thousands of dollars for the <a href="https://www.michaeljfox.org/" target="_blank">Michael J. Fox Foundation</a> and I am serving my fourth year on the board of directors for the non-profit <a href="https://yopnetwork.org" target="_blank">Young Onset Parkinson’s Network (YOPN)</a>.</p>
+<p>My diagnosis is what brought Doreen and me to Newport, where we moved to relax on the coast,
+made another dream into reality, and have been blown away by how amazing and welcoming the people are here. After friends, family, colleagues, and neighbors began asking the same questons: "where is your gallery?" and "do you teach classes?" I responded by founding DSW Galleries LLC and printing my first pieces.</p>
+<p>Astrophotography involves four phases: a <strong>planning</strong> phase, an <strong>aquisition</strong> phase, a <strong>processing</strong> phase, and a <strong>presentation</strong> phase. The processing phases involves different work flows based on the type of image, and I use these Deep Sky Workflows to produce my final pieces. I am delighted to share what I've learned with you and hope to network and learn from you, too. If you have a moment and are open to it, please <a href="https://dswgalleries.com/contact">contact me</a> and let me know your interests and how I might help or what I might be able to learn from you.</p>
+<p>Also feel free to follow and connect on any of these social media platforms:</p>
 <p>{% include social.html %}</p>
+<p>Wishing you clear skies,</p>
+<p>Jeremy Likness</p>
+<script>
+    window.dsw.request(["about.js"]);
+</script>

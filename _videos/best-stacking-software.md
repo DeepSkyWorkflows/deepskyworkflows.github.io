@@ -2,7 +2,7 @@
 title:  "Best astrophotography stacking software"
 type: Stacking
 date: 2022-06-20
-categories: [ Stacking ]
+categories: [ Stacking, Learning ]
 tags: [ stacking ]
 image: assets/images/videos/best-stacking.jpg
 youtubeid: zkvOXEM9iP4

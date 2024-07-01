@@ -2,7 +2,7 @@
 title:  "How to track a comet using N.I.N.A. software"
 type: Astrophotography tips
 date: 2023-02-02
-categories: [ tips ]
+categories: [ Tips ]
 tags: [ comet ]
 image: assets/images/videos/astrotip4.jpg
 youtubeid: dbdLMcJzAzU

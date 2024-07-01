@@ -2,7 +2,7 @@
 title:  "The Wanderers"
 type: Timelapse
 date: 2023-08-05
-categories: [ ]
+categories: [ Timelapse, Motion art ]
 tags: [ saturn, moon, jupiter ]
 image: assets/images/videos/thewanderers.jpg
 youtubeid: ysKgmNZIqug

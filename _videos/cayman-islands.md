@@ -2,7 +2,7 @@
 title:  "The Cayman Collection (behind the scenes)"
 type: Tour
 date: 2022-10-25
-categories: [  ]
+categories: [ Travelogue ]
 tags: [ m31, m33, m45, moon, mars, Cayman collection ]
 image: assets/images/videos/cayman.jpg
 youtubeid: 8Y8M3Iei0_k

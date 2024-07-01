@@ -2,7 +2,7 @@
 title:  "Add a filter without changing backfocus"
 type: Astrophotography tips
 date: 2023-01-06
-categories: [ tips ]
+categories: [ Tips ]
 tags: [ ]
 image: assets/images/videos/astrotip2.jpg
 youtubeid: DQVsvcQcV00

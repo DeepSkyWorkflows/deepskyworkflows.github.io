@@ -2,7 +2,7 @@
 title:  "Celestial Spinner"
 type: Timelapse
 date: 2022-11-20
-categories: [ Timelapse, Sony Alpha 6300 ]
+categories: [ Timelapse, Motion art ]
 tags: [ m45, ngc688, ngc689, mars ]
 image: assets/images/videos/celestialspinner.webp
 youtubeid: aMSKnSjR0tE

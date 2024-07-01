@@ -2,7 +2,7 @@
 layout: post
 title:  "Planetary processing with PixInsight (no RegiStax!)"
 author: deepskyworkflows
-categories: [ PixInsight, RegiStax, Image Processing, Planetary, Lunar, PIPP, AutoStakkert, Deconvolution ]
+categories: [ Processing, Learning ]
 tags: [ moon ]
 toc: true
 image: assets/images/2022-10-06/planetary-processing-pixinsight.jpg

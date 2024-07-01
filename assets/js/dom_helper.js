@@ -1,4 +1,5 @@
-window.ds_dom_helper = (function () {
+console.log("dom_helper.js");
+const domHelper = (function () {
     return {
 
         timeoutTracker: {},
@@ -36,10 +37,16 @@ window.ds_dom_helper = (function () {
             }
         },
 
+        appendChildren: function (elem, children) { 
+            for (let i = 0; i < children.length; i++) {
+                elem.appendChild(children[i]);
+            }
+        },
+
         arrayToOptions(array, opts = { valueProp: null, textProp:  null, selectedValue: null }) {
             const getValue = (item) =>  opts.valueProp ? item[opts.valueProp] : item;
             const getText = (item) => opts.textProp ? item[opts.textProp] : getValue(item);
-            selectedValue = opts.selectedValue || getValue(array[0]);
+            const selectedValue = opts.selectedValue || getValue(array[0]);
             const options = [];
             for (let  i = 0; i < array.length; i++) {
                 const option = this.elem("option", {
@@ -207,3 +214,5 @@ window.ds_dom_helper = (function () {
         }
     };
 })();
+
+window.dsw.loader.registerApi("domHelper", () => domHelper);

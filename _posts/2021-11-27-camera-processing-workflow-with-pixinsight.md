@@ -2,7 +2,7 @@
 layout: post
 title:  "My Camera Processing Workflow with PixInsight"
 author: deepskyworkflows
-categories: [ PixInsight, AstroPixel Processor, Topaz Labs, Camera-only astrophotography, Image Processing, Deconvolution ]
+categories: [ Processing, Learning ]
 tags: [ M42, NGC1977, NGC2024 ]
 toc: false
 image: assets/images/2021-11-27/camera.jpg

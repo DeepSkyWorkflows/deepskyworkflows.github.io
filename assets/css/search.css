@@ -1,87 +1,81 @@
-.search-input {
-    padding-left: 2rem;
-    background: #222222;
-    color: white;
-    height: 2rem;
-    border-radius: 0.5em;
-    width: 100%;
+div.search-status {
+    margin-top: 1rem;
 }
 
-.search-progress {
+progress.search-progress {
     height: 2rem;
     width: 100%;  
-    border-radius: 0.5em;;
+    border-radius: 0.5rem;
 }
 
-.search-results {
-    margin-top: 1em;
+div.search-results {
+    margin-top: 1rem;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
     padding: 1em;
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
+    justify-content: flex-start;
 }
 
-.search-result {
+div.search-result {
     flex-basis: 100%;
-    margin-right: 2rem;
+    width: 100%;
     margin-bottom: 1rem;
     display: flex;
+    text-align: center;
+    flex-direction: column;
+    background: #515151;
+    border-radius: 0.5rem;
 }
 
-.search-result-thumb {
-    float: left;
-    display: flexbox;
+@media only screen and (min-width: 800px) {
+    div.search-result {
+        flex-basis: 28%;
+        margin: 1rem;        
+    }
+ }
+
+@media only screen and (min-width: 1024px) {
+    div.search-result {
+        flex-basis: 300px;
+        width: 100%;
+        overflow: hidden;
+    }
+}
+
+img.search-result-thumb {
     max-height: 256px;
     max-width: 256px;
-    margin: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0.5rem;
 }
 
-.search-result-image {
-    float: left;  
-    display: flexbox;
+img.search-result-image {    
     max-height: 256px;
-    max-width: 50%;
-    margin: 1rem;
+    border-radius: 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
 }
 
-.search-result-link {
-    text-decoration: none;
+.search-result a {
+    flex-basis: 100%;
 }
 
-.search-result-link:hover {
-    background: #222222;
+.search-result p {
+    text-align: justify;
+    font-size: 0.8rem;
+    flex-basis: 100%;
+    max-height: 6rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.nav-link {
-    display: flex;
-    text-decoration: none;
-}
-
-.nav-link:hover {
-    color: black;
-    text-decoration: underline;
-}   
-
-.tag-span {
-    flex: 1;
-    text-decoration: none;
-}
-
-@media screen and (min-width: 768px) {
-    .search-result {
-        flex-basis: 40%;
-        border: solid 1px #222222;
-        border-radius: 0.5rem;
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    .search-result {
-        flex-basis: 25%;
-    }
-}
-
-@media screen and (min-width: 1280px) {
-    .search-result {
-        flex-basis: 20%;
-    }
+.search-result small {
+    float: right;
+    flex-basis: content;
 }

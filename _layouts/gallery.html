@@ -2,246 +2,149 @@
 layout: default
 ---
 
-{% assign loadingImg = site.baseurl | append: "/assets/images/loading.gif" %}
-{% assign folderPath = site.baseurl | append: "/assets/images/gallery/" | append: page.folder | append: "/" %}
-{% assign mainImage = folderPath | append: page.folder | append: ".jpg" %}
-{% assign annotated = folderPath | append: page.folder | append: "-annotated.jpg" %}
-{% assign nostars = folderPath | append: page.folder | append: "-nostars.jpg" %}
-{% assign fullsize = folderPath | append: page.folder | append: "-annotated-fs.jpg" %}
-{% assign grid = folderPath | append: page.folder | append: "-grid.jpg" %}
-{% assign copyright = "Image &copy; 2022 &mdash; 2023 Jeremy Likness. All rights reserved." %}
-{% assign printurl = site.galleryhome | append: page.printurl %}
+{%- assign loadingImg = site.baseurl | append: "/assets/images/loading.gif" -%}
+{%- assign folderPath = site.baseurl | append: "/assets/images/gallery/" | append: page.folder | append: "/" -%}
+{%- assign mainImage = folderPath | append: page.folder | append: ".jpg" -%}
+{%- assign annotated = folderPath | append: page.folder | append: "-annotated.jpg" -%}
+{%- assign nostars = folderPath | append: page.folder | append: "-nostars.jpg" -%}
+{%- assign fullsize = folderPath | append: page.folder | append: "-annotated-fs.jpg" -%}
+{%- assign grid = folderPath | append: page.folder | append: "-grid.jpg" -%}
+{%- assign year = site.time | date: "%Y" -%}
+{%- assign copyright = "Image &copy; 2022 &mdash; " | append: year | append: " DSW Galleries, LLC. All rights reserved." -%}
+{%- assign printurl = site.galleryhome | append: page.printurl -%}
+{%- assign prevTitle = "" -%}
+{%- assign nextTitle = "" -%}
 
-{% if page.previous.url %}
-    {% assign prev = site.baseurl | append: page.previous.url %}
-{% endif %}
+{%- if page.previous.url -%}
+    {%- assign prev = site.baseurl | append: page.previous.url -%}
+{%- else -%}
+    {%- assign prev = site.baseurl | append: "/gallery" -%}    
+    {%- assign prevTitle = "Gallery" -%}
+{%- endif -%}
 
-{% if page.next.url %}
-    {% assign next = site.baseurl | append: page.next.url %}
-{% endif %}
+{%- if page.next.url -%}
+    {%- assign next = site.baseurl | append: page.next.url -%}
+{%- else -%}
+    {%- assign next = site.baseurl | append: "/gallery" -%}    
+    {%- assign nextTitle = "Gallery" -%}
+{%- endif -%}
 
-{% assign types = site.gallery | group_by: 'type' | sort: 'lastCapture' | reverse %}
-{% assign cats = types | sort: 'name' %}
-{% assign prevUrl = "" %}
-{% assign prevTitle = "" %}
-{% assign nextUrl = "" %}
-{% assign nextTitle = "" %}
-{% assign curItem = "" %}
+{%- assign types = site.gallery | group_by: 'type' | sort: 'lastCapture' | reverse -%}
+{%- assign cats = types | sort: 'name' -%}
+{%- assign prevUrl = "" -%}
+{%- assign nextUrl = "" -%}
+{%- assign curItem = "" -%}
 
-{% for group in cats %}
-    {% if group.name == page.type %}
-        {% assign subitems = group.items | sort : 'lastCapture' | reverse %}
-        {% for item in subitems %}
-            {% if item.url == page.url %}
-                {% assign curItem = item.title %}
-            {% endif %}
-            {% if curItem == "" %}
-                {% assign prevTitle = item.title %}
-                {% assign prevUrl = site.baseurl | append: item.url %}
-            {% endif %}
-            {% if curItem == "" %}
-                {% else %}
-                {% if nextTitle == "" %}
-                    {% if curItem == item.title %}
-                    {% else %}
-                        {% assign nextTitle = item.title %}
-                        {% assign nextUrl = site.baseurl | append: item.url %}
-                    {% endif %}
-                {% endif %}
-            {% endif %}
-        {% endfor %}
-    {% endif %}
-{% endfor %}
+{%- for group in cats -%}
+    {%- if group.name == page.type -%}
+        {%- assign subitems = group.items | sort : 'lastCapture' | reverse -%}
+        {%- for item in subitems -%}
+            {%- if item.url == page.url -%}
+                {%- assign curItem = item.title -%}
+            {%- endif -%}
+            {%- if curItem == "" -%}
+                {%- assign prevTitle = item.title -%}
+                {%- assign prevUrl = site.baseurl | append: item.url -%}
+            {%- endif -%}
+            {%- if curItem == "" -%}
+            {%- else -%}
+            {%- if nextTitle == "" -%}
+            {%- if curItem == item.title -%}
+                    {%- else -%}
+                        {%- assign nextTitle = item.title -%}
+                        {%- assign nextUrl = site.baseurl | append: item.url -%}
+                    {%- endif -%}
+                {%- endif -%}
+            {%- endif -%}
+        {%- endfor -%}
+    {%- endif -%}
+{%- endfor -%}
 <section class="gallery-item-section" itemscope itemtype="https://schema.org/ImageObject">
-
-    <div class="gallery-row">
-
-        <div class="gallery-column-single">
-            <h2>{{page.title}}</h2>
-            <p xmlns:cc="http://creativecommons.org/ns#" >This work is licensed under <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution-NonCommercial-NoDerivatives 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1"></a></p>
-            <p>If you wish to use the work for commercial purposes, <a href="{{ site.galleryhome }}/contact" alt="Send me a message directly." title="Send me a message directly.">contact me</a> with the details.</p>
-            <p><small>❓ Read the <a href="/gallery/help#the-image-detail-page" title="Deep Sky Workflows gallery user guide">Deep Sky Workflows complete gallery user guide</a> to learn more about this result.</small></p>
-            <p><strong>Navigation: </strong>
-                <span>
-                    {% if prevTitle == "" %}
-                    {% else %}
-                    <a class="prevUrl" href="{{ prevUrl }}" title="{{ prevTitle }}">{{ prevTitle }}</a>
-                    &nbsp;&laquo;&nbsp;
-                    {% endif %}
-                    <a href="/gallery" title="Gallery">Back to Gallery</a>
-                    {% if nextTitle == "" %}
-                    {% else %}
-                    &nbsp;&raquo;&nbsp;
-                    <a class="nextUrl" href="{{ nextUrl }}" title="{{ nextTitle }}">{{ nextTitle }}</a>
-                    {% endif %}
-                    &nbsp;
-                    {% if printurl == site.galleryhome %}
-                    <a href="{{ printurl }}" target="_blank">🖼 Browse our physical collection.</a>
-                    {% else %}
-                    <a href="{{ printurl }}" target="_blank">👁 Learn more about physical (printed) versions of this piece.</a>
-                    {% endif %}
-                </span>
-            </p>
-            <p>
-                <span>Click or tap on the image to view full size.</span>
-                {% if page.signature == true %}
-                    <span>⭐ This photograph is part of our <a href="/gallery?signature=true">signature series</a>.</span>
-                {% endif %}
-                {% if page.wwt %}
-                    <span>🧭 Where is it? View this image via <a href="{{ page.wwt }}" target="_blank">World Wide
-                        Telescope</a>.</span>
-                {% endif %}
-                {% if page.astrobin and page.astrobin != '' %}
-                    <span>👁 View on <a href="https://www.astrobin.com/{{ page.astrobin }}" target="_blank">Astrobin</a>.</span>
-                {% endif %}
-            </p>
-        </div>
-
+<h3>{{page.title}}</h3>
+<p xmlns:cc="http://creativecommons.org/ns#" >This work is licensed under:</p>
+<p><a href="http://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution-NonCommercial-NoDerivatives 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1"></a></p>
+<p>If you wish to use the work for commercial purposes, <a href="{{ site.galleryhome }}/contact" alt="Send me a message directly." title="Send me a message directly.">contact me</a> with the details.</p>
+<p><strong>Navigation</strong>: <span>
+    <a class="prevUrl" href="{{ prevUrl }}" title="{{ prevTitle }}">{{ prevTitle }}</a>
+    &nbsp;&laquo;&nbsp;
+    <a href="/gallery" title="Gallery">Back to Gallery</a>
+    &nbsp;&raquo;&nbsp;
+    <a class="nextUrl" href="{{ nextUrl }}" title="{{ nextTitle }}">{{ nextTitle }}</a>    
+</span></p>        
+<div class="mainImages">
+    <div class="mainImage">
+        <a href="{{ mainImage }}" class="gallery-main-image-link" 
+            title="View raw image: {{ page.title }}">
+            <img src="{{ loadingImg }}" data-src="{{ mainImage }}" 
+            alt="{{ page.title }}" itemprop="contentUrl" class="gallery-main-image" />   
+        </a>
+        <a class="share" data-title="{{page.title}}" data-folder="{{page.folder}}" href="#"><i class="fa fa-share"></i> Share this image.</a>
+        {%- if page.astrobin -%}
+<a class="astrobin" href="https://astrobin.com/{{ page.astrobin }}" target="_blank" title="View this image on Astrobin.">
+    &nbsp;<i class="fa fa-external-link"></i> View on Astrobin</a>
+{%- endif -%} 
+        {%- if page.noannotations != true -%}
+        <img src="{{ annotated }}" class="preloader"/>
+        <img src="{{ fullsize }}" class="preloader"/>
+        <img src="{{ grid }}" class="preloader"/>
+        {%- if page.nostars == true -%}
+        <img src="{{ nostars }}" class="preloader"/>
+        {%- endif -%}
+        <select id="imageVariation" title="Choose the variation you'd like to see.">
+            <option value="{{ mainImage }}" selected>Main image</option>
+            <option value="{{ annotated }}">Annotated</option>
+            <option value="{{ fullsize }}">Annotated (scaled)</option>
+            <option value="{{ grid }}">Grid overlay</option>
+            {%- if page.nostars == true -%}
+            <option value="{{ nostars }}">Starless version</option>
+            {%- endif -%}
+        </select>
+        {%- endif -%}        
     </div>
-    
-    
-    <div id="loaded" class="gallery-column-single">        
-
-        <p>
-            <a href="{{ mainImage }}" itemprop="contentUrl" target="_blank" title="View full size image">
-                <img id="mainImage" class="img-fluid" src="{{loadingImg}}" data-src2="{{mainImage}}"
-                    alt="{{page.description}}" title="{{page.description}}" />
-            </a>
-        </p>
-        {% if page.noannotations != true %}
-            <img id="annotated" src="{{loadingImg}}" data-src2="{{annotated}}" />
-            <img id="fullsize" src="{{loadingImg}}" data-src2="{{fullsize}}" />
-            <img id="grid" src="{{loadingImg}}" data-src2="{{grid}}" />
-        {% endif %}
-        {% if page.nostars == true %}
-            <img id="nostars" src="{{loadingImg}}" data-src2="{{nostars}}" />
-        {% endif %}
-        {% if page.noannotations != true or page.nostars == true %}
-            <p class="left"><strong>Explore: </strong>
-                <button id="mainBtn" class="btn btn-sm">Original</button> |
-                {% if page.noannotations != true %}
-                    <button id="annotatedBtn" class="btn btn-sm">Annotated (scaled)</button> |
-                    <button id="fullsizeBtn" class="btn btn-sm">Annotated (fullsize)</button> |
-                    <button id="gridBtn" class="btn btn-sm">Grid overlay</button>
-                {% endif %}
-                {% if page.nostars == true %}
-                    <span>
-                        {% if page.noannotations != true %} | {% endif %}
-                            <button id="nostarsBtn" class="btn btn-sm">Remove stars</button>
-                    </span>
-                {% endif %}
-            </p>
-        {% endif %}
-        <p id="shareImage"><strong>Share this image</strong>
-            <a href="https://twitter.com/intent/tweet?text={{page.title}}&url={{site.url}}{{site.baseurl}}{{page.url}}"
-                target="_blank" title="Share on Twitter" class="btn btn-primary w-auto">
-                <i class="fab fa-twitter"></i>
-            </a>
-            <a href="https://www.facebook.com/sharer/sharer.php?u={{site.url}}{{site.baseurl}}{{page.url}}"
-                target="_blank" title="Share on Facebook" class="btn btn-primary w-auto">
-                <i class="fab fa-facebook"></i>
-            </a>
-            <a href="https://www.linkedin.com/shareArticle?mini=true&url={{site.url}}{{site.baseurl}}{{page.url}}&title={{page.title}}&summary={{page.description}}&source={{site.url}}{{site.baseurl}}"
-                target="_blank" title="Share on LinkedIn" class="btn btn-primary w-auto">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://www.reddit.com/submit?url={{site.url}}{{site.baseurl}}{{page.url}}&title={{page.title}}"
-                target="_blank" title="Share on Reddit" class="btn btn-primary w-auto">
-                <i class="fab fa-reddit"></i>
-            </a>
-            <a href="mailto:?subject={{page.title}}&body={{site.url}}{{site.baseurl}}{{page.url}}"
-                target="_blank" title="Share via email" class="btn btn-primary w-auto">
-                <i class="fas fa-envelope"></i>
-            </a>
-        </p>
-        <p class="text-justify w-auto p-5">{{page.description}}</p>
-        </div>
+</div>
+<br class="clear"/>
+<small>{{copyright}}</small>
+<div class="info">
+    <div class="attrs">
+        {%- if page.signature -%}
+            <p class="attr"><i class="fa fa-star"></i> This image is included in our <a href="{{ site.baseurl | append : '/gallery?signature=true'}}">signature series</a>.</p>
+        {%- endif -%}
+        {%- if page.printurl != "" and page.printurl != nil -%}
+            {%- assign chars = page.printurl | size -%}
+            {%- if chars > 0 -%}
+                <p class="attr"><i class="fa fa-bookmark"></i> This work is part of our <a href="{{ printurl }}">art collection</a>.</p>
+            {%- endif -%}
+        {%- endif -%}
     </div> 
+    <div class="lg-column">
+        <p class="imageDescription">{{ page.description }}</p>
+        {%- if page.wwt -%}
+            <p class="attr"><i class="fa fa-globe"></i> See where this image is located in space via the <a href="{{ page.wwt }}" target="_blank">WorldWide Telescope</a>.</p>
+        {%- endif -%}
 
-    <div class="gallery-row">
-
-        {% assign group = "" | split: "," %}
-        {% for groupItem in site.gallery %}
-            {% if groupItem.group and groupItem.group == page.group and groupItem.folder != page.folder %}
-                {% assign group = group | push: groupItem %}
-            {% endif %}
-        {% endfor %}
-        {% assign groupCount = group | size %}
-        {% if groupCount > 0 %}
-        <div id="related" class="gallery-column">
-            <p><strong>Related images</strong></p>
-            <div class="card-deck">
-            {% for galleryItem in group %}
-                <div class="card">
-                    <div class="card-body">
-                        <p class="card-title">
-                            <strong><a href="{{site.baseurl}}{{galleryItem.url}}" title="{{galleryItem.title}}">{{galleryItem.title}}</a></strong>
-                        </p>
-                {% assign mainUrl = site.baseurl | append: galleryItem.url %}
-                {% assign thumbPath = site.baseurl | append: "/assets/images/gallery/" | append: galleryItem.folder |
-                    append: "/thumb.jpg" %}
-                <a href="{{mainUrl}}" title="{{galleryItem.title}}" alt="{{galleryItem.description}}">
-                    <img src="{{thumbPath}}" class="card-img" alt="{{galleryItem.description}}"
-                        title="{{galleryItem.title}}" />
-                </a>
-                    </div> 
-                </div> 
-            {% endfor %}
-            </div> 
-        </div>
-        {% endif %}
-        <div class="gallery-column">
-            {% assign traits =
+        {%- assign traits =
             "telescope|length|aperture|sessions|firstCapture|lights|exposure|ra|dec|size|radius|scale" |
-            split: "|" %}
-            {% assign focallength = page.length | replace: "mm", "" | to_integer %}
-            {% assign aperture = page.aperture | replace: "mm", "" | to_integer %}
-            {% assign fstop = 0 %}
-            {% if aperture > 0 %}
-                {% assign fstop = focallength | divided_by: aperture %}
-                {% assign fdecimal = focallength | modulo: aperture | multiply_by: 10 | divide_by: aperture %}
-            {% endif %}
-            {% if page.noannotations == true %}
-                {% assign traits =
+            split: "|" -%}
+            {%- assign focallength = page.length | replace: "mm", "" | to_integer -%}
+            {%- assign aperture = page.aperture | replace: "mm", "" | to_integer -%}
+            {%- assign fstop = 0 -%}
+            {%- if aperture > 0 -%}
+                {%- assign fstop = focallength | divided_by: aperture -%}
+                {%- assign fdecimal = focallength | modulo: aperture | multiply_by: 10 | divide_by: aperture -%}
+            {%- endif -%}
+            {%- if page.noannotations == true -%}
+                {%- assign traits =
                     "telescope|length|aperture|sessions|firstCapture|lights|exposure" |
-                split: "|" %}
-            {% endif %}
-            <table class="table table-striped table-sm">
-                {% assign blog = "" | split: "," %}
-                {% for item in site.posts %}
-                    {% for tag in item.tags %}
-                        {% assign ptag = tag | capitalize | strip %}
-                        {% for gallerytag in page.tags %}
-                            {% assign gtag = gallerytag | capitalize | strip %}
-                            {% if gtag == ptag %}
-                                {% assign blog = blog | push: item %}
-                            {% endif %}
-                        {% endfor %}
-                    {% endfor %}
-                {% endfor %}
-                {% assign postCount = blog | size %}
-                    {% if postCount > 0 %}
-                <tr>
-                    <td colspan="3" class="text-center">
-                        <p><strong>Related Posts</strong></p>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="3" class="text-center">
-                        {% assign sorted = blog | uniq | sort: "title" %}
-                        {% for item in sorted %}
-                        {% assign mainUrl = site.baseurl | append: item.url %}
-                        <div>
-                            <a href="{{mainUrl}}" title="{{item.description}}">{{item.title}}</a>
-                        </div>
-                        {% endfor %}
-                    </td>
-                </tr>
-                {% endif %}
-                {% for trait in traits %}
-                {% if trait == "firstCapture" or trait == "lastCapture" %}
-                {% if trait == "firstCapture" %}
-                {% if page.firstCapture %}
+                split: "|" -%}
+            {%- endif -%}
+                </div>
+                <div class="lg-column">
+            <h4>Image details</h4>
+            <table class="table">
+                {%- for trait in traits -%}
+                {%- if trait == "firstCapture" or trait == "lastCapture" -%}
+                {%- if trait == "firstCapture" -%}
+                {%- if page.firstCapture -%}
                 <tr>
                     <td class="text-right">
                         <strong>Captured:</strong>
@@ -249,16 +152,16 @@ layout: default
                     <td>&nbsp;</td>
                     <td>
                         <span>{{page.firstCapture}}</span>
-                        {% if page.lastCapture %}
+                        {%- if page.lastCapture -%}
                         <span> to {{page.lastCapture}}</span>
-                        {% else %}
-                        {% endif }
+                        {%- else -%}
+                        {%- endif }
                     </td>
                 </tr>
-                {% endif %}
-                {% endif %}
-                {% endif %}
-                {% else %}
+                {%- endif -%}
+                {%- endif -%}
+                {%- endif -%}
+                {%- else -%}
                 <tr>
                     <td class="text-right">
                         <strong>{{trait | capitalize }}:</strong>
@@ -268,7 +171,7 @@ layout: default
                         <span id="data-{{trait}}">{{page[trait]}}</span>
                     </td>
                 </tr>
-                {% if trait == "aperture" %}
+                {%- if trait == "aperture" -%}
                 <tr>
                     <td class="text-right">
                         <strong>F-stop:</strong>
@@ -278,19 +181,19 @@ layout: default
                         f/{{fstop}}.{{fdecimal}}
                     </td>
                 </tr>
-                {% endif %}
-                {% if trait == "exposure" %}
-                {% assign totalTime = page.exposure | times: page.lights | to_integer %}
-                {% assign unit = "s" %}
-                {% if totalTime > 60 %}
-                {% assign unit = "m" %}
-                {% assign totalTime = totalTime | divided_by: 60 %}
-                {% if totalTime > 60 %}
-                {% assign unit = "h" %}
-                {% assign totalTime = totalTime | divided_by: 60 %}
-                {% endif %}
-                {% endif %}
-                {% if totalTime > 0 %}
+                {%- endif -%}
+                {%- if trait == "exposure" -%}
+                {%- assign totalTime = page.exposure | times: page.lights | to_integer -%}
+                {%- assign unit = "s" -%}
+                {%- if totalTime > 60 -%}
+                {%- assign unit = "m" -%}
+                {%- assign totalTime = totalTime | divided_by: 60 -%}
+                {%- if totalTime > 60 -%}
+                {%- assign unit = "h" -%}
+                {%- assign totalTime = totalTime | divided_by: 60 -%}
+                {%- endif -%}
+                {%- endif -%}
+                {%- if totalTime > 0 -%}
                 <tr>
                     <td class="text-right">
                         <strong>Total exposure:</strong>
@@ -300,64 +203,46 @@ layout: default
                         {{totalTime}} {{unit}}
                     </td>
                 </tr>
-                {% endif %}
-                {% endif %}
-                {% endif %}
-                {% endfor %}
+                {%- endif -%}
+                {%- endif -%}
+                {%- endif -%}
+                {%- endfor -%}
             </table>
-        </div>
-
-        <div class="gallery-column">
-            <p><strong>Tags</strong></p>
-            {% for tag in page.tags %}
-                {% assign gtag = tag | strip | replace: ' ', '-' | remove: '(' | remove: ')' | downcase %}
-                {% assign tagUrl = site.baseurl | append: "/tag/" | append: gtag  %}
-            <a id="data-tag-{{tag}}" href="{{tagUrl}}" title="Relateded tag '{{tag}}'" class="btn badge badge-primary w-auto">{{tag}}</a>
-            {% endfor %}                    
-        </div>
+    </div> 
+    <a href="#dsw-top"><i class="fa fa-arrow-up"></i> Back to top.</a>
+</div>
+<h4>Tags</h4>
+<div class="tagCloud">
+{%- for tag in page.tags -%}
+    {%- assign gtag = tag | strip | replace: ' ', '-' | remove: '(' | remove: ')' | downcase -%}
+    {%- assign tagUrl = site.baseurl | append: "/tag/" | append: gtag  -%}
+    <a id="data-tag-{{tag}}" class="tag" href="{{tagUrl}}" title="Related tag '{{tag}}'"><i class="fa fa-tag"></i> {{tag}}</a>
+{%- endfor -%}   
+</div> 
+{%- assign group = "" | split: "," -%}
+{%- for groupItem in site.gallery -%}
+    {%- if groupItem.group and groupItem.group == page.group and groupItem.folder != page.folder -%}
+            {%- assign group = group | push: groupItem -%}
+    {%- endif -%}
+{%- endfor -%}
+{%- assign groupCount = group | size -%}
+{%- assign index = 1 -%}
+{%- if groupCount > 0 -%}
+    <h4>Related images</h4>
+    <div class="relatedImages">
+    {%- for galleryItem in group -%}
+    <div id="imageThumb{{ index }}" class="imageThumb text-center">
+        <a href="/gallery/{{ galleryItem.folder }}">
+            <img src="{{ galleryItem.image }}" alt="{{ galleryItem.title }}"/>
+            <strong>{{ galleryItem.title }}</strong>  
+            <small class="jump">{{ galleryItem.lastCapture | slice: 0, 10 }}</small>
+        </a>
     </div>
-
-    <div class="gallery-row">
-        <div class="gallery-column-single">
-            <p xmlns:cc="http://creativecommons.org/ns#" >This work is licensed under <a itemprop="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution-NonCommercial-NoDerivatives 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1"></a> (see more about <a itemprop="acquireLicensePage" href="{{ site.url }}/about#license">how to use my images</a>).</p>
-            <p>If you wish to use the work for commercial purposes, <a href="{{ site.galleryhome }}/contact" alt="Send me a message directly." title="Send me a message directly.">contact me</a> with the details.</p>
-            <span itemprop="creator" itemtype="https://schema.org/Person" itemscope>
-                <meta itemprop="name" content="Jeremy Likness" />
-              </span>
-              &copy; <span itemprop="copyrightNotice">DSW Galleries, LLC</span>
-            <p><strong>Navigation: </strong>
-                <span>
-                    {% if prevTitle == "" %}
-                    {% else %}
-                    <a class="prevUrl" href="{{ prevUrl }}" title="{{ prevTitle }}">{{ prevTitle }}</a>
-                    &nbsp;&laquo;&nbsp;
-                    {% endif %}
-                    <a href="/gallery" title="Gallery">Back to Gallery</a>
-                    {% if nextTitle == "" %}
-                    {% else %}
-                    &nbsp;&raquo;&nbsp;
-                    <a class="nextUrl" href="{{ nextUrl }}" title="{{ nextTitle }}">{{ nextTitle }}</a>
-                    {% endif %}
-                    &nbsp;
-                    {% if printurl == site.galleryhome %}
-                    <a href="{{ printurl }}" target="_blank">🛒 Visit our gallery of prints.</a>
-                    {% else %}
-                    <a href="{{ printurl }}" target="_blank">🛒 Purchase prints of this image.</a>
-                    {% endif %}
-                </span>
-            </p>
-        </div>
-    </div>
-    
-    <div class="gallery-row">
-        <div class="gallery-column-single">
-            {% include disqus.html url=page.url id=page.id %}
-        </div>
-    </div>
-</section>
-
-<script src="{{ site.baseurl }}/assets/js/queryStringRouter.js"></script>
-<script src="{{ site.baseurl }}/assets/js/dom_helper.js"></script>
-<script src="{{ site.baseurl }}/assets/js/gallery.js"></script>
-<script src="{{ site.baseurl }}/assets/js/gallerydb.js"></script>
-<script src="{{ site.baseurl }}/assets/js/gallery-keyboard.js"></script>
+    {%- endfor -%}
+</div>
+{%- endif -%}
+{%- include disqus.html url=page.url id=page.id -%}
+<script>
+    window.dsw.category = "{{page.type}}";
+    window.dsw.request(["gallery_detail.js", "forms.css", "gallery-detail.css"]);
+</script>

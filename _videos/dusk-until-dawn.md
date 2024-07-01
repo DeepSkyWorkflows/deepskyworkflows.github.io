@@ -2,7 +2,7 @@
 title:  "Dusk Until Dawn: a 12mm Time Lapse"
 type: Timelapse
 date: 2023-06-29
-categories: [ ]
+categories: [ Timelapse, Motion art ]
 tags: [ "Monroe Washington" ]
 image: assets/images/videos/duskuntildawn.jpg
 youtubeid: bxMy56cQCAc

@@ -2,7 +2,7 @@
 title: "The solar experience"
 type: Timelapse
 date: 2024-03-27
-categories: [ ]
+categories: [ Imaging session, Motion art ]
 tags: [ sun ]
 image: assets/images/videos/solarexperience.jpg
 youtubeid: x_a2Csx_dwc

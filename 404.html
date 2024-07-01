@@ -1,12 +1,42 @@
 ---
-layout: default
-title: 404
 permalink: /404.html
+layout: default
+depends:
+  - forms.css
 ---
 
-<div class="text-center">
-<h1 class="display-1 mt-5 mb-4"><span class="badge badge-danger">404</span></h1>
-<h2>👩‍🚀👨‍🚀 Lost in space... that page does not exist!</h2>
-<p>Please use the search bar at the top or visit our <a href="{{site.baseurl}}/">homepage</a>!</p>
-{% include gallery-random.html %}
+<style type="text/css" media="screen">
+  .container {
+    margin: 10px auto;
+    max-width: 600px;
+    text-align: center;
+  }
+  h1 {
+    margin: 30px 0;
+    font-size: 4em;
+    line-height: 1;
+    letter-spacing: -1px;
+  }
+</style>
+
+<div class="container">
+  <h1>404</h1>
+  <h2>Not found.</h2>
+  <p>Uh-oh. It looks like that is not a valid URL. It's OK, it happens. Maybe I can help you 
+    find what you are looking for:</p>
+  <form method="GET" action="/search">
+      <label for="q"><small>Search images, videos, and articles:</small></label>&nbsp;
+      <input type="text" placeholder="Enter your search terms." id="q" name="q"/>
+      <input type="submit" class="btn btn-sm btn-primary" value="Search" id="searchSite" name="search"/>
+  </form>
+  <form method="GET" action="/gallery">
+      <label for="text"><small>Find an image in our deep space gallery:</small></label>&nbsp;
+      <input type="text" placeholder="Describe the image you're searching for." id="text" name="text"/>
+      <input type="submit" class="btn btn-sm btn-primary" value="Search" id="searchGallery" name="search"/>
+  </form>
+  <hr/>
+  <a href="/gallery/slideshow" title="View the slide show.">Enjoy a slow-paced slideshow</a>
+  <a href="https://dswgalleries.com/" title="Visit DSW Galleries.">
+    <img class="image" src="/assets/images/dswwhite.png" title="DSW Galleries LLC"/>
+  </a>
 </div>

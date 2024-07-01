@@ -2,7 +2,7 @@
 title:  "Orcas' Starry Skies"
 type: Timelapse
 date: 2023-08-12
-categories: [ ]
+categories: [ Timelapse, Motion art ]
 tags: [ "Milky Way" ]
 image: assets/images/videos/orcastarryskies.jpg
 youtubeid: IEgRva5lf6M

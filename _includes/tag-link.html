@@ -1,0 +1,2 @@
+{% assign tag = include.tag %}
+<a href="{{ site.baseurl }}/tag/{{tag | strip | replace: ' ', '-' | remove: '(' | remove: ')' | downcase }}" title="{{tag}}" alt="{{tag}}">{{tag}}</a>

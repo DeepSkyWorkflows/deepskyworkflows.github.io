@@ -2,7 +2,7 @@
 title:  "Align your guidescope by day and use as finder scope at night"
 type: Astrophotography tips
 date: 2023-01-07
-categories: [ tips ]
+categories: [ Tips ]
 tags: [ ]
 image: assets/images/videos/astrotip3.jpg
 youtubeid: 6hauMOL6yR4

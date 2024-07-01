@@ -2,7 +2,7 @@
 title:  "Night of the Comet"
 type: Timelapse
 date: 2023-01-30
-categories: [ ]
+categories: [ Timelapse, Motion art ]
 tags: ["comets","C2022 E3 (ZTF)"]
 image: assets/images/videos/comettimelapse.jpg
 youtubeid: U_eFbxtzWNc

@@ -2,7 +2,7 @@
 title:  "Seven Sisters and Luna on a Cloudy Night"
 type: Timelapse
 date: 2022-11-20
-categories: [ Timelapse, Sony Alpha 6300 ]
+categories: [ Timelapse, Motion art ]
 tags: [ m45, moon ]
 image: assets/images/videos/seven.webp
 youtubeid: Mc6Ahgq-t8o

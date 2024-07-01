@@ -2,7 +2,7 @@
 title:  "First Light with my CGEM-II Celestron Mount"
 type: Equipment
 date: 2021-12-07
-categories: [ CGEM II ]
+categories: [ First light ]
 tags: [ ]
 image: assets/images/videos/cgemii-firstlight.webp
 youtubeid: YHtsnFh7bAA

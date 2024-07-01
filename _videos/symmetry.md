@@ -2,7 +2,7 @@
 title:  "Symmetry: The Harvest Supermoon and the Sun"
 type: Timelapse
 date: 2023-10-03
-categories: [  ]
+categories: [ Motion art ]
 tags: [ sun, moon ]
 image: assets/images/videos/symmetry.jpg
 youtubeid: 7Fp9mAeNSu8

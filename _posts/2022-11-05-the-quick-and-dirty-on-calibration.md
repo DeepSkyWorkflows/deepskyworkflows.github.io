@@ -2,7 +2,7 @@
 layout: post
 title:  "A Quick (Bias-ed) and Dirty Look at Calibration"
 author: deepskyworkflows
-categories: [ Videos, SharpCap ]
+categories: [ Learning ]
 tags: [ sh2-206 ]
 toc: true
 image: assets/images/2022-11-05/quick-and-dirty-calibration.jpg

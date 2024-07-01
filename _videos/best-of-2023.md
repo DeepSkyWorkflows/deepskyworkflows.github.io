@@ -2,7 +2,7 @@
 title:  "The best images I captured in 2023"
 type: Tour
 date: 2023-12-14
-categories: [ ]
+categories: [ Motion art ]
 tags: [ moon, mars, jupiter, saturn, cassiopeia, orion, milky way, ic434, ngc1499, comet, copernicus, kepler, m1, ic1396, ngc7293, ngc7023, m8, m20, plato, ngc2359, ngc7380, ic1805, m51, m101, m65, m66, m97 ]
 image: assets/images/videos/best2023.jpg
 youtubeid: -dNRdx8KkkHE

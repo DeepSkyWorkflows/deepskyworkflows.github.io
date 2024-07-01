@@ -2,7 +2,7 @@
 title: "Aurora borealis / Northern lights in Oregon?"
 type: Timelapse
 date: 2024-05-11
-categories: [  ]
+categories: [ Motion art ]
 tags: [ "aurora" ]
 image: assets/images/videos/auroraborealisnorthernlights.jpg
 youtubeid: yq2FhjlW4II

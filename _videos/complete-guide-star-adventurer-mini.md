@@ -2,7 +2,7 @@
 title:  "Complete guide to Star Adventurer Mini (S.A.M.)"
 type: Equipment
 date: 2021-12-12
-categories: [ Mount ]
+categories: [ Learning ]
 tags: [ equipment ]
 image: assets/images/videos/samguide.jpg
 youtubeid: XC4Nqh0VbKg

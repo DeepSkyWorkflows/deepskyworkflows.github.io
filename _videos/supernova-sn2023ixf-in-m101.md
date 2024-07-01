@@ -2,7 +2,7 @@
 title:  "Supernova SN 2023ixf in the Pinwheel Galaxy (M101)"
 type: Imaging Session
 date: 2023-05-19
-categories: [ ]
+categories: [ Imaging session ]
 tags: [ m101, sn2023ixf ]
 image: assets/images/videos/sn2023ixf.webp
 youtubeid: a4a9Okuc6bw

@@ -1,0 +1,53 @@
+{%- assign taglist = "" | split: "," -%}
+{%- for item in site.gallery -%}
+    {%- for tag in item.tags -%}
+        {%- assign gtag = tag | capitalize | strip -%}
+        {%- assign taglist = taglist | push: gtag -%}                    
+    {%- endfor -%}    
+{%- endfor -%}
+{%- for item in site.posts -%}
+    {%- for tag in item.tags -%}
+        {%- assign ptag = tag | capitalize | strip -%}
+        {%- assign taglist = taglist | push: ptag -%}                    
+    {%- endfor -%}        
+{%- endfor -%}
+{%- for item in site.videos -%}
+    {%- for tag in item.tags -%}
+        {%- assign ptag = tag | capitalize | strip -%}
+        {%- assign taglist = taglist | push: ptag -%}                    
+    {%- endfor -%}        
+{%- endfor -%}
+{%- assign sortedTags = taglist | uniq | sort -%}
+<div class="quickjump">
+    <a href="#Special tags">Special tags</a>
+    {%- assign cur = '' -%}
+    {%- for tag in sortedTags -%}
+        {%- assign ch = tag | slice: 0 -%}
+        {%- if ch != cur -%}
+            {%- assign cur = ch -%}
+            <a href="#{{cur}}">{{cur}}</a>
+        {%- endif -%}
+    {%- endfor -%}
+</div>
+<div class="tag-section">
+    <a name="Special tags"></a>
+    <h3>Special tags</h3>    
+    {%- for collection in site.portfolios -%}    
+        <a href="{{ site.baseurl }}/tag/{{collection | strip | replace: ' ', '-' | remove: '(' | remove: ')' | downcase }}" title="{{collection}}" alt="{{collection}}">{{collection}}</a>
+    {%- endfor -%}
+</div>
+{%- assign cur = '' -%}
+{%- for tag in sortedTags -%}
+    {%- assign ch = tag | slice: 0 -%}
+    {%- if ch != cur -%}
+        {%- if cur != '' -%}
+        </div>
+        {%- endif %-}
+        {%- assign cur = ch -%}
+        <div class="tag-section">
+            <a name="{{cur}}"></a>
+            <h3>Tags that begin with '{{cur}}'</h3>
+    {%- endif -%}
+    <a href="{{ site.baseurl }}/tag/{{tag | strip | replace: ' ', '-' | remove: '(' | remove: ')' | downcase }}" title="{{tag}}" alt="{{tag}}">{{tag}}</a>
+{%- endfor -%}
+</div>

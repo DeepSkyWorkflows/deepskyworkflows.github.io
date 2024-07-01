@@ -2,7 +2,7 @@
 title:  "Down by the River - Astrophotography on the Skykomish in Index, WA"
 type: Imaging Session
 date: 2023-06-26
-categories: [ ]
+categories: [ Motion art, Timelapse ]
 tags: [ "Index Washington" ]
 image: assets/images/videos/downbytheriver.jpg
 youtubeid: -_ngkZrAuEY

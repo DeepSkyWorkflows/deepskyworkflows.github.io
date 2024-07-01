@@ -2,7 +2,7 @@
 layout: post
 title:  "Finding redemption in M33: The Triangulum Galaxy"
 author: deepskyworkflows
-categories: [ PixInsight, Stellina, Stellarium, Image Processing ]
+categories: [ Processing, Learning ]
 tags: [ galaxy, triangulum, m33 ]
 toc: true
 image: assets/images/2021-07-31/dynamicpsf.jpg

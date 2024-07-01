@@ -2,7 +2,7 @@
 layout: post
 title:  "Making mosaics with Stellina and AstroPixel Processor: Polaris"
 author: deepskyworkflows
-categories: [ Stellina, AstroPixel Processor, Mosaics ]
+categories: [ Stacking, Processing, Learning ]
 tags: [ polaris ]
 toc: true
 image: assets/images/2021-07-22/polaris-annotated.jpeg

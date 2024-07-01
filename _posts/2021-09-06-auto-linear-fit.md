@@ -2,7 +2,7 @@
 layout: post
 title:  "Easily Normalize RGB with Auto-Linear Fit"
 author: deepskyworkflows
-categories: [ PixInsight ]
+categories: [ Learning ]
 tags: [ ]
 toc: false
 image: assets/images/2021-09-06/autolinearfit.jpg

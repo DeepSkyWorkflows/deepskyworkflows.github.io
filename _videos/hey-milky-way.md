@@ -2,7 +2,7 @@
 title:  "Hey, Milky Way"
 type: Imaging Session
 date: 2023-06-23
-categories: [ ]
+categories: [ Travelogue ]
 tags: [ "Milky Way", "Heybrook lookout" ]
 image: assets/images/videos/heymilkyway.jpg
 youtubeid: jslYZrzoUME

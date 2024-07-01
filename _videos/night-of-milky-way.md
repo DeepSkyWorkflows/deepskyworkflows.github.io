@@ -2,7 +2,7 @@
 title:  "The Night of the Milky Way"
 type: Timelapse
 date: 2023-07-16
-categories: [  ]
+categories: [ Timelapse, Motion art ]
 tags: [ "Milky Way", "Index Washington" ]
 image: assets/images/videos/nightofmilkyway.jpg
 youtubeid: HlEGsn3Wpvc

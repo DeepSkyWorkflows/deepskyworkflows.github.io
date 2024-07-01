@@ -2,7 +2,7 @@
 title:  "A visit with Orion"
 type: Tour
 date: 2022-01-12
-categories: [ ]
+categories: [ Motion art ]
 tags: [ m42, m43, m45, mars, ngc1977, ngc2024, ic434 ]
 image: assets/images/videos/visitorion.jpg
 youtubeid: QWCCp8bjP7U

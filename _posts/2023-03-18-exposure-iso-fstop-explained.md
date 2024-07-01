@@ -2,7 +2,7 @@
 layout: post
 title:  "The secret to choosing ISO, exposure, and F-stop for astrophotography"
 author: deepskyworkflows
-categories: [ Camera-only astrophotography ]
+categories: [ Learning ]
 tags: [ m31 ]
 toc: true
 image: assets/images/2023-03-18/pick-iso-fstop-exposure.jpg

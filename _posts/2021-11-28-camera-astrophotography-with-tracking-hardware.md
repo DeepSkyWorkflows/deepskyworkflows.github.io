@@ -2,7 +2,7 @@
 layout: post
 title:  "Camera Astrophotography with Tracking: Star Adventurer Mini (SAM)"
 author: deepskyworkflows
-categories: [ Camera-only astrophotography ]
+categories: [ Learning ]
 tags: [ m42, m45, cassiopeia, polaris ]
 toc: true
 image: assets/images/2021-11-28/camera-astrophotography.jpg

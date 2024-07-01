@@ -2,7 +2,7 @@
 title:  "Behind the fence"
 type: Timelapse
 date: 2023-10-22
-categories: [ ]
+categories: [ Timelapse, Motion art]
 tags: [ moon, jupiter, orion, m45 ]
 image: assets/images/videos/behindthefence.jpg
 youtubeid: -_ngkZrAuEY

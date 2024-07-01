@@ -2,7 +2,7 @@
 title:  "Live observations of green comet C/2022 E3 (ZTF)"
 type: Timelapse
 date: 2023-01-22
-categories: [ ]
+categories: [ Motion art, Imaging session ]
 tags: ["comets","C2022 E3 (ZTF)"]
 image: assets/images/videos/comet.jpg
 youtubeid: JB_aHR6CLAI

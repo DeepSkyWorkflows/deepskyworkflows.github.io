@@ -2,7 +2,7 @@
 title:  "One horse, two rocks"
 type: Tour
 date: 2024-05-06
-categories: [  ]
+categories: [ Motion art ]
 tags: [ "m42", "m43", "ngc1977", "ic434", "ngc2024" ]
 image: assets/images/videos/onehorsetworocks.jpg
 youtubeid: -2wT2O-9GAc

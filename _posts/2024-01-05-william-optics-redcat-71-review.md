@@ -2,7 +2,7 @@
 layout: post
 title:  "Review: William Optics Redcat 71 My new favorite lens"
 author: deepskyworkflows
-categories: [ Equipment, Review ]
+categories: [ Review ]
 tags: [ moon, "IC431", "IC432", "IC434", "Flame Nebula", "Orion B", "IC435", "NGC2023", "NGC2024", M45 ]
 toc: true
 image: assets/images/2024-01-05/redcat71review.jpg

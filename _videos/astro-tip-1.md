@@ -2,7 +2,7 @@
 title:  "Unbind a stuck adapter or extension"
 type: Astrophotography tips
 date: 2023-01-05
-categories: [tips]
+categories: [ Tips ]
 tags: [ ]
 image: assets/images/videos/astrotip1.jpg
 youtubeid: Oc6q53bT8BI

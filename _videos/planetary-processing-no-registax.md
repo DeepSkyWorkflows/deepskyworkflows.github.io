@@ -2,7 +2,7 @@
 title:  "Planetary processing with PixInsight (and NO Registax)"
 type: Lucky Imaging
 date: 2022-09-29
-categories: [ Planetary ]
+categories: [ Processing, Learning ]
 tags: [ pixinsight ]
 image: assets/images/videos/planetary-processing.jpg
 youtubeid: -p_C-2Ta4xI

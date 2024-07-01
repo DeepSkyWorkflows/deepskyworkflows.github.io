@@ -2,7 +2,7 @@
 layout: post
 title:  "Video: Photographing the Moon"
 author: deepskyworkflows
-categories: [ Videos, Image Processing, Lunar ]
+categories: [ Processing, Learning ]
 tags: ["moon" ]
 toc: true
 image: assets/images/2022-06-16/photographmoon.jpg

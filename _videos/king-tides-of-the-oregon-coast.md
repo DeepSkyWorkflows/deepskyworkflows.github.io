@@ -2,7 +2,7 @@
 title:  "King Tides of the Oregon Coast"
 type: Timelapse
 date: 2023-11-27
-categories: [ ]
+categories: [ Motion art ]
 tags: [ ]
 image: assets/images/videos/kingtides.jpg
 youtubeid: CUe_fykAjRw

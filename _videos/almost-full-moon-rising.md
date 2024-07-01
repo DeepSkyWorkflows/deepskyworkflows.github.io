@@ -2,7 +2,7 @@
 title:  "Almost full moon rising"
 type: Timelapse
 date: 2023-08-03
-categories: [ ]
+categories: [ Motion art ]
 tags: [ moon ]
 image: assets/images/videos/almostfullmoonrising.jpg
 youtubeid: X2KpJAofLmY

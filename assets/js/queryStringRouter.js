@@ -1,13 +1,18 @@
-window.deepSkyRouter = (() => {
+console.log("queryStringRouter.js loaded.");
+
+const router = (() => {
     
+    console.log("queryStringRouter.js -> router invoked.");
+
     const queryManager = {
 
         values: {},
         keys: [],
         baseUrl: '',
         hash: '',
+        query: null,
 
-        parseIncoming: function () {
+        parseIncoming: () => {
 
             queryManager.baseUrl = window.location.href.split('#')[0].split('?')[0];
             queryManager.hash = window.location.hash;
@@ -17,9 +22,12 @@ window.deepSkyRouter = (() => {
             }
 
             if (window.location.search) {
+                
                 const incoming = decodeURI(window.location.search.substring(1)).split("&");
+                
                 queryManager.values = {};
                 queryManager.keys = [];
+                
                 for (let i = 0; i < incoming.length; i++) {
                     const keyValue = incoming[i].split("=");
                     queryManager.keys.push(keyValue[0]);
@@ -29,16 +37,14 @@ window.deepSkyRouter = (() => {
             }
         },
 
-        setHash: function (hash) {
-            queryManager.hash = hash;
-        },
-
-        get: function (key) {
+        setHash: hash => queryManager.hash = hash,
+        
+        get: key => {
             queryManager.parseIncoming();
             return queryManager.values[key];
         },
 
-        set: function (key, value) {
+        set: (key, value) => {
 
             const pos = queryManager.keys.indexOf(key);
 
@@ -49,7 +55,7 @@ window.deepSkyRouter = (() => {
             queryManager.values[key] = value;
         },
 
-        reset: function (key) {
+        reset: key => {
 
             const pos = queryManager.keys.indexOf(key);
 
@@ -59,7 +65,7 @@ window.deepSkyRouter = (() => {
             }
         },
 
-        update: function (title) {
+        update: title => {
 
             let str = '';
             
@@ -78,6 +84,7 @@ window.deepSkyRouter = (() => {
             }
 
             const query = `?${encodeURI(str)}`;
+            queryManager.query = query;
             const url = queryManager.baseUrl;
             const hash = queryManager.hash;
 
@@ -94,3 +101,5 @@ window.deepSkyRouter = (() => {
     return queryManager;
     
 })();
+
+window.dsw.loader.registerApi("router", () => router);

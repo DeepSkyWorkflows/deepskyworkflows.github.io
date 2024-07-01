@@ -2,7 +2,7 @@
 title:  "What I saw when I looked at the sun"
 type: Timelapse
 date: 2024-02-23
-categories: [ Solar ]
+categories: [ Motion art, Imaging session ]
 tags: [ "sun" ]
 image: assets/images/videos/whatisaw.jpg
 youtubeid: Sy8WSkueRYQ

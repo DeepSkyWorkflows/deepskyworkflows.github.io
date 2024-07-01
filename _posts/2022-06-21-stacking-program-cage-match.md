@@ -2,7 +2,7 @@
 layout: post
 title:  "Video: What program is best for astrophotography stacking?"
 author: deepskyworkflows
-categories: [Videos, Stacking]
+categories: [ Stacking, Learning ]
 tags: ["ngc1977"]
 toc: true
 image: assets/images/2022-06-21/stackbanner.png

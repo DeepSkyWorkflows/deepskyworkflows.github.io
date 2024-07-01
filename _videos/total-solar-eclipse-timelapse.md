@@ -2,7 +2,7 @@
 title:  "Total Solar Eclipse 2024 Timelapse"
 type: Timelapse
 date: 2024-05-07
-categories: [  ]
+categories: [ Timelapse, Motion art ]
 tags: [ "eclipse", "total solar eclipse 2024" ]
 image: assets/images/videos/totaleclipsetimelapse.webp
 youtubeid: GYxU6nGurqU

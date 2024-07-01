@@ -2,7 +2,7 @@
 title:  "The mountain is out! A tribute to Mt. Rainier"
 type: Tour
 date: 2023-06-15
-categories: [ ]
+categories: [ Motion art ]
 tags: ["rainier"]
 image: assets/images/videos/mt-rainier.jpg
 youtubeid: qai1Z9rPUPU

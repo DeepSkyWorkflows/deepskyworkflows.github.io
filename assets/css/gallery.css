@@ -1,71 +1,464 @@
-label {
+span.fa-spin {
+    width: 2rem;
+    height: 2rem;
+    font-family: monospace;
+}
+
+.filterWrapper {
+    width: 99%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    vertical-align: middle;
+    margin-bottom: 1rem;
+}
+
+.filterWrapper div.specialJump {
+    display: none;
+}
+
+.filterWrapper span {
+    margin-top: 0.5rem;
+}
+
+.filterWrapper .btn {
+    margin-right: 0.5rem;
+}
+
+.filterWrapper .btn-danger {
+    display: none;
+}
+
+.filterWrapper .btn-success {
+    display: none;
+}
+
+@media only screen and (min-width: 768px) {
+    .filterWrapper div.specialJump {
+        display: flex;
+        flex-basis: 100%;
+        justify-content: center;
+    }
+
+    .filterWrapper .btn-danger {
+        display: inline-block;
+        margin-left: 0.5rem;
+        flex-basis: content;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .filterWrapper .btn-success {
+        display: inline-block;
+        margin-left: 0.5rem;
+        flex-basis: content;
+    }
+}
+
+.filterWrapper div {
+    display: flex;
+    flex-basis: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+input {
+    width: 90%;
+    flex-basis: 100%;
+}
+
+input.filterSort {
+    width: 95%;
+    flex-basis: 80%;
+}
+
+select {
     width: 100%;
-    margin: 2px;
-    padding: 2px;
+    align-self: flex-end;
+}
+
+select.category {
+    flex-basis: 40%;
+}
+
+.sortDirection {
+    flex-basis: 8%;
     font-weight: bold;
-    text-align: center;
-    display: blocks;
+    margin-top: 1rem;
 }
 
-label input {
+.results {
+    width: 99%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.gallery-result {
+    width: 99%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    border-radius: 1rem;
+    background: #515151;
+    border: solid 1px #2b2b2b;
+}
+
+.results button.btn-primary {
+    height: 2rem;
+    width: 15rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    flex-basis: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+    .gallery-result {
+        flex-basis: 45%;
+        width: 45%;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .gallery-result {
+        flex-basis: auto;
+        width: 280px;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    .gallery-result {
+        width: 400px;
+    }
+}
+
+.gallery-result a {
+    flex-basis: 100%;
+    padding: 0.5rem;
+}
+
+@media only screen and (min-width: 1600px) {
+    .gallery-result a {
+        flex-basis: 45%;
+    }
+}
+
+.gallery-result img {
+    border-radius: 0.5rem;
+    max-height: 10rem;
     width: 100%;
-    padding: 1px;
+    object-fit: cover;
 }
 
-label select {
-    width: 100%;
+@media only screen and (min-width: 1024px) {
+    .gallery-result img {
+        width: 256px;
+    }
 }
 
-#gallery-head {
-    width: 100%;
-    padding: 2px;
+@media only screen and (min-width: 1600px) {
+    .gallery-result img {
+        width: 350px;
+        margin-left: 20px;
+    }
 }
 
-#gallery {
-    height: 100%;
-    margin: 1em;
-    padding: 1em;
-    overflow: scroll;   
+.filterSort {
+    flex-basis: 80%;
 }
 
-#gallery-filters, #gallery-filters-tab {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 200px;
-    float: left;
-    height: 100%;
-    margin: 1em;
-    overflow: none;
+.filterSpecial,
+.filterCategory,
+.filterTelescope,
+div.formCheckbox, div.formCheckboxSimplify {
+    display: none;
 }
 
-.gallery-large {
-    align-items: center;
+@media only screen and (min-width: 768px) {
+    input {
+        flex-basis: 45%;
+        width: 100%;
+    }
+
+    .sortDirection {
+        flex-basis: 3%;
+    }
+
+    .filterSort {
+        flex-basis: 40%;
+        width: 100%;
+    }
+
+    .filterSpecial,
+    .filterCategory,
+    .filterTelescope {
+        display: flex;
+        flex-basis: 45%;
+        text-align: left;
+        width: 100%;
+    }
 }
 
-.gallery-card {
-    float: left;
-    margin-left: 1em;
-    height: 350px;
+@media only screen and (min-width: 1024px) {
+
+    div.formCheckbox {
+        display: block;
+        flex-basis: 30%;
+        text-align: left;
+        width: 100%;
+    }
+
+    div.formCheckbox input {
+        width: 1rem;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+        float: left;
+    }
 }
 
-.gallery-img {
-    width: 128px;
-    margin-left: 1em;
+@media only screen and (min-width: 1600px) {
+
+    div.formCheckboxSimplify {
+        display: block;
+        flex-basis: 23%;
+        text-align: left;
+        width: 100%;
+    }
+
+    div.formCheckboxSimplify input {
+        width: 1rem;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+        float: left;
+    }
+
+    .filterWrapper div.specialJump {
+        flex-basis: 50%;
+        justify-content: center;
+    }
+
+    .filterWrapper .btn-danger {
+        flex-basis: 5%;
+    }
+
+    input {
+        flex-basis: 23%;
+    }
+
+    .sortDirection {
+        flex-basis: 1%;
+    }
+
+    .filterSort {
+        flex-basis: 15%;
+    }
+
+    .filterSpecial,
+    .filterCategory,
+    .filterTelescope {
+        flex-basis: 23%;
+    }
+
+    div.formCheckbox {
+        flex-basis: 23%;
+    }
 }
 
-.gallery-card small {
-    color: black;
-    font-weight: bold;
-    text-align: center;
+.gallery-result small {
+    flex-basis: 100%;
+    text-align: right;
 }
 
-.card-image-top {
-    max-height: 256px;
-    max-width: 256px;
-    margin-left:11px;
+.gallery-result p,
+.gallery-result h3 {
+    flex-basis: 100%;
+    cursor: pointer;
+    text-align: left;
+    color: white;
 }
 
-.card-header {
+.gallery-result p {
+    margin: 0.2rem;
+}
+
+.gallery-result h3 {
+    margin-left: 0.2rem;
+    margin-bottom: -2rem;
+    z-index: 500;
+}
+
+@media only screen and (min-width: 1600px) {
+    .gallery-result p {
+        flex-basis: content;
+    }
+
+    .gallery-result p.description,
+    .gallery-result p.flags {
+        flex-basis: 100%;
+    }
+}
+
+.gallery-result p {
+    font-size: 0.8rem;
+}
+
+.gallery-footer {
     vertical-align: bottom;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin-top: 1rem;
+}
+
+.gallery-footer p,
+.gallery-footer a {
+    flex-basis: content;
+    margin-left: 0.5rem;
+}
+
+p.share {
+    cursor: pointer;
+}
+
+.gallery-result p a,
+.gallery-result p span {
+    margin-right: 0.5rem;
+}
+
+.gallery-result p.description {
+    max-height: 4rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.badge-success {
+    background: lightgreen;
+    color: darkgreen;
+    cursor: pointer;
+}
+
+.badge-success:hover {
+    background: darkgreen;
+    color: lightgreen;
+}
+
+.badge-primary {
+    background: darkblue;
+    color: lightblue;
+    cursor: pointer;
+}
+
+.badge-primary:hover {
+    background: lightblue;
+    color: darkblue;
+}
+
+.badge-warning {
+    background: yellow;
+    color: darkred;
+    cursor: pointer;
+}
+
+.badge-warning:hover {
+    background: darkred;
+    color: yellow;
+}
+
+.badge-info {
+    background: lightgreen;
+    color: darkgreen;
+    cursor: pointer;
+}
+
+.badge-info:hover {
+    background: darkgreen;
+    color: lightgreen;
+}
+
+p.flags {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+p.flags span,
+p.flags a {
+    flex-basis: content;
+    vertical-align: middle;
+    padding: 0.2em;
+    margin: 0.2em;
+}
+
+ul.image-gallery {
+    list-style: none;
+}
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.image-gallery>li {
+    flex: 1 1 auto;
+    /* or flex: auto; */
+    height: 300px;
+    cursor: pointer;
+    position: relative;
+    list-style: none;
+}
+
+.image-gallery::after {
+    content: "";
+    flex-grow: 999;
+}
+
+.image-gallery li img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    border-radius: 5px;
+}
+
+.overlay {
+    font-family: 'DaggerSquare', 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 1rem;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(57, 57, 57, 0.502);
+    top: 0;
+    left: 0;
+    transform: scale(0);
+    transition: all 0.2s 0.1s ease-in-out;
+    color: #fff;
+    border-radius: 5px;
+    /* center overlay content */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* hover */
+.image-gallery li:hover .overlay {
+    transform: scale(1);
 }

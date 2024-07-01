@@ -2,7 +2,7 @@
 title:  "A Tour of the Sun"
 type: Timelapse
 date: 2024-02-17
-categories: [ Solar ]
+categories: [ Imaging session, Motion art ]
 tags: [ "sun" ]
 image: assets/images/videos/tourofthesun.jpg
 youtubeid: gy14QBxQthk

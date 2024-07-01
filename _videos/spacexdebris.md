@@ -2,7 +2,7 @@
 title:  "NASA SpaceX Crew-5 Dragon trunk module reentry"
 type: Timelapse
 date: 2023-04-27
-categories: [ tips ]
+categories: [ Imaging session ]
 tags: [ ]
 image: assets/images/videos/reentry.webp
 youtubeid: 1WGA9T5gRlg

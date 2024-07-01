@@ -2,7 +2,7 @@
 title:  "How to Process Planets from Stellina in PixInsight with Bulk Operations"
 type: Lucky Imaging
 date: 2021-08-26
-categories: [ Stacking, PixInsight ]
+categories: [ Stacking, Processing, Learning ]
 tags: [ pixinsight, stellina ]
 image: assets/images/videos/bulkplanets.jpg
 youtubeid: OhBeBjJGNtw

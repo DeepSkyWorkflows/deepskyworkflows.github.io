@@ -69,11 +69,14 @@ layout: null
         {%- endcapture -%}
         {{ resourceItem | json }},
     {%- endfor -%}
-    {%- for page in site.pages -%}{%- if page.permalink == "/about" or page.permalink == "/gallery-help" -%} 
+    {%- for page in site.pages -%}{%- if page.permalink == "/about" or page.permalink == "/search" -%} 
             {%- assign url = site.baseurl | append: page.url -%}
             {%- assign content = page.content | strip_html | remove: '"' | strip_newlines -%}
             {%- capture pageItem -%}
             {
+                {%- if page.image -%}
+                    "image": "{{ site.baseurl | append: page.image | json_escape }}",
+                {%- endif -%}
                 "title": "{{ page.title | json_escape }}",
                 "tags": [],
                 "description": "{{ page.description | json_escape }}",

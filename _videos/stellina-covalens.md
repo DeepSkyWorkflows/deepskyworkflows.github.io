@@ -2,7 +2,7 @@
 title:  "Testing Stellina's new 'Covalens' automated mosaic mode"
 type: Imaging Session
 date: 2022-12-17
-categories: [ Stellina ]
+categories: [ Learning ]
 tags: [ m31, m45 ]
 image: assets/images/videos/covalens.jpg
 youtubeid: L7mNRcjYz7Q

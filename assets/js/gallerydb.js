@@ -1,4 +1,8 @@
-window.gallerydbpromise = window.gallerydbpromise || (async function () {
+console.log("gallerydb.js loaded.");
+
+const init = async () => {
+
+    console.log("gallerydb.js -> init invoked.");
 
     const convertCapture = (capture) => parseInt(capture.substring(0, 4)) * 10000 +
         parseInt(capture.substring(5, 7) * 100 +
@@ -649,6 +653,8 @@ window.gallerydbpromise = window.gallerydbpromise || (async function () {
     db.setPredicate("signature", "eq", true);
 
     return db;
-})();
+};
 
-(async () => window.gallerydb = await window.gallerydbpromise)();
+const gallerydb = (async () => await init())();
+
+window.dsw.loader.registerApi("gallerydb", () => gallerydb);

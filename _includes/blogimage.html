@@ -1,30 +1,28 @@
-{% assign width = "" %}
-{% if include.half == true %}
-    {% assign width = "w-50" %}
-{% endif %}
-{% if include.quarter == true %}
-    {% assign width = "w-25" %}
-{% endif %}
-{% assign url = include.url %}
-{% if url contains "/images/" %}
-{% else %}
-    {% assign urlparts = page.date | split: " "  %}
-    {% assign url = site.baseUrl | append: "/assets/images/" | append: urlparts[0] | append: "/" | append: include.url %}    
-{% endif %}
-<div class="card p-2 m-6 {{width}}">
-    {% assign target = "#" %}
-    {% if include.target == true %}
-    {% assign target = include.url %}
+{%- assign width = "" -%}
+{%- if include.half == true -%}
+    {%- assign width = "post-img-50" -%}
+{%- endif -%}
+{%- if include.quarter == true -%}
+    {%- assign width = "post-img-25" -%}
+{%- endif -%}
+{%- assign url = include.url -%}
+{%- if url contains "/images/" -%}
+{%- else -%}
+    {%- assign urlparts = page.date | split: " "  -%}
+    {%- assign url = site.baseUrl | append: "/assets/images/" | append: urlparts[0] | append: "/" | append: include.url -%}    
+{%- endif -%}
+<div class="post-img {{width}}">
+    {%- assign target = "#" -%}
+    {%- if include.target == true -%}
+    {%- assign target = include.url -%}
     <a href="{{url}}" class="stretched-link" title="{{include.description}}">
-    {% endif %}
-    <img class="card-img-top mw-25" src="{{url}}" alt="{{include.description}}" title="{{include.description}}">    
-    <div class="card-header bg-light text-center">
-        <small>
+    {%- endif -%}
+    <img class="post-image" src="{{url}}" alt="{{include.description}}" title="{{include.description}}">    
+    <div class="post-image-description">
         {{include.description}}
-        </small>
     </div>
-    {% if include.target == true %}
+    {%- if include.target == true -%}
     </a>
-    {% endif %}            
+    {%- endif -%}            
 </div>
 <br/>

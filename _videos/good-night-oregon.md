@@ -2,7 +2,7 @@
 title:  "Goodnight, Oregon Coast"
 type: Timelapse
 date: 2023-10-03
-categories: [ ]
+categories: [ Timelapse, Motion art ]
 tags: [ "Milky Way", moon ]
 image: assets/images/videos/goodnightoregon.jpg
 youtubeid: WJNkBpEcy2E
