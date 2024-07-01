@@ -5,7 +5,7 @@ const loader = {
     resources: {
         domHelper: "dom_helper.js",
         gallerydb: "gallerydb.js",
-        router: "queryStringRouter.js",
+        router: "querystringrouter.js",
         pubsub: "pubsub.js" 
     },
 
