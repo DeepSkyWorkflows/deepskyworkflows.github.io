@@ -3,7 +3,7 @@ title: "The edge of the moon"
 type: Lunar
 tags: ["The moon", "Mare Imbrium"]
 description: A close up of the edge of the moon.
-image: assets/images/gallery/edge-of-the-moon/thumb.jpg
+image: /assets/images/gallery/edge-of-the-moon/thumb.jpg
 telescope: Celestron EdgeHD 9.25
 length: "1650mm"
 aperture: "235mm"

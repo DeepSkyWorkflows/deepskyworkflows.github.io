@@ -3,7 +3,7 @@ title: "Saturn Sideways"
 type: Planet
 tags: ["Saturn"]
 description: Saturn with major tilt.
-image: assets/images/gallery/saturn-sideways/thumb.jpg
+image: /assets/images/gallery/saturn-sideways/thumb.jpg
 telescope: Celestron EdgeHD 9.25
 length: "5000mm"
 aperture: "235mm"

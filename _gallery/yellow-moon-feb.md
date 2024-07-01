@@ -3,7 +3,7 @@ title: "The Yellow Moon in February 2022"
 type: Lunar
 tags: ["The moon"]
 description: A naturally unnaturally yellow moon.
-image: assets/images/gallery/yellow-moon-feb/thumb.jpg
+image: /assets/images/gallery/yellow-moon-feb/thumb.jpg
 telescope: Svbony sv503 70ED
 length: "840mm"
 aperture: "70mm"

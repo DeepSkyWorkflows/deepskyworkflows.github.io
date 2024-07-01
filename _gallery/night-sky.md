@@ -3,7 +3,7 @@ title: "The Night Sky"
 type: Miscellaneous
 tags: [""]
 description: The night sky captured from a camera riding piggyback on the telescope mount.
-image: assets/images/gallery/night-sky/thumb.jpg
+image: /assets/images/gallery/night-sky/thumb.jpg
 telescope: Sony ILCE-6300
 length: "16mm"
 aperture: "4mm"

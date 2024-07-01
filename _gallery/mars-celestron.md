@@ -4,7 +4,7 @@ type: Planet
 tags: [mars]
 group: "mars"
 description: "Mars: it's more than just a red dot."
-image: assets/images/gallery/mars-celestron/thumb.jpg
+image: /assets/images/gallery/mars-celestron/thumb.jpg
 telescope: Celestron EdgeHD 9.25
 length: "4700mm"
 aperture: "235mm"

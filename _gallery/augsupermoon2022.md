@@ -3,7 +3,7 @@ title: "August 2022 Sturgeon Supermoon"
 type: Lunar
 tags: ["The moon",moon,Full Moons]
 description: The last supermoon of 2022.
-image: assets/images/gallery/augsupermoon2022/thumb.jpg
+image: /assets/images/gallery/augsupermoon2022/thumb.jpg
 telescope: Svbony sv503 70ED
 length: "336mm"
 aperture: "70mm"

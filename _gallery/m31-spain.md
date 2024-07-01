@@ -3,7 +3,7 @@ title: "M31: via iTelescope in Spain"
 type: Galaxy
 tags: ["NGC205","M110","NGC221","M32","NGC224","M31","Andromeda Galaxy"]
 description: A detailed image taken over just a few minutes with a remotely controlled telescope in Spain.
-image: assets/images/gallery/m31-spain/thumb.jpg
+image: /assets/images/gallery/m31-spain/thumb.jpg
 telescope: Takahashi TOA-150
 length: "1095mm"
 aperture: "150mm"

@@ -3,7 +3,7 @@ title: "Uranus"
 type: Planet
 tags: [uranus]
 description: "You can clearly see the blue color of this distant planet."
-image: assets/images/gallery/uranus/thumb.jpg
+image: /assets/images/gallery/uranus/thumb.jpg
 telescope: Stellina
 length: "400mm"
 aperture: "80mm"

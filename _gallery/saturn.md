@@ -3,7 +3,7 @@ title: "Saturn"
 type: Planet
 tags: [saturn]
 description: "My telescope can just barely make out the rings."
-image: assets/images/gallery/saturn/thumb.jpg
+image: /assets/images/gallery/saturn/thumb.jpg
 telescope: Stellina
 length: "400mm"
 aperture: "80mm"

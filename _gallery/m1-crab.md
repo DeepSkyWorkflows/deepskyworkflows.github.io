@@ -3,7 +3,7 @@ title: "M1: The Crab Nebula Test Shot"
 type: Nebula
 tags: ["M1","NGC1952"]
 description: My first ever astrograph taken with the Celestron EdgeHD 9.25 SCT.
-image: assets/images/gallery/m1-crab/thumb.jpg
+image: /assets/images/gallery/m1-crab/thumb.jpg
 telescope: Celestron EdgeHD 9.25
 length: "1650mm"
 aperture: "235mm"

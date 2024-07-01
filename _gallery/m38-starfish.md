@@ -3,7 +3,7 @@ title: "M38: The Starfish Cluster"
 type: Cluster
 tags: ["M38","NGC1912"]
 description: M38 is an open cluster called the Starfish Cluster.
-image: assets/images/gallery/m38-starfish/thumb.jpg
+image: /assets/images/gallery/m38-starfish/thumb.jpg
 telescope: Stellina
 length: "400mm"
 aperture: "80mm"

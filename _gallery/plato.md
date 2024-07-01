@@ -3,7 +3,7 @@ title: "Plato"
 type: Lunar
 tags: ["The moon", "moon", "plato"]
 description: A close up of prominent crater Plato.
-image: assets/images/gallery/plato/thumb.jpg
+image: /assets/images/gallery/plato/thumb.jpg
 telescope: Celestron EdgeHD 9.25
 length: "5875mm"
 aperture: "235mm"

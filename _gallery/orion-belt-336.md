@@ -3,7 +3,7 @@ title: "Orion's jeweled belt at 336mm"
 type: Nebula
 tags: ["The star Alnitak (ζOri)","IC434","NGC2024","The star σOri","IC431","IC432","NGC2023","IC435","Flame Nebula","Orion B", "Horsehead Nebula"]
 description: Beautiful and brilliant colors abound in the swirls of intergalactic dust lit by stellar jewels in the region of constellation Orion's belt.
-image: assets/images/gallery/orion-belt-336/thumb.jpg
+image: /assets/images/gallery/orion-belt-336/thumb.jpg
 telescope: Svbony sv503 70ED
 length: "336mm"
 signature: true

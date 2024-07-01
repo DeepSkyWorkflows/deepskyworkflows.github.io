@@ -3,7 +3,7 @@ title: "Saturn with EdgeHD"
 type: Planet
 tags: ["Saturn"]
 description: A capture of Saturn.
-image: assets/images/gallery/saturn-edgehd/thumb.jpg
+image: /assets/images/gallery/saturn-edgehd/thumb.jpg
 telescope: Celestron EdgeHD 9.25
 length: "5000mm"
 aperture: "235mm"

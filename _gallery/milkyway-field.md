@@ -3,7 +3,7 @@ title: "Milky Way at Paint Mines."
 type: Milky Way
 tags: ["milky way"]
 description: "The Milky Way looms over a field by the Paint Mines in Colorado."
-image: assets/images/gallery/milkyway-field/thumb.jpg
+image: /assets/images/gallery/milkyway-field/thumb.jpg
 telescope: Sony ILCE-6300
 length: "16mm"
 aperture: "4.57mm"

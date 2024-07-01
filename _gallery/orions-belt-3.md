@@ -3,7 +3,7 @@ title: "Orion's Belt: Another Take"
 type: Nebula
 tags: ["Flame Nebula","IC432","IC434","IC435","NGC2023","NGC2024","Orion B","The star Alnitak (ζOri)","The star σOri"]
 description: A combination of new images for the Flame and Horsehead nebulae.
-image: assets/images/gallery/orions-belt-3/thumb.jpg
+image: /assets/images/gallery/orions-belt-3/thumb.jpg
 telescope: Svbony sv503 70ED
 length: "420mm"
 aperture: "70mm"

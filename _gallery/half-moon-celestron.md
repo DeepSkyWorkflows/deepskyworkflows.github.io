@@ -3,7 +3,7 @@ title: "Half Moon with Celestron EdgeHD"
 type: Lunar
 tags: ["The moon"]
 description: A half moon imaged in color with the Celestron EdgeHD.
-image: assets/images/gallery/half-moon-celestron/thumb.jpg
+image: /assets/images/gallery/half-moon-celestron/thumb.jpg
 telescope: Celestron EdgeHD 9.25
 length: "1650mm"
 aperture: "235mm"

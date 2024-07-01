@@ -3,7 +3,7 @@ title: "A Glimpse of the Milky Way"
 type: Milky Way
 tags: ["NGC6611","M16","Part of the constellation Sagittarius (Sgr)","IC4715","Part of the constellation Aquila (Aql)","Part of the constellation Serpens (Ser)","The star ηSer","The star νOph","IC4701","The star λAql","The star Nunki (σSgr)","The star πSgr","The star τSgr","The star Cebalrai","Cheleb (βOph)","The star δAql","The star θAql","The constellation Scutum (Sct)","The star ξSer","Eagle Nebula","Small Sgr Star Cloud","M24"]
 description: This glimpse of star-filled skies features a dense part of the Milky Way.
-image: assets/images/gallery/milkyway-sky/thumb.jpg
+image: /assets/images/gallery/milkyway-sky/thumb.jpg
 telescope: Sony ILCE-6300
 length: "16mm"
 aperture: "4.57mm"

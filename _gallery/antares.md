@@ -3,7 +3,7 @@ title: "Antares"
 type: Star
 tags: ["The star Antares (αSco)", "Antares"]
 description: Antares is a red supergiant with 12x the mass of the sun about 550 light years from the sun.
-image: assets/images/gallery/antares/thumb.jpg
+image: /assets/images/gallery/antares/thumb.jpg
 telescope: Stellina
 length: "400mm"
 aperture: "80mm"

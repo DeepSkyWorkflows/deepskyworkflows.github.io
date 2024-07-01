@@ -3,7 +3,7 @@ title: "Albireo"
 type: Star
 tags: ["The star Albireo (β1Cyg)","The star β2Cyg", "Albireo"]
 description: Albireo is a bright binary star system featuring a stark contrast between the primarily yellow A star and bluish secondary star.
-image: assets/images/gallery/albireo/thumb.jpg
+image: /assets/images/gallery/albireo/thumb.jpg
 telescope: Stellina
 length: "400mm"
 aperture: "80mm"

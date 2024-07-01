@@ -3,7 +3,7 @@ title: "M31: Andromeda Galaxy with Camera"
 type: Galaxy
 tags: ["The star 32And","The star νAnd","NGC205","M110","NGC221","M32","NGC224","M31","Andromeda Galaxy"]
 description: First attempt at capturing this galaxy with nothing but an ordinary camera and zoom lens.
-image: assets/images/gallery/m31-camera/thumb.jpg
+image: /assets/images/gallery/m31-camera/thumb.jpg
 telescope: Sony ILCE-6300
 length: "55mm"
 aperture: "12.22mm"

@@ -3,7 +3,7 @@ title: "Jupiter and Io"
 type: Planet
 tags: ["Jupiter"]
 description: I mistimed my attempt to capture the Great Red Spot but gots lots of detail with Io just appearing as well.
-image: assets/images/gallery/jupiterandio/thumb.jpg
+image: /assets/images/gallery/jupiterandio/thumb.jpg
 telescope: Celestron EdgeHD 9.25
 signature: true
 length: "5875mm"

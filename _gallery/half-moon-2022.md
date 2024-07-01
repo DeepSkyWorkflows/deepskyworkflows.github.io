@@ -3,7 +3,7 @@ title: "First half moon of 2022"
 type: Lunar
 tags: ["Moon"]
 description: The first half moon of 2022.
-image: assets/images/gallery/half-moon-2022/thumb.jpg
+image: /assets/images/gallery/half-moon-2022/thumb.jpg
 telescope: Sony ILCE-6300
 length: 212mm
 aperture: 31mm

@@ -3,7 +3,7 @@ title: "A cloudy moon"
 type: Lunar
 tags: ["Moon"]
 description: A cloudy view of the moon.
-image: assets/images/gallery/cloudy-moon/thumb.jpg
+image: /assets/images/gallery/cloudy-moon/thumb.jpg
 telescope: Sony ILCE-6300
 length: 171mm
 aperture: 31mm

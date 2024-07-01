@@ -3,7 +3,7 @@ title: "Crater"
 type: Lunar
 tags: ["The moon"]
 description: A prominent crater on a crescent moon.
-image: assets/images/gallery/crater/thumb.jpg
+image: /assets/images/gallery/crater/thumb.jpg
 telescope: Celestron EdgeHD 9.25
 printurl: 
 length: "1650mm"

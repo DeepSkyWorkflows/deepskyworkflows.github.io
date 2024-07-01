@@ -3,7 +3,7 @@ title: "The Leo Triplet"
 type: Galaxy
 tags: ["M65","M66","NGC3593","NGC3623","NGC3627","NGC3628","The star 73Leo"]
 description: A rare partnership of galaxies with lots of friends in the background.
-image: assets/images/gallery/leo-triplet/thumb.jpg
+image: /assets/images/gallery/leo-triplet/thumb.jpg
 telescope: Svbony sv503 70ED
 length: "336mm"
 aperture: "70mm"

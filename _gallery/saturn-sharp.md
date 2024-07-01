@@ -3,7 +3,7 @@ title: "Sharp Saturn"
 type: Planet
 tags: [saturn]
 description: "My first sharp image of Saturn."
-image: assets/images/gallery/saturn-sharp/thumb.jpg
+image: /assets/images/gallery/saturn-sharp/thumb.jpg
 telescope: Celestron EdgeHD 9.25
 length: "5875mm"
 aperture: "235mm"

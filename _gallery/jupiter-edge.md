@@ -3,7 +3,7 @@ title: "Jupiter's Bands in Detail"
 type: Planet
 tags: ["Jupiter"]
 description: Sharp detail is visible in the bands.
-image: assets/images/gallery/jupiter-edge/thumb.jpg
+image: /assets/images/gallery/jupiter-edge/thumb.jpg
 telescope: Celestron EdgeHD 9.25
 length: "5000mm"
 aperture: "235mm"

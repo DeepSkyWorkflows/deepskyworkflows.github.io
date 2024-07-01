@@ -3,7 +3,7 @@ title: "The Rosette Nebula"
 type: Nebula
 tags: ["NGC2237","NGC2238","NGC2239","NGC2246","NGC2252","Rosette A","Rosette B","Rosette Nebula","The star 12Mon"]
 description: A wider field shot of the Rosette Nebula composite of two nights at two and three-minute exposures.
-image: assets/images/gallery/rosette/thumb.jpg
+image: /assets/images/gallery/rosette/thumb.jpg
 telescope: Svbony sv503 70ED
 length: "336mm"
 aperture: "70mm"

@@ -3,7 +3,7 @@ title: "Orion's Sword at 400mm"
 type: Nebula
 tags: ["NGC1976","M42","The star θ1Ori","The star θ2Ori","NGC1982","M43","The star 42Ori","NGC1973","NGC1975","NGC1977","The star 45Ori","Great Orion Nebula","Orion Nebula","the Running Man Nebula","Mairan's Nebula"]
 description: "The Running Man Nebula (NGC1977), De Mairan's Nebula (M42) and the Great Orion Nebula (M43) are beautiful on their own. That beauty stands out in contrast when you witness the wider field of view that contains all three Nebulae on the glowing tip of Orion's sword. This is a mosaic of all three with 400mm exposures from Stellina."
-image: assets/images/gallery/orion-sword-400mm/thumb.jpg
+image: /assets/images/gallery/orion-sword-400mm/thumb.jpg
 telescope: Stellina
 group: m42
 length: "400mm"

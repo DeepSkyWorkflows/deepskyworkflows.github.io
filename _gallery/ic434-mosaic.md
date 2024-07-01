@@ -3,7 +3,7 @@ title: "The Horse and the Flame"
 type: Nebula
 tags: ["The star Alnitak (ζOri)","IC434","NGC2024","NGC2023","Flame Nebula","Orion B", "Horsehead Nebula"]
 description: "The Easternmost jewel on Orion's belt is brilliant Alnitak, a bright star that bombards NGC 2024 The Flame Nebula with ultraviolet light, causing the gases to glow and form a brilliant orange flame. Nearby, a cloud of dust is illuminated from behind by emission nebula IC434 to create a strikingly horsehead-like silhouette."
-image: assets/images/gallery/ic434-mosaic/thumb.jpg
+image: /assets/images/gallery/ic434-mosaic/thumb.jpg
 telescope: Stellina
 length: "400mm"
 archive: true

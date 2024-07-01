@@ -3,7 +3,7 @@ title: "M31: Andromeda Galaxy Mosaic"
 type: Galaxy
 tags: ["NGC205","M110","NGC221","M32","NGC224","M31","Andromeda Galaxy"]
 description: "Over 2,000 10-second exposures went into stacking 6 panels that were blended to produce this capture of Andromeda with neighboring galaxies M32 and M110."
-image: assets/images/gallery/m31-mosaic/thumb.jpg
+image: /assets/images/gallery/m31-mosaic/thumb.jpg
 telescope: Stellina
 length: "400mm"
 aperture: "80mm"

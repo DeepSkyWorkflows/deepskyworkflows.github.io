@@ -3,7 +3,7 @@ title: "The Sinus Iridum region"
 type: Lunar
 tags: ["The moon", "Sinus Iridum"]
 description: A close up of the Sinus Iridum region.
-image: assets/images/gallery/sinus-iridum/thumb.jpg
+image: /assets/images/gallery/sinus-iridum/thumb.jpg
 printurl: 
 telescope: Svbony sv503 70ED
 length: "840mm"

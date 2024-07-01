@@ -3,7 +3,7 @@ title: "Fish eye view of starry skies"
 type: Miscellaneous
 tags: []
 description: A view of the sky taken with my fisheye camera. 
-image: assets/images/gallery/starry-sky-fisheye/thumb.jpg
+image: /assets/images/gallery/starry-sky-fisheye/thumb.jpg
 telescope: ZWO-ASI120MM-S
 length: 15mm
 aperture: 1.5mm

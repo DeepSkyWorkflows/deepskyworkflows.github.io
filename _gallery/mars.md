@@ -4,7 +4,7 @@ type: Planet
 tags: [mars]
 group: "mars"
 description: "Yes, that is the red planet."
-image: assets/images/gallery/mars/thumb.jpg
+image: /assets/images/gallery/mars/thumb.jpg
 telescope: Stellina
 length: "400mm"
 aperture: "80mm"
