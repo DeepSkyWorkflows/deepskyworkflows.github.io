@@ -79,7 +79,7 @@ layout: default
             alt="{{ page.title }}" itemprop="contentUrl" class="gallery-main-image" />   
         </a>
         <a class="share" data-title="{{page.title}}" data-folder="{{page.folder}}" href="#"><i class="fa fa-share"></i> Share this image.</a>
-        {%- if page.astrobin -%}
+        {%- if page.astrobin and page.astrobin != "" -%}
 <a class="astrobin" href="https://astrobin.com/{{ page.astrobin }}" target="_blank" title="View this image on Astrobin.">
     &nbsp;<i class="fa fa-external-link"></i> View on Astrobin</a>
 {%- endif -%} 
@@ -238,6 +238,7 @@ layout: default
             <small class="jump">{{ galleryItem.lastCapture | slice: 0, 10 }}</small>
         </a>
     </div>
+    {%- assign index = index | plus: 1 -%}
     {%- endfor -%}
 </div>
 {%- endif -%}
