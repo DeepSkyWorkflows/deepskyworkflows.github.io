@@ -12,7 +12,7 @@ hide: true
 comments: true
 ---
 
-After over three years of practicing this hobby, I finally decided to expand my equipment and take my imaging to the next level. A colleague of mine at Microsoft recently invested in a new rig and offered to sell his existing hardware at a pretty nice discount. I picked up the new telescope as part of a package deal and definitely paid less than the $1800 USD retail. If I purchased one new, I'd pick it up from [High Point Scientific](https://www.highpointscientific.com/william-optics-redcat-71-f-4-9-apo-imaging-astrograph-with-wifd).
+After over three years of practicing this hobby, I finally decided to expand my equipment and take my imaging to the next level. A colleague of mine at Microsoft recently invested in a new rig and offered to sell his existing hardware at a pretty nice discount. I picked up the new telescope as part of a package deal and definitely paid less than the $1800 USD retail. If I purchased one new, I'd pick it up from [High Point Scientific](/external?t=https://www.highpointscientific.com/william-optics-redcat-71-f-4-9-apo-imaging-astrograph-with-wifd).
 
 {% include blogimage.html url="redcat2.jpg" description="The William Optics Redcat 71." half=false target=true %}
 
@@ -40,11 +40,11 @@ OK, now that I've shared the comparisons, let's dig into the details.
 
 ## The Specs
 
-> 📝 **NOTE** I use Amazon affiliate links and may receive a commission for purchases you make after following the links. The commission helps me pay for the software and equipment necessary for astrophotography and to produce the content for Deep Sky Workflows. I also link to places like [High Point Scientific](https://www.highpointscientific.com/), [B & H Photo](https://www.bhphotovideo.com/), and [Woodland Hills Telescopes](https://telescopes.net). These are all vendors I've had great experiences with but am not affiliated with in any way.
+> 📝 **NOTE** I use Amazon affiliate links and may receive a commission for purchases you make after following the links. The commission helps me pay for the software and equipment necessary for astrophotography and to produce the content for Deep Sky Workflows. I also link to places like [High Point Scientific](/external?t=https://www.highpointscientific.com/), [B & H Photo](/external?t=https://www.bhphotovideo.com/), and [Woodland Hills Telescopes](/external?t=https://telescopes.net). These are all vendors I've had great experiences with but am not affiliated with in any way.
 
-The Redcat 71 comes with a nice, wide field of view at 348mm focal length. The 71mm aperture makes it f/5, a decent speed for deep sky photography. The design does not require a reducer or flattener, and with my [2.5x TeleVue PowerMate](https://amzn.to/3RHOglE) increases to 870mm.
+The Redcat 71 comes with a nice, wide field of view at 348mm focal length. The 71mm aperture makes it f/5, a decent speed for deep sky photography. The design does not require a reducer or flattener, and with my [2.5x TeleVue PowerMate](/external?t=https://amzn.to/467u83b) increases to 870mm.
 
-Here is what the field of view using a [ZWO ASI294MC Pro](https://amzn.to/3NRncPV) and a [Sony A7R IV camera](https://amzn.to/3TV5teh) with the Redcat 71 pointed at M42: the Great Orion Nebula.
+Here is what the field of view using a [ZWO ASI294MC Pro](/external?t=https://amzn.to/3ScBE7a) and a [Sony A7R IV camera](/external?t=https://amzn.to/4bQq0Wo) with the Redcat 71 pointed at M42: the Great Orion Nebula.
 
 {% include blogimage.html url="astronomy_tools_fov.png" description="Field of view of William Optics Redcat 71 with ZWO ASI294MC Pro and Sony A7R IV" half=false target=true %}
 
@@ -59,7 +59,7 @@ description="A cloudy moon in Newport shot with William Optics Redcat 71" half=t
 
 The Redcat is a Petzval refractor. This means it incorporates extra lenses between the objective lens and the focuser. The result is a much flatter field, less need for precise backfocus spacing, and an image that is star halo-free with minimal chromatic aberrations. The apochromatic (a lens with superior correction of spherical and chromatic aberrations compared to achromatic lenses) doublet refractor uses extremely high quality FPL-53 glass.
 
-> Field of view images courtesy of [Astronomy tools](https://astronomy.tools).
+> Field of view images courtesy of [Astronomy tools](/external?t=https://astronomy.tools).
 
 Let's checkout what comes in the box!
 

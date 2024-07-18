@@ -6,7 +6,7 @@ permalink: /tag/florissant-fossil-beds
 
 ## Dark Site
 
-[Florissant Fossil Beds National Monument](https://www.nps.gov/flfo/index.htm) is located in Colorado just about an hour drive from Colorado. It's location high and behind Pike's Peak makes it an ideal observing location. Located on the property is the [Hornbek Homestead](https://www.nps.gov/places/hornbek-homestead.htm) with a wide, flat parking lot that is open 24 hours.
+[Florissant Fossil Beds National Monument](/external?t=https://www.nps.gov/flfo/index.htm) is located in Colorado just about an hour drive from Colorado. It's location high and behind Pike's Peak makes it an ideal observing location. Located on the property is the [Hornbek Homestead](/external?t=https://www.nps.gov/places/hornbek-homestead.htm) with a wide, flat parking lot that is open 24 hours.
 
 ## Site Stats
 

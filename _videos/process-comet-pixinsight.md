@@ -43,8 +43,8 @@ Chapter Guide:
 - 00:12:02 PixelMath to recombine the stars
 - 00:12:39 Final result
 
-- [Comet alignment](https://pixinsight.com/doc/tools/CometAlignment/CometAlignment.html)
-- [StarXTerminator](https://www.rc-astro.com/resources/StarXTerminator/)
-- [BlurXTerminator](https://www.rc-astro.com/resources/BlurXTerminator/index.php)
+- [Comet alignment](/external?t=https://pixinsight.com/doc/tools/CometAlignment/CometAlignment.html)
+- [StarXTerminator](/external?t=https://www.rc-astro.com/resources/StarXTerminator/)
+- [BlurXTerminator](/external?t=https://www.rc-astro.com/resources/BlurXTerminator/index.php)
 
 See also: [How to track a comet using N.I.N.A. software](/video/astro-tip-4/)

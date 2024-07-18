@@ -12,7 +12,7 @@ hide: true
 comments: true
 ---
 
-I recently captured an image of the [veil nebula](/gallery/ngc6992-veil-nebula) that required multiple panels to be assembled in a mosaic. I planned it in [Telescopius](https://telescopius.com) with just a few settings. In this post, I'll walk you through how I set it up and processed it.
+I recently captured an image of the [veil nebula](/gallery/ngc6992-veil-nebula) that required multiple panels to be assembled in a mosaic. I planned it in [Telescopius](/external?t=https://telescopius.com) with just a few settings. In this post, I'll walk you through how I set it up and processed it.
 
 ## Plan the mosaic
 

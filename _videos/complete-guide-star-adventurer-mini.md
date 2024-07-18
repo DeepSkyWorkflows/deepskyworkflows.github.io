@@ -9,7 +9,7 @@ youtubeid: XC4Nqh0VbKg
 description: "The Star Adventurer Mini, or SAM, is a portable system that attaches to your tripod and camera to allow you to take extremely long (such as 60 seconds to 5 minutes) exposures without star trails. In this video I explain how it works, show you how to set it up, provide examples and share tips like using your own software and polar alignment."
 ---
 
-- [Sky Watcher Star Adventurer Mini](https://amzn.to/3Yn8ROT)
+- [Sky Watcher Star Adventurer Mini](/external?t=https://amzn.to/3SfnX7r)
 
 Video guide:
 

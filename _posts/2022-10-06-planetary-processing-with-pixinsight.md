@@ -11,15 +11,15 @@ featured: true
 comments: true
 ---
 
-Lucky imaging is a process used to image planets and the lunar surface. You capture video or frames at a high rate, then use software like [Planetary Imaging PreProcessor](https://sites.google.com/site/astropipp/) to eliminate bad frames and center your target, then stack with [Autostakkert!](http://www.autostakkert.com/). The resulting images often need to be sharpened, which is done via wavelet processing in [RegiStax](https://www.astronomie.be/registax/). The software was last updated in 2011 and can be slow and buggy on some systems. I've moved to processing most of my results entirely in [PixInsight](https://pixinsight.com/). The only caveat is that PixInsight is paid software, so if you're looking for a free solution then RegiStax is still probably the way to go.
+Lucky imaging is a process used to image planets and the lunar surface. You capture video or frames at a high rate, then use software like [Planetary Imaging PreProcessor](/external?t=https://sites.google.com/site/astropipp/) to eliminate bad frames and center your target, then stack with [Autostakkert!](http://www.autostakkert.com/). The resulting images often need to be sharpened, which is done via wavelet processing in [RegiStax](/external?t=https://www.astronomie.be/registax/). The software was last updated in 2011 and can be slow and buggy on some systems. I've moved to processing most of my results entirely in [PixInsight](/external?t=https://pixinsight.com/). The only caveat is that PixInsight is paid software, so if you're looking for a free solution then RegiStax is still probably the way to go.
 
-I also covered this topic in the video, [Planetary processing with PixInsight (and NO RegiStax)](https://youtu.be/-p_C-2Ta4xI).
+I also covered this topic in the video, [Planetary processing with PixInsight (and NO RegiStax)](/external?t=https://youtu.be/-p_C-2Ta4xI).
 
 {% include youtube.html code="-p_C-2Ta4xI" title="Planetary processing with PixInsight (and NO RegiStax)" %}
 
 ## Deconvolution
 
-Deconvolution is that feature that helps make your stars round, right? Sort of. You may or may not have heard the story that the Hubble telescope had a [flaw in its primary mirror](https://www.nasa.gov/content/hubbles-mirror-flaw). The "computer image reconstruction techniques" to compensate for the flaw are rumored to be the same algorithms adopted for deconvolution. The process in modern astrophotography software is used to counter the effects of atmospheric distortion, and planetary imaging can benefit from that. There is no magic formula that I am aware of. Instead, I try different leveles of standard deviation and iterations until I find the clearest image using a preview. After that, I apply it to the image. I circled the two settings I change in the screenshot below.
+Deconvolution is that feature that helps make your stars round, right? Sort of. You may or may not have heard the story that the Hubble telescope had a [flaw in its primary mirror](/external?t=https://www.nasa.gov/content/hubbles-mirror-flaw). The "computer image reconstruction techniques" to compensate for the flaw are rumored to be the same algorithms adopted for deconvolution. The process in modern astrophotography software is used to counter the effects of atmospheric distortion, and planetary imaging can benefit from that. There is no magic formula that I am aware of. Instead, I try different leveles of standard deviation and iterations until I find the clearest image using a preview. After that, I apply it to the image. I circled the two settings I change in the screenshot below.
 
 {% include blogimage.html description="Deconvolution dialog" url="dialog.jpg" half=true target=true %}
 
@@ -305,7 +305,7 @@ Two more tools in my arsenal are `LocalHistogramTransformation` and `HDRTransfor
 
 1. Save your work often as the new `xisf` format also embeds history
 1. One trick I do is to apply a transformation, such as LHT, and the clone the image. I then undo the original image, and use PixelMath to blend the original with the clone. This gives me more control over how much is applied. For example, if I want to keep 70% of the original and 30% of new, I'll use the expression `0.7*$T+0.3*hdr` where `$T` is the target image I'm manipulating and `hdr` is the easy identifier I gave to the cloned image.
-1. Another trick is to use multiple clones and blend them as described in [this excellent article](https://www.chaoticnebula.com/pixinsight-hdr-multiscale-transform/)
+1. Another trick is to use multiple clones and blend them as described in [this excellent article](/external?t=https://www.chaoticnebula.com/pixinsight-hdr-multiscale-transform/)
 1. Curves can also help manipulate the image by increasing contrast.
 
 Here is my before and after.
@@ -369,5 +369,5 @@ setTimeout(() => {
 <div><p>&nbsp;</p></div>
 
 <section markdown="1">
-That's all for this post! Be sure to visit my [astrophotography YouTube channel](https://youtube.com/c/DeepSkyWorkflows) and subscribe!
+That's all for this post! Be sure to visit my [astrophotography YouTube channel](/external?t=https://youtube.com/c/DeepSkyWorkflows) and subscribe!
 </section>

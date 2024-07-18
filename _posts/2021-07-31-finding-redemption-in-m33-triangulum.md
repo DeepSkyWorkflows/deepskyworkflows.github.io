@@ -64,7 +64,7 @@ My first step is to go overboard on the Screen Transfer Function (STF) by clicki
 
 {% include blogimage.html url="/assets/images/2021-07-31/dynamiccrop.jpg" description="Dynamic crop" %}
 
-Next, I want to normalize the channels. I do this so often that I wrote a script for it named [Auto-linear fit](https://github.com/DeepSkyWorkflows/DeepSkyWorkflowScripts/blob/main/docs/autoLinearFit.md).
+Next, I want to normalize the channels. I do this so often that I wrote a script for it named [Auto-linear fit](/external?t=https://github.com/DeepSkyWorkflows/DeepSkyWorkflowScripts/blob/main/docs/autoLinearFit.md).
 
 {% include blogimage.html url="alfit.jpg" description="Auto linear fit dialog" half=true %}
 
@@ -139,7 +139,7 @@ The main tool in the PixInsight toolbox for this is called Deconvolution. The al
 
 {% include blogimage.html url="psf.jpg" description="Point spread function (PSF)" half=true %}
 
-I've tried many different ways to be successful at this, and my most effective approach is automated in another script called [Generate Decon Support](https://github.com/DeepSkyWorkflows/DeepSkyWorkflowScripts/blob/main/docs/generateDeconSupport.md). It performs several steps. First, it extracts the luminance channel. That is saved to create the point spread function. It then stretches the mask and applies StarNet, a machine learning algorithm that removes the stars. The galaxy is left behind:
+I've tried many different ways to be successful at this, and my most effective approach is automated in another script called [Generate Decon Support](/external?t=https://github.com/DeepSkyWorkflows/DeepSkyWorkflowScripts/blob/main/docs/generateDeconSupport.md). It performs several steps. First, it extracts the luminance channel. That is saved to create the point spread function. It then stretches the mask and applies StarNet, a machine learning algorithm that removes the stars. The galaxy is left behind:
 
 {% include blogimage.html url="starless.jpg" description="I've lost my stars!" %}
 
@@ -153,7 +153,7 @@ The only thing left to do is apply the star mask to the main image, open a previ
 
 ### Stretching
 
-There are more ways to stretch an image than can possibly be useful, and I found a script that I keep coming back to. Check out [easy and effective noise reduction in PixInsight](https://remoteastrophotography.com/2020/12/easy-and-effective-noise-reduction-in-pixinsight) for more info about the EZ Processing Suite. It's great! I use the EZ Soft Stretch to get to a starting point.
+There are more ways to stretch an image than can possibly be useful, and I found a script that I keep coming back to. Check out [easy and effective noise reduction in PixInsight](/external?t=https://remoteastrophotography.com/2020/12/easy-and-effective-noise-reduction-in-pixinsight) for more info about the EZ Processing Suite. It's great! I use the EZ Soft Stretch to get to a starting point.
 
 > __💡Tip:__ it's tempting to go with the darkest background possible, but then you risk losing some details in your image. I always go with a background a bit noisier than I'd like and tweak it down _after_ the stretch.
 
@@ -163,7 +163,7 @@ Here's the galaxy after the stretch:
 
 ### Final processing
 
-Now my life is about improving contrast and color, removing noise and diminishing the background. First, I ran my [non-linear stretch](https://github.com/DeepSkyWorkflows/DeepSkyWorkflowScripts/blob/main/docs/nonLinearStretch.md) script several times. This will extract the luminance and invert is as a mask, so the light areas have the most protection and the dark areas have the least protection. It then applies a curves transformation to subtly bump the image in a direction. You can specify how much happens in an iteration, and my best practice is to drag the instance handle onto the desktop, then drag that onto the image several times until I reach the desired result.
+Now my life is about improving contrast and color, removing noise and diminishing the background. First, I ran my [non-linear stretch](/external?t=https://github.com/DeepSkyWorkflows/DeepSkyWorkflowScripts/blob/main/docs/nonLinearStretch.md) script several times. This will extract the luminance and invert is as a mask, so the light areas have the most protection and the dark areas have the least protection. It then applies a curves transformation to subtly bump the image in a direction. You can specify how much happens in an iteration, and my best practice is to drag the instance handle onto the desktop, then drag that onto the image several times until I reach the desired result.
 
 I also want to tweak the galaxy without creating side effects for the background, stars, etc. The RangeMask tool is handy for this, as I can create a smoothed mask that just covers my galaxy (and, apparently, a pair of bright stars). 
 

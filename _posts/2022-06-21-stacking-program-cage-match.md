@@ -12,7 +12,7 @@ hide: true
 comments: true
 ---
 
-I've wanted to compare stacking programs for awhile now. A relaxing Father's Day finally gave me the opportunity. Yes, you heard that right: for fun, I stacked the same target five times and made a video with the results. This post dives into more details and caveats, so after you've watched the video, be sure to keep reading. I use all of these programs in different ways, so the ranking is more of a guide for beginners to help them choose a starting point rather than a way to "eliminate" any software. In fact, many of the programs do more than just stack and some handle specialized scenarios. This is "[What's the best software for stacking photos for astrophotography?](https://www.youtube.com/watch?v=zkvOXEM9iP4)".
+I've wanted to compare stacking programs for awhile now. A relaxing Father's Day finally gave me the opportunity. Yes, you heard that right: for fun, I stacked the same target five times and made a video with the results. This post dives into more details and caveats, so after you've watched the video, be sure to keep reading. I use all of these programs in different ways, so the ranking is more of a guide for beginners to help them choose a starting point rather than a way to "eliminate" any software. In fact, many of the programs do more than just stack and some handle specialized scenarios. This is "[What's the best software for stacking photos for astrophotography?](/external?t=https://www.youtube.com/watch?v=zkvOXEM9iP4)".
 
 {% include youtube.html code="zkvOXEM9iP4" title="What's the best software for stacking photos for astrophotography?" %}
 
@@ -20,7 +20,7 @@ I've wanted to compare stacking programs for awhile now. A relaxing Father's Day
 
 > __Note__ I use affiliate links for products and may receive a commission if you purchase after clicking through. All proceeds are reinvested into my astrophotography hobby.
 
-My goal is to approach stacking from the perspective of someone new to astrophotography. Every program has dials and levers that experienced users know how to operate. What about someone new who might not be so familiar? And what if their data isn't clean? With those goals in mind, I picked a data set I used to create my favorite [NGC1977: The Running Man Nebula](/gallery/running-man/) astrograph. The data was acquired on a Celestron EdgeHD 9.25" Schmidt-Cassegrain scope using the [ZWO ASI294MC Pro](https://amzn.to/3yUcfpo) camera. I included a set of darks to compensate for the amp glow and intentionally left several out of focus frames and frames with satellite trails. In my opinion, good software should sort frames on quality and discard the bad ones.
+My goal is to approach stacking from the perspective of someone new to astrophotography. Every program has dials and levers that experienced users know how to operate. What about someone new who might not be so familiar? And what if their data isn't clean? With those goals in mind, I picked a data set I used to create my favorite [NGC1977: The Running Man Nebula](/gallery/running-man/) astrograph. The data was acquired on a Celestron EdgeHD 9.25" Schmidt-Cassegrain scope using the [ZWO ASI294MC Pro](/external?t=https://amzn.to/3WvI6c8) camera. I included a set of darks to compensate for the amp glow and intentionally left several out of focus frames and frames with satellite trails. In my opinion, good software should sort frames on quality and discard the bad ones.
 
 Here is a sample raw "light" frame that has been stretched for visibility.
 
@@ -56,7 +56,7 @@ These are the applications that I tested.
 
 ### Astrometric Stacking Program (ASTAP)
 
-__Website__: [https://www.hnsky.org/astap.htm](https://www.hnsky.org/astap.htm)
+__Website__: [https://www.hnsky.org/astap.htm](/external?t=https://www.hnsky.org/astap.htm)
 
 __Cost__: FREE!
 
@@ -64,15 +64,15 @@ Stacking is just one of many features in ASTAP. It is my favorite plate-solving 
 
 ### ASIDeepStack
 
-__Website__: [https://download.astronomy-imaging-camera.com/download/asistudio/](https://download.astronomy-imaging-camera.com/download/asistudio/)
+__Website__: [https://download.astronomy-imaging-camera.com/download/asistudio/](/external?t=https://download.astronomy-imaging-camera.com/download/asistudio/)
 
 __Cost__: FREE!
 
-ZWO makes several astrophotography products and is known best for its cameras. I own two: the one-shot color ASI294MC Pro and the monochrome [ASI120MM-S](https://amzn.to/3RmKNIc). ASIDeepStack is part of ASI Studio, a suite of software that works directly with ZWO products. As far as I can tell, the software is free and will work fine even if you don't use ZWO hardware. I like the simplicity of the user interface and it is a fairly fast stacking program. I use it frequently during long imagine runs to spot check progress and quality.
+ZWO makes several astrophotography products and is known best for its cameras. I own two: the one-shot color ASI294MC Pro and the monochrome [ASI120MM-S](/external?t=https://amzn.to/3Yaqsfc). ASIDeepStack is part of ASI Studio, a suite of software that works directly with ZWO products. As far as I can tell, the software is free and will work fine even if you don't use ZWO hardware. I like the simplicity of the user interface and it is a fairly fast stacking program. I use it frequently during long imagine runs to spot check progress and quality.
 
 ### AstroPixel Processor (APP)
 
-__Website__: [https://www.astropixelprocessor.com/](https://www.astropixelprocessor.com/)
+__Website__: [https://www.astropixelprocessor.com/](/external?t=https://www.astropixelprocessor.com/)
 
 __Cost__: Approximately $175 USD
 
@@ -88,7 +88,7 @@ Spoiler alert: this app surprised me the most. I've used it in the past and was 
 
 ### PixInsight
 
-__Website__: [https://pixinsight.com/](https://pixinsight.com/)
+__Website__: [https://pixinsight.com/](/external?t=https://pixinsight.com/)
 
 __Cost__: Approximately $240 USD
 

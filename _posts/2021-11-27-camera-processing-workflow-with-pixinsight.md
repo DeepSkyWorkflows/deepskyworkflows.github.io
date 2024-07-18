@@ -20,10 +20,10 @@ After what felt like an eternity of polar alignment, I accidentally knocked my m
 
 In this video I show several of my more advanced techniques. Here is what I shared:
 
-- Using my [Autolinear Fit](https://github.com/DeepSkyWorkflows/DeepSkyWorkflowScripts/blob/main/docs/autoLinearFit.md) script to balance the colors up front.
+- Using my [Autolinear Fit](/external?t=https://github.com/DeepSkyWorkflows/DeepSkyWorkflowScripts/blob/main/docs/autoLinearFit.md) script to balance the colors up front.
 - Dynamic Background Extraction to remove a rather aggressive gradient/vignette.
 - The secrets to a successful Photometric Color Calibration.
-- Using my [Generate Decon Support](https://github.com/DeepSkyWorkflows/DeepSkyWorkflowScripts/blob/main/docs/generateDeconSupport.md) script to create a star mask, deconvolution support, and a mask to help with Dynamic PSF.
+- Using my [Generate Decon Support](/external?t=https://github.com/DeepSkyWorkflows/DeepSkyWorkflowScripts/blob/main/docs/generateDeconSupport.md) script to create a star mask, deconvolution support, and a mask to help with Dynamic PSF.
 - How I stretch my non-linear images.
 - A trick to get Curves Transformations "just right."
 - Noise reduction using Multiscale Linear Transformations.

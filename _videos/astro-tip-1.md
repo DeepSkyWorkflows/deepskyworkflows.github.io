@@ -9,6 +9,6 @@ youtubeid: Oc6q53bT8BI
 description: "Have your adapters or extensions bound together so you can't get them loose? Use this simple tool many people have never heard of to fix it."
 ---
 
-- [Strap wrench](https://amzn.to/3IwvcE7)
+- [Strap wrench](/external?t=https://amzn.to/3zLVGyV)
 
 _I may earn commission from affiliate links. All profits are reinvested in the website and the gear I use._

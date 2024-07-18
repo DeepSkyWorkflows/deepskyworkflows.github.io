@@ -89,7 +89,7 @@ kramdown:
     block:
       line_numbers: true
 
-exclude: [docker-compose.yml, README.md, Gemfile, Gemfile.lock]
+exclude: [docker-compose.yml, external, README.md, Gemfile, Gemfile.lock]
 
 collections:
   resources:

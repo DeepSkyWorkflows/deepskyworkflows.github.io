@@ -36,11 +36,11 @@ description: "I planned over a year for this total solar eclipse. I dragged gear
 
 Gear mentioned in this video:
 
-- [ZWO ASI294MM Pro](https://amzn.to/3Q0nrcr)
-- [Sony A7R IV](https://amzn.to/442yOWR)
-- [TeleVue PowerMate 2.5x](https://amzn.to/3JmQOli)
-- [Coronado PST 40mm](https://www.highpointscientific.com/coronado-pst-personal-solar-telescope-060-1-0-angstrom-h-alpha-refractor-pst)
-- [ZWO AM5](https://www.highpointscientific.com/zwo-am5-harmonic-drive-equatorial-mount-am5)
-- [Gitzo Series 3](https://amzn.to/4cW0Es5)
+- [ZWO ASI294MM Pro](/external?t=https://amzn.to/3SbdKJ2)
+- [Sony A7R IV](/external?t=https://amzn.to/3ShKznN)
+- [TeleVue PowerMate 2.5x](/external?t=https://amzn.to/3xTL2FY)
+- [Coronado PST 40mm](/external?t=https://www.highpointscientific.com/coronado-pst-personal-solar-telescope-060-1-0-angstrom-h-alpha-refractor-pst)
+- [ZWO AM5](/external?t=https://www.highpointscientific.com/zwo-am5-harmonic-drive-equatorial-mount-am5)
+- [Gitzo Series 3](/external?t=https://amzn.to/3Y8yc1e)
 
 Affiliate links generate commission that helps pay for the cost of maintaining Deep Sky Workflows.

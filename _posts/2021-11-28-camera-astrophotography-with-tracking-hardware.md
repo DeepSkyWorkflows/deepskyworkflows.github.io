@@ -56,7 +56,7 @@ It's called the [Sky Watcher Star Adventurer Mini](/external?t=https://amzn.to/3
 
 Let's go from the bottom of the stack up.
 
-I also produced a [complete guide to the Star Adventurer Mini (SAM)](https://youtu.be/XC4Nqh0VbKg) video:
+I also produced a [complete guide to the Star Adventurer Mini (SAM)](/external?t=https://youtu.be/XC4Nqh0VbKg) video:
 
 {% include youtube.html code="XC4Nqh0VbKg" title="A complete guide to the Star Adventurere Mini (SAM)" %}
 
@@ -72,7 +72,7 @@ Everything above the wedge is "relative" and can move freely in its own dimensio
 
 The main unit, that I affectionately refer to as "the cube," goes on the wedge. This is the turntable that spins the record. When turned on, it will rotate at a speed called "sidereal" that matches the Earth's rotation. The SAM can act as a Wi-Fi hotspot or join an existing network and is controlled by a smart app on your phone. It has a snap port which means you can attach it to your camera with a cable that lets the unit take pictures and control their exposure.
 
-> __TIP__: Want to use your own software or intervalometer to take pictures? No problem. I'll use the app to set up "astrophotography" with 99 exposures of 999 seconds without the snap cable connected. This ensures the motor continuously rotates and then I'll use other software like [N.I.N.A](https://nighttime-imaging.eu/) to control the pictures.
+> __TIP__: Want to use your own software or intervalometer to take pictures? No problem. I'll use the app to set up "astrophotography" with 99 exposures of 999 seconds without the snap cable connected. This ensures the motor continuously rotates and then I'll use other software like [N.I.N.A](/external?t=https://nighttime-imaging.eu/) to control the pictures.
 
 Here you have several options such as mounting the camera directly to SAM or using the __ball head adapter__ to attach, well, a ball mount of course! This is useful to help move the camera for framing. I prefer to add a few other accessories that I'll get to in a minute. First, let's talk about polar alignment.
 

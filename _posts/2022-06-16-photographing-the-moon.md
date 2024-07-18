@@ -12,7 +12,7 @@ hide: true
 comments: true
 ---
 
-I named this website after the fact that most images in astrophotography are the result of a _workflow_ to process multiple source "frames" into the final result. As a beginner, I would often get frustrated when videos showed part of the process but glossed over the important steps. This video covers the whole process from assembling my gear to producing the final photograph. This is "[Photographing the Moon](https://www.youtube.com/watch?v=HYzKQcjeeyU)".
+I named this website after the fact that most images in astrophotography are the result of a _workflow_ to process multiple source "frames" into the final result. As a beginner, I would often get frustrated when videos showed part of the process but glossed over the important steps. This video covers the whole process from assembling my gear to producing the final photograph. This is "[Photographing the Moon](/external?t=https://www.youtube.com/watch?v=HYzKQcjeeyU)".
 
 {% include youtube.html code="HYzKQcjeeyU" description="Photographing the Moon" %}
 
@@ -42,14 +42,14 @@ These are the exact items I used in the shoot. Everything was purchased by me an
 |[Zhumell 2x Barlow](/external?t=https://amzn.to/45Qg2mG)|Lens that can double or even triple magnification to 800mm or higher.|$60.00|
 |[M42 to M48 adapter](/external?t=https://amzn.to/3znqxSh)|Extender to "step down" from larger M48 threads to smaller M42.|$12.00|
 |[1.25" extensible Camera adapter](/external?t=https://amzn.to/4eZXG75)|This tube slides to change the distance between the Barlow and the camera lens. This in turn changes the magnification (not the focus).|$24.00|
-|[E-mount adapter](https://amzn.to/3QqPDDT)|Allows connecting the Sony E-mount to an astrophotography component.|$35.00|
-|[Tether tools battery](https://amzn.to/3xwtE5K)|"Infinite battery" to power the camera from a power brick with higher capacity than the camera's battery or even connect to continuous power.|$35.00|
-|[Tether tools power management](https://amzn.to/3tGCIUp)|The cable needed to power the infinite battery.|$120.00|
-|[Sony Alpha ILCE-6300](https://amzn.to/3tBXOU0)|Mirrorless camera.|$850.00|
+|[E-mount adapter](/external?t=https://amzn.to/4cRp1H6)|Allows connecting the Sony E-mount to an astrophotography component.|$35.00|
+|[Tether tools battery](/external?t=https://amzn.to/3Sess1Y)|"Infinite battery" to power the camera from a power brick with higher capacity than the camera's battery or even connect to continuous power.|$35.00|
+|[Tether tools power management](/external?t=https://amzn.to/3SetkDY)|The cable needed to power the infinite battery.|$120.00|
+|[Sony Alpha ILCE-6300](/external?t=https://amzn.to/4cMZ8Id)|Mirrorless camera.|$850.00|
 |Mounting plate|Small plate that the image train mounts to that can be attached to a tripod.||
 |Mounting screws|Connectors for the plate (this came with my mounting brackets).||
-|[Star Adventurer Mini](https://amzn.to/3NVYFXM)|This is an incredible star tracker, but here I'm using it with the equatorial wedge and counterweight to make it easier to manually track the moon. For other uses, checkout my [SkyWatcher Star Adventurer Mini (SAM) full review and guide](/camera-astrophotography-with-tracking-hardware/).|$430.00|
-|[Manfrotto tripod](https://amzn.to/3tFtTKC)|It's a tripod. This is my favorite model.|$160.00|
+|[Star Adventurer Mini](/external?t=https://amzn.to/46cxzFL)|This is an incredible star tracker, but here I'm using it with the equatorial wedge and counterweight to make it easier to manually track the moon. For other uses, checkout my [SkyWatcher Star Adventurer Mini (SAM) full review and guide](/camera-astrophotography-with-tracking-hardware/).|$430.00|
+|[Manfrotto tripod](/external?t=https://amzn.to/4f5XmUd)|It's a tripod. This is my favorite model.|$160.00|
 |RAVPower power brick|Just one of many options for power "in the field."||
 
 ## Software list
@@ -58,11 +58,11 @@ All the software that I use with the exception of PixInsight and Topaz DeNoise i
 
 |Software|Description|Free?|
 |:---|:--|:--:|
-|[Planetary Imaging PreProcessor (PIPP)](https://sites.google.com/site/astropipp/)|This software reads images and normalizes them. It can center or crop, adjust the histogram, align based on outline or features for close-ups, filter by quality and create files or videos for output. Think of this as registration or star-alignment for solar system targetes.|**Yes**|
-|[AutoStakkert!](https://www.autostakkert.com/)|This is stacking software that can align images based on features then uses a grid of points to average the signal over the input frames. Creates sharp images out of your source input.|**Yes**|
-|[PixInsight](https://pixinsight.com/)|The "bees knees" or best of the best (in my humble opinion) software for processing astrophotographs.|No|
-|[RegiStax](https://www.astronomie.be/registax/)|Image processing software used mainly for sharpening and bringing out detail. It can work wonders with a blurred image.|**Yes**|
-|[Topaz DeNoise](https://www.topazlabs.com/denoise-ai)|AI-assisted noise reduction? Yes, please! This works as advertised and is almost always my final step. Superb noise reduction. Worth every dollar I spent.|No|
+|[Planetary Imaging PreProcessor (PIPP)](/external?t=https://sites.google.com/site/astropipp/)|This software reads images and normalizes them. It can center or crop, adjust the histogram, align based on outline or features for close-ups, filter by quality and create files or videos for output. Think of this as registration or star-alignment for solar system targetes.|**Yes**|
+|[AutoStakkert!](/external?t=https://www.autostakkert.com/)|This is stacking software that can align images based on features then uses a grid of points to average the signal over the input frames. Creates sharp images out of your source input.|**Yes**|
+|[PixInsight](/external?t=https://pixinsight.com/)|The "bees knees" or best of the best (in my humble opinion) software for processing astrophotographs.|No|
+|[RegiStax](/external?t=https://www.astronomie.be/registax/)|Image processing software used mainly for sharpening and bringing out detail. It can work wonders with a blurred image.|**Yes**|
+|[Topaz DeNoise](/external?t=https://www.topazlabs.com/denoise-ai)|AI-assisted noise reduction? Yes, please! This works as advertised and is almost always my final step. Superb noise reduction. Worth every dollar I spent.|No|
 
 ## Image
 

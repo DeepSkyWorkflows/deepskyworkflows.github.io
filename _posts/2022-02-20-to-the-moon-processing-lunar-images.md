@@ -44,7 +44,7 @@ Let's answer these questions with some free software.
 
 ## Stellarium
 
-[Stellarium](https://stellarium.org/) is one of my most commonly used pieces of astrophotography software. The reason is simple: it allows me to look at the stars even when it's cloudy outside! It has a lot of great features built-in. For example, you can choose to view the sky as it will be at a future date. Here, I can see the moon will be fairly high in the sky at 3am tomorrow morning.
+[Stellarium](/external?t=https://stellarium.org/) is one of my most commonly used pieces of astrophotography software. The reason is simple: it allows me to look at the stars even when it's cloudy outside! It has a lot of great features built-in. For example, you can choose to view the sky as it will be at a future date. Here, I can see the moon will be fairly high in the sky at 3am tomorrow morning.
 
 {% include blogimage.html url="stellarium.jpg" description="Stellarium software" target=true %}
 
@@ -70,13 +70,13 @@ It's worthwhile to mention a quick note about Barlow lenses. These are special l
 
 ## Telescopius
 
-Another great tool is the [Telescopius website](https://telescopius.com). Here you can search "moon" and find a chart of phases as well as a plot to see what height it will be by time of day and which direction. The tool is good but I prefer the site for more deep sky objects (DSOs) than planetary targets.
+Another great tool is the [Telescopius website](/external?t=https://telescopius.com). Here you can search "moon" and find a chart of phases as well as a plot to see what height it will be by time of day and which direction. The tool is good but I prefer the site for more deep sky objects (DSOs) than planetary targets.
 
 It also allows you to enter lens and sensor information to generate previews.
 
 ## Astrospheric
 
-Of course, knowing where the moon will be is only half the battle. The other is anticipating weather. Fortunately, there is something better than your average phone weather app. You want precision. I've spent hours setting up a rig under cloudy skies just because the forecast showed a window of a few hours to image! That's because I use a free service called [Astrospheric](https://www.astrospheric.com/) that gives you _everything_ by the hour:
+Of course, knowing where the moon will be is only half the battle. The other is anticipating weather. Fortunately, there is something better than your average phone weather app. You want precision. I've spent hours setting up a rig under cloudy skies just because the forecast showed a window of a few hours to image! That's because I use a free service called [Astrospheric](/external?t=https://www.astrospheric.com/) that gives you _everything_ by the hour:
 
 1. Cloud level
 2. Seeing conditions
@@ -118,27 +118,27 @@ Lucky astrophotography refers to taking a lot of captures, usually with video, t
 
 Don't worry, these processes work equally well on individual photos as they do film.
 
-> 💡 **TIP** Some software will save captures in a special astrophotography format called `SER` or the "Lucam video format." This is a special format that stores metadata about each frame in the file that is useful to image processing programs. You can play these files back by installing a free [SER player](https://sites.google.com/site/astropipp/ser-player).
+> 💡 **TIP** Some software will save captures in a special astrophotography format called `SER` or the "Lucam video format." This is a special format that stores metadata about each frame in the file that is useful to image processing programs. You can play these files back by installing a free [SER player](/external?t=https://sites.google.com/site/astropipp/ser-player).
 
 So, how do I capture my images? There are four pieces of software, all free, that I may use.
 
 ### Imaging Edge Desktop
 
-[Imaging Edge Desktop](https://imagingedge.sony.net/en/ie-desktop.html) is free software specifically designed for owners of Sony mirrorless cameras. There are three main parts to the software. The remote application provides full remote control of your camera, including all settings a modes needed to shoot your targets. While it's really great is the live view that is zoommable so that you can easily frame in focus on your targets. The viewer not only makes it easy to review your photographs, but also has some built-in utilities, such as creating a time-lapse movie from a set of exposures. The editor is unique to the camera with capabilities like turning on dynamic range settings, managing lens distortion, correcting for over- and under-exposure, and more. Although I occasionally take photographs, the most common approach I take to imaging the moon is to record video.
+[Imaging Edge Desktop](/external?t=https://imagingedge.sony.net/en/ie-desktop.html) is free software specifically designed for owners of Sony mirrorless cameras. There are three main parts to the software. The remote application provides full remote control of your camera, including all settings a modes needed to shoot your targets. While it's really great is the live view that is zoommable so that you can easily frame in focus on your targets. The viewer not only makes it easy to review your photographs, but also has some built-in utilities, such as creating a time-lapse movie from a set of exposures. The editor is unique to the camera with capabilities like turning on dynamic range settings, managing lens distortion, correcting for over- and under-exposure, and more. Although I occasionally take photographs, the most common approach I take to imaging the moon is to record video.
 
 > 💡 **TIP** If you plan to create a time-lapse movie, one technique you can use is to open a single frame in the editor and tweak settings like saturation and contrast so that the image is clearer to see. You can save the settings in an XML document. In the viewer, when you highlight the time-lapse option you can refer to the settings document so that each frame is modified before being inserted into the movie. This can produce some amazing results.
 
 ### ASICap
 
-[ASI Studio](https://astronomy-imaging-camera.com/news/what-is-asistudio-and-what-can-it-bring-us.html) is another application specific to a line of cameras. It is available for ZWO's line of ASI cameras. There are several applications in the suite, including a great (and fast) FIT file viewer, but the main one I use for imaging the moon is called ASI Cap. Not only does the software easily connect to the cameras and automatically set exposure and gain, it also connects to my electronic filter wheel. This makes it easy to plan color sessions because I can set up a sequence that moves through each filter as part of the capture. I can set the output to individual images, an AVI or an SER file. This is my preferred software to use for lunar and planetary capture.
+[ASI Studio](/external?t=https://astronomy-imaging-camera.com/news/what-is-asistudio-and-what-can-it-bring-us.html) is another application specific to a line of cameras. It is available for ZWO's line of ASI cameras. There are several applications in the suite, including a great (and fast) FIT file viewer, but the main one I use for imaging the moon is called ASI Cap. Not only does the software easily connect to the cameras and automatically set exposure and gain, it also connects to my electronic filter wheel. This makes it easy to plan color sessions because I can set up a sequence that moves through each filter as part of the capture. I can set the output to individual images, an AVI or an SER file. This is my preferred software to use for lunar and planetary capture.
 
 ### SharpCap
 
-[SharpCap](https://www.sharpcap.co.uk/sharpcap/downloads) is a very versatile and specialized software application. I like to think of it as astrophotography algorithms all rolled into a single program. I use SharpCap to ensure I get the best focus possible for my images, and also for polar alignment. It will also analyze your camera sensors and help you determine the best exposure and gain for an observation session. These are all pro features but after using the software for just a few days I knew it was worth investing in the pro version. It connects to most cameras, has an automatic exposure and gain feature, and gives you full control over the settings you wish to capture. It will even connect to and control your mount. Although I don't use it for capture, I know many photographers who do everything they need from within this app.
+[SharpCap](/external?t=https://www.sharpcap.co.uk/sharpcap/downloads) is a very versatile and specialized software application. I like to think of it as astrophotography algorithms all rolled into a single program. I use SharpCap to ensure I get the best focus possible for my images, and also for polar alignment. It will also analyze your camera sensors and help you determine the best exposure and gain for an observation session. These are all pro features but after using the software for just a few days I knew it was worth investing in the pro version. It connects to most cameras, has an automatic exposure and gain feature, and gives you full control over the settings you wish to capture. It will even connect to and control your mount. Although I don't use it for capture, I know many photographers who do everything they need from within this app.
 
 ### N.I.N.A.
 
-[Nighttime Imaging 'N' Astronomy (N.I.N.A.)](https://nighttime-imaging.eu/) is a free and open source application designed to handle everything you need for an imaging session. I use it exclusively when capturing deep sky objects. It works with various cameras, mounts, filter wheels and even automated dome systems. Some of the really powerful features include being able to pull a target from Dtellarium, then take picture with the camera and figure out the angle of rotation so that you can perfectly frame and center your target for imaging. It has an advanced scripting feature for automating your image captures including changing filters and exposures, slewing your telescope to the target ensuring it is properly centered, and handling things like flats and darks.
+[Nighttime Imaging 'N' Astronomy (N.I.N.A.)](/external?t=https://nighttime-imaging.eu/) is a free and open source application designed to handle everything you need for an imaging session. I use it exclusively when capturing deep sky objects. It works with various cameras, mounts, filter wheels and even automated dome systems. Some of the really powerful features include being able to pull a target from Dtellarium, then take picture with the camera and figure out the angle of rotation so that you can perfectly frame and center your target for imaging. It has an advanced scripting feature for automating your image captures including changing filters and exposures, slewing your telescope to the target ensuring it is properly centered, and handling things like flats and darks.
 
 Because I don't need precise framing for planetary and lunar targets, I prefer to use ASI Cap for those sessions, but I use N.I.N.A. for everything else.
 
@@ -162,11 +162,11 @@ There are two ways I pre-process images. First, let's explore the tool created s
 
 ## Blink
 
-"Blink" is the name of a process in the _not free_ [PixInsight](https://pixinsight.com/) application that I use for most of my post-processing. You can "blink" without it. The manual way to approach pre-processing is to scan your images and toss the ones that are cropped, blurry, deformed or just not as crisp. For the remaining images, you might want to scale and crop them so they are all roughly the same size and in the same area of the frame. There are ways to automate this, but I prefer to use a piece of software designed specifically for the job: PIPP.
+"Blink" is the name of a process in the _not free_ [PixInsight](/external?t=https://pixinsight.com/) application that I use for most of my post-processing. You can "blink" without it. The manual way to approach pre-processing is to scan your images and toss the ones that are cropped, blurry, deformed or just not as crisp. For the remaining images, you might want to scale and crop them so they are all roughly the same size and in the same area of the frame. There are ways to automate this, but I prefer to use a piece of software designed specifically for the job: PIPP.
 
 ## Planetary Imaging Pre-processor
 
-My main "go to" for planetary and lunar pre-processing is the venerable and free [Planetary Imaging PreProcessor (PIPP)](https://sites.google.com/site/astropipp/). It can take either videos (including the SER format) or individual images. You specify the type of image you're after (such as the full planet, a close-up of its surface, or an animation) and tweak some other controls, and PIPP goes to work prepping your images. Let's take a look using our three sources.
+My main "go to" for planetary and lunar pre-processing is the venerable and free [Planetary Imaging PreProcessor (PIPP)](/external?t=https://sites.google.com/site/astropipp/). It can take either videos (including the SER format) or individual images. You specify the type of image you're after (such as the full planet, a close-up of its surface, or an animation) and tweak some other controls, and PIPP goes to work prepping your images. Let's take a look using our three sources.
 
 ### Full moon: camera video
 
@@ -208,7 +208,7 @@ Now our moon images are preprocessed and ready to stack. For the observations th
 
 ## Autostakkert!
 
-Another older but effective (and free) tool, [Autostakkert!](https://www.autostakkert.com/) is optimized to stack planetary and lunar images based on features the same way other software uses stars to align deep sky objects. The UI may seem a little outdated and confusion, but the app literally walks you through the process step-by-step.
+Another older but effective (and free) tool, [Autostakkert!](/external?t=https://www.autostakkert.com/) is optimized to stack planetary and lunar images based on features the same way other software uses stars to align deep sky objects. The UI may seem a little outdated and confusion, but the app literally walks you through the process step-by-step.
 
 First, we open the source. For this example, I choose the `AVI` file that was processed from my camera video. A new window pops up with a single frame. The purpose of this step is to draw boxes around features that will help align the various frames together for stacking. 
 
@@ -230,13 +230,13 @@ Can you see a difference in the clarity and sharpness of detail?
 
 ## PixInsight
 
-PixInsight is paid software that is in my opinion the _ultimate_ photo processing tool. I'm a huge fan and use it daily. I've even built and contributed a set of [DeepSkyWorkflow scripts](https://github.com/DeepSkyWorkflows/DeepSkyWorkflowScripts) that help me fix out-of-whack colors, generate support files to use deconvultion and fix distorted stars, and even help reduce noise. Sometimes the stacking tools I use don't work, and when that happens I usually switch over to use a specifc PixInsight script called "Fast Fourier Transformation Registration" or "FFTRegistration" on the Script => Utilities menu.
+PixInsight is paid software that is in my opinion the _ultimate_ photo processing tool. I'm a huge fan and use it daily. I've even built and contributed a set of [DeepSkyWorkflow scripts](/external?t=https://github.com/DeepSkyWorkflows/DeepSkyWorkflowScripts) that help me fix out-of-whack colors, generate support files to use deconvultion and fix distorted stars, and even help reduce noise. Sometimes the stacking tools I use don't work, and when that happens I usually switch over to use a specifc PixInsight script called "Fast Fourier Transformation Registration" or "FFTRegistration" on the Script => Utilities menu.
 
 PPIP sorted images from highest to lowest quality, so I can pick the first image output by PPIP as the reference image. I also click "correct for rotation" but leave the other options on their defaults. I tap "Add" and select _all_ of the output moon files, including the one I used for a reference frame. Clicking OK kicks off a registration process that takes about 5 - 10 minutes on my machine and generates the stacked crescent moon. 
 
 ## RegiStax
 
-AutoStakkert! can handle terrain just fine, but there's another free application that many users swear by so I'm sharing it here. It's been aroud a minute or two (check out the [RegiStax6](https://www.astronomie.be/registax/) website). The interface is very similar to AutoStakkert! I'll go ahead and drag the moon onto the app. Here, the steps aren't as intuitive, but next I'll tap "Set Alignpoints". The result missed a few craters, so I add them by clicking on points in the photograph.
+AutoStakkert! can handle terrain just fine, but there's another free application that many users swear by so I'm sharing it here. It's been aroud a minute or two (check out the [RegiStax6](/external?t=https://www.astronomie.be/registax/) website). The interface is very similar to AutoStakkert! I'll go ahead and drag the moon onto the app. Here, the steps aren't as intuitive, but next I'll tap "Set Alignpoints". The result missed a few craters, so I add them by clicking on points in the photograph.
 
 {% include blogimage.html url="registaxaligns.jpg" description="The sample image ready for alignment" target=true %}
 

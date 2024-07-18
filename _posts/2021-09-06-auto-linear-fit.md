@@ -12,7 +12,7 @@ hide: true
 comments: true
 ---
 
-Have you ever opened an image from a recent observation only to find it is washed out and looks purple, pink, red, blue, or green? This is common with my sessions. I used to manually use ChannelExtraction to separate the RGB channels, then LinearFit to normalize the channels, and finally uses LRGBCombination to apply them back to the original image. After doing this about a dozen times, I finally broke down and wrote a script to automate it. I call it [Auto-Linear Fit](https://github.com/DeepSkyWorkflows/DeepSkyWorkflowScripts/blob/main/docs/autoLinearFit.md).
+Have you ever opened an image from a recent observation only to find it is washed out and looks purple, pink, red, blue, or green? This is common with my sessions. I used to manually use ChannelExtraction to separate the RGB channels, then LinearFit to normalize the channels, and finally uses LRGBCombination to apply them back to the original image. After doing this about a dozen times, I finally broke down and wrote a script to automate it. I call it [Auto-Linear Fit](/external?t=https://github.com/DeepSkyWorkflows/DeepSkyWorkflowScripts/blob/main/docs/autoLinearFit.md).
 
 I made a short video to explain the script and show it in action.
 
@@ -66,7 +66,7 @@ And the same setting with noise reduction checked:
 
 Enjoy the script! You can download this along with all of my scripts at:
 
-[https://github.com/DeepSkyWorkflows/DeepSkyWorkflowScripts](https://github.com/DeepSkyWorkflows/DeepSkyWorkflowScripts)
+[https://github.com/DeepSkyWorkflows/DeepSkyWorkflowScripts](/external?t=https://github.com/DeepSkyWorkflows/DeepSkyWorkflowScripts)
 
 Regards,
 

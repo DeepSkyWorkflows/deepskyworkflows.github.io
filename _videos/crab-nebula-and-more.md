@@ -23,12 +23,12 @@ Chapter Guide:
 - 07:04 good exposures
 - 07:16 the reveal
 
-- [Celestron EdgeHD](https://amzn.to/3hAloxD)
-- [Nighttime Imaging N' Astronomy (N.I.N.A.)](https://nighttime-imaging.eu/)
-- [QHY5III462C Planetary Camera](https://amzn.to/3WnUxng)
+- [Celestron EdgeHD](/external?t=https://amzn.to/4fbMDHG)
+- [Nighttime Imaging N' Astronomy (N.I.N.A.)](/external?t=https://nighttime-imaging.eu/)
+- [QHY5III462C Planetary Camera](/external?t=https://amzn.to/4dasCQh)
 - [Stellarium astronomy software](http://stellarium.org/)
-- [SVBony doublet refractor](https://amzn.to/3HH0984)
-- [ZWO ASI294MC Pro Deep Sky Camera](https://amzn.to/3YK3bi7)
-- [ZWO ASI120MM-S Guide Camera](https://amzn.to/3YyKr4Y)
+- [SVBony doublet refractor](/external?t=https://amzn.to/3zOKi5z)
+- [ZWO ASI294MC Pro Deep Sky Camera](/external?t=https://amzn.to/3W7N3pT)
+- [ZWO ASI120MM-S Guide Camera](/external?t=https://amzn.to/3Wa4NRx)
 
 Affiliate links generate commission that helps pay for the cost of maintaining Deep Sky Workflows.

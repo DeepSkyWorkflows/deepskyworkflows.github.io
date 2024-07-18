@@ -12,7 +12,7 @@ hide: true
 comments: true
 ---
 
-I love photographing the stars. I get just as much joy using my "ordinary" mirrorless Sony Alpha 6300 camera as I do using a high-powered telescope. The problem is that I live in [Bortle 6/7](https://en.wikipedia.org/wiki/Bortle_scale) skies so it's always too bright to see the Milky Way. However, I live near the Cascades mountain range and it's less than an hour drive to reach darker skies. This [light pollution map](https://www.lightpollutionmap.info/#zoom=10.00&lat=47.8207&lon=-121.5551&layers=B0FFFFFFFTFFFFFFFFFFF) reveals the closest town with darker (blue) skies is [Index, Washington](https://en.wikipedia.org/wiki/Index,_Washington).
+I love photographing the stars. I get just as much joy using my "ordinary" mirrorless Sony Alpha 6300 camera as I do using a high-powered telescope. The problem is that I live in [Bortle 6/7](/external?t=https://en.wikipedia.org/wiki/Bortle_scale) skies so it's always too bright to see the Milky Way. However, I live near the Cascades mountain range and it's less than an hour drive to reach darker skies. This [light pollution map](/external?t=https://www.lightpollutionmap.info/#zoom=10.00&lat=47.8207&lon=-121.5551&layers=B0FFFFFFFTFFFFFFFFFFF) reveals the closest town with darker (blue) skies is [Index, Washington](/external?t=https://en.wikipedia.org/wiki/Index,_Washington).
 
 {% include blogimage.html description="Light pollution map" url="indexdark.jpg"  target=true %}
 
@@ -53,6 +53,6 @@ The last picture captures a wide field of view and encompasses several targets I
 
 {% include blogimage.html description="The expanse, annotated" half=true target=true url="milkywayannotated.jpg" %}
 
-I leave you with this video I made about [chasing the Milky Way](https://youtu.be/6E8pvpgy5AQ):
+I leave you with this video I made about [chasing the Milky Way](/external?t=https://youtu.be/6E8pvpgy5AQ):
 
 {% include youtube.html code="6E8pvpgy5AQ" title="Chasing the Milky Way" %}

@@ -17,11 +17,10 @@ const redirect = (domHelper, router) => {
     let valid = false;
     for (let idx = 0; !valid && idx < validHosts.length; idx++) {
         valid = validHosts[idx].indexOf(host) === 0;
-        console.log(`${host} => ${validHosts[idx]}`);
     }
 
     if (!valid)  {
-        //location.href = "/404.html";
+        location.href = "/404.html";
         return;
     }
 

@@ -12,7 +12,7 @@ comments: true
 ---
 There are a lot of sites with videos, articles, and blogs that explain calibration frames in detail and provide instructions about "what goes where." If you want to know the exact science behind calibration frames and fascinating in-depth discussions about electrons and well-depth, you should definitely not waste time reading this post. Those things are important, but many of you just want to take pictures and get results. I hope this gives you enough to understand what you need to get started without getting lost in the details.
 
-If you're more of a video person, check out [Calibration explained in less than 4 minutes](https://youtu.be/a7mAYRouGbU). It's actually great if you have 4 minutes.
+If you're more of a video person, check out [Calibration explained in less than 4 minutes](/external?t=https://youtu.be/a7mAYRouGbU). It's actually great if you have 4 minutes.
 
 {% include youtube.html code="a7mAYRouGbU" title="Calibration explained in less than 4 minutes" %}
 
@@ -20,7 +20,7 @@ Let's get right to it. Here's _how_ I take calibration frames. Trust me, it's he
 
 {% include blogimage.html description="Single frame" url="raworion.jpg" half=true target=true %}
 
-After I took the pictures, I came inside and pulled up an app on my phone that just makes the entire screen turn white. I dimmed my phone a little bit, then set it so my camera lens was pointed squarely at the phone. I kept the same ISO settings as my raw photos and took a few pictures with different exposures until I verified my histogram level was between 50% - 75%. It turned out to be 1/3rd of a second for this round. I then shot 20 pictures of just the phone screen. I took 20 more pictures with the lens cap on at the same ISO and exposure as the previous set. After that, I set my shutter speed to the fastest possible (1/4000th second for my camera) and, with the cap still on, took 60 more photos. Finally, I used a device called an [intervalometer](https://amzn.to/3fDdDGh) designed for my camera and took 30 more pictures at 60 seconds. Using the combination of the 30 photos and these "calibration frames", here is what I was able to create.
+After I took the pictures, I came inside and pulled up an app on my phone that just makes the entire screen turn white. I dimmed my phone a little bit, then set it so my camera lens was pointed squarely at the phone. I kept the same ISO settings as my raw photos and took a few pictures with different exposures until I verified my histogram level was between 50% - 75%. It turned out to be 1/3rd of a second for this round. I then shot 20 pictures of just the phone screen. I took 20 more pictures with the lens cap on at the same ISO and exposure as the previous set. After that, I set my shutter speed to the fastest possible (1/4000th second for my camera) and, with the cap still on, took 60 more photos. Finally, I used a device called an [intervalometer](/external?t=https://amzn.to/4cLpmLk) designed for my camera and took 30 more pictures at 60 seconds. Using the combination of the 30 photos and these "calibration frames", here is what I was able to create.
 
 {% include blogimage.html description="Final image" url="/assets/images/gallery/orion-50mm/orion-50mm.jpg" half=true target=true %}
 
@@ -220,7 +220,7 @@ Now you know what they are. How do you take them? I created a table to help know
 - **Dark technique** is to cover the lens with the lens cap. Preferably run at night so no light leaks in, otherwise consider covering your scope or putting it somewhere dark like a closed closet.
 - **Flat technique** is to take a picture of a uniform, white light source and adjust your exposure until the histogram reading is between 50 - 75% analog digital units (ADUs). You can use the sky, a white t-shirt and paper, or a flat panel. I use an app on my smartphone that turns the LED display white for smaller lenses. For larger lenses, I use an adjustable LED tracing pad. I point the telescope straight up and set the tracing pad on top, illuminated side facing the telescope.
 
-> **TIP** Considering using SharpCap's [Capture Flat Frame](http://docs.sharpcap.co.uk/3.2/26_CapturingandUsingFlatFrames.htm) feature or N.I.N.A's [Flat Wizard](https://nighttime-imaging.eu/docs/master/site/tabs/flatwizard/) to make things easier. 
+> **TIP** Considering using SharpCap's [Capture Flat Frame](http://docs.sharpcap.co.uk/3.2/26_CapturingandUsingFlatFrames.htm) feature or N.I.N.A's [Flat Wizard](/external?t=https://nighttime-imaging.eu/docs/master/site/tabs/flatwizard/) to make things easier. 
 
 Imagine I have a session where I image with no filter using 60 second exposures at a gain of 200. I then switch to a narrowband filter and do the same exposure and gain. After awhile I decide the filter requires a longer exposure, so I take some 120 second exposures. I find it's a bit noisy, so I drop the gain to 120. 
 
