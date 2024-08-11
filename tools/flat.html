@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <style type="text/css">
+            body {
+                margin: 0px;
+                padding: 0px;
+                background: white;
+                color: gray;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrapper">
+            <p>Simply use the slider to adjust the intensity. The text will disappear automatically after a few seconds (press any key to bring it back).
+                Use <code>F11</code> to go full screen. Mouse click will also show the controls.
+            </p>
+            <input type="range" id="slider" min="0" max="100" value="75" step="1" style="width: 60vw; height: 50px; margin-left: 10vw;">
+        </div>
+        <span id="text" style="font-size: 3em; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">75%</span>          
+        <script>
+            const flat = () => {
+               
+                const state = {
+                    wrapper: document.getElementById('wrapper'),
+                    body: document.body,
+                    slider: document.getElementById('slider'),
+                    text: document.getElementById('text'),
+                    pct: 75,
+                    timeout: null
+                };                        
+
+                const show = () => {
+                    state.text.style.display = 'block';
+                    wrapper.style.display = 'block';
+                };
+                
+                const hide = () => {
+                    state.text.style.display = 'none';
+                    wrapper.style.display = 'none';
+                };
+
+                const colors = () => {
+                    const bgIntensity = state.pct * 255.0 / 100.0;
+                    const bgInt = Math.round(bgIntensity);
+                    const bg = `rgb(${bgInt}, ${bgInt}, ${bgInt})`;
+                    const fgInt = bgInt < 128 ? 255 - bgInt : bgInt - 128;
+                    const fg = `rgb(${fgInt}, ${fgInt}, ${fgInt})`;
+                    state.body.style.backgroundColor = bg;
+                    state.text.style.color = fg;            
+                };
+
+                state.slider.addEventListener('input', () => {
+                        state.pct = state.slider.value;
+                        state.text.textContent = `${state.pct}%`;
+                        show();
+                        colors();
+                        clearTimeout(state.timeout);
+                        wait();
+                });
+
+                const wait = () => {
+                    state.timeout = setTimeout(() => {
+                        hide();
+                    }, 5000);
+                };
+                
+                state.body.addEventListener('keydown', () => {
+                    clearTimeout(state.timeout);
+                    show();
+                    wait();
+                });
+
+                state.body.addEventListener('click', () => {
+                    clearTimeout(state.timeout);
+                    show();
+                    wait();
+                }); 
+            };
+
+        setTimeout(flat);
+        </script>
+    </body>
+</html>
