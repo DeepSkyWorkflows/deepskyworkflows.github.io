@@ -849,6 +849,11 @@ h6 {
     font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
+.article-post {
+    width: 100%;
+    padding: 1rem;
+}
+
 .article-post .h1,
 .article-post .h2,
 .article-post .h3,

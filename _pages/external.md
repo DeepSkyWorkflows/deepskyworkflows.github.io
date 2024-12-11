@@ -18,5 +18,5 @@ depends:
         Redirecting in... <span id="countdown">??</span>
     </div>
     <h4>Disclosure</h4>
-    <p>Some external links are affiliate links that DSW Galleries LLC (hereafter referred to as "DSW Galleries") may receive commissions for. When you purchase through these external links, DSW Galleries may earn compensation. DSW Galleries policy is to only link to products and services we have personally used and have firsthand experience with. By visiting this link, you will be leaving the DeepSkyWorkflows.com website. These external links are not the responsibility of, or under the control of, DSWW Galleries. DSW Galleries disclaims responsibility for the content and privacy policies of third-party sites.</p>
+    <p>Some external links are affiliate links that DSW Galleries LLC (hereafter referred to as "DSW Galleries") may receive commissions for. When you purchase through these external links, DSW Galleries may earn compensation. DSW Galleries policy is to only link to products and services we have personally used and have firsthand experience with. By visiting this link, you will be leaving the DeepSkyWorkflows.com website. These external links are not the responsibility of, or under the control of, DSW Galleries. DSW Galleries disclaims responsibility for the content and privacy policies of third-party sites.</p>
 </div>
