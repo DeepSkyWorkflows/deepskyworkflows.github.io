@@ -242,7 +242,6 @@ layout: default
     {%- endfor -%}
 </div>
 {%- endif -%}
-{%- include disqus.html url=page.url id=page.id -%}
 <script>
     window.dsw.category = "{{page.type}}";
     window.dsw.request(["gallery_detail.js", "forms.css", "gallery-detail.css"]);

@@ -44,6 +44,7 @@ const pageScript = (domHelper, db, router, pubsub) => {
         searchText: domHelper.id("searchText"),
         results: domHelper.class("results")[0],
         lucky: domHelper.id("btnLucky"),
+        refresh: domHelper.id("btnRefresh"),
         sortSelector: domHelper.id("sort"),
         reset: domHelper.id("btnReset"),
         slideshow: domHelper.id("btnSlideshow"),
@@ -249,6 +250,10 @@ const pageScript = (domHelper, db, router, pubsub) => {
         const item = db.getRandom();
         const url = `/gallery/${item.folder}`;
         location.href = url;
+    });
+
+    galleryDom.refresh.addEventListener("click", () => {
+        galleryState.search(false);
     });
 
     galleryDom.reset.addEventListener("click", () => {

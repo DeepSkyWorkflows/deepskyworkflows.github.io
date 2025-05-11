@@ -9,8 +9,8 @@ depends:
     - gallery.css
 ---                                     
 <div id="filterWrapper" class="filterWrapper d-none">
-    <button id="btnLucky" type="button" class="btn btn-primary" disabled="disabled">I feel lucky!</button>
-    <span>Take me to a random item in the gallery.</span>
+    <button id="btnLucky" type="button" class="btn btn-primary" disabled="disabled" title="Take me to a random item in the gallery.">I feel lucky!</button>
+    <button id="btnRefresh" type="button" class="btn btn-success" title="Refresh results with current filter">Refresh</button>
     <button id="btnReset" type="button" class="btn btn-danger" title="Reset the form">Reset</button>
     <button id="btnSlideshow" type="button" class="btn btn-success" title="Turn these results into a slideshow">Slideshow</button>
     <div class="specialJump">

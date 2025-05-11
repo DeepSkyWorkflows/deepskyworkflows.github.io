@@ -832,3 +832,56 @@ table.table {
 table.table td {
     padding: 0.2rem;
 }
+
+.footer-rotator {
+    height: 3rem;
+    background-color: black;
+    border: solid 2px gray;
+    border-radius: 2rem;
+    width: 80vw;
+    margin: 1rem;
+    margin-left: 9vw;
+    padding: 1rem;
+}
+
+.footer-rotator p {
+    margin-top: -0.5rem;
+    width: auto;
+    padding: 0.2rem;
+    background: rgba(0,0,0,0.3);
+    color: greenyelloww;
+    text-align: center;
+    font-size: 1.2rem;
+}  
+
+.footer-rotator a {
+    color: greenyellow;
+    text-decoration: none;
+}
+
+.footer-rotator a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+.footer-rotator-anim-in {
+    opacity: 1;
+    animation: fadein 2s linear;
+}
+
+.footer-rotator-anim-out {
+    opacity: 1;
+    animation: fadeout 2s linear;
+}
+
+@keyframes fadein {
+  0% { opacity: 0 }
+  50% { opacity: .3 }
+  100% { opacity: 1 }
+}
+
+@keyframes fadeout {
+    0% { opacity: 1 }
+    50% { opacity: .3 }
+    100% { opacity: 0 }
+  }

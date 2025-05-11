@@ -30,11 +30,7 @@ layout: default
         <a class="smoothscroll" href="{{site.baseurl}}/tag/{{ pTag }}"><i class="fa fa-tag"></i>{{ tag }}</a>
     {%- endfor -%}
 </div>
-   
-{%- if page.comments == true -%}
-{%- include disqus.html url=page.url id=page.id -%}
-{%- endif -%}
-    
+       
 </section>
 <script>
     window.dsw.request(["video.css"]);

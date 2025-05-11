@@ -1,3 +1,8 @@
+.btn {
+    padding: 2px;
+    height: 1.2 rem;
+}
+
 span.fa-spin {
     width: 2rem;
     height: 2rem;
@@ -16,10 +21,6 @@ span.fa-spin {
     margin-bottom: 1rem;
 }
 
-.filterWrapper div.specialJump {
-    display: none;
-}
-
 .filterWrapper span {
     margin-top: 0.5rem;
 }
@@ -28,26 +29,16 @@ span.fa-spin {
     margin-right: 0.5rem;
 }
 
+.filterWrapper div.specialJump {
+    display: flex;
+    flex-basis: 100%;
+    justify-content: center;
+}
+
 .filterWrapper .btn-danger {
-    display: none;
-}
-
-.filterWrapper .btn-success {
-    display: none;
-}
-
-@media only screen and (min-width: 768px) {
-    .filterWrapper div.specialJump {
-        display: flex;
-        flex-basis: 100%;
-        justify-content: center;
-    }
-
-    .filterWrapper .btn-danger {
-        display: inline-block;
-        margin-left: 0.5rem;
-        flex-basis: content;
-    }
+    display: inline-block;
+    margin-left: 0.5rem;
+    flex-basis: content;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -65,6 +56,11 @@ span.fa-spin {
     flex-wrap: wrap;
     justify-content: center;
     vertical-align: middle;
+}
+
+input[type="checkbox"] {
+    width: 1rem;
+    flex-basis: content;
 }
 
 input {
@@ -179,36 +175,27 @@ select.category {
     flex-basis: 80%;
 }
 
-.filterSpecial,
-.filterCategory,
-.filterTelescope,
-div.formCheckbox, div.formCheckboxSimplify {
-    display: none;
+input {
+    flex-basis: 45%;
+    width: 100%;
 }
 
-@media only screen and (min-width: 768px) {
-    input {
-        flex-basis: 45%;
-        width: 100%;
-    }
+.sortDirection {
+    flex-basis: 3%;
+}
 
-    .sortDirection {
-        flex-basis: 3%;
-    }
+.filterSort {
+    flex-basis: 40%;
+    width: 100%;
+}
 
-    .filterSort {
-        flex-basis: 40%;
-        width: 100%;
-    }
-
-    .filterSpecial,
-    .filterCategory,
-    .filterTelescope {
-        display: flex;
-        flex-basis: 45%;
-        text-align: left;
-        width: 100%;
-    }
+.filterSpecial,
+.filterCategory,
+.filterTelescope {
+    display: flex;
+    flex-basis: 45%;
+    text-align: left;
+    width: 100%;
 }
 
 @media only screen and (min-width: 1024px) {
