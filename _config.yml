@@ -102,6 +102,9 @@ collections:
   tags:
     output: true
     permalink: /tag/:title/
+  skywatch:
+    output: true
+    permalink: /skywatch/:title/
   
 defaults:
   - scope:
@@ -118,6 +121,12 @@ defaults:
       author: "deepskyworkflows"
       comments: true
       toc: false 
+  - scope:
+      path: ""
+      type: "skywatch"
+    values:
+      layout: "skywatch"
+      author: "deepskyworkflows"      
   - scope:
       path: ""
       type: "tags"
