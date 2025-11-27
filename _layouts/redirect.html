@@ -1,0 +1,29 @@
+---
+layout: null
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Page Moved</title>
+  <meta http-equiv="refresh" content="0; url={{ page.redirect_to | escape }}">
+  <link rel="canonical" href="{{ page.redirect_to | escape }}">
+  <meta name="robots" content="noindex">
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      text-align: center;
+      padding: 3rem;
+      color: #444;
+    }
+    a {
+      color: #0066cc;
+    }
+  </style>
+</head>
+<body>
+  <h1>Page Moved Permanently</h1>
+  <p>This page has moved to <a href="{{ page.redirect_to | escape }}">{{ page.redirect_to }}</a>.</p>
+</body>
+</html>
