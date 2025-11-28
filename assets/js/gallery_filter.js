@@ -12,6 +12,7 @@ const pageScript = (domHelper, db, router, pubsub) => {
     }
 
     const galleryState = {
+        noHead: null,
         sort: null,
         sortAscending: false,
         signatureOnly: false,
@@ -50,6 +51,9 @@ const pageScript = (domHelper, db, router, pubsub) => {
         slideshow: domHelper.id("btnSlideshow"),
         specialSelect: domHelper.id("selectSpecial"),
         spinner: domHelper.class("init")[0],
+        noHead: [...domHelper.class("navbar"),
+            ...domHelper.class("main-header"),
+            ...domHelper.class("footer")],
         domCache: {}
     };
 
@@ -271,6 +275,13 @@ const pageScript = (domHelper, db, router, pubsub) => {
 
     galleryState.search = (refresh = true) => {
 
+        if (galleryState.noHead == "nohead")
+        {
+            for (let i=0; i<galleryDom.noHead.length; i+=1) {
+                domHelper.hide(galleryDom.noHead[i]);
+            }
+        }
+
         if (refresh) {
 
             db.setSort(galleryState.sort, galleryState.sortAscending);
@@ -370,6 +381,7 @@ const pageScript = (domHelper, db, router, pubsub) => {
         "<span class='fa fa-arrow-up' title='Sorted ascending. Click to toggle.'></span>" :
         "<span class='fa fa-arrow-down' title='Sorted descending. Click to toggle.'></span>";
 
+    galleryState.noHead = router.get("noHead") || "";
     galleryState.images = db.getItem(20);
     galleryState.sortList = db.getSorts();
     galleryState.sort = router.get("sortBy") || "weighted";
@@ -541,8 +553,6 @@ const pageScript = (domHelper, db, router, pubsub) => {
         router.update();
         galleryState.search();
     });
-
-
 
     domHelper.runNext(() => galleryDom.searchText.focus());
 
