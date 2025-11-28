@@ -261,7 +261,9 @@ const pageScript = (domHelper, db, router, pubsub) => {
     });
 
     galleryDom.reset.addEventListener("click", () => {
-        location.href = "/gallery";
+        location.href = galleryState.noHead == "nohead" 
+        ? "/gallery?noHead=nohead" 
+        : "/gallery"    
     });
 
     galleryDom.slideshow.addEventListener("click", () => {
